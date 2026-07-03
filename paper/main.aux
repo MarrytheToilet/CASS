@@ -39,13 +39,22 @@
 \newlabel{prop:transfer}{{2}{3}{Error transfer}{proposition.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Experiments}{3}{section.6}\protected@file@percent }
 \newlabel{sec:exp}{{6}{3}{Experiments}{section.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Ablations (8 representative tasks, $k{=}4$, mean accuracy). Full grids in the appendix.}}{3}{table.caption.7}\protected@file@percent }
+\newlabel{tab:ablation}{{1}{3}{Ablations (8 representative tasks, $k{=}4$, mean accuracy). Full grids in the appendix}{table.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}E1: Unseen-Task Synthesis (Leave-One-Task-Out)}{3}{subsection.6.1}\protected@file@percent }
 \newlabel{sec:e1}{{6.1}{3}{E1: Unseen-Task Synthesis (Leave-One-Task-Out)}{subsection.6.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}E2: Compound Tasks and Interpretability}{3}{subsection.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}E4: Ablations}{3}{subsection.6.3}\protected@file@percent }
 \newlabel{sec:e4}{{6.3}{3}{E4: Ablations}{subsection.6.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}E5: Dictionary Scaling and Serving Cost}{3}{subsection.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}E6: Cross-Model Validation}{3}{subsection.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces E1 leave-one-task-out results (Llama-3.1-8B, $k{=}4$, 5 seeds, strict exact match). For each held-out task, \textsc  {CASS}{} synthesizes a steering operator from the remaining 31 skills plus 4 demonstrations. Bars: \textsc  {CASS}{} vs.\ own-subspace oracle; dashes: 10-shot ICL; crosses: naive dictionary averaging (${\approx }0$ everywhere). Dotted lines separate task families.}}{4}{figure.caption.5}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:e1}{{1}{4}{E1 leave-one-task-out results (Llama-3.1-8B, $k{=}4$, 5 seeds, strict exact match). For each held-out task, \method {} synthesizes a steering operator from the remaining 31 skills plus 4 demonstrations. Bars: \method {} vs.\ own-subspace oracle; dashes: 10-shot ICL; crosses: naive dictionary averaging (${\approx }0$ everywhere). Dotted lines separate task families}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces E2 coefficient matrix: group-LASSO coefficient magnitudes (row normalized) for ten compound tasks (rows) over the 32-skill dictionary (columns). Red boxes mark ground-truth constituents; mass concentrates on constituent skills and their families without any supervision.}}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:heatmap}{{2}{4}{E2 coefficient matrix: group-LASSO coefficient magnitudes (row normalized) for ten compound tasks (rows) over the 32-skill dictionary (columns). Red boxes mark ground-truth constituents; mass concentrates on constituent skills and their families without any supervision}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}E6: Cross-Model Validation}{4}{subsection.6.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Per-task serving cost (tokens; means over the benchmark). \textsc  {CASS}{} extraction is one-time; queries then run with zero context.}}{4}{table.caption.9}\protected@file@percent }
+\newlabel{tab:cost}{{2}{4}{Per-task serving cost (tokens; means over the benchmark). \method {} extraction is one-time; queries then run with zero context}{table.caption.9}{}}
 \bibstyle{ACM-Reference-Format}
 \bibdata{references}
 \bibcite{atv2025}{{1}{2025}{{Anonymous}}{{}}}
@@ -68,10 +77,12 @@
 \newlabel{tocindent3}{0pt}
 \newlabel{tocindent4}{0pt}
 \newlabel{tocindent5}{0pt}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Failure Analysis}{4}{subsection.6.6}\protected@file@percent }
-\newlabel{sec:analysis}{{6.6}{4}{Failure Analysis}{subsection.6.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{4}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{4}{section*.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Reproducibility}{4}{appendix.A}\protected@file@percent }
-\newlabel{TotPages}{{4}{4}{}{page.4}{}}
-\gdef \@abspage@last{4}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Left (E5): held-out accuracy vs.\ dictionary size (mean $\pm $95\% CI over 5 random sub-dictionaries). Right: coding residual $\varepsilon $ anti-correlates with oracle recovery $\rho $, grounding Prop.\nonbreakingspace \ref {prop:transfer} and the ICL-fallback trigger.}}{5}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:scale}{{3}{5}{Left (E5): held-out accuracy vs.\ dictionary size (mean $\pm $95\% CI over 5 random sub-dictionaries). Right: coding residual $\varepsilon $ anti-correlates with oracle recovery $\rho $, grounding Prop.~\ref {prop:transfer} and the ICL-fallback trigger}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Failure Analysis}{5}{subsection.6.6}\protected@file@percent }
+\newlabel{sec:analysis}{{6.6}{5}{Failure Analysis}{subsection.6.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{5}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Reproducibility}{5}{appendix.A}\protected@file@percent }
+\newlabel{TotPages}{{5}{5}{}{page.5}{}}
+\gdef \@abspage@last{5}
