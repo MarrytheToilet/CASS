@@ -1,0 +1,235 @@
+{
+  "results": {
+    "add_l12_g2": {
+      "mean_recovery": 0.4399806095079365,
+      "accs": {
+        "antonym": 0.64,
+        "present-past": 0.0,
+        "country-capital": 0.88,
+        "person-sport": 0.08,
+        "english-french": 0.0,
+        "next-item": 0.48,
+        "choose-first-of-list": 0.32,
+        "capitalize": 0.88
+      },
+      "recs": [
+        0.941,
+        0.0,
+        0.929,
+        0.083,
+        0.0,
+        0.507,
+        0.236,
+        0.824
+      ]
+    },
+    "add_l14_g2": {
+      "mean_recovery": 0.4518721426802337,
+      "accs": {
+        "antonym": 0.52,
+        "present-past": 0.52,
+        "country-capital": 0.84,
+        "person-sport": 0.4,
+        "english-french": 0.0,
+        "next-item": 0.72,
+        "choose-first-of-list": 0.0,
+        "capitalize": 0.6
+      },
+      "recs": [
+        0.765,
+        0.52,
+        0.886,
+        0.414,
+        0.0,
+        0.761,
+        -0.142,
+        0.412
+      ]
+    },
+    "add_l16_g2": {
+      "mean_recovery": 0.49833619286608666,
+      "accs": {
+        "antonym": 0.12,
+        "present-past": 0.84,
+        "country-capital": 0.48,
+        "person-sport": 0.16,
+        "english-french": 0.04,
+        "next-item": 0.72,
+        "choose-first-of-list": 0.64,
+        "capitalize": 0.92
+      },
+      "recs": [
+        0.176,
+        0.84,
+        0.497,
+        0.166,
+        0.051,
+        0.761,
+        0.614,
+        0.882
+      ]
+    },
+    "add_l12+16_g1.5": {
+      "mean_recovery": 0.44507863938157644,
+      "accs": {
+        "antonym": 0.44,
+        "present-past": 0.8,
+        "country-capital": 0.6,
+        "person-sport": 0.24,
+        "english-french": 0.12,
+        "next-item": 0.76,
+        "choose-first-of-list": 0.36,
+        "capitalize": 0.32
+      },
+      "recs": [
+        0.647,
+        0.8,
+        0.626,
+        0.248,
+        0.153,
+        0.803,
+        0.283,
+        0.0
+      ]
+    },
+    "add_l10+13+16_g1.2": {
+      "mean_recovery": 0.36538590292001394,
+      "accs": {
+        "antonym": 0.48,
+        "present-past": 0.6,
+        "country-capital": 0.68,
+        "person-sport": 0.2,
+        "english-french": 0.08,
+        "next-item": 0.72,
+        "choose-first-of-list": 0.08,
+        "capitalize": 0.24
+      },
+      "recs": [
+        0.706,
+        0.6,
+        0.713,
+        0.207,
+        0.102,
+        0.761,
+        -0.047,
+        -0.118
+      ]
+    },
+    "aff_l14_b2_a1": {
+      "mean_recovery": 0.6194318171209622,
+      "accs": {
+        "antonym": 0.68,
+        "present-past": 0.8,
+        "country-capital": 0.96,
+        "person-sport": 0.2,
+        "english-french": 0.0,
+        "next-item": 0.76,
+        "choose-first-of-list": 0.28,
+        "capitalize": 0.96
+      },
+      "recs": [
+        1.0,
+        0.8,
+        1.016,
+        0.207,
+        0.0,
+        0.803,
+        0.189,
+        0.941
+      ]
+    },
+    "aff_l16_b2_a1": {
+      "mean_recovery": 0.6794918537973289,
+      "accs": {
+        "antonym": 0.48,
+        "present-past": 0.92,
+        "country-capital": 0.68,
+        "person-sport": 0.24,
+        "english-french": 0.24,
+        "next-item": 0.88,
+        "choose-first-of-list": 0.64,
+        "capitalize": 1.0
+      },
+      "recs": [
+        0.706,
+        0.92,
+        0.713,
+        0.248,
+        0.305,
+        0.93,
+        0.614,
+        1.0
+      ]
+    },
+    "aff_l12+16_b2_a1": {
+      "mean_recovery": 0.7571453953424456,
+      "accs": {
+        "antonym": 0.68,
+        "present-past": 0.88,
+        "country-capital": 0.64,
+        "person-sport": 0.44,
+        "english-french": 0.64,
+        "next-item": 0.96,
+        "choose-first-of-list": 0.36,
+        "capitalize": 0.96
+      },
+      "recs": [
+        1.0,
+        0.88,
+        0.67,
+        0.455,
+        0.814,
+        1.014,
+        0.283,
+        0.941
+      ]
+    },
+    "aff_l12+16_b4_a2": {
+      "mean_recovery": 0.5589603167948706,
+      "accs": {
+        "antonym": 0.48,
+        "present-past": 0.92,
+        "country-capital": 0.04,
+        "person-sport": 0.6,
+        "english-french": 0.32,
+        "next-item": 0.72,
+        "choose-first-of-list": 0.4,
+        "capitalize": 0.8
+      },
+      "recs": [
+        0.706,
+        0.92,
+        0.021,
+        0.621,
+        0.407,
+        0.761,
+        0.331,
+        0.706
+      ]
+    },
+    "aff_l12+16_g0.5_b2_a1": {
+      "mean_recovery": 0.7312921781996577,
+      "accs": {
+        "antonym": 0.72,
+        "present-past": 0.88,
+        "country-capital": 0.88,
+        "person-sport": 0.12,
+        "english-french": 0.4,
+        "next-item": 0.92,
+        "choose-first-of-list": 0.44,
+        "capitalize": 1.0
+      },
+      "recs": [
+        1.059,
+        0.88,
+        0.929,
+        0.124,
+        0.508,
+        0.972,
+        0.378,
+        1.0
+      ]
+    }
+  },
+  "best": "aff_l12+16_b2_a1"
+}

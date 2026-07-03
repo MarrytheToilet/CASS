@@ -138,12 +138,21 @@ def build_pair_prompts(pool, n_pairs, n_shots, rng: random.Random):
     return clean, corrupted
 
 
-def build_fewshot_pair_prompts(examples, rng: random.Random):
-    """Unseen-task extraction from k examples only: for each example j,
-    shots = all k examples, query = x_j; corrupted = labels deranged
-    (k=1: random-word substitution)."""
+def build_fewshot_pair_prompts(examples, rng: random.Random, n_reps=6,
+                               leave_self_out=True):
+    """Unseen-task extraction from k examples only. For each example j we build
+    n_reps (clean, corrupted) pairs with resampled shot orders and corruption
+    draws to denoise the per-example diff vector. Shots exclude the query
+    example when k>=2 (avoids answer leakage); k=1 falls back to self-shot
+    with random-word corruption."""
     clean, corrupted = [], []
-    for x, _ in examples:
-        clean.append(icl_prompt(examples, x))
-        corrupted.append(icl_prompt(corrupt_shots(examples, rng), x))
+    k = len(examples)
+    for j, (x, _) in enumerate(examples):
+        shots_base = ([e for i, e in enumerate(examples) if i != j]
+                      if (leave_self_out and k >= 2) else list(examples))
+        for _ in range(n_reps):
+            shots = shots_base[:]
+            rng.shuffle(shots)
+            clean.append(icl_prompt(shots, x))
+            corrupted.append(icl_prompt(corrupt_shots(shots, rng), x))
     return clean, corrupted

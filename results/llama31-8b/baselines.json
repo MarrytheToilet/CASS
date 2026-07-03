@@ -188,5 +188,135 @@
       0.88
     ],
     "family": "translation"
+  },
+  "next-item": {
+    "zs": 0.0,
+    "icl_mean": 0.9466666666666667,
+    "icl_all": [
+      0.98,
+      0.94,
+      0.92
+    ],
+    "family": "algorithmic"
+  },
+  "prev-item": {
+    "zs": 0.0,
+    "icl_mean": 0.9066666666666667,
+    "icl_all": [
+      0.92,
+      0.88,
+      0.92
+    ],
+    "family": "algorithmic"
+  },
+  "next-capital-letter": {
+    "zs": 0.0,
+    "icl_mean": 0.07333333333333335,
+    "icl_all": [
+      0.06,
+      0.08,
+      0.08
+    ],
+    "family": "algorithmic"
+  },
+  "word-length": {
+    "zs": 0.0,
+    "icl_mean": 0.7933333333333333,
+    "icl_all": [
+      0.82,
+      0.8,
+      0.76
+    ],
+    "family": "algorithmic"
+  },
+  "alphabetically-first": {
+    "zs": 0.14,
+    "icl_mean": 0.16,
+    "icl_all": [
+      0.18,
+      0.24,
+      0.06
+    ],
+    "family": "algorithmic"
+  },
+  "alphabetically-last": {
+    "zs": 0.08,
+    "icl_mean": 0.24,
+    "icl_all": [
+      0.22,
+      0.28,
+      0.22
+    ],
+    "family": "algorithmic"
+  },
+  "choose-first-of-list": {
+    "zs": 0.12,
+    "icl_mean": 0.9666666666666667,
+    "icl_all": [
+      0.96,
+      0.98,
+      0.96
+    ],
+    "family": "algorithmic"
+  },
+  "choose-last-of-list": {
+    "zs": 0.32,
+    "icl_mean": 0.8533333333333334,
+    "icl_all": [
+      0.86,
+      0.84,
+      0.86
+    ],
+    "family": "algorithmic"
+  },
+  "choose-middle-of-list": {
+    "zs": 0.04,
+    "icl_mean": 0.3,
+    "icl_all": [
+      0.32,
+      0.3,
+      0.28
+    ],
+    "family": "algorithmic"
+  },
+  "animal-from-list": {
+    "zs": 0.02,
+    "icl_mean": 0.9199999999999999,
+    "icl_all": [
+      0.94,
+      0.9,
+      0.92
+    ],
+    "family": "selection"
+  },
+  "color-from-list": {
+    "zs": 0.1,
+    "icl_mean": 0.9866666666666667,
+    "icl_all": [
+      1.0,
+      0.98,
+      0.98
+    ],
+    "family": "selection"
+  },
+  "fruit-from-list": {
+    "zs": 0.0,
+    "icl_mean": 0.98,
+    "icl_all": [
+      1.0,
+      0.96,
+      0.98
+    ],
+    "family": "selection"
+  },
+  "verb-from-list": {
+    "zs": 0.1,
+    "icl_mean": 0.94,
+    "icl_all": [
+      0.92,
+      0.96,
+      0.94
+    ],
+    "family": "selection"
   }
 }

@@ -44,11 +44,16 @@ def load_G(model_key: str, task_name: str, layer: int = None) -> torch.Tensor:
     return G if layer is None else G[:, layer, :]
 
 
-def extract_fewshot_z(hlm: HookedLM, examples, seed=0, batch_size=8):
+def extract_fewshot_z(hlm: HookedLM, examples, seed=0, batch_size=8,
+                      n_reps=6, leave_self_out=True):
     """Unseen-task query representations from k examples.
-    Returns Z [k, L+1, d] (one diff vector per example, all layers)."""
+    Returns Z [k, L+1, d]: per example, the diff vector averaged over n_reps
+    prompt pairs (resampled shot orders / corruption draws)."""
     rng = random.Random(9000 + seed)
-    clean, corrupted = build_fewshot_pair_prompts(examples, rng)
+    clean, corrupted = build_fewshot_pair_prompts(
+        examples, rng, n_reps=n_reps, leave_self_out=leave_self_out)
     h_pos = hlm.last_token_hiddens(clean, batch_size)
     h_neg = hlm.last_token_hiddens(corrupted, batch_size)
-    return h_pos - h_neg
+    diff = h_pos - h_neg                       # [k*n_reps, L+1, d]
+    k = len(examples)
+    return diff.reshape(k, n_reps, *diff.shape[1:]).mean(1)

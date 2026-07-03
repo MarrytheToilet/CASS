@@ -53,11 +53,16 @@ class HookedLM:
     @torch.no_grad()
     def generate(self, prompts, max_new_tokens=8, batch_size=16, op=None, layer=None):
         """Greedy generation; if op is given, it is applied to the last-token
-        hidden state at `layer` (1..L) on every forward (prefill + each step)."""
-        handle = None
+        hidden state at `layer` (1..L) on every forward (prefill + each step).
+        op/layer may also be lists for simultaneous multi-layer injection."""
+        handles = []
         if op is not None:
-            assert 1 <= layer <= self.L
-            handle = self.layers[layer - 1].register_forward_hook(self._steer_hook(op))
+            ops = op if isinstance(op, (list, tuple)) else [op]
+            layers = layer if isinstance(layer, (list, tuple)) else [layer]
+            for o, l in zip(ops, layers):
+                assert 1 <= l <= self.L
+                handles.append(self.layers[l - 1].register_forward_hook(
+                    self._steer_hook(o)))
         try:
             texts = []
             for chunk in _batched(prompts, batch_size):
@@ -69,6 +74,6 @@ class HookedLM:
                 gen = out[:, enc.input_ids.shape[1]:]
                 texts.extend(self.tok.batch_decode(gen, skip_special_tokens=True))
         finally:
-            if handle is not None:
-                handle.remove()
+            for h in handles:
+                h.remove()
         return texts

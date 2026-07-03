@@ -67,6 +67,58 @@ def build_dictionary(G_by_task: dict, r0=2, tau=0.90, r_max=16) -> SkillDictiona
     return D
 
 
+class MultiLayerDictionary:
+    """Joint dictionary over several layers: per task, the stacked basis is
+    block-diagonal over layers ([K*d, sum_l r_tl], orthonormal columns), so the
+    group-LASSO solver applies unchanged and the support is shared across
+    layers while coefficients stay layer-specific."""
+
+    def __init__(self, layer_dicts: dict):
+        self.layers = sorted(layer_dicts)
+        self.per_layer = layer_dicts
+        first = layer_dicts[self.layers[0]]
+        self.task_names = list(first.task_names)
+        self.d = first.U0.shape[0]
+        K = len(self.layers)
+        self.bases, self.anchors = {}, {}
+        for n in self.task_names:
+            blocks = [layer_dicts[l].bases[n] for l in self.layers]
+            rs = [b.shape[1] for b in blocks]
+            U = np.zeros((K * self.d, sum(rs)))
+            c0 = 0
+            for i, b in enumerate(blocks):
+                U[i * self.d:(i + 1) * self.d, c0:c0 + b.shape[1]] = b
+                c0 += b.shape[1]
+            self.bases[n] = U
+            self.anchors[n] = np.concatenate(
+                [layer_dicts[l].anchors[n] for l in self.layers])
+
+    def stack(self, z_by_layer: dict) -> np.ndarray:
+        return np.concatenate([np.asarray(z_by_layer[l], dtype=np.float64)
+                               for l in self.layers])
+
+    def split(self, v: np.ndarray) -> dict:
+        return {l: v[i * self.d:(i + 1) * self.d]
+                for i, l in enumerate(self.layers)}
+
+    def project_out_shared(self, v: np.ndarray) -> np.ndarray:
+        parts = [self.per_layer[l].project_out_shared(p)
+                 for l, p in self.split(v).items()]
+        return np.concatenate(parts)
+
+    def subset(self, names):
+        return MultiLayerDictionary(
+            {l: D.subset(names) for l, D in self.per_layer.items()})
+
+
+def build_multilayer_dictionary(G_by_task_by_layer: dict, r0=2, tau=0.90,
+                                r_max=16) -> MultiLayerDictionary:
+    """G_by_task_by_layer: layer -> {task: [n, d]}."""
+    return MultiLayerDictionary(
+        {l: build_dictionary(G, r0=r0, tau=tau, r_max=r_max)
+         for l, G in G_by_task_by_layer.items()})
+
+
 # ---------- diagnostics ----------
 
 def pairwise_cosine(vectors: dict) -> np.ndarray:

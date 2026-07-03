@@ -1,0 +1,67 @@
+{
+  "aff_12+14+16_b2a1": {
+    "mean_recovery": 0.7631893105874523,
+    "accs": {
+      "antonym": 0.68,
+      "present-past": 0.96,
+      "country-capital": 0.56,
+      "person-sport": 0.72,
+      "english-french": 0.6,
+      "next-item": 0.92,
+      "choose-first-of-list": 0.24,
+      "capitalize": 0.96
+    }
+  },
+  "aff_10+12+16_b2a1": {
+    "mean_recovery": 0.70074200708203,
+    "accs": {
+      "antonym": 0.64,
+      "present-past": 0.92,
+      "country-capital": 0.64,
+      "person-sport": 0.44,
+      "english-french": 0.56,
+      "next-item": 0.96,
+      "choose-first-of-list": 0.08,
+      "capitalize": 0.96
+    }
+  },
+  "aff_12+16+18_b2a1": {
+    "mean_recovery": 0.6280511811595535,
+    "accs": {
+      "antonym": 0.72,
+      "present-past": 0.88,
+      "country-capital": 0.2,
+      "person-sport": 0.44,
+      "english-french": 0.04,
+      "next-item": 0.92,
+      "choose-first-of-list": 0.52,
+      "capitalize": 0.96
+    }
+  },
+  "aff_12+16_g0.75_b2a1": {
+    "mean_recovery": 0.7418099396722316,
+    "accs": {
+      "antonym": 0.68,
+      "present-past": 0.88,
+      "country-capital": 0.8,
+      "person-sport": 0.24,
+      "english-french": 0.52,
+      "next-item": 0.92,
+      "choose-first-of-list": 0.4,
+      "capitalize": 1.0
+    }
+  },
+  "aff_12+16_b3_a1.5": {
+    "mean_recovery": 0.685864198885334,
+    "accs": {
+      "antonym": 0.68,
+      "present-past": 0.92,
+      "country-capital": 0.36,
+      "person-sport": 0.52,
+      "english-french": 0.52,
+      "next-item": 0.88,
+      "choose-first-of-list": 0.28,
+      "capitalize": 0.92
+    }
+  }
+}

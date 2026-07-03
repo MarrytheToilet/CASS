@@ -1,0 +1,11 @@
+{
+  "layers": [
+    12,
+    16
+  ],
+  "gamma": 1.0,
+  "beta": 2.0,
+  "alpha_max": 1.0,
+  "scheme": "multilayer_affine",
+  "source": "05b_injection_repair: oracle mean recovery 0.757 across 8 tasks"
+}

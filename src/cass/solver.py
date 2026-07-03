@@ -19,7 +19,7 @@ class SparseCode:
 
 
 def _synth(D, coeffs):
-    d = D.U0.shape[0]
+    d = next(iter(D.bases.values())).shape[0]
     v = np.zeros(d)
     for n, c in coeffs.items():
         if np.any(c):
@@ -27,12 +27,14 @@ def _synth(D, coeffs):
     return v
 
 
-def group_lasso(D, z, lam, max_iter=200, tol=1e-6, rng=None) -> SparseCode:
+def group_lasso(D, z, lam, max_iter=200, tol=1e-6, rng=None,
+                warm_start=None) -> SparseCode:
     names = D.task_names
     rng = rng or np.random.default_rng(0)
     z = z.astype(np.float64)
-    c = {n: np.zeros(D.bases[n].shape[1]) for n in names}
-    r = z.copy()                     # residual z - sum U_t c_t, kept incrementally
+    c = ({n: v.copy() for n, v in warm_start.items()} if warm_start
+         else {n: np.zeros(D.bases[n].shape[1]) for n in names})
+    r = z - _synth(D, c)             # residual z - sum U_t c_t, kept incrementally
     for _ in range(max_iter):
         max_rel = 0.0
         for n in rng.permutation(names):
@@ -89,12 +91,33 @@ def select_lambda_loo(D, z_list, n_points=20, k1_frac=0.3):
     return float(path[int(np.argmin(scores))])
 
 
-def solve(D, z_list, lam=None) -> SparseCode:
-    """Full pipeline: lambda by LOO, then group LASSO on the mean vector."""
+def solve_capped(D, z_list, s_max=5, n_points=20, floor=0.02) -> SparseCode:
+    """Walk the lambda path from lambda_max downward with warm starts and
+    return the last solution whose support size is <= s_max (i.e., the best
+    fit subject to the sparsity budget). Robust when held-out validation is
+    impossible (k<=4 noisy examples)."""
     z = np.mean([np.asarray(zz, dtype=np.float64) for zz in z_list], axis=0)
-    if lam is None:
-        lam = select_lambda_loo(D, z_list)
-    return group_lasso(D, z, lam)
+    best, warm = None, None
+    for lam in lambda_path(D, z, n_points, floor):
+        code = group_lasso(D, z, lam, warm_start=warm)
+        warm = code.coeffs
+        if len(code.support) <= s_max and (best is None or
+                                           code.residual < best.residual):
+            best = code
+        if len(code.support) > s_max:
+            break
+    return best if best is not None else group_lasso(D, z, lambda_max(D, z))
+
+
+def solve(D, z_list, lam=None, s_max=5) -> SparseCode:
+    """Default pipeline: support-capped lambda path on the mean vector.
+    Pass lam explicitly to bypass (ablations), or s_max=None for LOO lambda."""
+    z = np.mean([np.asarray(zz, dtype=np.float64) for zz in z_list], axis=0)
+    if lam is not None:
+        return group_lasso(D, z, lam)
+    if s_max is None:
+        return group_lasso(D, z, select_lambda_loo(D, z_list))
+    return solve_capped(D, z_list, s_max=s_max)
 
 
 # ---------- baseline solvers (ablations) ----------
