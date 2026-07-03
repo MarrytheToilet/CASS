@@ -1,0 +1,38 @@
+k=1: median rho=0.225  frac(rho>=0.6)=0.17  n_valid=23
+   algorithmic: median rho=-0.005 (['choose-first-of-list:-0.25', 'choose-last-of-list:-0.02', 'next-item:0.06', 'prev-item:0.00'])
+   knowledge: median rho=0.202 (['country-capital:0.98', 'country-currency:0.00', 'landmark-country:0.45', 'park-country:0.22', 'person-sport:0.06', 'product-company:0.18'])
+   linguistic: median rho=0.353 (['antonym:0.35', 'capitalize:0.26', 'capitalize-first-letter:0.16', 'lowercase-first-letter:0.46', 'present-past:0.72', 'singular-plural:0.43', 'synonym:-0.16'])
+   selection: median rho=0.240 (['animal-from-list:0.72', 'color-from-list:-0.08', 'verb-from-list:0.24'])
+   translation: median rho=0.506 (['english-french:0.03', 'english-german:0.87', 'english-spanish:0.51'])
+k=2: median rho=0.557  frac(rho>=0.6)=0.43  n_valid=23
+   algorithmic: median rho=0.136 (['choose-first-of-list:-0.04', 'choose-last-of-list:0.09', 'next-item:0.22', 'prev-item:0.18'])
+   knowledge: median rho=0.751 (['country-capital:1.48', 'country-currency:0.17', 'landmark-country:0.97', 'park-country:0.94', 'person-sport:0.02', 'product-company:0.56'])
+   linguistic: median rho=0.627 (['antonym:0.39', 'capitalize:0.58', 'capitalize-first-letter:0.63', 'lowercase-first-letter:0.73', 'present-past:0.92', 'singular-plural:1.00', 'synonym:0.18'])
+   selection: median rho=0.360 (['animal-from-list:1.20', 'color-from-list:0.24', 'verb-from-list:0.36'])
+   translation: median rho=1.000 (['english-french:0.37', 'english-german:1.26', 'english-spanish:1.00'])
+k=4: median rho=0.579  frac(rho>=0.6)=0.48  n_valid=23
+   algorithmic: median rho=0.335 (['choose-first-of-list:0.12', 'choose-last-of-list:0.25', 'next-item:0.43', 'prev-item:0.42'])
+   knowledge: median rho=0.673 (['country-capital:1.51', 'country-currency:0.51', 'landmark-country:0.77', 'park-country:0.88', 'person-sport:0.00', 'product-company:0.58'])
+   linguistic: median rho=0.989 (['antonym:0.89', 'capitalize:1.02', 'capitalize-first-letter:0.20', 'lowercase-first-letter:0.99', 'present-past:1.02', 'singular-plural:1.01', 'synonym:0.75'])
+   selection: median rho=0.256 (['animal-from-list:0.14', 'color-from-list:0.89', 'verb-from-list:0.26'])
+   translation: median rho=0.381 (['english-french:0.17', 'english-german:0.38', 'english-spanish:0.91'])
+
+GO/NO-GO (k=4): median rho=0.579 frac>=0.6=0.48 -> tier B (within-family narrative)
+family medians:
+family
+algorithmic    0.335272
+knowledge      0.672619
+linguistic     0.988571
+selection      0.256000
+translation    0.380952
+Name: rho, dtype: float64
+
+naive-average baseline: median rho=0.000
+cass vs zvec (k=1): mean acc 0.191 vs 0.162  (paired diff +0.029, cass better on 18/32 tasks)
+cass vs zvec (k=2): mean acc 0.317 vs 0.292  (paired diff +0.024, cass better on 13/32 tasks)
+cass vs zvec (k=4): mean acc 0.335 vs 0.270  (paired diff +0.065, cass better on 18/32 tasks)
+cass vs cass_recon (k=1): mean acc 0.191 vs 0.140  (paired diff +0.051, cass better on 16/32 tasks)
+cass vs cass_recon (k=2): mean acc 0.317 vs 0.205  (paired diff +0.112, cass better on 17/32 tasks)
+cass vs cass_recon (k=4): mean acc 0.335 vs 0.173  (paired diff +0.162, cass better on 20/32 tasks)
+
+figures saved to /home/hanyu/research/CASS/figures

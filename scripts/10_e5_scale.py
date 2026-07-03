@@ -62,7 +62,7 @@ def main():
                 subset = list(rng.choice(pool, min(size, len(pool)),
                                          replace=False))
                 D = build_multilayer_dictionary(
-                    {l: {t: G[l][t] for t in subset} for l in layers}, r0=2)
+                    {l: {t: G[l][t] for t in subset} for l in layers}, r0=1)
                 for seed in SEEDS:
                     if (str(size), str(draw), tstar, str(seed)) in done:
                         continue

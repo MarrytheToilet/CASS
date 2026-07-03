@@ -67,7 +67,7 @@ def G_at(layer):
     return _G_cache[layer]
 
 
-def run_condition(axis, value, tstar, seed, *, r0=2, solver="group_lasso",
+def run_condition(axis, value, tstar, seed, *, r0=1, solver="group_lasso",
                   delta_src="hybrid", layers=None, k=K_DEFAULT, s_max=5,
                   n_samples=None):
     if (axis, str(value), tstar, str(seed)) in done:

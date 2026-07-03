@@ -30,7 +30,8 @@ def _support_weights(code):
 
 
 def ops_for(mld: MultiLayerDictionary, code, gamma=1.0, beta=2.0,
-            alpha_max=1.0, injection="affine", rescale=True, delta_vec=None):
+            alpha_max=1.0, injection="affine", rescale=True, delta_vec=None,
+            anchor_mode="mean"):
     """Returns (ops, layers) for HookedLM.generate multi-layer injection.
 
     delta_vec: stacked direction to inject. Default (None) uses the dictionary
@@ -61,7 +62,17 @@ def ops_for(mld: MultiLayerDictionary, code, gamma=1.0, beta=2.0,
             continue
         Dl = mld.per_layer[l]
         w = _support_weights(code)
-        mu_l = sum(wi * Dl.anchors[n] for wi, n in zip(w, code.support))
+        if anchor_mode == "recon":
+            # anchor at z's own in-span reconstruction (scaled like delta)
+            # instead of the support-anchor mean: avoids pulling h toward
+            # coherent neighbors (e.g. wrong language within translation)
+            rec = code.delta
+            rn = np.linalg.norm(rec)
+            target = float(sum(wi * np.linalg.norm(mld.anchors[n])
+                               for wi, n in zip(w, code.support)))
+            mu_l = mld.split(rec * (target / rn) if rn > 1e-8 else rec)[l]
+        else:
+            mu_l = sum(wi * Dl.anchors[n] for wi, n in zip(w, code.support))
         B_l = np.concatenate([Dl.bases[n] for n in code.support], axis=1)
         if injection == "projection":
             ops.append(make_affine_op(np.zeros_like(dl), B_l, mu_l, gamma=0.0,

@@ -1,0 +1,54 @@
+{
+  "r0=1,anchor=mean": {
+    "mean": 0.504,
+    "accs": {
+      "antonym": 0.507,
+      "present-past": 0.92,
+      "country-capital": 0.867,
+      "person-sport": 0.0,
+      "english-french": 0.267,
+      "next-item": 0.52,
+      "choose-first-of-list": 0.6,
+      "animal-from-list": 0.347
+    }
+  },
+  "r0=1,anchor=recon": {
+    "mean": 0.473,
+    "accs": {
+      "antonym": 0.467,
+      "present-past": 0.947,
+      "country-capital": 0.68,
+      "person-sport": 0.0,
+      "english-french": 0.307,
+      "next-item": 0.52,
+      "choose-first-of-list": 0.6,
+      "animal-from-list": 0.267
+    }
+  },
+  "r0=2,anchor=mean": {
+    "mean": 0.415,
+    "accs": {
+      "antonym": 0.613,
+      "present-past": 0.907,
+      "country-capital": 0.933,
+      "person-sport": 0.0,
+      "english-french": 0.187,
+      "next-item": 0.48,
+      "choose-first-of-list": 0.107,
+      "animal-from-list": 0.093
+    }
+  },
+  "r0=2,anchor=recon": {
+    "mean": 0.405,
+    "accs": {
+      "antonym": 0.547,
+      "present-past": 0.933,
+      "country-capital": 0.827,
+      "person-sport": 0.0,
+      "english-french": 0.2,
+      "next-item": 0.52,
+      "choose-first-of-list": 0.12,
+      "animal-from-list": 0.093
+    }
+  }
+}

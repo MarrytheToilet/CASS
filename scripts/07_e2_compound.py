@@ -28,7 +28,7 @@ from cass.zcache import get_z
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "llama31-8b"
 K = 4
 SEEDS = [0, 1, 2, 3, 4]
-R0 = 2
+R0 = 1
 
 def acc_cs(preds, targets, tag, inputs, gens_path):
     dump_preds(gens_path, tag, inputs, preds, targets)
