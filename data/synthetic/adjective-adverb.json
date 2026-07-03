@@ -1,0 +1,962 @@
+[
+ {
+  "input": "quick",
+  "output": "quickly"
+ },
+ {
+  "input": "slow",
+  "output": "slowly"
+ },
+ {
+  "input": "loud",
+  "output": "loudly"
+ },
+ {
+  "input": "soft",
+  "output": "softly"
+ },
+ {
+  "input": "rough",
+  "output": "roughly"
+ },
+ {
+  "input": "heavy",
+  "output": "heavily"
+ },
+ {
+  "input": "light",
+  "output": "lightly"
+ },
+ {
+  "input": "deep",
+  "output": "deeply"
+ },
+ {
+  "input": "broad",
+  "output": "broadly"
+ },
+ {
+  "input": "narrow",
+  "output": "narrowly"
+ },
+ {
+  "input": "sharp",
+  "output": "sharply"
+ },
+ {
+  "input": "clear",
+  "output": "clearly"
+ },
+ {
+  "input": "fair",
+  "output": "fairly"
+ },
+ {
+  "input": "high",
+  "output": "highly"
+ },
+ {
+  "input": "near",
+  "output": "nearly"
+ },
+ {
+  "input": "part",
+  "output": "partly"
+ },
+ {
+  "input": "true",
+  "output": "truly"
+ },
+ {
+  "input": "sure",
+  "output": "surely"
+ },
+ {
+  "input": "wild",
+  "output": "wildly"
+ },
+ {
+  "input": "calm",
+  "output": "calmly"
+ },
+ {
+  "input": "firm",
+  "output": "firmly"
+ },
+ {
+  "input": "warm",
+  "output": "warmly"
+ },
+ {
+  "input": "cool",
+  "output": "coolly"
+ },
+ {
+  "input": "sad",
+  "output": "sadly"
+ },
+ {
+  "input": "angry",
+  "output": "angrily"
+ },
+ {
+  "input": "lazy",
+  "output": "lazily"
+ },
+ {
+  "input": "proud",
+  "output": "proudly"
+ },
+ {
+  "input": "brave",
+  "output": "bravely"
+ },
+ {
+  "input": "cruel",
+  "output": "cruelly"
+ },
+ {
+  "input": "kind",
+  "output": "kindly"
+ },
+ {
+  "input": "polite",
+  "output": "politely"
+ },
+ {
+  "input": "rude",
+  "output": "rudely"
+ },
+ {
+  "input": "sweet",
+  "output": "sweetly"
+ },
+ {
+  "input": "bitter",
+  "output": "bitterly"
+ },
+ {
+  "input": "secret",
+  "output": "secretly"
+ },
+ {
+  "input": "open",
+  "output": "openly"
+ },
+ {
+  "input": "free",
+  "output": "freely"
+ },
+ {
+  "input": "safe",
+  "output": "safely"
+ },
+ {
+  "input": "hard",
+  "output": "hardly"
+ },
+ {
+  "input": "recent",
+  "output": "recently"
+ },
+ {
+  "input": "late",
+  "output": "lately"
+ },
+ {
+  "input": "final",
+  "output": "finally"
+ },
+ {
+  "input": "pure",
+  "output": "purely"
+ },
+ {
+  "input": "mere",
+  "output": "merely"
+ },
+ {
+  "input": "bare",
+  "output": "barely"
+ },
+ {
+  "input": "full",
+  "output": "fully"
+ },
+ {
+  "input": "complete",
+  "output": "completely"
+ },
+ {
+  "input": "total",
+  "output": "totally"
+ },
+ {
+  "input": "absolute",
+  "output": "absolutely"
+ },
+ {
+  "input": "exact",
+  "output": "exactly"
+ },
+ {
+  "input": "simple",
+  "output": "simply"
+ },
+ {
+  "input": "main",
+  "output": "mainly"
+ },
+ {
+  "input": "chief",
+  "output": "chiefly"
+ },
+ {
+  "input": "most",
+  "output": "mostly"
+ },
+ {
+  "input": "general",
+  "output": "generally"
+ },
+ {
+  "input": "usual",
+  "output": "usually"
+ },
+ {
+  "input": "normal",
+  "output": "normally"
+ },
+ {
+  "input": "regular",
+  "output": "regularly"
+ },
+ {
+  "input": "frequent",
+  "output": "frequently"
+ },
+ {
+  "input": "direct",
+  "output": "directly"
+ },
+ {
+  "input": "actual",
+  "output": "actually"
+ },
+ {
+  "input": "natural",
+  "output": "naturally"
+ },
+ {
+  "input": "physical",
+  "output": "physically"
+ },
+ {
+  "input": "moral",
+  "output": "morally"
+ },
+ {
+  "input": "legal",
+  "output": "legally"
+ },
+ {
+  "input": "political",
+  "output": "politically"
+ },
+ {
+  "input": "economic",
+  "output": "economically"
+ },
+ {
+  "input": "social",
+  "output": "socially"
+ },
+ {
+  "input": "cultural",
+  "output": "culturally"
+ },
+ {
+  "input": "historical",
+  "output": "historically"
+ },
+ {
+  "input": "geographical",
+  "output": "geographically"
+ },
+ {
+  "input": "psychological",
+  "output": "psychologically"
+ },
+ {
+  "input": "biological",
+  "output": "biologically"
+ },
+ {
+  "input": "chemical",
+  "output": "chemically"
+ },
+ {
+  "input": "mathematical",
+  "output": "mathematically"
+ },
+ {
+  "input": "logical",
+  "output": "logically"
+ },
+ {
+  "input": "rational",
+  "output": "rationally"
+ },
+ {
+  "input": "emotional",
+  "output": "emotionally"
+ },
+ {
+  "input": "spiritual",
+  "output": "spiritually"
+ },
+ {
+  "input": "religious",
+  "output": "religiously"
+ },
+ {
+  "input": "philosophical",
+  "output": "philosophically"
+ },
+ {
+  "input": "scientific",
+  "output": "scientifically"
+ },
+ {
+  "input": "technical",
+  "output": "technically"
+ },
+ {
+  "input": "mechanical",
+  "output": "mechanically"
+ },
+ {
+  "input": "electrical",
+  "output": "electrically"
+ },
+ {
+  "input": "magnetic",
+  "output": "magnetically"
+ },
+ {
+  "input": "optical",
+  "output": "optically"
+ },
+ {
+  "input": "acoustic",
+  "output": "acoustically"
+ },
+ {
+  "input": "thermal",
+  "output": "thermally"
+ },
+ {
+  "input": "atomic",
+  "output": "atomically"
+ },
+ {
+  "input": "molecular",
+  "output": "molecularly"
+ },
+ {
+  "input": "federal",
+  "output": "federally"
+ },
+ {
+  "input": "judicial",
+  "output": "judicially"
+ },
+ {
+  "input": "legislative",
+  "output": "legislatively"
+ },
+ {
+  "input": "executive",
+  "output": "executively"
+ },
+ {
+  "input": "administrative",
+  "output": "administratively"
+ },
+ {
+  "input": "educational",
+  "output": "educationally"
+ },
+ {
+  "input": "professional",
+  "output": "professionally"
+ },
+ {
+  "input": "commercial",
+  "output": "commercially"
+ },
+ {
+  "input": "easy",
+  "output": "easily"
+ },
+ {
+  "input": "busy",
+  "output": "busily"
+ },
+ {
+  "input": "crazy",
+  "output": "crazily"
+ },
+ {
+  "input": "messy",
+  "output": "messily"
+ },
+ {
+  "input": "shy",
+  "output": "shyly"
+ },
+ {
+  "input": "dry",
+  "output": "dryly"
+ },
+ {
+  "input": "sly",
+  "output": "slyly"
+ },
+ {
+  "input": "cozy",
+  "output": "cozily"
+ },
+ {
+  "input": "holy",
+  "output": "holily"
+ },
+ {
+  "input": "nasty",
+  "output": "nastily"
+ },
+ {
+  "input": "silly",
+  "output": "sillily"
+ },
+ {
+  "input": "ugly",
+  "output": "uglily"
+ },
+ {
+  "input": "witty",
+  "output": "wittily"
+ },
+ {
+  "input": "petty",
+  "output": "pettily"
+ },
+ {
+  "input": "hasty",
+  "output": "hastily"
+ },
+ {
+  "input": "jolly",
+  "output": "jollily"
+ },
+ {
+  "input": "empty",
+  "output": "emptily"
+ },
+ {
+  "input": "funny",
+  "output": "funnily"
+ },
+ {
+  "input": "hungry",
+  "output": "hungrily"
+ },
+ {
+  "input": "noisy",
+  "output": "noisily"
+ },
+ {
+  "input": "sunny",
+  "output": "sunnily"
+ },
+ {
+  "input": "windy",
+  "output": "windily"
+ },
+ {
+  "input": "cloudy",
+  "output": "cloudily"
+ },
+ {
+  "input": "foggy",
+  "output": "fogily"
+ },
+ {
+  "input": "smoky",
+  "output": "smokily"
+ },
+ {
+  "input": "dusty",
+  "output": "dustily"
+ },
+ {
+  "input": "muddy",
+  "output": "mudily"
+ },
+ {
+  "input": "rocky",
+  "output": "rockily"
+ },
+ {
+  "input": "sandy",
+  "output": "sandily"
+ },
+ {
+  "input": "grassy",
+  "output": "grassily"
+ },
+ {
+  "input": "leafy",
+  "output": "leafily"
+ },
+ {
+  "input": "floury",
+  "output": "flourily"
+ },
+ {
+  "input": "milky",
+  "output": "milkily"
+ },
+ {
+  "input": "buttery",
+  "output": "butterily"
+ },
+ {
+  "input": "cheesy",
+  "output": "cheeseily"
+ },
+ {
+  "input": "meaty",
+  "output": "meatily"
+ },
+ {
+  "input": "fruity",
+  "output": "fruitily"
+ },
+ {
+  "input": "tangy",
+  "output": "tangily"
+ },
+ {
+  "input": "zesty",
+  "output": "zestily"
+ },
+ {
+  "input": "spicy",
+  "output": "spicily"
+ },
+ {
+  "input": "salty",
+  "output": "saltily"
+ },
+ {
+  "input": "sugary",
+  "output": "sugarily"
+ },
+ {
+  "input": "glazy",
+  "output": "glazily"
+ },
+ {
+  "input": "icy",
+  "output": "icily"
+ },
+ {
+  "input": "wobbly",
+  "output": "wobblily"
+ },
+ {
+  "input": "basic",
+  "output": "basically"
+ },
+ {
+  "input": "tragic",
+  "output": "tragically"
+ },
+ {
+  "input": "comic",
+  "output": "comically"
+ },
+ {
+  "input": "magical",
+  "output": "magically"
+ },
+ {
+  "input": "energetic",
+  "output": "energetically"
+ },
+ {
+  "input": "practical",
+  "output": "practically"
+ },
+ {
+  "input": "critical",
+  "output": "critically"
+ },
+ {
+  "input": "dramatic",
+  "output": "dramatically"
+ },
+ {
+  "input": "romantic",
+  "output": "romantically"
+ },
+ {
+  "input": "pessimistic",
+  "output": "pessimistically"
+ },
+ {
+  "input": "optimistic",
+  "output": "optimistically"
+ },
+ {
+  "input": "systematic",
+  "output": "systematically"
+ },
+ {
+  "input": "automatic",
+  "output": "automatically"
+ },
+ {
+  "input": "democratic",
+  "output": "democratically"
+ },
+ {
+  "input": "aristocratic",
+  "output": "aristocratically"
+ },
+ {
+  "input": "monarchistic",
+  "output": "monarchistically"
+ },
+ {
+  "input": "mystic",
+  "output": "mystically"
+ },
+ {
+  "input": "magic",
+  "output": "magically"
+ },
+ {
+  "input": "athletic",
+  "output": "athletically"
+ },
+ {
+  "input": "poetic",
+  "output": "poetically"
+ },
+ {
+  "input": "chaotic",
+  "output": "chaotically"
+ },
+ {
+  "input": "academic",
+  "output": "academically"
+ },
+ {
+  "input": "aesthetic",
+  "output": "aesthetically"
+ },
+ {
+  "input": "cinematic",
+  "output": "cinematically"
+ },
+ {
+  "input": "robotic",
+  "output": "robotically"
+ },
+ {
+  "input": "analogical",
+  "output": "analogically"
+ },
+ {
+  "input": "good",
+  "output": "well"
+ },
+ {
+  "input": "bad",
+  "output": "badly"
+ },
+ {
+  "input": "fast",
+  "output": "fast"
+ },
+ {
+  "input": "early",
+  "output": "early"
+ },
+ {
+  "input": "daily",
+  "output": "daily"
+ },
+ {
+  "input": "nightly",
+  "output": "nightly"
+ },
+ {
+  "input": "weekly",
+  "output": "weekly"
+ },
+ {
+  "input": "monthly",
+  "output": "monthly"
+ },
+ {
+  "input": "yearly",
+  "output": "yearly"
+ },
+ {
+  "input": "hourly",
+  "output": "hourly"
+ },
+ {
+  "input": "minutely",
+  "output": "minutely"
+ },
+ {
+  "input": "secondly",
+  "output": "secondly"
+ },
+ {
+  "input": "instantly",
+  "output": "instantly"
+ },
+ {
+  "input": "nowadays",
+  "output": "nowadays"
+ },
+ {
+  "input": "forever",
+  "output": "forever"
+ },
+ {
+  "input": "always",
+  "output": "always"
+ },
+ {
+  "input": "never",
+  "output": "never"
+ },
+ {
+  "input": "sometimes",
+  "output": "sometimes"
+ },
+ {
+  "input": "often",
+  "output": "often"
+ },
+ {
+  "input": "rarely",
+  "output": "rarely"
+ },
+ {
+  "input": "seldom",
+  "output": "seldom"
+ },
+ {
+  "input": "ever",
+  "output": "ever"
+ },
+ {
+  "input": "already",
+  "output": "already"
+ },
+ {
+  "input": "yet",
+  "output": "yet"
+ },
+ {
+  "input": "still",
+  "output": "still"
+ },
+ {
+  "input": "here",
+  "output": "here"
+ },
+ {
+  "input": "there",
+  "output": "there"
+ },
+ {
+  "input": "everywhere",
+  "output": "everywhere"
+ },
+ {
+  "input": "anywhere",
+  "output": "anywhere"
+ },
+ {
+  "input": "somewhere",
+  "output": "somewhere"
+ },
+ {
+  "input": "nowhere",
+  "output": "nowhere"
+ },
+ {
+  "input": "upwards",
+  "output": "upwards"
+ },
+ {
+  "input": "downwards",
+  "output": "downwards"
+ },
+ {
+  "input": "forwards",
+  "output": "forwards"
+ },
+ {
+  "input": "backwards",
+  "output": "backwards"
+ },
+ {
+  "input": "indoors",
+  "output": "indoors"
+ },
+ {
+  "input": "outdoors",
+  "output": "outdoors"
+ },
+ {
+  "input": "homewards",
+  "output": "homewards"
+ },
+ {
+  "input": "homeward",
+  "output": "homeward"
+ },
+ {
+  "input": "careful",
+  "output": "carefully"
+ },
+ {
+  "input": "reckless",
+  "output": "recklessly"
+ },
+ {
+  "input": "careless",
+  "output": "carelessly"
+ },
+ {
+  "input": "thoughtful",
+  "output": "thoughtfully"
+ },
+ {
+  "input": "respectful",
+  "output": "respectfully"
+ },
+ {
+  "input": "disrespectful",
+  "output": "disrespectfully"
+ },
+ {
+  "input": "helpful",
+  "output": "helpfully"
+ },
+ {
+  "input": "useless",
+  "output": "uselessly"
+ },
+ {
+  "input": "meaningful",
+  "output": "meaningfully"
+ },
+ {
+  "input": "meaningless",
+  "output": "meaninglessly"
+ },
+ {
+  "input": "peaceful",
+  "output": "peacefully"
+ },
+ {
+  "input": "violent",
+  "output": "violently"
+ },
+ {
+  "input": "silent",
+  "output": "silently"
+ },
+ {
+  "input": "vocal",
+  "output": "vocally"
+ },
+ {
+  "input": "verbal",
+  "output": "verbally"
+ },
+ {
+  "input": "mental",
+  "output": "mentally"
+ },
+ {
+  "input": "manual",
+  "output": "manually"
+ },
+ {
+  "input": "digital",
+  "output": "digitally"
+ },
+ {
+  "input": "visual",
+  "output": "visually"
+ },
+ {
+  "input": "audible",
+  "output": "audibly"
+ },
+ {
+  "input": "olfactory",
+  "output": "olfactorily"
+ },
+ {
+  "input": "gustatory",
+  "output": "gustatorily"
+ },
+ {
+  "input": "conceptual",
+  "output": "conceptually"
+ },
+ {
+  "input": "theoretical",
+  "output": "theoretically"
+ },
+ {
+  "input": "experimental",
+  "output": "experimentally"
+ },
+ {
+  "input": "observational",
+  "output": "observationally"
+ },
+ {
+  "input": "empirical",
+  "output": "empirically"
+ },
+ {
+  "input": "statistical",
+  "output": "statistically"
+ },
+ {
+  "input": "geometric",
+  "output": "geometrically"
+ },
+ {
+  "input": "arithmetic",
+  "output": "arithmetically"
+ },
+ {
+  "input": "algebraic",
+  "output": "algebraically"
+ }
+]

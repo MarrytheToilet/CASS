@@ -1,0 +1,858 @@
+[
+ {
+  "input": "dog",
+  "output": "puppy"
+ },
+ {
+  "input": "cat",
+  "output": "kitten"
+ },
+ {
+  "input": "cow",
+  "output": "calf"
+ },
+ {
+  "input": "horse",
+  "output": "foal"
+ },
+ {
+  "input": "sheep",
+  "output": "lamb"
+ },
+ {
+  "input": "goat",
+  "output": "kid"
+ },
+ {
+  "input": "pig",
+  "output": "piglet"
+ },
+ {
+  "input": "elephant",
+  "output": "calf"
+ },
+ {
+  "input": "bear",
+  "output": "cub"
+ },
+ {
+  "input": "lion",
+  "output": "cub"
+ },
+ {
+  "input": "tiger",
+  "output": "cub"
+ },
+ {
+  "input": "leopard",
+  "output": "cub"
+ },
+ {
+  "input": "wolf",
+  "output": "pup"
+ },
+ {
+  "input": "fox",
+  "output": "pup"
+ },
+ {
+  "input": "deer",
+  "output": "fawn"
+ },
+ {
+  "input": "rabbit",
+  "output": "kit"
+ },
+ {
+  "input": "mouse",
+  "output": "pup"
+ },
+ {
+  "input": "rat",
+  "output": "pup"
+ },
+ {
+  "input": "squirrel",
+  "output": "kit"
+ },
+ {
+  "input": "hamster",
+  "output": "pup"
+ },
+ {
+  "input": "guinea pig",
+  "output": "pup"
+ },
+ {
+  "input": "kangaroo",
+  "output": "joey"
+ },
+ {
+  "input": "koala",
+  "output": "joey"
+ },
+ {
+  "input": "wallaby",
+  "output": "joey"
+ },
+ {
+  "input": "wombat",
+  "output": "joey"
+ },
+ {
+  "input": "platypus",
+  "output": "puggle"
+ },
+ {
+  "input": "echidna",
+  "output": "puggle"
+ },
+ {
+  "input": "panda",
+  "output": "cub"
+ },
+ {
+  "input": "gorilla",
+  "output": "infant"
+ },
+ {
+  "input": "chimpanzee",
+  "output": "infant"
+ },
+ {
+  "input": "orangutan",
+  "output": "infant"
+ },
+ {
+  "input": "monkey",
+  "output": "infant"
+ },
+ {
+  "input": "zebra",
+  "output": "foal"
+ },
+ {
+  "input": "donkey",
+  "output": "foal"
+ },
+ {
+  "input": "llama",
+  "output": "cria"
+ },
+ {
+  "input": "alpaca",
+  "output": "cria"
+ },
+ {
+  "input": "camel",
+  "output": "calf"
+ },
+ {
+  "input": "giraffe",
+  "output": "calf"
+ },
+ {
+  "input": "rhinoceros",
+  "output": "calf"
+ },
+ {
+  "input": "hippopotamus",
+  "output": "calf"
+ },
+ {
+  "input": "buffalo",
+  "output": "calf"
+ },
+ {
+  "input": "bison",
+  "output": "calf"
+ },
+ {
+  "input": "moose",
+  "output": "calf"
+ },
+ {
+  "input": "elk",
+  "output": "calf"
+ },
+ {
+  "input": "caribou",
+  "output": "calf"
+ },
+ {
+  "input": "reindeer",
+  "output": "calf"
+ },
+ {
+  "input": "antelope",
+  "output": "calf"
+ },
+ {
+  "input": "gazelle",
+  "output": "calf"
+ },
+ {
+  "input": "hyena",
+  "output": "cub"
+ },
+ {
+  "input": "jackal",
+  "output": "pup"
+ },
+ {
+  "input": "coyote",
+  "output": "pup"
+ },
+ {
+  "input": "badger",
+  "output": "cub"
+ },
+ {
+  "input": "weasel",
+  "output": "kit"
+ },
+ {
+  "input": "ferret",
+  "output": "kit"
+ },
+ {
+  "input": "mink",
+  "output": "kit"
+ },
+ {
+  "input": "lynx",
+  "output": "kitten"
+ },
+ {
+  "input": "bobcat",
+  "output": "kitten"
+ },
+ {
+  "input": "cheetah",
+  "output": "cub"
+ },
+ {
+  "input": "jaguar",
+  "output": "cub"
+ },
+ {
+  "input": "ocelot",
+  "output": "kitten"
+ },
+ {
+  "input": "panther",
+  "output": "cub"
+ },
+ {
+  "input": "red panda",
+  "output": "cub"
+ },
+ {
+  "input": "sloth",
+  "output": "infant"
+ },
+ {
+  "input": "anteater",
+  "output": "pup"
+ },
+ {
+  "input": "hedgehog",
+  "output": "hoglet"
+ },
+ {
+  "input": "porcupine",
+  "output": "porcupette"
+ },
+ {
+  "input": "beaver",
+  "output": "kit"
+ },
+ {
+  "input": "raccoon",
+  "output": "kit"
+ },
+ {
+  "input": "skunk",
+  "output": "kit"
+ },
+ {
+  "input": "opossum",
+  "output": "joey"
+ },
+ {
+  "input": "capybara",
+  "output": "pup"
+ },
+ {
+  "input": "nutria",
+  "output": "pup"
+ },
+ {
+  "input": "muskrat",
+  "output": "pup"
+ },
+ {
+  "input": "vole",
+  "output": "pup"
+ },
+ {
+  "input": "lemming",
+  "output": "pup"
+ },
+ {
+  "input": "chinchilla",
+  "output": "pup"
+ },
+ {
+  "input": "degus",
+  "output": "pup"
+ },
+ {
+  "input": "gerbil",
+  "output": "pup"
+ },
+ {
+  "input": "aardvark",
+  "output": "cub"
+ },
+ {
+  "input": "aardwolf",
+  "output": "cub"
+ },
+ {
+  "input": "civet",
+  "output": "cub"
+ },
+ {
+  "input": "genet",
+  "output": "cub"
+ },
+ {
+  "input": "mongoose",
+  "output": "pup"
+ },
+ {
+  "input": "meerkat",
+  "output": "pup"
+ },
+ {
+  "input": "baboon",
+  "output": "infant"
+ },
+ {
+  "input": "macaque",
+  "output": "infant"
+ },
+ {
+  "input": "capuchin",
+  "output": "infant"
+ },
+ {
+  "input": "howler",
+  "output": "infant"
+ },
+ {
+  "input": "spider",
+  "output": "infant"
+ },
+ {
+  "input": "tamarin",
+  "output": "infant"
+ },
+ {
+  "input": "marmoset",
+  "output": "infant"
+ },
+ {
+  "input": "saki",
+  "output": "infant"
+ },
+ {
+  "input": "uakari",
+  "output": "infant"
+ },
+ {
+  "input": "titi",
+  "output": "infant"
+ },
+ {
+  "input": "owl-monkey",
+  "output": "infant"
+ },
+ {
+  "input": "indri",
+  "output": "infant"
+ },
+ {
+  "input": "lemur",
+  "output": "infant"
+ },
+ {
+  "input": "tarsier",
+  "output": "infant"
+ },
+ {
+  "input": "chicken",
+  "output": "chick"
+ },
+ {
+  "input": "turkey",
+  "output": "poult"
+ },
+ {
+  "input": "duck",
+  "output": "duckling"
+ },
+ {
+  "input": "goose",
+  "output": "gosling"
+ },
+ {
+  "input": "swan",
+  "output": "cygnet"
+ },
+ {
+  "input": "peacock",
+  "output": "peachick"
+ },
+ {
+  "input": "owl",
+  "output": "owlet"
+ },
+ {
+  "input": "eagle",
+  "output": "eaglet"
+ },
+ {
+  "input": "parrot",
+  "output": "chick"
+ },
+ {
+  "input": "penguin",
+  "output": "chick"
+ },
+ {
+  "input": "pigeon",
+  "output": "squab"
+ },
+ {
+  "input": "dove",
+  "output": "squab"
+ },
+ {
+  "input": "crow",
+  "output": "fledgling"
+ },
+ {
+  "input": "raven",
+  "output": "fledgling"
+ },
+ {
+  "input": "sparrow",
+  "output": "chick"
+ },
+ {
+  "input": "robin",
+  "output": "fledgling"
+ },
+ {
+  "input": "woodpecker",
+  "output": "chick"
+ },
+ {
+  "input": "hummingbird",
+  "output": "chick"
+ },
+ {
+  "input": "flamingo",
+  "output": "chick"
+ },
+ {
+  "input": "pelican",
+  "output": "chick"
+ },
+ {
+  "input": "crane",
+  "output": "chick"
+ },
+ {
+  "input": "ostrich",
+  "output": "chick"
+ },
+ {
+  "input": "emu",
+  "output": "chick"
+ },
+ {
+  "input": "cassowary",
+  "output": "chick"
+ },
+ {
+  "input": "kiwi",
+  "output": "chick"
+ },
+ {
+  "input": "macaw",
+  "output": "chick"
+ },
+ {
+  "input": "cockatoo",
+  "output": "chick"
+ },
+ {
+  "input": "toucan",
+  "output": "chick"
+ },
+ {
+  "input": "vulture",
+  "output": "nestling"
+ },
+ {
+  "input": "condor",
+  "output": "nestling"
+ },
+ {
+  "input": "albatross",
+  "output": "chick"
+ },
+ {
+  "input": "puffin",
+  "output": "puffling"
+ },
+ {
+  "input": "gull",
+  "output": "chick"
+ },
+ {
+  "input": "tern",
+  "output": "chick"
+ },
+ {
+  "input": "cormorant",
+  "output": "chick"
+ },
+ {
+  "input": "loon",
+  "output": "chick"
+ },
+ {
+  "input": "ptarmigan",
+  "output": "chick"
+ },
+ {
+  "input": "grouse",
+  "output": "chick"
+ },
+ {
+  "input": "pheasant",
+  "output": "chick"
+ },
+ {
+  "input": "quail",
+  "output": "chick"
+ },
+ {
+  "input": "partridge",
+  "output": "chick"
+ },
+ {
+  "input": "peafowl",
+  "output": "peachick"
+ },
+ {
+  "input": "ibis",
+  "output": "chick"
+ },
+ {
+  "input": "spoonbill",
+  "output": "chick"
+ },
+ {
+  "input": "egret",
+  "output": "chick"
+ },
+ {
+  "input": "bittern",
+  "output": "chick"
+ },
+ {
+  "input": "nightjar",
+  "output": "chick"
+ },
+ {
+  "input": "swift",
+  "output": "chick"
+ },
+ {
+  "input": "swallow",
+  "output": "chick"
+ },
+ {
+  "input": "martin",
+  "output": "chick"
+ },
+ {
+  "input": "titmouse",
+  "output": "chick"
+ },
+ {
+  "input": "chickadee",
+  "output": "chick"
+ },
+ {
+  "input": "nuthatch",
+  "output": "chick"
+ },
+ {
+  "input": "wren",
+  "output": "chick"
+ },
+ {
+  "input": "thrush",
+  "output": "chick"
+ },
+ {
+  "input": "blackbird",
+  "output": "chick"
+ },
+ {
+  "input": "starling",
+  "output": "chick"
+ },
+ {
+  "input": "oriole",
+  "output": "chick"
+ },
+ {
+  "input": "tanager",
+  "output": "chick"
+ },
+ {
+  "input": "finch",
+  "output": "chick"
+ },
+ {
+  "input": "warbler",
+  "output": "chick"
+ },
+ {
+  "input": "vireo",
+  "output": "chick"
+ },
+ {
+  "input": "flycatcher",
+  "output": "chick"
+ },
+ {
+  "input": "kingfisher",
+  "output": "chick"
+ },
+ {
+  "input": "bee-eater",
+  "output": "chick"
+ },
+ {
+  "input": "roller",
+  "output": "chick"
+ },
+ {
+  "input": "hoopoe",
+  "output": "chick"
+ },
+ {
+  "input": "lark",
+  "output": "chick"
+ },
+ {
+  "input": "pipit",
+  "output": "chick"
+ },
+ {
+  "input": "wagtail",
+  "output": "chick"
+ },
+ {
+  "input": "bulbul",
+  "output": "chick"
+ },
+ {
+  "input": "myna",
+  "output": "chick"
+ },
+ {
+  "input": "magpie",
+  "output": "chick"
+ },
+ {
+  "input": "jay",
+  "output": "chick"
+ },
+ {
+  "input": "crossbill",
+  "output": "chick"
+ },
+ {
+  "input": "grosbeak",
+  "output": "chick"
+ },
+ {
+  "input": "bunting",
+  "output": "chick"
+ },
+ {
+  "input": "reedling",
+  "output": "chick"
+ },
+ {
+  "input": "frog",
+  "output": "tadpole"
+ },
+ {
+  "input": "toad",
+  "output": "tadpole"
+ },
+ {
+  "input": "snake",
+  "output": "hatchling"
+ },
+ {
+  "input": "turtle",
+  "output": "hatchling"
+ },
+ {
+  "input": "lizard",
+  "output": "hatchling"
+ },
+ {
+  "input": "crocodile",
+  "output": "hatchling"
+ },
+ {
+  "input": "alligator",
+  "output": "hatchling"
+ },
+ {
+  "input": "iguana",
+  "output": "hatchling"
+ },
+ {
+  "input": "gecko",
+  "output": "hatchling"
+ },
+ {
+  "input": "chameleon",
+  "output": "hatchling"
+ },
+ {
+  "input": "monitor",
+  "output": "hatchling"
+ },
+ {
+  "input": "komodo",
+  "output": "hatchling"
+ },
+ {
+  "input": "fish",
+  "output": "fry"
+ },
+ {
+  "input": "shark",
+  "output": "pup"
+ },
+ {
+  "input": "whale",
+  "output": "calf"
+ },
+ {
+  "input": "dolphin",
+  "output": "calf"
+ },
+ {
+  "input": "seal",
+  "output": "pup"
+ },
+ {
+  "input": "walrus",
+  "output": "pup"
+ },
+ {
+  "input": "otter",
+  "output": "pup"
+ },
+ {
+  "input": "manatee",
+  "output": "calf"
+ },
+ {
+  "input": "dugong",
+  "output": "calf"
+ },
+ {
+  "input": "narwhal",
+  "output": "calf"
+ },
+ {
+  "input": "beluga",
+  "output": "calf"
+ },
+ {
+  "input": "orca",
+  "output": "calf"
+ },
+ {
+  "input": "porpoise",
+  "output": "calf"
+ },
+ {
+  "input": "sea lion",
+  "output": "pup"
+ },
+ {
+  "input": "fur seal",
+  "output": "pup"
+ },
+ {
+  "input": "eel",
+  "output": "elver"
+ },
+ {
+  "input": "salmon",
+  "output": "smolt"
+ },
+ {
+  "input": "trout",
+  "output": "fry"
+ },
+ {
+  "input": "bass",
+  "output": "fry"
+ },
+ {
+  "input": "catfish",
+  "output": "fry"
+ },
+ {
+  "input": "tuna",
+  "output": "fry"
+ },
+ {
+  "input": "marlin",
+  "output": "fry"
+ },
+ {
+  "input": "swordfish",
+  "output": "fry"
+ },
+ {
+  "input": "stingray",
+  "output": "pup"
+ },
+ {
+  "input": "ray",
+  "output": "pup"
+ },
+ {
+  "input": "octopus",
+  "output": "paralarva"
+ }
+]

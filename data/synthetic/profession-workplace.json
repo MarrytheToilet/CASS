@@ -1,0 +1,562 @@
+[
+ {
+  "input": "doctor",
+  "output": "hospital"
+ },
+ {
+  "input": "chef",
+  "output": "kitchen"
+ },
+ {
+  "input": "teacher",
+  "output": "school"
+ },
+ {
+  "input": "pilot",
+  "output": "airport"
+ },
+ {
+  "input": "firefighter",
+  "output": "station"
+ },
+ {
+  "input": "police officer",
+  "output": "precinct"
+ },
+ {
+  "input": "lawyer",
+  "output": "office"
+ },
+ {
+  "input": "accountant",
+  "output": "firm"
+ },
+ {
+  "input": "nurse",
+  "output": "clinic"
+ },
+ {
+  "input": "journalist",
+  "output": "bureau"
+ },
+ {
+  "input": "engineer",
+  "output": "plant"
+ },
+ {
+  "input": "scientist",
+  "output": "laboratory"
+ },
+ {
+  "input": "farmer",
+  "output": "field"
+ },
+ {
+  "input": "mechanic",
+  "output": "garage"
+ },
+ {
+  "input": "barber",
+  "output": "shop"
+ },
+ {
+  "input": "hairdresser",
+  "output": "salon"
+ },
+ {
+  "input": "waiter",
+  "output": "restaurant"
+ },
+ {
+  "input": "librarian",
+  "output": "library"
+ },
+ {
+  "input": "janitor",
+  "output": "building"
+ },
+ {
+  "input": "guard",
+  "output": "prison"
+ },
+ {
+  "input": "architect",
+  "output": "studio"
+ },
+ {
+  "input": "photographer",
+  "output": "studio"
+ },
+ {
+  "input": "musician",
+  "output": "stage"
+ },
+ {
+  "input": "actor",
+  "output": "theater"
+ },
+ {
+  "input": "painter",
+  "output": "studio"
+ },
+ {
+  "input": "sculptor",
+  "output": "studio"
+ },
+ {
+  "input": "dancer",
+  "output": "studio"
+ },
+ {
+  "input": "singer",
+  "output": "concert"
+ },
+ {
+  "input": "director",
+  "output": "set"
+ },
+ {
+  "input": "producer",
+  "output": "studio"
+ },
+ {
+  "input": "editor",
+  "output": "newsroom"
+ },
+ {
+  "input": "reporter",
+  "output": "field"
+ },
+ {
+  "input": "anchor",
+  "output": "studio"
+ },
+ {
+  "input": "coach",
+  "output": "gymnasium"
+ },
+ {
+  "input": "referee",
+  "output": "stadium"
+ },
+ {
+  "input": "umpire",
+  "output": "field"
+ },
+ {
+  "input": "trainer",
+  "output": "gym"
+ },
+ {
+  "input": "athlete",
+  "output": "stadium"
+ },
+ {
+  "input": "manager",
+  "output": "office"
+ },
+ {
+  "input": "supervisor",
+  "output": "factory"
+ },
+ {
+  "input": "foreman",
+  "output": "site"
+ },
+ {
+  "input": "carpenter",
+  "output": "workshop"
+ },
+ {
+  "input": "plumber",
+  "output": "house"
+ },
+ {
+  "input": "electrician",
+  "output": "building"
+ },
+ {
+  "input": "welder",
+  "output": "workshop"
+ },
+ {
+  "input": "machinist",
+  "output": "factory"
+ },
+ {
+  "input": "assembler",
+  "output": "plant"
+ },
+ {
+  "input": "inspector",
+  "output": "site"
+ },
+ {
+  "input": "auditor",
+  "output": "office"
+ },
+ {
+  "input": "consultant",
+  "output": "office"
+ },
+ {
+  "input": "therapist",
+  "output": "clinic"
+ },
+ {
+  "input": "psychologist",
+  "output": "office"
+ },
+ {
+  "input": "psychiatrist",
+  "output": "hospital"
+ },
+ {
+  "input": "sociologist",
+  "output": "university"
+ },
+ {
+  "input": "historian",
+  "output": "archive"
+ },
+ {
+  "input": "archaeologist",
+  "output": "dig"
+ },
+ {
+  "input": "geologist",
+  "output": "field"
+ },
+ {
+  "input": "biologist",
+  "output": "lab"
+ },
+ {
+  "input": "chemist",
+  "output": "laboratory"
+ },
+ {
+  "input": "physicist",
+  "output": "lab"
+ },
+ {
+  "input": "mathematician",
+  "output": "university"
+ },
+ {
+  "input": "astronomer",
+  "output": "observatory"
+ },
+ {
+  "input": "meteorologist",
+  "output": "center"
+ },
+ {
+  "input": "cartographer",
+  "output": "office"
+ },
+ {
+  "input": "surveyor",
+  "output": "field"
+ },
+ {
+  "input": "appraiser",
+  "output": "office"
+ },
+ {
+  "input": "auctioneer",
+  "output": "hall"
+ },
+ {
+  "input": "broker",
+  "output": "office"
+ },
+ {
+  "input": "dealer",
+  "output": "showroom"
+ },
+ {
+  "input": "salesman",
+  "output": "store"
+ },
+ {
+  "input": "cashier",
+  "output": "register"
+ },
+ {
+  "input": "teller",
+  "output": "bank"
+ },
+ {
+  "input": "banker",
+  "output": "branch"
+ },
+ {
+  "input": "actuary",
+  "output": "firm"
+ },
+ {
+  "input": "analyst",
+  "output": "office"
+ },
+ {
+  "input": "strategist",
+  "output": "headquarters"
+ },
+ {
+  "input": "planner",
+  "output": "office"
+ },
+ {
+  "input": "designer",
+  "output": "studio"
+ },
+ {
+  "input": "illustrator",
+  "output": "studio"
+ },
+ {
+  "input": "graphic designer",
+  "output": "agency"
+ },
+ {
+  "input": "interior designer",
+  "output": "office"
+ },
+ {
+  "input": "landscape architect",
+  "output": "site"
+ },
+ {
+  "input": "urban planner",
+  "output": "cityhall"
+ },
+ {
+  "input": "real estate agent",
+  "output": "office"
+ },
+ {
+  "input": "trader",
+  "output": "floor"
+ },
+ {
+  "input": "investor",
+  "output": "firm"
+ },
+ {
+  "input": "fund manager",
+  "output": "office"
+ },
+ {
+  "input": "portfolio manager",
+  "output": "office"
+ },
+ {
+  "input": "risk manager",
+  "output": "office"
+ },
+ {
+  "input": "compliance officer",
+  "output": "office"
+ },
+ {
+  "input": "secretary",
+  "output": "office"
+ },
+ {
+  "input": "receptionist",
+  "output": "lobby"
+ },
+ {
+  "input": "assistant",
+  "output": "office"
+ },
+ {
+  "input": "coordinator",
+  "output": "center"
+ },
+ {
+  "input": "president",
+  "output": "office"
+ },
+ {
+  "input": "CEO",
+  "output": "headquarters"
+ },
+ {
+  "input": "chairman",
+  "output": "boardroom"
+ },
+ {
+  "input": "governor",
+  "output": "capitol"
+ },
+ {
+  "input": "mayor",
+  "output": "cityhall"
+ },
+ {
+  "input": "senator",
+  "output": "senate"
+ },
+ {
+  "input": "representative",
+  "output": "capitol"
+ },
+ {
+  "input": "judge",
+  "output": "courtroom"
+ },
+ {
+  "input": "bailiff",
+  "output": "courtroom"
+ },
+ {
+  "input": "clerk",
+  "output": "courthouse"
+ },
+ {
+  "input": "notary",
+  "output": "office"
+ },
+ {
+  "input": "mediator",
+  "output": "office"
+ },
+ {
+  "input": "arbitrator",
+  "output": "chamber"
+ },
+ {
+  "input": "paralegal",
+  "output": "office"
+ },
+ {
+  "input": "detective",
+  "output": "precinct"
+ },
+ {
+  "input": "agent",
+  "output": "field"
+ },
+ {
+  "input": "spy",
+  "output": "safehouse"
+ },
+ {
+  "input": "soldier",
+  "output": "barracks"
+ },
+ {
+  "input": "sailor",
+  "output": "ship"
+ },
+ {
+  "input": "captain",
+  "output": "bridge"
+ },
+ {
+  "input": "marine engineer",
+  "output": "ship"
+ },
+ {
+  "input": "copilot",
+  "output": "cockpit"
+ },
+ {
+  "input": "flight attendant",
+  "output": "airplane"
+ },
+ {
+  "input": "conductor",
+  "output": "train"
+ },
+ {
+  "input": "driver",
+  "output": "cab"
+ },
+ {
+  "input": "taxi driver",
+  "output": "street"
+ },
+ {
+  "input": "bus driver",
+  "output": "depot"
+ },
+ {
+  "input": "truck driver",
+  "output": "highway"
+ },
+ {
+  "input": "dispatcher",
+  "output": "center"
+ },
+ {
+  "input": "operator",
+  "output": "callcenter"
+ },
+ {
+  "input": "technician",
+  "output": "shop"
+ },
+ {
+  "input": "installer",
+  "output": "jobsite"
+ },
+ {
+  "input": "gardener",
+  "output": "plot"
+ },
+ {
+  "input": "sommelier",
+  "output": "cellar"
+ },
+ {
+  "input": "sushi chef",
+  "output": "counter"
+ },
+ {
+  "input": "midwife",
+  "output": "center"
+ },
+ {
+  "input": "obstetrician",
+  "output": "OR"
+ },
+ {
+  "input": "paramedic",
+  "output": "ambulance"
+ },
+ {
+  "input": "bishop",
+  "output": "cathedral"
+ },
+ {
+  "input": "bell ringer",
+  "output": "tower"
+ },
+ {
+  "input": "sacristan",
+  "output": "vestry"
+ },
+ {
+  "input": "sexton",
+  "output": "graveyard"
+ },
+ {
+  "input": "shield maker",
+  "output": "forge"
+ },
+ {
+  "input": "wildlife rehabilitator",
+  "output": "center"
+ },
+ {
+  "input": "park ranger",
+  "output": "post"
+ },
+ {
+  "input": "forest ranger",
+  "output": "tower"
+ }
+]

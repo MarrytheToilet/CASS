@@ -1,0 +1,818 @@
+[
+ {
+  "input": "apple",
+  "output": "red"
+ },
+ {
+  "input": "banana",
+  "output": "yellow"
+ },
+ {
+  "input": "strawberry",
+  "output": "red"
+ },
+ {
+  "input": "blueberry",
+  "output": "blue"
+ },
+ {
+  "input": "raspberry",
+  "output": "red"
+ },
+ {
+  "input": "blackberry",
+  "output": "black"
+ },
+ {
+  "input": "cherry",
+  "output": "red"
+ },
+ {
+  "input": "orange",
+  "output": "orange"
+ },
+ {
+  "input": "lemon",
+  "output": "yellow"
+ },
+ {
+  "input": "lime",
+  "output": "green"
+ },
+ {
+  "input": "grape",
+  "output": "purple"
+ },
+ {
+  "input": "watermelon",
+  "output": "green"
+ },
+ {
+  "input": "cantaloupe",
+  "output": "orange"
+ },
+ {
+  "input": "pineapple",
+  "output": "yellow"
+ },
+ {
+  "input": "kiwi",
+  "output": "brown"
+ },
+ {
+  "input": "mango",
+  "output": "orange"
+ },
+ {
+  "input": "peach",
+  "output": "orange"
+ },
+ {
+  "input": "plum",
+  "output": "purple"
+ },
+ {
+  "input": "pear",
+  "output": "green"
+ },
+ {
+  "input": "apricot",
+  "output": "orange"
+ },
+ {
+  "input": "fig",
+  "output": "purple"
+ },
+ {
+  "input": "date",
+  "output": "brown"
+ },
+ {
+  "input": "olive",
+  "output": "green"
+ },
+ {
+  "input": "pomegranate",
+  "output": "red"
+ },
+ {
+  "input": "cranberry",
+  "output": "red"
+ },
+ {
+  "input": "elderberry",
+  "output": "purple"
+ },
+ {
+  "input": "mulberry",
+  "output": "black"
+ },
+ {
+  "input": "gooseberry",
+  "output": "green"
+ },
+ {
+  "input": "currant",
+  "output": "black"
+ },
+ {
+  "input": "papaya",
+  "output": "orange"
+ },
+ {
+  "input": "passion fruit",
+  "output": "purple"
+ },
+ {
+  "input": "guava",
+  "output": "yellow"
+ },
+ {
+  "input": "dragon fruit",
+  "output": "pink"
+ },
+ {
+  "input": "lychee",
+  "output": "red"
+ },
+ {
+  "input": "rambutan",
+  "output": "red"
+ },
+ {
+  "input": "mangosteen",
+  "output": "purple"
+ },
+ {
+  "input": "durian",
+  "output": "green"
+ },
+ {
+  "input": "jackfruit",
+  "output": "yellow"
+ },
+ {
+  "input": "sapodilla",
+  "output": "brown"
+ },
+ {
+  "input": "persimmon",
+  "output": "orange"
+ },
+ {
+  "input": "quince",
+  "output": "yellow"
+ },
+ {
+  "input": "avocado",
+  "output": "green"
+ },
+ {
+  "input": "tomato",
+  "output": "red"
+ },
+ {
+  "input": "cucumber",
+  "output": "green"
+ },
+ {
+  "input": "carrot",
+  "output": "orange"
+ },
+ {
+  "input": "potato",
+  "output": "brown"
+ },
+ {
+  "input": "onion",
+  "output": "white"
+ },
+ {
+  "input": "garlic",
+  "output": "white"
+ },
+ {
+  "input": "radish",
+  "output": "red"
+ },
+ {
+  "input": "beetroot",
+  "output": "red"
+ },
+ {
+  "input": "celery",
+  "output": "green"
+ },
+ {
+  "input": "lettuce",
+  "output": "green"
+ },
+ {
+  "input": "spinach",
+  "output": "green"
+ },
+ {
+  "input": "kale",
+  "output": "green"
+ },
+ {
+  "input": "cabbage",
+  "output": "green"
+ },
+ {
+  "input": "broccoli",
+  "output": "green"
+ },
+ {
+  "input": "cauliflower",
+  "output": "white"
+ },
+ {
+  "input": "asparagus",
+  "output": "green"
+ },
+ {
+  "input": "artichoke",
+  "output": "green"
+ },
+ {
+  "input": "corn",
+  "output": "yellow"
+ },
+ {
+  "input": "peas",
+  "output": "green"
+ },
+ {
+  "input": "beans",
+  "output": "green"
+ },
+ {
+  "input": "squash",
+  "output": "orange"
+ },
+ {
+  "input": "pumpkin",
+  "output": "orange"
+ },
+ {
+  "input": "zucchini",
+  "output": "green"
+ },
+ {
+  "input": "eggplant",
+  "output": "purple"
+ },
+ {
+  "input": "red bell pepper",
+  "output": "red"
+ },
+ {
+  "input": "yellow bell pepper",
+  "output": "yellow"
+ },
+ {
+  "input": "orange bell pepper",
+  "output": "orange"
+ },
+ {
+  "input": "green bell pepper",
+  "output": "green"
+ },
+ {
+  "input": "white button mushroom",
+  "output": "white"
+ },
+ {
+  "input": "portobello mushroom",
+  "output": "brown"
+ },
+ {
+  "input": "cremini mushroom",
+  "output": "brown"
+ },
+ {
+  "input": "shiitake",
+  "output": "brown"
+ },
+ {
+  "input": "enoki",
+  "output": "white"
+ },
+ {
+  "input": "oyster mushroom",
+  "output": "gray"
+ },
+ {
+  "input": "maitake",
+  "output": "gray"
+ },
+ {
+  "input": "lion's mane",
+  "output": "white"
+ },
+ {
+  "input": "chanterelle",
+  "output": "orange"
+ },
+ {
+  "input": "morel",
+  "output": "tan"
+ },
+ {
+  "input": "truffle",
+  "output": "black"
+ },
+ {
+  "input": "horseradish",
+  "output": "white"
+ },
+ {
+  "input": "wasabi",
+  "output": "green"
+ },
+ {
+  "input": "daikon",
+  "output": "white"
+ },
+ {
+  "input": "rutabaga",
+  "output": "yellow"
+ },
+ {
+  "input": "parsnip",
+  "output": "white"
+ },
+ {
+  "input": "turnip",
+  "output": "white"
+ },
+ {
+  "input": "kohlrabi",
+  "output": "green"
+ },
+ {
+  "input": "watermelon radish",
+  "output": "green"
+ },
+ {
+  "input": "breakfast radish",
+  "output": "pink"
+ },
+ {
+  "input": "french breakfast radish",
+  "output": "red"
+ },
+ {
+  "input": "cherry belle radish",
+  "output": "red"
+ },
+ {
+  "input": "icicle radish",
+  "output": "white"
+ },
+ {
+  "input": "chinese radish",
+  "output": "white"
+ },
+ {
+  "input": "black radish",
+  "output": "black"
+ },
+ {
+  "input": "purple radish",
+  "output": "purple"
+ },
+ {
+  "input": "summer radish",
+  "output": "red"
+ },
+ {
+  "input": "winter radish",
+  "output": "white"
+ },
+ {
+  "input": "horse radish",
+  "output": "white"
+ },
+ {
+  "input": "mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "dijon mustard",
+  "output": "tan"
+ },
+ {
+  "input": "spicy brown mustard",
+  "output": "brown"
+ },
+ {
+  "input": "whole grain mustard",
+  "output": "brown"
+ },
+ {
+  "input": "english mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "american yellow mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "deli mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "sweet mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "country style mustard",
+  "output": "brown"
+ },
+ {
+  "input": "stone ground mustard",
+  "output": "brown"
+ },
+ {
+  "input": "classic yellow mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "grain mustard",
+  "output": "brown"
+ },
+ {
+  "input": "yellow mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "brown mustard",
+  "output": "brown"
+ },
+ {
+  "input": "whole wheat mustard",
+  "output": "brown"
+ },
+ {
+  "input": "honey mustard",
+  "output": "yellow"
+ },
+ {
+  "input": "maple mustard",
+  "output": "brown"
+ },
+ {
+  "input": "molasses mustard",
+  "output": "dark"
+ },
+ {
+  "input": "syrup mustard",
+  "output": "amber"
+ },
+ {
+  "input": "jam",
+  "output": "red"
+ },
+ {
+  "input": "jelly",
+  "output": "red"
+ },
+ {
+  "input": "preserve",
+  "output": "red"
+ },
+ {
+  "input": "conserve",
+  "output": "red"
+ },
+ {
+  "input": "chutney",
+  "output": "orange"
+ },
+ {
+  "input": "relish",
+  "output": "green"
+ },
+ {
+  "input": "pickle",
+  "output": "green"
+ },
+ {
+  "input": "cornichon",
+  "output": "green"
+ },
+ {
+  "input": "gherkin",
+  "output": "green"
+ },
+ {
+  "input": "bread and butter pickle",
+  "output": "yellow"
+ },
+ {
+  "input": "dill pickle",
+  "output": "green"
+ },
+ {
+  "input": "sour pickle",
+  "output": "green"
+ },
+ {
+  "input": "refrigerated dill pickle",
+  "output": "green"
+ },
+ {
+  "input": "shelf stable dill pickle",
+  "output": "green"
+ },
+ {
+  "input": "kosher dill pickle",
+  "output": "green"
+ },
+ {
+  "input": "half sour pickle",
+  "output": "green"
+ },
+ {
+  "input": "full sour pickle",
+  "output": "green"
+ },
+ {
+  "input": "fermented pickle",
+  "output": "green"
+ },
+ {
+  "input": "pasteurized pickle",
+  "output": "green"
+ },
+ {
+  "input": "vacuum sealed pickle",
+  "output": "green"
+ },
+ {
+  "input": "brined pickle",
+  "output": "green"
+ },
+ {
+  "input": "vinegar",
+  "output": "clear"
+ },
+ {
+  "input": "vegetable oil",
+  "output": "yellow"
+ },
+ {
+  "input": "canola oil",
+  "output": "yellow"
+ },
+ {
+  "input": "sunflower oil",
+  "output": "yellow"
+ },
+ {
+  "input": "coconut oil",
+  "output": "white"
+ },
+ {
+  "input": "palm oil",
+  "output": "red"
+ },
+ {
+  "input": "peanut oil",
+  "output": "yellow"
+ },
+ {
+  "input": "sesame oil",
+  "output": "brown"
+ },
+ {
+  "input": "flaxseed oil",
+  "output": "gold"
+ },
+ {
+  "input": "hemp oil",
+  "output": "green"
+ },
+ {
+  "input": "avocado oil",
+  "output": "green"
+ },
+ {
+  "input": "macadamia oil",
+  "output": "yellow"
+ },
+ {
+  "input": "grapeseed oil",
+  "output": "yellow"
+ },
+ {
+  "input": "rice bran oil",
+  "output": "yellow"
+ },
+ {
+  "input": "soybean oil",
+  "output": "yellow"
+ },
+ {
+  "input": "cottonseed oil",
+  "output": "yellow"
+ },
+ {
+  "input": "safflower oil",
+  "output": "yellow"
+ },
+ {
+  "input": "walnut oil",
+  "output": "brown"
+ },
+ {
+  "input": "almond oil",
+  "output": "yellow"
+ },
+ {
+  "input": "hazelnut oil",
+  "output": "brown"
+ },
+ {
+  "input": "pistachio oil",
+  "output": "green"
+ },
+ {
+  "input": "cashew oil",
+  "output": "yellow"
+ },
+ {
+  "input": "pine nut oil",
+  "output": "yellow"
+ },
+ {
+  "input": "pepita oil",
+  "output": "green"
+ },
+ {
+  "input": "apple seed oil",
+  "output": "yellow"
+ },
+ {
+  "input": "grape seed oil",
+  "output": "yellow"
+ },
+ {
+  "input": "peach seed oil",
+  "output": "yellow"
+ },
+ {
+  "input": "apricot kernel oil",
+  "output": "yellow"
+ },
+ {
+  "input": "olive oil",
+  "output": "green"
+ },
+ {
+  "input": "coconut cream",
+  "output": "white"
+ },
+ {
+  "input": "palm fruit",
+  "output": "red"
+ },
+ {
+  "input": "shea butter",
+  "output": "white"
+ },
+ {
+  "input": "mango butter",
+  "output": "yellow"
+ },
+ {
+  "input": "babassu oil",
+  "output": "white"
+ },
+ {
+  "input": "murumuru butter",
+  "output": "white"
+ },
+ {
+  "input": "kokum butter",
+  "output": "white"
+ },
+ {
+  "input": "beeswax",
+  "output": "yellow"
+ },
+ {
+  "input": "jojoba oil",
+  "output": "yellow"
+ },
+ {
+  "input": "argan oil",
+  "output": "yellow"
+ },
+ {
+  "input": "rosehip oil",
+  "output": "red"
+ },
+ {
+  "input": "sea buckthorn oil",
+  "output": "orange"
+ },
+ {
+  "input": "calendula oil",
+  "output": "yellow"
+ },
+ {
+  "input": "tea tree oil",
+  "output": "clear"
+ },
+ {
+  "input": "eucalyptus oil",
+  "output": "clear"
+ },
+ {
+  "input": "lemon oil",
+  "output": "yellow"
+ },
+ {
+  "input": "lime oil",
+  "output": "green"
+ },
+ {
+  "input": "orange oil",
+  "output": "orange"
+ },
+ {
+  "input": "bergamot oil",
+  "output": "yellow"
+ },
+ {
+  "input": "neroli oil",
+  "output": "yellow"
+ },
+ {
+  "input": "ylang ylang oil",
+  "output": "yellow"
+ },
+ {
+  "input": "jasmine oil",
+  "output": "yellow"
+ },
+ {
+  "input": "geranium oil",
+  "output": "green"
+ },
+ {
+  "input": "vetiver oil",
+  "output": "brown"
+ },
+ {
+  "input": "patchouli oil",
+  "output": "brown"
+ },
+ {
+  "input": "sandalwood oil",
+  "output": "yellow"
+ },
+ {
+  "input": "cedarwood oil",
+  "output": "brown"
+ },
+ {
+  "input": "frankincense oil",
+  "output": "yellow"
+ },
+ {
+  "input": "myrrh oil",
+  "output": "brown"
+ },
+ {
+  "input": "copal oil",
+  "output": "yellow"
+ },
+ {
+  "input": "elemi oil",
+  "output": "yellow"
+ },
+ {
+  "input": "benzoin resin",
+  "output": "yellow"
+ },
+ {
+  "input": "storax resin",
+  "output": "brown"
+ },
+ {
+  "input": "labdanum resin",
+  "output": "brown"
+ },
+ {
+  "input": "asafoetida resin",
+  "output": "brown"
+ },
+ {
+  "input": "ammoniacum resin",
+  "output": "brown"
+ }
+]

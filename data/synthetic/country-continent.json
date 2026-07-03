@@ -1,0 +1,890 @@
+[
+ {
+  "input": "Algeria",
+  "output": "Africa"
+ },
+ {
+  "input": "Angola",
+  "output": "Africa"
+ },
+ {
+  "input": "Benin",
+  "output": "Africa"
+ },
+ {
+  "input": "Botswana",
+  "output": "Africa"
+ },
+ {
+  "input": "Burkina Faso",
+  "output": "Africa"
+ },
+ {
+  "input": "Burundi",
+  "output": "Africa"
+ },
+ {
+  "input": "Cabo Verde",
+  "output": "Africa"
+ },
+ {
+  "input": "Cameroon",
+  "output": "Africa"
+ },
+ {
+  "input": "Central African Republic",
+  "output": "Africa"
+ },
+ {
+  "input": "Chad",
+  "output": "Africa"
+ },
+ {
+  "input": "Comoros",
+  "output": "Africa"
+ },
+ {
+  "input": "Congo",
+  "output": "Africa"
+ },
+ {
+  "input": "Côte d'Ivoire",
+  "output": "Africa"
+ },
+ {
+  "input": "Democratic Republic of the Congo",
+  "output": "Africa"
+ },
+ {
+  "input": "Djibouti",
+  "output": "Africa"
+ },
+ {
+  "input": "Egypt",
+  "output": "Africa"
+ },
+ {
+  "input": "Equatorial Guinea",
+  "output": "Africa"
+ },
+ {
+  "input": "Eritrea",
+  "output": "Africa"
+ },
+ {
+  "input": "Eswatini",
+  "output": "Africa"
+ },
+ {
+  "input": "Ethiopia",
+  "output": "Africa"
+ },
+ {
+  "input": "Gabon",
+  "output": "Africa"
+ },
+ {
+  "input": "Gambia",
+  "output": "Africa"
+ },
+ {
+  "input": "Ghana",
+  "output": "Africa"
+ },
+ {
+  "input": "Guinea",
+  "output": "Africa"
+ },
+ {
+  "input": "Guinea-Bissau",
+  "output": "Africa"
+ },
+ {
+  "input": "Kenya",
+  "output": "Africa"
+ },
+ {
+  "input": "Lesotho",
+  "output": "Africa"
+ },
+ {
+  "input": "Liberia",
+  "output": "Africa"
+ },
+ {
+  "input": "Libya",
+  "output": "Africa"
+ },
+ {
+  "input": "Madagascar",
+  "output": "Africa"
+ },
+ {
+  "input": "Malawi",
+  "output": "Africa"
+ },
+ {
+  "input": "Mali",
+  "output": "Africa"
+ },
+ {
+  "input": "Mauritania",
+  "output": "Africa"
+ },
+ {
+  "input": "Mauritius",
+  "output": "Africa"
+ },
+ {
+  "input": "Morocco",
+  "output": "Africa"
+ },
+ {
+  "input": "Mozambique",
+  "output": "Africa"
+ },
+ {
+  "input": "Namibia",
+  "output": "Africa"
+ },
+ {
+  "input": "Niger",
+  "output": "Africa"
+ },
+ {
+  "input": "Nigeria",
+  "output": "Africa"
+ },
+ {
+  "input": "Rwanda",
+  "output": "Africa"
+ },
+ {
+  "input": "São Tomé and Príncipe",
+  "output": "Africa"
+ },
+ {
+  "input": "Senegal",
+  "output": "Africa"
+ },
+ {
+  "input": "Seychelles",
+  "output": "Africa"
+ },
+ {
+  "input": "Sierra Leone",
+  "output": "Africa"
+ },
+ {
+  "input": "Somalia",
+  "output": "Africa"
+ },
+ {
+  "input": "South Africa",
+  "output": "Africa"
+ },
+ {
+  "input": "South Sudan",
+  "output": "Africa"
+ },
+ {
+  "input": "Sudan",
+  "output": "Africa"
+ },
+ {
+  "input": "Tanzania",
+  "output": "Africa"
+ },
+ {
+  "input": "Togo",
+  "output": "Africa"
+ },
+ {
+  "input": "Tunisia",
+  "output": "Africa"
+ },
+ {
+  "input": "Uganda",
+  "output": "Africa"
+ },
+ {
+  "input": "Zambia",
+  "output": "Africa"
+ },
+ {
+  "input": "Zimbabwe",
+  "output": "Africa"
+ },
+ {
+  "input": "Afghanistan",
+  "output": "Asia"
+ },
+ {
+  "input": "Armenia",
+  "output": "Asia"
+ },
+ {
+  "input": "Azerbaijan",
+  "output": "Asia"
+ },
+ {
+  "input": "Bahrain",
+  "output": "Asia"
+ },
+ {
+  "input": "Bangladesh",
+  "output": "Asia"
+ },
+ {
+  "input": "Bhutan",
+  "output": "Asia"
+ },
+ {
+  "input": "Brunei",
+  "output": "Asia"
+ },
+ {
+  "input": "Cambodia",
+  "output": "Asia"
+ },
+ {
+  "input": "China",
+  "output": "Asia"
+ },
+ {
+  "input": "Cyprus",
+  "output": "Asia"
+ },
+ {
+  "input": "Georgia",
+  "output": "Asia"
+ },
+ {
+  "input": "India",
+  "output": "Asia"
+ },
+ {
+  "input": "Indonesia",
+  "output": "Asia"
+ },
+ {
+  "input": "Iran",
+  "output": "Asia"
+ },
+ {
+  "input": "Iraq",
+  "output": "Asia"
+ },
+ {
+  "input": "Israel",
+  "output": "Asia"
+ },
+ {
+  "input": "Japan",
+  "output": "Asia"
+ },
+ {
+  "input": "Jordan",
+  "output": "Asia"
+ },
+ {
+  "input": "Kazakhstan",
+  "output": "Asia"
+ },
+ {
+  "input": "Kuwait",
+  "output": "Asia"
+ },
+ {
+  "input": "Kyrgyzstan",
+  "output": "Asia"
+ },
+ {
+  "input": "Laos",
+  "output": "Asia"
+ },
+ {
+  "input": "Lebanon",
+  "output": "Asia"
+ },
+ {
+  "input": "Malaysia",
+  "output": "Asia"
+ },
+ {
+  "input": "Maldives",
+  "output": "Asia"
+ },
+ {
+  "input": "Mongolia",
+  "output": "Asia"
+ },
+ {
+  "input": "Myanmar",
+  "output": "Asia"
+ },
+ {
+  "input": "Nepal",
+  "output": "Asia"
+ },
+ {
+  "input": "North Korea",
+  "output": "Asia"
+ },
+ {
+  "input": "Oman",
+  "output": "Asia"
+ },
+ {
+  "input": "Pakistan",
+  "output": "Asia"
+ },
+ {
+  "input": "Palestine",
+  "output": "Asia"
+ },
+ {
+  "input": "Philippines",
+  "output": "Asia"
+ },
+ {
+  "input": "Qatar",
+  "output": "Asia"
+ },
+ {
+  "input": "Saudi Arabia",
+  "output": "Asia"
+ },
+ {
+  "input": "Singapore",
+  "output": "Asia"
+ },
+ {
+  "input": "South Korea",
+  "output": "Asia"
+ },
+ {
+  "input": "Sri Lanka",
+  "output": "Asia"
+ },
+ {
+  "input": "Syria",
+  "output": "Asia"
+ },
+ {
+  "input": "Taiwan",
+  "output": "Asia"
+ },
+ {
+  "input": "Tajikistan",
+  "output": "Asia"
+ },
+ {
+  "input": "Thailand",
+  "output": "Asia"
+ },
+ {
+  "input": "Timor-Leste",
+  "output": "Asia"
+ },
+ {
+  "input": "Turkey",
+  "output": "Asia"
+ },
+ {
+  "input": "Turkmenistan",
+  "output": "Asia"
+ },
+ {
+  "input": "United Arab Emirates",
+  "output": "Asia"
+ },
+ {
+  "input": "Uzbekistan",
+  "output": "Asia"
+ },
+ {
+  "input": "Vietnam",
+  "output": "Asia"
+ },
+ {
+  "input": "Yemen",
+  "output": "Asia"
+ },
+ {
+  "input": "Albania",
+  "output": "Europe"
+ },
+ {
+  "input": "Andorra",
+  "output": "Europe"
+ },
+ {
+  "input": "Austria",
+  "output": "Europe"
+ },
+ {
+  "input": "Belarus",
+  "output": "Europe"
+ },
+ {
+  "input": "Belgium",
+  "output": "Europe"
+ },
+ {
+  "input": "Bosnia and Herzegovina",
+  "output": "Europe"
+ },
+ {
+  "input": "Bulgaria",
+  "output": "Europe"
+ },
+ {
+  "input": "Croatia",
+  "output": "Europe"
+ },
+ {
+  "input": "Czechia",
+  "output": "Europe"
+ },
+ {
+  "input": "Denmark",
+  "output": "Europe"
+ },
+ {
+  "input": "Estonia",
+  "output": "Europe"
+ },
+ {
+  "input": "Finland",
+  "output": "Europe"
+ },
+ {
+  "input": "France",
+  "output": "Europe"
+ },
+ {
+  "input": "Germany",
+  "output": "Europe"
+ },
+ {
+  "input": "Greece",
+  "output": "Europe"
+ },
+ {
+  "input": "Hungary",
+  "output": "Europe"
+ },
+ {
+  "input": "Iceland",
+  "output": "Europe"
+ },
+ {
+  "input": "Ireland",
+  "output": "Europe"
+ },
+ {
+  "input": "Italy",
+  "output": "Europe"
+ },
+ {
+  "input": "Kosovo",
+  "output": "Europe"
+ },
+ {
+  "input": "Latvia",
+  "output": "Europe"
+ },
+ {
+  "input": "Liechtenstein",
+  "output": "Europe"
+ },
+ {
+  "input": "Lithuania",
+  "output": "Europe"
+ },
+ {
+  "input": "Luxembourg",
+  "output": "Europe"
+ },
+ {
+  "input": "Malta",
+  "output": "Europe"
+ },
+ {
+  "input": "Moldova",
+  "output": "Europe"
+ },
+ {
+  "input": "Monaco",
+  "output": "Europe"
+ },
+ {
+  "input": "Montenegro",
+  "output": "Europe"
+ },
+ {
+  "input": "Netherlands",
+  "output": "Europe"
+ },
+ {
+  "input": "North Macedonia",
+  "output": "Europe"
+ },
+ {
+  "input": "Norway",
+  "output": "Europe"
+ },
+ {
+  "input": "Poland",
+  "output": "Europe"
+ },
+ {
+  "input": "Portugal",
+  "output": "Europe"
+ },
+ {
+  "input": "Romania",
+  "output": "Europe"
+ },
+ {
+  "input": "Russia",
+  "output": "Europe"
+ },
+ {
+  "input": "San Marino",
+  "output": "Europe"
+ },
+ {
+  "input": "Serbia",
+  "output": "Europe"
+ },
+ {
+  "input": "Slovakia",
+  "output": "Europe"
+ },
+ {
+  "input": "Slovenia",
+  "output": "Europe"
+ },
+ {
+  "input": "Spain",
+  "output": "Europe"
+ },
+ {
+  "input": "Sweden",
+  "output": "Europe"
+ },
+ {
+  "input": "Switzerland",
+  "output": "Europe"
+ },
+ {
+  "input": "Ukraine",
+  "output": "Europe"
+ },
+ {
+  "input": "United Kingdom",
+  "output": "Europe"
+ },
+ {
+  "input": "Vatican City",
+  "output": "Europe"
+ },
+ {
+  "input": "Antigua and Barbuda",
+  "output": "North America"
+ },
+ {
+  "input": "Bahamas",
+  "output": "North America"
+ },
+ {
+  "input": "Barbados",
+  "output": "North America"
+ },
+ {
+  "input": "Belize",
+  "output": "North America"
+ },
+ {
+  "input": "Canada",
+  "output": "North America"
+ },
+ {
+  "input": "Costa Rica",
+  "output": "North America"
+ },
+ {
+  "input": "Cuba",
+  "output": "North America"
+ },
+ {
+  "input": "Dominica",
+  "output": "North America"
+ },
+ {
+  "input": "Dominican Republic",
+  "output": "North America"
+ },
+ {
+  "input": "El Salvador",
+  "output": "North America"
+ },
+ {
+  "input": "Grenada",
+  "output": "North America"
+ },
+ {
+  "input": "Guatemala",
+  "output": "North America"
+ },
+ {
+  "input": "Haiti",
+  "output": "North America"
+ },
+ {
+  "input": "Honduras",
+  "output": "North America"
+ },
+ {
+  "input": "Jamaica",
+  "output": "North America"
+ },
+ {
+  "input": "Mexico",
+  "output": "North America"
+ },
+ {
+  "input": "Nicaragua",
+  "output": "North America"
+ },
+ {
+  "input": "Panama",
+  "output": "North America"
+ },
+ {
+  "input": "Saint Kitts and Nevis",
+  "output": "North America"
+ },
+ {
+  "input": "Saint Lucia",
+  "output": "North America"
+ },
+ {
+  "input": "Saint Vincent and the Grenadines",
+  "output": "North America"
+ },
+ {
+  "input": "Trinidad and Tobago",
+  "output": "North America"
+ },
+ {
+  "input": "United States",
+  "output": "North America"
+ },
+ {
+  "input": "Argentina",
+  "output": "South America"
+ },
+ {
+  "input": "Bolivia",
+  "output": "South America"
+ },
+ {
+  "input": "Brazil",
+  "output": "South America"
+ },
+ {
+  "input": "Chile",
+  "output": "South America"
+ },
+ {
+  "input": "Colombia",
+  "output": "South America"
+ },
+ {
+  "input": "Ecuador",
+  "output": "South America"
+ },
+ {
+  "input": "Guyana",
+  "output": "South America"
+ },
+ {
+  "input": "Paraguay",
+  "output": "South America"
+ },
+ {
+  "input": "Peru",
+  "output": "South America"
+ },
+ {
+  "input": "Suriname",
+  "output": "South America"
+ },
+ {
+  "input": "Uruguay",
+  "output": "South America"
+ },
+ {
+  "input": "Venezuela",
+  "output": "South America"
+ },
+ {
+  "input": "Australia",
+  "output": "Oceania"
+ },
+ {
+  "input": "Fiji",
+  "output": "Oceania"
+ },
+ {
+  "input": "Kiribati",
+  "output": "Oceania"
+ },
+ {
+  "input": "Marshall Islands",
+  "output": "Oceania"
+ },
+ {
+  "input": "Micronesia",
+  "output": "Oceania"
+ },
+ {
+  "input": "Nauru",
+  "output": "Oceania"
+ },
+ {
+  "input": "New Zealand",
+  "output": "Oceania"
+ },
+ {
+  "input": "Palau",
+  "output": "Oceania"
+ },
+ {
+  "input": "Papua New Guinea",
+  "output": "Oceania"
+ },
+ {
+  "input": "Samoa",
+  "output": "Oceania"
+ },
+ {
+  "input": "Solomon Islands",
+  "output": "Oceania"
+ },
+ {
+  "input": "Tonga",
+  "output": "Oceania"
+ },
+ {
+  "input": "Tuvalu",
+  "output": "Oceania"
+ },
+ {
+  "input": "Vanuatu",
+  "output": "Oceania"
+ },
+ {
+  "input": "Puerto Rico",
+  "output": "North America"
+ },
+ {
+  "input": "Greenland",
+  "output": "North America"
+ },
+ {
+  "input": "French Guiana",
+  "output": "South America"
+ },
+ {
+  "input": "Martinique",
+  "output": "North America"
+ },
+ {
+  "input": "Guadeloupe",
+  "output": "North America"
+ },
+ {
+  "input": "Réunion",
+  "output": "Africa"
+ },
+ {
+  "input": "Mayotte",
+  "output": "Africa"
+ },
+ {
+  "input": "New Caledonia",
+  "output": "Oceania"
+ },
+ {
+  "input": "Wallis and Futuna",
+  "output": "Oceania"
+ },
+ {
+  "input": "French Polynesia",
+  "output": "Oceania"
+ },
+ {
+  "input": "Norfolk Island",
+  "output": "Oceania"
+ },
+ {
+  "input": "Christmas Island",
+  "output": "Oceania"
+ },
+ {
+  "input": "Cocos Islands",
+  "output": "Oceania"
+ },
+ {
+  "input": "Pitcairn Islands",
+  "output": "Oceania"
+ },
+ {
+  "input": "Cook Islands",
+  "output": "Oceania"
+ },
+ {
+  "input": "Niue",
+  "output": "Oceania"
+ },
+ {
+  "input": "Tokelau",
+  "output": "Oceania"
+ },
+ {
+  "input": "American Samoa",
+  "output": "Oceania"
+ },
+ {
+  "input": "Guam",
+  "output": "Oceania"
+ },
+ {
+  "input": "Northern Mariana Islands",
+  "output": "Oceania"
+ },
+ {
+  "input": "US Virgin Islands",
+  "output": "North America"
+ },
+ {
+  "input": "Bermuda",
+  "output": "North America"
+ },
+ {
+  "input": "Cayman Islands",
+  "output": "North America"
+ },
+ {
+  "input": "Turks and Caicos",
+  "output": "North America"
+ },
+ {
+  "input": "British Virgin Islands",
+  "output": "North America"
+ }
+]

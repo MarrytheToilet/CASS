@@ -1,0 +1,882 @@
+[
+ {
+  "input": "house",
+  "output": "casa"
+ },
+ {
+  "input": "water",
+  "output": "acqua"
+ },
+ {
+  "input": "book",
+  "output": "libro"
+ },
+ {
+  "input": "table",
+  "output": "tavolo"
+ },
+ {
+  "input": "chair",
+  "output": "sedia"
+ },
+ {
+  "input": "door",
+  "output": "porta"
+ },
+ {
+  "input": "window",
+  "output": "finestra"
+ },
+ {
+  "input": "key",
+  "output": "chiave"
+ },
+ {
+  "input": "phone",
+  "output": "telefono"
+ },
+ {
+  "input": "computer",
+  "output": "computer"
+ },
+ {
+  "input": "car",
+  "output": "macchina"
+ },
+ {
+  "input": "road",
+  "output": "strada"
+ },
+ {
+  "input": "street",
+  "output": "via"
+ },
+ {
+  "input": "city",
+  "output": "città"
+ },
+ {
+  "input": "country",
+  "output": "paese"
+ },
+ {
+  "input": "world",
+  "output": "mondo"
+ },
+ {
+  "input": "sun",
+  "output": "sole"
+ },
+ {
+  "input": "moon",
+  "output": "luna"
+ },
+ {
+  "input": "star",
+  "output": "stella"
+ },
+ {
+  "input": "sky",
+  "output": "cielo"
+ },
+ {
+  "input": "man",
+  "output": "uomo"
+ },
+ {
+  "input": "woman",
+  "output": "donna"
+ },
+ {
+  "input": "child",
+  "output": "bambino"
+ },
+ {
+  "input": "boy",
+  "output": "ragazzo"
+ },
+ {
+  "input": "girl",
+  "output": "ragazza"
+ },
+ {
+  "input": "mother",
+  "output": "madre"
+ },
+ {
+  "input": "father",
+  "output": "padre"
+ },
+ {
+  "input": "brother",
+  "output": "fratello"
+ },
+ {
+  "input": "sister",
+  "output": "sorella"
+ },
+ {
+  "input": "friend",
+  "output": "amico"
+ },
+ {
+  "input": "teacher",
+  "output": "insegnante"
+ },
+ {
+  "input": "student",
+  "output": "studente"
+ },
+ {
+  "input": "doctor",
+  "output": "medico"
+ },
+ {
+  "input": "nurse",
+  "output": "infermiere"
+ },
+ {
+  "input": "police",
+  "output": "polizia"
+ },
+ {
+  "input": "king",
+  "output": "re"
+ },
+ {
+  "input": "queen",
+  "output": "regina"
+ },
+ {
+  "input": "baby",
+  "output": "bebè"
+ },
+ {
+  "input": "family",
+  "output": "famiglia"
+ },
+ {
+  "input": "name",
+  "output": "nome"
+ },
+ {
+  "input": "dog",
+  "output": "cane"
+ },
+ {
+  "input": "cat",
+  "output": "gatto"
+ },
+ {
+  "input": "bird",
+  "output": "uccello"
+ },
+ {
+  "input": "fish",
+  "output": "pesce"
+ },
+ {
+  "input": "horse",
+  "output": "cavallo"
+ },
+ {
+  "input": "cow",
+  "output": "mucca"
+ },
+ {
+  "input": "pig",
+  "output": "maiale"
+ },
+ {
+  "input": "chicken",
+  "output": "pollo"
+ },
+ {
+  "input": "sheep",
+  "output": "pecora"
+ },
+ {
+  "input": "rabbit",
+  "output": "coniglio"
+ },
+ {
+  "input": "lion",
+  "output": "leone"
+ },
+ {
+  "input": "tiger",
+  "output": "tigre"
+ },
+ {
+  "input": "bear",
+  "output": "orso"
+ },
+ {
+  "input": "wolf",
+  "output": "lupo"
+ },
+ {
+  "input": "fox",
+  "output": "volpe"
+ },
+ {
+  "input": "elephant",
+  "output": "elefante"
+ },
+ {
+  "input": "monkey",
+  "output": "scimmia"
+ },
+ {
+  "input": "snake",
+  "output": "serpente"
+ },
+ {
+  "input": "spider",
+  "output": "ragno"
+ },
+ {
+  "input": "insect",
+  "output": "insetto"
+ },
+ {
+  "input": "bread",
+  "output": "pane"
+ },
+ {
+  "input": "cheese",
+  "output": "formaggio"
+ },
+ {
+  "input": "meat",
+  "output": "carne"
+ },
+ {
+  "input": "fruit",
+  "output": "frutta"
+ },
+ {
+  "input": "apple",
+  "output": "mela"
+ },
+ {
+  "input": "grape",
+  "output": "uva"
+ },
+ {
+  "input": "banana",
+  "output": "banana"
+ },
+ {
+  "input": "tomato",
+  "output": "pomodoro"
+ },
+ {
+  "input": "potato",
+  "output": "patata"
+ },
+ {
+  "input": "onion",
+  "output": "cipolla"
+ },
+ {
+  "input": "milk",
+  "output": "latte"
+ },
+ {
+  "input": "wine",
+  "output": "vino"
+ },
+ {
+  "input": "coffee",
+  "output": "caffè"
+ },
+ {
+  "input": "tea",
+  "output": "tè"
+ },
+ {
+  "input": "beer",
+  "output": "birra"
+ },
+ {
+  "input": "sugar",
+  "output": "zucchero"
+ },
+ {
+  "input": "salt",
+  "output": "sale"
+ },
+ {
+  "input": "oil",
+  "output": "olio"
+ },
+ {
+  "input": "butter",
+  "output": "burro"
+ },
+ {
+  "input": "egg",
+  "output": "uovo"
+ },
+ {
+  "input": "red",
+  "output": "rosso"
+ },
+ {
+  "input": "blue",
+  "output": "blu"
+ },
+ {
+  "input": "green",
+  "output": "verde"
+ },
+ {
+  "input": "yellow",
+  "output": "giallo"
+ },
+ {
+  "input": "black",
+  "output": "nero"
+ },
+ {
+  "input": "white",
+  "output": "bianco"
+ },
+ {
+  "input": "brown",
+  "output": "marrone"
+ },
+ {
+  "input": "orange",
+  "output": "arancione"
+ },
+ {
+  "input": "purple",
+  "output": "viola"
+ },
+ {
+  "input": "pink",
+  "output": "rosa"
+ },
+ {
+  "input": "gray",
+  "output": "grigio"
+ },
+ {
+  "input": "gold",
+  "output": "oro"
+ },
+ {
+  "input": "silver",
+  "output": "argento"
+ },
+ {
+  "input": "dark",
+  "output": "scuro"
+ },
+ {
+  "input": "light",
+  "output": "chiaro"
+ },
+ {
+  "input": "bright",
+  "output": "luminoso"
+ },
+ {
+  "input": "pale",
+  "output": "pallido"
+ },
+ {
+  "input": "vivid",
+  "output": "vivido"
+ },
+ {
+  "input": "dull",
+  "output": "opaco"
+ },
+ {
+  "input": "faded",
+  "output": "sbiadito"
+ },
+ {
+  "input": "head",
+  "output": "testa"
+ },
+ {
+  "input": "eye",
+  "output": "occhio"
+ },
+ {
+  "input": "ear",
+  "output": "orecchio"
+ },
+ {
+  "input": "nose",
+  "output": "naso"
+ },
+ {
+  "input": "mouth",
+  "output": "bocca"
+ },
+ {
+  "input": "tooth",
+  "output": "dente"
+ },
+ {
+  "input": "hand",
+  "output": "mano"
+ },
+ {
+  "input": "finger",
+  "output": "dito"
+ },
+ {
+  "input": "arm",
+  "output": "braccio"
+ },
+ {
+  "input": "leg",
+  "output": "gamba"
+ },
+ {
+  "input": "foot",
+  "output": "piede"
+ },
+ {
+  "input": "heart",
+  "output": "cuore"
+ },
+ {
+  "input": "lung",
+  "output": "polmone"
+ },
+ {
+  "input": "liver",
+  "output": "fegato"
+ },
+ {
+  "input": "blood",
+  "output": "sangue"
+ },
+ {
+  "input": "bone",
+  "output": "osso"
+ },
+ {
+  "input": "skin",
+  "output": "pelle"
+ },
+ {
+  "input": "hair",
+  "output": "capello"
+ },
+ {
+  "input": "face",
+  "output": "viso"
+ },
+ {
+  "input": "back",
+  "output": "schiena"
+ },
+ {
+  "input": "be",
+  "output": "essere"
+ },
+ {
+  "input": "have",
+  "output": "avere"
+ },
+ {
+  "input": "go",
+  "output": "andare"
+ },
+ {
+  "input": "come",
+  "output": "venire"
+ },
+ {
+  "input": "see",
+  "output": "vedere"
+ },
+ {
+  "input": "look",
+  "output": "guardare"
+ },
+ {
+  "input": "say",
+  "output": "dire"
+ },
+ {
+  "input": "speak",
+  "output": "parlare"
+ },
+ {
+  "input": "read",
+  "output": "leggere"
+ },
+ {
+  "input": "write",
+  "output": "scrivere"
+ },
+ {
+  "input": "eat",
+  "output": "mangiare"
+ },
+ {
+  "input": "drink",
+  "output": "bere"
+ },
+ {
+  "input": "sleep",
+  "output": "dormire"
+ },
+ {
+  "input": "wake",
+  "output": "svegliare"
+ },
+ {
+  "input": "run",
+  "output": "correre"
+ },
+ {
+  "input": "walk",
+  "output": "camminare"
+ },
+ {
+  "input": "rest",
+  "output": "riposare"
+ },
+ {
+  "input": "start",
+  "output": "iniziare"
+ },
+ {
+  "input": "work",
+  "output": "lavorare"
+ },
+ {
+  "input": "play",
+  "output": "giocare"
+ },
+ {
+  "input": "big",
+  "output": "grande"
+ },
+ {
+  "input": "small",
+  "output": "piccolo"
+ },
+ {
+  "input": "hot",
+  "output": "caldo"
+ },
+ {
+  "input": "cold",
+  "output": "freddo"
+ },
+ {
+  "input": "fast",
+  "output": "veloce"
+ },
+ {
+  "input": "slow",
+  "output": "lento"
+ },
+ {
+  "input": "good",
+  "output": "buono"
+ },
+ {
+  "input": "bad",
+  "output": "cattivo"
+ },
+ {
+  "input": "new",
+  "output": "nuovo"
+ },
+ {
+  "input": "old",
+  "output": "vecchio"
+ },
+ {
+  "input": "young",
+  "output": "giovane"
+ },
+ {
+  "input": "beautiful",
+  "output": "bello"
+ },
+ {
+  "input": "ugly",
+  "output": "brutto"
+ },
+ {
+  "input": "happy",
+  "output": "felice"
+ },
+ {
+  "input": "sad",
+  "output": "triste"
+ },
+ {
+  "input": "angry",
+  "output": "arrabbiato"
+ },
+ {
+  "input": "tired",
+  "output": "stanco"
+ },
+ {
+  "input": "hungry",
+  "output": "affamato"
+ },
+ {
+  "input": "full",
+  "output": "pieno"
+ },
+ {
+  "input": "empty",
+  "output": "vuoto"
+ },
+ {
+  "input": "time",
+  "output": "tempo"
+ },
+ {
+  "input": "day",
+  "output": "giorno"
+ },
+ {
+  "input": "night",
+  "output": "notte"
+ },
+ {
+  "input": "morning",
+  "output": "mattina"
+ },
+ {
+  "input": "evening",
+  "output": "sera"
+ },
+ {
+  "input": "week",
+  "output": "settimana"
+ },
+ {
+  "input": "month",
+  "output": "mese"
+ },
+ {
+  "input": "year",
+  "output": "anno"
+ },
+ {
+  "input": "hour",
+  "output": "ora"
+ },
+ {
+  "input": "minute",
+  "output": "minuto"
+ },
+ {
+  "input": "second",
+  "output": "secondo"
+ },
+ {
+  "input": "today",
+  "output": "oggi"
+ },
+ {
+  "input": "tomorrow",
+  "output": "domani"
+ },
+ {
+  "input": "yesterday",
+  "output": "ieri"
+ },
+ {
+  "input": "now",
+  "output": "adesso"
+ },
+ {
+  "input": "later",
+  "output": "dopo"
+ },
+ {
+  "input": "late",
+  "output": "tardi"
+ },
+ {
+  "input": "early",
+  "output": "presto"
+ },
+ {
+  "input": "rain",
+  "output": "pioggia"
+ },
+ {
+  "input": "snow",
+  "output": "neve"
+ },
+ {
+  "input": "in",
+  "output": "in"
+ },
+ {
+  "input": "on",
+  "output": "su"
+ },
+ {
+  "input": "near",
+  "output": "vicino"
+ },
+ {
+  "input": "towards",
+  "output": "verso"
+ },
+ {
+  "input": "from",
+  "output": "da"
+ },
+ {
+  "input": "with",
+  "output": "con"
+ },
+ {
+  "input": "without",
+  "output": "senza"
+ },
+ {
+  "input": "under",
+  "output": "sotto"
+ },
+ {
+  "input": "above",
+  "output": "sopra"
+ },
+ {
+  "input": "between",
+  "output": "tra"
+ },
+ {
+  "input": "and",
+  "output": "e"
+ },
+ {
+  "input": "or",
+  "output": "o"
+ },
+ {
+  "input": "but",
+  "output": "ma"
+ },
+ {
+  "input": "because",
+  "output": "perché"
+ },
+ {
+  "input": "if",
+  "output": "se"
+ },
+ {
+  "input": "when",
+  "output": "quando"
+ },
+ {
+  "input": "where",
+  "output": "dove"
+ },
+ {
+  "input": "reason",
+  "output": "ragione"
+ },
+ {
+  "input": "how",
+  "output": "come"
+ },
+ {
+  "input": "who",
+  "output": "chi"
+ },
+ {
+  "input": "love",
+  "output": "amore"
+ },
+ {
+  "input": "life",
+  "output": "vita"
+ },
+ {
+  "input": "death",
+  "output": "morte"
+ },
+ {
+  "input": "money",
+  "output": "denaro"
+ },
+ {
+  "input": "power",
+  "output": "potere"
+ },
+ {
+  "input": "truth",
+  "output": "verità"
+ },
+ {
+  "input": "dream",
+  "output": "sogno"
+ },
+ {
+  "input": "fear",
+  "output": "paura"
+ },
+ {
+  "input": "hope",
+  "output": "speranza"
+ },
+ {
+  "input": "peace",
+  "output": "pace"
+ },
+ {
+  "input": "war",
+  "output": "guerra"
+ },
+ {
+  "input": "game",
+  "output": "gioco"
+ },
+ {
+  "input": "music",
+  "output": "musica"
+ },
+ {
+  "input": "art",
+  "output": "arte"
+ },
+ {
+  "input": "story",
+  "output": "storia"
+ },
+ {
+  "input": "question",
+  "output": "domanda"
+ },
+ {
+  "input": "answer",
+  "output": "risposta"
+ },
+ {
+  "input": "problem",
+  "output": "problema"
+ },
+ {
+  "input": "solution",
+  "output": "soluzione"
+ },
+ {
+  "input": "idea",
+  "output": "idea"
+ }
+]

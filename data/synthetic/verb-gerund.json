@@ -1,0 +1,878 @@
+[
+ {
+  "input": "accept",
+  "output": "accepting"
+ },
+ {
+  "input": "add",
+  "output": "adding"
+ },
+ {
+  "input": "agree",
+  "output": "agreeing"
+ },
+ {
+  "input": "allow",
+  "output": "allowing"
+ },
+ {
+  "input": "answer",
+  "output": "answering"
+ },
+ {
+  "input": "arrive",
+  "output": "arriving"
+ },
+ {
+  "input": "avoid",
+  "output": "avoiding"
+ },
+ {
+  "input": "back",
+  "output": "backing"
+ },
+ {
+  "input": "balance",
+  "output": "balancing"
+ },
+ {
+  "input": "ban",
+  "output": "banning"
+ },
+ {
+  "input": "bar",
+  "output": "barring"
+ },
+ {
+  "input": "beg",
+  "output": "begging"
+ },
+ {
+  "input": "bet",
+  "output": "betting"
+ },
+ {
+  "input": "bind",
+  "output": "binding"
+ },
+ {
+  "input": "block",
+  "output": "blocking"
+ },
+ {
+  "input": "blur",
+  "output": "blurring"
+ },
+ {
+  "input": "boil",
+  "output": "boiling"
+ },
+ {
+  "input": "book",
+  "output": "booking"
+ },
+ {
+  "input": "boot",
+  "output": "booting"
+ },
+ {
+  "input": "boss",
+  "output": "bossing"
+ },
+ {
+  "input": "box",
+  "output": "boxing"
+ },
+ {
+  "input": "brace",
+  "output": "bracing"
+ },
+ {
+  "input": "brake",
+  "output": "braking"
+ },
+ {
+  "input": "brand",
+  "output": "branding"
+ },
+ {
+  "input": "bridge",
+  "output": "bridging"
+ },
+ {
+  "input": "bring",
+  "output": "bringing"
+ },
+ {
+  "input": "broadcast",
+  "output": "broadcasting"
+ },
+ {
+  "input": "brush",
+  "output": "brushing"
+ },
+ {
+  "input": "bubble",
+  "output": "bubbling"
+ },
+ {
+  "input": "budget",
+  "output": "budgeting"
+ },
+ {
+  "input": "burn",
+  "output": "burning"
+ },
+ {
+  "input": "bury",
+  "output": "burying"
+ },
+ {
+  "input": "bus",
+  "output": "busing"
+ },
+ {
+  "input": "button",
+  "output": "buttoning"
+ },
+ {
+  "input": "buzz",
+  "output": "buzzing"
+ },
+ {
+  "input": "cancel",
+  "output": "cancelling"
+ },
+ {
+  "input": "cap",
+  "output": "capping"
+ },
+ {
+  "input": "capture",
+  "output": "capturing"
+ },
+ {
+  "input": "card",
+  "output": "carding"
+ },
+ {
+  "input": "care",
+  "output": "caring"
+ },
+ {
+  "input": "cart",
+  "output": "carting"
+ },
+ {
+  "input": "carve",
+  "output": "carving"
+ },
+ {
+  "input": "case",
+  "output": "casing"
+ },
+ {
+  "input": "cast",
+  "output": "casting"
+ },
+ {
+  "input": "catch",
+  "output": "catching"
+ },
+ {
+  "input": "center",
+  "output": "centering"
+ },
+ {
+  "input": "chain",
+  "output": "chaining"
+ },
+ {
+  "input": "challenge",
+  "output": "challenging"
+ },
+ {
+  "input": "change",
+  "output": "changing"
+ },
+ {
+  "input": "chant",
+  "output": "chanting"
+ },
+ {
+  "input": "charge",
+  "output": "charging"
+ },
+ {
+  "input": "chase",
+  "output": "chasing"
+ },
+ {
+  "input": "chat",
+  "output": "chatting"
+ },
+ {
+  "input": "check",
+  "output": "checking"
+ },
+ {
+  "input": "cheer",
+  "output": "cheering"
+ },
+ {
+  "input": "choose",
+  "output": "choosing"
+ },
+ {
+  "input": "chop",
+  "output": "chopping"
+ },
+ {
+  "input": "claim",
+  "output": "claiming"
+ },
+ {
+  "input": "clamp",
+  "output": "clamping"
+ },
+ {
+  "input": "clash",
+  "output": "clashing"
+ },
+ {
+  "input": "clean",
+  "output": "cleaning"
+ },
+ {
+  "input": "clear",
+  "output": "clearing"
+ },
+ {
+  "input": "click",
+  "output": "clicking"
+ },
+ {
+  "input": "clip",
+  "output": "clipping"
+ },
+ {
+  "input": "cloak",
+  "output": "cloaking"
+ },
+ {
+  "input": "clock",
+  "output": "clocking"
+ },
+ {
+  "input": "close",
+  "output": "closing"
+ },
+ {
+  "input": "cloud",
+  "output": "clouding"
+ },
+ {
+  "input": "club",
+  "output": "clubbing"
+ },
+ {
+  "input": "clutch",
+  "output": "clutching"
+ },
+ {
+  "input": "coach",
+  "output": "coaching"
+ },
+ {
+  "input": "code",
+  "output": "coding"
+ },
+ {
+  "input": "coin",
+  "output": "coining"
+ },
+ {
+  "input": "collect",
+  "output": "collecting"
+ },
+ {
+  "input": "color",
+  "output": "coloring"
+ },
+ {
+  "input": "comb",
+  "output": "combing"
+ },
+ {
+  "input": "come",
+  "output": "coming"
+ },
+ {
+  "input": "comfort",
+  "output": "comforting"
+ },
+ {
+  "input": "command",
+  "output": "commanding"
+ },
+ {
+  "input": "comment",
+  "output": "commenting"
+ },
+ {
+  "input": "commit",
+  "output": "committing"
+ },
+ {
+  "input": "compare",
+  "output": "comparing"
+ },
+ {
+  "input": "compete",
+  "output": "competing"
+ },
+ {
+  "input": "complain",
+  "output": "complaining"
+ },
+ {
+  "input": "complete",
+  "output": "completing"
+ },
+ {
+  "input": "concentrate",
+  "output": "concentrating"
+ },
+ {
+  "input": "concern",
+  "output": "concerning"
+ },
+ {
+  "input": "conclude",
+  "output": "concluding"
+ },
+ {
+  "input": "conduct",
+  "output": "conducting"
+ },
+ {
+  "input": "confess",
+  "output": "confessing"
+ },
+ {
+  "input": "confirm",
+  "output": "confirming"
+ },
+ {
+  "input": "connect",
+  "output": "connecting"
+ },
+ {
+  "input": "consider",
+  "output": "considering"
+ },
+ {
+  "input": "consist",
+  "output": "consisting"
+ },
+ {
+  "input": "console",
+  "output": "consoling"
+ },
+ {
+  "input": "contain",
+  "output": "containing"
+ },
+ {
+  "input": "continue",
+  "output": "continuing"
+ },
+ {
+  "input": "contract",
+  "output": "contracting"
+ },
+ {
+  "input": "contribute",
+  "output": "contributing"
+ },
+ {
+  "input": "control",
+  "output": "controlling"
+ },
+ {
+  "input": "cook",
+  "output": "cooking"
+ },
+ {
+  "input": "cool",
+  "output": "cooling"
+ },
+ {
+  "input": "copy",
+  "output": "copying"
+ },
+ {
+  "input": "core",
+  "output": "coring"
+ },
+ {
+  "input": "correct",
+  "output": "correcting"
+ },
+ {
+  "input": "cost",
+  "output": "costing"
+ },
+ {
+  "input": "cough",
+  "output": "coughing"
+ },
+ {
+  "input": "count",
+  "output": "counting"
+ },
+ {
+  "input": "court",
+  "output": "courting"
+ },
+ {
+  "input": "cover",
+  "output": "covering"
+ },
+ {
+  "input": "crack",
+  "output": "cracking"
+ },
+ {
+  "input": "craft",
+  "output": "crafting"
+ },
+ {
+  "input": "cram",
+  "output": "cramming"
+ },
+ {
+  "input": "crash",
+  "output": "crashing"
+ },
+ {
+  "input": "crawl",
+  "output": "crawling"
+ },
+ {
+  "input": "create",
+  "output": "creating"
+ },
+ {
+  "input": "credit",
+  "output": "crediting"
+ },
+ {
+  "input": "creep",
+  "output": "creeping"
+ },
+ {
+  "input": "crew",
+  "output": "crewing"
+ },
+ {
+  "input": "cross",
+  "output": "crossing"
+ },
+ {
+  "input": "crown",
+  "output": "crowning"
+ },
+ {
+  "input": "crush",
+  "output": "crushing"
+ },
+ {
+  "input": "cry",
+  "output": "crying"
+ },
+ {
+  "input": "cure",
+  "output": "curing"
+ },
+ {
+  "input": "curl",
+  "output": "curling"
+ },
+ {
+  "input": "curve",
+  "output": "curving"
+ },
+ {
+  "input": "cut",
+  "output": "cutting"
+ },
+ {
+  "input": "cycle",
+  "output": "cycling"
+ },
+ {
+  "input": "dam",
+  "output": "damming"
+ },
+ {
+  "input": "dance",
+  "output": "dancing"
+ },
+ {
+  "input": "dash",
+  "output": "dashing"
+ },
+ {
+  "input": "date",
+  "output": "dating"
+ },
+ {
+  "input": "deal",
+  "output": "dealing"
+ },
+ {
+  "input": "decay",
+  "output": "decaying"
+ },
+ {
+  "input": "deceive",
+  "output": "deceiving"
+ },
+ {
+  "input": "decide",
+  "output": "deciding"
+ },
+ {
+  "input": "declare",
+  "output": "declaring"
+ },
+ {
+  "input": "decorate",
+  "output": "decorating"
+ },
+ {
+  "input": "decrease",
+  "output": "decreasing"
+ },
+ {
+  "input": "defend",
+  "output": "defending"
+ },
+ {
+  "input": "define",
+  "output": "defining"
+ },
+ {
+  "input": "delay",
+  "output": "delaying"
+ },
+ {
+  "input": "delegate",
+  "output": "delegating"
+ },
+ {
+  "input": "delete",
+  "output": "deleting"
+ },
+ {
+  "input": "deliver",
+  "output": "delivering"
+ },
+ {
+  "input": "demand",
+  "output": "demanding"
+ },
+ {
+  "input": "demonstrate",
+  "output": "demonstrating"
+ },
+ {
+  "input": "deny",
+  "output": "denying"
+ },
+ {
+  "input": "depart",
+  "output": "departing"
+ },
+ {
+  "input": "depend",
+  "output": "depending"
+ },
+ {
+  "input": "describe",
+  "output": "describing"
+ },
+ {
+  "input": "design",
+  "output": "designing"
+ },
+ {
+  "input": "desire",
+  "output": "desiring"
+ },
+ {
+  "input": "detach",
+  "output": "detaching"
+ },
+ {
+  "input": "detect",
+  "output": "detecting"
+ },
+ {
+  "input": "determine",
+  "output": "determining"
+ },
+ {
+  "input": "develop",
+  "output": "developing"
+ },
+ {
+  "input": "devote",
+  "output": "devoting"
+ },
+ {
+  "input": "dial",
+  "output": "dialing"
+ },
+ {
+  "input": "diagnose",
+  "output": "diagnosing"
+ },
+ {
+  "input": "digest",
+  "output": "digesting"
+ },
+ {
+  "input": "dine",
+  "output": "dining"
+ },
+ {
+  "input": "direct",
+  "output": "directing"
+ },
+ {
+  "input": "discharge",
+  "output": "discharging"
+ },
+ {
+  "input": "discriminate",
+  "output": "discriminating"
+ },
+ {
+  "input": "discuss",
+  "output": "discussing"
+ },
+ {
+  "input": "disguise",
+  "output": "disguising"
+ },
+ {
+  "input": "dismiss",
+  "output": "dismissing"
+ },
+ {
+  "input": "display",
+  "output": "displaying"
+ },
+ {
+  "input": "dispose",
+  "output": "disposing"
+ },
+ {
+  "input": "dispute",
+  "output": "disputing"
+ },
+ {
+  "input": "distribute",
+  "output": "distributing"
+ },
+ {
+  "input": "distort",
+  "output": "distorting"
+ },
+ {
+  "input": "distract",
+  "output": "distracting"
+ },
+ {
+  "input": "divide",
+  "output": "dividing"
+ },
+ {
+  "input": "document",
+  "output": "documenting"
+ },
+ {
+  "input": "dog",
+  "output": "dogging"
+ },
+ {
+  "input": "dominate",
+  "output": "dominating"
+ },
+ {
+  "input": "donate",
+  "output": "donating"
+ },
+ {
+  "input": "double",
+  "output": "doubling"
+ },
+ {
+  "input": "doubt",
+  "output": "doubting"
+ },
+ {
+  "input": "download",
+  "output": "downloading"
+ },
+ {
+  "input": "drag",
+  "output": "dragging"
+ },
+ {
+  "input": "drain",
+  "output": "draining"
+ },
+ {
+  "input": "draw",
+  "output": "drawing"
+ },
+ {
+  "input": "dream",
+  "output": "dreaming"
+ },
+ {
+  "input": "dress",
+  "output": "dressing"
+ },
+ {
+  "input": "drill",
+  "output": "drilling"
+ },
+ {
+  "input": "drink",
+  "output": "drinking"
+ },
+ {
+  "input": "drip",
+  "output": "dripping"
+ },
+ {
+  "input": "drive",
+  "output": "driving"
+ },
+ {
+  "input": "drop",
+  "output": "dropping"
+ },
+ {
+  "input": "drown",
+  "output": "drowning"
+ },
+ {
+  "input": "dry",
+  "output": "drying"
+ },
+ {
+  "input": "dump",
+  "output": "dumping"
+ },
+ {
+  "input": "duplicate",
+  "output": "duplicating"
+ },
+ {
+  "input": "earn",
+  "output": "earning"
+ },
+ {
+  "input": "eat",
+  "output": "eating"
+ },
+ {
+  "input": "edit",
+  "output": "editing"
+ },
+ {
+  "input": "educate",
+  "output": "educating"
+ },
+ {
+  "input": "effect",
+  "output": "effecting"
+ },
+ {
+  "input": "eject",
+  "output": "ejecting"
+ },
+ {
+  "input": "elaborate",
+  "output": "elaborating"
+ },
+ {
+  "input": "eliminate",
+  "output": "eliminating"
+ },
+ {
+  "input": "elevate",
+  "output": "elevating"
+ },
+ {
+  "input": "embed",
+  "output": "embedding"
+ },
+ {
+  "input": "emerge",
+  "output": "emerging"
+ },
+ {
+  "input": "emit",
+  "output": "emitting"
+ },
+ {
+  "input": "emphasize",
+  "output": "emphasizing"
+ },
+ {
+  "input": "empty",
+  "output": "emptying"
+ },
+ {
+  "input": "enable",
+  "output": "enabling"
+ },
+ {
+  "input": "encode",
+  "output": "encoding"
+ },
+ {
+  "input": "encourage",
+  "output": "encouraging"
+ },
+ {
+  "input": "end",
+  "output": "ending"
+ },
+ {
+  "input": "endanger",
+  "output": "endangering"
+ },
+ {
+  "input": "endure",
+  "output": "enduring"
+ },
+ {
+  "input": "engage",
+  "output": "engaging"
+ },
+ {
+  "input": "enhance",
+  "output": "enhancing"
+ },
+ {
+  "input": "enjoy",
+  "output": "enjoying"
+ }
+]

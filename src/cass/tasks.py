@@ -55,6 +55,16 @@ TASK_REGISTRY = {
 ALL_TASKS = list(TASK_REGISTRY)
 FAMILIES = sorted({fam for _, fam in TASK_REGISTRY.values()})
 
+# API-synthesized tasks (data/synthetic/*.json); families in _meta.json
+_SYNTH_DIR = Path(DATA_DIR).parents[2] / "data" / "synthetic"
+
+
+def synthetic_tasks():
+    meta_path = _SYNTH_DIR / "_meta.json"
+    if not meta_path.exists():
+        return {}
+    return json.load(open(meta_path))  # name -> family
+
 N_EVAL = 50
 
 # small fixed vocabulary used to corrupt labels when a derangement is
@@ -75,8 +85,12 @@ class TaskData:
 
 
 def load_task(name: str, seed: int = 0) -> TaskData:
-    rel, family = TASK_REGISTRY[name]
-    items = json.load(open(Path(DATA_DIR) / rel))
+    if name in TASK_REGISTRY:
+        rel, family = TASK_REGISTRY[name]
+        items = json.load(open(Path(DATA_DIR) / rel))
+    else:
+        family = synthetic_tasks()[name]
+        items = json.load(open(_SYNTH_DIR / f"{name}.json"))
     # dedupe by input, keep string pairs only
     seen, pairs = set(), []
     for it in items:

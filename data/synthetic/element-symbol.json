@@ -1,0 +1,802 @@
+[
+ {
+  "input": "hydrogen",
+  "output": "H"
+ },
+ {
+  "input": "helium",
+  "output": "He"
+ },
+ {
+  "input": "lithium",
+  "output": "Li"
+ },
+ {
+  "input": "beryllium",
+  "output": "Be"
+ },
+ {
+  "input": "boron",
+  "output": "B"
+ },
+ {
+  "input": "carbon",
+  "output": "C"
+ },
+ {
+  "input": "nitrogen",
+  "output": "N"
+ },
+ {
+  "input": "oxygen",
+  "output": "O"
+ },
+ {
+  "input": "fluorine",
+  "output": "F"
+ },
+ {
+  "input": "neon",
+  "output": "Ne"
+ },
+ {
+  "input": "sodium",
+  "output": "Na"
+ },
+ {
+  "input": "magnesium",
+  "output": "Mg"
+ },
+ {
+  "input": "aluminum",
+  "output": "Al"
+ },
+ {
+  "input": "silicon",
+  "output": "Si"
+ },
+ {
+  "input": "phosphorus",
+  "output": "P"
+ },
+ {
+  "input": "sulfur",
+  "output": "S"
+ },
+ {
+  "input": "chlorine",
+  "output": "Cl"
+ },
+ {
+  "input": "argon",
+  "output": "Ar"
+ },
+ {
+  "input": "potassium",
+  "output": "K"
+ },
+ {
+  "input": "calcium",
+  "output": "Ca"
+ },
+ {
+  "input": "scandium",
+  "output": "Sc"
+ },
+ {
+  "input": "titanium",
+  "output": "Ti"
+ },
+ {
+  "input": "vanadium",
+  "output": "V"
+ },
+ {
+  "input": "chromium",
+  "output": "Cr"
+ },
+ {
+  "input": "manganese",
+  "output": "Mn"
+ },
+ {
+  "input": "iron",
+  "output": "Fe"
+ },
+ {
+  "input": "cobalt",
+  "output": "Co"
+ },
+ {
+  "input": "nickel",
+  "output": "Ni"
+ },
+ {
+  "input": "copper",
+  "output": "Cu"
+ },
+ {
+  "input": "zinc",
+  "output": "Zn"
+ },
+ {
+  "input": "gallium",
+  "output": "Ga"
+ },
+ {
+  "input": "germanium",
+  "output": "Ge"
+ },
+ {
+  "input": "arsenic",
+  "output": "As"
+ },
+ {
+  "input": "selenium",
+  "output": "Se"
+ },
+ {
+  "input": "bromine",
+  "output": "Br"
+ },
+ {
+  "input": "krypton",
+  "output": "Kr"
+ },
+ {
+  "input": "rubidium",
+  "output": "Rb"
+ },
+ {
+  "input": "strontium",
+  "output": "Sr"
+ },
+ {
+  "input": "yttrium",
+  "output": "Y"
+ },
+ {
+  "input": "zirconium",
+  "output": "Zr"
+ },
+ {
+  "input": "niobium",
+  "output": "Nb"
+ },
+ {
+  "input": "molybdenum",
+  "output": "Mo"
+ },
+ {
+  "input": "technetium",
+  "output": "Tc"
+ },
+ {
+  "input": "ruthenium",
+  "output": "Ru"
+ },
+ {
+  "input": "rhodium",
+  "output": "Rh"
+ },
+ {
+  "input": "palladium",
+  "output": "Pd"
+ },
+ {
+  "input": "silver",
+  "output": "Ag"
+ },
+ {
+  "input": "cadmium",
+  "output": "Cd"
+ },
+ {
+  "input": "indium",
+  "output": "In"
+ },
+ {
+  "input": "tin",
+  "output": "Sn"
+ },
+ {
+  "input": "antimony",
+  "output": "Sb"
+ },
+ {
+  "input": "tellurium",
+  "output": "Te"
+ },
+ {
+  "input": "iodine",
+  "output": "I"
+ },
+ {
+  "input": "xenon",
+  "output": "Xe"
+ },
+ {
+  "input": "cesium",
+  "output": "Cs"
+ },
+ {
+  "input": "barium",
+  "output": "Ba"
+ },
+ {
+  "input": "lanthanum",
+  "output": "La"
+ },
+ {
+  "input": "cerium",
+  "output": "Ce"
+ },
+ {
+  "input": "praseodymium",
+  "output": "Pr"
+ },
+ {
+  "input": "neodymium",
+  "output": "Nd"
+ },
+ {
+  "input": "promethium",
+  "output": "Pm"
+ },
+ {
+  "input": "samarium",
+  "output": "Sm"
+ },
+ {
+  "input": "europium",
+  "output": "Eu"
+ },
+ {
+  "input": "gadolinium",
+  "output": "Gd"
+ },
+ {
+  "input": "terbium",
+  "output": "Tb"
+ },
+ {
+  "input": "dysprosium",
+  "output": "Dy"
+ },
+ {
+  "input": "holmium",
+  "output": "Ho"
+ },
+ {
+  "input": "erbium",
+  "output": "Er"
+ },
+ {
+  "input": "thulium",
+  "output": "Tm"
+ },
+ {
+  "input": "ytterbium",
+  "output": "Yb"
+ },
+ {
+  "input": "lutetium",
+  "output": "Lu"
+ },
+ {
+  "input": "hafnium",
+  "output": "Hf"
+ },
+ {
+  "input": "tantalum",
+  "output": "Ta"
+ },
+ {
+  "input": "tungsten",
+  "output": "W"
+ },
+ {
+  "input": "rhenium",
+  "output": "Re"
+ },
+ {
+  "input": "osmium",
+  "output": "Os"
+ },
+ {
+  "input": "iridium",
+  "output": "Ir"
+ },
+ {
+  "input": "platinum",
+  "output": "Pt"
+ },
+ {
+  "input": "gold",
+  "output": "Au"
+ },
+ {
+  "input": "mercury",
+  "output": "Hg"
+ },
+ {
+  "input": "thallium",
+  "output": "Tl"
+ },
+ {
+  "input": "lead",
+  "output": "Pb"
+ },
+ {
+  "input": "bismuth",
+  "output": "Bi"
+ },
+ {
+  "input": "polonium",
+  "output": "Po"
+ },
+ {
+  "input": "astatine",
+  "output": "At"
+ },
+ {
+  "input": "radon",
+  "output": "Rn"
+ },
+ {
+  "input": "francium",
+  "output": "Fr"
+ },
+ {
+  "input": "radium",
+  "output": "Ra"
+ },
+ {
+  "input": "actinium",
+  "output": "Ac"
+ },
+ {
+  "input": "thorium",
+  "output": "Th"
+ },
+ {
+  "input": "protactinium",
+  "output": "Pa"
+ },
+ {
+  "input": "uranium",
+  "output": "U"
+ },
+ {
+  "input": "neptunium",
+  "output": "Np"
+ },
+ {
+  "input": "plutonium",
+  "output": "Pu"
+ },
+ {
+  "input": "americium",
+  "output": "Am"
+ },
+ {
+  "input": "curium",
+  "output": "Cm"
+ },
+ {
+  "input": "berkelium",
+  "output": "Bk"
+ },
+ {
+  "input": "californium",
+  "output": "Cf"
+ },
+ {
+  "input": "einsteinium",
+  "output": "Es"
+ },
+ {
+  "input": "fermium",
+  "output": "Fm"
+ },
+ {
+  "input": "mendelevium",
+  "output": "Md"
+ },
+ {
+  "input": "nobelium",
+  "output": "No"
+ },
+ {
+  "input": "lawrencium",
+  "output": "Lr"
+ },
+ {
+  "input": "rutherfordium",
+  "output": "Rf"
+ },
+ {
+  "input": "dubnium",
+  "output": "Db"
+ },
+ {
+  "input": "seaborgium",
+  "output": "Sg"
+ },
+ {
+  "input": "bohrium",
+  "output": "Bh"
+ },
+ {
+  "input": "hassium",
+  "output": "Hs"
+ },
+ {
+  "input": "meitnerium",
+  "output": "Mt"
+ },
+ {
+  "input": "darmstadtium",
+  "output": "Ds"
+ },
+ {
+  "input": "roentgenium",
+  "output": "Rg"
+ },
+ {
+  "input": "copernicium",
+  "output": "Cn"
+ },
+ {
+  "input": "nihonium",
+  "output": "Nh"
+ },
+ {
+  "input": "flerovium",
+  "output": "Fl"
+ },
+ {
+  "input": "moscovium",
+  "output": "Mc"
+ },
+ {
+  "input": "livermorium",
+  "output": "Lv"
+ },
+ {
+  "input": "tennessine",
+  "output": "Ts"
+ },
+ {
+  "input": "oganesson",
+  "output": "Og"
+ },
+ {
+  "input": "ununennium",
+  "output": "Uue"
+ },
+ {
+  "input": "unbinilium",
+  "output": "Ubn"
+ },
+ {
+  "input": "unbiunium",
+  "output": "Ubu"
+ },
+ {
+  "input": "unbibilium",
+  "output": "Ubb"
+ },
+ {
+  "input": "unbitriium",
+  "output": "Ubt"
+ },
+ {
+  "input": "unbiquadrium",
+  "output": "Ubq"
+ },
+ {
+  "input": "unbipentium",
+  "output": "Ubp"
+ },
+ {
+  "input": "unbihexium",
+  "output": "Ubh"
+ },
+ {
+  "input": "unbiseptium",
+  "output": "Ubs"
+ },
+ {
+  "input": "unbioktium",
+  "output": "Ubo"
+ },
+ {
+  "input": "unbienium",
+  "output": "Ube"
+ },
+ {
+  "input": "untrinilium",
+  "output": "Utn"
+ },
+ {
+  "input": "untriunium",
+  "output": "Utu"
+ },
+ {
+  "input": "untribilium",
+  "output": "Utb"
+ },
+ {
+  "input": "untritriium",
+  "output": "Utt"
+ },
+ {
+  "input": "untriquadrium",
+  "output": "Utq"
+ },
+ {
+  "input": "untripentium",
+  "output": "Utp"
+ },
+ {
+  "input": "untrihexium",
+  "output": "Uth"
+ },
+ {
+  "input": "untriseptium",
+  "output": "Uts"
+ },
+ {
+  "input": "untrioktium",
+  "output": "Uto"
+ },
+ {
+  "input": "untrienium",
+  "output": "Ute"
+ },
+ {
+  "input": "unquadnilium",
+  "output": "Uqn"
+ },
+ {
+  "input": "unquadunium",
+  "output": "Uqu"
+ },
+ {
+  "input": "unquadbilium",
+  "output": "Uqb"
+ },
+ {
+  "input": "unquadtriium",
+  "output": "Uqt"
+ },
+ {
+  "input": "unquadquadrium",
+  "output": "Uqq"
+ },
+ {
+  "input": "unquadpentium",
+  "output": "Uqp"
+ },
+ {
+  "input": "unquadhexium",
+  "output": "Uqh"
+ },
+ {
+  "input": "unquadseptium",
+  "output": "Uqs"
+ },
+ {
+  "input": "unquadoktium",
+  "output": "Uqo"
+ },
+ {
+  "input": "unquadenium",
+  "output": "Uqe"
+ },
+ {
+  "input": "unpentnilium",
+  "output": "Upn"
+ },
+ {
+  "input": "unpentunium",
+  "output": "Upu"
+ },
+ {
+  "input": "unpentbilium",
+  "output": "Upb"
+ },
+ {
+  "input": "unpenttriium",
+  "output": "Upt"
+ },
+ {
+  "input": "unpentquadrium",
+  "output": "Upq"
+ },
+ {
+  "input": "unpentpentium",
+  "output": "Upp"
+ },
+ {
+  "input": "unpenthexium",
+  "output": "Uph"
+ },
+ {
+  "input": "unpentseptium",
+  "output": "Ups"
+ },
+ {
+  "input": "unpentoktium",
+  "output": "Upo"
+ },
+ {
+  "input": "unpentenium",
+  "output": "Upe"
+ },
+ {
+  "input": "unhexnilium",
+  "output": "Uhn"
+ },
+ {
+  "input": "unhexunium",
+  "output": "Uhu"
+ },
+ {
+  "input": "unhexbilium",
+  "output": "Uhb"
+ },
+ {
+  "input": "unhextriium",
+  "output": "Uht"
+ },
+ {
+  "input": "unhexquadrium",
+  "output": "Uhq"
+ },
+ {
+  "input": "unhexpentium",
+  "output": "Uhp"
+ },
+ {
+  "input": "unhexhexium",
+  "output": "Uhh"
+ },
+ {
+  "input": "unhexseptium",
+  "output": "Uhs"
+ },
+ {
+  "input": "unhexoktium",
+  "output": "Uho"
+ },
+ {
+  "input": "unhexenium",
+  "output": "Uhe"
+ },
+ {
+  "input": "unseptnilium",
+  "output": "Usn"
+ },
+ {
+  "input": "unseptunium",
+  "output": "Usu"
+ },
+ {
+  "input": "unseptbilium",
+  "output": "Usb"
+ },
+ {
+  "input": "unsepttriium",
+  "output": "Ust"
+ },
+ {
+  "input": "unseptquadrium",
+  "output": "Usq"
+ },
+ {
+  "input": "unseptpentium",
+  "output": "Usp"
+ },
+ {
+  "input": "unsepthexium",
+  "output": "Ush"
+ },
+ {
+  "input": "unseptseptium",
+  "output": "Uss"
+ },
+ {
+  "input": "unseptoktium",
+  "output": "Uso"
+ },
+ {
+  "input": "unseptenium",
+  "output": "Use"
+ },
+ {
+  "input": "unoctnilium",
+  "output": "Uon"
+ },
+ {
+  "input": "unoctunium",
+  "output": "Uou"
+ },
+ {
+  "input": "unoctbilium",
+  "output": "Uob"
+ },
+ {
+  "input": "unocttriium",
+  "output": "Uot"
+ },
+ {
+  "input": "unoctquadrium",
+  "output": "Uoq"
+ },
+ {
+  "input": "unoctpentium",
+  "output": "Uop"
+ },
+ {
+  "input": "unocthexium",
+  "output": "Uoh"
+ },
+ {
+  "input": "unoctseptium",
+  "output": "Uos"
+ },
+ {
+  "input": "unoctoktium",
+  "output": "Uoo"
+ },
+ {
+  "input": "unoctenium",
+  "output": "Uoe"
+ },
+ {
+  "input": "unnilnilium",
+  "output": "Unn"
+ },
+ {
+  "input": "unnilunium",
+  "output": "Unu"
+ },
+ {
+  "input": "unnilbilium",
+  "output": "Unb"
+ },
+ {
+  "input": "unniltriium",
+  "output": "Unt"
+ },
+ {
+  "input": "unnilquadrium",
+  "output": "Unq"
+ },
+ {
+  "input": "unnilpentium",
+  "output": "Unp"
+ },
+ {
+  "input": "unnilhexium",
+  "output": "Unh"
+ },
+ {
+  "input": "unnilseptium",
+  "output": "Uns"
+ },
+ {
+  "input": "unniloktium",
+  "output": "Uno"
+ },
+ {
+  "input": "unnilenium",
+  "output": "Une"
+ },
+ {
+  "input": "unbinunium",
+  "output": "Ubu"
+ }
+]
