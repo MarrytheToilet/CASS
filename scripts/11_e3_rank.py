@@ -27,12 +27,13 @@ def main():
     t0 = time.time()
     out = results_dir(MODEL)
     hp = json.load(open(out / "injection_hparams.json"))
-    layer, gamma, beta, amax = (hp["layer"], hp["gamma"], hp["beta"],
-                                hp["alpha_max"])
+    layers, gamma, beta, amax = (hp["layers"], hp["gamma"], hp["beta"],
+                                 hp["alpha_max"])
     hlm = HookedLM(MODEL)
-    G = {t: load_G(MODEL, t, layer).numpy() for t in ALL_TASKS}
-    # rank-16 dictionary with full spectra retained
-    D = build_dictionary(G, r0=2, tau=1.0, r_max=16)
+    # rank-16 dictionaries with full spectra retained, one per layer
+    D = {l: build_dictionary({t: load_G(MODEL, t, l).numpy()
+                              for t in ALL_TASKS}, r0=2, tau=1.0, r_max=16)
+         for l in layers}
 
     rows = []
     for tname in ALL_TASKS:
@@ -40,17 +41,19 @@ def main():
         queries = task.eval_queries[:N_EVAL]
         targets = [y for _, y in queries]
         prompts = [zs_prompt(x) for x, _ in queries]
-        s = D.spectra[tname]
+        s = D[layers[-1]].spectra[tname]
         e = (s ** 2) / (s ** 2).sum()
         r90 = int(np.searchsorted(np.cumsum(e), 0.9) + 1)  # effective rank
         for r in RANKS:
-            U = D.bases[tname][:, :r]
-            mu = D.anchors[tname]
-            mu_r = U @ (U.T @ mu)   # anchor restricted to the rank-r subspace
-            op = make_affine_op(mu_r, U, mu_r, gamma=gamma, beta=beta,
-                                alpha_max=amax)
-            acc = accuracy(hlm.generate(prompts, batch_size=25, op=op,
-                                        layer=layer), targets)
+            ops = []
+            for l in layers:
+                U = D[l].bases[tname][:, :r]
+                mu = D[l].anchors[tname]
+                mu_r = U @ (U.T @ mu)  # anchor restricted to rank-r subspace
+                ops.append(make_affine_op(mu_r, U, mu_r, gamma=gamma,
+                                          beta=beta, alpha_max=amax))
+            acc = accuracy(hlm.generate(prompts, batch_size=25, op=ops,
+                                        layer=list(layers)), targets)
             rows.append(dict(task=tname, family=task.family, rank=r, acc=acc,
                              effective_rank_90=r90,
                              top1_energy=round(float(e[0]), 4)))

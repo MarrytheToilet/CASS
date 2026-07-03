@@ -74,6 +74,20 @@ def main():
     naive_rho = (sub["acc_naive"] - zs_arr) / (sub["acc_oracle"] - zs_arr)
     print(f"\nnaive-average baseline: median rho={naive_rho.median():.3f}")
 
+    # dictionary contribution: cass (hybrid) vs zvec (no dictionary) vs recon
+    for mode in ["zvec", "cass_recon"]:
+        m = (df[df["mode"] == mode].groupby(["task", "k"])["acc"].mean()
+             .rename(mode))
+        c = (df[(df["mode"] == "cass") & (df["seed"] < 3)]
+             .groupby(["task", "k"])["acc"].mean().rename("cass"))
+        j = pd.concat([c, m], axis=1).dropna()
+        for k in sorted(j.index.get_level_values("k").unique()):
+            jk = j.xs(k, level="k")
+            print(f"cass vs {mode} (k={k}): mean acc {jk['cass'].mean():.3f} "
+                  f"vs {jk[mode].mean():.3f}  (paired diff "
+                  f"{(jk['cass'] - jk[mode]).mean():+.3f}, cass better on "
+                  f"{(jk['cass'] > jk[mode]).sum()}/{len(jk)} tasks)")
+
     # figures
     fig, ax = plt.subplots(figsize=(13, 4.5))
     sub4 = R[R["k"] == 4].sort_values(["family", "task"])

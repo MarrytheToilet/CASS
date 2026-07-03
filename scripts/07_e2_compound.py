@@ -1,9 +1,8 @@
-"""E2: compound tasks -- can group-sparse coding recover the constituent
-skills, and does the synthesized operator steer the compound behavior?
+"""E2: compound tasks (multi-layer hybrid pipeline).
 
 Compound tasks are NOT in the dictionary. Metrics: support precision/recall
-against the true components, coefficient heatmap data, accuracy vs baselines
-(ELICIT-style retrieval of the single nearest task; naive 2-anchor average).
+against true components, coefficient matrix (heatmap), accuracy vs baselines
+(ELICIT-style nearest-task retrieval, naive component-anchor average, ICL).
 """
 import csv
 import json
@@ -17,13 +16,14 @@ import numpy as np
 
 from cass.config import results_dir
 from cass.compound import COMPOUND_REGISTRY, compound_components, load_compound
-from cass.dictionary import build_dictionary
+from cass.dictionary import build_multilayer_dictionary
 from cass.evaluate import accuracy
-from cass.extract import load_G, extract_fewshot_z
+from cass.extract import load_G
 from cass.models import HookedLM
-from cass.solver import solve
-from cass.steer import make_additive_op, make_affine_op
+from cass.pipeline import code_for, ops_for, oracle_ops, z_list_from_Z
+from cass.steer import make_additive_op
 from cass.tasks import ALL_TASKS, load_task, icl_prompt, zs_prompt
+from cass.zcache import get_z
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "llama31-8b"
 K = 4
@@ -34,14 +34,15 @@ def main():
     t0 = time.time()
     out = results_dir(MODEL)
     hp = json.load(open(out / "injection_hparams.json"))
-    layer, gamma, beta, amax = (hp["layer"], hp["gamma"], hp["beta"],
-                                hp["alpha_max"])
+    layers, gamma, beta, amax = (hp["layers"], hp["gamma"], hp["beta"],
+                                 hp["alpha_max"])
     hlm = HookedLM(MODEL)
-    G_all = {t: load_G(MODEL, t, layer).numpy() for t in ALL_TASKS}
-    D = build_dictionary(G_all, r0=R0)
+    G = {l: {t: load_G(MODEL, t, l).numpy() for t in ALL_TASKS}
+         for l in layers}
+    D = build_multilayer_dictionary(G, r0=R0)
 
     rows = []
-    coeff_matrix = {}   # compound -> {task: mean ||c_t||}
+    coeff_matrix = {}
     for cname in COMPOUND_REGISTRY:
         comp = load_compound(cname)
         comps = compound_components(cname)
@@ -49,7 +50,6 @@ def main():
         targets = [y for _, y in queries]
         prompts = [zs_prompt(x) for x, _ in queries]
 
-        # baselines: zs, 10-shot icl
         acc_zs = accuracy(hlm.generate(prompts, batch_size=25), targets)
         rng0 = np.random.default_rng(0)
         icl_prompts = [icl_prompt(
@@ -60,13 +60,10 @@ def main():
 
         coeff_acc = {t: [] for t in ALL_TASKS}
         for seed in SEEDS:
-            rng = np.random.default_rng(200 + seed)
-            idx = rng.choice(len(comp.fewshot_pool), K, replace=False)
-            examples = [comp.fewshot_pool[i] for i in idx]
-            Z = extract_fewshot_z(hlm, examples, seed=seed)
-            z_list = [D.project_out_shared(Z[j, layer].numpy().astype(
-                np.float64)) for j in range(len(examples))]
-            code = solve(D, z_list)
+            Z = get_z(hlm, comp, K, seed)
+            z_list = z_list_from_Z(D, Z)
+            z_mean = np.mean(z_list, axis=0)
+            code = code_for(D, z_list)
             for t in ALL_TASKS:
                 coeff_acc[t].append(float(np.linalg.norm(code.coeffs[t])))
 
@@ -74,45 +71,34 @@ def main():
             prec = len(hits) / len(code.support) if code.support else 0.0
             rec = len(hits) / len(comps)
 
-            delta = code.delta
-            dn = np.linalg.norm(delta)
-            if code.support and dn > 1e-8:
-                w = np.array([np.linalg.norm(code.coeffs[n])
-                              for n in code.support])
-                w = w / w.sum()
-                tnorm = float(sum(wi * np.linalg.norm(D.anchors[n])
-                                  for wi, n in zip(w, code.support)))
-                delta = delta * (tnorm / dn)
-                mu_S = sum(wi * D.anchors[n]
-                           for wi, n in zip(w, code.support))
-                op = make_affine_op(delta, code, mu_S, gamma=gamma, beta=beta,
-                                    alpha_max=amax, dictionary=D)
-            else:
-                op = make_additive_op(delta, gamma=gamma)
-            acc = accuracy(hlm.generate(prompts, batch_size=25, op=op,
-                                        layer=layer), targets)
+            ops, lys = ops_for(D, code, gamma, beta, amax, delta_vec=z_mean)
+            acc = accuracy(hlm.generate(prompts, batch_size=25, op=ops,
+                                        layer=lys), targets)
 
-            # ELICIT-style retrieval baseline: single nearest dictionary task
-            z = np.mean(z_list, axis=0)
-            sims = {t: abs(float(np.dot(z, D.anchors[t]) /
-                     (np.linalg.norm(z) * np.linalg.norm(D.anchors[t]) + 1e-12)))
-                    for t in ALL_TASKS}
+            # ELICIT-style retrieval: nearest single dictionary task
+            sims = {t: abs(float(z_mean @ D.anchors[t] /
+                    (np.linalg.norm(z_mean) * np.linalg.norm(D.anchors[t])
+                     + 1e-12))) for t in ALL_TASKS}
             nearest = max(sims, key=sims.get)
-            op_r = make_affine_op(D.anchors[nearest], D.bases[nearest],
-                                  D.anchors[nearest], gamma=gamma, beta=beta,
-                                  alpha_max=amax)
-            acc_retr = accuracy(hlm.generate(prompts, batch_size=25, op=op_r,
-                                             layer=layer), targets)
+            ops_r, lys_r = oracle_ops(D, nearest, gamma, beta, amax)
+            acc_retr = accuracy(hlm.generate(prompts, batch_size=25, op=ops_r,
+                                             layer=lys_r), targets)
 
-            # naive: average of the two true components' anchors
-            delta_n = np.mean([D.anchors[c] for c in comps], axis=0)
-            acc_naive = accuracy(hlm.generate(
-                prompts, batch_size=25, op=make_additive_op(delta_n, gamma=2.0),
-                layer=layer), targets)
+            # naive: average of the true components' anchors, additive
+            ops_n = []
+            for l in layers:
+                Dl = D.per_layer[l]
+                ops_n.append(make_additive_op(
+                    np.mean([Dl.anchors[c] for c in comps], axis=0),
+                    gamma=1.5))
+            acc_naive = accuracy(hlm.generate(prompts, batch_size=25,
+                                              op=ops_n, layer=list(layers)),
+                                 targets)
 
             rows.append(dict(compound=cname, seed=seed, acc_zs=acc_zs,
-                             acc_icl=acc_icl, acc_cass=acc, acc_retrieval=acc_retr,
-                             retrieved=nearest, acc_naive=acc_naive,
+                             acc_icl=acc_icl, acc_cass=acc,
+                             acc_retrieval=acc_retr, retrieved=nearest,
+                             acc_naive=acc_naive,
                              support="|".join(code.support[:8]),
                              support_precision=round(prec, 3),
                              support_recall=round(rec, 3),

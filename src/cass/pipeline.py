@@ -30,13 +30,19 @@ def _support_weights(code):
 
 
 def ops_for(mld: MultiLayerDictionary, code, gamma=1.0, beta=2.0,
-            alpha_max=1.0, injection="affine", rescale=True):
+            alpha_max=1.0, injection="affine", rescale=True, delta_vec=None):
     """Returns (ops, layers) for HookedLM.generate multi-layer injection.
+
+    delta_vec: stacked direction to inject. Default (None) uses the dictionary
+    reconstruction code.delta; pass the mean z for the hybrid scheme (denoised
+    few-shot direction + dictionary support/affine correction), which is the
+    main CASS configuration.
 
     A single global rescale factor matches the stacked delta norm to the
     support-weighted stacked anchor norm, preserving cross-layer energy ratios.
     """
-    delta = code.delta.copy()
+    delta = (np.asarray(delta_vec, dtype=np.float64) if delta_vec is not None
+             else code.delta).copy()
     if rescale and code.support:
         w = _support_weights(code)
         target = float(sum(wi * np.linalg.norm(mld.anchors[n])

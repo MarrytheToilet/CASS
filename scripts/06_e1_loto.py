@@ -86,20 +86,36 @@ def main():
 
         for k in KS:
             for seed in SEEDS:
-                if (tstar, str(k), str(seed), "cass") in done:
-                    continue
-                Z = get_z(hlm, task, k, seed)
-                z_list = z_list_from_Z(D, Z)
-                code = code_for(D, z_list)
-                ops, lys = ops_for(D, code, gamma, beta, amax)
-                acc = accuracy(hlm.generate(prompts, batch_size=25, op=ops,
-                                            layer=lys), targets)
-                emit(task=tstar, family=task.family, k=k, seed=seed,
-                     mode="cass", acc=acc, eps=round(code.residual, 4),
-                     support_size=len(code.support),
-                     support="|".join(code.support[:8]),
-                     lam=round(code.lam, 4),
-                     delta_norm=round(float(np.linalg.norm(code.delta)), 2))
+                Z = None
+                # cass = hybrid (z direction + dictionary support/affine);
+                # cass_recon = pure dictionary reconstruction (analysis);
+                # zvec = raw z additive, no dictionary (few-shot TV baseline)
+                modes = ["cass"] + (["cass_recon", "zvec"] if seed < 3 else [])
+                for mode in modes:
+                    if (tstar, str(k), str(seed), mode) in done:
+                        continue
+                    if Z is None:
+                        Z = get_z(hlm, task, k, seed)
+                        z_list = z_list_from_Z(D, Z)
+                        z_mean = np.mean(z_list, axis=0)
+                        code = code_for(D, z_list)
+                    if mode == "cass":
+                        ops, lys = ops_for(D, code, gamma, beta, amax,
+                                           delta_vec=z_mean)
+                    elif mode == "cass_recon":
+                        ops, lys = ops_for(D, code, gamma, beta, amax)
+                    else:  # zvec: additive raw z at same layers, same rescale
+                        ops, lys = ops_for(D, code, gamma, beta, amax,
+                                           injection="additive",
+                                           delta_vec=z_mean)
+                    acc = accuracy(hlm.generate(prompts, batch_size=25,
+                                                op=ops, layer=lys), targets)
+                    emit(task=tstar, family=task.family, k=k, seed=seed,
+                         mode=mode, acc=acc, eps=round(code.residual, 4),
+                         support_size=len(code.support),
+                         support="|".join(code.support[:8]),
+                         lam=round(code.lam, 4),
+                         delta_norm=round(float(np.linalg.norm(z_mean)), 2))
         bl = baselines[tstar]
         print(f"[{ti+1}/{len(ALL_TASKS)}] {tstar} done "
               f"(zs={bl['zs']:.2f} icl={bl['icl_mean']:.2f}) "

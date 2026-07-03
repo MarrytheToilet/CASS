@@ -1,6 +1,14 @@
-"""E4 ablation matrix on 8 representative tasks (LOTO protocol, k=4 default).
+"""E4 ablation matrix on 8 representative tasks (LOTO protocol, k=4 default),
+multi-layer hybrid pipeline.
 
-Axes: r0, solver, injection form, layer, k, lambda, n (dictionary samples).
+Axes:
+  r0        : 0/1/2/4/8/16 (common-component rank)
+  solver    : group_lasso / ls / omp / simplex (support + code)
+  delta     : hybrid(z) / recon / blend / zonly-additive (direction source)
+  layers    : [12] / [16] / [12,16] / [12,14,16]
+  k         : 1 / 2 / 4 / 8
+  smax      : 3 / 5 / 8 / 31 (support cap)
+  n         : 25 / 50 / 100 (dictionary samples per task)
 Usage: python 09_e4_ablations.py [model] [axis1,axis2,...|all]
 """
 import csv
@@ -14,12 +22,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import numpy as np
 
 from cass.config import results_dir
-from cass.dictionary import build_dictionary
+from cass.dictionary import build_multilayer_dictionary
 from cass.evaluate import accuracy
 from cass.extract import load_G
 from cass.models import HookedLM
-from cass.pipeline import code_for, op_for
-from cass.solver import lambda_max
+from cass.pipeline import code_for, ops_for, z_list_from_Z, _support_weights
+from cass.solver import solve_capped
 from cass.tasks import ALL_TASKS, load_task, zs_prompt
 from cass.zcache import get_z
 
@@ -34,7 +42,8 @@ K_DEFAULT = 4
 
 out = results_dir(MODEL)
 hp = json.load(open(out / "injection_hparams.json"))
-L0, GAMMA, BETA, AMAX = hp["layer"], hp["gamma"], hp["beta"], hp["alpha_max"]
+LAYERS, GAMMA, BETA, AMAX = (hp["layers"], hp["gamma"], hp["beta"],
+                             hp["alpha_max"])
 
 hlm = HookedLM(MODEL)
 rows_path = out / "e4_ablations.csv"
@@ -59,33 +68,45 @@ def G_at(layer):
 
 
 def run_condition(axis, value, tstar, seed, *, r0=2, solver="group_lasso",
-                  injection="affine", layer=None, k=K_DEFAULT, lam=None,
+                  delta_src="hybrid", layers=None, k=K_DEFAULT, s_max=5,
                   n_samples=None):
     if (axis, str(value), tstar, str(seed)) in done:
         return
-    layer = layer or L0
+    layers = layers or LAYERS
     task = load_task(tstar)
-    G = G_at(layer)
-    G_lo = {}
-    for t in ALL_TASKS:
-        if t == tstar:
-            continue
-        g = G[t]
-        G_lo[t] = g[:n_samples] if n_samples else g
-    D = build_dictionary(G_lo, r0=r0)
+    D = build_multilayer_dictionary(
+        {l: {t: (G_at(l)[t][:n_samples] if n_samples else G_at(l)[t])
+             for t in ALL_TASKS if t != tstar} for l in layers}, r0=r0)
     Z = get_z(hlm, task, k, seed)
-    z_list = [D.project_out_shared(Z[j, layer].numpy().astype(np.float64))
-              for j in range(Z.shape[0])]
-    if isinstance(lam, float):  # lambda expressed as fraction of lambda_max
-        z_mean = np.mean(z_list, axis=0)
-        code = code_for(D, z_list, solver=solver,
-                        lam=lam * lambda_max(D, z_mean))
+    z_list = z_list_from_Z(D, Z)
+    z_mean = np.mean(z_list, axis=0)
+    if solver == "group_lasso":
+        code = solve_capped(D, z_list, s_max=s_max)
     else:
         code = code_for(D, z_list, solver=solver)
-    op = op_for(D, code, GAMMA, BETA, AMAX, injection=injection)
+
+    if delta_src == "hybrid":
+        ops, lys = ops_for(D, code, GAMMA, BETA, AMAX, delta_vec=z_mean)
+    elif delta_src == "recon":
+        ops, lys = ops_for(D, code, GAMMA, BETA, AMAX)
+    elif delta_src == "blend":
+        if code.support:
+            w = _support_weights(code)
+            blend = sum(wi * D.anchors[n] for wi, n in zip(w, code.support))
+        else:
+            blend = z_mean
+        ops, lys = ops_for(D, code, GAMMA, BETA, AMAX, delta_vec=blend)
+    elif delta_src == "zonly":
+        ops, lys = ops_for(D, code, GAMMA, BETA, AMAX, injection="additive",
+                           delta_vec=z_mean)
+    elif delta_src == "projection":
+        ops, lys = ops_for(D, code, GAMMA, BETA, AMAX, injection="projection")
+    else:
+        raise ValueError(delta_src)
+
     queries = task.eval_queries[:N_EVAL]
     acc = accuracy(hlm.generate([zs_prompt(x) for x, _ in queries],
-                                batch_size=25, op=op, layer=layer),
+                                batch_size=25, op=ops, layer=lys),
                    [y for _, y in queries])
     writer.writerow(dict(axis=axis, value=value, task=tstar, seed=seed,
                          acc=acc, eps=round(code.residual, 4),
@@ -99,10 +120,10 @@ def sweep(axis):
     grids = {
         "r0": [0, 1, 2, 4, 8, 16],
         "solver": ["group_lasso", "ls", "omp", "simplex"],
-        "injection": ["affine", "additive", "projection"],
-        "layer": [L0 - 4, L0 - 2, L0, L0 + 2, L0 + 4],
+        "delta": ["hybrid", "recon", "blend", "zonly", "projection"],
+        "layers": ["12", "16", "12+16", "12+14+16"],
         "k": [1, 2, 4, 8],
-        "lam": [0.05, 0.1, 0.2, 0.3, 0.5, 0.8],
+        "smax": [3, 5, 8, 31],
         "n": [25, 50, 100],
     }
     for value in grids[axis]:
@@ -113,14 +134,14 @@ def sweep(axis):
                     kw["r0"] = value
                 elif axis == "solver":
                     kw["solver"] = value
-                elif axis == "injection":
-                    kw["injection"] = value
-                elif axis == "layer":
-                    kw["layer"] = value
+                elif axis == "delta":
+                    kw["delta_src"] = value
+                elif axis == "layers":
+                    kw["layers"] = [int(x) for x in str(value).split("+")]
                 elif axis == "k":
                     kw["k"] = value
-                elif axis == "lam":
-                    kw["lam"] = float(value)
+                elif axis == "smax":
+                    kw["s_max"] = value
                 elif axis == "n":
                     kw["n_samples"] = value
                 run_condition(axis, value, tstar, seed, **kw)
@@ -129,7 +150,7 @@ def sweep(axis):
 
 
 if __name__ == "__main__":
-    axes = list(("r0 solver injection layer k lam n".split())
+    axes = list(("r0 solver delta layers k smax n".split())
                 if AXES == ["all"] else AXES)
     for ax in axes:
         sweep(ax)

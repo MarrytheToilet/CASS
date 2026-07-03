@@ -1,5 +1,5 @@
-"""E5: dictionary-size scaling curve. Random sub-dictionaries of size T',
-fixed 6 held-out tasks, recovery vs T'."""
+"""E5: dictionary-size scaling (multi-layer hybrid). Random sub-dictionaries
+of size T', fixed 6 held-out tasks, accuracy vs T'."""
 import csv
 import json
 import sys
@@ -11,11 +11,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import numpy as np
 
 from cass.config import results_dir
-from cass.dictionary import build_dictionary
+from cass.dictionary import build_multilayer_dictionary
 from cass.evaluate import accuracy
 from cass.extract import load_G
 from cass.models import HookedLM
-from cass.pipeline import code_for, op_for
+from cass.pipeline import code_for, ops_for, z_list_from_Z
 from cass.tasks import ALL_TASKS, load_task, zs_prompt
 from cass.zcache import get_z
 
@@ -32,10 +32,11 @@ def main():
     t0 = time.time()
     out = results_dir(MODEL)
     hp = json.load(open(out / "injection_hparams.json"))
-    layer, gamma, beta, amax = (hp["layer"], hp["gamma"], hp["beta"],
-                                hp["alpha_max"])
+    layers, gamma, beta, amax = (hp["layers"], hp["gamma"], hp["beta"],
+                                 hp["alpha_max"])
     hlm = HookedLM(MODEL)
-    G = {t: load_G(MODEL, t, layer).numpy() for t in ALL_TASKS}
+    G = {l: {t: load_G(MODEL, t, l).numpy() for t in ALL_TASKS}
+         for l in layers}
 
     rows_path = out / "e5_scale.csv"
     done = set()
@@ -60,18 +61,19 @@ def main():
                 rng = np.random.default_rng(10 * size + draw)
                 subset = list(rng.choice(pool, min(size, len(pool)),
                                          replace=False))
-                D = build_dictionary({t: G[t] for t in subset}, r0=2)
+                D = build_multilayer_dictionary(
+                    {l: {t: G[l][t] for t in subset} for l in layers}, r0=2)
                 for seed in SEEDS:
                     if (str(size), str(draw), tstar, str(seed)) in done:
                         continue
                     Z = get_z(hlm, task, K, seed)
-                    z_list = [D.project_out_shared(
-                        Z[j, layer].numpy().astype(np.float64))
-                        for j in range(Z.shape[0])]
+                    z_list = z_list_from_Z(D, Z)
+                    z_mean = np.mean(z_list, axis=0)
                     code = code_for(D, z_list)
-                    op = op_for(D, code, gamma, beta, amax)
-                    acc = accuracy(hlm.generate(prompts, batch_size=25, op=op,
-                                                layer=layer), targets)
+                    ops, lys = ops_for(D, code, gamma, beta, amax,
+                                       delta_vec=z_mean)
+                    acc = accuracy(hlm.generate(prompts, batch_size=25,
+                                                op=ops, layer=lys), targets)
                     writer.writerow(dict(size=size, draw=draw, task=tstar,
                                          seed=seed, acc=acc,
                                          eps=round(code.residual, 4),
