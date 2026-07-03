@@ -17,7 +17,7 @@ import numpy as np
 
 from cass.config import results_dir
 from cass.dictionary import build_multilayer_dictionary
-from cass.evaluate import accuracy
+from cass.evaluate import accuracy, dump_preds
 from cass.extract import load_G
 from cass.models import HookedLM
 from cass.pipeline import code_for, ops_for, oracle_ops, naive_ops, z_list_from_Z
@@ -63,6 +63,8 @@ def main():
         queries = task.eval_queries
         targets = [y for _, y in queries]
         prompts = [zs_prompt(x) for x, _ in queries]
+        inputs = [x for x, _ in queries]
+        gens_path = out / "e1_gens.jsonl"
 
         D = build_multilayer_dictionary(
             {l: {t: G[l][t] for t in ALL_TASKS if t != tstar} for l in layers},
@@ -70,16 +72,18 @@ def main():
 
         if (tstar, "0", "0", "oracle") not in done:
             ops, lys = oracle_ops(D_full, tstar, gamma, beta, amax)
-            acc = accuracy(hlm.generate(prompts, batch_size=25, op=ops,
-                                        layer=lys), targets)
+            preds = hlm.generate(prompts, batch_size=25, op=ops, layer=lys)
+            dump_preds(gens_path, f"{tstar}|oracle", inputs, preds, targets)
+            acc = accuracy(preds, targets)
             emit(task=tstar, family=task.family, k=0, seed=0, mode="oracle",
                  acc=acc, eps=0, support_size=1, support=tstar, lam=0,
                  delta_norm=float(np.linalg.norm(D_full.anchors[tstar])))
 
         if (tstar, "0", "0", "naive") not in done:
             ops, lys = naive_ops(D)
-            acc = accuracy(hlm.generate(prompts, batch_size=25, op=ops,
-                                        layer=lys), targets)
+            preds = hlm.generate(prompts, batch_size=25, op=ops, layer=lys)
+            dump_preds(gens_path, f"{tstar}|naive", inputs, preds, targets)
+            acc = accuracy(preds, targets)
             emit(task=tstar, family=task.family, k=0, seed=0, mode="naive",
                  acc=acc, eps=1, support_size=len(D.task_names), support="all",
                  lam=0, delta_norm=0)
@@ -108,8 +112,11 @@ def main():
                         ops, lys = ops_for(D, code, gamma, beta, amax,
                                            injection="additive",
                                            delta_vec=z_mean)
-                    acc = accuracy(hlm.generate(prompts, batch_size=25,
-                                                op=ops, layer=lys), targets)
+                    preds = hlm.generate(prompts, batch_size=25, op=ops,
+                                         layer=lys)
+                    dump_preds(gens_path, f"{tstar}|{mode}|k{k}s{seed}",
+                               inputs, preds, targets)
+                    acc = accuracy(preds, targets)
                     emit(task=tstar, family=task.family, k=k, seed=seed,
                          mode=mode, acc=acc, eps=round(code.residual, 4),
                          support_size=len(code.support),

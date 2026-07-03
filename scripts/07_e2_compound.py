@@ -17,7 +17,7 @@ import numpy as np
 from cass.config import results_dir
 from cass.compound import COMPOUND_REGISTRY, compound_components, load_compound
 from cass.dictionary import build_multilayer_dictionary
-from cass.evaluate import accuracy
+from cass.evaluate import accuracy, dump_preds
 from cass.extract import load_G
 from cass.models import HookedLM
 from cass.pipeline import code_for, ops_for, oracle_ops, z_list_from_Z
@@ -29,6 +29,11 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "llama31-8b"
 K = 4
 SEEDS = [0, 1, 2, 3, 4]
 R0 = 2
+
+def acc_cs(preds, targets, tag, inputs, gens_path):
+    dump_preds(gens_path, tag, inputs, preds, targets)
+    return accuracy(preds, targets, case_sensitive=True)
+
 
 def main():
     t0 = time.time()
@@ -50,13 +55,17 @@ def main():
         targets = [y for _, y in queries]
         prompts = [zs_prompt(x) for x, _ in queries]
 
-        acc_zs = accuracy(hlm.generate(prompts, batch_size=25), targets)
+        gens_path = out / "e2_gens.jsonl"
+        inputs = [x for x, _ in queries]
+        acc_zs = acc_cs(hlm.generate(prompts, batch_size=25), targets,
+                        f"{cname}|zs", inputs, gens_path)
         rng0 = np.random.default_rng(0)
         icl_prompts = [icl_prompt(
             [comp.dict_pool[j] for j in
              rng0.choice(len(comp.dict_pool), 10, replace=False)], x)
             for x, _ in queries]
-        acc_icl = accuracy(hlm.generate(icl_prompts, batch_size=8), targets)
+        acc_icl = acc_cs(hlm.generate(icl_prompts, batch_size=8), targets,
+                         f"{cname}|icl", inputs, gens_path)
 
         coeff_acc = {t: [] for t in ALL_TASKS}
         for seed in SEEDS:
@@ -72,8 +81,9 @@ def main():
             rec = len(hits) / len(comps)
 
             ops, lys = ops_for(D, code, gamma, beta, amax, delta_vec=z_mean)
-            acc = accuracy(hlm.generate(prompts, batch_size=25, op=ops,
-                                        layer=lys), targets)
+            acc = acc_cs(hlm.generate(prompts, batch_size=25, op=ops,
+                                      layer=lys), targets,
+                         f"{cname}|cass|s{seed}", inputs, gens_path)
 
             # ELICIT-style retrieval: nearest single dictionary task
             sims = {t: abs(float(z_mean @ D.anchors[t] /
@@ -81,8 +91,9 @@ def main():
                      + 1e-12))) for t in ALL_TASKS}
             nearest = max(sims, key=sims.get)
             ops_r, lys_r = oracle_ops(D, nearest, gamma, beta, amax)
-            acc_retr = accuracy(hlm.generate(prompts, batch_size=25, op=ops_r,
-                                             layer=lys_r), targets)
+            acc_retr = acc_cs(hlm.generate(prompts, batch_size=25, op=ops_r,
+                                           layer=lys_r), targets,
+                              f"{cname}|retr|s{seed}", inputs, gens_path)
 
             # naive: average of the true components' anchors, additive
             ops_n = []
@@ -91,9 +102,10 @@ def main():
                 ops_n.append(make_additive_op(
                     np.mean([Dl.anchors[c] for c in comps], axis=0),
                     gamma=1.5))
-            acc_naive = accuracy(hlm.generate(prompts, batch_size=25,
-                                              op=ops_n, layer=list(layers)),
-                                 targets)
+            acc_naive = acc_cs(hlm.generate(prompts, batch_size=25,
+                                            op=ops_n, layer=list(layers)),
+                               targets, f"{cname}|naive|s{seed}", inputs,
+                               gens_path)
 
             rows.append(dict(compound=cname, seed=seed, acc_zs=acc_zs,
                              acc_icl=acc_icl, acc_cass=acc,
