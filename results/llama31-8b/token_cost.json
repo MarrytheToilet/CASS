@@ -1,0 +1,29 @@
+{
+  "model": "llama31-8b",
+  "k": 4,
+  "mean_icl_prompt_tokens": 130.6,
+  "mean_zs_prompt_tokens": 10.5,
+  "one_time_extraction_tokens": 2211.0,
+  "per_query_costs": {
+    "10": {
+      "icl_total": 1306,
+      "cass_total": 2316,
+      "ratio": 0.6
+    },
+    "100": {
+      "icl_total": 13060,
+      "cass_total": 3265,
+      "ratio": 4.0
+    },
+    "1000": {
+      "icl_total": 130609,
+      "cass_total": 12751,
+      "ratio": 10.2
+    },
+    "10000": {
+      "icl_total": 1306093,
+      "cass_total": 107617,
+      "ratio": 12.1
+    }
+  }
+}

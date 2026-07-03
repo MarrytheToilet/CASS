@@ -24,9 +24,10 @@ from cass.pipeline import code_for, ops_for, oracle_ops, naive_ops, z_list_from_
 from cass.tasks import ALL_TASKS, load_task, zs_prompt
 from cass.zcache import get_z
 
+import os
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "llama31-8b"
-KS = [1, 2, 4]
-SEEDS = [0, 1, 2, 3, 4]
+KS = [int(x) for x in os.environ.get("CASS_KS", "1,2,4").split(",")]
+SEEDS = [int(x) for x in os.environ.get("CASS_SEEDS", "0,1,2,3,4").split(",")]
 R0 = 1
 
 def main():
