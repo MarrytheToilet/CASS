@@ -24,7 +24,7 @@ from cass.tasks import ALL_TASKS, TASK_REGISTRY
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "llama31-8b"
 LAYER = int(sys.argv[2]) if len(sys.argv) > 2 else None
 R0_SCAN = [0, 1, 2, 4, 8, 16]
-R0_DEFAULT = 2
+R0_DEFAULT = 1
 
 def main():
     out = results_dir(MODEL)

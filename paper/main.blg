@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: references.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no number and no volume in atv2025
+Warning--page numbers missing in both pages and numpages fields in atv2025
+Warning--empty publisher in ranklimit2026
+Warning--empty address in ranklimit2026
+Warning--page numbers missing in both pages and numpages fields in ranklimit2026
+Warning--empty publisher in hendel2023task
+Warning--empty address in hendel2023task
+Warning--page numbers missing in both pages and numpages fields in hendel2023task
+Warning--empty publisher in dejavu2023
+Warning--empty address in dejavu2023
+Warning--page numbers missing in both pages and numpages fields in dejavu2023
+Warning--empty publisher in conceptor2024
+Warning--empty address in conceptor2024
+Warning--page numbers missing in both pages and numpages fields in conceptor2024
+Warning--empty publisher in todd2024function
+Warning--empty address in todd2024function
+Warning--page numbers missing in both pages and numpages fields in todd2024function
+Warning--no number and no volume in turner2023actadd
+Warning--page numbers missing in both pages and numpages fields in turner2023actadd
+Warning--empty publisher in elicit2024
+Warning--empty address in elicit2024
+Warning--page numbers missing in both pages and numpages fields in elicit2024
+Warning--no number and no volume in seap2025
+Warning--page numbers missing in both pages and numpages fields in seap2025
+Warning--no number and no volume in zou2023repe
+Warning--page numbers missing in both pages and numpages fields in zou2023repe
+You've used 13 entries,
+            6273 wiz_defined-function locations,
+            1584 strings with 20287 characters,
+and the built_in function-call counts, 14509 in all, are:
+= -- 1866
+> -- 503
+< -- 0
++ -- 170
+- -- 181
+* -- 1009
+:= -- 1380
+add.period$ -- 65
+call.type$ -- 13
+change.case$ -- 96
+chr.to.int$ -- 13
+cite$ -- 39
+duplicate$ -- 1279
+empty$ -- 913
+format.name$ -- 221
+if$ -- 3614
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 58
+newline$ -- 149
+num.names$ -- 91
+pop$ -- 599
+preamble$ -- 1
+purify$ -- 200
+quote$ -- 0
+skip$ -- 428
+stack$ -- 0
+substring$ -- 863
+swap$ -- 84
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 292
+warning$ -- 26
+while$ -- 72
+width$ -- 0
+write$ -- 281
+(There were 26 warnings)

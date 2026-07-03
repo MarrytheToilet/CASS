@@ -1,10 +1,9 @@
-%% PopContrast — KDD 2027 Research Track submission (anonymous)
+%% CASS — KDD 2027 Research Track submission (anonymous)
 \documentclass[sigconf,review,anonymous]{acmart}
 
 \AtBeginDocument{%
   \providecommand\BibTeX{{Bib\TeX}}}
 
-%% --- rights/venue placeholders (final values come with the rights form) ---
 \setcopyright{none}
 \copyrightyear{2027}
 \acmYear{2027}
@@ -15,20 +14,23 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{array}
-\usepackage{colortbl}
-\definecolor{RowGlow}{RGB}{228,240,251}   % light blue row highlight
-\definecolor{RuleSoft}{RGB}{210,205,214}  % light gray separators
-\definecolor{GainInk}{RGB}{184,58,107}    % gains vs baseline
-\newcommand{\dg}[1]{\,{\scriptsize\textcolor{GainInk}{(#1)}}}
-\newcommand{\dn}[1]{\,{\scriptsize\textcolor{gray}{(#1)}}}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
-\newcommand{\method}{\textsc{PopContrast}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+
+\newcommand{\method}{\textsc{CASS}}
 \newcommand{\eg}{e.g.,}
 \newcommand{\ie}{i.e.,}
+\newcommand{\R}{\mathbb{R}}
 
 \begin{document}
 
-\title{Subtract the Marginal: Training-Free Popularity Debiasing for Semantic-ID Generative Recommendation}
+\title{\method: Training-Free Adaptation to Unseen Tasks by Mining and
+Composing Skill Subspaces from LLM Activations}
 
 \author{Anonymous Author(s)}
 \affiliation{%
@@ -38,596 +40,391 @@
 }
 
 \begin{abstract}
-Generative recommenders such as TIGER decode each item as a short sequence of semantic-ID tokens, and the item distribution they induce is known to over-favor popular items, collapsing long-tail coverage. The remedy suggested by recent work on activation steering would treat popularity as a linear direction in the decoder's residual stream and remove it at inference. We test this hypothesis on a frozen TIGER model and find that it fails: popularity is linearly decodable from the residual stream, yet no steering or erasure intervention we tried recovers the long tail. Probeable does not mean steerable. A ruling-out diagnosis locates the bias elsewhere. It is not beam-search pruning, and it is not the tokenizer's code assignment; what remains is the decoder's learned \emph{marginal} item distribution---a measurable and directly correctable locus that closely tracks item popularity. This finding motivates \method{}, a training-free decode-time correction that re-scores each candidate by subtracting the model's own marginal log-preference, scaled by a single strength knob. The correction needs no fine-tuning and no external model, and it applies exactly within standard trie-constrained beam search, preserving the serving-cost advantages of the generative paradigm. Across three Amazon benchmarks, points on the strength frontier improve tail recall by 10--144\% and catalog coverage by 7--47\% without reducing overall recall, and a single pre-registered strength trades at most 5\% of overall recall for tail gains of 45--144\%; throughout, the correction diversifies exposure where naive popularity discounts and fusion with a weak external model degrade.
-%〔译〕像 TIGER 这样的生成式推荐器把每个物品解码为一小段语义 ID token,其诱导的物品分布已知会过度偏向热门物品,导致长尾覆盖率坍塌。近期激活转向工作建议的补救方式是把流行度视为解码器残差流中的一个线性方向并在推理时移除它。我们在冻结的 TIGER 上检验该假设并发现它失败:流行度在残差流中线性可解码,但我们尝试的任何转向或擦除干预都无法恢复长尾——可探测不等于可转向。一次排除式诊断把偏差定位到别处:不是束搜索剪枝,也不是 tokenizer 的编码分配;剩下的是解码器学到的边际物品分布,一个可测量、可直接校正、且与物品流行度高度吻合的位点。这催生了 PopContrast:一种无需训练的解码期校正,从每个候选中减去模型自身的边际对数偏好(由单一强度旋钮缩放)来重新打分。它无需微调、无需外部模型,且能精确嵌入标准字典树约束束搜索,保留生成式范式的服务成本优势。在三个 Amazon 基准上,强度前沿上的点在不降低整体召回的前提下把尾部召回提升 10–144%、覆盖率提升 7–47%;单一预注册强度以至多 5% 的整体召回换取 45–144% 的尾部增益;全程该校正都在朴素流行度折扣与弱外部模型融合退化之处实现了曝光多样化。
+Large language models encode task information as manipulable structure in
+their activation space: task vectors extracted from in-context demonstrations
+causally trigger task execution when injected elsewhere. Existing steering
+approaches, however, treat each task in isolation---vectors are extracted per
+task, stored, and retrieved, leaving models unable to exploit shared structure
+when a novel task arrives. We ask: what part of a new task's steering operator
+can be \emph{composed} from a dictionary of previously mined skills, and how
+should the composable and task-specific parts be combined? We present \method{}
+(Compositional Adaptive Subspace Steering), a fully training-free framework
+that (i) mines a dictionary of low-rank skill subspaces from contrastive
+activations at two residual-stream depths, after projecting out a shared
+task-generic component that we identify as the dominant cause of interference
+in naive vector composition; (ii) given $k\le 4$ demonstrations of a novel
+task, solves a joint group-sparse coding problem---with closed-form block
+updates and support shared across layers---to identify the relevant skills;
+and (iii) steers the model with a query-adaptive affine operator that combines
+the demonstrations' denoised activation direction with a subspace correction
+derived from the recovered support. We prove support-recovery guarantees under
+a block-coherence condition and bound steering sub-optimality by the coding
+residual, which doubles as a practical reliability signal. On 32 tasks and
+Llama-3.1-8B, \method{} recovers a median 86\% of oracle task-vector
+performance on held-out tasks from only 4 examples (naive composition: 0\%),
+identifies the constituent skills of compound tasks with 0.68 recall,
+improves monotonically with dictionary size, and amortizes to a $10\times$
+per-query token saving over full in-context prompting beyond ${\sim}17$
+queries per task.
 \end{abstract}
 
 \begin{CCSXML}
 <ccs2012>
  <concept>
-  <concept_id>10002951.10003317.10003347.10003350</concept_id>
-  <concept_desc>Information systems~Recommender systems</concept_desc>
+  <concept_id>10010147.10010257</concept_id>
+  <concept_desc>Computing methodologies~Machine learning</concept_desc>
   <concept_significance>500</concept_significance>
  </concept>
 </ccs2012>
 \end{CCSXML}
-\ccsdesc[500]{Information systems~Recommender systems}
+\ccsdesc[500]{Computing methodologies~Machine learning}
 
-\keywords{generative recommendation, popularity bias, semantic IDs, decoding, long-tail recommendation, contrastive decoding}
+\keywords{large language models, activation steering, task vectors, sparse
+coding, representation mining}
 
 \maketitle
 
 \section{Introduction}
-Generative recommendation (GR) reformulates retrieval as sequence generation: each item is tokenized into a short semantic ID (SID)---\eg{} by residual quantization of content embeddings~\cite{lee2019rqvae}---and a sequence-to-sequence model such as TIGER~\cite{rajput2023tiger} autoregressively generates the SID of the next item, decoding with beam search under a prefix-trie constraint so that only valid catalog items are produced. The paradigm's central appeal is that inference cost is decoupled from catalog size: no per-item embeddings need to be stored or scored at serving time.
-%〔译〕生成式推荐(GR)把检索重构为序列生成:每个物品被 token 化为一段短语义 ID(SID,例如通过内容嵌入的残差量化),TIGER 这样的序列到序列模型自回归地生成下一物品的 SID,并在前缀字典树约束下用束搜索解码,以只产生合法的目录物品。该范式的核心吸引力在于推理成本与目录规模解耦:服务时无需存储或打分任何逐物品嵌入。
+Large-scale LLM serving pipelines face a long tail of lightweight,
+recurring tasks. The standard remedy---prepending $k$-shot demonstrations to
+every query---multiplies prompt length by an order of magnitude and is paid
+again on every call: at $10$-shot prompting, a task served a thousand times
+costs ${\sim}131$k prompt tokens where the queries alone would cost
+${\sim}10$k (Table~\ref{tab:cost}). A growing body of work shows that the
+demonstrations' effect is substantially captured by compact structure in the
+model's activation space: \emph{task vectors} or \emph{function vectors}
+distilled from in-context prompts can be injected into the residual stream to
+trigger task execution without any demonstrations in
+context~\cite{hendel2023task,todd2024function}. Activation-level task
+structure is not an artifact of one probe: different tasks induce partitioned,
+clusterable hidden representations across layers~\cite{seap2025}.
 
-The item distribution induced by this token-level decoding, however, is systematically skewed toward popular items. On Amazon Beauty, the most popular 20\% of items receive 60\% of all training interactions, and a well-trained TIGER concentrates its recommendations accordingly: in our measurements, its top-10 lists reach only 11\% of the catalog, and Recall@10 on users whose next item is in the long tail is an order of magnitude below that of head users (Table~\ref{tab:main}). Since surfacing niche items is precisely where recommenders add value over bestseller lists, this \emph{popularity-induced coverage collapse} is a first-order problem for the GR paradigm.
-%〔译〕然而这种 token 级解码诱导的物品分布系统性地偏向热门物品。在 Amazon Beauty 上,最热门的 20% 物品获得了全部训练交互的 60%,训练良好的 TIGER 也相应地集中其推荐:在我们的测量中,其 top-10 列表只触及目录的 11%,而下一物品落在长尾的用户的 Recall@10 比头部用户低一个数量级。由于推荐系统相对畅销榜的价值恰恰在于呈现小众物品,这种流行度诱导的覆盖率坍塌是 GR 范式的头等问题。
+Yet existing steering methods treat tasks as islands. Per-task vectors are
+extracted offline and retrieved by similarity at serving
+time~\cite{elicit2024}; adaptive variants train a generator network to map
+demonstrations to vectors~\cite{atv2025}. Neither can serve a task absent
+from the library without new training, and single-vector representations
+provably degrade on tasks whose activation signature is high-rank
+\cite{ranklimit2026}. The blind spot is \emph{unseen} tasks: can a steering
+operator for a task never seen before be assembled, at negligible cost, from
+skills mined earlier?
 
-\paragraph{The obvious fix, and why it fails}
-A tempting remedy comes from LLM interpretability: concepts such as refusal~\cite{arditi2024refusal} or truthfulness~\cite{marks2024geometry} are often \emph{linear directions} in the residual stream, manipulable at inference by activation steering~\cite{rimsky2024caa,zou2023repe}. If popularity were such a direction in the GR decoder, one could subtract it during decoding with no training and no architectural change. We built this method first; it does not work, and the reasons are instructive.
-%〔译〕一个诱人的补救来自 LLM 可解释性:拒答、真实性等概念常是残差流中的线性方向,可在推理时通过激活转向操纵。若流行度在 GR 解码器中也是这样一个方向,便可在解码时无训练、无架构改动地将其减去。我们最先构建了这一方法;它不奏效,而失败的原因很有启发性。
+Naive assembly fails. Simply averaging dictionary vectors steers the model to
+0\% of oracle performance in our experiments (\S\ref{sec:e1}). We trace this
+failure to a structural property: every contrastively extracted task vector
+shares a large \emph{task-generic} component---the signature of ``an ICL task
+is being executed''---whose superposition drowns task-specific directions.
+Projecting out a rank-1 shared subspace drops the median pairwise cosine
+between task means from $0.34$ to $0.18$ and doubles downstream composition
+accuracy (\S\ref{sec:e4}). Once removed, a second structure appears: the
+residual task vectors are \emph{partially} compositional. A held-out task's
+representation is well approximated inside the span of a handful of related
+skills---its group-sparse code selects semantically correct neighbors
+(currency$\to$\{capital, landmark, park\}; French$\to$\{German,
+Spanish\})---while an irreducible task-specific component remains outside
+every other task's subspace. Effective adaptation must therefore
+\emph{combine} the composable part (which the dictionary can identify,
+denoise, and correct toward) with the task-specific part (which only the $k$
+demonstrations carry).
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=0.96\textwidth]{figures/framework.png}
-  \caption{Overview. (1)~Semantic-ID generative recommendation skews toward popular items; (2)~the ruling-out diagnosis leaves the decoder marginal; (3)~\method{} estimates it offline and subtracts it during unchanged trie-beam decoding.}
-  \label{fig:framework}
-\end{figure*}
+\method{} operationalizes this in three training-free stages
+(Fig.~\ref{fig:pipeline}): dictionary mining with common-component removal
+(\S\ref{sec:mining}); joint group-sparse coding across two injection layers
+with closed-form block updates, millisecond solve times, and a shared support
+(\S\ref{sec:coding}); and a query-adaptive affine steering operator whose
+direction is the demonstrations' denoised contrastive activation and whose
+correction pulls hidden states toward the recovered skill subspace
+(\S\ref{sec:injection}). The coding residual $\varepsilon$ bounds steering
+sub-optimality (Prop.~\ref{prop:transfer}) and doubles as a deployment-time
+reliability signal: when $\varepsilon$ is large the system can fall back to
+full ICL.
 
-\paragraph{A ruling-out diagnosis}
-We localize the bias by eliminating candidate mechanisms one at a time on a frozen TIGER model (Figure~\ref{fig:framework}; Section~\ref{sec:diagnosis}):
-%〔译〕我们在冻结的 TIGER 上逐一排除候选机制来定位偏差(图 1;第 4 节):
-\underline{\textbf{Not a steerable linear direction.}} A linear probe reads head-vs-tail popularity from the decoder residual stream at AUC $0.70$, yet every linear intervention we tried (direction choices $\times$ edit operators $\times$ strengths, plus closed-form LEACE erasure~\cite{belrose2023leace}; Section~\ref{sec:notrep}) leaves tail recall unchanged or worse, and a symmetric causal test moves the popularity of decoded outputs by only ${\sim}1\%$ of the head--tail gap: \emph{decodable but not causal}~\cite{elazar2021amnesic,geiger2021causal,tan2024analysing}. This rules out accessible linear steering, not representational causality in every form (Section~\ref{sec:limitations}).
-%〔译〕不是可转向的线性方向。线性探针能以 AUC 0.70 从解码器残差流读出头/尾流行度,但我们尝试的每一种线性干预(方向选择×编辑算子×强度,加上闭式 LEACE 擦除)都让尾部召回不变或更差,且对称因果检验只把解码输出的流行度移动了头尾差距的约 1%:可解码但非因果。这排除的是可触及的线性转向,而非各种形式的表征因果性(第 8 节)。
-\underline{\textbf{Not the search.}} With fixed 3-token SIDs over 12--18k catalogs, width-20 trie-beam search already matches exhaustive ranking (91\% top-10 overlap, identical recall); pruning is not where the tail is lost in this regime.
-%〔译〕不是搜索。在 12–18k 目录上使用固定 3-token SID 时,宽度 20 的字典树束搜索已与穷举排序持平(top-10 重叠 91%,召回相同);在此机制下尾部并非丢失于剪枝。
-\underline{\textbf{Not the tokenizer.}} Code assignment is essentially popularity-independent ($\rho \le 0.11$), collisions are unbiased, and controlling for code density leaves the popularity--marginal link unchanged ($0.71 \to 0.71$), distinguishing our setting from the codebook bias targeted by LETTER~\cite{wang2024letter}.
-%〔译〕不是 tokenizer。编码分配本质上与流行度无关(ρ≤0.11),碰撞无偏,且控制编码密度后流行度与边际的关联不变(0.71→0.71),这使我们的设定区别于 LETTER 所针对的码本偏差。
-\underline{\textbf{What remains: the decoding distribution.}} The model's marginal item preference tracks popularity at $\rho \approx 0.70$ on all three datasets and is directly measurable and, as we show, correctable; we treat this as the best-supported interpretation rather than a proven unique cause.
-%〔译〕剩下的:解码分布。模型的边际物品偏好在全部三个数据集上以 ρ≈0.70 跟踪流行度,且可直接测量、并如我们所示可校正;我们将其视为最有依据的解释,而非已证明的唯一成因。
+\textbf{Contributions.}
+(1)~The first training-free framework that adapts activation steering to
+unseen tasks by composing mined skill subspaces, with an explicit,
+interpretable decomposition into composable and task-specific parts.
+(2)~A mechanism finding: a shared task-generic activation component is the
+dominant cause of interference in vector composition; removing it (at the
+right rank) is necessary for compositionality to emerge, doubling composition
+accuracy, with a sharply non-monotone rank ablation.
+(3)~Theory: support-recovery guarantees for the joint multi-layer
+group-sparse code under a block-coherence condition, and an error-transfer
+bound linking coding residual to steering performance---together with
+measured coherence values that delineate where the theory's conditions hold
+(within-family coherence violates them exactly where we observe
+wrong-neighbor steering).
+(4)~A scaling and cost narrative for activation mining as a reusable asset:
+composition quality grows monotonically with dictionary size, dictionaries
+need only 25 contrastive samples per skill, and serving amortizes to a
+$10\times$ token saving over ICL at $10^3$ queries.
 
-\paragraph{The diagnosis motivates the fix}
-If the operative bias is well summarized by the model's marginal, the natural correction is to subtract it. \method{} re-scores each candidate item at decode time by
-$s(i \mid u) = \log p(i \mid u) - \beta\, \hat m(i)$,
-where $\hat m$ is the model's own marginal log-probability, estimated once offline by averaging exact item scores over a sample of user histories. This is a pointwise-mutual-information re-ranking, related to contrastive and context-aware decoding~\cite{li2023contrastive,shi2024cad} and to logit adjustment in long-tail classification~\cite{menon2021logit}---but here the subtracted quantity is not a heuristic prior: it is the empirically identified locus of the bias. \method{} requires no training, no external model, and no change to trie-beam decoding; because beam${\approx}$exact (ruling~2), the correction applied within the beam achieves the effect measured by exhaustive scoring.
-%〔译〕若操作性偏差可由模型边际很好地概括,自然的校正就是把它减去。PopContrast 在解码时以 s(i|u)=log p(i|u)−β·m̂(i) 重新打分,其中 m̂ 是模型自身的边际对数概率,通过对一批用户历史的精确物品分数取平均离线估计一次。这是一种逐点互信息重排,与对比解码、上下文感知解码及长尾分类中的 logit 调整相关——但这里被减去的量不是启发式先验,而是经验识别出的偏差位点。PopContrast 无需训练、无需外部模型、不改动字典树束搜索;由于束搜索≈精确(排除项 2),束内施加的校正实现了穷举打分所测得的效果。
+\section{Related Work}
+\textbf{Task and function vectors.} Hendel et al.~\cite{hendel2023task} and
+Todd et al.~\cite{todd2024function} show ICL compresses task identity into
+injectable vectors; follow-ups analyze their geometry and limits, including
+rank limitations of single vectors~\cite{ranklimit2026}. These works extract
+and analyze \emph{per-task} representations; we \emph{synthesize} operators
+for unseen tasks and use subspaces as primitives, directly addressing the
+high-rank failure.
 
-\paragraph{Contributions}
-\begin{itemize}
-  \item \textbf{Diagnosis.} A four-way ruling-out (linear steering, search, tokenizer, distribution) with a symmetric causal test, supporting a \emph{distributional} account of the bias in this setting; the negative steering result cautions against transplanting LLM activation-steering to GR.
-%〔译〕贡献·诊断。一次四路排除(线性转向、搜索、tokenizer、分布)加对称因果检验,支持在此设定下对偏差的分布式解释;负向转向结果告诫不要把 LLM 激活转向照搬到 GR。
-  \item \textbf{Method.} \method{}, the training-free, model-free decode-time marginal correction predicted by the diagnosis, with a single interpretable strength knob $\beta$.
-%〔译〕贡献·方法。PopContrast,即诊断所预测的无训练、无模型的解码期边际校正,带单一可解释强度旋钮 β。
-  \item \textbf{Evidence.} Across three Amazon benchmarks on a frozen TIGER: the strength frontier contains points holding overall recall on all three datasets with tail Recall@10 $+10$--$144\%$ and coverage $+7$--$47\%$; a single \emph{pre-registered} $\beta{=}0.75$ (no tuning) trades ${\le}5\%$ overall for tail $+45$--$144\%$; diversification is genuine (entropy up, Gini down); the naive discount \emph{degenerates} at strength; and weak-external-model fusion \`a la D$^3$~\cite{bao2024d3} hurts both accuracy and coverage.
-%〔译〕贡献·证据。在冻结 TIGER 的三个 Amazon 基准上:强度前沿含有在三数据集上都保持整体召回、同时尾部 Recall@10 +10–144%、覆盖率 +7–47% 的点;单一预注册 β=0.75(无调参)以≤5% 整体换取尾部 +45–144%;多样化是真实的(熵升、Gini 降);朴素折扣在强度下退化;而 D³ 式弱外部模型融合同时损害精度与覆盖率。
-\end{itemize}
+\textbf{Vector libraries and adaptivity.} ELICIT~\cite{elicit2024} retrieves
+from a capability library; ATV~\cite{atv2025} trains a small network to
+generate task vectors. Retrieval cannot leave the library of known tasks, and
+generation requires training. \method{} is training-free and returns an
+explicit compositional explanation (the sparse code) with each operator.
 
-\section{Related Work}\label{sec:related}
+\textbf{Activation steering.} Steering vectors add fixed directions for known
+behaviors~\cite{turner2023actadd,zou2023repe}; conceptors generalize to
+ellipsoidal regions and Boolean combinations of \emph{known}
+behaviors~\cite{conceptor2024}. We instead \emph{infer} the combination for an
+unknown task from $k$ examples; conceptor-style composition enters our
+experiments as the anchor-blend ablation.
 
-\paragraph{Generative recommendation}
-TIGER~\cite{rajput2023tiger} introduced semantic-ID generative retrieval: RQ-VAE tokenization of content embeddings followed by an encoder--decoder Transformer generating the next item's tokens. LC-Rec~\cite{zheng2024lcrec} extends the recipe to LLM backbones. SimGR~\cite{simgr2026} diagnoses that token-level generation distorts item-level distributions and \emph{abandons} generation for dense retrieval, sacrificing GR's serving-cost advantage; we recover item-level fidelity within the paradigm.
-%〔译〕相关工作·生成式推荐。TIGER 引入语义 ID 生成式检索:对内容嵌入做 RQ-VAE token 化,再由编码器-解码器 Transformer 生成下一物品 token。LC-Rec 将该配方扩展到 LLM 骨干。SimGR 诊断出 token 级生成扭曲了物品级分布,遂放弃生成转向稠密检索,牺牲了 GR 的服务成本优势;我们则在范式内部恢复物品级保真度。
+\textbf{Mining task structure in activations.} SEAP~\cite{seap2025} clusters
+task activations to prune computation; contextual-sparsity methods exploit
+similar structure for efficiency~\cite{dejavu2023}. We use the same raw
+material---activation data across tasks---but mine it into a reusable skill
+dictionary that \emph{adds} capability (steering to unseen tasks) rather than
+removing computation.
 
-\paragraph{Decode-time corrections for GR}
-D$^3$~\cite{bao2024d3} removes length normalization (moot here: fixed-length IDs have no length-normalization bias) and fuses an \emph{external} text-free SASRec~\cite{kang2018sasrec} into per-step logits; Section~\ref{sec:d3} shows such fusion backfires when the external model is weaker than the generator. \method{} needs no second model. GENPLUGIN~\cite{yang2025genplugin} also targets long-tail GR but is training-heavy (contrastive pre-training with LLM/vision encoders plus retrieval augmentation). LETTER~\cite{wang2024letter} regularizes the \emph{tokenizer} against codebook popularity concentration at training time; our tokenizer diagnostic shows that in our setting code assignment is already popularity-neutral, placing the bias downstream at decoding---the two interventions are complementary and address different loci.
-%〔译〕相关工作·GR 的解码期校正。D³ 移除长度归一(这里无关:定长 ID 无长度归一偏差)并把外部无文本 SASRec 融入逐步 logit;第 6.6 节表明当外部模型弱于生成器时此类融合适得其反。PopContrast 无需第二个模型。GENPLUGIN 也针对长尾 GR 但训练繁重。LETTER 在训练时对 tokenizer 做码本流行度集中的正则;我们的 tokenizer 诊断显示在本设定下编码分配已是流行度中性的,把偏差置于下游的解码处——两种干预互补且针对不同位点。
+\section{Skill Structure in Activation Space}
+\label{sec:structure}
+\textbf{Setup and notation.} Let $M$ be a decoder-only LM with $L$ layers and
+residual width $d$ ($L{=}32$, $d{=}4096$ for Llama-3.1-8B). For prompt $p$,
+$h_\ell(p)\in\R^d$ is the residual-stream state of the last token at layer
+$\ell$. We assume a base task set $\mathcal T=\{1,\dots,T\}$ with datasets of
+input--output pairs, organized in five families (knowledge mapping,
+linguistic transforms, translation, algorithmic/symbolic, list selection);
+$T{=}32$ in our experiments.
 
-\paragraph{Popularity bias}
-Popularity bias and its amplification are extensively documented in classical recommenders~\cite{klimashevskaia2024survey,steck2018calibrated}; causal adjustments such as PDA~\cite{zhang2021pda} intervene on exposure at training time, and logit adjustment~\cite{menon2021logit} subtracts class priors in long-tail classification, echoing classical label-shift correction~\cite{saerens2002adjusting}. SPREE~\cite{spree2026} steers \emph{dense} sequential recommenders effectively; with our negative result (Section~\ref{sec:notrep}), steerability appears architecture-dependent. Closer to our framing, recent work analyzes \emph{how} recommenders amplify popularity---spectrally in transformer recommenders~\cite{lin2025spectral,yang2026scaling}, through the generation process~\cite{yin2026echoes} (engaged in Section~\ref{sec:nottok}), as inherited bias in cold-start settings corrected by post-hoc rescaling~\cite{meehan2025coldstart}, and empirically in LLM recommenders~\cite{lichtenberg2024llmpop,jiang2024itemfairness}; Our contribution is complementary: an intervention-based localization on frozen semantic-ID models, and a correction that requires no training at all. We bring the distributional perspective to \emph{token-level generative} recommenders, where the prior to subtract is not the empirical item frequency but the generator's own learned marginal---a distinction our experiments show matters (Section~\ref{sec:naive}).
-%〔译〕相关工作·流行度偏差。经典推荐器中流行度偏差及其放大已被广泛记录;PDA 等因果调整在训练时干预曝光,logit 调整在长尾分类中减去类先验,呼应经典的标签偏移校正。SPREE 能有效转向稠密序列推荐器;结合我们的负向结果,可转向性似乎依赖于架构。更贴近我们框架的近期工作分析推荐器如何放大流行度——变换器推荐器的谱分析、生成过程、冷启动继承偏差的事后再缩放、以及 LLM 推荐器的实证。我们的贡献是互补的:在冻结语义 ID 模型上做基于干预的定位,并给出完全无需训练的校正。我们把分布视角带到 token 级生成式推荐器,其中要减去的先验不是经验物品频率,而是生成器自身学到的边际——一个我们实验证明重要的区分。
+\textbf{Contrastive extraction.} For task $t$ and sample $i$ we build a
+10-shot ICL prompt $p_i^{t,+}$ and a corrupted twin $p_i^{t,-}$ with the same
+inputs but derangement-shuffled labels (format and vocabulary preserved, task
+mapping destroyed), and record the differential activation
+$g_i^{(t)}=h_\ell(p_i^{t,+})-h_\ell(p_i^{t,-})$ at every layer in one forward
+pass. Per task we use $n{=}100$ pairs ($n{=}25$ suffices; \S\ref{sec:e4}).
 
-\paragraph{Activation steering and its limits}
-Steering vectors modify LLM behavior by adding or removing directions in the residual stream~\cite{rimsky2024caa,zou2023repe,arditi2024refusal}, optionally gated~\cite{lee2025cast} or via closed-form erasure~\cite{belrose2023leace}. A parallel line cautions that linearly decodable features need not be causally used~\cite{elazar2021amnesic,geiger2021causal,marks2024geometry,tan2024analysing}; our negative result demonstrates this probeable-vs-steerable gap in recommendation models and identifies a concrete alternative locus.
-%〔译〕相关工作·激活转向及其局限。转向向量通过在残差流中加减方向来修改 LLM 行为,可选择性门控或经闭式擦除。一条平行的研究线告诫:线性可解码的特征未必被因果地使用;我们的负向结果在推荐模型中展示了这种可探测与可转向的鸿沟,并识别出一个具体的替代位点。
+\textbf{The shared task-generic component (H1).} Stacking task means
+$\bar g_t$ reveals a dominant shared direction: the top left-singular vector
+of $[\bar g_1 \cdots \bar g_T]$ captures format-following and
+answer-emission signals common to all ICL tasks. It is the primary source of
+interference when vectors are added: with it, the median pairwise
+$|\cos(\bar g_s,\bar g_t)|$ is $0.34$; projecting out rank $r_0{=}1$ lowers
+this to $0.18$, and composition accuracy doubles ($0.25\to0.50$,
+Table~\ref{tab:ablation}). Removing too much ($r_0{\ge}8$) destroys the very
+directions steering needs---the curve is sharply non-monotone, which supports
+reading $U_0$ as a real, low-rank shared component rather than generic
+denoising.
 
-\section{Preliminaries}\label{sec:prelim}
-Let $\mathcal{I}$ be the item catalog. A tokenizer (RQ-VAE with $L{=}3$ codebooks of size 256) maps each item $i$ to a semantic ID $s_i = (t_{i,1}, t_{i,2}, t_{i,3})$. Given a user's interaction history $u = (i_1, \dots, i_n)$, TIGER's encoder consumes the flattened SID tokens of $u$ and the decoder generates the next item's tokens autoregressively. Writing $\theta$ for the (frozen) model parameters and $p_\theta$ for the distributions it defines,
+\section{\method}
+\subsection{Module 1: Mining the Skill Dictionary}
+\label{sec:mining}
+Fix a small set of injection layers $\mathcal L$ ($|\mathcal L|{=}2$;
+selection below). Per layer $\ell$: compute the shared component
+$U_0^{(\ell)}\in\R^{d\times r_0}$ by SVD of stacked task means; project it
+out of all differential activations,
+$\tilde G_t^{(\ell)}=(I-U_0^{(\ell)}U_0^{(\ell)\top})G_t^{(\ell)}$; and take
+the truncated SVD basis $U_t^{(\ell)}\in\R^{d\times r_{t\ell}}$ covering 90\%
+spectral energy (capped at rank 16), with anchor
+$\mu_t^{(\ell)}=$ mean of $\tilde G_t^{(\ell)}$. The dictionary entry for
+skill $t$ stacks layers block-diagonally:
+\[
+\mathbf U_t=\begin{bmatrix}U_t^{(\ell_1)} & 0\\[2pt] 0 &
+U_t^{(\ell_2)}\end{bmatrix}\in\R^{2d\times r_t},\qquad
+\boldsymbol\mu_t=\begin{bmatrix}\mu_t^{(\ell_1)}\\[2pt]
+\mu_t^{(\ell_2)}\end{bmatrix},
+\]
+so columns remain orthonormal and the group-sparse solver below applies
+unchanged, while coefficients stay layer-specific and the \emph{support} is
+shared across layers.
+
+\textbf{Layer selection.} A one-time causal scan over single layers, followed
+by a small grid over pairs using \emph{oracle} injection recovery on held-in
+tasks, selects $\mathcal L=\{12,16\}$ for Llama-3.1-8B. Two depths matter
+because task families peak at different layers (knowledge ${\sim}12$,
+linguistic ${\sim}16{-}18$); joint injection lifts mean oracle recovery from
+$0.44$ (best single layer, additive) to $0.76$ with no per-task tuning.
+
+\subsection{Module 2: Joint Group-Sparse Coding}
+\label{sec:coding}
+At test time a novel task $t^\star$ provides $k\le4$ examples. For each
+example $j$ we form $m{=}6$ (clean, corrupted) prompt pairs---shots are the
+other $k{-}1$ examples in resampled orders, corruption re-drawn---and average
+the differential activations into a denoised, stacked, deshared
+representation $z_j\in\R^{2d}$; $z=\frac1k\sum_j z_j$. Averaging over prompt
+resamplings is essential: it raises $\cos(z,\boldsymbol\mu_{t^\star})$ from
+${\sim}0.5$ to ${\sim}0.7{-}0.8$.
+
+We solve the group LASSO
 \begin{equation}
-\log p_\theta(i \mid u) \;=\; \textstyle\sum_{\ell=1}^{L} \log p_\theta\!\left(t_{i,\ell} \mid u,\, t_{i,<\ell}\right).
+\min_{c_1,\dots,c_T}\ \tfrac12\Big\|z-\sum_t \mathbf U_t c_t\Big\|_2^2
++\lambda\sum_t\sqrt{r_t}\,\|c_t\|_2
+\label{eq:glasso}
 \end{equation}
-Inference uses beam search constrained to the SID prefix trie of $\mathcal{I}$. The tokenizer is used without an extra disambiguation position, so a fraction of items share their SID with at least one other item ($8.0\%/12.9\%/4.7\%$ of items on Beauty/Sports/Toys). Colliding items are \emph{indistinguishable to the model}: their conditional scores---and therefore their marginals and penalties below---coincide exactly, so every method scores them identically; rankings break such ties by a fixed item order, and recall is measured on exact item identity, penalizing all methods equally. We follow the standard leave-one-out protocol (last item test, second-to-last validation) on Amazon Beauty, Sports, and Toys~\cite{mcauley2015amazon}, with 5-core filtering. We call the top-20\% of items by training interactions \emph{head} and the rest \emph{tail}; on Beauty the head holds 60.4\% of interactions. Our reproduced TIGER matches published accuracy (Test Recall@10 of $0.056/0.039/0.059$ on Beauty/Sports/Toys).
-%〔译〕设 I 为物品目录。一个 tokenizer(L=3 个大小为 256 的码本的 RQ-VAE)把每个物品 i 映射到语义 ID。给定用户交互历史 u,TIGER 编码器消费 u 的展平 SID token,解码器自回归生成下一物品 token。冻结参数 θ 下,log p(i|u) 等于各步条件对数概率之和。推理使用约束到 I 的 SID 前缀字典树的束搜索。tokenizer 未用额外消歧位,故一部分物品与至少一个其他物品共享 SID(Beauty/Sports/Toys 上占 8.0%/12.9%/4.7%)。碰撞物品对模型不可区分:其条件分数(及边际与惩罚)完全一致,所有方法对它们打分相同;排序按固定物品序破平,召回按精确物品身份度量,对所有方法一视同仁。我们遵循标准留一协议(末物品测试、倒数第二验证),用 5-core 过滤。按训练交互取前 20% 物品为头部、其余为尾部;Beauty 头部占 60.4% 交互。我们复现的 TIGER 匹配已发表精度(Beauty/Sports/Toys 测试 Recall@10 为 0.056/0.039/0.059)。
+by block coordinate descent; orthonormal blocks make each update an exact
+group soft-threshold, and the full solve takes milliseconds on CPU.
+$\lambda$ is set without any validation data by walking the path from
+$\lambda_{\max}$ downward with warm starts and keeping the best-fitting
+solution whose support size is at most $s_{\max}{=}5$. Outputs: support
+$S=\{t:\|c_t^*\|>0\}$, reconstruction
+$\Delta_{\text{rec}}=\sum_{t\in S}\mathbf U_t c_t^*$, and residual
+$\varepsilon=\|z-\Delta_{\text{rec}}\|/\|z\|$.
 
-Throughout the diagnosis we score candidates by \emph{exact} full-catalog ranking---computing $\log p(i \mid u)$ for every $i \in \mathcal{I}$ by teacher forcing---which Section~\ref{sec:notsearch} shows coincides with practical trie-beam decoding.
-%〔译〕整个诊断过程中,我们用精确的全目录排序为候选打分——对每个 i∈I 用教师强制计算 log p(i|u)——第 4.2 节表明它与实用的字典树束搜索一致。
-
-\section{Diagnosis: Where Does the Bias Live?}\label{sec:diagnosis}
-Table~\ref{tab:diagnosis} summarizes the outcome of this section.
-%〔译〕表 1 概括了本节的结论。
-
-\subsection{Not a Steerable Linear Direction}\label{sec:notrep}
-\paragraph{Popularity is linearly decodable}
-We collect decoder residual-stream states under teacher forcing, at each layer and SID position, labeled by whether the target item is head or tail, with class-balanced sampling and user-disjoint train/test splits. To avoid confounding by the item's own tokens, we focus on decode step~0, \emph{before} any target token has been emitted: the state then reflects only the history-conditioned prediction. Logistic probes reach AUC $0.70$ at step~0 (and up to $0.74$ at later steps) across all four decoder layers---popularity is linearly present.
-%〔译〕流行度是线性可解码的。我们在教师强制下、逐层逐 SID 位置收集解码器残差流状态,按目标物品属头部还是尾部标注,采用类平衡采样与用户不相交的训练/测试划分。为避免被物品自身 token 混淆,我们聚焦解码第 0 步——任何目标 token 发出之前——此时状态只反映历史条件下的预测。逻辑回归探针在第 0 步达 AUC 0.70(后续步骤高至 0.74),覆盖全部四个解码器层——流行度线性存在。
-
-\paragraph{But it cannot be steered away}
-We then attempt every standard recipe for removing a linear concept at inference, hooking the decoder layer with the strongest probe: direction extraction by contrastive mean difference~\cite{rimsky2024caa}, probe weights, or the top principal component of contrast pairs~\cite{zou2023repe}; intervention by norm-preserving subtraction $\tilde h = \lVert h\rVert\,\widehat{(h/\lVert h\rVert - \alpha v)}$, directional ablation $h - \alpha (h^{\!\top} v) v$~\cite{arditi2024refusal}, and one-sided clamped ablation $h - \alpha\,\max(0, h^{\!\top} v)\, v$; strengths $\alpha \in [0.1, 2]$; multiple layers. \emph{None} of the $\sim$20 configurations raises tail Recall@10 above baseline (best: $0.0060$ vs.\ baseline $0.0072$ on Beauty, $n{=}3000$), while aggressive subtraction collapses coverage---the intervention corrupts the representation rather than de-biasing it. Going beyond rank-1 edits, we also apply LEACE~\cite{belrose2023leace}, the closed-form \emph{minimal-distortion affine eraser} that provably removes all linearly decodable popularity information at the hooked layer: tail Recall@10 is statistically unchanged ($0.0045 \to 0.0054$ on 2000 users, a one-hit-scale difference; overall $0.0425 \to 0.0440$). Even optimal whole-subspace linear erasure does not recover the tail.
-%〔译〕但它无法被转向移除。我们随后尝试每一种在推理时移除线性概念的标准配方,挂钩探针最强的解码器层:方向由对比均值差、探针权重或对比对的首主成分提取;干预用保范减法、方向消融和单侧钳位消融;强度 α∈[0.1,2];多个层。约 20 种配置无一把尾部 Recall@10 抬过基线(最佳 0.0060 对基线 0.0072,Beauty,n=3000),而激进减法会坍塌覆盖率——干预破坏了表征而非去偏。超越秩 1 编辑,我们还应用 LEACE 这一可证明移除挂钩层所有线性可解码流行度信息的闭式最小失真仿射擦除器:尾部 Recall@10 在统计上不变(2000 用户上 0.0045→0.0054,量级为一次命中;整体 0.0425→0.0440)。即使最优的整子空间线性擦除也无法恢复尾部。
-The scope of this ruling: it covers the standard linear toolbox (contrast/probe/PCA directions; addition, subtraction, projection, clamping, closed-form erasure); nonlinear, composed, or end-to-end-optimized interventions remain untested, so it should not be read as ``not representational in any causal sense.''
-%〔译〕该排除项的范围:它覆盖标准线性工具箱(对比/探针/PCA 方向;加、减、投影、钳位、闭式擦除);非线性、复合或端到端优化的干预仍未检验,故不应被读作“在任何因果意义上都非表征性”。
-
-\paragraph{Causal test}
-Following the symmetric-intervention logic of \citet{arditi2024refusal}, if $v_{\text{pop}}$ were the causal popularity knob, then adding $+\alpha v_{\text{pop}}$ should make decoded outputs \emph{more} popular and $-\alpha v_{\text{pop}}$ \emph{less}. Measuring the mean log-popularity of top-10 items on Beauty ($n{=}1500$): baseline $4.02$; add $+2v$: $4.03$ ($+0.009$); add $-2v$: $4.02$ ($-0.003$); ablate: $4.00$ ($-0.020$). Against a head--tail log-popularity gap of ${\approx}1.7$, the probed direction moves outputs by about \emph{one percent} of the gap. (Only the norm-preserving subtraction at $\alpha{=}2$ moves it substantially, $-0.85$---but that setting destroys recall, indicating representation corruption rather than concept removal.) The direction is decodable but causally inert for popularity: a concrete instance of the probing-vs-intervention gap~\cite{elazar2021amnesic,geiger2021causal,tan2024analysing}.
-%〔译〕因果检验。沿用对称干预逻辑:若 v_pop 是因果的流行度旋钮,则加 +αv_pop 应使解码输出更热门、−αv_pop 更冷门。测量 Beauty 上 top-10 物品的平均对数流行度(n=1500):基线 4.02;加 +2v:4.03(+0.009);加 −2v:4.02(−0.003);消融:4.00(−0.020)。相对约 1.7 的头尾对数流行度差距,探针方向只把输出移动了差距的约百分之一。(只有 α=2 的保范减法能大幅移动它,−0.85,但该设置摧毁召回,说明是表征损坏而非概念移除。)该方向可解码但对流行度因果惰性:这是探测与干预鸿沟的一个具体实例。
-
-\subsection{Not the Search}\label{sec:notsearch}
-Beam pruning is often blamed for coverage loss in generative retrieval~\cite{simgr2026}. Here it is not the culprit: with $L{=}3$ SID tokens over a $\sim$12--18k catalog, trie-beam search is nearly exhaustive. On 2000 Beauty users, exact full-catalog ranking gives Recall@10 $0.0505$ (tail $0.0061$); beam width 10 gives $0.0500$ with $0.80$ top-10 overlap against exact; beam width 20 gives \emph{identical} recall ($0.0505$, tail $0.0061$) with $0.91$ overlap. This is a regime statement---short fixed-length IDs over moderate catalogs make search easy; longer IDs or million-scale catalogs may differ. Within it, two consequences follow: (i)~the tail is lost \emph{before} search---in the probabilities themselves; (ii)~our exact-scoring evaluation faithfully represents deployed trie-beam decoding, so any correction validated under exact scoring transfers to the practical decoder at unchanged serving cost.
-%〔译〕生成式检索的覆盖率损失常被归咎于束剪枝。这里它不是元凶:在约 12–18k 目录上用 L=3 的 SID token,字典树束搜索几乎穷举。2000 个 Beauty 用户上,精确全目录排序给出 Recall@10 0.0505(尾部 0.0061);束宽 10 给出 0.0500、对精确的 top-10 重叠 0.80;束宽 20 给出相同召回(0.0505,尾部 0.0061)、重叠 0.91。这是一个机制性陈述——短定长 ID 加中等目录使搜索容易;更长 ID 或百万级目录可能不同。在此机制内有两个推论:(i) 尾部丢失于搜索之前——在概率本身之中;(ii) 我们的精确打分评测忠实代表部署的字典树束解码,故任何在精确打分下验证的校正都以不变的服务成本迁移到实用解码器。
-
-\subsection{Not the Tokenizer}\label{sec:nottok}
-LETTER~\cite{wang2024letter} shows RQ-VAE codebooks \emph{can} concentrate popular items onto dense codes, which would place the bias upstream of the decoder. We test this: define an item's \emph{code density} as its mean log code-frequency across positions. Across Beauty/Sports/Toys, Spearman correlation between popularity and code density is $0.05/0.05/0.11$---negligible. Per-position code-usage skew is moderate (usage Gini $0.34/0.25/0.12$ on Beauty) and popularity is well mixed within codes (within-code entropy $0.86$--$0.91$; the top-10\% of codes hold only $16$--$33\%$ of popularity mass). SID collisions (964/2371/559 items) are not popularity-biased ($\rho \le 0.04$), and---most tellingly---the partial correlation between popularity and the decoder marginal, controlling for code density, is $0.71/0.70/0.69$: indistinguishable from the raw correlation. By these measures the bias \emph{bypasses} the tokenizer (summarized in Table~\ref{tab:diagnosis}). This may appear to conflict with Ghost~\cite{yin2026echoes}, which attributes GR popularity bias partly to tokenization and retrains tokenizer and objective. Our partial-correlation test is the instrument that arbitrates: where tokenization \emph{does} concentrate popularity, controlling for code density would visibly deflate the popularity--marginal link; here it does not ($0.71 \to 0.71$). The accounts describe different pipelines, and the interventions occupy complementary loci (retraining vs.\ frozen-model decoding); the diagnostic tells a practitioner which lever applies.
-%〔译〕不是 tokenizer。LETTER 表明 RQ-VAE 码本可能把热门物品集中到密集编码上,这会把偏差置于解码器上游。我们检验之:定义物品的编码密度为其各位置对数编码频率的均值。在三数据集上流行度与编码密度的 Spearman 相关为 0.05/0.05/0.11——可忽略。逐位置编码使用偏斜中等(Beauty 上 Gini 0.34/0.25/0.12),流行度在编码内混合良好(编码内熵 0.86–0.91;前 10% 编码只占 16–33% 流行度质量)。SID 碰撞(964/2371/559 个物品)无流行度偏差(ρ≤0.04),且最有力的是——控制编码密度后流行度与解码器边际的偏相关为 0.71/0.70/0.69,与原相关无异。按这些度量偏差绕过了 tokenizer(见表 1)。这似乎与 Ghost 冲突,后者把 GR 流行度偏差部分归因于 token 化并重训 tokenizer 与目标。我们的偏相关检验正是仲裁工具:若 token 化确实集中流行度,控制编码密度会明显削弱流行度-边际关联;这里它没有(0.71→0.71)。两种说法描述不同的管线,干预占据互补位点(重训 vs 冻结模型解码);诊断告诉实践者该用哪个杠杆。
-
-\subsection{What Remains: the Decoding Distribution}\label{sec:isdist}
-Define the model's marginal preference $\hat m_M(i) = \frac{1}{M}\sum_{k=1}^{M} \log p_\theta(i \mid u_k)$ over $M{=}512$ sampled training histories: an unbiased estimator of $\mathbb{E}_u[\log p_\theta(i \mid u)]$ with standard error $\sigma_i M^{-1/2}$. It tracks item popularity closely---Spearman $\rho$ of $0.72$, $0.70$, and $0.69$ on Beauty, Sports, and Toys respectively (Figure~\ref{fig:marginal}). Consistent with the $M^{-1/2}$ rate, the estimate is insensitive to $M$: on Beauty, $M \in \{32, 128, 512\}$ gives $\rho$ of $0.711$, $0.709$, and $0.716$, and the downstream results at $\beta{=}0.75$ are flat (tail Recall@10 of $0.0108$, $0.0111$, $0.0108$; coverage $0.141$ throughout). A few dozen histories suffice, bounding re-estimation cost under catalog drift. We average in log space (a geometric-mean marginal); the arithmetic alternative $\log \mathbb{E}_u[p_\theta(i \mid u)]$ correlates strongly ($\rho = 0.90/0.93/0.79$) but is slightly worse on tail recall at matched strength ($0.0079$ vs.\ $0.0108$, Beauty, $\beta{=}0.75$). The decoder, trained by likelihood on interaction data where head items appear $6\times$ more often, has absorbed the popularity skew into its output distribution---not mediated by any single residual direction we could find, but directly measurable at the interface where tokens become items. We are explicit about the epistemic status: Sections~\ref{sec:notrep}--\ref{sec:nottok} eliminate the tested alternatives, and the success of the marginal correction (Section~\ref{sec:experiments}) corroborates the distributional account; together these support it as the best available explanation rather than a uniquely proven cause.
-%〔译〕剩下的:解码分布。在 M=512 个采样训练历史上定义模型边际偏好 m̂_M(i),是 E_u[log p(i|u)] 的无偏估计,标准误 σ_i·M^(−1/2)。它紧密跟踪流行度——Beauty/Sports/Toys 上 Spearman ρ 为 0.72/0.70/0.69(图 2)。与 M^(−1/2) 速率一致,估计对 M 不敏感:Beauty 上 M∈{32,128,512} 给出 ρ 0.711/0.709/0.716,β=0.75 下游结果平稳(尾部 Recall@10 0.0108/0.0111/0.0108;覆盖率始终 0.141)。几十条历史即足,限定了目录漂移下的重估成本。我们在对数空间取平均(几何均值边际);算术版本相关很强(ρ=0.90/0.93/0.79)但在同强度下尾部召回略差(Beauty β=0.75 时 0.0079 对 0.0108)。解码器由交互数据(头部物品出现约 6 倍)的似然训练,把流行度偏斜吸收进其输出分布——不由我们能找到的任何单一残差方向中介,却在 token 变为物品的接口处直接可测。我们明确其认识论地位:第 4.1–4.3 节排除了受检替代项,而边际校正的成功佐证了分布式解释;二者共同支持它是当前最佳解释而非唯一被证成因。
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig4_marginal_vs_popularity.png}
-  \caption{The decoder's marginal score tracks popularity ($\rho \approx 0.70$) on all three datasets. Each hexagonal cell aggregates items; darker red means more items fall in that region, so the red band shows where the bulk of the catalog lies. Dashed line: linear trend.}
-  \label{fig:marginal}
-\end{figure}
-
-\begin{table*}[t]
-\caption{The diagnosis at a glance (per-dataset values ordered Beauty\,/\,Sports\,/\,Toys). Only the decoding marginal survives.}
-\label{tab:diagnosis}
-\centering
-\footnotesize
-\renewcommand{\arraystretch}{1.25}
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.105\textwidth}L{0.195\textwidth}L{0.235\textwidth}L{0.26\textwidth}L{0.105\textwidth}@{}}
-\toprule
-\textbf{Candidate locus} & \textbf{If it were the locus\ldots} & \textbf{Intervention / measurement} & \textbf{Key evidence} & \textbf{Verdict} \\
-\midrule
-Representation\newline (linear) &
-Removing the popularity direction recovers tail recall. &
-Step-0 user-disjoint probes; $\sim$20 steering configs (\{CAA, probe, PCA\} $\times$ \{subtract, ablate, clamp\}, $\alpha \in [0.1, 2]$); LEACE erasure; symmetric $\pm v$ causal test. &
-Probe AUC $0.70$, yet best tail $0.0060$ vs.\ base $0.0072$. LEACE: $0.0045 \to 0.0054$ (noise). $\pm 2v$ moves output popularity $+0.009$ / $-0.003$ vs.\ a head--tail gap of $1.7$ (${\sim}1\%$). &
-Ruled out (linear family; Sec.~\ref{sec:notrep}) \\
-\arrayrulecolor{RuleSoft}\midrule\arrayrulecolor{black}
-Search\newline (beam pruning) &
-Exhaustive scoring recovers beam-pruned tail items. &
-Trie-beam ($B{=}10, 20$) vs.\ exact full-catalog ranking on the same users. &
-$B{=}20$: identical R@10 ($0.0505$) and tail ($0.0061$). Top-10 overlap $0.91$ ($0.80$ at $B{=}10$). &
-Ruled out in this regime (Sec.~\ref{sec:notsearch}) \\
-\arrayrulecolor{RuleSoft}\midrule\arrayrulecolor{black}
-Tokenizer\newline (code assignment) &
-Popular items occupy denser/easier codes. &
-Code density vs.\ popularity; per-position usage Gini; within-code popularity entropy; collision bias; partial correlation. &
-$\rho(\text{pop}, \text{density}) = 0.05\,/\,0.05\,/\,0.11$. Within-code entropy $0.86$--$0.91$. Collisions $\rho \le 0.04$. Partial $\rho(\text{pop}, \hat m \mid \text{density}) = 0.71\,/\,0.70\,/\,0.69$: unchanged. &
-Ruled out (Sec.~\ref{sec:nottok}) \\
-\arrayrulecolor{RuleSoft}\midrule\arrayrulecolor{black}
-\textbf{Decoding}\newline\textbf{marginal} &
-The user-independent score component tracks popularity; subtracting it recovers the tail. &
-Measure $\hat m$ ($M{=}512$; stable from $M{=}32$); subtract per Eq.~\eqref{eq:popcontrast}. &
-$\rho(\hat m, \text{pop}) = 0.72\,/\,0.70\,/\,0.69$. Tail R@10 $+10$--$144\%$, coverage $+7$--$47\%$ at held overall recall (Table~\ref{tab:main}). &
-\textbf{Supported} (Secs.~\ref{sec:isdist}, \ref{sec:experiments}) \\
-\bottomrule
-\end{tabular*}
-\end{table*}
-
-\section{\method{}}\label{sec:method}
-The diagnosis points to a concrete lever. Writing $\mathcal{U}$ for the user-context distribution, define the model's \emph{log-geometric marginal} and the associated reference measure
-\begin{equation}\label{eq:marginal}
-  m(i) \;=\; \mathbb{E}_{u \sim \mathcal{U}}\!\left[\log p_\theta(i \mid u)\right],
-  \qquad
-  q(i) \;\propto\; e^{m(i)}:
+\subsection{Module 3: Query-Adaptive Hybrid Injection}
+\label{sec:injection}
+The recovered support is reliably semantic, but $\Delta_{\text{rec}}$ alone
+under-steers: a held-out task's vector keeps $40{-}60\%$ of its energy
+outside all other skills' subspaces, and that out-of-span component is
+precisely what distinguishes, \eg, French from Spanish. \method{} therefore
+injects the \emph{demonstration direction} and uses the dictionary for
+\emph{structure}: with support weights
+$w_t=\|c_t^*\|/\sum_{s\in S}\|c_s^*\|$, anchor
+$\boldsymbol\mu_S=\sum_{t\in S}w_t\boldsymbol\mu_t$, subspace projector
+$P_S$ (QR of concatenated support bases, per layer), and $z$ rescaled to the
+support-anchor norm, the last-token state at each $\ell\in\mathcal L$ is
+updated as
+\begin{equation}
+\begin{aligned}
+h &\leftarrow h+\alpha(h)\big[\gamma\,\Delta^{(\ell)}
++P_S^{(\ell)}\big(\mu_S^{(\ell)}-h\big)\big],\\
+\alpha(h)&=\min\!\Big(\alpha_{\max},\,
+\beta\,\|(I-P_S^{(\ell)})(h-\mu_S^{(\ell)})\|/\|h\|\Big),
+\end{aligned}
+\label{eq:inject}
 \end{equation}
-$q$ is the model's ``typical'' preference over items, independent of any particular user---precisely the object Section~\ref{sec:isdist} showed carries the bias. \method{} subtracts it:
-\begin{equation}\label{eq:popcontrast}
-  s_\beta(i \mid u) \;=\; \log p_\theta(i \mid u) \;-\; \beta\, \bar m(i),
-\end{equation}
-where $\bar m$ is the estimate $\hat m_M$ standardized over the catalog (zero mean, unit variance, making $\beta$ comparable across datasets) and $\beta \ge 0$ controls correction strength. Standardization is affine: the mean shift is constant across items and never affects rankings, and the scaling reparameterizes the family as $\log p_\theta(i \mid u) - \beta' m(i)$ with $\beta' = \beta/\sigma_m$, where $\sigma_m$ is the catalog standard deviation of $\hat m$ ($2.47/2.37/2.40$ on Beauty/Sports/Toys). The propositions below are stated for the unstandardized family and transfer verbatim under this rescaling. Intuitively, Eq.~\eqref{eq:popcontrast} asks how much \emph{this} user's context elevates item $i$ above the model's generic preference for $i$; formally, it is a pointwise-mutual-information re-scoring:
-%〔译〕诊断指向一个具体杠杆。记 U 为用户上下文分布,定义模型的对数几何边际 m(i)=E_u[log p(i|u)] 及关联参考测度 q(i)∝e^{m(i)}:q 是模型对物品的“典型”偏好,与任何特定用户无关——正是第 4.4 节所示承载偏差的对象。PopContrast 把它减去:s_β(i|u)=log p(i|u)−β·m̄(i),其中 m̄ 是在目录上标准化(零均值单位方差,使 β 跨数据集可比)的估计 m̂_M,β≥0 控制校正强度。标准化是仿射的:均值平移对各物品为常数、从不影响排序,缩放把该族重参数化为 log p(i|u)−β'·m(i),其中 β'=β/σ_m,σ_m 为 m̂ 的目录标准差(Beauty/Sports/Toys 上 2.47/2.37/2.40)。下述命题针对未标准化族陈述,在此重缩放下逐字迁移。直观上,式(2)问的是:相对模型对 i 的通用偏好,这位用户的上下文把物品 i 抬高了多少;形式上,它是一次逐点互信息重打分:
+with $\Delta$ the (rescaled) $z$ and $(\gamma,\beta,\alpha_{\max})=(1,2,1)$
+fixed once on three held-in tasks and frozen for all experiments and models.
+Intuition: the further $h$ lies from the synthesized task manifold, the harder
+it is pulled; states already on-manifold are barely touched. Setting
+$\Delta=\Delta_{\text{rec}}$ instead (pure synthesis) is the key ablation: it
+isolates how much of a new task is dictionary-expressible
+(Table~\ref{tab:ablation}).
 
-\begin{proposition}[Popularity-neutral relevance at $\beta'{=}1$]\label{prop:pmi}
-Ranking by $\log p_\theta(i \mid u) - m(i)$ (\ie{} $\beta' = 1$, or $\beta = \sigma_m$ on the reported scale) is equivalent to ranking by $\operatorname{PMI}_q(i;u) = \log \frac{p_\theta(i\mid u)}{q(i)}$. In particular, any score component that is constant across users---the locus identified in Section~\ref{sec:isdist}---cancels exactly: if $\log p_\theta(i \mid u) = f(i,u) + b(i)$ with $b$ user-independent, then $b$ enters $m$ additively and is removed.
+\section{Theoretical Analysis}
+\label{sec:theory}
+Define block coherence
+$\mu_B=\max_{s\ne t}\sigma_{\max}(\mathbf U_s^\top\mathbf U_t)$, the largest
+principal-angle cosine between distinct skill subspaces.
+
+\begin{proposition}[Support recovery]\label{prop:support}
+Suppose $z=\sum_{t\in S_0}\mathbf U_t c_t^0+e$ with $|S_0|=k_0$ and
+$\|e\|\le\epsilon$. If $k_0<\tfrac12(\mu_B^{-1}+1)$ and $\lambda$ is chosen
+appropriately for $\epsilon$, the group-LASSO solution satisfies
+$\hat S\subseteq S_0$ with coefficient error $O(\epsilon)$.
 \end{proposition}
-\begin{proof}
-$\log p_\theta(i\mid u) - m(i) = \log\frac{p_\theta(i\mid u)}{q(i)} + \log Z_q$ with $Z_q$ independent of $i$; the cancellation claim is immediate from linearity of the expectation in Eq.~\eqref{eq:marginal}.
-\end{proof}
+The proof instantiates block-sparse recovery results for unions of
+subspaces~\cite{eldar2009robust,eldar2010block} and group-LASSO
+consistency~\cite{yuan2006model}; we contribute the \emph{verification}:
+common-component removal is what brings measured coherence into a workable
+regime (median pairwise $\mu_B$ vs.\ $r_0$; Table~\ref{tab:mub}), and the
+condition's failure is diagnostic---the largest coherences occur inside the
+translation family ($\mu_B$ up to $0.95$), exactly where we observe correct
+\emph{family} recovery but wrong-member steering (\S\ref{sec:analysis}).
 
-Proposition~\ref{prop:pmi} is why the \emph{model's} marginal, rather than the empirical popularity $\log(1{+}\mathrm{count})$, is the right quantity to subtract: what corrupts the ranking is the user-independent component of the \emph{model's own} scores, which correlates with, but is not identical to, raw popularity ($\rho \approx 0.70$, not $1$); Section~\ref{sec:naive} confirms the distinction empirically. Head items, whose scores are inflated for every user, are discounted by exactly their generic inflation; tail items that a specific context genuinely supports are promoted.
-%〔译〕命题 5.1 说明了为何应减去模型的边际而非经验流行度 log(1+count):破坏排序的是模型自身分数中与用户无关的成分,它与原始流行度相关但不相同(ρ≈0.70 而非 1);第 6.4 节实证确认此区分。对每个用户分数都被抬高的头部物品,恰按其通用抬升被折扣;被特定上下文真正支持的尾部物品则被提升。
-
-The strength knob also has an exact reading: the family linearly interpolates between raw likelihood ranking ($\beta'{=}0$) and the popularity-neutral PMI ranking of Proposition~\ref{prop:pmi} ($\beta'{=}1$). Since $\sigma_m \approx 2.4$, our entire reported range $\beta \le 2$ corresponds to $\beta' \le 0.85$---\emph{partial} neutralization, never overshooting the PMI point. Equivalently, $s_\beta$ is the Bayes ranking under a test-time item prior tilted by $e^{-\beta' m(i)}$---the label-shift / logit-adjustment view~\cite{menon2021logit} with the model's own marginal in place of the class prior.
-%〔译〕强度旋钮也有精确读法:该族在原始似然排序(β'=0)与命题 5.1 的流行度中性 PMI 排序(β'=1)之间线性插值。由于 σ_m≈2.4,我们报告的整个 β≤2 范围对应 β'≤0.85——部分中和,从不越过 PMI 点。等价地,s_β 是在按 e^{−β'·m(i)} 倾斜的测试期物品先验下的贝叶斯排序——即以模型自身边际替代类先验的标签偏移/logit 调整视角。
-
-The correction inherits its practical profile from the diagnosis. It is self-contained: $\hat m$ comes from the model itself, with no auxiliary training and no second model. What it subtracts is the empirically located bias of Section~\ref{sec:isdist} rather than a hand-chosen popularity feature, and Section~\ref{sec:naive} shows that this distinction matters in practice. Deployment is a single $|\mathcal{I}|$-vector computed once offline ($M$ forward passes over the catalog); at serving time, Eq.~\eqref{eq:popcontrast} is a per-candidate scalar subtraction inside standard trie-beam decoding, whose fidelity to exact ranking Section~\ref{sec:notsearch} established, so serving cost is unchanged.
-%〔译〕该校正从诊断继承其实用特性。它自包含:m̂ 来自模型自身,无辅助训练、无第二个模型。它减去的是第 4.4 节经验定位的偏差而非手选的流行度特征,第 6.4 节表明此区分在实践中重要。部署即一个离线计算一次的 |I| 维向量(M 次全目录前向);服务时,式(2) 只是标准字典树束解码内的逐候选标量减法,其对精确排序的保真度已由第 4.2 节确立,故服务成本不变。
-
-\paragraph{Placement inside trie-beam decoding}
-Because semantic IDs are fixed-length, every beam hypothesis completes at step $L$; the marginal penalty is attached at these \emph{complete-item} states (a leaf-level lookup), after which the beam's top-$k$ items are re-ranked by Eq.~\eqref{eq:popcontrast}. No prefix-level approximation of $\hat m$ is needed during beam expansion, and the placement is exact rather than heuristic:
-%〔译〕在字典树束解码内的放置。由于语义 ID 定长,每个束假设在第 L 步完成;边际惩罚挂在这些完整物品状态上(叶级查表),之后束的 top-k 物品按式(2)重排。束展开期间无需对 m̂ 做任何前缀级近似,且该放置是精确而非启发式的:
-\begin{proposition}[Exactness under trie decoding]\label{prop:trie}
-Under the trie constraint with fixed-length IDs, the final-step token of any complete hypothesis identifies a unique \emph{token sequence}; items sharing that sequence (Section~\ref{sec:prelim}) carry identical conditionals and identical marginals, so the leaf penalty is well defined at the sequence level. Adding $-\beta \bar m(i)$ at the leaf therefore changes every complete-sequence score by exactly its penalty, and whenever the beam's complete-hypothesis set matches that of exhaustive search, beam decoding realizes the re-ranking of Eq.~\eqref{eq:popcontrast} exactly, up to the fixed tie order among colliding items. Section~\ref{sec:beamcorr} measures how well the premise holds under the \emph{corrected} ranking.
+\begin{proposition}[Error transfer]\label{prop:transfer}
+If task performance is locally linear in the injected state,
+$m(h)=w^\top h+O(\|h\|_{loc}^2)$, then
+$|m(h+\Delta)-m(h+\Delta^{or})|\le\|w\|\,(\varepsilon\|z\|+\delta_{est})$,
+where $\delta_{est}$ is the finite-sample subspace estimation error controlled
+by Davis--Kahan at rate $O(\sigma/(\sqrt n\,\mathrm{gap}))$.
 \end{proposition}
+Empirically $\varepsilon$ anti-correlates with recovery (Fig.~\ref{fig:eps}),
+grounding its use as a deployment-time fallback trigger.
 
-\paragraph{What we tried and rejected}
-A per-token adaptive gate (scaling $\beta$ by each token's contextual lift over its marginal) \emph{fails}: gating a negative log-marginal re-introduces a popularity boost on exactly the exempted items. We report this negative result; distribution-level gating is future work, and static $\beta$ already admits near-Pareto operating points (Section~\ref{sec:main}).
-%〔译〕我们尝试并否决的:逐 token 自适应门控(按每个 token 相对其边际的上下文抬升缩放 β)失败:对负对数边际做门控,恰在被豁免的物品上重新引入流行度增益。我们如实报告此负向结果;分布级门控是未来工作,而静态 β 已提供近帕累托的工作点(第 6.1 节)。
+\section{Experiments}
+\label{sec:exp}
+\textbf{Setup.} 32 tasks from the function-vectors
+benchmark~\cite{todd2024function} across five families; per task, 50 held-out
+evaluation queries disjoint from dictionary and demonstration pools; 5 seeds
+for demonstration sampling. Main model Llama-3.1-8B-Instruct; cross-model
+validation on Qwen3-4B and Llama-3.2-3B. Metric: strict first-words exact
+match (case-sensitive for compound tasks). Recovery
+$\rho=(acc_{\text{syn}}-acc_{\text{zs}})/(acc_{\text{or}}-acc_{\text{zs}})$
+against each task's own-subspace oracle injection; tasks with oracle-zs gap
+$<5$pts are excluded from $\rho$ aggregation and reported separately. A
+single RTX~3090 suffices for the entire study (${\sim}40$ GPU-hours).
 
-\section{Experiments}\label{sec:experiments}
+\subsection{E1: Unseen-Task Synthesis (Leave-One-Task-Out)}
+\label{sec:e1}
+For each held-out task the dictionary (including $U_0$) is rebuilt from the
+remaining 31 tasks. With $k{=}4$ examples, \method{} attains median
+$\rho=\mathbf{0.86}$; 70\% of the 27 valid tasks exceed $\rho{=}0.6$
+(Fig.~\ref{fig:e1}). Median $\rho$ is $0.37$ at $k{=}1$ and already $0.89$ at
+$k{=}2$. By family (k=4): linguistic $1.01$, selection $0.93$, knowledge
+$0.84$, algorithmic $0.65$, translation $0.43$. Baselines: naive anchor
+averaging $\rho=0.00$; raw demonstration vector without the dictionary
+(``$z$-only'') trails \method{} by $3.9$pts mean accuracy at $k{=}4$; pure
+reconstruction trails by $16.8$pts, quantifying the irreducible task-specific
+component.
 
-\subsection{Setup}
-\textbf{Data and backbone.} Amazon Beauty (22{,}363 users / 12{,}101 items), Sports (35{,}598 / 18{,}357), Toys (19{,}412 / 11{,}924), 5-core, leave-one-out; TIGER reproduced at published accuracy (Section~\ref{sec:prelim}); the backbone is \emph{frozen} in all experiments.
-%〔译〕数据与骨干。Amazon Beauty(22363 用户/12101 物品)、Sports(35598/18357)、Toys(19412/11924),5-core、留一;TIGER 复现到已发表精度(第 3 节);所有实验中骨干均冻结。
-\textbf{Metrics.} Recall@10 and NDCG@10 overall; Recall@10 on head and tail user segments; Coverage@10 (fraction of catalog appearing in any top-10); normalized recommendation entropy and Gini as concentration measures. We evaluate 5000 random test users per dataset by exact full-catalog ranking (${=}$ trie-beam, Section~\ref{sec:notsearch}); $\hat m$ uses $M{=}512$ held-out training histories.
-%〔译〕指标。整体 Recall@10 与 NDCG@10;头/尾用户段的 Recall@10;Coverage@10(出现在任一 top-10 中的目录比例);作为集中度度量的归一化推荐熵与 Gini。每数据集用精确全目录排序(=字典树束搜索)评测 5000 个随机测试用户;m̂ 用 M=512 条留出训练历史。
-\textbf{Baselines.} (a)~vanilla TIGER; (b)~\emph{naive} discount, replacing $\bar m$ in Eq.~\eqref{eq:popcontrast} with standardized $\log(1+\text{count})$---the ``obvious'' de-biasing; (c)~\emph{rank discount}, subtracting the standardized popularity-rank percentile (a nonparametric prior); (d)~\emph{$\varepsilon$-exploration}, replacing 3 of 10 slots with uniform random items (a coverage-gaming control); (e)~\emph{MMR re-ranking} over sentence-T5 item embeddings (the standard intra-list diversifier; a control for ``is this just diversification?''); (f)~\emph{calibrated quota re-ranking} in the spirit of \citet{steck2018calibrated}: each user's top-10 is refilled from the top-200 candidates to match the tail share of their own history; (g)~\emph{group-marginal}, the quintile-coarsened variant of Eq.~\eqref{eq:popcontrast} (Section~\ref{sec:granularity}); (h)~item-level logit fusion with an external text-free SASRec, the transferable core of D$^3$~\cite{bao2024d3} (its other component, removing length normalization, is void here since SIDs are fixed-length); (i)~representation steering (Section~\ref{sec:notrep}), already ruled out.
-%〔译〕基线。(a) 原始 TIGER;(b) 朴素折扣,把式(2)中 m̄ 换成标准化 log(1+count)——“显然的”去偏;(c) 排名折扣,减去标准化流行度排名百分位(非参先验);(d) ε-探索,把 10 个槽中的 3 个换成均匀随机物品(覆盖率刷分对照);(e) 基于 sentence-T5 物品嵌入的 MMR 重排(标准列表内多样化器;用于对照“这只是多样化吗”);(f) Steck 精神的校准配额重排:每用户 top-10 从 top-200 候选回填以匹配其自身历史的尾部占比;(g) 组边际,式(2)的五分位粗化版(第 6.5 节);(h) 与外部无文本 SASRec 的物品级 logit 融合,即 D³ 的可迁移核心(其另一部分移除长度归一在此无效,因 SID 定长);(i) 表征转向(第 4.1 节),已被排除。
-\textbf{Reproducibility.} TIGER: 4+4-layer T5 ($d_{\text{model}}{=}128$, vocab 769), Adam $10^{-4}$, early stop on validation R@10; RQ-VAE: $3 \times 256$ codes; SASRec: 2 blocks; seed 0, one RTX~3090; $\hat m$: $M{=}512$. Full configs in the released code.
-%〔译〕可复现性。TIGER:4+4 层 T5(d_model=128,词表 769),Adam 1e-4,按验证 R@10 早停;RQ-VAE:3×256 编码;SASRec:2 块;种子 0,单张 RTX 3090;m̂:M=512。完整配置见发布代码。
-\textbf{Choosing $\beta$.} We report the full sweep (Table~\ref{tab:main}, Figure~\ref{fig:pareto}); the shaded rows mark the sweep's own near-free points (largest $\beta$ with overall R@10 $\ge$ baseline) and are \emph{descriptive}, not tuned claims. Our deployment recommendation is a single \emph{pre-registered} strength, involving no selection at all: uniform $\beta{=}0.5$ gives overall $-2/+4/+1\%$ with tail $+19/+97/+36\%$, and $\beta{=}0.75$ trades ${\le}5\%$ overall for tail $+50/+144/+45\%$. We also tested strict validation-based selection (apply the rule on 2000 held-out validation users, evaluate once on test): it chooses $\beta = 0.5/0/0$ on Beauty/Sports/Toys---abstaining on two datasets---precisely because the overall-recall changes it thresholds on are at noise level; conservative deployments may prefer this abstaining behavior, at the cost of forgoing the tail gains.
-%〔译〕β 的选择。我们报告完整扫描(表 2、图 3);阴影行标出扫描自身的近免费点(整体 R@10≥基线的最大 β),它们是描述性的、非调参主张。我们的部署建议是单一预注册强度,完全不涉及选择:统一 β=0.5 给出整体 −2/+4/+1%、尾部 +19/+97/+36%,β=0.75 以≤5% 整体换取尾部 +50/+144/+45%。我们也测试了严格的基于验证的选择(在 2000 个留出验证用户上应用规则,在测试上评一次):它在 Beauty/Sports/Toys 上选 0.5/0/0——在两个数据集上弃权——恰因它所阈值的整体召回变化处于噪声水平;保守部署可能偏好这种弃权行为,代价是放弃尾部增益。
+\subsection{E2: Compound Tasks and Interpretability}
+Ten compound tasks chain two dictionary skills (\eg\
+\texttt{singular-plural}$\circ$\texttt{capitalize}); none is in the
+dictionary, and scoring is case-sensitive so the second component is only
+credited when actually executed. The sparse code recovers constituent skills
+with recall $0.68$ (precision $0.36$; coefficient heatmap in
+Fig.~\ref{fig:heatmap}). Steering executes the composition where the
+components' formats are compatible (\texttt{singular-plural+capitalize}
+$0.86$, \texttt{present-past+capitalize} $0.50$) and \method{} is the only
+non-trivial method overall ($0.16$ vs.\ retrieval $0.03$, naive component
+averaging $0.05$; 10-shot ICL $0.61$): retrieval cannot compose, and its
+failure here is categorical, not marginal.
 
-\begin{table*}[t]
-\caption{\method{} operating characteristics (5000 random test users per dataset; exact ranking $=$ trie-beam decoding). \textbf{Bold}: best per column within a dataset block (Gini: lowest); parenthesized percentages: change vs.\ frozen TIGER (\textcolor{GainInk}{pink} = gain). \colorbox{RowGlow}{Light-blue rows}: the sweep's near-free points (largest $\beta$ with overall R@10 $\ge$ baseline). Baseline comparisons: Table~\ref{tab:d3}, Figure~\ref{fig:pareto}.}
-\label{tab:main}
-\centering
-\footnotesize
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llccccccccc@{}}
-\toprule
- & & \multicolumn{3}{c}{Overall accuracy} & \multicolumn{3}{c}{Head / tail segments} & \multicolumn{3}{c}{Exposure distribution} \\
-\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
-Dataset & Method & R@5 & R@10 & N@10 & Head R@10 & Tail R@10 & Tail N@10 & Cov@10 & Gini\,$\downarrow$ & Entropy\,$\uparrow$ \\
-\midrule
-\multirow{5}{*}{Beauty} & TIGER (frozen) & \textbf{0.0310} & 0.0482 & 0.0247 & 0.0998 & 0.0072 & 0.0037 & 0.110 & 0.972 & 0.639 \\
- & \cellcolor{RowGlow}+ \method{} $\beta{=}0.25$ & \cellcolor{RowGlow}0.0290 & \cellcolor{RowGlow}\textbf{0.0488}\dg{+1\%} & \cellcolor{RowGlow}\textbf{0.0250} & \cellcolor{RowGlow}\textbf{0.1002} & \cellcolor{RowGlow}0.0079\dg{+10\%} & \cellcolor{RowGlow}0.0042 & \cellcolor{RowGlow}0.118\dg{+7\%} & \cellcolor{RowGlow}0.968 & \cellcolor{RowGlow}0.654 \\
- & + \method{} $\beta{=}0.5$ & 0.0292 & 0.0472\dn{-2\%} & 0.0239 & 0.0957 & 0.0086\dg{+20\%} & 0.0046 & 0.129\dg{+17\%} & 0.964 & 0.668 \\
- & + \method{} $\beta{=}0.75$ & 0.0262 & 0.0456\dn{-5\%} & 0.0228 & 0.0894 & 0.0108\dg{+50\%} & 0.0061 & 0.141\dg{+28\%} & 0.960 & 0.683 \\
- & + \method{} $\beta{=}1.0$ & 0.0246 & 0.0432\dn{-10\%} & 0.0209 & 0.0822 & \textbf{0.0122}\dg{+70\%} & \textbf{0.0068} & \textbf{0.156}\dg{+42\%} & \textbf{0.954} & \textbf{0.698} \\
-\midrule
-\multirow{5}{*}{Sports} & TIGER (frozen) & 0.0156 & 0.0250 & 0.0128 & 0.0537 & 0.0032 & 0.0018 & 0.092 & 0.977 & 0.637 \\
- & + \method{} $\beta{=}0.25$ & 0.0158 & 0.0256\dg{+2\%} & \textbf{0.0131} & \textbf{0.0541} & 0.0039\dg{+22\%} & 0.0022 & 0.105\dg{+14\%} & 0.972 & 0.657 \\
- & + \method{} $\beta{=}0.5$ & \textbf{0.0164} & \textbf{0.0260}\dg{+4\%} & 0.0130 & 0.0518 & 0.0063\dg{+100\%} & 0.0032 & 0.119\dg{+30\%} & 0.967 & 0.676 \\
- & \cellcolor{RowGlow}+ \method{} $\beta{=}0.75$ & \cellcolor{RowGlow}0.0156 & \cellcolor{RowGlow}0.0256\dg{+2\%} & \cellcolor{RowGlow}0.0126 & \cellcolor{RowGlow}0.0490 & \cellcolor{RowGlow}0.0078\dg{+144\%} & \cellcolor{RowGlow}0.0042 & \cellcolor{RowGlow}0.135\dg{+47\%} & \cellcolor{RowGlow}0.960 & \cellcolor{RowGlow}0.695 \\
- & + \method{} $\beta{=}1.0$ & 0.0144 & 0.0234\dn{-6\%} & 0.0112 & 0.0421 & \textbf{0.0092}\dg{+189\%} & \textbf{0.0045} & \textbf{0.154}\dg{+68\%} & \textbf{0.953} & \textbf{0.714} \\
-\midrule
-\multirow{5}{*}{Toys} & TIGER (frozen) & 0.0302 & 0.0510 & 0.0267 & \textbf{0.0954} & 0.0246 & 0.0112 & 0.283 & 0.913 & 0.758 \\
- & + \method{} $\beta{=}0.25$ & 0.0310 & \textbf{0.0520}\dg{+2\%} & \textbf{0.0271} & 0.0906 & 0.0290\dg{+18\%} & 0.0133 & 0.308\dg{+9\%} & 0.899 & 0.775 \\
- & \cellcolor{RowGlow}+ \method{} $\beta{=}0.5$ & \cellcolor{RowGlow}\textbf{0.0312} & \cellcolor{RowGlow}0.0516\dg{+1\%} & \cellcolor{RowGlow}0.0258 & \cellcolor{RowGlow}0.0820 & \cellcolor{RowGlow}0.0335\dg{+36\%} & \cellcolor{RowGlow}0.0153 & \cellcolor{RowGlow}0.332\dg{+17\%} & \cellcolor{RowGlow}0.885 & \cellcolor{RowGlow}0.791 \\
- & + \method{} $\beta{=}0.75$ & 0.0274 & 0.0496\dn{-3\%} & 0.0244 & 0.0729 & 0.0357\dg{+45\%} & 0.0163 & 0.353\dg{+25\%} & 0.874 & 0.803 \\
- & + \method{} $\beta{=}1.0$ & 0.0278 & 0.0490\dn{-4\%} & 0.0241 & 0.0638 & \textbf{0.0402}\dg{+64\%} & \textbf{0.0184} & \textbf{0.369}\dg{+30\%} & \textbf{0.867} & \textbf{0.810} \\
-\bottomrule
-\end{tabular*}
-\end{table*}
+\subsection{E4: Ablations}
+\label{sec:e4}
+Table~\ref{tab:ablation} summarizes (8 representative tasks, $k{=}4$, 3
+seeds). Common-component removal is load-bearing: $r_0{=}0/1/2/8/16 \to$
+mean accuracy $0.25/0.50/0.42/0.17/0.02$. Injection layers:
+$\{12{,}16\}$ ($0.42$) $>$ $\{12{,}14{,}16\}$ ($0.40$) $>$ single 16 ($0.28$)
+$>$ single 12 ($0.14$). Direction source: hybrid $0.42$ $>$ $z$-only $0.41$
+$\gg$ reconstruction $0.10$ $>$ anchor blend $0.05$. Solver: group LASSO
+$\approx$ block-OMP $>$ simplex $>$ least squares. Dictionary build cost:
+$n{=}25$ samples per task matches $n{=}100$.
 
-\subsection{Main Result: Tail and Coverage Recovery at Held Accuracy}\label{sec:main}
-Table~\ref{tab:main} and Figure~\ref{fig:pareto} give the central result. \method{} traces a smooth accuracy--coverage frontier in $\beta$. The sweep's \emph{near-free} points (shaded in Table~\ref{tab:main}) hold or improve overall Recall@10 while the tail rises: Beauty $\beta{=}0.25$ (overall $+1\%$, tail $+10\%$, coverage $+7\%$); Sports $\beta{=}0.75$ (overall $+2\%$, tail $\mathbf{+144\%}$, coverage $+47\%$); Toys $\beta{=}0.5$ (overall $+1\%$, tail $+36\%$, coverage $+17\%$). On point estimates all three are \emph{strict} improvements---overall, tail, and coverage rise together---though the overall-recall changes are within noise (below), which is precisely what ``near-free'' means. Stronger settings buy more tail at an explicit, bounded cost: at a uniform $\beta{=}0.75$, tail Recall@10 is $+50/+144/+45\%$ with overall $-5/+2/-3\%$; at $\beta{=}1.0$, tail is $+69/+188/+63\%$ with overall $-10/-6/-4\%$; on Beauty $\beta{=}2$ reaches tail $+150\%$ and coverage $+123\%$.
-%〔译〕主结果。表 2 与图 3 给出核心结果。PopContrast 随 β 描出平滑的精度-覆盖率前沿。扫描的近免费点(表 2 阴影)在保持或改善整体 Recall@10 的同时抬升尾部:Beauty β=0.25(整体 +1%、尾部 +10%、覆盖率 +7%);Sports β=0.75(整体 +2%、尾部 +144%、覆盖率 +47%);Toys β=0.5(整体 +1%、尾部 +36%、覆盖率 +17%)。就点估计而言三者都是严格改善——整体、尾部、覆盖率同升——尽管整体召回变化在噪声内(见下),这正是“近免费”之意。更强的设置以明确、有界的代价换取更多尾部:统一 β=0.75 时尾部 Recall@10 为 +50/+144/+45% 而整体 −5/+2/−3%;β=1.0 时尾部 +69/+188/+63% 而整体 −10/−6/−4%;Beauty β=2 达尾部 +150%、覆盖率 +123%。
+\subsection{E5: Dictionary Scaling and Serving Cost}
+Accuracy on six fixed held-out tasks grows monotonically with dictionary
+size---$0.14/0.44/0.51/0.52$ at $T'{=}5/10/15/31$ (mean over 5 random
+sub-dictionaries)---supporting the mined-dictionary-as-asset framing: every
+added skill improves zero-training transfer to unseen tasks
+(Fig.~\ref{fig:scale}). Serving cost (Table~\ref{tab:cost}): a 10-shot ICL
+prompt averages $131$ tokens vs.\ $10.5$ zero-shot; \method's one-time
+extraction costs $2{,}211$ tokens, breaking even at ${\sim}17$ queries and
+saving $10.2\times$ at $10^3$ queries per task.
 
-\textbf{Uncertainty.} Paired bootstrap over users (1000 resamples): the tail improvement holds in $100\%$ of resamples on Sports ($\beta{=}0.75$) and Toys ($\beta{=}0.5$) and $99.4\%$ on Beauty at $\beta{=}0.75$, while the overall-recall changes at these points are statistically indistinguishable from zero---as ``near-free'' intends. Beauty's small $\beta{=}0.25$ gain is not individually significant ($72\%$), which we report for completeness; NDCG@10 follows the same pattern (Table~\ref{tab:main}).
-%〔译〕不确定性。对用户做配对自助(1000 次重采样):尾部改善在 Sports(β=0.75)和 Toys(β=0.5)上 100% 的重采样中成立、Beauty β=0.75 上 99.4%,而这些点的整体召回变化在统计上与零无异——正如“近免费”所意图。Beauty 微小的 β=0.25 增益单独不显著(72%),为完整性报告;NDCG@10 遵循相同模式(表 2)。
+\subsection{E6: Cross-Model Validation}
+[E6 running: Qwen3-4B and Llama-3.2-3B with depth-proportional layer pairs;
+numbers to be inserted.]
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig1_pareto_trajectory.png}
-  \caption{Accuracy--coverage trajectories as $\beta$ sweeps: \method{} (pink) climbs; the naive discount (blue) collapses. Gold star and dashed lines: the frozen-TIGER baseline.}
-  \label{fig:pareto}
-\end{figure}
+\subsection{Failure Analysis}
+\label{sec:analysis}
+Stored generations let us separate failure modes. (i)~\emph{Format
+non-compliance}: on \texttt{person-occupation}/\texttt{person-sport} the
+steered model emits biographies containing the answer (contains-metric
+$0.29$ vs.\ exact $0.02$; oracle contains $0.38$)---steering conveys the
+mapping but not the answer-only format. (ii)~\emph{Coherent-neighbor
+attraction}: held-out \texttt{english-french} recovers the translation
+family but is pulled toward Spanish/German anchors by the correction term,
+producing fluent wrong-language answers; this is the $\mu_B$ condition of
+Prop.~\ref{prop:support} failing within-family, observable in advance from
+the dictionary itself. (iii)~$\varepsilon$ predicts $\rho$
+(Fig.~\ref{fig:eps}), enabling selective fallback to full ICL.
 
-\subsection{The Model's Own Marginal Beats the Empirical Prior}\label{sec:naive}
-The naive discount---structurally identical but subtracting empirical log-counts---is Pareto-dominated everywhere (Table~\ref{tab:d3}, Figure~\ref{fig:pareto}). On Beauty, matching \method{}'s $\beta{=}1.0$ tail level costs the naive method $\sim$35\% more overall recall; on Sports its overall recall halves at $\beta{=}0.5$. More diagnostic still is \emph{how} it fails: at high strength its coverage \emph{falls} while Gini rises and entropy drops (\eg{} Beauty $\beta{=}1$: overall $0.0200$ vs.\ our $0.0432$ at comparable tail, entropy $0.579$ vs.\ $0.698$)---it does not diversify but re-concentrates recommendations onto a different small set of items. The generator's biased preference correlates with, but is not identical to, raw popularity; subtracting the right quantity is the difference between de-biasing and degeneration---measure the bias the model actually has, then remove precisely that.
-%〔译〕模型自身的边际胜过经验先验。朴素折扣——结构相同但减去经验对数计数——处处被帕累托支配(表 3、图 3)。Beauty 上,要匹配 PopContrast β=1.0 的尾部水平,朴素法要多花约 35% 整体召回;Sports 上其整体召回在 β=0.5 时腰斩。更具诊断性的是它如何失败:高强度下其覆盖率下降而 Gini 升、熵降(如 Beauty β=1:整体 0.0200 对我们的 0.0432、在相当尾部下熵 0.579 对 0.698)——它不是多样化,而是把推荐重新集中到另一小撮物品上。生成器的有偏偏好与原始流行度相关但不相同;减去正确的量,正是去偏与退化之别——测量模型真正拥有的偏差,再精确移除之。
-
-\subsection{Genuine Diversification}\label{sec:diversity}
-A method could lift tail recall by herding all users onto a few formerly-unpopular items. \method{} does the opposite: as $\beta$ grows, coverage and normalized entropy rise monotonically and Gini falls on every dataset (Table~\ref{tab:main}). Figure~\ref{fig:stream} makes the reallocation concrete: at baseline the most popular quintile occupies $78$--$83\%$ of \emph{all} top-10 slots; as $\beta$ grows its band contracts (to $57$--$75\%$ at $\beta{=}1$) and every lower quintile's share expands. Exposure becomes more equal across the catalog, not merely relocated; item-exposure Lorenz curves shift toward the diagonal (Appendix~\ref{app:figs}).
-%〔译〕真实的多样化。方法可能通过把所有用户驱赶到少数原本冷门的物品上来抬升尾部召回。PopContrast 反其道而行:随 β 增大,覆盖率与归一化熵在每个数据集上单调上升、Gini 下降(表 2)。图 6 使再分配具体化:基线时最热门五分位占据全部 top-10 槽的 78–83%;随 β 增大其带收缩(β=1 时到 57–75%),每个较低五分位的份额扩张。曝光在目录上变得更均等,而非仅仅被搬移;物品曝光洛伦兹曲线向对角线移动(附录 A.6)。
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig10_exposure_stream.png}
-  \caption{Top-10 exposure share by popularity quintile (dark = most popular): the head band contracts as $\beta$ grows.}
-  \label{fig:stream}
-\end{figure}
-
-\subsection{Redistribution, Granularity, and Mechanism}\label{sec:granularity}
-\paragraph{Beyond head/tail: quintile analysis}
-Splitting the catalog into popularity quintiles (q1 least popular) refines the picture (Figure~\ref{fig:quintile}): gains concentrate where scarcity is worst. At $\beta{=}1.0$, Recall@10 on q1 goes from $0.010$ to $0.029$ ($+190\%$) on Toys and from zero to non-zero ($0.0023$) on Beauty; q2--q4 improve broadly (\eg{} Sports q3 triples, $0.0056 \to 0.0167$); only the top quintile pays, and gracefully (Beauty $-18\%$, Toys $-34\%$ at $\beta{=}1.0$). The correction redistributes from the single most-advantaged group to everyone else rather than trading between two coarse buckets. This also addresses a natural worry: could subtracting a user-independent quantity suppress items that are genuinely relevant to \emph{most} users, not merely popular? The bounded, graceful degradation of the top quintile and the smooth, popularity-proportional rank-shift profile (Figure~\ref{fig:rankshift}) indicate head items are demoted in proportion to their generic score inflation rather than collapsed.
-%〔译〕超越头/尾:五分位分析。把目录按流行度分成五分位(q1 最冷门)细化了图景(图 7):增益集中在稀缺最严重处。β=1.0 时,Toys 上 q1 的 Recall@10 从 0.010 升到 0.029(+190%),Beauty 上从零到非零(0.0023);q2–q4 广泛改善(如 Sports q3 翻三倍,0.0056→0.0167);只有最高五分位付出代价,且是温和的(Beauty −18%、Toys −34% 于 β=1.0)。校正把资源从最受益的单一群体再分配给其余所有,而非在两个粗桶间交易。这也回应了一个自然担忧:减去用户无关的量会否压制对多数用户真正相关(而非仅仅热门)的物品?最高五分位有界而温和的退化,以及平滑、与流行度成比例的秩移曲线(图 8),表明头部物品是按其通用分数抬升成比例地被降级,而非被压垮。
-
-\paragraph{Per-item granularity matters}
-Is the full per-item marginal necessary, or would a coarse group correction do? We test group-wise variants that subtract the \emph{quintile-mean} prior (of the model marginal or of log-counts)---the decode-time analogue of group-calibrated exposure balancing. They are strictly worse: on Beauty at matched strength, the group-marginal variant reaches tail $0.0101$ but drops overall Recall@10 to $0.0348$ and coverage to $0.105$, versus \method{}'s $0.0108$ tail at $0.0456$ overall and $0.141$ coverage; on Sports the gap is larger still ($0.0116$ vs.\ $0.0256$ overall). Within-group popularity variation carries signal that a five-parameter correction cannot express: the \emph{item-level} marginal is doing real work.
-%〔译〕逐物品粒度很重要。完整的逐物品边际是否必要,还是粗粒度的组校正就够?我们测试减去五分位均值先验(模型边际或对数计数的)的组级变体——组校准曝光平衡的解码期类比。它们严格更差:Beauty 同强度下,组边际变体尾部达 0.0101 但整体 Recall@10 降到 0.0348、覆盖率 0.105,对比 PopContrast 的尾部 0.0108、整体 0.0456、覆盖率 0.141;Sports 差距更大(整体 0.0116 对 0.0256)。组内流行度变化携带了五参数校正无法表达的信号:逐物品边际在做真正的工作。
-
-\paragraph{Mechanism}
-Figure~\ref{fig:rankshift} plots each item's mean rank change under \method{} against its popularity: a smooth, monotone shift---tail items promoted by ${\sim}300$ ranks on average, head items demoted by ${\sim}500$, with a clean zero-crossing---confirming the correction acts as an orderly popularity-proportional re-ranking rather than an indiscriminate shuffle.
-%〔译〕机制。图 8 把每个物品在 PopContrast 下的平均秩变化对其流行度作图:一条平滑、单调的位移——尾部物品平均被提升约 300 名,头部物品被降约 500 名,带干净的过零点——确认校正是有序、与流行度成比例的重排,而非无差别洗牌。
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig9_quintile_heatmap.png}
-  \caption{Recall@10 change per (quintile $\times$ $\beta$); pink = gain, blue = loss; ``0$\to$$>$0'': lifted from zero; q1 = least popular.}
-  \label{fig:quintile}
-\end{figure}
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.8\linewidth]{figures/fig8_rankshift_mechanism.png}
-  \caption{Per-item mean rank change vs.\ popularity ($\beta{=}0.75$, Beauty): a smooth, popularity-proportional re-ranking. Hexagon color encodes item density (darker red = more items); the black curve is the binned median shift.}
-  \label{fig:rankshift}
-\end{figure}
-
-\subsection{The Decode-Time Baseline Suite}\label{sec:d3}
-Table~\ref{tab:d3} assembles all decode-time alternatives; the final column marks frontier dominance. Every prior-subtraction variant that is not the model's own per-item marginal---empirical counts, rank percentile, quintile-coarsened---buys its tail gains at a far steeper accuracy cost and is dominated by an operating point on \method{}'s $\beta$-frontier (on Sports the rank discount reaches tail $0.0092$ at overall $0.0082$; \method{} at $\beta{=}1$ reaches the same tail at overall $0.0234$), as Proposition~\ref{prop:pmi} predicts. Calibrated quota re-ranking~\cite{steck2018calibrated}, the strongest alternative, is dominated on all three axes on every dataset. A CAD-style \emph{null-context} prior (one forward pass, empty history) is a coarser estimate of the same quantity: measured against the \emph{operative} marginal---the average score over the 5000 held-out evaluation users---our $\hat m$ correlates at $\rho \ge 0.99$ on every dataset, the null-context prior only at $0.84$--$0.94$; top-10 metrics at moderate $\beta$ are largely tolerant to this gap. That interchangeability is the point: the diagnosis establishes \emph{what} to subtract, and any faithful estimator of that locus inherits the correction. MMR re-ranking, the standard semantic diversifier, leaves tail recall and coverage at baseline on all three datasets---diversification and popularity de-biasing are different problems, and \method{} targets the latter. Finally, $\varepsilon$-exploration shows why coverage must not be read alone: it inflates Coverage@10 to $0.59$--$0.79$ while \emph{reducing} tail recall---our coverage gains, by contrast, come with tail-recall gains and rising entropy.
-%〔译〕解码期基线套件。表 3 汇总所有解码期替代方案;末列标注前沿支配。每一种非模型自身逐物品边际的先验减法(经验计数、排名百分位、五分位粗化)都以陡得多的精度代价买尾部增益,并被 PopContrast β-前沿上的某个工作点支配(Sports 上排名折扣达尾部 0.0092 但整体 0.0082;PopContrast β=1 在整体 0.0234 处达到同一尾部),正如命题 5.1 所预测。最强的替代——校准配额重排——在每个数据集上三轴皆被支配。CAD 式空上下文先验(单次前向、空历史)是同一量的更粗估计:对操作性边际(5000 个留出评测用户的平均分)度量,我们的 m̂ 在每个数据集上相关 ρ≥0.99,空上下文先验仅 0.84–0.94;中等 β 下 top-10 指标大体容忍此差距。这种可互换正是要点:诊断确立减什么,该位点的任何忠实估计器都继承校正。MMR 重排这一标准语义多样化器在三数据集上把尾部召回与覆盖率留在基线——多样化与流行度去偏是不同问题,PopContrast 针对后者。最后,ε-探索表明覆盖率不能单独解读:它把 Coverage@10 灌到 0.59–0.79 却降低尾部召回——相比之下我们的覆盖率增益伴随尾部召回增益与熵上升。
-
-\paragraph{External-model fusion}
-We train SASRec on each dataset and fuse it at the item level, $\alpha\, z(\log p_{\text{TIGER}}) + (1{-}\alpha)\, z(s_{\text{SASRec}})$, following D$^3$'s recipe~\cite{bao2024d3}. In our full-catalog evaluation the external model is much weaker than the generator (SASRec Recall@10 ${\approx}0.002$--$0.02$ vs.\ TIGER ${\approx}0.03$--$0.05$), and fusion at $\alpha{=}0.7$ \emph{hurts on every axis and every dataset}: on Beauty, tail stays at baseline while coverage drops $18\%$; on Sports tail falls $75\%$ and coverage halves; on Toys tail falls $44\%$ (Table~\ref{tab:d3}; $n{=}3000$). \method{} at $\beta{=}0.75$, using \emph{no} second model, lifts tail $+67/+100/+49\%$ and coverage $+27/+47/+25\%$ on the same users. We stress that this is \emph{not} a reproduction of D$^3$ under its preferred setting (an LLM-scale recommender fused with a strong collaborative model); it isolates the transferable fusion mechanism under matched conditions and shows its outcome is governed by external-model quality. The takeaway is not that D$^3$ is unsound, but that \emph{dependence on an external model is a sensitivity the self-contained correction does not have}. A same-protocol comparison against training-time long-tail methods (LETTER~\cite{wang2024letter}, GENPLUGIN~\cite{yang2025genplugin}) would require retraining tokenizers or backbones and is outside the scope of this inference-time study; Section~\ref{sec:related} positions against them mechanistically.
-%〔译〕外部模型融合。我们在每个数据集上训练 SASRec 并在物品级融合,α·z(log p_TIGER)+(1−α)·z(s_SASRec),遵循 D³ 配方。在我们的全目录评测中外部模型远弱于生成器(SASRec Recall@10 约 0.002–0.02 对 TIGER 约 0.03–0.05),α=0.7 融合在每个轴、每个数据集上都受损:Beauty 尾部持平基线而覆盖率降 18%;Sports 尾部降 75%、覆盖率腰斩;Toys 尾部降 44%(表 3;n=3000)。PopContrast 于 β=0.75、不用第二个模型,在同批用户上把尾部抬 +67/+100/+49%、覆盖率 +27/+47/+25%。我们强调这不是在 D³ 偏好设定(LLM 级推荐器融合强协同模型)下的复现;它在匹配条件下隔离可迁移的融合机制,表明其结果由外部模型质量支配。要点不是 D³ 不健全,而是对外部模型的依赖是自包含校正所没有的敏感性。与训练时长尾方法(LETTER、GENPLUGIN)的同协议对比需重训 tokenizer 或骨干,超出本推理期研究范围;第 2 节从机制上对它们定位。
-
-\begin{table}[t]
-\caption{Decode-time baseline suite (\method{} at $\beta{=}0.75$, shaded; full frontier in Table~\ref{tab:main}). $\prec$\,frontier: \checkmark\ = dominated on all three metrics by some \method{} operating point; $\approx$ = same-family variant, within noise; $^\dagger$ = coverage inflated by random slots (tail drops). Fusion rows $n{=}3000$, others $n{=}5000$; B/S/T = Beauty/Sports/Toys.}
-\label{tab:d3}
-\centering
-\footnotesize
-\renewcommand{\arraystretch}{0.92}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llcccc@{}}
-\toprule
- & Method & R@10 & Tail R@10 & Cov@10 & $\prec$\,frontier \\
-\midrule
-\multirow{10}{*}{B}
- & TIGER                    & 0.0482 & 0.0072 & 0.110 & -- \\
- & \cellcolor{RowGlow}\ + \method{} ($\beta{=}.75$) & \cellcolor{RowGlow}0.0456 & \cellcolor{RowGlow}0.0108 & \cellcolor{RowGlow}0.141 & \cellcolor{RowGlow}-- \\
- & \ + naive discount ($\beta{=}.5$) & 0.0314 & 0.0115 & 0.123 & \checkmark \\
- & \ + rank discount ($\beta{=}1$) & 0.0290 & 0.0129 & 0.102 & \checkmark \\
- & \ + calib.\ quota          & 0.0422 & 0.0083 & 0.139 & \checkmark \\
- & \ + MMR ($\lambda{=}.7$)    & 0.0476 & 0.0068 & 0.110 & \checkmark \\
- & \ + null-context prior ($\beta{=}.75$) & 0.0432 & 0.0093 & 0.137 & $\approx$ \\
- & \ + group-marginal ($\beta{=}.75$) & 0.0348 & 0.0101 & 0.105 & \checkmark \\
- & \ + $\varepsilon$-exploration & 0.0374 & 0.0054 & 0.734$^\dagger$ & $\dagger$ \\
- & \ + SASRec fusion ($\alpha{=}.7$) & 0.0450 & 0.0052 & 0.084 & \checkmark \\
-\midrule
-\multirow{10}{*}{S}
- & TIGER                    & 0.0250 & 0.0032 & 0.092 & -- \\
- & \cellcolor{RowGlow}\ + \method{} ($\beta{=}.75$) & \cellcolor{RowGlow}0.0256 & \cellcolor{RowGlow}0.0078 & \cellcolor{RowGlow}0.135 & \cellcolor{RowGlow}-- \\
- & \ + naive discount ($\beta{=}.5$) & 0.0134 & 0.0088 & 0.095 & \checkmark \\
- & \ + rank discount ($\beta{=}1$) & 0.0082 & 0.0092 & 0.068 & \checkmark \\
- & \ + calib.\ quota          & 0.0220 & 0.0074 & 0.115 & \checkmark \\
- & \ + MMR ($\lambda{=}.7$)    & 0.0258 & 0.0032 & 0.092 & \checkmark \\
- & \ + null-context prior ($\beta{=}.75$) & 0.0252 & 0.0088 & 0.133 & $\approx$ \\
- & \ + group-marginal ($\beta{=}.75$) & 0.0116 & 0.0075 & 0.079 & \checkmark \\
- & \ + $\varepsilon$-exploration & 0.0206 & 0.0028 & 0.593$^\dagger$ & $\dagger$ \\
- & \ + SASRec fusion ($\alpha{=}.7$) & 0.0243 & 0.0012 & 0.040 & \checkmark \\
-\midrule
-\multirow{10}{*}{T}
- & TIGER                    & 0.0510 & 0.0246 & 0.283 & -- \\
- & \cellcolor{RowGlow}\ + \method{} ($\beta{=}.75$) & \cellcolor{RowGlow}0.0496 & \cellcolor{RowGlow}0.0357 & \cellcolor{RowGlow}0.353 & \cellcolor{RowGlow}-- \\
- & \ + naive discount ($\beta{=}.5$) & 0.0474 & 0.0354 & 0.359 & \checkmark \\
- & \ + rank discount ($\beta{=}1$) & 0.0390 & 0.0380 & 0.329 & \checkmark \\
- & \ + calib.\ quota          & 0.0478 & 0.0290 & 0.349 & \checkmark \\
- & \ + MMR ($\lambda{=}.7$)    & 0.0510 & 0.0249 & 0.283 & \checkmark \\
- & \ + null-context prior ($\beta{=}.75$) & 0.0512 & 0.0341 & 0.339 & $\approx$ \\
- & \ + group-marginal ($\beta{=}.75$) & 0.0446 & 0.0355 & 0.335 & \checkmark \\
- & \ + $\varepsilon$-exploration & 0.0388 & 0.0169 & 0.786$^\dagger$ & $\dagger$ \\
- & \ + SASRec fusion ($\alpha{=}.7$) & 0.0400 & 0.0134 & 0.188 & \checkmark \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\subsection{Corrected Decoding Inside the Beam}\label{sec:beamcorr}
-Proposition~\ref{prop:trie} is conditional: the leaf penalty realizes the exact re-ranking only if the items it promotes are already among the beam's complete hypotheses, and a strong correction could in principle promote items that raw-likelihood expansion pruned. We measure this directly on Beauty ($n{=}1000$): Table~\ref{tab:beam} reports, for each beam width, the fraction of the \emph{exact-corrected} top-10 already present in the raw beam (the quantity the proposition conditions on) and the resulting metrics. At the recommended strength ($\beta{=}0.75$), the standard beam already carries what the correction needs: $B{=}20$ covers $91\%$ of the exact-corrected top-10 with metrics indistinguishable from exact, and $B{=}50$/$B{=}100$ reach $99$/$100\%$. At an aggressive $\beta{=}1.5$ the anticipated failure mode does appear ($B{=}20$ covers only $67\%$) and is repaired by widening the beam: $B{=}100$ restores $91\%$ coverage and near-exact metrics at a width still two orders of magnitude below the catalog. The pattern replicates on Sports, Toys, and a 23k-item Clothing catalog ($n{=}1000$ each): at $\beta{=}0.75$, $B{=}20$ carries $0.91/0.87/0.95$ of the exact-corrected top-10 and $B{=}100$ carries $0.99$--$1.00$; at $\beta{=}1.5$, $B{=}100$ recovers $0.73/0.85/0.90$. The premise scales to the largest catalog we test.
-%〔译〕束内的校正解码。命题 5.2 是有条件的:叶惩罚只在它提升的物品已在束的完整假设之中时才实现精确重排,而强校正原则上可能提升被原始似然展开剪掉的物品。我们在 Beauty 上直接测量(n=1000):表 4 报告每个束宽下,精确校正 top-10 已存在于原始束中的比例(命题所条件化的量)及所得指标。在推荐强度(β=0.75)下,标准束已携带校正所需:B=20 覆盖 91% 的精确校正 top-10 且指标与精确无异,B=50/B=100 达 99/100%。在激进的 β=1.5 下预期的失效模式确会出现(B=20 只覆盖 67%),并通过加宽束修复:B=100 恢复 91% 覆盖与近精确指标,而束宽仍比目录小两个数量级。该模式在 Sports、Toys 及 23k 物品的 Clothing 目录上复现(各 n=1000):β=0.75 时 B=20 携带 0.91/0.87/0.95 的精确校正 top-10、B=100 携带 0.99–1.00;β=1.5 时 B=100 恢复 0.73/0.85/0.90。该前提扩展到我们测试的最大目录。
-
-\begin{table}[t]
-\caption{Corrected decoding inside the trie beam (Beauty, $n{=}1000$). In beam: fraction of the exact-corrected top-10 among raw-beam hypotheses; overlap: deployed vs.\ exact-corrected top-10.}
-\label{tab:beam}
-\centering
-\footnotesize
-\renewcommand{\arraystretch}{0.92}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccccc@{}}
-\toprule
- & In beam & Overlap & R@10 & Tail R@10 & Cov@10 \\
-\midrule
-\multicolumn{6}{l}{$\beta=0.75$ \hfill exact: R@10 $0.0450$, tail $0.0112$, cov $0.099$}\\
-\; $B{=}10$  & 0.77 & 0.76 & 0.0450 & 0.0075 & 0.091 \\
-\; $B{=}20$  & 0.91 & 0.89 & 0.0500 & 0.0131 & 0.098 \\
-\; $B{=}50$  & 0.99 & 0.96 & 0.0460 & 0.0112 & 0.100 \\
-\; $B{=}100$ & 1.00 & 0.97 & 0.0460 & 0.0112 & 0.099 \\
-\addlinespace[2pt]
-\multicolumn{6}{l}{$\beta=1.5$ \hfill exact: R@10 $0.0270$, tail $0.0131$, cov $0.130$}\\
-\; $B{=}20$  & 0.67 & 0.67 & 0.0390 & 0.0131 & 0.116 \\
-\; $B{=}50$  & 0.83 & 0.81 & 0.0370 & 0.0168 & 0.126 \\
-\; $B{=}100$ & 0.91 & 0.89 & 0.0300 & 0.0149 & 0.128 \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\paragraph{A larger, sparser catalog}
-As a scale study we train TIGER on Amazon Clothing (23{,}033 items, 39{,}387 users)---a larger but markedly sparser and \emph{less} popularity-skewed benchmark: 5.1 interactions per user, the head-20\% holds only $52\%$ of interactions, and the marginal--popularity coupling weakens to $\rho = 0.65$ (vs.\ $0.69$--$0.72$). The correction behaves exactly as the diagnosis predicts: diversification replicates (coverage $+12\%$ to $+62\%$ and entropy rising across $\beta$, at overall changes of $-4\%$ to $-9\%$), while tail-recall gains attenuate to within noise---the payoff of subtracting the marginal tracks the strength of the very coupling it corrects. We report this boundary as evidence \emph{for} the mechanism, not merely a limitation.
-%〔译〕更大、更稀疏的目录。作为规模研究,我们在 Amazon Clothing(23033 物品、39387 用户)上训练 TIGER——一个更大但明显更稀疏、流行度偏斜更弱的基准:每用户 5.1 次交互,头部 20% 只占 52% 交互,边际-流行度耦合弱化到 ρ=0.65(对比 0.69–0.72)。校正的表现恰如诊断所预测:多样化复现(覆盖率 +12% 到 +62%、熵随 β 上升,整体变化 −4% 到 −9%),而尾部召回增益衰减到噪声内——减去边际的收益追踪它所校正的那个耦合的强度。我们把这一边界作为支持机制的证据,而非仅仅是局限。
-
-Serving cost is unchanged throughout: $\hat m$ is computed once offline ($M{=}512$ forwards, minutes on one GPU) and stored as one scalar per item; inference remains trie-beam decoding plus a per-candidate subtraction, with no per-item embeddings and no full-catalog scoring.
-%〔译〕全程服务成本不变:m̂ 离线计算一次(M=512 次前向,单 GPU 数分钟)并每物品存一个标量;推理仍是字典树束解码加逐候选减法,无逐物品嵌入、无全目录打分。
-
-\section{Limitations}\label{sec:limitations}
-Our negative steering result covers the standard linear toolbox; richer interventions remain untested, so it should not be read as ruling out representational causality entirely. All evidence comes from TIGER-scale models with fixed 3-token IDs on four Amazon benchmarks (up to 23k items); the beam${\approx}$exact equivalence is regime-dependent (Section~\ref{sec:beamcorr}), and LLM backbones, longer IDs, million-scale catalogs, nonlinear or trained interventions, and online evaluation are the natural next tests. Tail recall is small in absolute terms (hence the coverage, entropy, and bootstrap reporting), backbones use one training seed, and distribution-level adaptive gating remains open.
-%〔译〕局限。我们的负向转向结果覆盖标准线性工具箱;更丰富的干预未检验,故不应读作完全排除表征因果性。所有证据来自四个 Amazon 基准(至多 23k 物品)上定长 3-token ID 的 TIGER 级模型;束≈精确的等价依赖机制(第 6.7 节),LLM 骨干、更长 ID、百万级目录、非线性或训练型干预、以及在线评测是自然的下一步检验。尾部召回绝对值很小(故报告覆盖率、熵与自助),骨干用单一训练种子,分布级自适应门控仍开放。
-
-\section{Conclusion}\looseness=-1
-We asked where popularity bias lives in semantic-ID generative recommenders and answered by elimination. It is not an accessible steerable direction in the residual stream: popularity is linearly decodable there, but no steering or erasure intervention recovers the tail. It is not beam pruning (the beam already matches exhaustive ranking here) and not the tokenizer (code assignment is popularity-neutral). What remains is the decoder's learned marginal item preference: closely popularity-tracking and directly correctable. \method{} subtracts this marginal at decode time. The correction is training-free, model-free, and runs inside standard trie-beam search, preserving generative retrieval's serving-cost advantage. Across three benchmarks it recovers long-tail recall and coverage at noise-level overall cost and dominates naive discounts, calibrated re-ranking, and weak external fusion. The lesson: the bias is distributional, not representational---intervene where it is expressed.
-%〔译〕结论。我们追问流行度偏差在语义 ID 生成式推荐器中栖居何处,并以排除法作答。它不是残差流中可触及的可转向方向:流行度在那里线性可解码,但无转向或擦除干预能恢复尾部。它不是束剪枝(束在此已匹配穷举排序),也不是 tokenizer(编码分配流行度中性)。剩下的是解码器学到的边际物品偏好:紧密跟踪流行度、可直接校正。PopContrast 在解码时减去该边际。校正无需训练、无需模型,运行于标准字典树束搜索内,保留生成式检索的服务成本优势。在三个基准上,它以噪声级整体代价恢复长尾召回与覆盖率,并支配朴素折扣、校准重排与弱外部融合。教训:此处的偏差是分布性的、非表征性的——在偏差被表达之处干预。
-
-%% Acknowledgments omitted for anonymous review.
+\section{Conclusion}
+\method{} shows that the activation footprint of an unseen task decomposes
+into a part that is compositional over previously mined skills and an
+irreducible task-specific remainder---and that a training-free system
+exploiting both recovers most of oracle steering performance from four
+examples at a fraction of ICL's serving cost. Mining activation structure
+once and reusing it across the task long tail turns steering from a
+per-task artifact into a growing knowledge asset.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
 
-\clearpage
 \appendix
-\section{Extended Results}\label{app:results}
-This appendix expands the main text with the full intervention grid behind the negative steering result, the complete operating-point selection and sensitivity tables, the full panels for the scale study and corrected-beam analysis, and two figures referenced from Section~\ref{sec:experiments}. Numbers are produced by the released scripts and match the aggregates quoted in the main text.
-%〔译〕本附录以正文之外的内容扩展:负向转向结果背后的完整干预网格、完整的工作点选择与敏感性表、规模研究与校正束分析的完整面板,以及正文第 6 节引用的两张图。数字由发布脚本产生,与正文引用的汇总一致。
-
-\subsection{Full Steering Grid (the negative result)}\label{app:steer}
-Table~\ref{tab:app-steer} lists the interventions behind Section~\ref{sec:notrep}, all on Beauty with exact full-catalog ranking. No configuration lifts tail recall beyond noise: subtraction leaves the tail at $\le 0.0075$ while coverage \emph{decays} monotonically with strength; every direction/operator combination lands at or below the baseline tail; over-ablation ($\alpha{=}2$) trades a small overall gain for the worst tail of the grid; and the closed-form LEACE eraser reproduces the same picture, moving overall recall by half a point and the tail not at all. Popularity is decodable from these activations (probe AUC $0.70$) yet no accessible linear edit converts that signal into tail recovery---the negative result that motivates Section~\ref{sec:isdist}.
-%〔译〕完整转向网格(负向结果)。表 5 列出第 4.1 节背后的干预,全在 Beauty 上以精确全目录排序进行。无一配置把尾部召回抬过噪声:减法把尾部留在≤0.0075 而覆盖率随强度单调衰减;每种方向/算子组合都落在基线尾部或以下;过度消融(α=2)以微小整体增益换来网格中最差的尾部;闭式 LEACE 擦除器重现同样图景,整体召回移动半个点、尾部完全不动。流行度可从这些激活解码(探针 AUC 0.70),但无可触及的线性编辑能把该信号转成尾部恢复——正是催生第 4.4 节的负向结果。
-\begin{table}[htbp]
-\caption{Steering grid (Beauty). Top: norm-preserving subtraction of the CAA direction at layer 3 across strengths ($n{=}1000$). Bottom: direction $\times$ operator grid and LEACE ($n{=}3000$ and $n{=}2000$).}
-\label{tab:app-steer}
-\centering\footnotesize
-\renewcommand{\arraystretch}{0.95}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccc@{}}
-\toprule
- & R@10 & Tail R@10 & Cov@10 \\
-\midrule
-baseline ($\alpha{=}0$)        & 0.0440 & 0.0056 & 0.079 \\
-subtract $\alpha{=}0.1$        & 0.0470 & 0.0075 & 0.078 \\
-subtract $\alpha{=}0.25$       & 0.0420 & 0.0075 & 0.075 \\
-subtract $\alpha{=}0.5$        & 0.0430 & 0.0056 & 0.061 \\
-subtract $\alpha{=}1$          & 0.0370 & 0.0037 & 0.035 \\
-\midrule
-baseline                        & 0.0453 & 0.0072 & 0.102 \\
-ablate CAA                      & 0.0393 & 0.0060 & 0.090 \\
-ablate probe                    & 0.0463 & 0.0060 & 0.100 \\
-ablate PCA                      & 0.0377 & 0.0060 & 0.095 \\
-clamped probe                   & 0.0450 & 0.0060 & 0.101 \\
-over-ablation ($\alpha{=}2$)    & 0.0480 & 0.0054 & 0.099 \\
-\midrule
-baseline                        & 0.0475 & 0.0079 & -- \\
-LEACE eraser                    & 0.0430 & 0.0079 & -- \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\subsection{Validation-Based $\beta$ Selection}\label{app:valbeta}
-Table~\ref{tab:app-valbeta} shows the full validation sweep behind the protocol of Section~\ref{sec:experiments}. The overall-recall differences across $\beta$ are one-to-two hits out of 2000 users---exactly the noise-level changes the main text describes---so the strict threshold rule is brittle: it selects $\beta{=}0.5$ on Beauty and abstains ($\beta{=}0$) on Sports and Toys, even though the corresponding test-side points improve all three metrics on point estimates. This is why we recommend the pre-registered uniform-$\beta$ deployment.
-%〔译〕基于验证的 β 选择。表 6 展示第 6 节协议背后的完整验证扫描。跨 β 的整体召回差异是 2000 用户中一到两次命中——正是正文所述的噪声级变化——故严格阈值规则脆弱:它在 Beauty 上选 β=0.5,在 Sports 和 Toys 上弃权(β=0),尽管相应测试侧点在点估计上改善全部三项指标。这就是我们推荐预注册统一 β 部署的原因。
-\begin{table}[htbp]
-\caption{Validation sweep (2000 held-out validation users; overall R@10) and the rule-selected $\beta$.}
-\label{tab:app-valbeta}
-\centering\footnotesize
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccccc@{}}
-\toprule
- & $\beta{=}0$ & $0.25$ & $0.5$ & $0.75$ & $1.0$ & selected \\
-\midrule
-Beauty & 0.0705 & 0.0700 & 0.0725 & 0.0700 & 0.0660 & 0.5 \\
-Sports & 0.0415 & 0.0400 & 0.0375 & 0.0370 & 0.0330 & 0 \\
-Toys & 0.0745 & 0.0710 & 0.0710 & 0.0655 & 0.0600 & 0 \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\subsection{Marginal Estimation Sensitivity}\label{app:msens}
-Table~\ref{tab:app-msens} varies the number of sampled histories $M$ used to estimate $\hat m$. Both the popularity correlation and every downstream metric are flat from $M{=}32$ to $M{=}512$, consistent with the $M^{-1/2}$ standard-error argument of Section~\ref{sec:isdist}: a few dozen histories already pin down the marginal to well below the resolution that ranking can perceive.
-%〔译〕边际估计敏感性。表 7 改变用于估计 m̂ 的采样历史数 M。从 M=32 到 M=512,流行度相关与每个下游指标都平坦,与第 4.4 节 M^(−1/2) 标准误论证一致:几十条历史已把边际钉到远低于排序可感知的分辨率之下。
-\begin{table}[htbp]
-\caption{Sensitivity to the number of histories $M$ (Beauty; downstream at $\beta{=}0.75$).}
-\label{tab:app-msens}
-\centering\footnotesize
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccc@{}}
-\toprule
-$M$ & $\rho(\hat m, \text{pop})$ & R@10 & Tail R@10 & Cov@10 \\
-\midrule
-32 & 0.711 & 0.0454 & 0.0108 & 0.141 \\
-128 & 0.709 & 0.0466 & 0.0111 & 0.141 \\
-512 & 0.716 & 0.0456 & 0.0108 & 0.141 \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\subsection{Scale Study: Full Clothing Panel}\label{app:clothing}
-Table~\ref{tab:app-clothing} gives the complete Clothing sweep summarized in Section~\ref{sec:beamcorr}. The two halves of the story are visible directly: coverage and entropy climb monotonically with $\beta$ exactly as on the three main benchmarks, while tail recall stays within noise of the baseline. Clothing is sparser (5.1 interactions per user) and less popularity-skewed (head-20\% share $52\%$; $\rho(\hat m, \text{pop}) = 0.65$), so there is simply less marginal-driven distortion for the correction to remove---the effect tracks its mechanism.
-%〔译〕规模研究:完整 Clothing 面板。表 8 给出第 6.7 节概括的完整 Clothing 扫描。故事的两半直接可见:覆盖率与熵随 β 单调上升,恰如三个主基准,而尾部召回停在基线的噪声内。Clothing 更稀疏(每用户 5.1 次交互)、流行度偏斜更弱(头部 20% 占 52%;ρ(m̂,pop)=0.65),故供校正移除的边际驱动扭曲本就更少——效应追踪其机制。
-\begin{table}[htbp]
-\caption{Clothing (23{,}033 items; 5000 test users). Diversification replicates; tail gains attenuate as the marginal--popularity coupling weakens ($\rho{=}0.65$).}
-\label{tab:app-clothing}
-\centering\footnotesize
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccccc@{}}
-\toprule
- & R@10 & Head & Tail & Cov@10 & Entropy \\
-\midrule
-TIGER (frozen) & 0.0164 & 0.0348 & 0.0049 & 0.109 & 0.680 \\
-+ \method{} $\beta{=}0.25$ & 0.0158 & 0.0322 & 0.0055 & 0.122 & 0.696 \\
-+ \method{} $\beta{=}0.5$ & 0.0156 & 0.0322 & 0.0052 & 0.138 & 0.713 \\
-+ \method{} $\beta{=}0.75$ & 0.0150 & 0.0312 & 0.0049 & 0.155 & 0.729 \\
-+ \method{} $\beta{=}1.0$ & 0.0150 & 0.0312 & 0.0049 & 0.177 & 0.746 \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\subsection{Corrected-Beam Grid, All Datasets}\label{app:beam}
-Table~\ref{tab:app-beam} extends Table~\ref{tab:beam} to all four datasets and both strengths. Three regularities: at the recommended $\beta{=}0.75$, the standard $B{=}20$ beam already carries $87$--$95\%$ of the exact-corrected top-10 everywhere, and $B{=}100$ carries $99$--$100\%$; at the aggressive $\beta{=}1.5$ the coverage of needed candidates drops to $50$--$68\%$ at $B{=}20$ and widening to $B{=}100$ recovers $73$--$91\%$; the largest catalog (Clothing) is the \emph{easiest} case at moderate strength ($0.95$ at $B{=}20$), so the premise of Proposition~\ref{prop:trie} does not deteriorate with catalog size in our range.
-%〔译〕全数据集校正束网格。表 9 把表 4 扩展到四个数据集与两个强度。三条规律:在推荐的 β=0.75 下,标准 B=20 束处处已携带 87–95% 的精确校正 top-10,B=100 携带 99–100%;在激进的 β=1.5 下所需候选的覆盖在 B=20 降到 50–68%,加宽到 B=100 恢复 73–91%;最大目录(Clothing)在中等强度下是最容易的情形(B=20 时 0.95),故命题 5.2 的前提在我们范围内不随目录规模恶化。
-\begin{table}[htbp]
-\caption{Corrected decoding inside the beam ($n{=}1000$ per dataset). ``In beam'' = fraction of the exact-corrected top-10 among raw-beam hypotheses.}
-\label{tab:app-beam}
-\centering\footnotesize
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llccccc@{}}
-\toprule
- & $\beta$ & $B$ & In beam & Overlap & R@10 & Tail \\
-\midrule
-\multirow{8}{*}{Beauty} & \multirow{4}{*}{0.75} & 10 & 0.77 & 0.76 & 0.0450 & 0.0075 \\
- &  & 20 & 0.91 & 0.89 & 0.0500 & 0.0131 \\
- &  & 50 & 0.98 & 0.96 & 0.0460 & 0.0112 \\
- &  & 100 & 1.00 & 0.97 & 0.0460 & 0.0112 \\
-\arrayrulecolor{RuleSoft}\cmidrule(lr){2-7}\arrayrulecolor{black}
- & \multirow{4}{*}{1.5} & 10 & 0.51 & 0.51 & 0.0420 & 0.0075 \\
- &  & 20 & 0.67 & 0.67 & 0.0390 & 0.0131 \\
- &  & 50 & 0.83 & 0.81 & 0.0370 & 0.0168 \\
- &  & 100 & 0.91 & 0.89 & 0.0300 & 0.0149 \\
-\arrayrulecolor{RuleSoft}\midrule\arrayrulecolor{black}
-\multirow{8}{*}{Sports} & \multirow{4}{*}{0.75} & 10 & 0.76 & 0.74 & 0.0230 & 0.0053 \\
- &  & 20 & 0.91 & 0.88 & 0.0260 & 0.0088 \\
- &  & 50 & 0.97 & 0.94 & 0.0260 & 0.0070 \\
- &  & 100 & 0.99 & 0.95 & 0.0270 & 0.0088 \\
-\arrayrulecolor{RuleSoft}\cmidrule(lr){2-7}\arrayrulecolor{black}
- & \multirow{4}{*}{1.5} & 10 & 0.38 & 0.38 & 0.0240 & 0.0053 \\
- &  & 20 & 0.50 & 0.49 & 0.0270 & 0.0123 \\
- &  & 50 & 0.63 & 0.63 & 0.0270 & 0.0088 \\
- &  & 100 & 0.73 & 0.73 & 0.0240 & 0.0088 \\
-\arrayrulecolor{RuleSoft}\midrule\arrayrulecolor{black}
-\multirow{8}{*}{Toys} & \multirow{4}{*}{0.75} & 10 & 0.69 & 0.69 & 0.0500 & 0.0354 \\
- &  & 20 & 0.87 & 0.86 & 0.0460 & 0.0338 \\
- &  & 50 & 0.97 & 0.95 & 0.0510 & 0.0434 \\
- &  & 100 & 0.99 & 0.97 & 0.0500 & 0.0434 \\
-\arrayrulecolor{RuleSoft}\cmidrule(lr){2-7}\arrayrulecolor{black}
- & \multirow{4}{*}{1.5} & 10 & 0.42 & 0.42 & 0.0490 & 0.0354 \\
- &  & 20 & 0.57 & 0.57 & 0.0480 & 0.0370 \\
- &  & 50 & 0.74 & 0.74 & 0.0500 & 0.0482 \\
- &  & 100 & 0.85 & 0.84 & 0.0510 & 0.0514 \\
-\arrayrulecolor{RuleSoft}\midrule\arrayrulecolor{black}
-\multirow{8}{*}{Clothing} & \multirow{4}{*}{0.75} & 10 & 0.84 & 0.81 & 0.0130 & 0.0066 \\
- &  & 20 & 0.95 & 0.91 & 0.0120 & 0.0066 \\
- &  & 50 & 0.99 & 0.94 & 0.0130 & 0.0066 \\
- &  & 100 & 1.00 & 0.95 & 0.0120 & 0.0066 \\
-\arrayrulecolor{RuleSoft}\cmidrule(lr){2-7}\arrayrulecolor{black}
- & \multirow{4}{*}{1.5} & 10 & 0.55 & 0.54 & 0.0130 & 0.0083 \\
- &  & 20 & 0.68 & 0.66 & 0.0140 & 0.0083 \\
- &  & 50 & 0.82 & 0.80 & 0.0100 & 0.0050 \\
- &  & 100 & 0.90 & 0.87 & 0.0110 & 0.0083 \\
-\bottomrule
-\end{tabular*}
-\end{table}
-
-\subsection{Practical Guidance and Scaling Considerations}\label{app:practice}
-\paragraph{Choosing $\beta$} Under the reparameterization of Section~\ref{sec:method}, $\beta' = \beta/\sigma_m$ is the fraction of the marginal removed; our working range $\beta \in [0.5, 1]$ corresponds to $\beta' \approx 0.2$--$0.4$. When the coupling is strong ($\rho(\hat m, \text{pop}) \gtrsim 0.7$, as on Beauty/Sports/Toys) this range traded $\le 5\%$ overall recall for $19$--$144\%$ tail gains; when the coupling is weak (Clothing, $\rho = 0.65$) tail effects shrink and $\beta$ is better chosen against a coverage target. Because per-$\beta$ overall differences are noise-level (Appendix~\ref{app:valbeta}), we recommend pre-registering $\beta$ rather than tuning it on validation splits; user- or context-adaptive strengths at the distribution level remain open (our token-level gate attempt failed; Section~\ref{sec:limitations}).
-%〔译〕选择 β。在第 5 节重参数化下,β'=β/σ_m 是被移除边际的比例;我们的工作范围 β∈[0.5,1] 对应 β'≈0.2–0.4。耦合强时(ρ(m̂,pop)≳0.7,如 Beauty/Sports/Toys)该范围以≤5% 整体召回换取 19–144% 尾部增益;耦合弱时(Clothing,ρ=0.65)尾部效应缩小,β 最好对着覆盖率目标来选。由于逐 β 整体差异是噪声级(附录 A.2),我们建议预注册 β 而非在验证集上调参;用户级或上下文级的分布级自适应强度仍开放(我们的 token 级门控尝试失败了;第 7 节)。
-\paragraph{The marginal at industrial scale} $\hat m$ costs one offline pass, $O(M \cdot I \cdot L)$ token scores, embarrassingly parallel over histories and items; $M{=}32$ already suffices (Appendix~\ref{app:msens}), so refreshes are cheap. At million-item scale the same quantity admits cheaper estimators: stratified item sampling, streaming exponential-moving-average updates over fresh user histories as the catalog drifts, or Monte-Carlo estimation from sampled decodes instead of exhaustive scoring. Update cadence should track catalog churn; the correction degrades gracefully since ranking tolerates substantial estimator noise (the null-context prior, $\rho = 0.84$--$0.94$ to the operative marginal, still works).
-%〔译〕工业级规模下的边际。m̂ 只花一次离线遍历,O(M·I·L) 次 token 打分,在历史与物品上高度并行;M=32 已足(附录 A.3),故刷新廉价。百万物品级下同一量可用更便宜的估计器:分层物品采样、随目录漂移对新用户历史做流式指数移动平均更新、或用采样解码做蒙特卡洛估计而非穷举打分。更新节奏应追踪目录流失;校正优雅退化,因排序容忍相当大的估计器噪声(对操作性边际相关 ρ=0.84–0.94 的空上下文先验仍奏效)。
-\paragraph{Definition sensitivity} $\hat m$ averages \emph{log}-probabilities (the geometric mean of conditionals), which damps the influence of outlier users relative to an arithmetic-in-probability mean. The null-context prior is preferable only when logged histories are unavailable (privacy constraints, cold catalogs)---otherwise averaging is strictly more faithful (Section~\ref{sec:d3}).
-%〔译〕定义敏感性。m̂ 对对数概率取平均(条件的几何均值),相对概率算术均值抑制了离群用户的影响。空上下文先验只在无日志历史时更可取(隐私约束、冷目录)——否则取平均严格更忠实(第 6.6 节)。
-\paragraph{Relation to training-time redesigns} Ghost and LETTER intervene at training time and require full retraining; our correction is a decode flag on a frozen model. The natural cost-aware follow-up---\method{} applied on a LETTER-regularized tokenizer---is left open; the diagnostic of Section~\ref{sec:nottok} predicts when each lever applies.
-%〔译〕与训练期重设计的关系。Ghost 与 LETTER 在训练时干预并需完全重训;我们的校正是冻结模型上的一个解码开关。自然的成本感知后续——把 PopContrast 用在 LETTER 正则化的 tokenizer 上——留待开放;第 4.3 节的诊断预测各杠杆何时适用。
-
-\subsection{Additional Figures}\label{app:figs}
-Figure~\ref{fig:lorenz} shows item-exposure Lorenz curves at $\beta{=}1$: the corrected curve moves toward the diagonal on every dataset, the distributional counterpart of the coverage and Gini improvements in Table~\ref{tab:main}. Figure~\ref{fig:divapp} plots coverage and normalized entropy against $\beta$; both rise monotonically on all datasets, confirming that the exposure gains are spread across the catalog rather than concentrated on a new small set of items.
-%〔译〕附加图。图 7 展示 β=1 时物品曝光洛伦兹曲线:校正后曲线在每个数据集上向对角线移动,是表 2 中覆盖率与 Gini 改善的分布式对应。图 8 把覆盖率与归一化熵对 β 作图;两者在所有数据集上单调上升,确认曝光增益是散布在目录上而非集中到新的一小撮物品上。
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig3_exposure_lorenz.png}
-  \caption{Item-exposure Lorenz curves: \method{} ($\beta{=}1$, pink) pulls exposure toward the diagonal relative to frozen TIGER (blue).}
-  \label{fig:lorenz}
-\end{figure}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig2_diversification.png}
-  \caption{Coverage and normalized entropy rise monotonically with $\beta$ on all datasets.}
-  \label{fig:divapp}
-\end{figure}
-
+\section{Reproducibility}
+Code, task splits, frozen hyperparameters, and per-run generations are
+released; all experiments run on one 24GB GPU. [Proofs, full per-task
+tables, and additional ablations to be inserted.]
 
 \end{document}
