@@ -4,41 +4,41 @@
     "n_failures": 199,
     "judged": 20,
     "format_A": 0.1,
-    "neighbor_B": 0.0,
+    "neighbor_B": 0.1,
     "semantic_C": 0.55,
-    "degenerate_D": 0.35
-  },
-  {
-    "task": "alphabetically-last",
-    "n_failures": 196,
-    "judged": 20,
-    "format_A": 0.1,
-    "neighbor_B": 0.2,
-    "semantic_C": 0.4,
-    "degenerate_D": 0.3
-  },
-  {
-    "task": "animal-from-list",
-    "n_failures": 181,
-    "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.4,
-    "semantic_C": 0.25,
     "degenerate_D": 0.2
   },
   {
-    "task": "antonym",
-    "n_failures": 141,
+    "task": "alphabetically-last",
+    "n_failures": 189,
     "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.65,
-    "semantic_C": 0.15,
-    "degenerate_D": 0.0
+    "format_A": 0.1,
+    "neighbor_B": 0.25,
+    "semantic_C": 0.5,
+    "degenerate_D": 0.1
+  },
+  {
+    "task": "animal-from-list",
+    "n_failures": 158,
+    "judged": 20,
+    "format_A": 0.3,
+    "neighbor_B": 0.25,
+    "semantic_C": 0.3,
+    "degenerate_D": 0.1
+  },
+  {
+    "task": "antonym",
+    "n_failures": 119,
+    "judged": 20,
+    "format_A": 0.25,
+    "neighbor_B": 0.6,
+    "semantic_C": 0.05,
+    "degenerate_D": 0.05
   },
   {
     "task": "capitalize",
-    "n_failures": 4,
-    "judged": 4,
+    "n_failures": 1,
+    "judged": 1,
     "format_A": 0.0,
     "neighbor_B": 0.0,
     "semantic_C": 0.0,
@@ -46,129 +46,129 @@
   },
   {
     "task": "capitalize-first-letter",
-    "n_failures": 222,
+    "n_failures": 231,
     "judged": 20,
-    "format_A": 0.5,
-    "neighbor_B": 0.1,
-    "semantic_C": 0.1,
-    "degenerate_D": 0.25
+    "format_A": 0.3,
+    "neighbor_B": 0.3,
+    "semantic_C": 0.2,
+    "degenerate_D": 0.2
   },
   {
     "task": "capitalize-last-letter",
-    "n_failures": 243,
+    "n_failures": 242,
     "judged": 20,
     "format_A": 0.0,
-    "neighbor_B": 0.3,
+    "neighbor_B": 0.5,
     "semantic_C": 0.1,
-    "degenerate_D": 0.5
-  },
-  {
-    "task": "choose-first-of-list",
-    "n_failures": 96,
-    "judged": 20,
-    "format_A": 0.05,
-    "neighbor_B": 0.1,
-    "semantic_C": 0.8,
-    "degenerate_D": 0.05
-  },
-  {
-    "task": "choose-last-of-list",
-    "n_failures": 187,
-    "judged": 20,
-    "format_A": 0.05,
-    "neighbor_B": 0.05,
-    "semantic_C": 0.5,
     "degenerate_D": 0.35
   },
   {
-    "task": "choose-middle-of-list",
-    "n_failures": 216,
+    "task": "choose-first-of-list",
+    "n_failures": 103,
     "judged": 20,
-    "format_A": 0.25,
-    "neighbor_B": 0.0,
-    "semantic_C": 0.2,
-    "degenerate_D": 0.5
+    "format_A": 0.05,
+    "neighbor_B": 0.2,
+    "semantic_C": 0.65,
+    "degenerate_D": 0.1
+  },
+  {
+    "task": "choose-last-of-list",
+    "n_failures": 165,
+    "judged": 20,
+    "format_A": 0.2,
+    "neighbor_B": 0.3,
+    "semantic_C": 0.4,
+    "degenerate_D": 0.1
+  },
+  {
+    "task": "choose-middle-of-list",
+    "n_failures": 219,
+    "judged": 20,
+    "format_A": 0.2,
+    "neighbor_B": 0.1,
+    "semantic_C": 0.55,
+    "degenerate_D": 0.15
   },
   {
     "task": "color-from-list",
-    "n_failures": 116,
+    "n_failures": 115,
     "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.2,
-    "semantic_C": 0.45,
+    "format_A": 0.25,
+    "neighbor_B": 0.1,
+    "semantic_C": 0.5,
     "degenerate_D": 0.15
   },
   {
     "task": "country-capital",
-    "n_failures": 32,
+    "n_failures": 20,
     "judged": 20,
-    "format_A": 0.2,
-    "neighbor_B": 0.15,
-    "semantic_C": 0.5,
-    "degenerate_D": 0.1
+    "format_A": 0.0,
+    "neighbor_B": 0.45,
+    "semantic_C": 0.35,
+    "degenerate_D": 0.15
   },
   {
     "task": "country-currency",
-    "n_failures": 215,
+    "n_failures": 218,
     "judged": 20,
-    "format_A": 0.3,
-    "neighbor_B": 0.35,
-    "semantic_C": 0.3,
-    "degenerate_D": 0.05
+    "format_A": 0.45,
+    "neighbor_B": 0.15,
+    "semantic_C": 0.1,
+    "degenerate_D": 0.15
   },
   {
     "task": "english-french",
-    "n_failures": 207,
+    "n_failures": 173,
     "judged": 20,
-    "format_A": 0.05,
-    "neighbor_B": 0.25,
-    "semantic_C": 0.35,
-    "degenerate_D": 0.3
+    "format_A": 0.25,
+    "neighbor_B": 0.3,
+    "semantic_C": 0.3,
+    "degenerate_D": 0.15
   },
   {
     "task": "english-german",
-    "n_failures": 212,
+    "n_failures": 194,
     "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.15,
+    "format_A": 0.3,
+    "neighbor_B": 0.2,
     "semantic_C": 0.3,
-    "degenerate_D": 0.35
+    "degenerate_D": 0.2
   },
   {
     "task": "english-spanish",
-    "n_failures": 135,
+    "n_failures": 116,
     "judged": 20,
-    "format_A": 0.15,
+    "format_A": 0.3,
     "neighbor_B": 0.35,
-    "semantic_C": 0.3,
-    "degenerate_D": 0.2
+    "semantic_C": 0.25,
+    "degenerate_D": 0.1
   },
   {
     "task": "fruit-from-list",
-    "n_failures": 108,
+    "n_failures": 111,
     "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.0,
-    "semantic_C": 0.8,
-    "degenerate_D": 0.05
+    "format_A": 0.05,
+    "neighbor_B": 0.1,
+    "semantic_C": 0.65,
+    "degenerate_D": 0.15
   },
   {
     "task": "landmark-country",
-    "n_failures": 120,
+    "n_failures": 124,
     "judged": 20,
-    "format_A": 0.35,
+    "format_A": 0.2,
     "neighbor_B": 0.4,
-    "semantic_C": 0.2,
-    "degenerate_D": 0.05
+    "semantic_C": 0.3,
+    "degenerate_D": 0.1
   },
   {
     "task": "lowercase-first-letter",
-    "n_failures": 71,
+    "n_failures": 92,
     "judged": 20,
-    "format_A": 0.25,
-    "neighbor_B": 0.35,
+    "format_A": 0.35,
+    "neighbor_B": 0.3,
     "semantic_C": 0.1,
-    "degenerate_D": 0.2
+    "degenerate_D": 0.25
   },
   {
     "task": "next-capital-letter",
@@ -176,115 +176,115 @@
     "judged": 20,
     "format_A": 0.0,
     "neighbor_B": 0.4,
-    "semantic_C": 0.05,
-    "degenerate_D": 0.5
+    "semantic_C": 0.15,
+    "degenerate_D": 0.4
   },
   {
     "task": "next-item",
-    "n_failures": 146,
+    "n_failures": 131,
     "judged": 20,
-    "format_A": 0.05,
-    "neighbor_B": 0.5,
-    "semantic_C": 0.3,
-    "degenerate_D": 0.15
+    "format_A": 0.2,
+    "neighbor_B": 0.4,
+    "semantic_C": 0.15,
+    "degenerate_D": 0.25
   },
   {
     "task": "park-country",
-    "n_failures": 60,
+    "n_failures": 59,
     "judged": 20,
-    "format_A": 0.2,
-    "neighbor_B": 0.1,
-    "semantic_C": 0.65,
-    "degenerate_D": 0.0
+    "format_A": 0.1,
+    "neighbor_B": 0.2,
+    "semantic_C": 0.55,
+    "degenerate_D": 0.05
   },
   {
     "task": "person-instrument",
     "n_failures": 250,
     "judged": 20,
     "format_A": 0.0,
-    "neighbor_B": 0.95,
+    "neighbor_B": 0.85,
     "semantic_C": 0.0,
-    "degenerate_D": 0.0
+    "degenerate_D": 0.05
   },
   {
     "task": "person-occupation",
-    "n_failures": 246,
-    "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.2,
-    "semantic_C": 0.25,
-    "degenerate_D": 0.4
-  },
-  {
-    "task": "person-sport",
     "n_failures": 249,
     "judged": 20,
     "format_A": 0.35,
-    "neighbor_B": 0.4,
-    "semantic_C": 0.05,
+    "neighbor_B": 0.3,
+    "semantic_C": 0.25,
+    "degenerate_D": 0.1
+  },
+  {
+    "task": "person-sport",
+    "n_failures": 250,
+    "judged": 20,
+    "format_A": 0.25,
+    "neighbor_B": 0.55,
+    "semantic_C": 0.0,
     "degenerate_D": 0.2
   },
   {
     "task": "present-past",
-    "n_failures": 26,
+    "n_failures": 27,
     "judged": 20,
-    "format_A": 0.65,
-    "neighbor_B": 0.0,
-    "semantic_C": 0.1,
+    "format_A": 0.55,
+    "neighbor_B": 0.15,
+    "semantic_C": 0.0,
     "degenerate_D": 0.25
   },
   {
     "task": "prev-item",
-    "n_failures": 161,
+    "n_failures": 120,
     "judged": 20,
-    "format_A": 0.0,
+    "format_A": 0.1,
     "neighbor_B": 0.6,
-    "semantic_C": 0.2,
-    "degenerate_D": 0.15
+    "semantic_C": 0.25,
+    "degenerate_D": 0.05
   },
   {
     "task": "product-company",
-    "n_failures": 103,
+    "n_failures": 164,
     "judged": 20,
-    "format_A": 0.2,
+    "format_A": 0.0,
     "neighbor_B": 0.35,
-    "semantic_C": 0.05,
-    "degenerate_D": 0.35
+    "semantic_C": 0.1,
+    "degenerate_D": 0.5
   },
   {
     "task": "singular-plural",
     "n_failures": 10,
     "judged": 10,
     "format_A": 0.0,
-    "neighbor_B": 0.3,
-    "semantic_C": 0.4,
-    "degenerate_D": 0.3
+    "neighbor_B": 0.5,
+    "semantic_C": 0.1,
+    "degenerate_D": 0.4
   },
   {
     "task": "synonym",
-    "n_failures": 127,
+    "n_failures": 119,
     "judged": 20,
-    "format_A": 0.15,
-    "neighbor_B": 0.55,
-    "semantic_C": 0.3,
+    "format_A": 0.2,
+    "neighbor_B": 0.6,
+    "semantic_C": 0.15,
     "degenerate_D": 0.0
   },
   {
     "task": "verb-from-list",
-    "n_failures": 141,
+    "n_failures": 145,
     "judged": 20,
-    "format_A": 0.3,
-    "neighbor_B": 0.15,
-    "semantic_C": 0.2,
-    "degenerate_D": 0.3
+    "format_A": 0.55,
+    "neighbor_B": 0.1,
+    "semantic_C": 0.15,
+    "degenerate_D": 0.2
   },
   {
     "task": "word-length",
     "n_failures": 250,
     "judged": 20,
     "format_A": 0.0,
-    "neighbor_B": 0.6,
+    "neighbor_B": 0.9,
     "semantic_C": 0.0,
-    "degenerate_D": 0.4
+    "degenerate_D": 0.1
   }
 ]
