@@ -31,7 +31,7 @@ def _support_weights(code):
 
 def ops_for(mld: MultiLayerDictionary, code, gamma=1.0, beta=2.0,
             alpha_max=1.0, injection="affine", rescale=True, delta_vec=None,
-            anchor_mode="mean"):
+            anchor_mode="gated"):
     """Returns (ops, layers) for HookedLM.generate multi-layer injection.
 
     delta_vec: stacked direction to inject. Default (None) uses the dictionary
@@ -51,6 +51,17 @@ def ops_for(mld: MultiLayerDictionary, code, gamma=1.0, beta=2.0,
         dn = np.linalg.norm(delta)
         if dn > 1e-8:
             delta *= target / dn
+
+    # gated correction: trust the subspace pull only insofar as the
+    # demonstration direction agrees with the support anchor (inverse tasks
+    # share subspaces but point the opposite way -> gate ~ 0)
+    gate = 1.0
+    if anchor_mode == "gated" and code.support:
+        w = _support_weights(code)
+        mu_full = sum(wi * mld.anchors[n] for wi, n in zip(w, code.support))
+        gate = max(0.0, float(delta @ mu_full /
+                              (np.linalg.norm(delta) *
+                               np.linalg.norm(mu_full) + 1e-12)))
 
     ops, layers = [], []
     delta_by_layer = mld.split(delta)
@@ -77,11 +88,37 @@ def ops_for(mld: MultiLayerDictionary, code, gamma=1.0, beta=2.0,
         if injection == "projection":
             ops.append(make_affine_op(np.zeros_like(dl), B_l, mu_l, gamma=0.0,
                                       beta=beta, alpha_max=alpha_max))
+        elif anchor_mode == "gated":
+            ops.append(_gated_op(dl, B_l, mu_l, gate, gamma, beta, alpha_max))
         else:
             ops.append(make_affine_op(dl, B_l, mu_l, gamma=gamma, beta=beta,
                                       alpha_max=alpha_max))
         layers.append(l)
     return ops, layers
+
+
+def _gated_op(dl, B_l, mu_l, gate, gamma, beta, alpha_max):
+    """Correction term scaled by `gate`; the demonstration direction always
+    injects at full strength (matches the z-only additive path at gate=0)."""
+    import torch
+    from .steer import _to_torch
+    Q, _ = np.linalg.qr(B_l)
+    Qt = _to_torch(Q, "cuda")
+    dvec = _to_torch(dl, "cuda")
+    mu = _to_torch(mu_l, "cuda")
+
+    def op(h):
+        h = h.float()
+        diff = mu.unsqueeze(0) - h
+        proj = (diff @ Qt) @ Qt.T
+        ortho = diff - proj
+        alpha = (beta * ortho.norm(dim=1) / (h.norm(dim=1) + 1e-8)) \
+            .clamp(max=alpha_max).unsqueeze(1)
+        # gate scales both the subspace pull and the adaptivity of alpha;
+        # at gate=0 this reduces to plain additive injection of gamma*delta
+        eff = gate * alpha + (1.0 - gate)
+        return h + eff * gamma * dvec.unsqueeze(0) + gate * alpha * proj
+    return op
 
 
 def oracle_ops(mld: MultiLayerDictionary, task_name, gamma=1.0, beta=2.0,

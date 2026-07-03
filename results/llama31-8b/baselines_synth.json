@@ -1,0 +1,62 @@
+{
+  "country-continent": {
+    "zs": 0.0,
+    "icl_mean": 1.0
+  },
+  "element-symbol": {
+    "zs": 0.0,
+    "icl_mean": 0.8
+  },
+  "animal-baby": {
+    "zs": 0.0,
+    "icl_mean": 0.8
+  },
+  "fruit-color": {
+    "zs": 0.06,
+    "icl_mean": 0.84
+  },
+  "profession-workplace": {
+    "zs": 0.0,
+    "icl_mean": 0.45714285714285713
+  },
+  "capital-country": {
+    "zs": 0.041666666666666664,
+    "icl_mean": 0.9583333333333334
+  },
+  "verb-gerund": {
+    "zs": 0.0,
+    "icl_mean": 1.0
+  },
+  "adjective-comparative": {
+    "zs": 0.0,
+    "icl_mean": 0.96
+  },
+  "adjective-adverb": {
+    "zs": 0.08,
+    "icl_mean": 0.88
+  },
+  "past-present": {
+    "zs": 0.08,
+    "icl_mean": 1.0
+  },
+  "english-italian": {
+    "zs": 0.0,
+    "icl_mean": 0.98
+  },
+  "english-portuguese": {
+    "zs": 0.0,
+    "icl_mean": 0.92
+  },
+  "french-english": {
+    "zs": 0.46,
+    "icl_mean": 0.88
+  },
+  "word-last-letter": {
+    "zs": 0.02,
+    "icl_mean": 0.6
+  },
+  "number-plus-one": {
+    "zs": 0.0,
+    "icl_mean": 1.0
+  }
+}
