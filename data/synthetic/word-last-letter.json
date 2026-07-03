@@ -1,0 +1,882 @@
+[
+ {
+  "input": "apple",
+  "output": "e"
+ },
+ {
+  "input": "banana",
+  "output": "a"
+ },
+ {
+  "input": "cherry",
+  "output": "y"
+ },
+ {
+  "input": "date",
+  "output": "e"
+ },
+ {
+  "input": "elderberry",
+  "output": "y"
+ },
+ {
+  "input": "fig",
+  "output": "g"
+ },
+ {
+  "input": "grape",
+  "output": "e"
+ },
+ {
+  "input": "honeydew",
+  "output": "w"
+ },
+ {
+  "input": "kiwi",
+  "output": "i"
+ },
+ {
+  "input": "lemon",
+  "output": "n"
+ },
+ {
+  "input": "mango",
+  "output": "o"
+ },
+ {
+  "input": "nectarine",
+  "output": "e"
+ },
+ {
+  "input": "olive",
+  "output": "e"
+ },
+ {
+  "input": "papaya",
+  "output": "a"
+ },
+ {
+  "input": "quince",
+  "output": "e"
+ },
+ {
+  "input": "raspberry",
+  "output": "y"
+ },
+ {
+  "input": "strawberry",
+  "output": "y"
+ },
+ {
+  "input": "tangerine",
+  "output": "e"
+ },
+ {
+  "input": "ugli",
+  "output": "i"
+ },
+ {
+  "input": "vanilla",
+  "output": "a"
+ },
+ {
+  "input": "watermelon",
+  "output": "n"
+ },
+ {
+  "input": "xigua",
+  "output": "a"
+ },
+ {
+  "input": "yuzu",
+  "output": "u"
+ },
+ {
+  "input": "zucchini",
+  "output": "i"
+ },
+ {
+  "input": "apricot",
+  "output": "t"
+ },
+ {
+  "input": "blackberry",
+  "output": "y"
+ },
+ {
+  "input": "cantaloupe",
+  "output": "e"
+ },
+ {
+  "input": "dragonfruit",
+  "output": "t"
+ },
+ {
+  "input": "endive",
+  "output": "e"
+ },
+ {
+  "input": "fennel",
+  "output": "l"
+ },
+ {
+  "input": "galia",
+  "output": "a"
+ },
+ {
+  "input": "huckleberry",
+  "output": "y"
+ },
+ {
+  "input": "jackfruit",
+  "output": "t"
+ },
+ {
+  "input": "kale",
+  "output": "e"
+ },
+ {
+  "input": "lavender",
+  "output": "r"
+ },
+ {
+  "input": "mushroom",
+  "output": "m"
+ },
+ {
+  "input": "nectar",
+  "output": "r"
+ },
+ {
+  "input": "onion",
+  "output": "n"
+ },
+ {
+  "input": "parsley",
+  "output": "y"
+ },
+ {
+  "input": "radish",
+  "output": "h"
+ },
+ {
+  "input": "spinach",
+  "output": "h"
+ },
+ {
+  "input": "tomato",
+  "output": "o"
+ },
+ {
+  "input": "urad",
+  "output": "d"
+ },
+ {
+  "input": "vegetable",
+  "output": "e"
+ },
+ {
+  "input": "wheat",
+  "output": "t"
+ },
+ {
+  "input": "xylem",
+  "output": "m"
+ },
+ {
+  "input": "yogurt",
+  "output": "t"
+ },
+ {
+  "input": "zinnia",
+  "output": "a"
+ },
+ {
+  "input": "acorn",
+  "output": "n"
+ },
+ {
+  "input": "basil",
+  "output": "l"
+ },
+ {
+  "input": "cactus",
+  "output": "s"
+ },
+ {
+  "input": "daisy",
+  "output": "y"
+ },
+ {
+  "input": "ephemera",
+  "output": "a"
+ },
+ {
+  "input": "fern",
+  "output": "n"
+ },
+ {
+  "input": "geranium",
+  "output": "m"
+ },
+ {
+  "input": "hibiscus",
+  "output": "s"
+ },
+ {
+  "input": "iris",
+  "output": "s"
+ },
+ {
+  "input": "jasmine",
+  "output": "e"
+ },
+ {
+  "input": "kelp",
+  "output": "p"
+ },
+ {
+  "input": "lily",
+  "output": "y"
+ },
+ {
+  "input": "magnolia",
+  "output": "a"
+ },
+ {
+  "input": "narcissus",
+  "output": "s"
+ },
+ {
+  "input": "orchid",
+  "output": "d"
+ },
+ {
+  "input": "petunia",
+  "output": "a"
+ },
+ {
+  "input": "rosemary",
+  "output": "y"
+ },
+ {
+  "input": "sunflower",
+  "output": "r"
+ },
+ {
+  "input": "tulip",
+  "output": "p"
+ },
+ {
+  "input": "violet",
+  "output": "t"
+ },
+ {
+  "input": "wisteria",
+  "output": "a"
+ },
+ {
+  "input": "xerophyte",
+  "output": "e"
+ },
+ {
+  "input": "yarrow",
+  "output": "w"
+ },
+ {
+  "input": "zephyr",
+  "output": "r"
+ },
+ {
+  "input": "alpine",
+  "output": "e"
+ },
+ {
+  "input": "bromeliad",
+  "output": "d"
+ },
+ {
+  "input": "clover",
+  "output": "r"
+ },
+ {
+  "input": "daffodil",
+  "output": "l"
+ },
+ {
+  "input": "echinacea",
+  "output": "a"
+ },
+ {
+  "input": "foxglove",
+  "output": "e"
+ },
+ {
+  "input": "gladiolus",
+  "output": "s"
+ },
+ {
+  "input": "hydrangea",
+  "output": "a"
+ },
+ {
+  "input": "ivy",
+  "output": "y"
+ },
+ {
+  "input": "juniper",
+  "output": "r"
+ },
+ {
+  "input": "kalanchoe",
+  "output": "e"
+ },
+ {
+  "input": "lupin",
+  "output": "n"
+ },
+ {
+  "input": "marigold",
+  "output": "d"
+ },
+ {
+  "input": "nasturtium",
+  "output": "m"
+ },
+ {
+  "input": "oleander",
+  "output": "r"
+ },
+ {
+  "input": "pansy",
+  "output": "y"
+ },
+ {
+  "input": "quinoa",
+  "output": "a"
+ },
+ {
+  "input": "rhubarb",
+  "output": "b"
+ },
+ {
+  "input": "sage",
+  "output": "e"
+ },
+ {
+  "input": "thyme",
+  "output": "e"
+ },
+ {
+  "input": "ultraviolet",
+  "output": "t"
+ },
+ {
+  "input": "verbena",
+  "output": "a"
+ },
+ {
+  "input": "wildflower",
+  "output": "r"
+ },
+ {
+  "input": "xanthan",
+  "output": "n"
+ },
+ {
+  "input": "yucca",
+  "output": "a"
+ },
+ {
+  "input": "zinc",
+  "output": "c"
+ },
+ {
+  "input": "amber",
+  "output": "r"
+ },
+ {
+  "input": "bronze",
+  "output": "e"
+ },
+ {
+  "input": "copper",
+  "output": "r"
+ },
+ {
+  "input": "diamond",
+  "output": "d"
+ },
+ {
+  "input": "emerald",
+  "output": "d"
+ },
+ {
+  "input": "gold",
+  "output": "d"
+ },
+ {
+  "input": "hematite",
+  "output": "e"
+ },
+ {
+  "input": "ivory",
+  "output": "y"
+ },
+ {
+  "input": "jade",
+  "output": "e"
+ },
+ {
+  "input": "krypton",
+  "output": "n"
+ },
+ {
+  "input": "lapis",
+  "output": "s"
+ },
+ {
+  "input": "malachite",
+  "output": "e"
+ },
+ {
+  "input": "nickel",
+  "output": "l"
+ },
+ {
+  "input": "opal",
+  "output": "l"
+ },
+ {
+  "input": "pearl",
+  "output": "l"
+ },
+ {
+  "input": "quartz",
+  "output": "z"
+ },
+ {
+  "input": "ruby",
+  "output": "y"
+ },
+ {
+  "input": "sapphire",
+  "output": "e"
+ },
+ {
+  "input": "topaz",
+  "output": "z"
+ },
+ {
+  "input": "uranium",
+  "output": "m"
+ },
+ {
+  "input": "verdigris",
+  "output": "s"
+ },
+ {
+  "input": "wax",
+  "output": "x"
+ },
+ {
+  "input": "xenon",
+  "output": "n"
+ },
+ {
+  "input": "yellowstone",
+  "output": "e"
+ },
+ {
+  "input": "zincite",
+  "output": "e"
+ },
+ {
+  "input": "abacus",
+  "output": "s"
+ },
+ {
+  "input": "balalaika",
+  "output": "a"
+ },
+ {
+  "input": "calypso",
+  "output": "o"
+ },
+ {
+  "input": "drum",
+  "output": "m"
+ },
+ {
+  "input": "electric",
+  "output": "c"
+ },
+ {
+  "input": "flute",
+  "output": "e"
+ },
+ {
+  "input": "guitar",
+  "output": "r"
+ },
+ {
+  "input": "harp",
+  "output": "p"
+ },
+ {
+  "input": "instrument",
+  "output": "t"
+ },
+ {
+  "input": "jazz",
+  "output": "z"
+ },
+ {
+  "input": "kazoo",
+  "output": "o"
+ },
+ {
+  "input": "lyre",
+  "output": "e"
+ },
+ {
+  "input": "mandolin",
+  "output": "n"
+ },
+ {
+  "input": "note",
+  "output": "e"
+ },
+ {
+  "input": "organ",
+  "output": "n"
+ },
+ {
+  "input": "piano",
+  "output": "o"
+ },
+ {
+  "input": "quartet",
+  "output": "t"
+ },
+ {
+  "input": "rhythm",
+  "output": "m"
+ },
+ {
+  "input": "saxophone",
+  "output": "e"
+ },
+ {
+  "input": "trombone",
+  "output": "e"
+ },
+ {
+  "input": "ukulele",
+  "output": "e"
+ },
+ {
+  "input": "violin",
+  "output": "n"
+ },
+ {
+  "input": "whistle",
+  "output": "e"
+ },
+ {
+  "input": "xylophone",
+  "output": "e"
+ },
+ {
+  "input": "yodel",
+  "output": "l"
+ },
+ {
+  "input": "zither",
+  "output": "r"
+ },
+ {
+  "input": "alpha",
+  "output": "a"
+ },
+ {
+  "input": "beta",
+  "output": "a"
+ },
+ {
+  "input": "gamma",
+  "output": "a"
+ },
+ {
+  "input": "delta",
+  "output": "a"
+ },
+ {
+  "input": "epsilon",
+  "output": "n"
+ },
+ {
+  "input": "zeta",
+  "output": "a"
+ },
+ {
+  "input": "eta",
+  "output": "a"
+ },
+ {
+  "input": "theta",
+  "output": "a"
+ },
+ {
+  "input": "iota",
+  "output": "a"
+ },
+ {
+  "input": "kappa",
+  "output": "a"
+ },
+ {
+  "input": "lambda",
+  "output": "a"
+ },
+ {
+  "input": "mu",
+  "output": "u"
+ },
+ {
+  "input": "nu",
+  "output": "u"
+ },
+ {
+  "input": "xi",
+  "output": "i"
+ },
+ {
+  "input": "omicron",
+  "output": "n"
+ },
+ {
+  "input": "pi",
+  "output": "i"
+ },
+ {
+  "input": "rho",
+  "output": "o"
+ },
+ {
+  "input": "sigma",
+  "output": "a"
+ },
+ {
+  "input": "tau",
+  "output": "u"
+ },
+ {
+  "input": "upsilon",
+  "output": "n"
+ },
+ {
+  "input": "phi",
+  "output": "i"
+ },
+ {
+  "input": "chi",
+  "output": "i"
+ },
+ {
+  "input": "psi",
+  "output": "i"
+ },
+ {
+  "input": "omega",
+  "output": "a"
+ },
+ {
+  "input": "atomic",
+  "output": "c"
+ },
+ {
+  "input": "binary",
+  "output": "y"
+ },
+ {
+  "input": "cellular",
+  "output": "r"
+ },
+ {
+  "input": "digital",
+  "output": "l"
+ },
+ {
+  "input": "electronic",
+  "output": "c"
+ },
+ {
+  "input": "fiber",
+  "output": "r"
+ },
+ {
+  "input": "global",
+  "output": "l"
+ },
+ {
+  "input": "hologram",
+  "output": "m"
+ },
+ {
+  "input": "internet",
+  "output": "t"
+ },
+ {
+  "input": "javascript",
+  "output": "t"
+ },
+ {
+  "input": "kernel",
+  "output": "l"
+ },
+ {
+  "input": "logic",
+  "output": "c"
+ },
+ {
+  "input": "mainframe",
+  "output": "e"
+ },
+ {
+  "input": "network",
+  "output": "k"
+ },
+ {
+  "input": "operating",
+  "output": "g"
+ },
+ {
+  "input": "quantum",
+  "output": "m"
+ },
+ {
+  "input": "robotics",
+  "output": "s"
+ },
+ {
+  "input": "software",
+  "output": "e"
+ },
+ {
+  "input": "terminal",
+  "output": "l"
+ },
+ {
+  "input": "unit",
+  "output": "t"
+ },
+ {
+  "input": "virtual",
+  "output": "l"
+ },
+ {
+  "input": "web",
+  "output": "b"
+ },
+ {
+  "input": "xml",
+  "output": "l"
+ },
+ {
+  "input": "yaml",
+  "output": "l"
+ },
+ {
+  "input": "zip",
+  "output": "p"
+ },
+ {
+  "input": "algorithm",
+  "output": "m"
+ },
+ {
+  "input": "boolean",
+  "output": "n"
+ },
+ {
+  "input": "cache",
+  "output": "e"
+ },
+ {
+  "input": "debug",
+  "output": "g"
+ },
+ {
+  "input": "error",
+  "output": "r"
+ },
+ {
+  "input": "function",
+  "output": "n"
+ },
+ {
+  "input": "garbage",
+  "output": "e"
+ },
+ {
+  "input": "heap",
+  "output": "p"
+ },
+ {
+  "input": "index",
+  "output": "x"
+ },
+ {
+  "input": "java",
+  "output": "a"
+ },
+ {
+  "input": "keyword",
+  "output": "d"
+ },
+ {
+  "input": "loop",
+  "output": "p"
+ },
+ {
+  "input": "memory",
+  "output": "y"
+ },
+ {
+  "input": "null",
+  "output": "l"
+ },
+ {
+  "input": "object",
+  "output": "t"
+ },
+ {
+  "input": "pointer",
+  "output": "r"
+ },
+ {
+  "input": "queue",
+  "output": "e"
+ },
+ {
+  "input": "recursion",
+  "output": "n"
+ },
+ {
+  "input": "syntax",
+  "output": "x"
+ },
+ {
+  "input": "token",
+  "output": "n"
+ },
+ {
+  "input": "variable",
+  "output": "e"
+ },
+ {
+  "input": "while",
+  "output": "e"
+ }
+]

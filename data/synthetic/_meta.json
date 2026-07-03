@@ -1,0 +1,17 @@
+{
+ "country-continent": "knowledge",
+ "element-symbol": "knowledge",
+ "animal-baby": "knowledge",
+ "fruit-color": "knowledge",
+ "profession-workplace": "knowledge",
+ "capital-country": "knowledge",
+ "verb-gerund": "linguistic",
+ "adjective-comparative": "linguistic",
+ "adjective-adverb": "linguistic",
+ "past-present": "linguistic",
+ "english-italian": "translation",
+ "english-portuguese": "translation",
+ "french-english": "translation",
+ "word-last-letter": "algorithmic",
+ "number-plus-one": "algorithmic"
+}

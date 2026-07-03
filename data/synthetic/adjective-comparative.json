@@ -1,0 +1,2354 @@
+[
+ {
+  "input": "big",
+  "output": "bigger"
+ },
+ {
+  "input": "hot",
+  "output": "hotter"
+ },
+ {
+  "input": "wet",
+  "output": "wetter"
+ },
+ {
+  "input": "fat",
+  "output": "fatter"
+ },
+ {
+  "input": "thin",
+  "output": "thinner"
+ },
+ {
+  "input": "sad",
+  "output": "sadder"
+ },
+ {
+  "input": "glad",
+  "output": "gladder"
+ },
+ {
+  "input": "mad",
+  "output": "madder"
+ },
+ {
+  "input": "red",
+  "output": "redder"
+ },
+ {
+  "input": "slim",
+  "output": "slimmer"
+ },
+ {
+  "input": "dim",
+  "output": "dimmer"
+ },
+ {
+  "input": "grim",
+  "output": "grimmer"
+ },
+ {
+  "input": "trim",
+  "output": "trimmer"
+ },
+ {
+  "input": "fit",
+  "output": "fitter"
+ },
+ {
+  "input": "tall",
+  "output": "taller"
+ },
+ {
+  "input": "short",
+  "output": "shorter"
+ },
+ {
+  "input": "long",
+  "output": "longer"
+ },
+ {
+  "input": "old",
+  "output": "older"
+ },
+ {
+  "input": "new",
+  "output": "newer"
+ },
+ {
+  "input": "young",
+  "output": "younger"
+ },
+ {
+  "input": "strong",
+  "output": "stronger"
+ },
+ {
+  "input": "weak",
+  "output": "weaker"
+ },
+ {
+  "input": "hard",
+  "output": "harder"
+ },
+ {
+  "input": "soft",
+  "output": "softer"
+ },
+ {
+  "input": "warm",
+  "output": "warmer"
+ },
+ {
+  "input": "cold",
+  "output": "colder"
+ },
+ {
+  "input": "deep",
+  "output": "deeper"
+ },
+ {
+  "input": "wide",
+  "output": "wider"
+ },
+ {
+  "input": "high",
+  "output": "higher"
+ },
+ {
+  "input": "low",
+  "output": "lower"
+ },
+ {
+  "input": "near",
+  "output": "nearer"
+ },
+ {
+  "input": "far",
+  "output": "farther"
+ },
+ {
+  "input": "late",
+  "output": "later"
+ },
+ {
+  "input": "early",
+  "output": "earlier"
+ },
+ {
+  "input": "clear",
+  "output": "clearer"
+ },
+ {
+  "input": "bright",
+  "output": "brighter"
+ },
+ {
+  "input": "dull",
+  "output": "duller"
+ },
+ {
+  "input": "loud",
+  "output": "louder"
+ },
+ {
+  "input": "quiet",
+  "output": "quieter"
+ },
+ {
+  "input": "sharp",
+  "output": "sharper"
+ },
+ {
+  "input": "round",
+  "output": "rounder"
+ },
+ {
+  "input": "flat",
+  "output": "flatter"
+ },
+ {
+  "input": "smooth",
+  "output": "smoother"
+ },
+ {
+  "input": "rough",
+  "output": "rougher"
+ },
+ {
+  "input": "thick",
+  "output": "thicker"
+ },
+ {
+  "input": "narrow",
+  "output": "narrower"
+ },
+ {
+  "input": "steep",
+  "output": "steeper"
+ },
+ {
+  "input": "shallow",
+  "output": "shallower"
+ },
+ {
+  "input": "heavy",
+  "output": "heavier"
+ },
+ {
+  "input": "light",
+  "output": "lighter"
+ },
+ {
+  "input": "dense",
+  "output": "denser"
+ },
+ {
+  "input": "sparse",
+  "output": "sparser"
+ },
+ {
+  "input": "full",
+  "output": "fuller"
+ },
+ {
+  "input": "empty",
+  "output": "emptier"
+ },
+ {
+  "input": "clean",
+  "output": "cleaner"
+ },
+ {
+  "input": "dark",
+  "output": "darker"
+ },
+ {
+  "input": "crisp",
+  "output": "crisper"
+ },
+ {
+  "input": "fresh",
+  "output": "fresher"
+ },
+ {
+  "input": "stale",
+  "output": "staler"
+ },
+ {
+  "input": "ripe",
+  "output": "riper"
+ },
+ {
+  "input": "green",
+  "output": "greener"
+ },
+ {
+  "input": "blue",
+  "output": "bluer"
+ },
+ {
+  "input": "black",
+  "output": "blacker"
+ },
+ {
+  "input": "white",
+  "output": "whiter"
+ },
+ {
+  "input": "gray",
+  "output": "grayer"
+ },
+ {
+  "input": "brown",
+  "output": "browner"
+ },
+ {
+  "input": "pink",
+  "output": "pinker"
+ },
+ {
+  "input": "cheap",
+  "output": "cheaper"
+ },
+ {
+  "input": "dear",
+  "output": "dearer"
+ },
+ {
+  "input": "safe",
+  "output": "safer"
+ },
+ {
+  "input": "bare",
+  "output": "barer"
+ },
+ {
+  "input": "fair",
+  "output": "fairer"
+ },
+ {
+  "input": "rare",
+  "output": "rarer"
+ },
+ {
+  "input": "neat",
+  "output": "neater"
+ },
+ {
+  "input": "sweet",
+  "output": "sweeter"
+ },
+ {
+  "input": "brief",
+  "output": "briefer"
+ },
+ {
+  "input": "fierce",
+  "output": "fiercer"
+ },
+ {
+  "input": "polite",
+  "output": "politer"
+ },
+ {
+  "input": "simple",
+  "output": "simpler"
+ },
+ {
+  "input": "noble",
+  "output": "nobler"
+ },
+ {
+  "input": "able",
+  "output": "abler"
+ },
+ {
+  "input": "gentle",
+  "output": "gentler"
+ },
+ {
+  "input": "complete",
+  "output": "completer"
+ },
+ {
+  "input": "stable",
+  "output": "stabler"
+ },
+ {
+  "input": "active",
+  "output": "activer"
+ },
+ {
+  "input": "passive",
+  "output": "passiver"
+ },
+ {
+  "input": "native",
+  "output": "nativer"
+ },
+ {
+  "input": "private",
+  "output": "privater"
+ },
+ {
+  "input": "vague",
+  "output": "vaguer"
+ },
+ {
+  "input": "huge",
+  "output": "huger"
+ },
+ {
+  "input": "rude",
+  "output": "ruder"
+ },
+ {
+  "input": "crude",
+  "output": "cruder"
+ },
+ {
+  "input": "nude",
+  "output": "nuder"
+ },
+ {
+  "input": "true",
+  "output": "truer"
+ },
+ {
+  "input": "false",
+  "output": "falser"
+ },
+ {
+  "input": "sure",
+  "output": "surer"
+ },
+ {
+  "input": "cruel",
+  "output": "crueller"
+ },
+ {
+  "input": "useful",
+  "output": "usefuler"
+ },
+ {
+  "input": "peaceful",
+  "output": "peacefuler"
+ },
+ {
+  "input": "careful",
+  "output": "carefuler"
+ },
+ {
+  "input": "painful",
+  "output": "painfuler"
+ },
+ {
+  "input": "hopeful",
+  "output": "hopefuler"
+ },
+ {
+  "input": "helpful",
+  "output": "helpfuler"
+ },
+ {
+  "input": "thankful",
+  "output": "thankfuler"
+ },
+ {
+  "input": "wonderful",
+  "output": "wonderfuler"
+ },
+ {
+  "input": "beautiful",
+  "output": "beautifuler"
+ },
+ {
+  "input": "comfortable",
+  "output": "comfortabler"
+ },
+ {
+  "input": "powerful",
+  "output": "powerfuler"
+ },
+ {
+  "input": "awful",
+  "output": "awfuler"
+ },
+ {
+  "input": "joyful",
+  "output": "joyfuler"
+ },
+ {
+  "input": "cheerful",
+  "output": "cheerfuler"
+ },
+ {
+  "input": "hopeless",
+  "output": "hopelesser"
+ },
+ {
+  "input": "thoughtless",
+  "output": "thoughtlesser"
+ },
+ {
+  "input": "careless",
+  "output": "carelesser"
+ },
+ {
+  "input": "useless",
+  "output": "uselesser"
+ },
+ {
+  "input": "worthless",
+  "output": "worthlesser"
+ },
+ {
+  "input": "meaningless",
+  "output": "meaninglesser"
+ },
+ {
+  "input": "purposeless",
+  "output": "purposelesser"
+ },
+ {
+  "input": "fearless",
+  "output": "fearlesser"
+ },
+ {
+  "input": "homeless",
+  "output": "homelesser"
+ },
+ {
+  "input": "restless",
+  "output": "restlesser"
+ },
+ {
+  "input": "sleepless",
+  "output": "sleeplesser"
+ },
+ {
+  "input": "tireless",
+  "output": "tirelesser"
+ },
+ {
+  "input": "endless",
+  "output": "endlesser"
+ },
+ {
+  "input": "ageless",
+  "output": "agelesser"
+ },
+ {
+  "input": "boundless",
+  "output": "boundlesser"
+ },
+ {
+  "input": "countless",
+  "output": "countlesser"
+ },
+ {
+  "input": "thoughtful",
+  "output": "thoughtfuler"
+ },
+ {
+  "input": "respectful",
+  "output": "respectfuler"
+ },
+ {
+  "input": "disrespectful",
+  "output": "disrespectfuler"
+ },
+ {
+  "input": "faithful",
+  "output": "faithfuler"
+ },
+ {
+  "input": "unfaithful",
+  "output": "unfaithfuler"
+ },
+ {
+  "input": "loyal",
+  "output": "loyaler"
+ },
+ {
+  "input": "disloyal",
+  "output": "disloyaler"
+ },
+ {
+  "input": "brave",
+  "output": "braver"
+ },
+ {
+  "input": "cowardly",
+  "output": "cowardlier"
+ },
+ {
+  "input": "timid",
+  "output": "timider"
+ },
+ {
+  "input": "fearful",
+  "output": "fearfuler"
+ },
+ {
+  "input": "scared",
+  "output": "scarer"
+ },
+ {
+  "input": "calm",
+  "output": "calmer"
+ },
+ {
+  "input": "relaxed",
+  "output": "relaxeder"
+ },
+ {
+  "input": "tranquil",
+  "output": "tranquiler"
+ },
+ {
+  "input": "serene",
+  "output": "serener"
+ },
+ {
+  "input": "motionless",
+  "output": "motionlesser"
+ },
+ {
+  "input": "silent",
+  "output": "silenter"
+ },
+ {
+  "input": "noiseless",
+  "output": "noiselesser"
+ },
+ {
+  "input": "soundless",
+  "output": "soundlesser"
+ },
+ {
+  "input": "voiceless",
+  "output": "voicelesser"
+ },
+ {
+  "input": "wordless",
+  "output": "wordlesser"
+ },
+ {
+  "input": "speechless",
+  "output": "speechlesser"
+ },
+ {
+  "input": "breathless",
+  "output": "breathlesser"
+ },
+ {
+  "input": "heartless",
+  "output": "heartlesser"
+ },
+ {
+  "input": "soulless",
+  "output": "soullesser"
+ },
+ {
+  "input": "mindless",
+  "output": "mindlesser"
+ },
+ {
+  "input": "senseless",
+  "output": "senselesser"
+ },
+ {
+  "input": "reasonless",
+  "output": "reasonlesser"
+ },
+ {
+  "input": "goalless",
+  "output": "goallesser"
+ },
+ {
+  "input": "aimless",
+  "output": "aimlesser"
+ },
+ {
+  "input": "directionless",
+  "output": "directionlesser"
+ },
+ {
+  "input": "pathless",
+  "output": "pathlesser"
+ },
+ {
+  "input": "trackless",
+  "output": "tracklesser"
+ },
+ {
+  "input": "trailless",
+  "output": "traillesser"
+ },
+ {
+  "input": "roadless",
+  "output": "roadlesser"
+ },
+ {
+  "input": "streetless",
+  "output": "streetlesser"
+ },
+ {
+  "input": "avenueless",
+  "output": "avenuelesser"
+ },
+ {
+  "input": "boulevardless",
+  "output": "boulevardlesser"
+ },
+ {
+  "input": "highwayless",
+  "output": "highwaylesser"
+ },
+ {
+  "input": "freewayless",
+  "output": "freewaylesser"
+ },
+ {
+  "input": "expresswayless",
+  "output": "expresswaylesser"
+ },
+ {
+  "input": "turnpikeless",
+  "output": "turnpikelesser"
+ },
+ {
+  "input": "parkwayless",
+  "output": "parkwaylesser"
+ },
+ {
+  "input": "drivewayless",
+  "output": "drivewaylesser"
+ },
+ {
+  "input": "alleyless",
+  "output": "alleylesser"
+ },
+ {
+  "input": "laneless",
+  "output": "lanelesser"
+ },
+ {
+  "input": "courtl ess",
+  "output": "courtlesser"
+ },
+ {
+  "input": "squareless",
+  "output": "squarelesser"
+ },
+ {
+  "input": "plazale ss",
+  "output": "plazalesser"
+ },
+ {
+  "input": "mallless",
+  "output": "malllesser"
+ },
+ {
+  "input": "centerless",
+  "output": "centerlesser"
+ },
+ {
+  "input": "hubless",
+  "output": "hublesser"
+ },
+ {
+  "input": "coreless",
+  "output": "corelesser"
+ },
+ {
+  "input": "middleless",
+  "output": "middlelesser"
+ },
+ {
+  "input": "centralless",
+  "output": "centrallesser"
+ },
+ {
+  "input": "midpointless",
+  "output": "midpointlesser"
+ },
+ {
+  "input": "crossroadsless",
+  "output": "crossroadslesser"
+ },
+ {
+  "input": "intersectionless",
+  "output": "intersectionlesser"
+ },
+ {
+  "input": "junctionless",
+  "output": "junctionlesser"
+ },
+ {
+  "input": "confluenceless",
+  "output": "confluencelesser"
+ },
+ {
+  "input": "meetingless",
+  "output": "meetinglesser"
+ },
+ {
+  "input": "gatheringless",
+  "output": "gatheringlesser"
+ },
+ {
+  "input": "assemblyless",
+  "output": "assemblylesser"
+ },
+ {
+  "input": "conferenceless",
+  "output": "conferencelesser"
+ },
+ {
+  "input": "conventionless",
+  "output": "conventionlesser"
+ },
+ {
+  "input": "summitless",
+  "output": "summitlesser"
+ },
+ {
+  "input": "forumless",
+  "output": "forumlesser"
+ },
+ {
+  "input": "seminarless",
+  "output": "seminarlesser"
+ },
+ {
+  "input": "workshopless",
+  "output": "workshoplesser"
+ },
+ {
+  "input": "symposiumless",
+  "output": "symposiumlesser"
+ },
+ {
+  "input": "panelless",
+  "output": "panellesser"
+ },
+ {
+  "input": "discussionless",
+  "output": "discussionlesser"
+ },
+ {
+  "input": "dialogueless",
+  "output": "dialoguelesser"
+ },
+ {
+  "input": "conversationless",
+  "output": "conversationlesser"
+ },
+ {
+  "input": "chatless",
+  "output": "chatlesser"
+ },
+ {
+  "input": "talkless",
+  "output": "talklesser"
+ },
+ {
+  "input": "lectureless",
+  "output": "lecturelesser"
+ },
+ {
+  "input": "presentationless",
+  "output": "presentationlesser"
+ },
+ {
+  "input": "demonstrationless",
+  "output": "demonstrationlesser"
+ },
+ {
+  "input": "exhibitionless",
+  "output": "exhibitionlesser"
+ },
+ {
+  "input": "showless",
+  "output": "showlesser"
+ },
+ {
+  "input": "displayless",
+  "output": "displaylesser"
+ },
+ {
+  "input": "exposureless",
+  "output": "exposurelesser"
+ },
+ {
+  "input": "visibilityless",
+  "output": "visibilitylesser"
+ },
+ {
+  "input": "awarenessless",
+  "output": "awarenesslesser"
+ },
+ {
+  "input": "knowledgeless",
+  "output": "knowledgelesser"
+ },
+ {
+  "input": "understandingless",
+  "output": "understandinglesser"
+ },
+ {
+  "input": "comprehensionless",
+  "output": "comprehensionlesser"
+ },
+ {
+  "input": "insightless",
+  "output": "insightlesser"
+ },
+ {
+  "input": "wisdomless",
+  "output": "wisdomlesser"
+ },
+ {
+  "input": "intelligenceless",
+  "output": "intelligencelesser"
+ },
+ {
+  "input": "brillianceless",
+  "output": "brilliancelesser"
+ },
+ {
+  "input": "geniusless",
+  "output": "geniuslesser"
+ },
+ {
+  "input": "talentless",
+  "output": "talentlesser"
+ },
+ {
+  "input": "skillless",
+  "output": "skilllesser"
+ },
+ {
+  "input": "abilityless",
+  "output": "abilitylesser"
+ },
+ {
+  "input": "capacityless",
+  "output": "capacitylesser"
+ },
+ {
+  "input": "potentialless",
+  "output": "potentiallesser"
+ },
+ {
+  "input": "possibilityless",
+  "output": "possibilitylesser"
+ },
+ {
+  "input": "opportunityless",
+  "output": "opportunitylesser"
+ },
+ {
+  "input": "chanceless",
+  "output": "chancelesser"
+ },
+ {
+  "input": "luckless",
+  "output": "lucklesser"
+ },
+ {
+  "input": "fortuneless",
+  "output": "fortunelesser"
+ },
+ {
+  "input": "wealthless",
+  "output": "wealthlesser"
+ },
+ {
+  "input": "richnessless",
+  "output": "richnesslesser"
+ },
+ {
+  "input": "povertyless",
+  "output": "povertylesser"
+ },
+ {
+  "input": "impoverishmentless",
+  "output": "impoverishmentlesser"
+ },
+ {
+  "input": "destitutionless",
+  "output": "destitutionlesser"
+ },
+ {
+  "input": "indigenceless",
+  "output": "indigencelesser"
+ },
+ {
+  "input": "penuryless",
+  "output": "penurylesser"
+ },
+ {
+  "input": "needless",
+  "output": "needlesser"
+ },
+ {
+  "input": "wantless",
+  "output": "wantlesser"
+ },
+ {
+  "input": "lackless",
+  "output": "lacklesser"
+ },
+ {
+  "input": "voidless",
+  "output": "voidlesser"
+ },
+ {
+  "input": "vacuumless",
+  "output": "vacuumlesser"
+ },
+ {
+  "input": "blankless",
+  "output": "blanklesser"
+ },
+ {
+  "input": "emptyless",
+  "output": "emptylesser"
+ },
+ {
+  "input": "hollowless",
+  "output": "hollowlesser"
+ },
+ {
+  "input": "cavitiesless",
+  "output": "cavitieslesser"
+ },
+ {
+  "input": "holesless",
+  "output": "holeslesser"
+ },
+ {
+  "input": "gapsless",
+  "output": "gapslesser"
+ },
+ {
+  "input": "spacesless",
+  "output": "spaceslesser"
+ },
+ {
+  "input": "areasless",
+  "output": "areaslesser"
+ },
+ {
+  "input": "regionsless",
+  "output": "regionslesser"
+ },
+ {
+  "input": "zonesless",
+  "output": "zoneslesser"
+ },
+ {
+  "input": "districtsless",
+  "output": "districtslesser"
+ },
+ {
+  "input": "neighborhoodsless",
+  "output": "neighborhoodslesser"
+ },
+ {
+  "input": "communitiesless",
+  "output": "communitieslesser"
+ },
+ {
+  "input": "townsless",
+  "output": "townslesser"
+ },
+ {
+  "input": "citiesless",
+  "output": "citieslesser"
+ },
+ {
+  "input": "metropolisesless",
+  "output": "metropoliseslesser"
+ },
+ {
+  "input": "capitalsless",
+  "output": "capitalslesser"
+ },
+ {
+  "input": "statesless",
+  "output": "stateslesser"
+ },
+ {
+  "input": "provincesless",
+  "output": "provinceslesser"
+ },
+ {
+  "input": "territoriesless",
+  "output": "territorieslesser"
+ },
+ {
+  "input": "countriesless",
+  "output": "countrieslesser"
+ },
+ {
+  "input": "nationsless",
+  "output": "nationslesser"
+ },
+ {
+  "input": "kingdomsless",
+  "output": "kingdomslesser"
+ },
+ {
+  "input": "empiresless",
+  "output": "empireslesser"
+ },
+ {
+  "input": "republicsless",
+  "output": "republicslesser"
+ },
+ {
+  "input": "democraciesless",
+  "output": "democracieslesser"
+ },
+ {
+  "input": "monarchiesless",
+  "output": "monarchieslesser"
+ },
+ {
+  "input": "dictatorshipsless",
+  "output": "dictatorshipslesser"
+ },
+ {
+  "input": "tyranniesless",
+  "output": "tyrannieslesser"
+ },
+ {
+  "input": "oppressionsless",
+  "output": "oppressionslesser"
+ },
+ {
+  "input": "injusticesless",
+  "output": "injusticeslesser"
+ },
+ {
+  "input": "wrongdoingsless",
+  "output": "wrongdoingslesser"
+ },
+ {
+  "input": "crimesless",
+  "output": "crimeslesser"
+ },
+ {
+  "input": "offensesless",
+  "output": "offenseslesser"
+ },
+ {
+  "input": "violationsless",
+  "output": "violationslesser"
+ },
+ {
+  "input": "transgressionsless",
+  "output": "transgressionslesser"
+ },
+ {
+  "input": "misdeedsless",
+  "output": "misdeedslesser"
+ },
+ {
+  "input": "sinsless",
+  "output": "sinslesser"
+ },
+ {
+  "input": "faultsless",
+  "output": "faultslesser"
+ },
+ {
+  "input": "flawsless",
+  "output": "flawslesser"
+ },
+ {
+  "input": "defectsless",
+  "output": "defectslesser"
+ },
+ {
+  "input": "imperfectionsless",
+  "output": "imperfectionslesser"
+ },
+ {
+  "input": "blemishesless",
+  "output": "blemisheslesser"
+ },
+ {
+  "input": "marksless",
+  "output": "markslesser"
+ },
+ {
+  "input": "spotsless",
+  "output": "spotslesser"
+ },
+ {
+  "input": "stainsless",
+  "output": "stainslesser"
+ },
+ {
+  "input": "smudgesless",
+  "output": "smudgeslesser"
+ },
+ {
+  "input": "scratchesless",
+  "output": "scratcheslesser"
+ },
+ {
+  "input": "cutsless",
+  "output": "cutslesser"
+ },
+ {
+  "input": "woundsless",
+  "output": "woundslesser"
+ },
+ {
+  "input": "injuriesless",
+  "output": "injurieslesser"
+ },
+ {
+  "input": "damagesless",
+  "output": "damageslesser"
+ },
+ {
+  "input": "harmsless",
+  "output": "harmslesser"
+ },
+ {
+  "input": "hurtsless",
+  "output": "hurtslesser"
+ },
+ {
+  "input": "painsless",
+  "output": "painslesser"
+ },
+ {
+  "input": "achesless",
+  "output": "acheslesser"
+ },
+ {
+  "input": "sorenessless",
+  "output": "sorenesslesser"
+ },
+ {
+  "input": "tendernessless",
+  "output": "tendernesslesser"
+ },
+ {
+  "input": "sensitivityless",
+  "output": "sensitivitylesser"
+ },
+ {
+  "input": "fragilityless",
+  "output": "fragilitylesser"
+ },
+ {
+  "input": "delicacyless",
+  "output": "delicacylesser"
+ },
+ {
+  "input": "fine nessless",
+  "output": "finenesslesser"
+ },
+ {
+  "input": "coarsenessless",
+  "output": "coarsenesslesser"
+ },
+ {
+  "input": "roughnessless",
+  "output": "roughnesslesser"
+ },
+ {
+  "input": "smoothnessless",
+  "output": "smoothnesslesser"
+ },
+ {
+  "input": "flatnessless",
+  "output": "flatnesslesser"
+ },
+ {
+  "input": "levelnessless",
+  "output": "levelnesslesser"
+ },
+ {
+  "input": "evennessless",
+  "output": "evennesslesser"
+ },
+ {
+  "input": "balanceless",
+  "output": "balancelesser"
+ },
+ {
+  "input": "equilibriumless",
+  "output": "equilibriumlesser"
+ },
+ {
+  "input": "stabilityless",
+  "output": "stabilitylesser"
+ },
+ {
+  "input": "steadinessless",
+  "output": "steadinesslesser"
+ },
+ {
+  "input": "firmnessless",
+  "output": "firmnesslesser"
+ },
+ {
+  "input": "solidityless",
+  "output": "soliditylesser"
+ },
+ {
+  "input": "strengthless",
+  "output": "strengthlesser"
+ },
+ {
+  "input": "forceless",
+  "output": "forcelesser"
+ },
+ {
+  "input": "powerless",
+  "output": "powerlesser"
+ },
+ {
+  "input": "energyless",
+  "output": "energylesser"
+ },
+ {
+  "input": "vitalityless",
+  "output": "vitalitylesser"
+ },
+ {
+  "input": "immortalityless",
+  "output": "immortalitylesser"
+ },
+ {
+  "input": "eternityless",
+  "output": "eternitylesser"
+ },
+ {
+  "input": "infinityless",
+  "output": "infinitylesser"
+ },
+ {
+  "input": "limitlessnessless",
+  "output": "limitlessnesslesser"
+ },
+ {
+  "input": "boundlessnessless",
+  "output": "boundlessnesslesser"
+ },
+ {
+  "input": "measurelessnessless",
+  "output": "measurelessnesslesser"
+ },
+ {
+  "input": "numberlessnessless",
+  "output": "numberlessnesslesser"
+ },
+ {
+  "input": "countlessnessless",
+  "output": "countlessnesslesser"
+ },
+ {
+  "input": "innumerableless",
+  "output": "innumerablelesser"
+ },
+ {
+  "input": "countlessless",
+  "output": "countlesslesser"
+ },
+ {
+  "input": "numerousless",
+  "output": "numerouslesser"
+ },
+ {
+  "input": "manyless",
+  "output": "manylesser"
+ },
+ {
+  "input": "fewless",
+  "output": "fewlesser"
+ },
+ {
+  "input": "littleless",
+  "output": "littlelesser"
+ },
+ {
+  "input": "smallless",
+  "output": "smalllesser"
+ },
+ {
+  "input": "tinyless",
+  "output": "tinylesser"
+ },
+ {
+  "input": "minuteless",
+  "output": "minutelesser"
+ },
+ {
+  "input": "microscopicless",
+  "output": "microscopiclesser"
+ },
+ {
+  "input": "atomicless",
+  "output": "atomiclesser"
+ },
+ {
+  "input": "molecularless",
+  "output": "molecularlesser"
+ },
+ {
+  "input": "particleless",
+  "output": "particlelesser"
+ },
+ {
+  "input": "grainless",
+  "output": "grainlesser"
+ },
+ {
+  "input": "speckless",
+  "output": "specklesser"
+ },
+ {
+  "input": "dotless",
+  "output": "dotlesser"
+ },
+ {
+  "input": "pointless",
+  "output": "pointlesser"
+ },
+ {
+  "input": "tipless",
+  "output": "tiplesser"
+ },
+ {
+  "input": "peakless",
+  "output": "peaklesser"
+ },
+ {
+  "input": "crestless",
+  "output": "crestlesser"
+ },
+ {
+  "input": "topless",
+  "output": "toplesser"
+ },
+ {
+  "input": "apexless",
+  "output": "apexlesser"
+ },
+ {
+  "input": "zenithless",
+  "output": "zenithlesser"
+ },
+ {
+  "input": "pinnacleless",
+  "output": "pinnaclelesser"
+ },
+ {
+  "input": "heightless",
+  "output": "heightlesser"
+ },
+ {
+  "input": "altitudeless",
+  "output": "altitudelesser"
+ },
+ {
+  "input": "elevationless",
+  "output": "elevationlesser"
+ },
+ {
+  "input": "ascensionless",
+  "output": "ascensionlesser"
+ },
+ {
+  "input": "climbingless",
+  "output": "climbinglesser"
+ },
+ {
+  "input": "risingless",
+  "output": "risinglesser"
+ },
+ {
+  "input": "ascendingless",
+  "output": "ascendinglesser"
+ },
+ {
+  "input": "soaringless",
+  "output": "soaringlesser"
+ },
+ {
+  "input": "flyingless",
+  "output": "flyinglesser"
+ },
+ {
+  "input": "glidingless",
+  "output": "glidinglesser"
+ },
+ {
+  "input": "floatingless",
+  "output": "floatinglesser"
+ },
+ {
+  "input": "driftingless",
+  "output": "driftinglesser"
+ },
+ {
+  "input": "wanderingless",
+  "output": "wanderinglesser"
+ },
+ {
+  "input": "roamingless",
+  "output": "roaminglesser"
+ },
+ {
+  "input": "travelingless",
+  "output": "travelinglesser"
+ },
+ {
+  "input": "journeyingless",
+  "output": "journeyinglesser"
+ },
+ {
+  "input": "voyagingless",
+  "output": "voyaginglesser"
+ },
+ {
+  "input": "sailingless",
+  "output": "sailinglesser"
+ },
+ {
+  "input": "navigatingless",
+  "output": "navigatinglesser"
+ },
+ {
+  "input": "pilotingless",
+  "output": "pilotinglesser"
+ },
+ {
+  "input": "steeringless",
+  "output": "steeringlesser"
+ },
+ {
+  "input": "guidingle ss",
+  "output": "guidinglesser"
+ },
+ {
+  "input": "directingless",
+  "output": "directinglesser"
+ },
+ {
+  "input": "leadingless",
+  "output": "leadinglesser"
+ },
+ {
+  "input": "commandingless",
+  "output": "commandinglesser"
+ },
+ {
+  "input": "controllingless",
+  "output": "controllinglesser"
+ },
+ {
+  "input": "managingless",
+  "output": "managinglesser"
+ },
+ {
+  "input": "administeringless",
+  "output": "administeringlesser"
+ },
+ {
+  "input": "operatingless",
+  "output": "operatinglesser"
+ },
+ {
+  "input": "runningless",
+  "output": "runninglesser"
+ },
+ {
+  "input": "functioningless",
+  "output": "functioninglesser"
+ },
+ {
+  "input": "workingless",
+  "output": "workinglesser"
+ },
+ {
+  "input": "laboringless",
+  "output": "laboringlesser"
+ },
+ {
+  "input": "toilingless",
+  "output": "toilinglesser"
+ },
+ {
+  "input": "strugglingless",
+  "output": "strugglinglesser"
+ },
+ {
+  "input": "fightingless",
+  "output": "fightinglesser"
+ },
+ {
+  "input": "battlingless",
+  "output": "battlinglesser"
+ },
+ {
+  "input": "warringless",
+  "output": "warringlesser"
+ },
+ {
+  "input": "conflictingless",
+  "output": "conflictinglesser"
+ },
+ {
+  "input": "clashingless",
+  "output": "clashinglesser"
+ },
+ {
+  "input": "collidingless",
+  "output": "collidinglesser"
+ },
+ {
+  "input": "crashingless",
+  "output": "crashinglesser"
+ },
+ {
+  "input": "smashingless",
+  "output": "smashinglesser"
+ },
+ {
+  "input": "breakingless",
+  "output": "breakinglesser"
+ },
+ {
+  "input": "shatteringless",
+  "output": "shatteringlesser"
+ },
+ {
+  "input": "destroyingless",
+  "output": "destroyinglesser"
+ },
+ {
+  "input": "ruiningless",
+  "output": "ruininglesser"
+ },
+ {
+  "input": "wreckingless",
+  "output": "wreckinglesser"
+ },
+ {
+  "input": "devastatingless",
+  "output": "devastatinglesser"
+ },
+ {
+  "input": "ravagingless",
+  "output": "ravaginglesser"
+ },
+ {
+  "input": "plunderingless",
+  "output": "plunderinglesser"
+ },
+ {
+  "input": "lootingless",
+  "output": "lootinglesser"
+ },
+ {
+  "input": "pillagingless",
+  "output": "pillaginglesser"
+ },
+ {
+  "input": "raidingless",
+  "output": "raidinglesser"
+ },
+ {
+  "input": "attackingless",
+  "output": "attackinglesser"
+ },
+ {
+  "input": "assaultingless",
+  "output": "assaultinglesser"
+ },
+ {
+  "input": "strikingless",
+  "output": "strikinglesser"
+ },
+ {
+  "input": "hittingless",
+  "output": "hittinglesser"
+ },
+ {
+  "input": "punchingless",
+  "output": "punchinglesser"
+ },
+ {
+  "input": "kickingless",
+  "output": "kickinglesser"
+ },
+ {
+  "input": "bitingless",
+  "output": "bitinglesser"
+ },
+ {
+  "input": "chewingless",
+  "output": "chewinglesser"
+ },
+ {
+  "input": "swallowingless",
+  "output": "swallowinglesser"
+ },
+ {
+  "input": "digestingless",
+  "output": "digestinglesser"
+ },
+ {
+  "input": "processingless",
+  "output": "processinglesser"
+ },
+ {
+  "input": "handlingless",
+  "output": "handlinglesser"
+ },
+ {
+  "input": "manipulatingless",
+  "output": "manipulatinglesser"
+ },
+ {
+  "input": "regulatingless",
+  "output": "regulatinglesser"
+ },
+ {
+  "input": "adjustingless",
+  "output": "adjustinglesser"
+ },
+ {
+  "input": "modifyingless",
+  "output": "modifyinglesser"
+ },
+ {
+  "input": "changingless",
+  "output": "changinglesser"
+ },
+ {
+  "input": "alteringless",
+  "output": "alteringlesser"
+ },
+ {
+  "input": "transformingless",
+  "output": "transforminglesser"
+ },
+ {
+  "input": "convertingless",
+  "output": "convertinglesser"
+ },
+ {
+  "input": "shiftingless",
+  "output": "shiftinglesser"
+ },
+ {
+  "input": "movingless",
+  "output": "movinglesser"
+ },
+ {
+  "input": "transportingless",
+  "output": "transportinglesser"
+ },
+ {
+  "input": "carryingless",
+  "output": "carryinglesser"
+ },
+ {
+  "input": "bearingless",
+  "output": "bearinglesser"
+ },
+ {
+  "input": "holdingless",
+  "output": "holdinglesser"
+ },
+ {
+  "input": "keepingless",
+  "output": "keepinglesser"
+ },
+ {
+  "input": "retainingless",
+  "output": "retaininglesser"
+ },
+ {
+  "input": "preservingless",
+  "output": "preservinglesser"
+ },
+ {
+  "input": "protectingless",
+  "output": "protectinglesser"
+ },
+ {
+  "input": "guardingless",
+  "output": "guardinglesser"
+ },
+ {
+  "input": "defendingless",
+  "output": "defendinglesser"
+ },
+ {
+  "input": "shieldingless",
+  "output": "shieldinglesser"
+ },
+ {
+  "input": "coveringless",
+  "output": "coveringlesser"
+ },
+ {
+  "input": "hidingless",
+  "output": "hidinglesser"
+ },
+ {
+  "input": "concealingless",
+  "output": "concealinglesser"
+ },
+ {
+  "input": "maskingless",
+  "output": "maskinglesser"
+ },
+ {
+  "input": "disguisingless",
+  "output": "disguisinglesser"
+ },
+ {
+  "input": "camouflagingless",
+  "output": "camouflaginglesser"
+ },
+ {
+  "input": "obscuringless",
+  "output": "obscuringlesser"
+ },
+ {
+  "input": "cloudingless",
+  "output": "cloudinglesser"
+ },
+ {
+  "input": "fogg ingless",
+  "output": "fogginglesser"
+ },
+ {
+  "input": "mistyingless",
+  "output": "mistyinglesser"
+ },
+ {
+  "input": "hazingless",
+  "output": "hazinglesser"
+ },
+ {
+  "input": "smokingless",
+  "output": "smokinglesser"
+ },
+ {
+  "input": "dustingless",
+  "output": "dustinglesser"
+ },
+ {
+  "input": "dirtyingless",
+  "output": "dirtyinglesser"
+ },
+ {
+  "input": "pollutingless",
+  "output": "pollutinglesser"
+ },
+ {
+  "input": "contaminatingless",
+  "output": "contaminatinglesser"
+ },
+ {
+  "input": "infectingless",
+  "output": "infectinglesser"
+ },
+ {
+  "input": "diseasingless",
+  "output": "diseasinglesser"
+ },
+ {
+  "input": "sickeningless",
+  "output": "sickeninglesser"
+ },
+ {
+  "input": "illnessingless",
+  "output": "illnessinglesser"
+ },
+ {
+  "input": "hurtingless",
+  "output": "hurtinglesser"
+ },
+ {
+  "input": "woundingless",
+  "output": "woundinglesser"
+ },
+ {
+  "input": "injuringless",
+  "output": "injuringlesser"
+ },
+ {
+  "input": "damagingless",
+  "output": "damaginglesser"
+ },
+ {
+  "input": "harmingless",
+  "output": "harminglesser"
+ },
+ {
+  "input": "affectingless",
+  "output": "affectinglesser"
+ },
+ {
+  "input": "influencingless",
+  "output": "influencinglesser"
+ },
+ {
+  "input": "impactingless",
+  "output": "impactinglesser"
+ },
+ {
+  "input": "pressingless",
+  "output": "pressinglesser"
+ },
+ {
+  "input": "pushingless",
+  "output": "pushinglesser"
+ },
+ {
+  "input": "shovingless",
+  "output": "shovinglesser"
+ },
+ {
+  "input": "thrustingless",
+  "output": "thrustinglesser"
+ },
+ {
+  "input": "drivingless",
+  "output": "drivinglesser"
+ },
+ {
+  "input": "forcingless",
+  "output": "forcinglesser"
+ },
+ {
+  "input": "compellingless",
+  "output": "compellinglesser"
+ },
+ {
+  "input": "obligingless",
+  "output": "obliginglesser"
+ },
+ {
+  "input": "requiringless",
+  "output": "requiringlesser"
+ },
+ {
+  "input": "demandingless",
+  "output": "demandinglesser"
+ },
+ {
+  "input": "expectingless",
+  "output": "expectinglesser"
+ },
+ {
+  "input": "anticipatingless",
+  "output": "anticipatinglesser"
+ },
+ {
+  "input": "predictingless",
+  "output": "predictinglesser"
+ },
+ {
+  "input": "forecastingless",
+  "output": "forecastinglesser"
+ },
+ {
+  "input": "projectingless",
+  "output": "projectinglesser"
+ },
+ {
+  "input": "estimatingless",
+  "output": "estimatinglesser"
+ },
+ {
+  "input": "calculatingless",
+  "output": "calculatinglesser"
+ },
+ {
+  "input": "computingless",
+  "output": "computinglesser"
+ },
+ {
+  "input": "measuringless",
+  "output": "measuringlesser"
+ },
+ {
+  "input": "weighingless",
+  "output": "weighinglesser"
+ },
+ {
+  "input": "balancingless",
+  "output": "balancinglesser"
+ },
+ {
+  "input": "levelingless",
+  "output": "levelinglesser"
+ },
+ {
+  "input": "straighteningless",
+  "output": "straighteninglesser"
+ },
+ {
+  "input": "aligningless",
+  "output": "aligninglesser"
+ },
+ {
+  "input": "orderingless",
+  "output": "orderinglesser"
+ },
+ {
+  "input": "arrangingless",
+  "output": "arranginglesser"
+ },
+ {
+  "input": "organizingless",
+  "output": "organizinglesser"
+ },
+ {
+  "input": "structuringless",
+  "output": "structuringlesser"
+ },
+ {
+  "input": "buildingless",
+  "output": "buildinglesser"
+ },
+ {
+  "input": "constructingless",
+  "output": "constructinglesser"
+ },
+ {
+  "input": "creatingless",
+  "output": "creatinglesser"
+ },
+ {
+  "input": "makingless",
+  "output": "makinglesser"
+ },
+ {
+  "input": "formingless",
+  "output": "forminglesser"
+ },
+ {
+  "input": "shapingless",
+  "output": "shapinglesser"
+ },
+ {
+  "input": "moldingless",
+  "output": "moldinglesser"
+ },
+ {
+  "input": "castingless",
+  "output": "castinglesser"
+ },
+ {
+  "input": "forgingless",
+  "output": "forginglesser"
+ },
+ {
+  "input": "hammeringless",
+  "output": "hammeringlesser"
+ },
+ {
+  "input": "beatingless",
+  "output": "beatinglesser"
+ },
+ {
+  "input": "poundingless",
+  "output": "poundinglesser"
+ },
+ {
+  "input": "crushingless",
+  "output": "crushinglesser"
+ },
+ {
+  "input": "grindingless",
+  "output": "grindinglesser"
+ },
+ {
+  "input": "pulverizingless",
+  "output": "pulverizinglesser"
+ },
+ {
+  "input": "powderingless",
+  "output": "powderinglesser"
+ },
+ {
+  "input": "sprinklingless",
+  "output": "sprinklinglesser"
+ },
+ {
+  "input": "scatteringless",
+  "output": "scatteringlesser"
+ },
+ {
+  "input": "spreadingless",
+  "output": "spreadinglesser"
+ },
+ {
+  "input": "extendingless",
+  "output": "extendinglesser"
+ },
+ {
+  "input": "stretchingless",
+  "output": "stretchinglesser"
+ },
+ {
+  "input": "expandingless",
+  "output": "expandinglesser"
+ },
+ {
+  "input": "growingless",
+  "output": "growinglesser"
+ },
+ {
+  "input": "developingless",
+  "output": "developinglesser"
+ },
+ {
+  "input": "evolvingless",
+  "output": "evolvinglesser"
+ },
+ {
+  "input": "progressingless",
+  "output": "progressinglesser"
+ },
+ {
+  "input": "advancingless",
+  "output": "advancinglesser"
+ },
+ {
+  "input": "improvingless",
+  "output": "improvinglesser"
+ },
+ {
+  "input": "betteringless",
+  "output": "betteringlesser"
+ },
+ {
+  "input": "enhancingless",
+  "output": "enhancinglesser"
+ },
+ {
+  "input": "boostingless",
+  "output": "boostinglesser"
+ },
+ {
+  "input": "increasingless",
+  "output": "increasinglesser"
+ },
+ {
+  "input": "raisingless",
+  "output": "raisinglesser"
+ },
+ {
+  "input": "liftingless",
+  "output": "liftinglesser"
+ },
+ {
+  "input": "elevatingless",
+  "output": "elevatinglesser"
+ },
+ {
+  "input": "hoistingless",
+  "output": "hoistinglesser"
+ },
+ {
+  "input": "heavingless",
+  "output": "heavinglesser"
+ },
+ {
+  "input": "throwingless",
+  "output": "throwinglesser"
+ },
+ {
+  "input": "tossingless",
+  "output": "tossinglesser"
+ },
+ {
+  "input": "pitchingless",
+  "output": "pitchinglesser"
+ },
+ {
+  "input": "launchingless",
+  "output": "launchinglesser"
+ },
+ {
+  "input": "startingless",
+  "output": "startinglesser"
+ },
+ {
+  "input": "beginningless",
+  "output": "beginninglesser"
+ },
+ {
+  "input": "initiatingless",
+  "output": "initiatinglesser"
+ },
+ {
+  "input": "commencingless",
+  "output": "commencinglesser"
+ },
+ {
+  "input": "openingless",
+  "output": "openinglesser"
+ },
+ {
+  "input": "unlockingless",
+  "output": "unlockinglesser"
+ },
+ {
+  "input": "freeingless",
+  "output": "freeinglesser"
+ },
+ {
+  "input": "releasingless",
+  "output": "releasinglesser"
+ },
+ {
+  "input": "liberatingless",
+  "output": "liberatinglesser"
+ },
+ {
+  "input": "emancipatingless",
+  "output": "emancipatinglesser"
+ },
+ {
+  "input": "rescuingless",
+  "output": "rescuinglesser"
+ },
+ {
+  "input": "savingless",
+  "output": "savinglesser"
+ },
+ {
+  "input": "screeningless",
+  "output": "screeninglesser"
+ },
+ {
+  "input": "filteringless",
+  "output": "filteringlesser"
+ },
+ {
+  "input": "sortingless",
+  "output": "sortinglesser"
+ },
+ {
+  "input": "selectingless",
+  "output": "selectinglesser"
+ },
+ {
+  "input": "choosingless",
+  "output": "choosinglesser"
+ },
+ {
+  "input": "pickingless",
+  "output": "pickinglesser"
+ },
+ {
+  "input": "decidingless",
+  "output": "decidinglesser"
+ },
+ {
+  "input": "determiningless",
+  "output": "determininglesser"
+ },
+ {
+  "input": "resolvingless",
+  "output": "resolvinglesser"
+ },
+ {
+  "input": "settlingless",
+  "output": "settlinglesser"
+ },
+ {
+  "input": "fixingless",
+  "output": "fixinglesser"
+ },
+ {
+  "input": "repairingless",
+  "output": "repairinglesser"
+ },
+ {
+  "input": "mendingless",
+  "output": "mendinglesser"
+ },
+ {
+  "input": "patchingless",
+  "output": "patchinglesser"
+ },
+ {
+  "input": "healingless",
+  "output": "healinglesser"
+ },
+ {
+  "input": "curingless",
+  "output": "curinglesser"
+ },
+ {
+  "input": "treatingless",
+  "output": "treatinglesser"
+ },
+ {
+  "input": "helpingless",
+  "output": "helpinglesser"
+ },
+ {
+  "input": "assistingless",
+  "output": "assistinglesser"
+ },
+ {
+  "input": "supportingless",
+  "output": "supportinglesser"
+ },
+ {
+  "input": "backingless",
+  "output": "backinglesser"
+ },
+ {
+  "input": "endorsingless",
+  "output": "endorsinglesser"
+ },
+ {
+  "input": "approvingless",
+  "output": "approvinglesser"
+ },
+ {
+  "input": "acceptingless",
+  "output": "acceptinglesser"
+ },
+ {
+  "input": "embracingless",
+  "output": "embracinglesser"
+ },
+ {
+  "input": "welcomingless",
+  "output": "welcominglesser"
+ },
+ {
+  "input": "greetingless",
+  "output": "greetinglesser"
+ },
+ {
+  "input": "encounteringless",
+  "output": "encounteringlesser"
+ },
+ {
+  "input": "facingless",
+  "output": "facinglesser"
+ },
+ {
+  "input": "confrontingless",
+  "output": "confrontinglesser"
+ },
+ {
+  "input": "challengingless",
+  "output": "challenginglesser"
+ },
+ {
+  "input": "testingless",
+  "output": "testinglesser"
+ },
+ {
+  "input": "tryingless",
+  "output": "tryinglesser"
+ },
+ {
+  "input": "attemptingless",
+  "output": "attemptinglesser"
+ },
+ {
+  "input": "endeavoringless",
+  "output": "endeavoringlesser"
+ },
+ {
+  "input": "strivingless",
+  "output": "strivinglesser"
+ },
+ {
+  "input": "sweatingless",
+  "output": "sweatinglesser"
+ },
+ {
+  "input": "foggingless",
+  "output": "fogginglesser"
+ }
+]

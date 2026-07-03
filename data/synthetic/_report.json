@@ -1,0 +1,18 @@
+{
+  "country-continent": 222,
+  "element-symbol": 200,
+  "animal-baby": 214,
+  "fruit-color": 204,
+  "profession-workplace": 140,
+  "capital-country": 193,
+  "verb-gerund": 219,
+  "adjective-comparative": "FAIL Unterminated string starting at: line 676 column 27 (char 25526)",
+  "adjective-adverb": 240,
+  "past-present": 220,
+  "english-italian": 220,
+  "english-portuguese": 218,
+  "french-english": 402,
+  "word-last-letter": 220,
+  "next-day": 7,
+  "number-plus-one": 220
+}

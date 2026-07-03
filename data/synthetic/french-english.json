@@ -1,0 +1,1610 @@
+[
+ {
+  "input": "maison",
+  "output": "house"
+ },
+ {
+  "input": "eau",
+  "output": "water"
+ },
+ {
+  "input": "pain",
+  "output": "bread"
+ },
+ {
+  "input": "lait",
+  "output": "milk"
+ },
+ {
+  "input": "chat",
+  "output": "cat"
+ },
+ {
+  "input": "chien",
+  "output": "dog"
+ },
+ {
+  "input": "livre",
+  "output": "book"
+ },
+ {
+  "input": "table",
+  "output": "table"
+ },
+ {
+  "input": "chaise",
+  "output": "chair"
+ },
+ {
+  "input": "porte",
+  "output": "door"
+ },
+ {
+  "input": "fenêtre",
+  "output": "window"
+ },
+ {
+  "input": "rue",
+  "output": "street"
+ },
+ {
+  "input": "ville",
+  "output": "city"
+ },
+ {
+  "input": "pays",
+  "output": "country"
+ },
+ {
+  "input": "ami",
+  "output": "friend"
+ },
+ {
+  "input": "famille",
+  "output": "family"
+ },
+ {
+  "input": "père",
+  "output": "father"
+ },
+ {
+  "input": "mère",
+  "output": "mother"
+ },
+ {
+  "input": "frère",
+  "output": "brother"
+ },
+ {
+  "input": "sœur",
+  "output": "sister"
+ },
+ {
+  "input": "enfant",
+  "output": "child"
+ },
+ {
+  "input": "garçon",
+  "output": "boy"
+ },
+ {
+  "input": "fille",
+  "output": "girl"
+ },
+ {
+  "input": "homme",
+  "output": "man"
+ },
+ {
+  "input": "femme",
+  "output": "woman"
+ },
+ {
+  "input": "jour",
+  "output": "day"
+ },
+ {
+  "input": "nuit",
+  "output": "night"
+ },
+ {
+  "input": "temps",
+  "output": "time"
+ },
+ {
+  "input": "soleil",
+  "output": "sun"
+ },
+ {
+  "input": "lune",
+  "output": "moon"
+ },
+ {
+  "input": "étoile",
+  "output": "star"
+ },
+ {
+  "input": "arbre",
+  "output": "tree"
+ },
+ {
+  "input": "fleur",
+  "output": "flower"
+ },
+ {
+  "input": "feuille",
+  "output": "leaf"
+ },
+ {
+  "input": "racine",
+  "output": "root"
+ },
+ {
+  "input": "terre",
+  "output": "earth"
+ },
+ {
+  "input": "mer",
+  "output": "sea"
+ },
+ {
+  "input": "montagne",
+  "output": "mountain"
+ },
+ {
+  "input": "rivière",
+  "output": "river"
+ },
+ {
+  "input": "lac",
+  "output": "lake"
+ },
+ {
+  "input": "ciel",
+  "output": "sky"
+ },
+ {
+  "input": "nuage",
+  "output": "cloud"
+ },
+ {
+  "input": "pluie",
+  "output": "rain"
+ },
+ {
+  "input": "neige",
+  "output": "snow"
+ },
+ {
+  "input": "vent",
+  "output": "wind"
+ },
+ {
+  "input": "feu",
+  "output": "fire"
+ },
+ {
+  "input": "pierre",
+  "output": "stone"
+ },
+ {
+  "input": "bois",
+  "output": "wood"
+ },
+ {
+  "input": "métal",
+  "output": "metal"
+ },
+ {
+  "input": "verre",
+  "output": "glass"
+ },
+ {
+  "input": "papier",
+  "output": "paper"
+ },
+ {
+  "input": "crayon",
+  "output": "pencil"
+ },
+ {
+  "input": "stylo",
+  "output": "pen"
+ },
+ {
+  "input": "sac",
+  "output": "bag"
+ },
+ {
+  "input": "valise",
+  "output": "suitcase"
+ },
+ {
+  "input": "clé",
+  "output": "key"
+ },
+ {
+  "input": "serrure",
+  "output": "lock"
+ },
+ {
+  "input": "miroir",
+  "output": "mirror"
+ },
+ {
+  "input": "lit",
+  "output": "bed"
+ },
+ {
+  "input": "oreiller",
+  "output": "pillow"
+ },
+ {
+  "input": "couette",
+  "output": "duvet"
+ },
+ {
+  "input": "drap",
+  "output": "sheet"
+ },
+ {
+  "input": "serviette",
+  "output": "towel"
+ },
+ {
+  "input": "savon",
+  "output": "soap"
+ },
+ {
+  "input": "shampoing",
+  "output": "shampoo"
+ },
+ {
+  "input": "brosse",
+  "output": "brush"
+ },
+ {
+  "input": "peigne",
+  "output": "comb"
+ },
+ {
+  "input": "dentifrice",
+  "output": "toothpaste"
+ },
+ {
+  "input": "robe",
+  "output": "dress"
+ },
+ {
+  "input": "chemise",
+  "output": "shirt"
+ },
+ {
+  "input": "pantalon",
+  "output": "pants"
+ },
+ {
+  "input": "jupe",
+  "output": "skirt"
+ },
+ {
+  "input": "chaussures",
+  "output": "shoes"
+ },
+ {
+  "input": "bottes",
+  "output": "boots"
+ },
+ {
+  "input": "sandales",
+  "output": "sandals"
+ },
+ {
+  "input": "manteau",
+  "output": "coat"
+ },
+ {
+  "input": "pull",
+  "output": "sweater"
+ },
+ {
+  "input": "veste",
+  "output": "jacket"
+ },
+ {
+  "input": "casquette",
+  "output": "cap"
+ },
+ {
+  "input": "chapeau",
+  "output": "hat"
+ },
+ {
+  "input": "lunettes",
+  "output": "glasses"
+ },
+ {
+  "input": "montre",
+  "output": "watch"
+ },
+ {
+  "input": "bracelet",
+  "output": "bracelet"
+ },
+ {
+  "input": "bague",
+  "output": "ring"
+ },
+ {
+  "input": "collier",
+  "output": "necklace"
+ },
+ {
+  "input": "portefeuille",
+  "output": "wallet"
+ },
+ {
+  "input": "téléphone",
+  "output": "phone"
+ },
+ {
+  "input": "ordinateur",
+  "output": "computer"
+ },
+ {
+  "input": "caméra",
+  "output": "camera"
+ },
+ {
+  "input": "journal",
+  "output": "newspaper"
+ },
+ {
+  "input": "magazine",
+  "output": "magazine"
+ },
+ {
+  "input": "lettre",
+  "output": "letter"
+ },
+ {
+  "input": "carte",
+  "output": "map"
+ },
+ {
+  "input": "hôpital",
+  "output": "hospital"
+ },
+ {
+  "input": "école",
+  "output": "school"
+ },
+ {
+  "input": "classe",
+  "output": "class"
+ },
+ {
+  "input": "professeur",
+  "output": "teacher"
+ },
+ {
+  "input": "élève",
+  "output": "student"
+ },
+ {
+  "input": "examen",
+  "output": "exam"
+ },
+ {
+  "input": "note",
+  "output": "grade"
+ },
+ {
+  "input": "cours",
+  "output": "lesson"
+ },
+ {
+  "input": "étude",
+  "output": "study"
+ },
+ {
+  "input": "travail",
+  "output": "work"
+ },
+ {
+  "input": "métier",
+  "output": "job"
+ },
+ {
+  "input": "patron",
+  "output": "boss"
+ },
+ {
+  "input": "employé",
+  "output": "employee"
+ },
+ {
+  "input": "magasin",
+  "output": "store"
+ },
+ {
+  "input": "boutique",
+  "output": "shop"
+ },
+ {
+  "input": "marché",
+  "output": "market"
+ },
+ {
+  "input": "supermarché",
+  "output": "supermarket"
+ },
+ {
+  "input": "restaurant",
+  "output": "restaurant"
+ },
+ {
+  "input": "café",
+  "output": "coffee"
+ },
+ {
+  "input": "bar",
+  "output": "bar"
+ },
+ {
+  "input": "hôtel",
+  "output": "hotel"
+ },
+ {
+  "input": "chambre",
+  "output": "room"
+ },
+ {
+  "input": "canapé",
+  "output": "sofa"
+ },
+ {
+  "input": "cuisine",
+  "output": "kitchen"
+ },
+ {
+  "input": "douche",
+  "output": "shower"
+ },
+ {
+  "input": "garage",
+  "output": "garage"
+ },
+ {
+  "input": "jardin",
+  "output": "garden"
+ },
+ {
+  "input": "parc",
+  "output": "park"
+ },
+ {
+  "input": "plage",
+  "output": "beach"
+ },
+ {
+  "input": "forêt",
+  "output": "forest"
+ },
+ {
+  "input": "désert",
+  "output": "desert"
+ },
+ {
+  "input": "île",
+  "output": "island"
+ },
+ {
+  "input": "pont",
+  "output": "bridge"
+ },
+ {
+  "input": "route",
+  "output": "road"
+ },
+ {
+  "input": "autoroute",
+  "output": "highway"
+ },
+ {
+  "input": "train",
+  "output": "train"
+ },
+ {
+  "input": "bus",
+  "output": "bus"
+ },
+ {
+  "input": "voiture",
+  "output": "car"
+ },
+ {
+  "input": "vélo",
+  "output": "bicycle"
+ },
+ {
+  "input": "avion",
+  "output": "airplane"
+ },
+ {
+  "input": "bateau",
+  "output": "boat"
+ },
+ {
+  "input": "taxi",
+  "output": "taxi"
+ },
+ {
+  "input": "métro",
+  "output": "subway"
+ },
+ {
+  "input": "tramway",
+  "output": "tram"
+ },
+ {
+  "input": "station",
+  "output": "station"
+ },
+ {
+  "input": "gare",
+  "output": "railway"
+ },
+ {
+  "input": "aéroport",
+  "output": "airport"
+ },
+ {
+  "input": "mur",
+  "output": "wall"
+ },
+ {
+  "input": "plafond",
+  "output": "ceiling"
+ },
+ {
+  "input": "sol",
+  "output": "floor"
+ },
+ {
+  "input": "escalier",
+  "output": "stairs"
+ },
+ {
+  "input": "ascenseur",
+  "output": "elevator"
+ },
+ {
+  "input": "couloir",
+  "output": "hallway"
+ },
+ {
+  "input": "appartement",
+  "output": "apartment"
+ },
+ {
+  "input": "immeuble",
+  "output": "building"
+ },
+ {
+  "input": "village",
+  "output": "village"
+ },
+ {
+  "input": "quartier",
+  "output": "neighborhood"
+ },
+ {
+  "input": "centre",
+  "output": "center"
+ },
+ {
+  "input": "extérieur",
+  "output": "exterior"
+ },
+ {
+  "input": "intérieur",
+  "output": "interior"
+ },
+ {
+  "input": "devant",
+  "output": "front"
+ },
+ {
+  "input": "derrière",
+  "output": "back"
+ },
+ {
+  "input": "gauche",
+  "output": "left"
+ },
+ {
+  "input": "droite",
+  "output": "right"
+ },
+ {
+  "input": "haut",
+  "output": "up"
+ },
+ {
+  "input": "bas",
+  "output": "down"
+ },
+ {
+  "input": "loin",
+  "output": "far"
+ },
+ {
+  "input": "près",
+  "output": "near"
+ },
+ {
+  "input": "ici",
+  "output": "here"
+ },
+ {
+  "input": "maintenant",
+  "output": "now"
+ },
+ {
+  "input": "demain",
+  "output": "tomorrow"
+ },
+ {
+  "input": "hier",
+  "output": "yesterday"
+ },
+ {
+  "input": "semaine",
+  "output": "week"
+ },
+ {
+  "input": "mois",
+  "output": "month"
+ },
+ {
+  "input": "année",
+  "output": "year"
+ },
+ {
+  "input": "siècle",
+  "output": "century"
+ },
+ {
+  "input": "matin",
+  "output": "morning"
+ },
+ {
+  "input": "midi",
+  "output": "noon"
+ },
+ {
+  "input": "soir",
+  "output": "evening"
+ },
+ {
+  "input": "heure",
+  "output": "hour"
+ },
+ {
+  "input": "minute",
+  "output": "minute"
+ },
+ {
+  "input": "seconde",
+  "output": "second"
+ },
+ {
+  "input": "dimanche",
+  "output": "sunday"
+ },
+ {
+  "input": "lundi",
+  "output": "monday"
+ },
+ {
+  "input": "mardi",
+  "output": "tuesday"
+ },
+ {
+  "input": "mercredi",
+  "output": "wednesday"
+ },
+ {
+  "input": "jeudi",
+  "output": "thursday"
+ },
+ {
+  "input": "vendredi",
+  "output": "friday"
+ },
+ {
+  "input": "samedi",
+  "output": "saturday"
+ },
+ {
+  "input": "janvier",
+  "output": "january"
+ },
+ {
+  "input": "février",
+  "output": "february"
+ },
+ {
+  "input": "mars",
+  "output": "march"
+ },
+ {
+  "input": "avril",
+  "output": "april"
+ },
+ {
+  "input": "mai",
+  "output": "may"
+ },
+ {
+  "input": "juin",
+  "output": "june"
+ },
+ {
+  "input": "juillet",
+  "output": "july"
+ },
+ {
+  "input": "août",
+  "output": "august"
+ },
+ {
+  "input": "septembre",
+  "output": "september"
+ },
+ {
+  "input": "octobre",
+  "output": "october"
+ },
+ {
+  "input": "novembre",
+  "output": "november"
+ },
+ {
+  "input": "décembre",
+  "output": "december"
+ },
+ {
+  "input": "rouge",
+  "output": "red"
+ },
+ {
+  "input": "bleu",
+  "output": "blue"
+ },
+ {
+  "input": "vert",
+  "output": "green"
+ },
+ {
+  "input": "jaune",
+  "output": "yellow"
+ },
+ {
+  "input": "blanc",
+  "output": "white"
+ },
+ {
+  "input": "noir",
+  "output": "black"
+ },
+ {
+  "input": "gris",
+  "output": "gray"
+ },
+ {
+  "input": "marron",
+  "output": "brown"
+ },
+ {
+  "input": "violet",
+  "output": "purple"
+ },
+ {
+  "input": "orange",
+  "output": "orange"
+ },
+ {
+  "input": "rose",
+  "output": "pink"
+ },
+ {
+  "input": "beige",
+  "output": "beige"
+ },
+ {
+  "input": "grand",
+  "output": "big"
+ },
+ {
+  "input": "petit",
+  "output": "small"
+ },
+ {
+  "input": "long",
+  "output": "long"
+ },
+ {
+  "input": "court",
+  "output": "short"
+ },
+ {
+  "input": "large",
+  "output": "wide"
+ },
+ {
+  "input": "étroit",
+  "output": "narrow"
+ },
+ {
+  "input": "épais",
+  "output": "thick"
+ },
+ {
+  "input": "fin",
+  "output": "thin"
+ },
+ {
+  "input": "lourd",
+  "output": "heavy"
+ },
+ {
+  "input": "léger",
+  "output": "light"
+ },
+ {
+  "input": "chaud",
+  "output": "hot"
+ },
+ {
+  "input": "froid",
+  "output": "cold"
+ },
+ {
+  "input": "doux",
+  "output": "soft"
+ },
+ {
+  "input": "dur",
+  "output": "hard"
+ },
+ {
+  "input": "sec",
+  "output": "dry"
+ },
+ {
+  "input": "humide",
+  "output": "wet"
+ },
+ {
+  "input": "rapide",
+  "output": "fast"
+ },
+ {
+  "input": "lent",
+  "output": "slow"
+ },
+ {
+  "input": "nouveau",
+  "output": "new"
+ },
+ {
+  "input": "vieux",
+  "output": "old"
+ },
+ {
+  "input": "jeune",
+  "output": "young"
+ },
+ {
+  "input": "beau",
+  "output": "beautiful"
+ },
+ {
+  "input": "bon",
+  "output": "good"
+ },
+ {
+  "input": "mauvais",
+  "output": "bad"
+ },
+ {
+  "input": "fort",
+  "output": "strong"
+ },
+ {
+  "input": "faible",
+  "output": "weak"
+ },
+ {
+  "input": "content",
+  "output": "happy"
+ },
+ {
+  "input": "triste",
+  "output": "sad"
+ },
+ {
+  "input": "calme",
+  "output": "calm"
+ },
+ {
+  "input": "silencieux",
+  "output": "silent"
+ },
+ {
+  "input": "bruyant",
+  "output": "loud"
+ },
+ {
+  "input": "facile",
+  "output": "easy"
+ },
+ {
+  "input": "difficile",
+  "output": "difficult"
+ },
+ {
+  "input": "cher",
+  "output": "expensive"
+ },
+ {
+  "input": "gratuit",
+  "output": "free"
+ },
+ {
+  "input": "propre",
+  "output": "clean"
+ },
+ {
+  "input": "sale",
+  "output": "dirty"
+ },
+ {
+  "input": "ancien",
+  "output": "ancient"
+ },
+ {
+  "input": "moderne",
+  "output": "modern"
+ },
+ {
+  "input": "utile",
+  "output": "useful"
+ },
+ {
+  "input": "inutile",
+  "output": "useless"
+ },
+ {
+  "input": "pratique",
+  "output": "practical"
+ },
+ {
+  "input": "agréable",
+  "output": "pleasant"
+ },
+ {
+  "input": "confortable",
+  "output": "comfortable"
+ },
+ {
+  "input": "sûr",
+  "output": "safe"
+ },
+ {
+  "input": "dangereux",
+  "output": "dangerous"
+ },
+ {
+  "input": "intéressant",
+  "output": "interesting"
+ },
+ {
+  "input": "ennuyeux",
+  "output": "boring"
+ },
+ {
+  "input": "important",
+  "output": "important"
+ },
+ {
+  "input": "essentiel",
+  "output": "essential"
+ },
+ {
+  "input": "principal",
+  "output": "main"
+ },
+ {
+  "input": "commun",
+  "output": "common"
+ },
+ {
+  "input": "rare",
+  "output": "rare"
+ },
+ {
+  "input": "normal",
+  "output": "normal"
+ },
+ {
+  "input": "étranger",
+  "output": "foreign"
+ },
+ {
+  "input": "célèbre",
+  "output": "famous"
+ },
+ {
+  "input": "connu",
+  "output": "known"
+ },
+ {
+  "input": "populaire",
+  "output": "popular"
+ },
+ {
+  "input": "privé",
+  "output": "private"
+ },
+ {
+  "input": "public",
+  "output": "public"
+ },
+ {
+  "input": "libre",
+  "output": "free"
+ },
+ {
+  "input": "occupé",
+  "output": "busy"
+ },
+ {
+  "input": "prêt",
+  "output": "ready"
+ },
+ {
+  "input": "agité",
+  "output": "restless"
+ },
+ {
+  "input": "ouvert",
+  "output": "open"
+ },
+ {
+  "input": "fermé",
+  "output": "closed"
+ },
+ {
+  "input": "vide",
+  "output": "empty"
+ },
+ {
+  "input": "plein",
+  "output": "full"
+ },
+ {
+  "input": "brisé",
+  "output": "broken"
+ },
+ {
+  "input": "fonctionnel",
+  "output": "functional"
+ },
+ {
+  "input": "traditionnel",
+  "output": "traditional"
+ },
+ {
+  "input": "simple",
+  "output": "simple"
+ },
+ {
+  "input": "compliqué",
+  "output": "complicated"
+ },
+ {
+  "input": "économique",
+  "output": "economical"
+ },
+ {
+  "input": "sain",
+  "output": "healthy"
+ },
+ {
+  "input": "malade",
+  "output": "sick"
+ },
+ {
+  "input": "énervé",
+  "output": "annoyed"
+ },
+ {
+  "input": "heureux",
+  "output": "joyful"
+ },
+ {
+  "input": "fou",
+  "output": "crazy"
+ },
+ {
+  "input": "sage",
+  "output": "wise"
+ },
+ {
+  "input": "intelligent",
+  "output": "smart"
+ },
+ {
+  "input": "stupide",
+  "output": "stupid"
+ },
+ {
+  "input": "indirect",
+  "output": "indirect"
+ },
+ {
+  "input": "visible",
+  "output": "visible"
+ },
+ {
+  "input": "invisible",
+  "output": "invisible"
+ },
+ {
+  "input": "clair",
+  "output": "clear"
+ },
+ {
+  "input": "sombre",
+  "output": "dark"
+ },
+ {
+  "input": "brillant",
+  "output": "bright"
+ },
+ {
+  "input": "terne",
+  "output": "dull"
+ },
+ {
+  "input": "brut",
+  "output": "raw"
+ },
+ {
+  "input": "cuit",
+  "output": "cooked"
+ },
+ {
+  "input": "entier",
+  "output": "whole"
+ },
+ {
+  "input": "partiel",
+  "output": "partial"
+ },
+ {
+  "input": "total",
+  "output": "total"
+ },
+ {
+  "input": "complet",
+  "output": "complete"
+ },
+ {
+  "input": "manuel",
+  "output": "manual"
+ },
+ {
+  "input": "automatique",
+  "output": "automatic"
+ },
+ {
+  "input": "électrique",
+  "output": "electric"
+ },
+ {
+  "input": "numérique",
+  "output": "digital"
+ },
+ {
+  "input": "virtuel",
+  "output": "virtual"
+ },
+ {
+  "input": "réel",
+  "output": "real"
+ },
+ {
+  "input": "possible",
+  "output": "possible"
+ },
+ {
+  "input": "impossible",
+  "output": "impossible"
+ },
+ {
+  "input": "probable",
+  "output": "probable"
+ },
+ {
+  "input": "certain",
+  "output": "certain"
+ },
+ {
+  "input": "douteux",
+  "output": "doubtful"
+ },
+ {
+  "input": "vrai",
+  "output": "true"
+ },
+ {
+  "input": "faux",
+  "output": "false"
+ },
+ {
+  "input": "juste",
+  "output": "fair"
+ },
+ {
+  "input": "injuste",
+  "output": "unfair"
+ },
+ {
+  "input": "correct",
+  "output": "correct"
+ },
+ {
+  "input": "incorrect",
+  "output": "incorrect"
+ },
+ {
+  "input": "exact",
+  "output": "exact"
+ },
+ {
+  "input": "approximatif",
+  "output": "approximate"
+ },
+ {
+  "input": "précis",
+  "output": "precise"
+ },
+ {
+  "input": "général",
+  "output": "general"
+ },
+ {
+  "input": "particulier",
+  "output": "particular"
+ },
+ {
+  "input": "semblable",
+  "output": "similar"
+ },
+ {
+  "input": "différent",
+  "output": "different"
+ },
+ {
+  "input": "identique",
+  "output": "identical"
+ },
+ {
+  "input": "unique",
+  "output": "unique"
+ },
+ {
+  "input": "seul",
+  "output": "alone"
+ },
+ {
+  "input": "accompagné",
+  "output": "accompanied"
+ },
+ {
+  "input": "isolé",
+  "output": "isolated"
+ },
+ {
+  "input": "caché",
+  "output": "hidden"
+ },
+ {
+  "input": "exposé",
+  "output": "exposed"
+ },
+ {
+  "input": "protégé",
+  "output": "guarded"
+ },
+ {
+  "input": "perdu",
+  "output": "lost"
+ },
+ {
+  "input": "trouvé",
+  "output": "found"
+ },
+ {
+  "input": "donné",
+  "output": "given"
+ },
+ {
+  "input": "reçu",
+  "output": "received"
+ },
+ {
+  "input": "envoyé",
+  "output": "sent"
+ },
+ {
+  "input": "appelé",
+  "output": "called"
+ },
+ {
+  "input": "payé",
+  "output": "paid"
+ },
+ {
+  "input": "acheté",
+  "output": "bought"
+ },
+ {
+  "input": "vendu",
+  "output": "sold"
+ },
+ {
+  "input": "loué",
+  "output": "rented"
+ },
+ {
+  "input": "émis",
+  "output": "emitted"
+ },
+ {
+  "input": "créé",
+  "output": "created"
+ },
+ {
+  "input": "construit",
+  "output": "built"
+ },
+ {
+  "input": "réparé",
+  "output": "repaired"
+ },
+ {
+  "input": "détruít",
+  "output": "destroyed"
+ },
+ {
+  "input": "changé",
+  "output": "changed"
+ },
+ {
+  "input": "gardé",
+  "output": "kept"
+ },
+ {
+  "input": "pris",
+  "output": "taken"
+ },
+ {
+  "input": "laissé",
+  "output": "left"
+ },
+ {
+  "input": "suivi",
+  "output": "followed"
+ },
+ {
+  "input": "mené",
+  "output": "led"
+ },
+ {
+  "input": "aidé",
+  "output": "helped"
+ },
+ {
+  "input": "guidé",
+  "output": "guided"
+ },
+ {
+  "input": "défendu",
+  "output": "defended"
+ },
+ {
+  "input": "aimé",
+  "output": "loved"
+ },
+ {
+  "input": "haï",
+  "output": "hated"
+ },
+ {
+  "input": "respecté",
+  "output": "respected"
+ },
+ {
+  "input": "admiré",
+  "output": "admired"
+ },
+ {
+  "input": "critiqué",
+  "output": "criticized"
+ },
+ {
+  "input": "apprécié",
+  "output": "appreciated"
+ },
+ {
+  "input": "estimé",
+  "output": "estimated"
+ },
+ {
+  "input": "considéré",
+  "output": "considered"
+ },
+ {
+  "input": "regardé",
+  "output": "watched"
+ },
+ {
+  "input": "observé",
+  "output": "observed"
+ },
+ {
+  "input": "analysé",
+  "output": "analyzed"
+ },
+ {
+  "input": "étudié",
+  "output": "studied"
+ },
+ {
+  "input": "exploré",
+  "output": "explored"
+ },
+ {
+  "input": "visité",
+  "output": "visited"
+ },
+ {
+  "input": "découvert",
+  "output": "discovered"
+ },
+ {
+  "input": "inventé",
+  "output": "invented"
+ },
+ {
+  "input": "décrit",
+  "output": "described"
+ },
+ {
+  "input": "expliqué",
+  "output": "explained"
+ },
+ {
+  "input": "montré",
+  "output": "shown"
+ },
+ {
+  "input": "effacé",
+  "output": "erased"
+ },
+ {
+  "input": "écrit",
+  "output": "written"
+ },
+ {
+  "input": "lu",
+  "output": "read"
+ },
+ {
+  "input": "dit",
+  "output": "said"
+ },
+ {
+  "input": "parlé",
+  "output": "spoken"
+ },
+ {
+  "input": "chanté",
+  "output": "sung"
+ },
+ {
+  "input": "joué",
+  "output": "played"
+ },
+ {
+  "input": "dansé",
+  "output": "danced"
+ },
+ {
+  "input": "couru",
+  "output": "run"
+ },
+ {
+  "input": "tombé",
+  "output": "fallen"
+ },
+ {
+  "input": "monté",
+  "output": "climbed"
+ },
+ {
+  "input": "descendu",
+  "output": "descended"
+ },
+ {
+  "input": "entré",
+  "output": "entered"
+ },
+ {
+  "input": "sorti",
+  "output": "exited"
+ },
+ {
+  "input": "resté",
+  "output": "stayed"
+ },
+ {
+  "input": "parti",
+  "output": "departed"
+ },
+ {
+  "input": "arrivé",
+  "output": "arrived"
+ },
+ {
+  "input": "attendu",
+  "output": "waited"
+ },
+ {
+  "input": "commencé",
+  "output": "started"
+ },
+ {
+  "input": "terminé",
+  "output": "finished"
+ },
+ {
+  "input": "continué",
+  "output": "continued"
+ },
+ {
+  "input": "arrêté",
+  "output": "stopped"
+ },
+ {
+  "input": "réussi",
+  "output": "succeeded"
+ },
+ {
+  "input": "échoué",
+  "output": "failed"
+ },
+ {
+  "input": "gagné",
+  "output": "won"
+ },
+ {
+  "input": "abandonné",
+  "output": "abandoned"
+ }
+]

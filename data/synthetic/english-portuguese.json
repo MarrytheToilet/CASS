@@ -1,0 +1,874 @@
+[
+ {
+  "input": "dog",
+  "output": "cachorro"
+ },
+ {
+  "input": "cat",
+  "output": "gato"
+ },
+ {
+  "input": "house",
+  "output": "casa"
+ },
+ {
+  "input": "car",
+  "output": "carro"
+ },
+ {
+  "input": "book",
+  "output": "livro"
+ },
+ {
+  "input": "water",
+  "output": "água"
+ },
+ {
+  "input": "food",
+  "output": "comida"
+ },
+ {
+  "input": "man",
+  "output": "homem"
+ },
+ {
+  "input": "woman",
+  "output": "mulher"
+ },
+ {
+  "input": "child",
+  "output": "criança"
+ },
+ {
+  "input": "friend",
+  "output": "amigo"
+ },
+ {
+  "input": "family",
+  "output": "família"
+ },
+ {
+  "input": "school",
+  "output": "escola"
+ },
+ {
+  "input": "teacher",
+  "output": "professor"
+ },
+ {
+  "input": "student",
+  "output": "aluno"
+ },
+ {
+  "input": "doctor",
+  "output": "médico"
+ },
+ {
+  "input": "nurse",
+  "output": "enfermeiro"
+ },
+ {
+  "input": "hospital",
+  "output": "hospital"
+ },
+ {
+  "input": "money",
+  "output": "dinheiro"
+ },
+ {
+  "input": "work",
+  "output": "trabalho"
+ },
+ {
+  "input": "period",
+  "output": "período"
+ },
+ {
+  "input": "day",
+  "output": "dia"
+ },
+ {
+  "input": "night",
+  "output": "noite"
+ },
+ {
+  "input": "morning",
+  "output": "manhã"
+ },
+ {
+  "input": "afternoon",
+  "output": "tarde"
+ },
+ {
+  "input": "year",
+  "output": "ano"
+ },
+ {
+  "input": "month",
+  "output": "mês"
+ },
+ {
+  "input": "week",
+  "output": "semana"
+ },
+ {
+  "input": "hour",
+  "output": "hora"
+ },
+ {
+  "input": "minute",
+  "output": "minuto"
+ },
+ {
+  "input": "second",
+  "output": "segundo"
+ },
+ {
+  "input": "today",
+  "output": "hoje"
+ },
+ {
+  "input": "tomorrow",
+  "output": "amanhã"
+ },
+ {
+  "input": "yesterday",
+  "output": "ontem"
+ },
+ {
+  "input": "now",
+  "output": "agora"
+ },
+ {
+  "input": "soon",
+  "output": "logo"
+ },
+ {
+  "input": "later",
+  "output": "depois"
+ },
+ {
+  "input": "always",
+  "output": "sempre"
+ },
+ {
+  "input": "never",
+  "output": "nunca"
+ },
+ {
+  "input": "often",
+  "output": "frequentemente"
+ },
+ {
+  "input": "sometimes",
+  "output": "às vezes"
+ },
+ {
+  "input": "quickly",
+  "output": "rapidamente"
+ },
+ {
+  "input": "slowly",
+  "output": "lentamente"
+ },
+ {
+  "input": "easily",
+  "output": "facilmente"
+ },
+ {
+  "input": "difficult",
+  "output": "difícil"
+ },
+ {
+  "input": "easy",
+  "output": "fácil"
+ },
+ {
+  "input": "big",
+  "output": "grande"
+ },
+ {
+  "input": "small",
+  "output": "pequeno"
+ },
+ {
+  "input": "tall",
+  "output": "alto"
+ },
+ {
+  "input": "short",
+  "output": "baixo"
+ },
+ {
+  "input": "old",
+  "output": "velho"
+ },
+ {
+  "input": "new",
+  "output": "novo"
+ },
+ {
+  "input": "young",
+  "output": "jovem"
+ },
+ {
+  "input": "beautiful",
+  "output": "bonito"
+ },
+ {
+  "input": "ugly",
+  "output": "feio"
+ },
+ {
+  "input": "happy",
+  "output": "feliz"
+ },
+ {
+  "input": "sad",
+  "output": "triste"
+ },
+ {
+  "input": "angry",
+  "output": "bravo"
+ },
+ {
+  "input": "tired",
+  "output": "cansado"
+ },
+ {
+  "input": "hungry",
+  "output": "faminto"
+ },
+ {
+  "input": "thirsty",
+  "output": "sedento"
+ },
+ {
+  "input": "hot",
+  "output": "quente"
+ },
+ {
+  "input": "cold",
+  "output": "frio"
+ },
+ {
+  "input": "warm",
+  "output": "morno"
+ },
+ {
+  "input": "cool",
+  "output": "fresco"
+ },
+ {
+  "input": "wet",
+  "output": "molhado"
+ },
+ {
+  "input": "dry",
+  "output": "seco"
+ },
+ {
+  "input": "clean",
+  "output": "limpo"
+ },
+ {
+  "input": "dirty",
+  "output": "sujo"
+ },
+ {
+  "input": "strong",
+  "output": "forte"
+ },
+ {
+  "input": "weak",
+  "output": "fraco"
+ },
+ {
+  "input": "fast",
+  "output": "rápido"
+ },
+ {
+  "input": "slow",
+  "output": "lento"
+ },
+ {
+  "input": "heavy",
+  "output": "pesado"
+ },
+ {
+  "input": "light",
+  "output": "leve"
+ },
+ {
+  "input": "dark",
+  "output": "escuro"
+ },
+ {
+  "input": "bright",
+  "output": "luminoso"
+ },
+ {
+  "input": "black",
+  "output": "preto"
+ },
+ {
+  "input": "white",
+  "output": "branco"
+ },
+ {
+  "input": "red",
+  "output": "vermelho"
+ },
+ {
+  "input": "blue",
+  "output": "azul"
+ },
+ {
+  "input": "green",
+  "output": "verde"
+ },
+ {
+  "input": "yellow",
+  "output": "amarelo"
+ },
+ {
+  "input": "orange",
+  "output": "laranja"
+ },
+ {
+  "input": "purple",
+  "output": "roxo"
+ },
+ {
+  "input": "pink",
+  "output": "rosa"
+ },
+ {
+  "input": "brown",
+  "output": "marrom"
+ },
+ {
+  "input": "gray",
+  "output": "cinza"
+ },
+ {
+  "input": "gold",
+  "output": "dourado"
+ },
+ {
+  "input": "silver",
+  "output": "prateado"
+ },
+ {
+  "input": "sun",
+  "output": "sol"
+ },
+ {
+  "input": "moon",
+  "output": "lua"
+ },
+ {
+  "input": "star",
+  "output": "estrela"
+ },
+ {
+  "input": "sky",
+  "output": "céu"
+ },
+ {
+  "input": "cloud",
+  "output": "nuvem"
+ },
+ {
+  "input": "rain",
+  "output": "chuva"
+ },
+ {
+  "input": "snow",
+  "output": "neve"
+ },
+ {
+  "input": "wind",
+  "output": "vento"
+ },
+ {
+  "input": "fire",
+  "output": "fogo"
+ },
+ {
+  "input": "earth",
+  "output": "terra"
+ },
+ {
+  "input": "mountain",
+  "output": "montanha"
+ },
+ {
+  "input": "river",
+  "output": "rio"
+ },
+ {
+  "input": "sea",
+  "output": "mar"
+ },
+ {
+  "input": "lake",
+  "output": "lago"
+ },
+ {
+  "input": "forest",
+  "output": "floresta"
+ },
+ {
+  "input": "tree",
+  "output": "árvore"
+ },
+ {
+  "input": "flower",
+  "output": "flor"
+ },
+ {
+  "input": "grass",
+  "output": "grama"
+ },
+ {
+  "input": "leaf",
+  "output": "folha"
+ },
+ {
+  "input": "rock",
+  "output": "pedra"
+ },
+ {
+  "input": "sand",
+  "output": "areia"
+ },
+ {
+  "input": "crystal",
+  "output": "cristal"
+ },
+ {
+  "input": "road",
+  "output": "estrada"
+ },
+ {
+  "input": "street",
+  "output": "rua"
+ },
+ {
+  "input": "city",
+  "output": "cidade"
+ },
+ {
+  "input": "town",
+  "output": "vila"
+ },
+ {
+  "input": "country",
+  "output": "país"
+ },
+ {
+  "input": "world",
+  "output": "mundo"
+ },
+ {
+  "input": "place",
+  "output": "lugar"
+ },
+ {
+  "input": "home",
+  "output": "lar"
+ },
+ {
+  "input": "room",
+  "output": "quarto"
+ },
+ {
+  "input": "door",
+  "output": "porta"
+ },
+ {
+  "input": "window",
+  "output": "janela"
+ },
+ {
+  "input": "wall",
+  "output": "parede"
+ },
+ {
+  "input": "floor",
+  "output": "chão"
+ },
+ {
+  "input": "roof",
+  "output": "telhado"
+ },
+ {
+  "input": "kitchen",
+  "output": "cozinha"
+ },
+ {
+  "input": "bathroom",
+  "output": "banheiro"
+ },
+ {
+  "input": "garden",
+  "output": "jardim"
+ },
+ {
+  "input": "table",
+  "output": "mesa"
+ },
+ {
+  "input": "chair",
+  "output": "cadeira"
+ },
+ {
+  "input": "bed",
+  "output": "cama"
+ },
+ {
+  "input": "sofa",
+  "output": "sofá"
+ },
+ {
+  "input": "clock",
+  "output": "relógio"
+ },
+ {
+  "input": "phone",
+  "output": "telefone"
+ },
+ {
+  "input": "computer",
+  "output": "computador"
+ },
+ {
+  "input": "television",
+  "output": "televisão"
+ },
+ {
+  "input": "radio",
+  "output": "rádio"
+ },
+ {
+  "input": "music",
+  "output": "música"
+ },
+ {
+  "input": "song",
+  "output": "canção"
+ },
+ {
+  "input": "dance",
+  "output": "dança"
+ },
+ {
+  "input": "art",
+  "output": "arte"
+ },
+ {
+  "input": "color",
+  "output": "cor"
+ },
+ {
+  "input": "shape",
+  "output": "forma"
+ },
+ {
+  "input": "number",
+  "output": "número"
+ },
+ {
+  "input": "word",
+  "output": "palavra"
+ },
+ {
+  "input": "name",
+  "output": "nome"
+ },
+ {
+  "input": "story",
+  "output": "história"
+ },
+ {
+  "input": "question",
+  "output": "pergunta"
+ },
+ {
+  "input": "answer",
+  "output": "resposta"
+ },
+ {
+  "input": "problem",
+  "output": "problema"
+ },
+ {
+  "input": "solution",
+  "output": "solução"
+ },
+ {
+  "input": "idea",
+  "output": "ideia"
+ },
+ {
+  "input": "thought",
+  "output": "pensamento"
+ },
+ {
+  "input": "mind",
+  "output": "mente"
+ },
+ {
+  "input": "brain",
+  "output": "cérebro"
+ },
+ {
+  "input": "body",
+  "output": "corpo"
+ },
+ {
+  "input": "head",
+  "output": "cabeça"
+ },
+ {
+  "input": "hand",
+  "output": "mão"
+ },
+ {
+  "input": "foot",
+  "output": "pé"
+ },
+ {
+  "input": "heart",
+  "output": "coração"
+ },
+ {
+  "input": "blood",
+  "output": "sangue"
+ },
+ {
+  "input": "bone",
+  "output": "osso"
+ },
+ {
+  "input": "skin",
+  "output": "pele"
+ },
+ {
+  "input": "hair",
+  "output": "cabelo"
+ },
+ {
+  "input": "eye",
+  "output": "olho"
+ },
+ {
+  "input": "ear",
+  "output": "ouvido"
+ },
+ {
+  "input": "nose",
+  "output": "nariz"
+ },
+ {
+  "input": "mouth",
+  "output": "boca"
+ },
+ {
+  "input": "tooth",
+  "output": "dente"
+ },
+ {
+  "input": "tongue",
+  "output": "língua"
+ },
+ {
+  "input": "neck",
+  "output": "pescoço"
+ },
+ {
+  "input": "shoulder",
+  "output": "ombro"
+ },
+ {
+  "input": "arm",
+  "output": "braço"
+ },
+ {
+  "input": "leg",
+  "output": "perna"
+ },
+ {
+  "input": "finger",
+  "output": "dedo"
+ },
+ {
+  "input": "thumb",
+  "output": "polegar"
+ },
+ {
+  "input": "chest",
+  "output": "peito"
+ },
+ {
+  "input": "stomach",
+  "output": "estômago"
+ },
+ {
+  "input": "back",
+  "output": "costas"
+ },
+ {
+  "input": "knee",
+  "output": "joelho"
+ },
+ {
+  "input": "ankle",
+  "output": "tornozelo"
+ },
+ {
+  "input": "wrist",
+  "output": "punho"
+ },
+ {
+  "input": "elbow",
+  "output": "cotovelo"
+ },
+ {
+  "input": "hip",
+  "output": "quadril"
+ },
+ {
+  "input": "spine",
+  "output": "coluna"
+ },
+ {
+  "input": "lung",
+  "output": "pulmão"
+ },
+ {
+  "input": "liver",
+  "output": "fígado"
+ },
+ {
+  "input": "kidney",
+  "output": "rim"
+ },
+ {
+  "input": "intestine",
+  "output": "intestino"
+ },
+ {
+  "input": "muscle",
+  "output": "músculo"
+ },
+ {
+  "input": "nerve",
+  "output": "nervo"
+ },
+ {
+  "input": "vein",
+  "output": "veia"
+ },
+ {
+  "input": "artery",
+  "output": "artéria"
+ },
+ {
+  "input": "cell",
+  "output": "célula"
+ },
+ {
+  "input": "atom",
+  "output": "átomo"
+ },
+ {
+  "input": "molecule",
+  "output": "molécula"
+ },
+ {
+  "input": "element",
+  "output": "elemento"
+ },
+ {
+  "input": "compound",
+  "output": "composto"
+ },
+ {
+  "input": "mixture",
+  "output": "mistura"
+ },
+ {
+  "input": "substance",
+  "output": "substância"
+ },
+ {
+  "input": "matter",
+  "output": "matéria"
+ },
+ {
+  "input": "energy",
+  "output": "energia"
+ },
+ {
+  "input": "force",
+  "output": "força"
+ },
+ {
+  "input": "motion",
+  "output": "movimento"
+ },
+ {
+  "input": "speed",
+  "output": "velocidade"
+ },
+ {
+  "input": "distance",
+  "output": "distância"
+ },
+ {
+  "input": "direction",
+  "output": "direção"
+ },
+ {
+  "input": "space",
+  "output": "espaço"
+ },
+ {
+  "input": "duration",
+  "output": "duração"
+ },
+ {
+  "input": "moment",
+  "output": "momento"
+ },
+ {
+  "input": "instant",
+  "output": "instante"
+ },
+ {
+  "input": "century",
+  "output": "século"
+ },
+ {
+  "input": "decade",
+  "output": "década"
+ },
+ {
+  "input": "era",
+  "output": "era"
+ },
+ {
+  "input": "age",
+  "output": "idade"
+ },
+ {
+  "input": "phase",
+  "output": "fase"
+ },
+ {
+  "input": "level",
+  "output": "nível"
+ }
+]
