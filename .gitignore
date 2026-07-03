@@ -1,0 +1,8 @@
+results/*/activations/
+results/*/zcache/
+third_party/
+__pycache__/
+*.pyc
+.env
+nohup.out
+*.log
