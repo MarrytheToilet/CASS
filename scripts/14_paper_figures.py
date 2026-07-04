@@ -76,9 +76,16 @@ def rounded_bar(ax, x, height, width, color, zorder=3):
         zorder=zorder))
 
 
+PAPER_FIGS = FIGURES_DIR.parent / "paper" / "figures"
+PAPER_FIGS.mkdir(parents=True, exist_ok=True)
+
+
 def save(name):
     plt.savefig(FIGURES_DIR / f"{name}_{MODEL}.png", dpi=200,
                 bbox_inches="tight")
+    import shutil
+    shutil.copy(FIGURES_DIR / f"{name}_{MODEL}.png",
+                PAPER_FIGS / f"{name}_{MODEL}.png")
     plt.close()
 
 
