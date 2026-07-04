@@ -95,8 +95,8 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.6, 4.4))
-gs = fig.add_gridspec(2, 2, width_ratios=[2.05, 1], hspace=0.9, wspace=0.22)
+fig = plt.figure(figsize=(9.6, 3.7))
+gs = fig.add_gridspec(2, 2, width_ratios=[2.05, 1], hspace=0.52, wspace=0.2)
 axA1 = fig.add_subplot(gs[0, 0])
 axA2 = fig.add_subplot(gs[1, 0])
 axB = fig.add_subplot(gs[0, 1])
@@ -111,38 +111,34 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     for i, f in enumerate(list(chunk["family"]) + [None]):
         if f != prev:
             if prev is not None:
-                ax.text((start + i - 1) / 2, 1.26, prev, ha="center",
-                        va="top", fontsize=7, color=MUTED, style="italic")
+                ax.text((start + i - 1) / 2, 1.2, prev, ha="center",
+                        va="top", fontsize=6.8, color=MUTED, style="italic")
                 if f is not None:
                     ax.axvline(i - 0.5, color="#dddddd", lw=0.8, zorder=0)
             prev, start = f, i
     for i, row in chunk.iterrows():
-        ax.bar(i, row["acc_oracle"], width=0.8, color=PINK, alpha=0.65,
+        ax.bar(i, row["acc_oracle"], width=0.72, color=PINK, alpha=0.55,
                edgecolor="none", zorder=1)
         rounded_bar(ax, i, row["acc_syn"], 0.42, BLUE)
         ax.plot([i - 0.4, i + 0.4], [row["acc_icl"]] * 2, color=INK,
                 lw=1.0, zorder=4)
-        if row["acc_naive"] > 0.02:
-            ax.plot(i, row["acc_naive"], "x", color=MUTED, markersize=3,
-                    zorder=4)
     ax.set_xticks(x)
     ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=40,
                        fontsize=6.2, ha="right", rotation_mode="anchor")
-    ax.set_ylim(0, 1.28)
+    ax.set_ylim(0, 1.2)
     ax.set_xlim(-0.7, half - 0.3)
     ax.set_yticks([0, 0.5, 1.0])
     ax.set_ylabel("accuracy", fontsize=7.5)
 handles = [
     Rectangle((0, 0), 1, 1, fc=BLUE, ec="none"),
-    Rectangle((0, 0), 1, 1, fc=PINK, alpha=0.65, ec="none"),
+    Rectangle((0, 0), 1, 1, fc=PINK, alpha=0.55, ec="none"),
     Line2D([0], [0], color=INK, lw=1.0),
-    Line2D([0], [0], marker="x", color=MUTED, lw=0, markersize=4),
 ]
-axA1.legend(handles, ["CASS (k=4)", "oracle", "10-shot ICL", "naive comp."],
-            ncol=4, loc="lower left", bbox_to_anchor=(0.33, 1.28),
-            fontsize=7, handlelength=1.2, columnspacing=0.9)
-axA1.set_title("A  per-task results", fontsize=8, loc="left",
-               color=INK, fontweight="bold", pad=30)
+axA1.legend(handles, ["CASS (k=4)", "oracle", "10-shot ICL"],
+            ncol=3, loc="lower left", bbox_to_anchor=(0.42, 1.16),
+            fontsize=7, handlelength=1.2, columnspacing=1.0)
+axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
+               color=INK, fontweight="bold", pad=16)
 
 # panel B: median rho vs k for cass / zvec / recon
 def rho_by(mode, seeds):
@@ -180,7 +176,7 @@ rngj = np.random.default_rng(1)
 Rv = R4.dropna(subset=["rho"])
 for fi, f in enumerate(fams):
     v = Rv[Rv["family"] == f]["rho"].clip(0, 1.6)
-    axC.scatter(v, fi + rngj.uniform(-0.13, 0.13, len(v)), s=18, color=BLUE,
+    axC.scatter(v, fi + rngj.uniform(-0.08, 0.08, len(v)), s=16, color=BLUE,
                 alpha=0.75, edgecolor="white", linewidth=0.7, zorder=2)
     axC.plot([v.median()] * 2, [fi - 0.26, fi + 0.26], color=DPINK, lw=2.2,
              zorder=3, solid_capstyle="round")
@@ -260,7 +256,7 @@ M = np.array([[cm[c][t] for t in tasks_all] for c in compounds])
 M = M / (M.max(axis=1, keepdims=True) + 1e-12)
 truth = {comp for c in compounds for comp in compound_components(c)}
 keep = [j for j, t in enumerate(tasks_all)
-        if M[:, j].max() >= 0.12 or t in truth]
+        if M[:, j].max() >= 0.2 or t in truth]
 tasks = [tasks_all[j] for j in keep]
 Mx = M[:, keep]
 n_dropped = len(tasks_all) - len(keep)
@@ -271,8 +267,8 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(9.4, 3.1))
-gs = fig.add_gridspec(1, 2, width_ratios=[1.85, 1], wspace=0.03)
+fig = plt.figure(figsize=(9.2, 2.9))
+gs = fig.add_gridspec(1, 2, width_ratios=[1.75, 1], wspace=0.04)
 axH = fig.add_subplot(gs[0])
 axE = fig.add_subplot(gs[1], sharey=axH)
 
@@ -282,7 +278,7 @@ for i, c in enumerate(compounds):
         if comp in tasks:
             j = tasks.index(comp)
             axH.add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False,
-                                    edgecolor=DPINK, lw=1.6, zorder=4))
+                                    edgecolor=DPINK, lw=1.3, zorder=4))
 axH.set_xticks(range(len(tasks)))
 axH.set_xticklabels([short(t) for t in tasks], rotation=40, fontsize=6.4,
                     ha="right", rotation_mode="anchor")
@@ -295,8 +291,7 @@ for j, t in enumerate(tasks):
     if f != prev and prev is not None:
         axH.axvline(j - 0.5, color="white", lw=2)
     prev = f
-axH.set_title(f"A  skill identification (sparse code; {n_dropped} all-zero "
-              "columns omitted)", fontsize=8, loc="left", color=INK,
+axH.set_title(f"A  skill identification ({n_dropped} near-zero columns omitted)", fontsize=8, loc="left", color=INK,
               fontweight="bold")
 
 # execution panel: per-compound accuracy, shared rows
