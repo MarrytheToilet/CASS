@@ -62,6 +62,8 @@ ROWS = [
       ("per-skill signed", imp[imp.cond == "signed"]["acc"].mean())]),
     ("Injection schedule$^\\dagger$", ("every step", cass32),
      [("prefill only", imp[imp.cond == "prefill_only"]["acc"].mean())]),
+    ("Serving policy$^\\dagger$", ("routed", 0.459),
+     [("composition only", 0.398), ("replacement only", 0.393)]),
 ]
 
 MAXALT = max(len(alts) for _, _, alts in ROWS)
@@ -77,6 +79,7 @@ NOTES = {
     "Samples per skill": "25 samples suffice",
     "Trust gate$^\\dagger$": "gate converts failures (\\S6.6)",
     "Injection schedule$^\\dagger$": "decode-step steering matters",
+    "Serving policy$^\\dagger$": "routing beats both pure modes",
 }
 
 
