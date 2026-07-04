@@ -170,15 +170,24 @@ def learn_delta(task, seed, steps=40, lr=0.02):
             return (h + _d.to(h.dtype),) + tuple(output[1:]) \
                 if isinstance(output, tuple) else h + _d.to(h.dtype)
         handles.append(hlm.layers[l - 1].register_forward_hook(hook))
+    for p in hlm.model.parameters():
+        p.requires_grad_(False)
+    hlm.model.config.use_cache = False
     try:
         for _ in range(steps):
             opt.zero_grad()
-            outp = hlm.model(**enc, labels=labels)
-            outp.loss.backward()
+            for bi in range(enc.input_ids.shape[0]):   # per-example accum
+                outp = hlm.model(
+                    input_ids=enc.input_ids[bi:bi + 1],
+                    attention_mask=enc.attention_mask[bi:bi + 1],
+                    labels=labels[bi:bi + 1])
+                (outp.loss / enc.input_ids.shape[0]).backward()
             opt.step()
     finally:
         for h in handles:
             h.remove()
+        hlm.model.config.use_cache = True
+        torch.cuda.empty_cache()
     return [d.detach() for d in deltas]
 
 
