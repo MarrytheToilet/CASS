@@ -306,9 +306,8 @@ for j, t in enumerate(tasks):
     if f != prev and prev is not None:
         axH.axvline(j - 0.5, color="white", lw=2)
     prev = f
-axH.set_title(f"A  skill identification ({n_dropped} near-zero columns "
-              "omitted)", fontsize=8, loc="left", color=INK,
-              fontweight="bold")
+axH.set_title("A  skill identification", fontsize=8,
+              loc="left", color=INK, fontweight="bold")
 handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.4)]
 axH.legend(handles, ["ground-truth constituent"], loc="lower right",
            bbox_to_anchor=(1.0, 1.0), fontsize=6.5)
