@@ -31,11 +31,13 @@ from cass.solver import solve_capped
 from cass.tasks import ALL_TASKS, load_task, zs_prompt
 from cass.zcache import get_z
 
+import os
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "llama31-8b"
 AXES = (sys.argv[2].split(",") if len(sys.argv) > 2 else ["all"])
-REP_TASKS = ["antonym", "present-past", "country-capital", "person-sport",
-             "english-french", "next-item", "choose-first-of-list",
-             "animal-from-list"]
+REP_TASKS = (list(ALL_TASKS) if os.environ.get("CASS_REP") == "all" else
+             ["antonym", "present-past", "country-capital", "person-sport",
+              "english-french", "next-item", "choose-first-of-list",
+              "animal-from-list"])
 SEEDS = [0, 1, 2]
 N_EVAL = 25
 K_DEFAULT = 4
@@ -46,7 +48,7 @@ LAYERS, GAMMA, BETA, AMAX = (hp["layers"], hp["gamma"], hp["beta"],
                              hp["alpha_max"])
 
 hlm = HookedLM(MODEL)
-rows_path = out / "e4_ablations.csv"
+rows_path = out / ("e4_ablations_all32.csv" if os.environ.get("CASS_REP") == "all" else "e4_ablations.csv")
 done = set()
 if rows_path.exists():
     with open(rows_path) as f:
