@@ -87,23 +87,37 @@ ax.text(51, 22.2, "$z \\approx \\sum_{t\\in S} U_t c_t + $ res.",
 
 arrow(65.6, 70.4)
 
-# ---- Module 3: injection ----
-panel(71, 28, "3  Steer queries (no context)")
-for i, y in enumerate([7.5, 12, 16.5, 21]):
-    ax.add_patch(plt.Rectangle((73, y), 10, 3.2, facecolor="white",
-                               edgecolor=MUTED, lw=0.8))
-    ax.text(78, y + 1.6, f"layer {['8','12','16','24'][i]}", fontsize=5.3,
-            ha="center", va="center", color=MUTED)
-for y in [11.4, 15.9]:
-    ax.annotate("", xy=(84.5, y + 1), xytext=(88.5, y + 1),
-                arrowprops=dict(arrowstyle="-|>", color=DPINK, lw=1.6))
-ax.text(86.5, 17.4, "$h \\leftarrow h + \\tilde\\alpha\\gamma\\Delta$\n"
-        "$\\;\\;\\; + g\\,\\alpha P_S(\\mu_S{-}h)$", fontsize=6.2,
-        color=INK, va="center")
-ax.text(89.5, 13.4, "trust gate $g$", fontsize=6.2, color=DPINK,
-        va="center", style="italic")
-ax.text(85, 4.6, "$\\varepsilon$ large → fall back to ICL", fontsize=6.5,
-        color=MUTED, ha="center", style="italic")
+# ---- Module 3: serving policy + injection ----
+panel(71, 28, "3  Serve queries (routing + steering)")
+# signal branch
+ax.text(72.3, 24.6, "$\\|z\\|$\nstrong?", fontsize=6.2, color=INK, va="center")
+ax.annotate("", xy=(83.5, 22.2), xytext=(79, 24.2),
+            arrowprops=dict(arrowstyle="-|>", color=DBLUE, lw=1.2))
+ax.annotate("", xy=(83.5, 9.2), xytext=(79, 23.6),
+            arrowprops=dict(arrowstyle="-|>", color=MUTED, lw=1.0))
+ax.text(81.6, 22.6, "yes", fontsize=5.6, color=DBLUE)
+ax.text(79.4, 15.6, "no", fontsize=5.6, color=MUTED)
+# compose box
+ax.add_patch(FancyBboxPatch((84, 17.5), 14, 8.6,
+             boxstyle="round,pad=0.4,rounding_size=1",
+             facecolor="white", edgecolor=DBLUE, lw=1.0))
+ax.text(91, 24.2, "compose (layers 12, 16)", fontsize=5.8, ha="center",
+        color=DBLUE, fontweight="bold")
+ax.text(91, 21.2, "$h \\leftarrow h + \\tilde\\alpha\\gamma\\Delta"
+        " + g\\alpha P_S(\\mu_S{-}h)$", fontsize=5.6, ha="center",
+        color=INK)
+ax.text(91, 18.9, "trust gate $g$", fontsize=5.4, ha="center",
+        color=DPINK, style="italic")
+# replace box
+ax.add_patch(FancyBboxPatch((84, 6.5), 14, 5.4,
+             boxstyle="round,pad=0.4,rounding_size=1",
+             facecolor="white", edgecolor=MUTED, lw=0.8))
+ax.text(91, 10.4, "compress", fontsize=5.8, ha="center", color=INK,
+        fontweight="bold")
+ax.text(91, 8.2, "$h \\leftarrow \\bar v_{\\mathrm{prompt}}$",
+        fontsize=5.8, ha="center", color=INK)
+ax.text(84.5, 3.6, "$\\varepsilon$ large → escalate to full ICL",
+        fontsize=6.0, color=MUTED, ha="left", style="italic")
 
 for d in [FIGURES_DIR, FIGURES_DIR.parent / "paper" / "figures"]:
     plt.savefig(d / "pipeline.png", dpi=220, bbox_inches="tight")
