@@ -89,12 +89,21 @@ def save(name):
     plt.close()
 
 
-# ---------------- Fig E1: two-row bullet chart ----------------
+# ---------------- Fig E1: composite (bullet + k-trend + family) ---------
 R = pd.read_csv(out / "e1_summary.csv")
 R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
+e1 = pd.read_csv(out / "e1_loto.csv")
+bl = json.load(open(out / "baselines.json"))
+
+fig = plt.figure(figsize=(9.6, 4.4))
+gs = fig.add_gridspec(2, 2, width_ratios=[2.05, 1], hspace=0.9, wspace=0.22)
+axA1 = fig.add_subplot(gs[0, 0])
+axA2 = fig.add_subplot(gs[1, 0])
+axB = fig.add_subplot(gs[0, 1])
+axC = fig.add_subplot(gs[1, 1])
+
 half = int(np.ceil(len(R4) / 2))
-fig, axes = plt.subplots(2, 1, figsize=(7.2, 4.6))
-for ax, chunk in zip(axes, [R4.iloc[:half], R4.iloc[half:]]):
+for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     chunk = chunk.reset_index(drop=True)
     x = np.arange(len(chunk))
     ax.grid(axis="y", zorder=0)
@@ -102,8 +111,8 @@ for ax, chunk in zip(axes, [R4.iloc[:half], R4.iloc[half:]]):
     for i, f in enumerate(list(chunk["family"]) + [None]):
         if f != prev:
             if prev is not None:
-                ax.text((start + i - 1) / 2, 1.22, prev, ha="center",
-                        va="top", fontsize=8, color=MUTED, style="italic")
+                ax.text((start + i - 1) / 2, 1.26, prev, ha="center",
+                        va="top", fontsize=7, color=MUTED, style="italic")
                 if f is not None:
                     ax.axvline(i - 0.5, color="#dddddd", lw=0.8, zorder=0)
             prev, start = f, i
@@ -112,28 +121,77 @@ for ax, chunk in zip(axes, [R4.iloc[:half], R4.iloc[half:]]):
                edgecolor="none", zorder=1)
         rounded_bar(ax, i, row["acc_syn"], 0.42, BLUE)
         ax.plot([i - 0.4, i + 0.4], [row["acc_icl"]] * 2, color=INK,
-                lw=1.1, zorder=4)
+                lw=1.0, zorder=4)
         if row["acc_naive"] > 0.02:
-            ax.plot(i, row["acc_naive"], "x", color=MUTED, markersize=3.5,
+            ax.plot(i, row["acc_naive"], "x", color=MUTED, markersize=3,
                     zorder=4)
     ax.set_xticks(x)
-    ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=38,
-                       fontsize=7, ha="right", rotation_mode="anchor")
-    ax.set_ylim(0, 1.24)
+    ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=40,
+                       fontsize=6.2, ha="right", rotation_mode="anchor")
+    ax.set_ylim(0, 1.28)
     ax.set_xlim(-0.7, half - 0.3)
     ax.set_yticks([0, 0.5, 1.0])
-    ax.set_ylabel("accuracy")
+    ax.set_ylabel("accuracy", fontsize=7.5)
 handles = [
     Rectangle((0, 0), 1, 1, fc=BLUE, ec="none"),
     Rectangle((0, 0), 1, 1, fc=PINK, alpha=0.65, ec="none"),
-    Line2D([0], [0], color=INK, lw=1.1),
+    Line2D([0], [0], color=INK, lw=1.0),
     Line2D([0], [0], marker="x", color=MUTED, lw=0, markersize=4),
 ]
-axes[0].legend(handles, ["CASS (k=4)", "oracle (own subspace)",
-                         "10-shot ICL", "naive composition"],
-               ncol=4, loc="lower left", bbox_to_anchor=(0.0, 1.14),
-               fontsize=7.5, handlelength=1.3, columnspacing=1.1)
-plt.tight_layout(h_pad=2.0)
+axA1.legend(handles, ["CASS (k=4)", "oracle", "10-shot ICL", "naive comp."],
+            ncol=4, loc="lower left", bbox_to_anchor=(0.33, 1.28),
+            fontsize=7, handlelength=1.2, columnspacing=0.9)
+axA1.set_title("A  per-task results", fontsize=8, loc="left",
+               color=INK, fontweight="bold", pad=30)
+
+# panel B: median rho vs k for cass / zvec / recon
+def rho_by(mode, seeds):
+    orc = e1[e1["mode"] == "oracle"].set_index("task")["acc"]
+    sub = e1[(e1["mode"] == mode) & (e1["seed"] < seeds)]
+    med = {}
+    for k, grp in sub.groupby("k"):
+        acc = grp.groupby("task")["acc"].mean()
+        rhos = []
+        for t, a in acc.items():
+            zs = bl[t]["zs"]
+            if orc.get(t, 0) - zs > 0.05:
+                rhos.append((a - zs) / (orc[t] - zs))
+        med[k] = np.median(rhos)
+    return med
+
+for mode, col, lab in [("cass", DBLUE, "CASS"), ("zvec", MUTED, "$z$ only"),
+                       ("cass_recon", DPINK, "reconstruction")]:
+    m = rho_by(mode, 3)
+    ks = sorted(m)
+    axB.plot(ks, [m[k] for k in ks], color=col, lw=2, marker="o",
+             markersize=5, markeredgecolor="white", markeredgewidth=1.1,
+             label=lab, solid_capstyle="round")
+axB.grid(axis="y", zorder=0)
+axB.set_xticks([1, 2, 4])
+axB.set_xlabel("examples $k$", fontsize=7.5)
+axB.set_ylabel(r"median $\rho$", fontsize=7.5)
+axB.legend(fontsize=6.5, loc="center right", handlelength=1.4)
+axB.set_title("B  recovery vs. $k$", fontsize=8, loc="left", color=INK,
+              fontweight="bold")
+
+# panel C: rho by family at k=4 (dot strip + median tick)
+fams = sorted(R4["family"].unique())
+rngj = np.random.default_rng(1)
+Rv = R4.dropna(subset=["rho"])
+for fi, f in enumerate(fams):
+    v = Rv[Rv["family"] == f]["rho"].clip(0, 1.6)
+    axC.scatter(v, fi + rngj.uniform(-0.13, 0.13, len(v)), s=18, color=BLUE,
+                alpha=0.75, edgecolor="white", linewidth=0.7, zorder=2)
+    axC.plot([v.median()] * 2, [fi - 0.26, fi + 0.26], color=DPINK, lw=2.2,
+             zorder=3, solid_capstyle="round")
+axC.axvline(1.0, color="#cccccc", lw=0.8, ls=(0, (3, 3)), zorder=1)
+axC.text(1.0, -0.72, "oracle", fontsize=6, color=MUTED, ha="center")
+axC.set_yticks(range(len(fams)))
+axC.set_yticklabels(fams, fontsize=7)
+axC.set_xlabel(r"oracle recovery $\rho$  ($k{=}4$)", fontsize=7.5)
+axC.grid(axis="x", zorder=0)
+axC.set_title("C  recovery by family", fontsize=8, loc="left", color=INK,
+              fontweight="bold")
 save("e1_main")
 
 # ---------------- Fig E5: scale curve ----------------
@@ -194,7 +252,7 @@ ax.set_xlabel(r"coding residual $\varepsilon$ (terciles)")
 ax.set_xlim(-0.5, 2.75)
 save("e1_eps_vs_rho")
 
-# ---------------- Fig E2 heatmap: trimmed columns ----------------
+# ---------------- Fig E2: heatmap + execution panel ----------------
 cm = json.load(open(out / "e2_coeff_matrix.json"))
 compounds = list(cm)
 tasks_all = sorted(ALL_TASKS, key=lambda t: (TASK_REGISTRY[t][1], t))
@@ -207,33 +265,66 @@ tasks = [tasks_all[j] for j in keep]
 Mx = M[:, keep]
 n_dropped = len(tasks_all) - len(keep)
 
-fig, ax = plt.subplots(figsize=(6.2, 3.0))
-ax.imshow(Mx, cmap=SEQ, aspect="auto", vmin=0, vmax=1)
+e2 = pd.read_csv(out / "e2_compound.csv")
+agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
+                                 retr=("acc_retrieval", "mean"),
+                                 naive=("acc_naive", "mean"),
+                                 icl=("acc_icl", "first"))
+
+fig = plt.figure(figsize=(9.4, 3.1))
+gs = fig.add_gridspec(1, 2, width_ratios=[1.85, 1], wspace=0.03)
+axH = fig.add_subplot(gs[0])
+axE = fig.add_subplot(gs[1], sharey=axH)
+
+axH.imshow(Mx, cmap=SEQ, aspect="auto", vmin=0, vmax=1)
 for i, c in enumerate(compounds):
     for comp in compound_components(c):
         if comp in tasks:
             j = tasks.index(comp)
-            ax.add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False,
-                                   edgecolor=DPINK, lw=1.7, zorder=4))
-ax.set_xticks(range(len(tasks)))
-ax.set_xticklabels([short(t) for t in tasks], rotation=38, fontsize=7,
-                   ha="right", rotation_mode="anchor")
-ax.set_yticks(range(len(compounds)))
-ax.set_yticklabels([" $\\circ$ ".join(short(p) for p in c.split("+"))
-                    for c in compounds], fontsize=7)
+            axH.add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False,
+                                    edgecolor=DPINK, lw=1.6, zorder=4))
+axH.set_xticks(range(len(tasks)))
+axH.set_xticklabels([short(t) for t in tasks], rotation=40, fontsize=6.4,
+                    ha="right", rotation_mode="anchor")
+axH.set_yticks(range(len(compounds)))
+axH.set_yticklabels([" $\\circ$ ".join(short(p) for p in c.split("+"))
+                     for c in compounds], fontsize=7)
 prev = None
 for j, t in enumerate(tasks):
     f = TASK_REGISTRY[t][1]
     if f != prev and prev is not None:
-        ax.axvline(j - 0.5, color="white", lw=2)
+        axH.axvline(j - 0.5, color="white", lw=2)
     prev = f
-handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.7),
-           Rectangle((0, 0), 1, 1, fc=DBLUE, ec="none")]
-ax.legend(handles, ["ground-truth constituent",
-                    f"coefficient mass (columns with none omitted: "
-                    f"{n_dropped})"],
-          loc="lower left", bbox_to_anchor=(0.0, 1.02), fontsize=7,
-          ncol=2, handlelength=1.2)
+axH.set_title(f"A  skill identification (sparse code; {n_dropped} all-zero "
+              "columns omitted)", fontsize=8, loc="left", color=INK,
+              fontweight="bold")
+
+# execution panel: per-compound accuracy, shared rows
+y = np.arange(len(compounds))
+for i, c in enumerate(compounds):
+    a = agg.loc[c]
+    axE.plot([0, max(a["icl"], a["cass"], a["retr"], a["naive"])],
+             [i, i], color=GRID, lw=0.8, zorder=1)
+axE.scatter(agg.loc[compounds, "icl"], y, marker="|", s=90, color=INK,
+            lw=1.4, label="10-shot ICL", zorder=3)
+axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=22, color=MUTED,
+            label="naive", zorder=3)
+axE.scatter(agg.loc[compounds, "retr"], y, s=32, color=PINK,
+            edgecolor="white", linewidth=0.8, label="retrieval", zorder=4)
+axE.scatter(agg.loc[compounds, "cass"], y, s=42, color=DBLUE,
+            edgecolor="white", linewidth=0.9, label="CASS", zorder=5)
+axE.tick_params(labelleft=False)
+axE.set_xlim(-0.03, 1.05)
+axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.5)
+axE.grid(axis="x", zorder=0)
+axE.legend(fontsize=6.3, loc="lower right", handletextpad=0.15,
+           borderaxespad=0.1)
+axE.set_title("B  compound execution", fontsize=8, loc="left", color=INK,
+              fontweight="bold")
+axE.invert_yaxis() if False else None
+handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.6)]
+axH.legend(handles, ["ground-truth constituent"], loc="lower left",
+           bbox_to_anchor=(0.0, 1.12), fontsize=6.5)
 save("e2_heatmap")
 
 # ---------------- Fig cosine matrices (H1) ----------------
