@@ -89,18 +89,18 @@ def save(name):
     plt.close()
 
 
-# ---------------- Fig E1: composite (bullet + k-trend + family) ---------
+# ------------- Fig E1: dumbbell + k-trend + cross-model forest -------------
 R = pd.read_csv(out / "e1_summary.csv")
 R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.6, 3.7))
-gs = fig.add_gridspec(2, 2, width_ratios=[2.05, 1], hspace=0.52, wspace=0.2)
+fig = plt.figure(figsize=(9.6, 4.1))
+gs = fig.add_gridspec(2, 2, width_ratios=[2.1, 1], hspace=0.62, wspace=0.2)
 axA1 = fig.add_subplot(gs[0, 0])
 axA2 = fig.add_subplot(gs[1, 0])
 axB = fig.add_subplot(gs[0, 1])
-axC = fig.add_subplot(gs[1, 1])
+axD = fig.add_subplot(gs[1, 1])
 
 half = int(np.ceil(len(R4) / 2))
 for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
@@ -111,83 +111,92 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     for i, f in enumerate(list(chunk["family"]) + [None]):
         if f != prev:
             if prev is not None:
-                ax.text((start + i - 1) / 2, 1.2, prev, ha="center",
+                ax.text((start + i - 1) / 2, 1.19, prev, ha="center",
                         va="top", fontsize=6.8, color=MUTED, style="italic")
                 if f is not None:
-                    ax.axvline(i - 0.5, color="#dddddd", lw=0.8, zorder=0)
+                    ax.axvline(i - 0.5, color="#e3e3e3", lw=0.8, zorder=0)
             prev, start = f, i
     for i, row in chunk.iterrows():
-        ax.bar(i, row["acc_oracle"], width=0.72, color=PINK, alpha=0.55,
-               edgecolor="none", zorder=1)
-        rounded_bar(ax, i, row["acc_syn"], 0.42, BLUE)
-        ax.plot([i - 0.4, i + 0.4], [row["acc_icl"]] * 2, color=INK,
-                lw=1.0, zorder=4)
+        lo, hi = sorted([row["acc_syn"], row["acc_oracle"]])
+        ax.plot([i, i], [lo, hi], color="#c4d8ea", lw=2.2, zorder=2,
+                solid_capstyle="round")
+        ax.plot(i, row["acc_oracle"], "o", color=PINK, markersize=6,
+                markeredgecolor="white", markeredgewidth=1.1, zorder=3)
+        ax.plot(i, row["acc_syn"], "o", color=DBLUE, markersize=6,
+                markeredgecolor="white", markeredgewidth=1.1, zorder=4)
+        ax.plot([i - 0.33, i + 0.33], [row["acc_icl"]] * 2, color=INK,
+                lw=1.0, zorder=3)
     ax.set_xticks(x)
     ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=40,
                        fontsize=6.2, ha="right", rotation_mode="anchor")
-    ax.set_ylim(0, 1.2)
+    ax.set_ylim(-0.04, 1.2)
     ax.set_xlim(-0.7, half - 0.3)
     ax.set_yticks([0, 0.5, 1.0])
     ax.set_ylabel("accuracy", fontsize=7.5)
 handles = [
-    Rectangle((0, 0), 1, 1, fc=BLUE, ec="none"),
-    Rectangle((0, 0), 1, 1, fc=PINK, alpha=0.55, ec="none"),
+    Line2D([0], [0], marker="o", color=DBLUE, lw=0, markersize=6,
+           markeredgecolor="white"),
+    Line2D([0], [0], marker="o", color=PINK, lw=0, markersize=6,
+           markeredgecolor="white"),
     Line2D([0], [0], color=INK, lw=1.0),
 ]
 axA1.legend(handles, ["CASS (k=4)", "oracle", "10-shot ICL"],
-            ncol=3, loc="lower left", bbox_to_anchor=(0.42, 1.16),
+            ncol=3, loc="lower left", bbox_to_anchor=(0.47, 1.13),
             fontsize=7, handlelength=1.2, columnspacing=1.0)
 axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
-               color=INK, fontweight="bold", pad=16)
+               color=INK, fontweight="bold", pad=15)
 
-# panel B: median rho vs k for cass / zvec / recon
-def rho_by(mode, seeds):
+# B: median rho vs k with bootstrap CI band for CASS
+def rho_tasks(mode, k, seeds=3):
     orc = e1[e1["mode"] == "oracle"].set_index("task")["acc"]
-    sub = e1[(e1["mode"] == mode) & (e1["seed"] < seeds)]
-    med = {}
-    for k, grp in sub.groupby("k"):
-        acc = grp.groupby("task")["acc"].mean()
-        rhos = []
-        for t, a in acc.items():
-            zs = bl[t]["zs"]
-            if orc.get(t, 0) - zs > 0.05:
-                rhos.append((a - zs) / (orc[t] - zs))
-        med[k] = np.median(rhos)
-    return med
+    acc = e1[(e1["mode"] == mode) & (e1["seed"] < seeds) &
+             (e1["k"] == k)].groupby("task")["acc"].mean()
+    return np.array([(acc[t] - bl[t]["zs"]) / (orc[t] - bl[t]["zs"])
+                     for t in acc.index
+                     if orc.get(t, 0) - bl[t]["zs"] > 0.05])
 
+rngb = np.random.default_rng(0)
 for mode, col, lab in [("cass", DBLUE, "CASS"), ("zvec", MUTED, "$z$ only"),
                        ("cass_recon", DPINK, "reconstruction")]:
-    m = rho_by(mode, 3)
-    ks = sorted(m)
-    axB.plot(ks, [m[k] for k in ks], color=col, lw=2, marker="o",
-             markersize=5, markeredgecolor="white", markeredgewidth=1.1,
-             label=lab, solid_capstyle="round")
+    ks, med, lo, hi = [], [], [], []
+    for k in [1, 2, 4]:
+        r = rho_tasks(mode, k)
+        boots = [np.median(rngb.choice(r, len(r), True)) for _ in range(2000)]
+        ks.append(k); med.append(np.median(r))
+        lo.append(np.percentile(boots, 2.5)); hi.append(np.percentile(boots, 97.5))
+    if mode == "cass":
+        axB.fill_between(ks, lo, hi, color=BLUE, alpha=0.15, lw=0)
+    axB.plot(ks, med, color=col, lw=2, marker="o", markersize=5,
+             markeredgecolor="white", markeredgewidth=1.1, label=lab,
+             solid_capstyle="round")
 axB.grid(axis="y", zorder=0)
 axB.set_xticks([1, 2, 4])
 axB.set_xlabel("examples $k$", fontsize=7.5)
 axB.set_ylabel(r"median $\rho$", fontsize=7.5)
 axB.legend(fontsize=6.5, loc="center right", handlelength=1.4)
-axB.set_title("B  recovery vs. $k$", fontsize=8, loc="left", color=INK,
-              fontweight="bold")
+axB.set_title("B  recovery vs. $k$ (band: 95% CI)", fontsize=8, loc="left",
+              color=INK, fontweight="bold")
 
-# panel C: rho by family at k=4 (dot strip + median tick)
-fams = sorted(R4["family"].unique())
-rngj = np.random.default_rng(1)
-Rv = R4.dropna(subset=["rho"])
-for fi, f in enumerate(fams):
-    v = Rv[Rv["family"] == f]["rho"].clip(0, 1.6)
-    axC.scatter(v, fi + rngj.uniform(-0.08, 0.08, len(v)), s=16, color=BLUE,
-                alpha=0.75, edgecolor="white", linewidth=0.7, zorder=2)
-    axC.plot([v.median()] * 2, [fi - 0.26, fi + 0.26], color=DPINK, lw=2.2,
-             zorder=3, solid_capstyle="round")
-axC.axvline(1.0, color="#cccccc", lw=0.8, ls=(0, (3, 3)), zorder=1)
-axC.text(1.0, -0.72, "oracle", fontsize=6, color=MUTED, ha="center")
-axC.set_yticks(range(len(fams)))
-axC.set_yticklabels(fams, fontsize=7)
-axC.set_xlabel(r"oracle recovery $\rho$  ($k{=}4$)", fontsize=7.5)
-axC.grid(axis="x", zorder=0)
-axC.set_title("C  recovery by family", fontsize=8, loc="left", color=INK,
-              fontweight="bold")
+# D: forest plot of dictionary gain across models
+models = [("Llama-3.1-8B", 4.9, 1.4, 8.6), ("Llama-3.2-3B", 6.0, 2.9, 9.5),
+          ("Gemma-2-2B", 4.2, 2.0, 6.7), ("Qwen2.5-3B", 1.4, 0.2, 2.8)]
+for yi, (name, mgain, lo, hi) in enumerate(models):
+    axD.plot([lo, hi], [yi, yi], color=BLUE, lw=2.2, zorder=2,
+             solid_capstyle="round")
+    axD.plot(mgain, yi, "D", color=DBLUE, markersize=6.5,
+             markeredgecolor="white", markeredgewidth=1.1, zorder=3)
+    axD.text(hi + 0.35, yi, f"+{mgain:.1f}", fontsize=7, color=DBLUE,
+             va="center")
+axD.axvline(0, color=DPINK, lw=1.1, ls=(0, (4, 3)), zorder=1)
+axD.set_yticks(range(len(models)))
+axD.set_yticklabels([m[0] for m in models], fontsize=7)
+axD.set_xlabel("dictionary gain over $z$-only (acc. pts, 95% CI)",
+               fontsize=7.5)
+axD.set_xlim(-1.2, 11.5)
+axD.invert_yaxis()
+axD.grid(axis="x", zorder=0)
+axD.set_title("C  dictionary gain across models", fontsize=8, loc="left",
+              color=INK, fontweight="bold")
 save("e1_main")
 
 # ---------------- Fig E5: scale curve ----------------
@@ -248,7 +257,7 @@ ax.set_xlabel(r"coding residual $\varepsilon$ (terciles)")
 ax.set_xlim(-0.5, 2.75)
 save("e1_eps_vs_rho")
 
-# ---------------- Fig E2: heatmap + execution panel ----------------
+# -------- Fig E2: heatmap + identification quality + execution ----------
 cm = json.load(open(out / "e2_coeff_matrix.json"))
 compounds = list(cm)
 tasks_all = sorted(ALL_TASKS, key=lambda t: (TASK_REGISTRY[t][1], t))
@@ -267,10 +276,11 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(9.2, 2.9))
-gs = fig.add_gridspec(1, 2, width_ratios=[1.75, 1], wspace=0.04)
+fig = plt.figure(figsize=(9.6, 3.0))
+gs = fig.add_gridspec(1, 3, width_ratios=[1.75, 0.42, 0.95], wspace=0.06)
 axH = fig.add_subplot(gs[0])
-axE = fig.add_subplot(gs[1], sharey=axH)
+axI = fig.add_subplot(gs[1], sharey=axH)
+axE = fig.add_subplot(gs[2], sharey=axH)
 
 axH.imshow(Mx, cmap=SEQ, aspect="auto", vmin=0, vmax=1)
 for i, c in enumerate(compounds):
@@ -278,7 +288,12 @@ for i, c in enumerate(compounds):
         if comp in tasks:
             j = tasks.index(comp)
             axH.add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False,
-                                    edgecolor=DPINK, lw=1.3, zorder=4))
+                                    edgecolor=DPINK, lw=1.4, zorder=4))
+    for j in range(len(tasks)):
+        if Mx[i, j] >= 0.45:
+            axH.text(j, i, f"{Mx[i, j]:.1f}".lstrip("0"), ha="center",
+                     va="center", fontsize=5.2,
+                     color="white" if Mx[i, j] > 0.65 else INK)
 axH.set_xticks(range(len(tasks)))
 axH.set_xticklabels([short(t) for t in tasks], rotation=40, fontsize=6.4,
                     ha="right", rotation_mode="anchor")
@@ -291,35 +306,55 @@ for j, t in enumerate(tasks):
     if f != prev and prev is not None:
         axH.axvline(j - 0.5, color="white", lw=2)
     prev = f
-axH.set_title(f"A  skill identification ({n_dropped} near-zero columns omitted)", fontsize=8, loc="left", color=INK,
+axH.set_title(f"A  skill identification ({n_dropped} near-zero columns "
+              "omitted)", fontsize=8, loc="left", color=INK,
               fontweight="bold")
+handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.4)]
+axH.legend(handles, ["ground-truth constituent"], loc="lower right",
+           bbox_to_anchor=(1.0, 1.0), fontsize=6.5)
 
-# execution panel: per-compound accuracy, shared rows
+# B: identification quality = coefficient mass on true constituents
 y = np.arange(len(compounds))
+mass = []
+for c in compounds:
+    comps = compound_components(c)
+    tot = sum(cm[c].values()) + 1e-12
+    mass.append(sum(cm[c].get(x, 0) for x in comps) / tot)
+top1 = [max(cm[c], key=cm[c].get) in compound_components(c)
+        for c in compounds]
+axI.barh(y, mass, height=0.62, color=BLUE, edgecolor="none", zorder=2)
+for yi, (m, t1) in enumerate(zip(mass, top1)):
+    if t1:
+        axI.plot(m + 0.07, yi, "o", color=DPINK, markersize=4, zorder=3)
+axI.set_xlim(0, 1.05)
+axI.set_xticks([0, 0.5, 1])
+axI.tick_params(labelleft=False, labelsize=6.5)
+axI.grid(axis="x", zorder=0)
+axI.set_xlabel("coeff.\ mass on\ntrue constituents", fontsize=6.6)
+axI.set_title("B", fontsize=8, loc="left", color=INK, fontweight="bold")
+
+# C: execution with per-seed distribution
 for i, c in enumerate(compounds):
-    a = agg.loc[c]
-    axE.plot([0, max(a["icl"], a["cass"], a["retr"], a["naive"])],
-             [i, i], color=GRID, lw=0.8, zorder=1)
+    seeds = e2[e2["compound"] == c]["acc_cass"].values
+    axE.scatter(seeds, np.full(len(seeds), i) +
+                np.linspace(-0.14, 0.14, len(seeds)), s=9, color=BLUE,
+                alpha=0.5, edgecolor="none", zorder=2)
 axE.scatter(agg.loc[compounds, "icl"], y, marker="|", s=90, color=INK,
             lw=1.4, label="10-shot ICL", zorder=3)
-axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=22, color=MUTED,
+axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=20, color=MUTED,
             label="naive", zorder=3)
-axE.scatter(agg.loc[compounds, "retr"], y, s=32, color=PINK,
+axE.scatter(agg.loc[compounds, "retr"], y, s=28, color=PINK,
             edgecolor="white", linewidth=0.8, label="retrieval", zorder=4)
-axE.scatter(agg.loc[compounds, "cass"], y, s=42, color=DBLUE,
-            edgecolor="white", linewidth=0.9, label="CASS", zorder=5)
+axE.scatter(agg.loc[compounds, "cass"], y, s=44, color=DBLUE,
+            edgecolor="white", linewidth=0.9, label="CASS (mean)", zorder=5)
 axE.tick_params(labelleft=False)
-axE.set_xlim(-0.03, 1.05)
-axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.5)
+axE.set_xlim(-0.04, 1.05)
+axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7)
 axE.grid(axis="x", zorder=0)
-axE.legend(fontsize=6.3, loc="lower right", handletextpad=0.15,
+axE.legend(fontsize=6, loc="lower right", handletextpad=0.15,
            borderaxespad=0.1)
-axE.set_title("B  compound execution", fontsize=8, loc="left", color=INK,
-              fontweight="bold")
-axE.invert_yaxis() if False else None
-handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.6)]
-axH.legend(handles, ["ground-truth constituent"], loc="lower left",
-           bbox_to_anchor=(0.0, 1.12), fontsize=6.5)
+axE.set_title("C  execution (small dots: seeds)", fontsize=8, loc="left",
+              color=INK, fontweight="bold")
 save("e2_heatmap")
 
 # ---------------- Fig cosine matrices (H1) ----------------
