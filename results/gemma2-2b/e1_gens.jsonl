@@ -19722,3 +19722,1053 @@
 {"tag": "fruit-from-list|zvec|k4s0", "input": "whale, monkey, kangaroo, puma, date", "pred": " What is the odd one out?\n\n", "target": "date"}
 {"tag": "fruit-from-list|zvec|k4s0", "input": "peach, yak, bee, camel, salamander", "pred": " What is the most unusual combination of items", "target": "peach"}
 {"tag": "fruit-from-list|zvec|k4s0", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these words is NOT a le", "target": "papaya"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " Which of these words is NOT a synonym", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " What is the common thread that connects these", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "fox, panther, owl, dragonfly, apricot", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these is a **spider**", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is NOT a bat?", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these words is NOT a noun", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " This is a list of animals. ", "target": "strawberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " This is a list of things that are", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words is NOT a fossa", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " Which of these words is NOT a noun", "target": "cranberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are NOT a good example", "target": "durian"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " This is a list of things that are", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all examples of what?\n\n", "target": "grape"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " What is the common thread that connects these", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these is a banana?\n\n", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " Which of these are NOT a pair of", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are NOT a pair of", "target": "nectarine"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is NOT a noun", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "crow, pear, moray, puma, goose", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is a worm?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " This is a list of things that are", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " Which of these are NOT animals that can", "target": "fig"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things that are", "target": "persimmon"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "plum, oryx, hedgehog, elk, ant", "pred": " What is the common thread that connects these", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things that are", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What is the common thread that connects these", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the common thread that connects these", "target": "orange"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of words. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a mand", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " This is a list of things. ", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " This is a list of things that are", "target": "avocado"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "okapi, anteater, quokka, bat, plum", "pred": " This is a list of things that are", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these is NOT a seahorse", "target": "grapefruit"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these words is NOT a synonym", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the common thread that connects these", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " This is a list of things. ", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "bison, cougar, koala, guava, jellyfish", "pred": " This list contains a mix of animals and", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the order of the items from", "target": "raspberry"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are NOT a synonym for", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "whale, monkey, kangaroo, puma, date", "pred": " What is the common thread that connects these", "target": "date"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "peach, yak, bee, camel, salamander", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s1", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these is a papaya?\n\n", "target": "papaya"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " Which of these is a moray?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " This is a list of things. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "fox, panther, owl, dragonfly, apricot", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these is a llama?\n\n", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is NOT a bat?", "target": "pineapple"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " This is a list of things. ", "target": "apple"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these is a **parrot**", "target": "peach"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " This is a list of animals. ", "target": "strawberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " This is a list of things. ", "target": "lemon"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " This is a list of things that are", "target": "guava"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words is NOT a fossa", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " Which of these words is NOT a duck", "target": "cranberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these is a **chicken**", "target": "durian"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " This is a list of things. ", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all examples of **puma**", "target": "grape"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " This is a list of words. ", "target": "banana"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these is a banana?\n\n", "target": "banana"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " Which of these are NOT parrot?\n\n", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are NOT a pair of", "target": "nectarine"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is a baboon", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "crow, pear, moray, puma, goose", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is a worm?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " fig\n\n**Explanation:**\n\nThe list", "target": "fig"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things. ", "target": "persimmon"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "plum, oryx, hedgehog, elk, ant", "pred": " Which of these is an ant?\n\n", "target": "plum"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things. ", "target": "cherry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What is the common thread that connects these", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " Which of these words is NOT a goose", "target": "orange"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of words. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a mand", "target": "tangerine"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " This is a list of words. ", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " This is a list of animals. ", "target": "avocado"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "okapi, anteater, quokka, bat, plum", "pred": " This is a list of things. ", "target": "plum"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these is NOT a grapefruit?", "target": "grapefruit"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these is NOT a monkey?", "target": "pineapple"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the common thread that connects these", "target": "tangerine"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " This is a list of things. ", "target": "cherry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "bison, cougar, koala, guava, jellyfish", "pred": " This is a list of items. ", "target": "guava"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the common thread that connects these", "target": "raspberry"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are NOT penguins?\n\n", "target": "banana"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "whale, monkey, kangaroo, puma, date", "pred": " Which of these is a date?\n\n", "target": "date"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "peach, yak, bee, camel, salamander", "pred": " Which of these is a salamander?", "target": "peach"}
+{"tag": "fruit-from-list|cass_recon|k4s1", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things. ", "target": "apple"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the most common element in this", "target": "peach"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these words are most likely to", "target": "papaya"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the most common animal in this", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " What is the most unusual item on this", "target": "dragonfruit"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "fox, panther, owl, dragonfly, apricot", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these is an example of a", "target": "passionfruit"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is NOT a mammal?", "target": "pineapple"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " This is a list of things. ", "target": "apple"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "otter, ferret, peach, parrot, moose", "pred": " What is the odd one out?\n\n", "target": "peach"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " What is the most common animal in the", "target": "strawberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " What is the most common word in this", "target": "lemon"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " This is a list of things that are", "target": "guava"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words are most likely to", "target": "passionfruit"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " What is the most common word in this", "target": "cranberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are animals?\n\n**", "target": "durian"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " What is the odd one out?\n\n", "target": "passionfruit"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all animals. \n\n**", "target": "grape"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " What is the most common element in this", "target": "banana"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these are animals?\n\n**", "target": "banana"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " What are the items in the list that", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are not related?\n\n", "target": "nectarine"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is NOT a noun", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "crow, pear, moray, puma, goose", "pred": " What is the most common word in this", "target": "pear"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the most common animal in this", "target": "lemon"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the most common element in this", "target": "pear"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is NOT a living organism", "target": "pineapple"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " What is the most common element in the", "target": "apricot"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " What is the common thread that connects these", "target": "fig"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things. ", "target": "persimmon"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "plum, oryx, hedgehog, elk, ant", "pred": " What is the most unusual combination of animals", "target": "plum"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things that are", "target": "cherry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What are the animals in this list?", "target": "pomegranate"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the most common word in this", "target": "orange"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of animals. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a type", "target": "tangerine"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " What is the most common element in this", "target": "pomegranate"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " This is a list of animals. ", "target": "avocado"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "okapi, anteater, quokka, bat, plum", "pred": " This is a list of things that are", "target": "plum"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these is NOT a living thing", "target": "grapefruit"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " What is the most unusual word in this", "target": "pineapple"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the most common word in this", "target": "tangerine"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " This is a list of things. ", "target": "cherry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "bison, cougar, koala, guava, jellyfish", "pred": " This list contains a variety of different organisms", "target": "guava"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the most likely order of these", "target": "raspberry"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these animals is NOT a mammal", "target": "banana"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "whale, monkey, kangaroo, puma, date", "pred": " This is a list of things. ", "target": "date"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "peach, yak, bee, camel, salamander", "pred": " What is the most unusual combination of these", "target": "peach"}
+{"tag": "fruit-from-list|zvec|k4s1", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these are not a part of", "target": "papaya"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " Which of these is a moray?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " What is the common thread that connects these", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "fox, panther, owl, dragonfly, apricot", "pred": " What is the common thread that connects these", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these is a **llama**", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is NOT a bat?", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these are NOT a good pairing", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " This is a list of things. ", "target": "strawberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " What is the common thread that connects these", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words is NOT a fossa", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " Which of these words is NOT a noun", "target": "cranberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are NOT a good example", "target": "durian"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " This is a list of things that are", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all examples of what?\n\n", "target": "grape"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " What is the common thread that connects these", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these are not related?\n\n", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " Which of these are NOT a pair of", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " What is the common thread that connects these", "target": "nectarine"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is a noun?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "crow, pear, moray, puma, goose", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is a worm?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " What is the common thread that connects these", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " fig\n\n**Explanation:**\n\nThe list", "target": "fig"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things that are", "target": "persimmon"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "plum, oryx, hedgehog, elk, ant", "pred": " What is the common thread that connects these", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things that are", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What is the common thread that connects these", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the common thread that connects these", "target": "orange"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of things. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a mand", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " This is a list of things. ", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " This is a list of things that are", "target": "avocado"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "okapi, anteater, quokka, bat, plum", "pred": " This is a list of things that are", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these is NOT a seahorse", "target": "grapefruit"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these is NOT a synonym for", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the common thread that connects these", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " This is a list of things. ", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "bison, cougar, koala, guava, jellyfish", "pred": " This list contains a mix of animals and", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the order of the moose,", "target": "raspberry"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are NOT a synonym for", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "whale, monkey, kangaroo, puma, date", "pred": " Which of these are not related?\n\n", "target": "date"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "peach, yak, bee, camel, salamander", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s2", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these are NOT a lemur", "target": "papaya"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " Which of these is a moray?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " This is a list of things that are", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "fox, panther, owl, dragonfly, apricot", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these is a llama?\n\n", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is a pineapple?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " This is a list of things. ", "target": "apple"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these are NOT a moose?", "target": "peach"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " This is a list of animals. ", "target": "strawberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " This is a list of things. ", "target": "lemon"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " Which of these are **guava**", "target": "guava"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words is a **seal", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " Which of these words is a duck?", "target": "cranberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are NOT a chicken?", "target": "durian"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " This is a list of things. ", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all examples of **puma**", "target": "grape"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " This is a list of things. ", "target": "banana"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these are not a lemur", "target": "banana"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " Which of these are mandrill?\n\n", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are NOT a pair of", "target": "nectarine"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is a baboon", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "crow, pear, moray, puma, goose", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is a worm?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " fig\n\n**Explanation:**\n\nThe list", "target": "fig"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things that are", "target": "persimmon"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "plum, oryx, hedgehog, elk, ant", "pred": " Which of these is an ant?\n\n", "target": "plum"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things that are", "target": "cherry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " This is a list of animals. ", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the common thread that connects these", "target": "orange"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of things. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a mand", "target": "tangerine"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " This is a list of things. ", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " This is a list of animals. ", "target": "avocado"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "okapi, anteater, quokka, bat, plum", "pred": " This is a list of things that are", "target": "plum"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these is NOT a grapefruit?", "target": "grapefruit"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these is a pineapple?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the common element in the list", "target": "tangerine"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " This is a list of things. ", "target": "cherry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "bison, cougar, koala, guava, jellyfish", "pred": " This is a list of items. ", "target": "guava"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the common thread that connects these", "target": "raspberry"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are NOT weasel?", "target": "banana"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "whale, monkey, kangaroo, puma, date", "pred": " Which of these are the most likely to", "target": "date"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "peach, yak, bee, camel, salamander", "pred": " This is a list of things that are", "target": "peach"}
+{"tag": "fruit-from-list|cass_recon|k4s2", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things. ", "target": "apple"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the most common element in this", "target": "peach"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these words are most likely to", "target": "papaya"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common element in this list", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " What is the common element in this list", "target": "dragonfruit"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "fox, panther, owl, dragonfly, apricot", "pred": " This is a list of things. ", "target": "apricot"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these are not related?\n\n", "target": "passionfruit"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these are not animals?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " What are some examples of animals?\n\n", "target": "apple"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these words are not related?", "target": "peach"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " What is the common element in this list", "target": "strawberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " What is the common element in this list", "target": "lemon"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " What is the common element in this list", "target": "guava"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " What are the words that are not related", "target": "passionfruit"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " What is the common thread that connects these", "target": "cranberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are not related?\n\n", "target": "durian"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " What is the most likely category for this", "target": "passionfruit"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all animals.\n\n**Explanation", "target": "grape"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " What is the most common element in this", "target": "banana"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "crab, narwhal, fossa, lemur, banana", "pred": " What is the most logical grouping of these", "target": "banana"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are not related?\n\n", "target": "nectarine"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " What is the most common word in this", "target": "gooseberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "crow, pear, moray, puma, goose", "pred": " What is the common element in this list", "target": "pear"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common element in this list", "target": "lemon"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the common element in this list", "target": "pear"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " What is the most unusual item on this", "target": "pineapple"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " What is the most common element in this", "target": "apricot"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " What is the common element in this list", "target": "fig"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things. ", "target": "persimmon"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "plum, oryx, hedgehog, elk, ant", "pred": " What is the most unusual combination of animals", "target": "plum"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "okapi, leopard, cherry, panda, skunk", "pred": " What are the animals in this list?", "target": "cherry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What are the animals in this list?", "target": "pomegranate"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the common element in this list", "target": "orange"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " What is the common thread that connects these", "target": "dragonfruit"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words are most likely to", "target": "tangerine"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " What is the most common element in this", "target": "pomegranate"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " What is the most likely category for this", "target": "avocado"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "okapi, anteater, quokka, bat, plum", "pred": " This is a list of things that are", "target": "plum"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these are not related?\n\n", "target": "grapefruit"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these words is NOT a type", "target": "pineapple"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the most common element in this", "target": "tangerine"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " What is the common element in this list", "target": "cherry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "bison, cougar, koala, guava, jellyfish", "pred": " Which of these are not related?\n\n", "target": "guava"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the most likely category for this", "target": "raspberry"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are mammals?\n\n**", "target": "banana"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "whale, monkey, kangaroo, puma, date", "pred": " What is the odd one out?\n\n", "target": "date"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "peach, yak, bee, camel, salamander", "pred": " What is the most unusual animal on this", "target": "peach"}
+{"tag": "fruit-from-list|zvec|k4s2", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things. ", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the common thread that connects these", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these are not a part of", "target": "papaya"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " Which of these is a moray?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " What is the common thread that connects these", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "fox, panther, owl, dragonfly, apricot", "pred": " What is the common thread that connects these", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these is a **spider**", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is not a bat?", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " What is the common thread that connects these", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these is a **peach**", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " This is a list of animals. ", "target": "strawberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " What is the common thread that connects these", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words is NOT a fossa", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " Which of these words is NOT a noun", "target": "cranberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are NOT a mandrill", "target": "durian"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " This is a list of things that are", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all examples of what?\n\n", "target": "grape"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " What is the common thread that connects these", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these is a banana?\n\n", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " Which of these are NOT a mandrill", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are not a pair of", "target": "nectarine"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is a noun?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "crow, pear, moray, puma, goose", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the common thread that connects these", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is a worm?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " What is the common thread that connects these", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " fig\n\n**Explanation:**\n\nThe only", "target": "fig"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things that are", "target": "persimmon"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "plum, oryx, hedgehog, elk, ant", "pred": " What is the ant the only one that", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things that are", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What is the common thread that connects these", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the common thread that connects these", "target": "orange"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of words. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a mand", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " What is the common thread that connects these", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " This is a list of animals. ", "target": "avocado"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "okapi, anteater, quokka, bat, plum", "pred": " What is the common thread that connects these", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these is NOT a seahorse", "target": "grapefruit"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these words is NOT a synonym", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the common element that connects these", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " What is the common thread that connects these", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "bison, cougar, koala, guava, jellyfish", "pred": " This list contains a mix of animals and", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the most likely order of the", "target": "raspberry"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are not a synonym for", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "whale, monkey, kangaroo, puma, date", "pred": " Which of these items is a date?", "target": "date"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "peach, yak, bee, camel, salamander", "pred": " Which of these are not a good candidates", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s3", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "shark, peach, mantis, lynx, seal", "pred": " What is the most common letter in the", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "plantain, magpie, wombat, hamster, finch", "pred": " This is a list of animals. ", "target": "plantain"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "weasel, whale, lemur, papaya, gazelle", "pred": " Which of these are not related in a", "target": "papaya"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "lion, cat, kangaroo, gooseberry, turtle", "pred": " What is the common element that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "gooseberry, spider, cougar, lobster, moray", "pred": " What is the common thread that connects these", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "spider, ostrich, donkey, dragonfruit, snake", "pred": " What is the most common element in the", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "fox, panther, owl, dragonfly, apricot", "pred": " What is the common element that connects these", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "passionfruit, spider, snake, llama, beaver", "pred": " Which of these are not related?\n\n", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "seal, oryx, bat, eel, pineapple", "pred": " Which of these is NOT a mammal?", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "apple, manatee, caterpillar, gecko, spider", "pred": " What is the common thread that connects these", "target": "apple"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "otter, ferret, peach, parrot, moose", "pred": " Which of these are NOT a good choices", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "strawberry, alligator, tiger, lion, elephant", "pred": " This is a list of animals. ", "target": "strawberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "dragonfly, lemon, chicken, bunny, vulture", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "octopus, cobra, reindeer, jellyfish, guava", "pred": " Which of these are not related?\n\n", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "fossa, panda, passionfruit, seal, jellyfish", "pred": " Which of these words are most likely to", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "dove, rhinoceros, cranberry, meerkat, duck", "pred": " Which of these words is NOT a noun", "target": "cranberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "gecko, durian, deer, mandrill, chicken", "pred": " Which of these are NOT related to each", "target": "durian"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "quokka, pelican, skunk, jackal, passionfruit", "pred": " What is the most likely connection between the", "target": "passionfruit"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "puma, grape, jaguar, lynx, bear", "pred": " These are all examples of what?\n\n", "target": "grape"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "banana, narwhal, caterpillar, gorilla, hyena", "pred": " What is the common thread that connects these", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "crab, narwhal, fossa, lemur, banana", "pred": " Which of these are not related?\n\n", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "gooseberry, fish, yak, parrot, mandrill", "pred": " Which of these are NOT animals?\n\n", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "wombat, caribou, mouse, panda, nectarine", "pred": " Which of these are not related?\n\n", "target": "nectarine"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "gooseberry, wolf, goose, baboon, skunk", "pred": " Which of these words is a noun?", "target": "gooseberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "crow, pear, moray, puma, goose", "pred": " What is the common element in this list", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "lemon, monkey, emu, lynx, turkey", "pred": " What is the common thread that connects these", "target": "lemon"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "chipmunk, crab, capybara, pear, spider", "pred": " What is the most common element in the", "target": "pear"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "frog, ostrich, cougar, worm, pineapple", "pred": " Which of these is a worm?\n\n", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "octopus, apricot, frog, dragonfly, chicken", "pred": " What is the common thread that connects these", "target": "apricot"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "fig, reindeer, rhinoceros, crow, cobra", "pred": " Which of these are not animals that can", "target": "fig"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "persimmon, toucan, snail, ocelot, crab", "pred": " This is a list of things that are", "target": "persimmon"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "plum, oryx, hedgehog, elk, ant", "pred": " What is the ant's relationship to", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "okapi, leopard, cherry, panda, skunk", "pred": " This is a list of things that are", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "turtle, pomegranate, pelican, ibex, badger", "pred": " What is the common thread that connects these", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "bunny, fossa, chinchilla, orange, goose", "pred": " What is the common element that connects these", "target": "orange"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "dragonfruit, tiger, gnu, ocelot, dog", "pred": " This is a list of animals. ", "target": "dragonfruit"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "tangerine, otter, wombat, mandrill, jackal", "pred": " Which of these words is NOT a mand", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "lion, pigeon, pomegranate, ant, bunny", "pred": " What is the most common element in the", "target": "pomegranate"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "avocado, newt, barracuda, dingo, mouse", "pred": " Which of these are not a good candidates", "target": "avocado"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "okapi, anteater, quokka, bat, plum", "pred": " What is the common thread that connects these", "target": "plum"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "cougar, fossa, seahorse, alligator, grapefruit", "pred": " Which of these are NOT a good example", "target": "grapefruit"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "grizzly, pigeon, salamander, pineapple, monkey", "pred": " Which of these words is NOT a synonym", "target": "pineapple"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "crow, cheetah, elk, tangerine, butterfly", "pred": " What is the most logical grouping of these", "target": "tangerine"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "woodpecker, alpaca, cherry, leopard, panther", "pred": " What is the common thread that connects these", "target": "cherry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "bison, cougar, koala, guava, jellyfish", "pred": " Which of these are NOT in the same", "target": "guava"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "moose, yak, deer, raspberry, chipmunk", "pred": " What is the most likely order of the", "target": "raspberry"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "banana, yak, fossa, penguin, weasel", "pred": " Which of these are NOT found in the", "target": "banana"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "whale, monkey, kangaroo, puma, date", "pred": " What is the most logical grouping of these", "target": "date"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "peach, yak, bee, camel, salamander", "pred": " Which of these are not related?\n\n", "target": "peach"}
+{"tag": "fruit-from-list|cass|k4s4", "input": "elk, frog, apple, coyote, ocelot", "pred": " This is a list of things that are", "target": "apple"}
+{"tag": "verb-from-list|oracle", "input": "long, kindred, dance, resilient, thirsty", "pred": " These words are all related to the concept", "target": "dance"}
+{"tag": "verb-from-list|oracle", "input": "young, courageous, enthusiastic, open, keen", "pred": " **young, enthusiastic, keen**\n\n", "target": "open"}
+{"tag": "verb-from-list|oracle", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **dirty**\n\n**amazing**\n\n", "target": "knot"}
+{"tag": "verb-from-list|oracle", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which of these words is the most likely", "target": "kill"}
+{"tag": "verb-from-list|oracle", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**dislike**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|oracle", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** jubilant\n\n**naive", "target": "land"}
+{"tag": "verb-from-list|oracle", "input": "observant, cheap, jump, spicy, bitter", "pred": " **observant**\n\n**observant", "target": "jump"}
+{"tag": "verb-from-list|oracle", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful**\n\n**hopeful", "target": "understand"}
+{"tag": "verb-from-list|oracle", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **intelligent**\n\n**intelligent** is", "target": "verify"}
+{"tag": "verb-from-list|oracle", "input": "transform, cold, fierce, mild, smart", "pred": " **transform**\n\n**transform** is", "target": "transform"}
+{"tag": "verb-from-list|oracle", "input": "need, sincere, kind, happy, smart", "pred": " need, sincere, happy, smart\n\n", "target": "need"}
+{"tag": "verb-from-list|oracle", "input": "radiant, fast, thin, consult, inventive", "pred": " **radiant**\n\n**A radiant", "target": "consult"}
+{"tag": "verb-from-list|oracle", "input": "dry, observant, tender, decide, bad", "pred": " **dry** and **decide**\n\n", "target": "decide"}
+{"tag": "verb-from-list|oracle", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " mirthful, dynamic, agreeable, build", "target": "build"}
+{"tag": "verb-from-list|oracle", "input": "energetic, dark, salty, manage, tranquil", "pred": " **energetic**\n\n**tranquil", "target": "manage"}
+{"tag": "verb-from-list|oracle", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous, walk\n\n**Explanation:**\n\n", "target": "walk"}
+{"tag": "verb-from-list|oracle", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent\n\n**choose** the word that", "target": "choose"}
+{"tag": "verb-from-list|oracle", "input": "keen, soft, zap, bold, optimistic", "pred": " Which of these words are most closely related", "target": "zap"}
+{"tag": "verb-from-list|oracle", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " These words are all related to the concept", "target": "win"}
+{"tag": "verb-from-list|oracle", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** youthful hopeful wet practice\n\n", "target": "practice"}
+{"tag": "verb-from-list|oracle", "input": "trustworthy, dry, cold, loud, consider", "pred": " **trustworthy**\n\n**consider**", "target": "consider"}
+{"tag": "verb-from-list|oracle", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " These words are all synonyms for **up", "target": "discover"}
+{"tag": "verb-from-list|oracle", "input": "determined, grateful, kick, affable, courageous", "pred": " **determined**\n\n**affable**", "target": "kick"}
+{"tag": "verb-from-list|oracle", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious**\n\n**harmonious", "target": "save"}
+{"tag": "verb-from-list|oracle", "input": "produce, gentle, tall, brave, cheerful", "pred": " These words are all related to the **", "target": "produce"}
+{"tag": "verb-from-list|oracle", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **upbeat**\n\n**upbeat", "target": "memorize"}
+{"tag": "verb-from-list|oracle", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " These words are all related to the **", "target": "xerox"}
+{"tag": "verb-from-list|oracle", "input": "light, joyous, jolt, fierce, cowardly", "pred": " **light, joyous, jolt, cowardly", "target": "jolt"}
+{"tag": "verb-from-list|oracle", "input": "brave, blissful, affectionate, speak, serene", "pred": " **brave**\n\n**brave**\n\n", "target": "speak"}
+{"tag": "verb-from-list|oracle", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting**\n\n**uplifting", "target": "keep"}
+{"tag": "verb-from-list|oracle", "input": "justify, innocent, lively, joyous, gentle", "pred": " These words are all related to the concept", "target": "justify"}
+{"tag": "verb-from-list|oracle", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which of these words is a synonym for", "target": "attack"}
+{"tag": "verb-from-list|oracle", "input": "understand, long, magnificent, resolute, naughty", "pred": " understand\n\n**understand**\n\n**understand", "target": "understand"}
+{"tag": "verb-from-list|oracle", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** - a person who", "target": "practice"}
+{"tag": "verb-from-list|oracle", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle**\n\n**gentle**\n\n", "target": "schedule"}
+{"tag": "verb-from-list|oracle", "input": "hungry, honest, thirsty, build, lovable", "pred": " **hungry**\n\n**hungry**\n\n", "target": "build"}
+{"tag": "verb-from-list|oracle", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent**\n\n**innocent**\n\n", "target": "try"}
+{"tag": "verb-from-list|oracle", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**visualize** is", "target": "visualize"}
+{"tag": "verb-from-list|oracle", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine**\n\n**genuine**\n\n", "target": "justify"}
+{"tag": "verb-from-list|oracle", "input": "youthful, race, enchanting, clever, warm", "pred": " These words are all associated with the **", "target": "race"}
+{"tag": "verb-from-list|oracle", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**peaceful**\n\n", "target": "practice"}
+{"tag": "verb-from-list|oracle", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **affectionate**\n\n**unwavering", "target": "keep"}
+{"tag": "verb-from-list|oracle", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **gracious**\n\n**adorable**", "target": "reflect"}
+{"tag": "verb-from-list|oracle", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **make**\n\n**make** a", "target": "make"}
+{"tag": "verb-from-list|oracle", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **bountiful**\n\n**A", "target": "hate"}
+{"tag": "verb-from-list|oracle", "input": "fearless, build, fierce, friendly, innocent", "pred": " **fearless**\n\n**fearless", "target": "build"}
+{"tag": "verb-from-list|oracle", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " quizzical - **strong**\n\n", "target": "schedule"}
+{"tag": "verb-from-list|oracle", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " quizzical - **examine** the", "target": "examine"}
+{"tag": "verb-from-list|oracle", "input": "unique, short, diligent, modest, reach", "pred": " **unique** reach\n\n**unique**", "target": "reach"}
+{"tag": "verb-from-list|oracle", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant**\n\n**ex", "target": "zoom"}
+{"tag": "verb-from-list|naive", "input": "long, kindred, dance, resilient, thirsty", "pred": " These words are all examples of:\n\n", "target": "dance"}
+{"tag": "verb-from-list|naive", "input": "young, courageous, enthusiastic, open, keen", "pred": " These words all describe someone who is:", "target": "open"}
+{"tag": "verb-from-list|naive", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " These words are all examples of:\n\n", "target": "knot"}
+{"tag": "verb-from-list|naive", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which of these words are most likely to", "target": "kill"}
+{"tag": "verb-from-list|naive", "input": "dislike, nurturing, big, new, wise", "pred": " **Match the words to their appropriate category", "target": "dislike"}
+{"tag": "verb-from-list|naive", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " Which of these words are synonyms?\n\n", "target": "land"}
+{"tag": "verb-from-list|naive", "input": "observant, cheap, jump, spicy, bitter", "pred": " What are the five senses?\n\n**", "target": "jump"}
+{"tag": "verb-from-list|naive", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " These words are all synonyms for what?", "target": "understand"}
+{"tag": "verb-from-list|naive", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " These words are all synonyms for what?", "target": "verify"}
+{"tag": "verb-from-list|naive", "input": "transform, cold, fierce, mild, smart", "pred": " These words can be used to describe a", "target": "transform"}
+{"tag": "verb-from-list|naive", "input": "need, sincere, kind, happy, smart", "pred": " List of words that describe a person.", "target": "need"}
+{"tag": "verb-from-list|naive", "input": "radiant, fast, thin, consult, inventive", "pred": " These words are all synonyms for what?", "target": "consult"}
+{"tag": "verb-from-list|naive", "input": "dry, observant, tender, decide, bad", "pred": " **Which word is the antonym of", "target": "decide"}
+{"tag": "verb-from-list|naive", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **Match the words to their definitions:**", "target": "build"}
+{"tag": "verb-from-list|naive", "input": "energetic, dark, salty, manage, tranquil", "pred": " **Which of these words best describes the", "target": "manage"}
+{"tag": "verb-from-list|naive", "input": "luminous, honest, tranquil, gracious, walk", "pred": " **Luminous** - shining brightly\n", "target": "walk"}
+{"tag": "verb-from-list|naive", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " **magnificent**\n\n**Why?", "target": "choose"}
+{"tag": "verb-from-list|naive", "input": "keen, soft, zap, bold, optimistic", "pred": " Which of these words are adjectives?\n\n", "target": "zap"}
+{"tag": "verb-from-list|naive", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " Which of these words best describes a person", "target": "win"}
+{"tag": "verb-from-list|naive", "input": "amazing, youthful, hopeful, wet, practice", "pred": " These words are all related to the theme", "target": "practice"}
+{"tag": "verb-from-list|naive", "input": "trustworthy, dry, cold, loud, consider", "pred": " **What are some words that describe a", "target": "consider"}
+{"tag": "verb-from-list|naive", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " These words all describe a feeling of **", "target": "discover"}
+{"tag": "verb-from-list|naive", "input": "determined, grateful, kick, affable, courageous", "pred": " These words are all synonyms for:\n\n", "target": "kick"}
+{"tag": "verb-from-list|naive", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " Which of these words best describes the feeling", "target": "save"}
+{"tag": "verb-from-list|naive", "input": "produce, gentle, tall, brave, cheerful", "pred": " These are all adjectives. \n\n**", "target": "produce"}
+{"tag": "verb-from-list|naive", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " These words are all related to what?", "target": "memorize"}
+{"tag": "verb-from-list|naive", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " List of words.\n\n**Instructions:**", "target": "xerox"}
+{"tag": "verb-from-list|naive", "input": "light, joyous, jolt, fierce, cowardly", "pred": " Which of these words best describes the tone", "target": "jolt"}
+{"tag": "verb-from-list|naive", "input": "brave, blissful, affectionate, speak, serene", "pred": " **Choose the word that best fits the", "target": "speak"}
+{"tag": "verb-from-list|naive", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **Uplifting** - making someone feel", "target": "keep"}
+{"tag": "verb-from-list|naive", "input": "justify, innocent, lively, joyous, gentle", "pred": " These are all adjectives. \n\n**", "target": "justify"}
+{"tag": "verb-from-list|naive", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which of these words are synonyms?\n\n", "target": "attack"}
+{"tag": "verb-from-list|naive", "input": "understand, long, magnificent, resolute, naughty", "pred": " **Understand**\n\n**Long**\n\n", "target": "understand"}
+{"tag": "verb-from-list|naive", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " Which of these words are antonyms?", "target": "practice"}
+{"tag": "verb-from-list|naive", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " Which of these words are synonyms?\n\n", "target": "schedule"}
+{"tag": "verb-from-list|naive", "input": "hungry, honest, thirsty, build, lovable", "pred": " What are the five words that best describe", "target": "build"}
+{"tag": "verb-from-list|naive", "input": "innocent, slow, try, loving, ecstatic", "pred": " These words are all synonyms for what?", "target": "try"}
+{"tag": "verb-from-list|naive", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " These words are all related to the concept", "target": "visualize"}
+{"tag": "verb-from-list|naive", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " These words are all synonyms for **positive", "target": "justify"}
+{"tag": "verb-from-list|naive", "input": "youthful, race, enchanting, clever, warm", "pred": " These words are all adjectives. \n\n", "target": "race"}
+{"tag": "verb-from-list|naive", "input": "peaceful, generous, happy, practice, heavy", "pred": " **Word List**\n\n**Instructions:**", "target": "practice"}
+{"tag": "verb-from-list|naive", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " These words are all synonyms for **strong", "target": "keep"}
+{"tag": "verb-from-list|naive", "input": "gracious, reflect, wonderful, adorable, old", "pred": " Which word is the most appropriate to describe", "target": "reflect"}
+{"tag": "verb-from-list|naive", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " These words all describe something that is **", "target": "make"}
+{"tag": "verb-from-list|naive", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " Which of these words are synonyms?\n\n", "target": "hate"}
+{"tag": "verb-from-list|naive", "input": "fearless, build, fierce, friendly, innocent", "pred": " Which of these words are most likely to", "target": "build"}
+{"tag": "verb-from-list|naive", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " Which of these words is an adjective?", "target": "schedule"}
+{"tag": "verb-from-list|naive", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " Which of these words best describes the tone", "target": "examine"}
+{"tag": "verb-from-list|naive", "input": "unique, short, diligent, modest, reach", "pred": " These are all adjectives. What is the", "target": "reach"}
+{"tag": "verb-from-list|naive", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " These words are all synonyms for **positive", "target": "zoom"}
+{"tag": "verb-from-list|cass|k4s0", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass|k4s0", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**Explanation:**\n\n", "target": "open"}
+{"tag": "verb-from-list|cass|k4s0", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **knot**\n\nThe other words are", "target": "knot"}
+{"tag": "verb-from-list|cass|k4s0", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " affectionate\n\n**Explanation:**\n\nThe word", "target": "kill"}
+{"tag": "verb-from-list|cass|k4s0", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass|k4s0", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass|k4s0", "input": "observant, cheap, jump, spicy, bitter", "pred": " **observant** -  This word", "target": "jump"}
+{"tag": "verb-from-list|cass|k4s0", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful** -  This word", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s0", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **intelligent** is the most appropriate word", "target": "verify"}
+{"tag": "verb-from-list|cass|k4s0", "input": "transform, cold, fierce, mild, smart", "pred": " **transform** -  This word is", "target": "transform"}
+{"tag": "verb-from-list|cass|k4s0", "input": "need, sincere, kind, happy, smart", "pred": " **happy** is the only word that", "target": "need"}
+{"tag": "verb-from-list|cass|k4s0", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive** is the word that", "target": "consult"}
+{"tag": "verb-from-list|cass|k4s0", "input": "dry, observant, tender, decide, bad", "pred": " **tender** is the word that doesn", "target": "decide"}
+{"tag": "verb-from-list|cass|k4s0", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **build**\n\nThe other words are", "target": "build"}
+{"tag": "verb-from-list|cass|k4s0", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil** is the odd one", "target": "manage"}
+{"tag": "verb-from-list|cass|k4s0", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous\n\n**Explanation:**\n\n* **", "target": "walk"}
+{"tag": "verb-from-list|cass|k4s0", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " **magnificent**\n\n**Explanation:**", "target": "choose"}
+{"tag": "verb-from-list|cass|k4s0", "input": "keen, soft, zap, bold, optimistic", "pred": " **keen** -  The most appropriate", "target": "zap"}
+{"tag": "verb-from-list|cass|k4s0", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " **win** -  This word is", "target": "win"}
+{"tag": "verb-from-list|cass|k4s0", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** -  This word is", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s0", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider** is the word that best", "target": "consider"}
+{"tag": "verb-from-list|cass|k4s0", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting** is the best", "target": "discover"}
+{"tag": "verb-from-list|cass|k4s0", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable** is the odd one", "target": "kick"}
+{"tag": "verb-from-list|cass|k4s0", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious** -  The harmonious", "target": "save"}
+{"tag": "verb-from-list|cass|k4s0", "input": "produce, gentle, tall, brave, cheerful", "pred": " **tall** is the only word that", "target": "produce"}
+{"tag": "verb-from-list|cass|k4s0", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize** is the word that", "target": "memorize"}
+{"tag": "verb-from-list|cass|k4s0", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **expensive** and **xerox**", "target": "xerox"}
+{"tag": "verb-from-list|cass|k4s0", "input": "light, joyous, jolt, fierce, cowardly", "pred": " **fierce**\n\n**Explanation:**", "target": "jolt"}
+{"tag": "verb-from-list|cass|k4s0", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|cass|k4s0", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** -  The uplifting", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s0", "input": "justify, innocent, lively, joyous, gentle", "pred": " **justify** -  The word \"", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s0", "input": "attack, sour, tranquil, cheerful, bad", "pred": " **tranquil** is the odd one", "target": "attack"}
+{"tag": "verb-from-list|cass|k4s0", "input": "understand, long, magnificent, resolute, naughty", "pred": " magnificent\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s0", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** -  The blissful", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s0", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle**\n\n**gentle** is", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s0", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s0", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** -  The word \"", "target": "try"}
+{"tag": "verb-from-list|cass|k4s0", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize** is the odd one out", "target": "visualize"}
+{"tag": "verb-from-list|cass|k4s0", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** -  The genuine smile", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s0", "input": "youthful, race, enchanting, clever, warm", "pred": " **race** is the only word that", "target": "race"}
+{"tag": "verb-from-list|cass|k4s0", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful** -  The peaceful person", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s0", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic** is the word", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s0", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable** is the word that best", "target": "reflect"}
+{"tag": "verb-from-list|cass|k4s0", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass|k4s0", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute** is the word that", "target": "hate"}
+{"tag": "verb-from-list|cass|k4s0", "input": "fearless, build, fierce, friendly, innocent", "pred": " **innocent** is the word that best", "target": "build"}
+{"tag": "verb-from-list|cass|k4s0", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** -  The", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s0", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "examine"}
+{"tag": "verb-from-list|cass|k4s0", "input": "unique, short, diligent, modest, reach", "pred": " **unique** -  The unique aspect", "target": "reach"}
+{"tag": "verb-from-list|cass|k4s0", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** -  The", "target": "zoom"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**Explanation:**\n\n", "target": "open"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **knot**\n\nThis is the only", "target": "knot"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " affectionate\n\n**Explanation:**\n\nThe word", "target": "kill"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "observant, cheap, jump, spicy, bitter", "pred": " **jump**\n\nThe other words are", "target": "jump"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **agreeable**\n\n**Explanation:**", "target": "understand"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **benevolent** is the correct answer", "target": "verify"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "transform, cold, fierce, mild, smart", "pred": " **fierce** is the word that", "target": "transform"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "need, sincere, kind, happy, smart", "pred": " **happy**\n\n**Explanation:**\n\n", "target": "need"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**Explanation:**", "target": "consult"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "dry, observant, tender, decide, bad", "pred": " **tender**\n\n**Explanation:**\n\n", "target": "decide"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **agreeable**\n\n**Explanation:**", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil**\n\n**Explanation:**", "target": "manage"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "luminous, honest, tranquil, gracious, walk", "pred": " **gracious**\n\n**Explanation:**", "target": "walk"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " **magnificent**\n\n**Explanation:**", "target": "choose"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "keen, soft, zap, bold, optimistic", "pred": " **bold**\n\n**Explanation:**\n\n", "target": "zap"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " trustworthy\n\n**Explanation:**\n\nThe word", "target": "win"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "trustworthy, dry, cold, loud, consider", "pred": " **consider**\n\n**consider** is", "target": "consider"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting**\n\n**Explanation", "target": "discover"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable**\n\n**Explanation:**", "target": "kick"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious**\n\n**harmonious", "target": "save"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "produce, gentle, tall, brave, cheerful", "pred": " **cheerful**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize**\n\nThe other words", "target": "memorize"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **cheap** and **sweet** are", "target": "xerox"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "light, joyous, jolt, fierce, cowardly", "pred": " fierce\n\n**Explanation:**\n\nThe word", "target": "jolt"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting**\n\n**altru", "target": "keep"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "justify, innocent, lively, joyous, gentle", "pred": " **justify**\n\n**justify** is", "target": "justify"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "attack, sour, tranquil, cheerful, bad", "pred": " **tranquil**\n\n**Explanation:**", "target": "attack"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "understand, long, magnificent, resolute, naughty", "pred": " magnificent\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **Hopeful** is the word that", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **Carefree**\n\n**Explanation:**", "target": "schedule"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\nThis is the only", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "innocent, slow, try, loving, ecstatic", "pred": " **ecstatic**\n\n**Explanation:**", "target": "try"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**Explanation:**\n\n", "target": "visualize"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine**\n\n**uplifting**", "target": "justify"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "youthful, race, enchanting, clever, warm", "pred": " **race**\n\n**Explanation:**\n\n", "target": "race"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic**\n\n**Explanation", "target": "keep"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**Explanation:**\n\n", "target": "reflect"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute**\n\n**Explanation:**", "target": "hate"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "fearless, build, fierce, friendly, innocent", "pred": " **innocent**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** -  The", "target": "schedule"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "examine"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "unique, short, diligent, modest, reach", "pred": " **diligent**\n\n**Explanation:**", "target": "reach"}
+{"tag": "verb-from-list|cass_recon|k4s0", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **zoom**\n\nThe word **zoom", "target": "zoom"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "long, kindred, dance, resilient, thirsty", "pred": " **long** -  This word describes", "target": "dance"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**keen** means", "target": "open"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " These words are all related to the concept", "target": "knot"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which of these words is most likely to", "target": "kill"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "dislike, nurturing, big, new, wise", "pred": " Which of these words is most likely to", "target": "dislike"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the odd one out", "target": "land"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "observant, cheap, jump, spicy, bitter", "pred": " Which of these words is most likely to", "target": "jump"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful** - optimistic and eager", "target": "understand"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " These words are all adjectives. \n\n", "target": "verify"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "transform, cold, fierce, mild, smart", "pred": " Which of these words is the most likely", "target": "transform"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "need, sincere, kind, happy, smart", "pred": " Which of these words is most likely to", "target": "need"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**Explanation:**", "target": "consult"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "dry, observant, tender, decide, bad", "pred": " **dry** - lacking moisture, emotion", "target": "decide"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **dynamic**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "energetic, dark, salty, manage, tranquil", "pred": " **Energetic** and **tranquil", "target": "manage"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous - shining brightly\nhonest - truthful", "target": "walk"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent, optimistic, sensitive, eloquent\n\n", "target": "choose"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "keen, soft, zap, bold, optimistic", "pred": " Which of these words is the most likely", "target": "zap"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " Which word is the most appropriate to describe", "target": "win"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** - This word describes something", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider** is the odd word out", "target": "consider"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " These words are all synonyms for **en", "target": "discover"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "determined, grateful, kick, affable, courageous", "pred": " Which of these words is the most appropriate", "target": "kick"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " Which of these words is the most likely", "target": "save"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "produce, gentle, tall, brave, cheerful", "pred": " These words are all adjectives. \n\n", "target": "produce"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **Upbeat** and **courageous", "target": "memorize"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " These words are all...\n\n**A", "target": "xerox"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "light, joyous, jolt, fierce, cowardly", "pred": " Which of these words is the most **", "target": "jolt"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** - making someone feel", "target": "keep"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "justify, innocent, lively, joyous, gentle", "pred": " These words are all synonyms for **joy", "target": "justify"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which of these words is the most likely", "target": "attack"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "understand, long, magnificent, resolute, naughty", "pred": " **magnificent**\n\n**Explanation:**", "target": "understand"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** - feeling great happiness", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle** and **carefree**", "target": "schedule"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "hungry, honest, thirsty, build, lovable", "pred": " Which of these words is the most likely", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** - naive, pure\n", "target": "try"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize** is the odd one out", "target": "visualize"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** - authentic, sincere\n", "target": "justify"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "youthful, race, enchanting, clever, warm", "pred": " These words are all adjectives. \n\n", "target": "race"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful** -  calm and quiet", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **Affectionate** - showing or feeling", "target": "keep"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "gracious, reflect, wonderful, adorable, old", "pred": " Which word is the most appropriate to describe", "target": "reflect"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " Which of these words is the most appropriate", "target": "hate"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "fearless, build, fierce, friendly, innocent", "pred": " Which of these words is most likely to", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " Which word is the most appropriate to describe", "target": "schedule"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **quizzical** - curious and", "target": "examine"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "unique, short, diligent, modest, reach", "pred": " **unique** - one of a kind", "target": "reach"}
+{"tag": "verb-from-list|zvec|k4s0", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** - full of", "target": "zoom"}
+{"tag": "verb-from-list|cass|k4s1", "input": "long, kindred, dance, resilient, thirsty", "pred": " **kindred**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass|k4s1", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**Explanation:**\n\n", "target": "open"}
+{"tag": "verb-from-list|cass|k4s1", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **amazing** is the word that doesn", "target": "knot"}
+{"tag": "verb-from-list|cass|k4s1", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " affectionate\n\n**Explanation:**\n\n* **", "target": "kill"}
+{"tag": "verb-from-list|cass|k4s1", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass|k4s1", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass|k4s1", "input": "observant, cheap, jump, spicy, bitter", "pred": " **observant**\n\n**observant", "target": "jump"}
+{"tag": "verb-from-list|cass|k4s1", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful** -  The hopeful", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s1", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **intelligent** -  This word means", "target": "verify"}
+{"tag": "verb-from-list|cass|k4s1", "input": "transform, cold, fierce, mild, smart", "pred": " **transform** -  The word \"", "target": "transform"}
+{"tag": "verb-from-list|cass|k4s1", "input": "need, sincere, kind, happy, smart", "pred": " **kind** is the word that best", "target": "need"}
+{"tag": "verb-from-list|cass|k4s1", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**Explanation:**", "target": "consult"}
+{"tag": "verb-from-list|cass|k4s1", "input": "dry, observant, tender, decide, bad", "pred": " **tender** is the word that doesn", "target": "decide"}
+{"tag": "verb-from-list|cass|k4s1", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **dynamic**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s1", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil**\n\nThe word **", "target": "manage"}
+{"tag": "verb-from-list|cass|k4s1", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous\n\n**Explanation:**\n\n* **", "target": "walk"}
+{"tag": "verb-from-list|cass|k4s1", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent\n\n**Explanation:**\n\n* **", "target": "choose"}
+{"tag": "verb-from-list|cass|k4s1", "input": "keen, soft, zap, bold, optimistic", "pred": " **keen** -  A keen mind", "target": "zap"}
+{"tag": "verb-from-list|cass|k4s1", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " lovable\n\n**Lovable** is the", "target": "win"}
+{"tag": "verb-from-list|cass|k4s1", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** -  This word is", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s1", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider**\n\n**Consider** is", "target": "consider"}
+{"tag": "verb-from-list|cass|k4s1", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting**\n\n**Explanation", "target": "discover"}
+{"tag": "verb-from-list|cass|k4s1", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable** is the best choice", "target": "kick"}
+{"tag": "verb-from-list|cass|k4s1", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious** -  The harmonious", "target": "save"}
+{"tag": "verb-from-list|cass|k4s1", "input": "produce, gentle, tall, brave, cheerful", "pred": " **gentle**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass|k4s1", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **upbeat**\n\n**upbeat", "target": "memorize"}
+{"tag": "verb-from-list|cass|k4s1", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **cheap** and **sweet** are", "target": "xerox"}
+{"tag": "verb-from-list|cass|k4s1", "input": "light, joyous, jolt, fierce, cowardly", "pred": " **joyous**\n\nThe other words", "target": "jolt"}
+{"tag": "verb-from-list|cass|k4s1", "input": "brave, blissful, affectionate, speak, serene", "pred": " **affectionate** is the word that", "target": "speak"}
+{"tag": "verb-from-list|cass|k4s1", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** -  The uplifting", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s1", "input": "justify, innocent, lively, joyous, gentle", "pred": " **innocent**\n\n**Justification:**\n\n", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s1", "input": "attack, sour, tranquil, cheerful, bad", "pred": " **tranquil** is the odd one", "target": "attack"}
+{"tag": "verb-from-list|cass|k4s1", "input": "understand, long, magnificent, resolute, naughty", "pred": " magnificent\n\n**Explanation:**\n\n* **", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s1", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **zealous** is the word that", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s1", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **jubilant**\n\n**Explanation:**", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s1", "input": "hungry, honest, thirsty, build, lovable", "pred": " **thirsty**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s1", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** -  The innocent is", "target": "try"}
+{"tag": "verb-from-list|cass|k4s1", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize** is the word that doesn", "target": "visualize"}
+{"tag": "verb-from-list|cass|k4s1", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** -  The genuine smile", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s1", "input": "youthful, race, enchanting, clever, warm", "pred": " **race** is the only word that", "target": "race"}
+{"tag": "verb-from-list|cass|k4s1", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s1", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **Affectionate** -  This word", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s1", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**Explanation:**\n\n", "target": "reflect"}
+{"tag": "verb-from-list|cass|k4s1", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass|k4s1", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute** is the word that", "target": "hate"}
+{"tag": "verb-from-list|cass|k4s1", "input": "fearless, build, fierce, friendly, innocent", "pred": " friendly\n\n**Explanation:**\n\nThe word", "target": "build"}
+{"tag": "verb-from-list|cass|k4s1", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** -  The", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s1", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\nThe other words are", "target": "examine"}
+{"tag": "verb-from-list|cass|k4s1", "input": "unique, short, diligent, modest, reach", "pred": " **unique** -  The unique qualities", "target": "reach"}
+{"tag": "verb-from-list|cass|k4s1", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** -  The", "target": "zoom"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "young, courageous, enthusiastic, open, keen", "pred": " enthusiastic\n\n**Explanation:**\n\nThe word", "target": "open"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **amazing**\n\n**Explanation:**\n\n", "target": "knot"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " affectionate\n\n**Explanation:**\n\nThe word", "target": "kill"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "observant, cheap, jump, spicy, bitter", "pred": " **jump**\n\n**Explanation:**\n\n", "target": "jump"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **agreeable**\n\n**Explanation:**", "target": "understand"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **verify**\n\nThe other words are", "target": "verify"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "transform, cold, fierce, mild, smart", "pred": " **fierce**\n\n**Explanation:**", "target": "transform"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "need, sincere, kind, happy, smart", "pred": " **kind**\n\n**Explanation:**\n\n", "target": "need"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**Explanation:**", "target": "consult"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "dry, observant, tender, decide, bad", "pred": " **tender**\n\n**Explanation:**\n\n", "target": "decide"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **dynamic**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil**\n\n**Explanation:**", "target": "manage"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "luminous, honest, tranquil, gracious, walk", "pred": " **tranquil**\n\nThe other word", "target": "walk"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " **magnificent**\n\n**Explanation:**", "target": "choose"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "keen, soft, zap, bold, optimistic", "pred": " **keen**\n\n**keen** is", "target": "zap"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " lovable\n\n**Lovable** is the", "target": "win"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider**\n\nThis word is the", "target": "consider"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting**\n\n**Explanation", "target": "discover"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable**\n\n**affable", "target": "kick"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious**\n\n**Explanation:**", "target": "save"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "produce, gentle, tall, brave, cheerful", "pred": " **cheerful**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize**\n\nThe other words", "target": "memorize"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **cheap**\n\n**Explanation:**\n\n", "target": "xerox"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "light, joyous, jolt, fierce, cowardly", "pred": " fierce\n\n**Explanation:**\n\nThe word", "target": "jolt"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\nThe other word", "target": "speak"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting**\n\n**altru", "target": "keep"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "justify, innocent, lively, joyous, gentle", "pred": " **innocent**\n\n**Justification:**\n\n", "target": "justify"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "attack, sour, tranquil, cheerful, bad", "pred": " **tranquil**\n\n**Explanation:**", "target": "attack"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "understand, long, magnificent, resolute, naughty", "pred": " magnificent\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **zealous**\n\n**Explanation:**", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **Carefree**\n\n**Explanation:**", "target": "schedule"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent**\n\n**Explanation:**\n\n", "target": "try"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**Explanation:**\n\n", "target": "visualize"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "justify"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "youthful, race, enchanting, clever, warm", "pred": " **race**\n\n**Explanation:**\n\n", "target": "race"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic**\n\n**Explanation", "target": "keep"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**Explanation:**\n\n", "target": "reflect"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " pensive\n\n**Explanation:**\n\n* **", "target": "hate"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "fearless, build, fierce, friendly, innocent", "pred": " friendly\n\n**Explanation:**\n\nThe word", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **schedule**\n\nThe other word is", "target": "schedule"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\nThe **genuine**", "target": "examine"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "unique, short, diligent, modest, reach", "pred": " **diligent**\n\n**Explanation:**", "target": "reach"}
+{"tag": "verb-from-list|cass_recon|k4s1", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **zoom**\n\nThe **zoom**", "target": "zoom"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "long, kindred, dance, resilient, thirsty", "pred": " **kindred**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**keen** means", "target": "open"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " These words are all related to the concept", "target": "knot"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which of these words is the most likely", "target": "kill"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "dislike, nurturing, big, new, wise", "pred": " **Nurturing** is the word", "target": "dislike"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "observant, cheap, jump, spicy, bitter", "pred": " Which of these words is most likely to", "target": "jump"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful** - optimistic and eager", "target": "understand"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " These words are all synonyms for **bene", "target": "verify"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "transform, cold, fierce, mild, smart", "pred": " These words are all adjectives. \n\n", "target": "transform"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "need, sincere, kind, happy, smart", "pred": " Which of these words are most likely to", "target": "need"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**inventive", "target": "consult"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "dry, observant, tender, decide, bad", "pred": " **dry** - lacking moisture, emotion", "target": "decide"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **dynamic**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "energetic, dark, salty, manage, tranquil", "pred": " **Energetic** and **dark**", "target": "manage"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous, honest, tranquil, gracious,", "target": "walk"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent\n\n**Explanation:**\n\n* **", "target": "choose"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "keen, soft, zap, bold, optimistic", "pred": " Which of these words is the best synonym", "target": "zap"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " Which word is the most appropriate to describe", "target": "win"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** - This word describes something", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider**\n\n**Consider** is", "target": "consider"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " These words are all synonyms for **joy", "target": "discover"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "determined, grateful, kick, affable, courageous", "pred": " Which of these words is the most appropriate", "target": "kick"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " Which of these words is the most likely", "target": "save"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "produce, gentle, tall, brave, cheerful", "pred": " **tall**\n\nThe other words are", "target": "produce"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " These words are all related to **positive", "target": "memorize"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " These words are all...\n\n**A", "target": "xerox"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "light, joyous, jolt, fierce, cowardly", "pred": " Which of these words is the most appropriate", "target": "jolt"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "brave, blissful, affectionate, speak, serene", "pred": " **affectionate** is the word that", "target": "speak"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** - inspiring hope and", "target": "keep"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "justify, innocent, lively, joyous, gentle", "pred": " These words are all synonyms for **joy", "target": "justify"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which of these words is the most likely", "target": "attack"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "understand, long, magnificent, resolute, naughty", "pred": " Magnificent\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** - feeling great happiness", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **jubilant**\n\n**Explanation:**", "target": "schedule"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build** is the only word that", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** - naive, pure\n", "target": "try"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **agreeable**\n\n**agreeable", "target": "visualize"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** - authentic, sincere\n", "target": "justify"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "youthful, race, enchanting, clever, warm", "pred": " These words are all adjectives. \n\n", "target": "race"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**generous**", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **Affectionate** - showing love and", "target": "keep"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "gracious, reflect, wonderful, adorable, old", "pred": " Which word is the most appropriate to describe", "target": "reflect"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **lively**\n\nThe other words", "target": "make"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " Which of these words is the most appropriate", "target": "hate"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "fearless, build, fierce, friendly, innocent", "pred": " Which of these words is most likely to", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** - curious and", "target": "schedule"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **quizzical** - curious and", "target": "examine"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "unique, short, diligent, modest, reach", "pred": " **unique** - one of a kind", "target": "reach"}
+{"tag": "verb-from-list|zvec|k4s1", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** - full of", "target": "zoom"}
+{"tag": "verb-from-list|cass|k4s2", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass|k4s2", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**keen** is", "target": "open"}
+{"tag": "verb-from-list|cass|k4s2", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **knot**\n\nThe other words are", "target": "knot"}
+{"tag": "verb-from-list|cass|k4s2", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which of these words is most likely to", "target": "kill"}
+{"tag": "verb-from-list|cass|k4s2", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**dislike**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass|k4s2", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass|k4s2", "input": "observant, cheap, jump, spicy, bitter", "pred": " **observant** -  The observant", "target": "jump"}
+{"tag": "verb-from-list|cass|k4s2", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful** -  This word", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s2", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **intelligent**\n\n**intelligent** is", "target": "verify"}
+{"tag": "verb-from-list|cass|k4s2", "input": "transform, cold, fierce, mild, smart", "pred": " **transform** -  This word is", "target": "transform"}
+{"tag": "verb-from-list|cass|k4s2", "input": "need, sincere, kind, happy, smart", "pred": " **need**\n\n**Explanation:**\n\n", "target": "need"}
+{"tag": "verb-from-list|cass|k4s2", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**inventive", "target": "consult"}
+{"tag": "verb-from-list|cass|k4s2", "input": "dry, observant, tender, decide, bad", "pred": " **decide**\n\n**Explanation:**\n\n", "target": "decide"}
+{"tag": "verb-from-list|cass|k4s2", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **build**\n\nThe other words are", "target": "build"}
+{"tag": "verb-from-list|cass|k4s2", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil**\n\n**tranquil", "target": "manage"}
+{"tag": "verb-from-list|cass|k4s2", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous\n\n**Explanation:**\n\n* **", "target": "walk"}
+{"tag": "verb-from-list|cass|k4s2", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent\n\n**Explanation:**\n\n* **", "target": "choose"}
+{"tag": "verb-from-list|cass|k4s2", "input": "keen, soft, zap, bold, optimistic", "pred": " **keen** -  keen on a", "target": "zap"}
+{"tag": "verb-from-list|cass|k4s2", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " These words are all related to **trust", "target": "win"}
+{"tag": "verb-from-list|cass|k4s2", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing**\n\n**amazing** is", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s2", "input": "trustworthy, dry, cold, loud, consider", "pred": " **consider**\n\n**consider** is", "target": "consider"}
+{"tag": "verb-from-list|cass|k4s2", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting**\n\n**en", "target": "discover"}
+{"tag": "verb-from-list|cass|k4s2", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable** is the best fit", "target": "kick"}
+{"tag": "verb-from-list|cass|k4s2", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious** -  The harmonious", "target": "save"}
+{"tag": "verb-from-list|cass|k4s2", "input": "produce, gentle, tall, brave, cheerful", "pred": " **tall**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass|k4s2", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize** is the word that", "target": "memorize"}
+{"tag": "verb-from-list|cass|k4s2", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **expensive**\n\n**Explanation:**\n\n", "target": "xerox"}
+{"tag": "verb-from-list|cass|k4s2", "input": "light, joyous, jolt, fierce, cowardly", "pred": " **fierce**\n\n**Explanation:**", "target": "jolt"}
+{"tag": "verb-from-list|cass|k4s2", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|cass|k4s2", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** -  The uplifting", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s2", "input": "justify, innocent, lively, joyous, gentle", "pred": " **justify**\n\n**justify** is", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s2", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which of these words is the most appropriate", "target": "attack"}
+{"tag": "verb-from-list|cass|k4s2", "input": "understand, long, magnificent, resolute, naughty", "pred": " magnificent\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s2", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** -  The blissful", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s2", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle**\n\n**gentle** is", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s2", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s2", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** -  The word \"", "target": "try"}
+{"tag": "verb-from-list|cass|k4s2", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**visualize** is", "target": "visualize"}
+{"tag": "verb-from-list|cass|k4s2", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** -  The genuine smile", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s2", "input": "youthful, race, enchanting, clever, warm", "pred": " **race** is the most appropriate word", "target": "race"}
+{"tag": "verb-from-list|cass|k4s2", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s2", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic**\n\n**Explanation", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s2", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**adorable** is", "target": "reflect"}
+{"tag": "verb-from-list|cass|k4s2", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass|k4s2", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute**\n\n**Explanation:**", "target": "hate"}
+{"tag": "verb-from-list|cass|k4s2", "input": "fearless, build, fierce, friendly, innocent", "pred": " **innocent**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s2", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** -  The", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s2", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "examine"}
+{"tag": "verb-from-list|cass|k4s2", "input": "unique, short, diligent, modest, reach", "pred": " **unique** -  The unique qualities", "target": "reach"}
+{"tag": "verb-from-list|cass|k4s2", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** -  The", "target": "zoom"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**Explanation:**\n\n", "target": "open"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **knot**\n\nThis is the only", "target": "knot"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " affectionate\n\n**Explanation:**\n\nThe word", "target": "kill"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "dislike, nurturing, big, new, wise", "pred": " **wise**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive**\n\n**Explanation:**\n\n", "target": "land"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "observant, cheap, jump, spicy, bitter", "pred": " **jump**\n\n**Explanation:**\n\n", "target": "jump"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " agreeable\n\n**agreeable** is the", "target": "understand"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **benevolent** is the correct answer", "target": "verify"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "transform, cold, fierce, mild, smart", "pred": " **transform**\n\nThis word is a", "target": "transform"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "need, sincere, kind, happy, smart", "pred": " **happy**\n\n**Explanation:**\n\n", "target": "need"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**inventive", "target": "consult"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "dry, observant, tender, decide, bad", "pred": " **decide**\n\n**Explanation:**\n\n", "target": "decide"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **agreeable**\n\n**Explanation:**", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil**\n\n**Explanation:**", "target": "manage"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "luminous, honest, tranquil, gracious, walk", "pred": " walk\n\n**Explanation:**\n\nThe word", "target": "walk"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " **magnificent**\n\n**Explanation:**", "target": "choose"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "keen, soft, zap, bold, optimistic", "pred": " **bold**\n\n**Explanation:**\n\n", "target": "zap"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " trustworthy\n\nA: trustworthy\n", "target": "win"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **practice**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "trustworthy, dry, cold, loud, consider", "pred": " **consider**\n\n**consider** is", "target": "consider"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting**\n\n**Explanation", "target": "discover"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable**\n\n**affable", "target": "kick"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious**\n\n**harmonious", "target": "save"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "produce, gentle, tall, brave, cheerful", "pred": " **cheerful**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize**\n\nThe other words", "target": "memorize"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **expensive**\n\n**Explanation:**\n\n", "target": "xerox"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "light, joyous, jolt, fierce, cowardly", "pred": " fierce\n\n**fierce** is the", "target": "jolt"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **altruistic**\n\n**Explanation", "target": "keep"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "justify, innocent, lively, joyous, gentle", "pred": " **gentle**\n\n**Explanation:**\n\n", "target": "justify"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "attack, sour, tranquil, cheerful, bad", "pred": " **tranquil**\n\n**Explanation:**", "target": "attack"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "understand, long, magnificent, resolute, naughty", "pred": " magnificent\n\nA: magnificent \n", "target": "understand"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **cowardly**\n\n**Explanation", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle**\n\n**Explanation:**\n\n", "target": "schedule"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "innocent, slow, try, loving, ecstatic", "pred": " **ecstatic**\n\n**Explanation:**", "target": "try"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**Explanation:**\n\n", "target": "visualize"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine**\n\n**uplifting**", "target": "justify"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "youthful, race, enchanting, clever, warm", "pred": " **race**\n\n**Explanation:**\n\n", "target": "race"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic**\n\n**Explanation", "target": "keep"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**Explanation:**\n\n", "target": "reflect"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute**\n\n**Explanation:**", "target": "hate"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "fearless, build, fierce, friendly, innocent", "pred": " friendly\n\n**Explanation:**\n\nThe word", "target": "build"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical**\n\n**Explanation", "target": "schedule"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "examine"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "unique, short, diligent, modest, reach", "pred": " **diligent**\n\n**diligent", "target": "reach"}
+{"tag": "verb-from-list|cass_recon|k4s2", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **benevolent**\n\n**Explanation:**", "target": "zoom"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "long, kindred, dance, resilient, thirsty", "pred": " These words are all related to the concept", "target": "dance"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**keen** means", "target": "open"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " These words are all related to the concept", "target": "knot"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which of these words is most likely to", "target": "kill"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**dislike**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "observant, cheap, jump, spicy, bitter", "pred": " Which of these words is most likely to", "target": "jump"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " These words are all adjectives. \n\n", "target": "understand"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " These words are all adjectives. \n\n", "target": "verify"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "transform, cold, fierce, mild, smart", "pred": " Which of these words are most likely to", "target": "transform"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "need, sincere, kind, happy, smart", "pred": " Which of these words are most likely to", "target": "need"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**inventive", "target": "consult"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "dry, observant, tender, decide, bad", "pred": " **Decide**\n\nHere's why", "target": "decide"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **build**\n\nThe other words are", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "energetic, dark, salty, manage, tranquil", "pred": " **Energetic** - full of energy", "target": "manage"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous, honest, tranquil, gracious,", "target": "walk"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent, optimistic, sensitive, eloquent,", "target": "choose"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "keen, soft, zap, bold, optimistic", "pred": " Which of these words are adjectives?\n\n", "target": "zap"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " Which of these words is most likely to", "target": "win"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** -  This word describes", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider**\n\n**Consider** is", "target": "consider"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " These words are all synonyms for **joy", "target": "discover"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "determined, grateful, kick, affable, courageous", "pred": " Which of these words is most likely to", "target": "kick"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " Which of these words is the most likely", "target": "save"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "produce, gentle, tall, brave, cheerful", "pred": " These words are all adjectives. \n\n", "target": "produce"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " These words are all related to what?", "target": "memorize"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " These words are all...\n\n**A", "target": "xerox"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "light, joyous, jolt, fierce, cowardly", "pred": " Which of these words is the most likely", "target": "jolt"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** -  making someone", "target": "keep"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "justify, innocent, lively, joyous, gentle", "pred": " These words are all adjectives. \n\n", "target": "justify"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which of these words is the most likely", "target": "attack"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "understand, long, magnificent, resolute, naughty", "pred": " understand\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** - feeling great happiness", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle** and **carefree**", "target": "schedule"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "hungry, honest, thirsty, build, lovable", "pred": " Which of these words are adjectives?\n\n", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** - naive, pure,", "target": "try"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**visualize** is", "target": "visualize"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** - authentic, sincere\n", "target": "justify"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "youthful, race, enchanting, clever, warm", "pred": " These words are all adjectives. \n\n", "target": "race"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**peaceful** is", "target": "practice"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **Affectionate** - showing or expressing", "target": "keep"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "gracious, reflect, wonderful, adorable, old", "pred": " Which word is the most appropriate to describe", "target": "reflect"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\nHere", "target": "make"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " Which of these words is the most likely", "target": "hate"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "fearless, build, fierce, friendly, innocent", "pred": " Which of these words are most likely to", "target": "build"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " Which of these words is an adjective?", "target": "schedule"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **quizzical** - curious and", "target": "examine"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "unique, short, diligent, modest, reach", "pred": " **unique** - one of a kind", "target": "reach"}
+{"tag": "verb-from-list|zvec|k4s2", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** - full of", "target": "zoom"}
+{"tag": "verb-from-list|cass|k4s3", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass|k4s3", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**Explanation:**\n\n", "target": "open"}
+{"tag": "verb-from-list|cass|k4s3", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **knot**\n\nThe other words are", "target": "knot"}
+{"tag": "verb-from-list|cass|k4s3", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " Which word from the list is the most", "target": "kill"}
+{"tag": "verb-from-list|cass|k4s3", "input": "dislike, nurturing, big, new, wise", "pred": " **wise**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass|k4s3", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass|k4s3", "input": "observant, cheap, jump, spicy, bitter", "pred": " **observant** -  This word", "target": "jump"}
+{"tag": "verb-from-list|cass|k4s3", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **agreeable**\n\n**Explanation:**", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s3", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **benevolent** is the best fit", "target": "verify"}
+{"tag": "verb-from-list|cass|k4s3", "input": "transform, cold, fierce, mild, smart", "pred": " **transform** -  The word \"", "target": "transform"}
+{"tag": "verb-from-list|cass|k4s3", "input": "need, sincere, kind, happy, smart", "pred": " **kind** is the best fit for", "target": "need"}
+{"tag": "verb-from-list|cass|k4s3", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive** is the word that", "target": "consult"}
+{"tag": "verb-from-list|cass|k4s3", "input": "dry, observant, tender, decide, bad", "pred": " **tender** is the word that doesn", "target": "decide"}
+{"tag": "verb-from-list|cass|k4s3", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **build**\n\nThe word \"build", "target": "build"}
+{"tag": "verb-from-list|cass|k4s3", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil** is the odd one", "target": "manage"}
+{"tag": "verb-from-list|cass|k4s3", "input": "luminous, honest, tranquil, gracious, walk", "pred": " **gracious**\n\n**Explanation:**", "target": "walk"}
+{"tag": "verb-from-list|cass|k4s3", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent\n\n**Explanation:**\n\nThe word", "target": "choose"}
+{"tag": "verb-from-list|cass|k4s3", "input": "keen, soft, zap, bold, optimistic", "pred": " **keen** -  keen on something", "target": "zap"}
+{"tag": "verb-from-list|cass|k4s3", "input": "win, magnificent, unique, lovable, trustworthy", "pred": " These words are all synonyms for **trust", "target": "win"}
+{"tag": "verb-from-list|cass|k4s3", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing** -  This word is", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s3", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider**\n\n**Consider** is", "target": "consider"}
+{"tag": "verb-from-list|cass|k4s3", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting** is the best", "target": "discover"}
+{"tag": "verb-from-list|cass|k4s3", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable** is the best fit", "target": "kick"}
+{"tag": "verb-from-list|cass|k4s3", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious** -  The harmonious", "target": "save"}
+{"tag": "verb-from-list|cass|k4s3", "input": "produce, gentle, tall, brave, cheerful", "pred": " **tall**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass|k4s3", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize** is the word that", "target": "memorize"}
+{"tag": "verb-from-list|cass|k4s3", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **expensive** and **cheap** are", "target": "xerox"}
+{"tag": "verb-from-list|cass|k4s3", "input": "light, joyous, jolt, fierce, cowardly", "pred": " **fierce**\n\n**Explanation:**", "target": "jolt"}
+{"tag": "verb-from-list|cass|k4s3", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|cass|k4s3", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** -  The uplifting", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s3", "input": "justify, innocent, lively, joyous, gentle", "pred": " **justify** -  justify means to", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s3", "input": "attack, sour, tranquil, cheerful, bad", "pred": " Which word from the list is the best", "target": "attack"}
+{"tag": "verb-from-list|cass|k4s3", "input": "understand, long, magnificent, resolute, naughty", "pred": " Magnificent\n\n**Explanation:**\n\nThe word", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s3", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** -  The blissful", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s3", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle**\n\n**gentle** is", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s3", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s3", "input": "innocent, slow, try, loving, ecstatic", "pred": " **ecstatic**\n\n**Explanation:**", "target": "try"}
+{"tag": "verb-from-list|cass|k4s3", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize** is the odd one out", "target": "visualize"}
+{"tag": "verb-from-list|cass|k4s3", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** -  The genuine smile", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s3", "input": "youthful, race, enchanting, clever, warm", "pred": " **race** is the most appropriate word", "target": "race"}
+{"tag": "verb-from-list|cass|k4s3", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s3", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic** is the best", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s3", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**Explanation:**\n\n", "target": "reflect"}
+{"tag": "verb-from-list|cass|k4s3", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass|k4s3", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute** is the word that", "target": "hate"}
+{"tag": "verb-from-list|cass|k4s3", "input": "fearless, build, fierce, friendly, innocent", "pred": " **innocent** is the word that doesn", "target": "build"}
+{"tag": "verb-from-list|cass|k4s3", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** -  The", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s3", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "examine"}
+{"tag": "verb-from-list|cass|k4s3", "input": "unique, short, diligent, modest, reach", "pred": " **unique** -  The unique qualities", "target": "reach"}
+{"tag": "verb-from-list|cass|k4s3", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** -  The", "target": "zoom"}
+{"tag": "verb-from-list|cass|k4s4", "input": "long, kindred, dance, resilient, thirsty", "pred": " **resilient**\n\n**Explanation:**", "target": "dance"}
+{"tag": "verb-from-list|cass|k4s4", "input": "young, courageous, enthusiastic, open, keen", "pred": " **keen**\n\n**Explanation:**\n\n", "target": "open"}
+{"tag": "verb-from-list|cass|k4s4", "input": "dirty, amazing, unselfish, sincere, knot", "pred": " **knot**\n\nThe other words are", "target": "knot"}
+{"tag": "verb-from-list|cass|k4s4", "input": "wise, kill, adventurous, affectionate, fearless", "pred": " affectionate\n\n**Explanation:**\n\nThe word", "target": "kill"}
+{"tag": "verb-from-list|cass|k4s4", "input": "dislike, nurturing, big, new, wise", "pred": " **dislike**\n\n**Explanation:**\n\n", "target": "dislike"}
+{"tag": "verb-from-list|cass|k4s4", "input": "land, talented, knowledgeable, naive, jubilant", "pred": " **naive** is the word that doesn", "target": "land"}
+{"tag": "verb-from-list|cass|k4s4", "input": "observant, cheap, jump, spicy, bitter", "pred": " **observant**\n\n**Explanation:**", "target": "jump"}
+{"tag": "verb-from-list|cass|k4s4", "input": "hopeful, vivacious, big, understand, agreeable", "pred": " **hopeful** -  This word", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s4", "input": "intelligent, verify, salty, warmhearted, benevolent", "pred": " **warmhearted** is the correct answer", "target": "verify"}
+{"tag": "verb-from-list|cass|k4s4", "input": "transform, cold, fierce, mild, smart", "pred": " **transform** -  The word \"", "target": "transform"}
+{"tag": "verb-from-list|cass|k4s4", "input": "need, sincere, kind, happy, smart", "pred": " **kind**\n\n**Explanation:**\n\n", "target": "need"}
+{"tag": "verb-from-list|cass|k4s4", "input": "radiant, fast, thin, consult, inventive", "pred": " **inventive**\n\n**Explanation:**", "target": "consult"}
+{"tag": "verb-from-list|cass|k4s4", "input": "dry, observant, tender, decide, bad", "pred": " **tender**\n\n**Explanation:**\n\n", "target": "decide"}
+{"tag": "verb-from-list|cass|k4s4", "input": "mirthful, dynamic, agreeable, build, keen", "pred": " **dynamic**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s4", "input": "energetic, dark, salty, manage, tranquil", "pred": " **tranquil**\n\n**Explanation:**", "target": "manage"}
+{"tag": "verb-from-list|cass|k4s4", "input": "luminous, honest, tranquil, gracious, walk", "pred": " luminous\n\n**Explanation:**\n\n* **", "target": "walk"}
+{"tag": "verb-from-list|cass|k4s4", "input": "magnificent, optimistic, sensitive, eloquent, choose", "pred": " magnificent\n\n**Explanation:**\n\n* **", "target": "choose"}
+{"tag": "verb-from-list|cass|k4s4", "input": "keen, soft, zap, bold, optimistic", "pred": " **keen** -  The most appropriate", "target": "zap"}
+{"tag": "verb-from-list|cass|k4s4", "input": "win, magnificent, unique, lovable, trustworthy", "pred": "  **trustworthy** is the most", "target": "win"}
+{"tag": "verb-from-list|cass|k4s4", "input": "amazing, youthful, hopeful, wet, practice", "pred": " **amazing**\n\n**Explanation:**\n\n", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s4", "input": "trustworthy, dry, cold, loud, consider", "pred": " **Consider**\n\n**Consider** is", "target": "consider"}
+{"tag": "verb-from-list|cass|k4s4", "input": "upbeat, discover, exuberant, mirthful, enchanting", "pred": " **enchanting**\n\n**Explanation", "target": "discover"}
+{"tag": "verb-from-list|cass|k4s4", "input": "determined, grateful, kick, affable, courageous", "pred": " **affable** is the correct answer", "target": "kick"}
+{"tag": "verb-from-list|cass|k4s4", "input": "harmonious, adoring, whimsical, save, fascinating", "pred": " **harmonious** -  The harmonious", "target": "save"}
+{"tag": "verb-from-list|cass|k4s4", "input": "produce, gentle, tall, brave, cheerful", "pred": " **gentle**\n\n**Explanation:**\n\n", "target": "produce"}
+{"tag": "verb-from-list|cass|k4s4", "input": "upbeat, courageous, laughing, memorize, loud", "pred": " **memorize**\n\nThe other words", "target": "memorize"}
+{"tag": "verb-from-list|cass|k4s4", "input": "expensive, cheap, fearless, sweet, xerox", "pred": " **expensive**\n\n**Explanation:**\n\n", "target": "xerox"}
+{"tag": "verb-from-list|cass|k4s4", "input": "light, joyous, jolt, fierce, cowardly", "pred": " **fierce**\n\n**Explanation:**", "target": "jolt"}
+{"tag": "verb-from-list|cass|k4s4", "input": "brave, blissful, affectionate, speak, serene", "pred": " **serene**\n\n**Explanation:**", "target": "speak"}
+{"tag": "verb-from-list|cass|k4s4", "input": "uplifting, diligent, upbeat, keep, altruistic", "pred": " **uplifting** -  The uplifting", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s4", "input": "justify, innocent, lively, joyous, gentle", "pred": " **justify**\n\n**justify** is", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s4", "input": "attack, sour, tranquil, cheerful, bad", "pred": " **tranquil**\n\n**Explanation:**", "target": "attack"}
+{"tag": "verb-from-list|cass|k4s4", "input": "understand, long, magnificent, resolute, naughty", "pred": " Magnificent\n\n**Explanation:**\n\n* **", "target": "understand"}
+{"tag": "verb-from-list|cass|k4s4", "input": "blissful, zealous, hopeful, practice, cowardly", "pred": " **blissful** -  The blissful", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s4", "input": "gentle, jubilant, schedule, carefree, soft", "pred": " **gentle**\n\n**Explanation:**\n\n", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s4", "input": "hungry, honest, thirsty, build, lovable", "pred": " **build**\n\nThe answer is **", "target": "build"}
+{"tag": "verb-from-list|cass|k4s4", "input": "innocent, slow, try, loving, ecstatic", "pred": " **innocent** -  The word that", "target": "try"}
+{"tag": "verb-from-list|cass|k4s4", "input": "soft, agreeable, gentle, naughty, visualize", "pred": " **visualize**\n\n**Explanation:**\n\n", "target": "visualize"}
+{"tag": "verb-from-list|cass|k4s4", "input": "genuine, justify, adoring, fresh, uplifting", "pred": " **genuine** -  The genuine smile", "target": "justify"}
+{"tag": "verb-from-list|cass|k4s4", "input": "youthful, race, enchanting, clever, warm", "pred": " **race**\n\n**Explanation:**\n\n", "target": "race"}
+{"tag": "verb-from-list|cass|k4s4", "input": "peaceful, generous, happy, practice, heavy", "pred": " **peaceful**\n\n**heavy** ", "target": "practice"}
+{"tag": "verb-from-list|cass|k4s4", "input": "affectionate, fresh, keep, altruistic, unwavering", "pred": " **altruistic**\n\n**Explanation", "target": "keep"}
+{"tag": "verb-from-list|cass|k4s4", "input": "gracious, reflect, wonderful, adorable, old", "pred": " **adorable**\n\n**Explanation:**\n\n", "target": "reflect"}
+{"tag": "verb-from-list|cass|k4s4", "input": "make, lively, wonderful, quick-witted, fascinating", "pred": " **quick-witted**\n\n**", "target": "make"}
+{"tag": "verb-from-list|cass|k4s4", "input": "bountiful, hate, youthful, pensive, resolute", "pred": " **Resolute**\n\n**Explanation:**", "target": "hate"}
+{"tag": "verb-from-list|cass|k4s4", "input": "fearless, build, fierce, friendly, innocent", "pred": " **friendly**\n\n**Explanation:**\n\n", "target": "build"}
+{"tag": "verb-from-list|cass|k4s4", "input": "quizzical, schedule, soft, strong, exuberant", "pred": " **quizzical** -  The", "target": "schedule"}
+{"tag": "verb-from-list|cass|k4s4", "input": "quizzical, tender, examine, genuine, uplifting", "pred": " **genuine**\n\n**Explanation:**\n\n", "target": "examine"}
+{"tag": "verb-from-list|cass|k4s4", "input": "unique, short, diligent, modest, reach", "pred": " **unique** -  The unique aspect", "target": "reach"}
+{"tag": "verb-from-list|cass|k4s4", "input": "exuberant, zoom, funny, sensitive, benevolent", "pred": " **exuberant** -  The", "target": "zoom"}

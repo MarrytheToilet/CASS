@@ -1,0 +1,322 @@
+{
+  "country-capital": {
+    "zs": 0.04081632653061224,
+    "icl_mean": 0.9183673469387755,
+    "icl_all": [
+      0.9183673469387755,
+      0.9387755102040817,
+      0.8979591836734694
+    ],
+    "family": "knowledge"
+  },
+  "country-currency": {
+    "zs": 0.0,
+    "icl_mean": 0.5510204081632653,
+    "icl_all": [
+      0.5510204081632653,
+      0.5714285714285714,
+      0.5306122448979592
+    ],
+    "family": "knowledge"
+  },
+  "landmark-country": {
+    "zs": 0.0,
+    "icl_mean": 0.8000000000000002,
+    "icl_all": [
+      0.78,
+      0.82,
+      0.8
+    ],
+    "family": "knowledge"
+  },
+  "park-country": {
+    "zs": 0.0,
+    "icl_mean": 0.7200000000000001,
+    "icl_all": [
+      0.74,
+      0.68,
+      0.74
+    ],
+    "family": "knowledge"
+  },
+  "person-occupation": {
+    "zs": 0.0,
+    "icl_mean": 0.24666666666666667,
+    "icl_all": [
+      0.26,
+      0.22,
+      0.26
+    ],
+    "family": "knowledge"
+  },
+  "person-sport": {
+    "zs": 0.0,
+    "icl_mean": 0.7399999999999999,
+    "icl_all": [
+      0.7,
+      0.78,
+      0.74
+    ],
+    "family": "knowledge"
+  },
+  "person-instrument": {
+    "zs": 0.0,
+    "icl_mean": 0.52,
+    "icl_all": [
+      0.48,
+      0.5,
+      0.58
+    ],
+    "family": "knowledge"
+  },
+  "product-company": {
+    "zs": 0.0,
+    "icl_mean": 0.8466666666666667,
+    "icl_all": [
+      0.8,
+      0.88,
+      0.86
+    ],
+    "family": "knowledge"
+  },
+  "antonym": {
+    "zs": 0.0,
+    "icl_mean": 0.58,
+    "icl_all": [
+      0.58,
+      0.62,
+      0.54
+    ],
+    "family": "linguistic"
+  },
+  "synonym": {
+    "zs": 0.0,
+    "icl_mean": 0.45999999999999996,
+    "icl_all": [
+      0.46,
+      0.44,
+      0.48
+    ],
+    "family": "linguistic"
+  },
+  "present-past": {
+    "zs": 0.0,
+    "icl_mean": 0.9466666666666667,
+    "icl_all": [
+      0.96,
+      0.96,
+      0.92
+    ],
+    "family": "linguistic"
+  },
+  "singular-plural": {
+    "zs": 0.04,
+    "icl_mean": 0.98,
+    "icl_all": [
+      0.98,
+      0.98,
+      0.98
+    ],
+    "family": "linguistic"
+  },
+  "capitalize": {
+    "zs": 0.2,
+    "icl_mean": 1.0,
+    "icl_all": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "family": "linguistic"
+  },
+  "capitalize-first-letter": {
+    "zs": 0.0,
+    "icl_mean": 0.98,
+    "icl_all": [
+      0.96,
+      0.98,
+      1.0
+    ],
+    "family": "linguistic"
+  },
+  "capitalize-last-letter": {
+    "zs": 0.0,
+    "icl_mean": 0.12,
+    "icl_all": [
+      0.14,
+      0.06,
+      0.16
+    ],
+    "family": "linguistic"
+  },
+  "lowercase-first-letter": {
+    "zs": 0.0,
+    "icl_mean": 0.9933333333333333,
+    "icl_all": [
+      1.0,
+      0.98,
+      1.0
+    ],
+    "family": "linguistic"
+  },
+  "english-french": {
+    "zs": 0.0,
+    "icl_mean": 0.6933333333333334,
+    "icl_all": [
+      0.64,
+      0.74,
+      0.7
+    ],
+    "family": "translation"
+  },
+  "english-german": {
+    "zs": 0.0,
+    "icl_mean": 0.64,
+    "icl_all": [
+      0.6,
+      0.64,
+      0.68
+    ],
+    "family": "translation"
+  },
+  "english-spanish": {
+    "zs": 0.0,
+    "icl_mean": 0.8066666666666666,
+    "icl_all": [
+      0.8,
+      0.84,
+      0.78
+    ],
+    "family": "translation"
+  },
+  "next-item": {
+    "zs": 0.04,
+    "icl_mean": 0.94,
+    "icl_all": [
+      0.98,
+      0.92,
+      0.92
+    ],
+    "family": "algorithmic"
+  },
+  "prev-item": {
+    "zs": 0.0,
+    "icl_mean": 0.7733333333333334,
+    "icl_all": [
+      0.82,
+      0.78,
+      0.72
+    ],
+    "family": "algorithmic"
+  },
+  "next-capital-letter": {
+    "zs": 0.0,
+    "icl_mean": 0.02,
+    "icl_all": [
+      0.02,
+      0.04,
+      0.0
+    ],
+    "family": "algorithmic"
+  },
+  "word-length": {
+    "zs": 0.0,
+    "icl_mean": 0.42,
+    "icl_all": [
+      0.5,
+      0.36,
+      0.4
+    ],
+    "family": "algorithmic"
+  },
+  "alphabetically-first": {
+    "zs": 0.0,
+    "icl_mean": 0.17333333333333334,
+    "icl_all": [
+      0.14,
+      0.24,
+      0.14
+    ],
+    "family": "algorithmic"
+  },
+  "alphabetically-last": {
+    "zs": 0.0,
+    "icl_mean": 0.28,
+    "icl_all": [
+      0.3,
+      0.24,
+      0.3
+    ],
+    "family": "algorithmic"
+  },
+  "choose-first-of-list": {
+    "zs": 0.0,
+    "icl_mean": 0.88,
+    "icl_all": [
+      0.84,
+      0.92,
+      0.88
+    ],
+    "family": "algorithmic"
+  },
+  "choose-last-of-list": {
+    "zs": 0.0,
+    "icl_mean": 0.8666666666666667,
+    "icl_all": [
+      0.82,
+      0.9,
+      0.88
+    ],
+    "family": "algorithmic"
+  },
+  "choose-middle-of-list": {
+    "zs": 0.0,
+    "icl_mean": 0.3466666666666667,
+    "icl_all": [
+      0.34,
+      0.32,
+      0.38
+    ],
+    "family": "algorithmic"
+  },
+  "animal-from-list": {
+    "zs": 0.0,
+    "icl_mean": 0.84,
+    "icl_all": [
+      0.88,
+      0.8,
+      0.84
+    ],
+    "family": "selection"
+  },
+  "color-from-list": {
+    "zs": 0.0,
+    "icl_mean": 0.94,
+    "icl_all": [
+      0.92,
+      0.98,
+      0.92
+    ],
+    "family": "selection"
+  },
+  "fruit-from-list": {
+    "zs": 0.0,
+    "icl_mean": 0.9533333333333333,
+    "icl_all": [
+      0.92,
+      0.98,
+      0.96
+    ],
+    "family": "selection"
+  },
+  "verb-from-list": {
+    "zs": 0.02,
+    "icl_mean": 0.5666666666666668,
+    "icl_all": [
+      0.6,
+      0.5,
+      0.6
+    ],
+    "family": "selection"
+  }
+}
