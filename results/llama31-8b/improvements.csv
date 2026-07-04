@@ -1,0 +1,13 @@
+exp,cond,task,seed,acc
+variant,signed,country-capital,0,0.9183673469387755
+variant,prefill_only,country-capital,0,0.8775510204081632
+variant,signed,country-capital,1,0.9183673469387755
+variant,prefill_only,country-capital,1,0.8775510204081632
+variant,signed,country-capital,2,0.9183673469387755
+variant,prefill_only,country-capital,2,0.8775510204081632
+variant,signed,country-currency,0,0.061224489795918366
+variant,prefill_only,country-currency,0,0.02040816326530612
+variant,signed,country-currency,1,0.14285714285714285
+variant,prefill_only,country-currency,1,0.08163265306122448
+variant,signed,country-currency,2,0.10204081632653061
+variant,prefill_only,country-currency,2,0.061224489795918366
