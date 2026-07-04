@@ -121,6 +121,10 @@ Axis & default & \multicolumn{""" + str(MAXALT) +
 \bottomrule
 \end{tabular*}
 \end{table*}""")
-open(ROOT / "paper" / "table2.tex", "w").write(tex)
+main_path = ROOT / "paper" / "main.tex"
+m = open(main_path).read()
+i0 = m.index("\\begin{table*}[t]\n\\caption{Ablation matrix")
+i1 = m.index("\\end{table*}", i0) + len("\\end{table*}")
+open(main_path, "w").write(m[:i0] + tex + m[i1:])
 missing = tex.count("?")
-print(f"table2.tex written ({missing} cells pending E4 rerun)")
+print(f"Table 2 patched into main.tex ({missing} cells pending)")
