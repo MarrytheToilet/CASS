@@ -15,14 +15,14 @@ in-context tokens**, at a fraction of ICL's serving cost.
 
 ---
 
-## The story
+## Motivation
 
-A production LLM service is rarely killed by one big task; it is nibbled
-to death by small ones — field normalization, label translation,
-entity-to-attribute mapping — each arriving with a handful of examples
-and recurring thousands of times. Prepending demonstrations works
-uniformly well and costs uniformly much: a 10-shot prompt multiplies
-per-query tokens by an order of magnitude, paid again on every call.
+Production LLM workloads are dominated by many small, recurring tasks —
+field normalization, label translation, entity-to-attribute mapping —
+each specified by a handful of examples and issued thousands of times.
+Prepending demonstrations is effective but expensive: a 10-shot prompt
+multiplies per-query tokens by an order of magnitude, and that cost is
+paid again on every call.
 
 Activation steering offers a way out: a *task vector* distilled from
 demonstrations, injected into the residual stream, triggers the task with
@@ -164,38 +164,85 @@ Task data comes from the Todd et al. `function_vectors` repo in
 **only** for dataset synthesis (step 07) and failure judging (step 17) —
 the method itself never calls an API.
 
-**Run the pipeline.** Scripts run in numeric order; every experiment
-checkpoints to `results/<model>/` and resumes safely (re-running a
-finished step is a no-op). Multi-stage scripts take a stage argument.
+**Run the pipeline.** The `scripts/` directory is a linear pipeline
+`01`–`20`; each step reads the previous steps' outputs from
+`results/<model>/`. Every experiment checkpoints and resumes safely, so
+re-running a finished step is a no-op, and steps within a phase are
+independent. Multi-stage scripts take a stage argument (`all` runs them
+all).
+
+<b>Phase 1 — Setup & mining.</b> Extract activations, freeze the injection
+hyperparameters, and build the dictionary.
 
 ```bash
 python scripts/01_extract_and_baselines.py llama31-8b   # activations + ZS/ICL baselines
-python scripts/02_injection_setup.py llama31-8b all     # steerability scan + freeze hparams
-python scripts/03_build_dictionary.py llama31-8b        # dictionary + H1 diagnostics
-CASS_KS=1,2,4 python scripts/04_e1_loto.py llama31-8b   # E1: leave-one-task-out
-python scripts/05_analyze_e1.py llama31-8b              # per-task recovery table
-python scripts/06_e2_compound.py llama31-8b             # E2: compound tasks
-python scripts/07_synthesize_tasks.py                   # novel tasks via API (datasets only)
-python scripts/08_e7_novel.py llama31-8b                # novel suite, frozen dictionary
-CASS_REP=all python scripts/09_e4_ablations.py llama31-8b all   # ablation matrix
-python scripts/10_e5_scale.py llama31-8b                # dictionary-size scaling
-python scripts/11_baselines.py all                      # Hendel/ICV/retrieval/blend/ICL4
-python scripts/12_fill_gaps.py                          # remaining Table-1 cells
-python scripts/13_review_response.py                    # controls: random-dir, denoise, hparams
-python scripts/14_improvements.py                       # learned-Δ, signed gate, prefill-only
-python scripts/15_router.py                             # signal-aware routing (headline numbers)
-python scripts/16_soft_hybrid.py                        # soft-vs-hard routing probe
-python scripts/17_failure_analysis.py llama31-8b all    # LLM-judge taxonomy + contains metric
-python scripts/18_cost_latency.py llama31-8b all        # token cost + latency benchmark
-python scripts/19_paper_figures.py                      # all figures (PNG)
-python scripts/20_table2.py                             # Table 2 LaTeX from CSVs
+python scripts/02_injection_setup.py     llama31-8b all # steerability scan + freeze hparams
+python scripts/03_build_dictionary.py    llama31-8b     # dictionary + H1 diagnostics
 ```
 
-**Regenerating paper numbers.** Every number regenerates from the
-checkpointed CSVs and stored generations (`results/*/**.jsonl`, enabling
-offline re-scoring under any matcher) without re-running GPU experiments —
-steps 19–20 are CPU-only. The full study used ~55 GPU-hours; the largest
-single run (E1 over 32 tasks, all modes) takes under two hours.
+<b>Phase 2 — Core experiments.</b> The results behind Table 1 and the
+figures.
+
+```bash
+CASS_KS=1,2,4 python scripts/04_e1_loto.py    llama31-8b     # E1: leave-one-task-out
+python scripts/05_analyze_e1.py               llama31-8b     # per-task recovery table
+python scripts/06_e2_compound.py              llama31-8b     # E2: compound tasks
+python scripts/07_synthesize_tasks.py                        # novel tasks via API (data only)
+python scripts/08_e7_novel.py                 llama31-8b     # novel suite, frozen dictionary
+CASS_REP=all python scripts/09_e4_ablations.py llama31-8b all # ablation matrix (Table 2)
+python scripts/10_e5_scale.py                 llama31-8b     # dictionary-size scaling
+```
+
+<b>Phase 3 — Baselines & controls.</b> Competing methods and the
+attribution studies.
+
+```bash
+python scripts/11_baselines.py       all   # Hendel replace / ICV / retrieval / blend / 4-shot ICL
+python scripts/12_fill_gaps.py             # remaining Table-1 cells (learned-Δ, oracle)
+python scripts/13_review_response.py       # controls: random-dir, denoise, hparam sensitivity
+python scripts/14_improvements.py          # learned-Δ, signed gate, prefill-only
+python scripts/15_router.py                # signal-aware routing (headline numbers)
+python scripts/16_soft_hybrid.py           # soft- vs hard-routing probe
+```
+
+<b>Phase 4 — Analysis, figures & tables.</b> CPU-only; regenerates every
+number, figure, and LaTeX table from the checkpointed results.
+
+```bash
+python scripts/17_failure_analysis.py llama31-8b all   # LLM-judge taxonomy + contains metric
+python scripts/18_cost_latency.py     llama31-8b all   # token cost + latency benchmark
+python scripts/19_paper_figures.py                     # all figures (PNG)
+python scripts/20_table2.py                            # Table 2 LaTeX from CSVs
+```
+
+Every number in the paper regenerates from the checkpointed CSVs and
+stored generations (`results/*/**.jsonl`, enabling offline re-scoring under
+any matcher) — Phase 4 needs no GPU. The full study used ~55 GPU-hours;
+the largest single run (E1 over 32 tasks, all modes) takes under two hours.
+See the table below for what each step produces.
+
+| step | script | stages | output |
+|---|---|---|---|
+| 01 | `extract_and_baselines` | — | contrastive activations, ZS/10-shot ICL baselines |
+| 02 | `injection_setup` | `scan` · `pair` | layer×γ steerability scan; frozen `injection_hparams.json` |
+| 03 | `build_dictionary` | — | dictionary + H1 diagnostics (cosine matrices, μ_B) |
+| 04 | `e1_loto` | — | E1 leave-one-task-out (`CASS_KS`, `CASS_SEEDS` env) |
+| 05 | `analyze_e1` | — | `e1_summary.csv` (recovery ρ per task) |
+| 06 | `e2_compound` | — | E2 compound tasks (case-sensitive) |
+| 07 | `synthesize_tasks` | — | novel task datasets via API |
+| 08 | `e7_novel` | — | novel-suite evaluation (frozen dictionary) |
+| 09 | `e4_ablations` | axes · `all` | ablation matrix (`CASS_REP=all` → all-32 replication) |
+| 10 | `e5_scale` | — | dictionary-size scaling |
+| 11 | `baselines` | `lit` · `blend32` · `icl4` · `hendel_c` | Hendel replace, ICV, retrieval, blend, 4-shot ICL, compound check |
+| 12 | `fill_gaps` | — | remaining Table-1 cells (learned-Δ, oracle) |
+| 13 | `review_response` | — | denoise/dictionary disentangle, random-dir control, hparam sensitivity |
+| 14 | `improvements` | — | learned-Δ, signed gate, prefill-only |
+| 15 | `router` | — | signal-aware routing (CASS full numbers) |
+| 16 | `soft_hybrid` | — | soft-interpolation probe (hard routing wins) |
+| 17 | `failure_analysis` | `judge` · `contains` | LLM-judge taxonomy, contains-vs-exact metric |
+| 18 | `cost_latency` | `tokens` · `latency` | token cost table, latency micro-benchmark |
+| 19 | `paper_figures` | — | all paper figures (PNG) |
+| 20 | `table2` | — | Table 2 LaTeX from ablation CSVs |
 
 ## Layout
 
