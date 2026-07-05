@@ -39,7 +39,7 @@ shares a large **task-generic component** — the signature of "an
 in-context task is being executed", independent of which one. Under
 addition the shared parts compound while the task-specific parts dilute.
 
-Projecting out this single shared direction (`U₀`, rank 1):
+Projecting out this single shared direction ($U_0$, rank 1):
 
 - drops the median cosine between task means from 0.34 to 0.18,
 - exposes a family-block geometry that was invisible before,
@@ -67,32 +67,30 @@ this division of labor.
 **1 — Mine skills (offline, once).** For each known task, contrast clean
 10-shot prompts against label-deranged twins and record differential
 activations at every layer in one forward pass. Remove the shared
-task-generic component `U₀` (rank-1 SVD of stacked task means) and store
-each skill as a low-rank subspace `Uₜ` with anchor `μₜ` at two
-residual-stream depths (layers {12,16} of 32).
+task-generic component $U_0$ (rank-1 SVD of stacked task means) and store
+each skill as a low-rank subspace $U_t$ with anchor $\mu_t$ at two
+residual-stream depths (layers $\{12,16\}$ of 32).
 
-**2 — Code the task (few-shot).** Distill the k≤4 demonstrations into a
-denoised direction `z` (6 resampled prompt pairs per example,
+**2 — Code the task (few-shot).** Distill the $k\le4$ demonstrations into a
+denoised direction $z$ (6 resampled prompt pairs per example,
 leave-self-out shots), then solve a **group LASSO** whose support is
 shared across layers:
 
-```
-z ≈ Σₜ Uₜ cₜ + ε        (support S, code c, residual ε)
-```
+$$z \;\approx\; \sum_{t\in S} U_t\, c_t \;+\; \varepsilon \qquad\text{(support } S\text{, code } c\text{, residual } \varepsilon\text{)}$$
 
 Block coordinate descent with exact group soft-thresholding; a
-support-capped λ-path (s_max = 5) replaces cross-validation. The sparse
-code doubles as an interpretable statement of *which known skills the new
-task is made of*, and ε doubles as a reliability signal.
+support-capped $\lambda$-path ($s_{\max}=5$) replaces cross-validation. The
+sparse code doubles as an interpretable statement of *which known skills
+the new task is made of*, and $\varepsilon$ doubles as a reliability signal.
 
 **3 — Serve queries (adaptive routing).** The extraction signals pick the
 path per task:
 
 | signal | route |
 |---|---|
-| strong, reliable `‖z‖` | **hybrid steering**: `h ← h + α̃γ·z + g·α·P_S(μ_S − h)` — the demonstration direction plus a trust-gated correction toward the recovered subspace |
-| weak `‖z‖` (< 0.9 × median anchor norm) | **prompt-state replacement** (compression; Hendel-style) |
-| high residual ε | **escalate to full ICL** |
+| strong, reliable $\lVert z\rVert$ | **hybrid steering**: $h \leftarrow h + \tilde\alpha\gamma\, z + g\,\alpha\, P_S(\mu_S - h)$ — the demonstration direction plus a trust-gated correction toward the recovered subspace |
+| weak $\lVert z\rVert$ ($< 0.9\times$ median anchor norm) | **prompt-state replacement** (compression; Hendel-style) |
+| high residual $\varepsilon$ | **escalate to full ICL** |
 
 Queries then run with zero context. Two propositions (support recovery
 under block-coherence, error transfer) delineate where composition is
