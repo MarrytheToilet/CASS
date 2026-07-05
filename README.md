@@ -165,54 +165,52 @@ Task data comes from the Todd et al. `function_vectors` repo in
 the method itself never calls an API.
 
 **Run the pipeline.** The `scripts/` directory is a linear pipeline
-`01`–`20`; each step reads the previous steps' outputs from
+`01`–`17`; each step reads the previous steps' outputs from
 `results/<model>/`. Every experiment checkpoints and resumes safely, so
 re-running a finished step is a no-op, and steps within a phase are
-independent. Multi-stage scripts take a stage argument (`all` runs them
-all).
+independent. Multi-stage scripts take a comma-separated stage argument
+(`all` runs every stage).
 
 <b>Phase 1 — Setup & mining.</b> Extract activations, freeze the injection
 hyperparameters, and build the dictionary.
 
 ```bash
-python scripts/01_extract_and_baselines.py llama31-8b   # activations + ZS/ICL baselines
-python scripts/02_injection_setup.py     llama31-8b all # steerability scan + freeze hparams
-python scripts/03_build_dictionary.py    llama31-8b     # dictionary + H1 diagnostics
+python scripts/01_extract_and_baselines.py llama31-8b     # activations + ZS/ICL baselines
+python scripts/02_injection_setup.py       llama31-8b all # steerability scan + freeze hparams
+python scripts/03_build_dictionary.py      llama31-8b     # dictionary + H1 diagnostics
 ```
 
-<b>Phase 2 — Core experiments.</b> The results behind Table 1 and the
+<b>Phase 2 — Core experiments.</b> The results behind the tables and
 figures.
 
 ```bash
-CASS_KS=1,2,4 python scripts/04_e1_loto.py    llama31-8b     # E1: leave-one-task-out
-python scripts/05_analyze_e1.py               llama31-8b     # per-task recovery table
-python scripts/06_e2_compound.py              llama31-8b     # E2: compound tasks
-python scripts/07_synthesize_tasks.py                        # novel tasks via API (data only)
-python scripts/08_e7_novel.py                 llama31-8b     # novel suite, frozen dictionary
+CASS_KS=1,2,4 python scripts/04_e1_loto.py     llama31-8b     # E1: leave-one-task-out
+python scripts/05_analyze_e1.py                llama31-8b     # per-task recovery table
+python scripts/06_e2_compound.py               llama31-8b     # E2: compound tasks
+python scripts/07_synthesize_tasks.py                         # novel tasks via API (data only)
+python scripts/08_e7_novel.py                  llama31-8b     # novel suite, frozen dictionary
 CASS_REP=all python scripts/09_e4_ablations.py llama31-8b all # ablation matrix (Table 2)
-python scripts/10_e5_scale.py                 llama31-8b     # dictionary-size scaling
+python scripts/10_e5_scale.py                  llama31-8b     # dictionary-size scaling
 ```
 
-<b>Phase 3 — Baselines & controls.</b> Competing methods and the
-attribution studies.
+<b>Phase 3 — Baselines, attribution & routing.</b> Competing methods, the
+RQ2 attribution studies, and the serving policy.
 
 ```bash
-python scripts/11_baselines.py       all   # Hendel replace / ICV / retrieval / blend / 4-shot ICL
-python scripts/12_fill_gaps.py             # remaining Table-1 cells (learned-Δ, oracle)
-python scripts/13_review_response.py       # controls: random-dir, denoise, hparam sensitivity
-python scripts/14_improvements.py          # learned-Δ, signed gate, prefill-only
-python scripts/15_router.py                # signal-aware routing (headline numbers)
-python scripts/16_soft_hybrid.py           # soft- vs hard-routing probe
+python scripts/11_baselines.py    all   # Hendel/ICV/retrieval/blend/ICL4 + novel & compound cells
+python scripts/12_attribution.py  all   # RQ2 controls: denoise, random-dir, hparams, gate, learned-Δ
+python scripts/13_router.py             # signal-aware routing (headline numbers; no GPU)
 ```
 
-<b>Phase 4 — Analysis, figures & tables.</b> CPU-only; regenerates every
-number, figure, and LaTeX table from the checkpointed results.
+<b>Phase 4 — Analysis, figures & tables.</b> Regenerates every number,
+figure, and LaTeX table from the checkpointed results (CPU-only apart from
+the failure/latency probes).
 
 ```bash
-python scripts/17_failure_analysis.py llama31-8b all   # LLM-judge taxonomy + contains metric
-python scripts/18_cost_latency.py     llama31-8b all   # token cost + latency benchmark
-python scripts/19_paper_figures.py                     # all figures (PNG)
-python scripts/20_table2.py                            # Table 2 LaTeX from CSVs
+python scripts/14_failure_analysis.py llama31-8b all   # LLM-judge taxonomy + contains metric
+python scripts/15_cost_latency.py     llama31-8b all   # token cost + latency benchmark
+python scripts/16_paper_figures.py                     # all figures (PNG)
+python scripts/17_table2.py                            # Table 2 LaTeX from CSVs
 ```
 
 Every number in the paper regenerates from the checkpointed CSVs and
@@ -233,16 +231,13 @@ See the table below for what each step produces.
 | 08 | `e7_novel` | — | novel-suite evaluation (frozen dictionary) |
 | 09 | `e4_ablations` | axes · `all` | ablation matrix (`CASS_REP=all` → all-32 replication) |
 | 10 | `e5_scale` | — | dictionary-size scaling |
-| 11 | `baselines` | `lit` · `blend32` · `icl4` · `hendel_c` | Hendel replace, ICV, retrieval, blend, 4-shot ICL, compound check |
-| 12 | `fill_gaps` | — | remaining Table-1 cells (learned-Δ, oracle) |
-| 13 | `review_response` | — | denoise/dictionary disentangle, random-dir control, hparam sensitivity |
-| 14 | `improvements` | — | learned-Δ, signed gate, prefill-only |
-| 15 | `router` | — | signal-aware routing (CASS full numbers) |
-| 16 | `soft_hybrid` | — | soft-interpolation probe (hard routing wins) |
-| 17 | `failure_analysis` | `judge` · `contains` | LLM-judge taxonomy, contains-vs-exact metric |
-| 18 | `cost_latency` | `tokens` · `latency` | token cost table, latency micro-benchmark |
-| 19 | `paper_figures` | — | all paper figures (PNG) |
-| 20 | `table2` | — | Table 2 LaTeX from ablation CSVs |
+| 11 | `baselines` | `lit` · `blend32` · `icl4` · `hendel_c` · `gaps` | Hendel replace, ICV, retrieval, blend, 4-shot ICL, and the novel/compound Table-1 cells (recon, zvec, learned-Δ, oracle) |
+| 12 | `attribution` | `denoise` · `control` · `hparam` · `variants` · `learned` · `soft` | RQ2 controls: denoise vs dictionary, random-direction specificity, hparam sensitivity, signed gate, prefill-only, learned-Δ, soft-vs-hard routing |
+| 13 | `router` | — | signal-aware routing, CASS full numbers (post-processing, no GPU) |
+| 14 | `failure_analysis` | `judge` · `contains` | LLM-judge taxonomy, contains-vs-exact metric |
+| 15 | `cost_latency` | `tokens` · `latency` | token cost table, latency micro-benchmark |
+| 16 | `paper_figures` | — | all paper figures (PNG) |
+| 17 | `table2` | — | Table 2 LaTeX from ablation CSVs |
 
 ## Layout
 
@@ -250,7 +245,7 @@ See the table below for what each step produces.
 src/cass/    library: tasks, models (hooked LM), extract, dictionary,
              solver (group LASSO), steer, pipeline, compound, zcache,
              evaluate, api
-scripts/     numbered pipeline 01–20 (above)
+scripts/     numbered pipeline 01–17 (above)
 results/     per-model CSVs, JSON, stored generations (jsonl)
 figures/     generated figures (PNG)
 assets/      README images
