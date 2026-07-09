@@ -64,6 +64,8 @@ this division of labor.
   <img src="assets/pipeline.png" alt="CASS pipeline" width="97%">
 </p>
 
+<p align="center"><sub><b>1 · Mine skills</b> (offline): remove the shared component <code>U₀</code>, keep each skill as a low-rank subspace <code>U_t, μ_t</code> at layers 12 &amp; 16 · <b>2 · Code the task</b> (few-shot): group-LASSO a denoised <code>z</code> into a support <code>S</code>, reconstruction <code>Δ_rec</code>, and residual <code>ε</code> · <b>3 · Serve queries</b>: route each query by <code>‖z‖</code> and <code>ε</code> to hybrid steering, prompt-state replacement, or full-ICL escalation.</sub></p>
+
 **1 — Mine skills (offline, once).** For each known task, contrast clean
 10-shot prompts against label-deranged twins and record differential
 activations at every layer in one forward pass. Remove the shared
