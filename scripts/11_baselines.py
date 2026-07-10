@@ -382,7 +382,8 @@ def gaps():
             emit("compound", "oracle", cname, 0,
                  eval_ops(comp, ops, lys, cs=True))
         for seed in [0, 1, 2]:
-            need = [m for m in ["icv", "blend", "zvec", "learned", "icl4"]
+            need = [m for m in ["icv", "blend", "zvec", "recon", "learned",
+                                "icl4"]
                     if ("compound", m, cname, str(seed)) not in done]
             if not need:
                 continue
@@ -393,6 +394,10 @@ def gaps():
             if "icv" in need:
                 ops, lys = icv_ops(Z)
                 emit("compound", "icv", cname, seed,
+                     eval_ops(comp, ops, lys, cs=True))
+            if "recon" in need:
+                ops, lys = ops_for(D, code, 1.0, 2.0, 1.0)
+                emit("compound", "recon", cname, seed,
                      eval_ops(comp, ops, lys, cs=True))
             if "blend" in need:
                 ops, lys = blend_ops(code, z_mean)
