@@ -77,7 +77,7 @@ NOTES = {
     "Examples $k$": "saturates at $k{=}4$",
     "Support cap": "flat for 3--8",
     "Samples per skill": "25 samples suffice",
-    "Trust gate$^\\dagger$": "gate converts failures (\\S6.6)",
+    "Trust gate$^\\dagger$": "gate converts failures (\\S\\ref{sec:analysis})",
     "Injection schedule$^\\dagger$": "decode-step steering matters",
     "Serving policy$^\\dagger$": "routing beats both pure modes",
 }
