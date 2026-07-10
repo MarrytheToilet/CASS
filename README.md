@@ -162,8 +162,9 @@ predicts steering quality.*
 (paths in `src/cass/config.py`, `HF_HUB_OFFLINE=1`): Llama-3.1-8B-Instruct
 (main), Llama-3.2-3B, Gemma-2-2B, Qwen3-4B, Qwen2.5-3B (cross-model).
 Task data comes from the Todd et al. `function_vectors` repo in
-`third_party/`. A `.env` with an OpenAI-compatible endpoint is needed
-**only** for dataset synthesis (step 07) and failure judging (step 17) —
+`third_party/`. A `.env` (copy `.env.example` and fill in `API_BASE_URL` /
+`API_KEY` / `API_MODELS`) with an OpenAI-compatible endpoint is needed
+**only** for dataset synthesis (step 07) and failure judging (step 14) —
 the method itself never calls an API.
 
 **Run the pipeline.** The `scripts/` directory is a linear pipeline
