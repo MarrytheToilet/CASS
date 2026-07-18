@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 4.0))
+fig = plt.figure(figsize=(9.2, 3.4))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -218,64 +218,67 @@ axD.set_title("(c)  dictionary gain across models", fontsize=8, loc="left",
               color=INK, fontweight="bold")
 save("e1_main")
 
-# ---------------- Fig E5: scale curve ----------------
+
+
+
+# ---------------- scale & eps panels (embedded in Fig E2) ----------------
 d5 = pd.read_csv(out / "e5_scale_ext.csv" if (out / "e5_scale_ext.csv"
                  ).exists() else out / "e5_scale.csv")
-g = d5.groupby(["size", "draw"])["acc"].mean().reset_index()
-m = g.groupby("size")["acc"].agg(["mean", "sem"])
-e1 = pd.read_csv(out / "e1_loto.csv")
-held = d5["task"].unique()
-zref = e1[(e1["mode"] == "zvec") & (e1["k"] == 4) &
-          (e1["task"].isin(held))]["acc"].mean()
+_g5 = d5.groupby(["size", "draw"])["acc"].mean().reset_index()
+_m5 = _g5.groupby("size")["acc"].agg(["mean", "sem"])
+_e1s = pd.read_csv(out / "e1_loto.csv")
+_held = d5["task"].unique()
+_zref = _e1s[(_e1s["mode"] == "zvec") & (_e1s["k"] == 4) &
+             (_e1s["task"].isin(_held))]["acc"].mean()
 
-figP, (ax, axR) = plt.subplots(1, 2, figsize=(3.6, 1.72))
-figP.subplots_adjust(wspace=0.46)
-ax.grid(axis="y", zorder=0)
-ax.fill_between(m.index, m["mean"] - 1.96 * m["sem"],
-                m["mean"] + 1.96 * m["sem"], color=BLUE, alpha=0.16, lw=0)
-ax.plot(m.index, m["mean"], color=DBLUE, lw=2.2, zorder=3,
-        solid_capstyle="round")
-ax.plot(m.index, m["mean"], "o", color=DBLUE, markersize=5.5,
-        markeredgecolor="white", markeredgewidth=1.3, zorder=4)
-ax.axhline(zref, color=DPINK, lw=1.4, ls=(0, (4, 3)), zorder=2)
-ax.text(m.index[-1], zref - 0.022, "no dict.\ ($z$ only)", ha="right",
-        va="top", fontsize=6.6, color=DPINK)
-ax.text(m.index[-1], m["mean"].iloc[-1] + 0.028, "CASS", ha="right",
-        fontsize=7.5, color=DBLUE, fontweight="bold")
-ax.set_xlabel("dictionary size $T'$ (skills)", fontsize=7)
-ax.set_ylabel("held-out accuracy", fontsize=7)
-ax.set_xticks([int(m.index[0]), 20, int(m.index[-1])])
-ax.tick_params(labelsize=6.3)
-ax.set_ylim(0.3, 0.6)
+def plot_scale(ax):
+    m = _m5
+    ax.grid(axis="y", zorder=0)
+    ax.fill_between(m.index, m["mean"] - 1.96 * m["sem"],
+                    m["mean"] + 1.96 * m["sem"], color=BLUE, alpha=0.16,
+                    lw=0)
+    ax.plot(m.index, m["mean"], color=DBLUE, lw=2, zorder=3,
+            solid_capstyle="round")
+    ax.plot(m.index, m["mean"], "o", color=DBLUE, markersize=4.5,
+            markeredgecolor="white", markeredgewidth=1.1, zorder=4)
+    ax.axhline(_zref, color=DPINK, lw=1.3, ls=(0, (4, 3)), zorder=2)
+    ax.text(m.index[-1], _zref - 0.022, "no dict.", ha="right", va="top",
+            fontsize=6.4, color=DPINK)
+    ax.text(m.index[-1], m["mean"].iloc[-1] + 0.028, "CASS", ha="right",
+            fontsize=7.2, color=DBLUE, fontweight="bold")
+    ax.set_xlabel("dictionary size $T'$", fontsize=7)
+    ax.set_ylabel("held-out acc.", fontsize=7)
+    ax.set_xticks([int(m.index[0]), 20, int(m.index[-1])])
+    ax.tick_params(labelsize=6.2)
+    ax.set_ylim(0.3, 0.6)
 
-# ---------------- Fig eps -> rho: binned strip ----------------
-Rv = R.dropna(subset=["rho"]).copy()
-Rv["rho_c"] = Rv["rho"].clip(-0.1, 1.5)
-bins = Rv["eps"].quantile([0, 1 / 3, 2 / 3, 1.0]).values
-labels = ["low", "mid", "high"]
-Rv["bin"] = pd.cut(Rv["eps"], bins, labels=[0, 1, 2], include_lowest=True)
-rng = np.random.default_rng(0)
-ax = axR
-ax.grid(axis="y", zorder=0)
-for b in [0, 1, 2]:
-    s = Rv[Rv["bin"] == b]["rho_c"]
-    jx = b + rng.uniform(-0.16, 0.16, len(s))
-    ax.scatter(jx, s, s=20, color=BLUE, alpha=0.65, edgecolor="white",
-               linewidth=0.7, zorder=2)
-    mu, se = s.mean(), s.sem()
-    ax.errorbar(b + 0.30, mu, yerr=1.96 * se, fmt="D", color=DPINK,
-                markersize=5, capsize=2.5, elinewidth=1.4, capthick=1.4,
-                markeredgecolor="white", markeredgewidth=1, zorder=4)
-    ax.text(b + 0.42, mu, f"{mu:.2f}", fontsize=6.4, color=DPINK,
-            va="center")
-ax.set_xticks([0, 1, 2])
-ax.set_xticklabels(labels, fontsize=6.6)
-ax.set_ylabel(r"oracle recovery $\rho$", fontsize=7)
-ax.set_xlabel(r"coding residual $\varepsilon$ (terciles)", fontsize=7)
-ax.tick_params(axis="y", labelsize=6.3)
-ax.set_xlim(-0.5, 2.9)
-plt.figure(figP.number)
-save("e5_pair")
+def plot_eps(ax):
+    R5 = pd.read_csv(out / "e1_summary.csv")
+    Rv = R5[R5["k"] == 4].dropna(subset=["rho"]).copy()
+    Rv["rho_c"] = Rv["rho"].clip(-0.1, 1.5)
+    bins = Rv["eps"].quantile([0, 1 / 3, 2 / 3, 1.0]).values
+    Rv["bin"] = pd.cut(Rv["eps"], bins, labels=[0, 1, 2],
+                       include_lowest=True)
+    rng5 = np.random.default_rng(0)
+    ax.grid(axis="y", zorder=0)
+    for b in [0, 1, 2]:
+        sv = Rv[Rv["bin"] == b]["rho_c"]
+        jx = b + rng5.uniform(-0.16, 0.16, len(sv))
+        ax.scatter(jx, sv, s=14, color=BLUE, alpha=0.6, edgecolor="white",
+                   linewidth=0.6, zorder=2)
+        mu, se = sv.mean(), sv.sem()
+        ax.errorbar(b + 0.3, mu, yerr=1.96 * se, fmt="D", color=DPINK,
+                    markersize=4.5, capsize=2.5, elinewidth=1.3,
+                    capthick=1.3, markeredgecolor="white",
+                    markeredgewidth=1, zorder=4)
+        ax.text(b + 0.42, mu, f"{mu:.2f}", fontsize=6.2, color=DPINK,
+                va="center")
+    ax.set_xticks([0, 1, 2])
+    ax.set_xticklabels(["low", "mid", "high"], fontsize=6.4)
+    ax.set_ylabel(r"oracle recovery $\rho$", fontsize=7)
+    ax.set_xlabel(r"residual $\varepsilon$ (terciles)", fontsize=7)
+    ax.tick_params(axis="y", labelsize=6.2)
+    ax.set_xlim(-0.5, 2.9)
 
 # -------- Fig E2: heatmap + identification quality + execution ----------
 cm = json.load(open(out / "e2_coeff_matrix.json"))
@@ -296,12 +299,14 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(8.8, 2.76))
-gs = fig.add_gridspec(2, 3, width_ratios=[1.68, 0.40, 1.10],
-                      height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
+fig = plt.figure(figsize=(10.6, 2.44))
+gs = fig.add_gridspec(2, 5, width_ratios=[1.62, 0.38, 1.02, 0.62, 0.62],
+                      height_ratios=[0.20, 1.0], wspace=0.42, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
 axI = fig.add_subplot(gs[1, 1], sharey=axH)
 axE = fig.add_subplot(gs[1, 2], sharey=axH)
+axS = fig.add_subplot(gs[1, 3])
+axP = fig.add_subplot(gs[1, 4])
 axT = fig.add_subplot(gs[0, 0], sharex=axH)
 
 axH.imshow(Mx, cmap=SEQ, aspect="auto", vmin=0, vmax=1)
@@ -387,6 +392,12 @@ axE.legend(ncol=3, frameon=False, fontsize=6.2, loc="lower left",
            handletextpad=0.25, columnspacing=0.6, borderaxespad=0.0)
 axE.set_title("(c)  execution", fontsize=8, loc="left",
               color=INK, fontweight="bold", pad=25)
+plot_scale(axS)
+axS.set_title("(d)  dictionary scaling", fontsize=8, loc="left",
+              color=INK, fontweight="bold", pad=25)
+plot_eps(axP)
+axP.set_title("(e)  $\\varepsilon$ vs.\\ recovery", fontsize=8,
+              loc="left", color=INK, fontweight="bold", pad=25)
 save("e2_heatmap")
 
 # ---------------- Fig ablation sweeps (Table-2 companion) ----------------
@@ -402,7 +413,7 @@ panels = [("r0", [0, 1, 2, 4, 8, 16], "shared rank $r_0$"),
           ("k", [1, 2, 4, 8], "examples $k$"),
           ("smax", [3, 5, 8, 31], "support cap $s_{\\max}$"),
           ("n", [25, 50, 100], "samples per skill $n$")]
-fig, axs = plt.subplots(2, 2, figsize=(2.05, 2.02), sharey=True)
+fig, axs = plt.subplots(2, 2, figsize=(2.05, 1.82), sharey=True)
 for ax, (axis, vals, title) in zip(axs.ravel(), panels):
     ys = ax_vals(axis, vals)
     xs = range(len(vals))

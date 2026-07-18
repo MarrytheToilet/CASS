@@ -13,6 +13,13 @@
              -> improvements.csv     (exp=learned)
   soft     : soft interpolation toward the replacement state vs hard routing
              -> soft_hybrid.csv
+  pc23     : specificity control -- project out ONLY the 2nd or 3rd shared
+             PC instead of the 1st -> review_response.csv (exp=pc_control)
+  alphaiso : isolate the adaptive scale -- keep gate g, fix alpha(h)=alpha_max
+             (complements the existing 'ungated' variant, which keeps alpha
+             and removes g) -> improvements.csv (exp=variant, cond=alpha_const)
+  osupp    : compounds with ORACLE support (true constituents fed to the
+             operator, z unchanged) -> fill_gaps.csv (method=oracle_support)
 Usage: python 12_attribution.py [denoise|control|hparam|variants|learned|soft|all]
 """
 import csv
@@ -441,9 +448,161 @@ def soft():
     fout.close()
 
 
+
+def pc23():
+    done, fout, w = _rr_writer()
+
+    def build_with_pc(exclude, comp_idx):
+        per = {}
+        for l in LAYERS:
+            names = [t for t in ALL_TASKS if t != exclude]
+            means = np.stack([G[l][t].astype(np.float64).mean(0)
+                              for t in names], axis=1)
+            U = np.linalg.svd(means, full_matrices=False)[0]
+            U0 = U[:, comp_idx:comp_idx + 1]
+            Dl = build_dictionary({t: G[l][t] for t in names}, r0=0)
+            for n in Dl.task_names:
+                Gt = (G[l][n].astype(np.float64).T
+                      - U0 @ (U0.T @ G[l][n].astype(np.float64).T))
+                Uu, sv, _ = np.linalg.svd(Gt, full_matrices=False)
+                r = rank_by_energy(sv, 0.90, 16)
+                Dl.bases[n] = Uu[:, :r]
+                Dl.anchors[n] = Gt.mean(1)
+                Dl.U0 = U0
+            per[l] = Dl
+        return MultiLayerDictionary(per)
+
+    t0 = time.time()
+    for tstar in REP_TASKS:
+        task = load_task(tstar)
+        for comp_idx, cond in [(1, "pc2"), (2, "pc3")]:
+            D = build_with_pc(tstar, comp_idx)
+            for seed in SEEDS:
+                if ("pc_control", cond, tstar, str(seed)) in done:
+                    continue
+                Z = z_for(task, seed, 6)
+                zl = z_list_from_Z(D, Z)
+                code = code_for(D, zl)
+                ops, lys = ops_for(D, code, 1.0, 2.0, 1.0,
+                                   delta_vec=np.mean(zl, axis=0))
+                w.writerow(dict(exp="pc_control", cond=cond, task=tstar,
+                                seed=seed, acc=eval_ops(task, ops, lys, 25)))
+                fout.flush()
+        print(f"pc23 {tstar} done ({(time.time()-t0)/60:.1f} min)",
+              flush=True)
+    fout.close()
+
+
+def _alpha_const_op(dl, B_l, mu_l, gate, gamma, alpha_max):
+    """_gated_op with the adaptive alpha(h) frozen at alpha_max."""
+    import torch
+    Q, _ = np.linalg.qr(B_l)
+    Qt = _to_torch(Q, "cuda")
+    dvec = _to_torch(dl, "cuda")
+    mu = _to_torch(mu_l, "cuda")
+
+    def op(h):
+        h = h.float()
+        diff = mu.unsqueeze(0) - h
+        proj = (diff @ Qt) @ Qt.T
+        eff = gate * alpha_max + (1.0 - gate)
+        return h + eff * gamma * dvec.unsqueeze(0) + gate * alpha_max * proj
+    return op
+
+
+def alphaiso():
+    done, fout, w = _imp_writer()
+    for tstar in ALL_TASKS:
+        task = load_task(tstar)
+        D = loto_dictionary(tstar)
+        for seed in [0, 1, 2]:
+            if ("variant", "alpha_const", tstar, str(seed)) in done:
+                continue
+            Z = get_z(hlm, task, K, seed)
+            z_list = z_list_from_Z(D, Z)
+            z_mean = np.mean(z_list, axis=0)
+            code = code_for(D, z_list)
+            delta = z_mean.copy()
+            if code.support:
+                ws = _support_weights(code)
+                target = float(sum(wi * np.linalg.norm(D.anchors[n])
+                                   for wi, n in zip(ws, code.support)))
+                dn = np.linalg.norm(delta)
+                if dn > 1e-8:
+                    delta *= target / dn
+                mu_full = sum(wi * D.anchors[n]
+                              for wi, n in zip(ws, code.support))
+                gate = max(0.0, float(delta @ mu_full /
+                           (np.linalg.norm(delta) * np.linalg.norm(mu_full)
+                            + 1e-12)))
+                db = D.split(delta)
+                ops, lys = [], []
+                for l in D.layers:
+                    Dl = D.per_layer[l]
+                    mu_l = sum(wi * Dl.anchors[n]
+                               for wi, n in zip(ws, code.support))
+                    B_l = np.concatenate([Dl.bases[n] for n in code.support],
+                                         axis=1)
+                    ops.append(_alpha_const_op(db[l], B_l, mu_l, gate,
+                                               1.0, 1.0))
+                    lys.append(l)
+            else:
+                ops, lys = ops_for(D, code, 1.0, 2.0, 1.0, delta_vec=z_mean)
+            w.writerow(dict(exp="variant", cond="alpha_const", task=tstar,
+                            seed=seed, acc=eval_ops(task, ops, lys)))
+            fout.flush()
+        print(f"alphaiso {tstar} done", flush=True)
+    fout.close()
+
+
+def osupp():
+    from cass.compound import COMPOUND_REGISTRY, load_compound, \
+        compound_components
+    from cass.solver import SparseCode
+    D = build_multilayer_dictionary(G, r0=1)
+    import csv as _csv
+    path = out / "fill_gaps.csv"
+    done = set()
+    with open(path) as fh:
+        done = {(r["suite"], r["method"], r["task"], r["seed"])
+                for r in _csv.DictReader(fh)}
+    fout = open(path, "a", newline="")
+    w = _csv.DictWriter(fout, fieldnames=["suite", "method", "task",
+                                          "seed", "acc"])
+    from cass.evaluate import accuracy
+    from cass.tasks import zs_prompt as _zsp
+    for cname in COMPOUND_REGISTRY:
+        comp = load_compound(cname)
+        comps = [c for c in compound_components(cname) if c in D.task_names]
+        for seed in [0, 1, 2]:
+            if ("compound", "oracle_support", cname, str(seed)) in done:
+                continue
+            Z = get_z(hlm, comp, K, seed)
+            z_list = z_list_from_Z(D, Z)
+            z_mean = np.mean(z_list, axis=0)
+            # oracle support: true constituents, ls coefficients (orthonormal
+            # blocks -> projections), z direction unchanged
+            coeffs = {t: D.bases[t].T @ z_mean for t in comps}
+            delta = sum(D.bases[t] @ coeffs[t] for t in comps)
+            res = float(np.linalg.norm(z_mean - delta)
+                        / (np.linalg.norm(z_mean) + 1e-12))
+            code = SparseCode(coeffs, comps, delta, res, 0.0)
+            ops, lys = ops_for(D, code, 1.0, 2.0, 1.0, delta_vec=z_mean)
+            q = comp.eval_queries[:50]
+            acc = accuracy(hlm.generate([_zsp(x) for x, _ in q],
+                                        batch_size=25, op=ops, layer=lys),
+                           [y for _, y in q], case_sensitive=True)
+            w.writerow(dict(suite="compound", method="oracle_support",
+                            task=cname, seed=seed, acc=acc))
+            fout.flush()
+        print(f"osupp {cname} done", flush=True)
+    fout.close()
+
+
 if __name__ == "__main__":
     stages = (["denoise", "control", "hparam", "variants", "learned", "soft"]
               if STAGES == ["all"] else STAGES)
     for s in stages:
         {"denoise": denoise, "control": control, "hparam": hparam,
-         "variants": variants, "learned": learned, "soft": soft}[s]()
+         "variants": variants, "learned": learned, "soft": soft,
+         "pc23": pc23, "alphaiso": alphaiso, "osupp": osupp}[s]()

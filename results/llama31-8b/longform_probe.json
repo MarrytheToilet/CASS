@@ -1,0 +1,27 @@
+{
+  "task": "cap-words",
+  "n_eval": 50,
+  "zs": 0.0,
+  "icl4": 1.0,
+  "cass": 0.793,
+  "replace": 0.0,
+  "supports": [
+    [
+      "capitalize",
+      "capitalize-last-letter",
+      "choose-first-of-list",
+      "verb-from-list"
+    ],
+    [
+      "capitalize",
+      "choose-first-of-list"
+    ],
+    [
+      "present-past",
+      "capitalize",
+      "capitalize-last-letter",
+      "choose-first-of-list",
+      "verb-from-list"
+    ]
+  ]
+}
