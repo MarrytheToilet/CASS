@@ -364,25 +364,20 @@ axI.grid(axis="x", zorder=0)
 axI.set_xlabel("coeff.\ mass on\ntrue constituents", fontsize=7.2)
 axI.set_title("(b)", fontsize=8, loc="left", color=INK, fontweight="bold")
 
-# C: execution with per-seed distribution
-for i, c in enumerate(compounds):
-    seeds = e2[e2["compound"] == c]["acc_cass"].values
-    axE.scatter(seeds, np.full(len(seeds), i) +
-                np.linspace(-0.14, 0.14, len(seeds)), s=13, color=BLUE,
-                alpha=0.5, edgecolor="none", zorder=2)
-axE.scatter(agg.loc[compounds, "icl"], y, marker="|", s=110, color=INK,
-            lw=1.4, label="10-shot ICL", zorder=3)
-axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=26, color=MUTED,
-            label="naive", zorder=3)
-axE.scatter(agg.loc[compounds, "retr"], y, s=34, color=PINK,
+# C: CASS as bars (panel-B language); other methods as reference marks
+axE.barh(y, agg.loc[compounds, "cass"], height=0.6, color=BLUE,
+         edgecolor=DBLUE, linewidth=0.8, label="CASS", zorder=3)
+axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=24, color=MUTED,
+            label="naive", zorder=4)
+axE.scatter(agg.loc[compounds, "retr"], y, s=26, color=PINK,
             edgecolor="white", linewidth=0.8, label="retrieval", zorder=4)
 hc = pd.read_csv(out / "hendel_compound.csv").groupby("compound")["acc"] \
     .mean()
-axE.scatter([hc.get(c, np.nan) for c in compounds], y, marker="s", s=30,
+axE.scatter([hc.get(c, np.nan) for c in compounds], y, marker="s", s=26,
             color="#b8a1d9", edgecolor="white", linewidth=0.8,
             label="replace", zorder=4)
-axE.scatter(agg.loc[compounds, "cass"], y, s=52, color=DBLUE,
-            edgecolor="white", linewidth=0.9, label="CASS (mean)", zorder=5)
+axE.scatter(agg.loc[compounds, "icl"], y, marker="|", s=110, color=INK,
+            lw=1.4, label="ICL ceiling", zorder=4)
 axE.tick_params(labelleft=False)
 axE.set_xlim(-0.04, 1.05)
 axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.6)
