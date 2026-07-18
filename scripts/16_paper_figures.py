@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 3.4))
+fig = plt.figure(figsize=(9.2, 3.9))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -299,7 +299,7 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(10.6, 2.44))
+fig = plt.figure(figsize=(10.6, 2.6))
 gs = fig.add_gridspec(2, 5, width_ratios=[1.62, 0.38, 1.02, 0.62, 0.62],
                       height_ratios=[0.20, 1.0], wspace=0.42, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
@@ -413,7 +413,7 @@ panels = [("r0", [0, 1, 2, 4, 8, 16], "shared rank $r_0$"),
           ("k", [1, 2, 4, 8], "examples $k$"),
           ("smax", [3, 5, 8, 31], "support cap $s_{\\max}$"),
           ("n", [25, 50, 100], "samples per skill $n$")]
-fig, axs = plt.subplots(2, 2, figsize=(2.05, 1.82), sharey=True)
+fig, axs = plt.subplots(2, 2, figsize=(2.05, 2.0), sharey=True)
 for ax, (axis, vals, title) in zip(axs.ravel(), panels):
     ys = ax_vals(axis, vals)
     xs = range(len(vals))
