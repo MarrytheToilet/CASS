@@ -95,66 +95,69 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 3.55))
-gs = fig.add_gridspec(2, 2, width_ratios=[2.1, 1], hspace=0.40, wspace=0.2)
-axA1 = fig.add_subplot(gs[0, 0])
-axA2 = fig.add_subplot(gs[1, 0])
-axB = fig.add_subplot(gs[0, 1])
-axD = fig.add_subplot(gs[1, 1])
+fig = plt.figure(figsize=(9.2, 4.0))
+gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
+                      wspace=0.34)
+axA1 = fig.add_subplot(gs[:, 0])
+axA2 = fig.add_subplot(gs[:, 1])
+axB = fig.add_subplot(gs[0, 2])
+axD = fig.add_subplot(gs[1, 2])
 
 half = int(np.ceil(len(R4) / 2))
+zv = e1[(e1["mode"] == "zvec") & (e1["k"] == 4) &
+        (e1["seed"] < 3)].groupby("task")["acc"].mean()
 for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     chunk = chunk.reset_index(drop=True)
-    x = np.arange(len(chunk))
-    ax.grid(axis="y", zorder=0)
+    n = len(chunk)
+    ax.grid(axis="x", zorder=0)
     prev, start = None, 0
-    for i, f in enumerate(list(chunk["family"]) + [None]):
-        if f != prev:
+    for i, fam in enumerate(list(chunk["family"]) + [None]):
+        if fam != prev:
             if prev is not None:
-                ax.text((start + i - 1) / 2, 1.09, prev, ha="center",
-                        va="top", fontsize=6.8, color=MUTED, style="italic")
-                if f is not None:
-                    ax.axvline(i - 0.5, color="#e3e3e3", lw=0.8, zorder=0)
-            prev, start = f, i
-    zv = e1[(e1["mode"] == "zvec") & (e1["k"] == 4) &
-            (e1["seed"] < 3)].groupby("task")["acc"].mean()
+                ax.text(1.03, n - 1 - start + 0.1, prev, ha="right",
+                        va="bottom", fontsize=6.4, color=MUTED,
+                        style="italic")
+                if fam is not None:
+                    ax.axhline(n - 1 - i + 0.5, color="#e3e3e3", lw=0.8,
+                               zorder=0)
+            prev, start = fam, i
     for i, row in chunk.iterrows():
+        yv = n - 1 - i
         lo, hi = sorted([row["acc_syn"], row["acc_oracle"]])
-        ax.plot([i, i], [lo, hi], color="#c4d8ea", lw=2.2, zorder=2,
+        ax.plot([lo, hi], [yv, yv], color="#c4d8ea", lw=2.2, zorder=2,
                 solid_capstyle="round")
         z0 = zv.get(row["task"], np.nan)
         if np.isfinite(z0):
-            ax.plot(i, z0, "o", markersize=4.2, markerfacecolor="white",
+            ax.plot(z0, yv, "o", markersize=4.0, markerfacecolor="white",
                     markeredgecolor=MUTED, markeredgewidth=1.1, zorder=3)
-        ax.plot(i, row["acc_oracle"], "o", color=PINK, markersize=6,
-                markeredgecolor="white", markeredgewidth=1.1, zorder=3)
-        ax.plot(i, row["acc_syn"], "o", color=DBLUE, markersize=6,
-                markeredgecolor="white", markeredgewidth=1.1, zorder=4)
-        ax.plot([i - 0.33, i + 0.33], [row["acc_icl"]] * 2, color=INK,
+        ax.plot(row["acc_oracle"], yv, "o", color=PINK, markersize=5.6,
+                markeredgecolor="white", markeredgewidth=1.0, zorder=3)
+        ax.plot(row["acc_syn"], yv, "o", color=DBLUE, markersize=5.6,
+                markeredgecolor="white", markeredgewidth=1.0, zorder=4)
+        ax.plot([row["acc_icl"]] * 2, [yv - 0.34, yv + 0.34], color=INK,
                 lw=1.0, zorder=3)
-    ax.set_xticks(x)
-    ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=40,
-                       fontsize=6.9, ha="right", rotation_mode="anchor")
-    ax.set_ylim(-0.04, 1.12)
-    ax.set_xlim(-0.7, half - 0.3)
-    ax.set_yticks([0, 0.5, 1.0])
-    ax.set_ylabel("accuracy", fontsize=8.5)
-    ax.tick_params(axis="y", labelsize=7.5)
+    ax.set_yticks(range(n))
+    ax.set_yticklabels([short(t) for t in chunk["task"]][::-1], fontsize=6.8)
+    ax.set_ylim(-0.6, n - 0.4)
+    ax.set_xlim(-0.02, 1.04)
+    ax.set_xticks([0, 0.5, 1.0])
+    ax.tick_params(axis="x", labelsize=7)
+    ax.set_xlabel("accuracy", fontsize=7.5)
 handles = [
-    Line2D([0], [0], marker="o", color=DBLUE, lw=0, markersize=6,
+    Line2D([0], [0], marker="o", color=DBLUE, lw=0, markersize=5.6,
            markeredgecolor="white"),
-    Line2D([0], [0], marker="o", lw=0, markersize=4.2,
+    Line2D([0], [0], marker="o", lw=0, markersize=4.0,
            markerfacecolor="white", markeredgecolor=MUTED),
-    Line2D([0], [0], marker="o", color=PINK, lw=0, markersize=6,
+    Line2D([0], [0], marker="o", color=PINK, lw=0, markersize=5.6,
            markeredgecolor="white"),
     Line2D([0], [0], color=INK, lw=1.0),
 ]
-axA1.legend(handles, ["CASS (k=4)", "$z$ only", "oracle", "10-shot ICL"],
-            ncol=4, loc="lower right", bbox_to_anchor=(1.0, 1.02),
-            fontsize=6.8, handlelength=1.1, columnspacing=0.8,
-            frameon=False)
+axA2.legend(handles, ["CASS (k=4)", "$z$ only", "oracle", "10-shot ICL"],
+            ncol=4, loc="lower left", bbox_to_anchor=(-0.02, 1.005),
+            fontsize=6.8, handlelength=1.0, columnspacing=0.8,
+            handletextpad=0.35, frameon=False)
 axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
-               color=INK, fontweight="bold", pad=11)
+               color=INK, fontweight="bold", pad=10)
 
 # B: median rho vs k with bootstrap CI band for CASS
 def rho_tasks(mode, k, seeds=3):
@@ -177,13 +180,16 @@ for mode, col, lab in [("cass", DBLUE, "CASS"), ("zvec", MUTED, "$z$ only"),
     axB.fill_between(ks, lo, hi, color=col, alpha=0.14 if mode == "cass"
                      else 0.09, lw=0)
     axB.plot(ks, med, color=col, lw=2, marker="o", markersize=5,
-             markeredgecolor="white", markeredgewidth=1.1, label=lab,
+             markeredgecolor="white", markeredgewidth=1.1,
              solid_capstyle="round")
+    axB.annotate(lab, (ks[-1], med[-1]), xytext=(5, 0),
+                 textcoords="offset points", fontsize=6.6, color=col,
+                 va="center")
 axB.grid(axis="y", zorder=0)
 axB.set_xticks([1, 2, 4])
-axB.set_xlabel("examples $k$", fontsize=7.5)
+axB.set_xlim(0.7, 6.3)
+axB.set_xlabel("examples $k$", fontsize=7.5, labelpad=1)
 axB.set_ylabel(r"median $\rho$", fontsize=7.5)
-axB.legend(fontsize=6.5, loc="center right", handlelength=1.4)
 axB.set_title("B  recovery vs. $k$ (band: 95% CI)", fontsize=8, loc="left",
               color=INK, fontweight="bold")
 
@@ -377,9 +383,10 @@ axE.tick_params(labelleft=False)
 axE.set_xlim(-0.04, 1.05)
 axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.6)
 axE.grid(axis="x", zorder=0)
-axE.legend(fontsize=6.6, loc="lower right", handletextpad=0.15,
-           borderaxespad=0.1)
-axE.set_title("C  execution (small dots: seeds)", fontsize=8, loc="left",
+axE.legend(fontsize=6.2, loc="lower right", bbox_to_anchor=(1.0, 0.995),
+           ncol=2, frameon=False, handletextpad=0.2, columnspacing=0.6,
+           borderaxespad=0.0)
+axE.set_title("C  execution", fontsize=8, loc="left",
               color=INK, fontweight="bold")
 save("e2_heatmap")
 
