@@ -114,9 +114,11 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     for i, fam in enumerate(list(chunk["family"]) + [None]):
         if fam != prev:
             if prev is not None:
-                ax.text(1.03, n - 1 - start + 0.1, prev, ha="right",
-                        va="bottom", fontsize=6.4, color=MUTED,
-                        style="italic")
+                ax.text(1.02, n - 1 - start + 0.45, prev, ha="right",
+                        va="center", fontsize=6.4, color=MUTED,
+                        style="italic", zorder=6,
+                        bbox=dict(facecolor="white", edgecolor="none",
+                                  pad=0.6, alpha=0.85))
                 if fam is not None:
                     ax.axhline(n - 1 - i + 0.5, color="#e3e3e3", lw=0.8,
                                zorder=0)
@@ -150,13 +152,14 @@ handles = [
            markerfacecolor="white", markeredgecolor=MUTED),
     Line2D([0], [0], marker="o", color=PINK, lw=0, markersize=5.6,
            markeredgecolor="white"),
-    Line2D([0], [0], color=INK, lw=1.0),
+    Line2D([0], [0], marker="|", color=INK, lw=0, markersize=7,
+           markeredgewidth=1.2),
 ]
 axA2.legend(handles, ["CASS (k=4)", "$z$ only", "oracle", "10-shot ICL"],
-            ncol=4, loc="lower left", bbox_to_anchor=(-0.02, 1.005),
-            fontsize=6.8, handlelength=1.0, columnspacing=0.8,
-            handletextpad=0.35, frameon=False)
-axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
+            ncol=4, loc="lower left", bbox_to_anchor=(-0.30, 1.005),
+            fontsize=6.8, handlelength=0.9, columnspacing=0.7,
+            handletextpad=0.3, frameon=False)
+axA1.set_title("(a)  per-task accuracy", fontsize=8, loc="left",
                color=INK, fontweight="bold", pad=10)
 
 # B: median rho vs k with bootstrap CI band for CASS
@@ -190,7 +193,7 @@ axB.set_xticks([1, 2, 4])
 axB.set_xlim(0.7, 6.3)
 axB.set_xlabel("examples $k$", fontsize=7.5, labelpad=1)
 axB.set_ylabel(r"median $\rho$", fontsize=7.5)
-axB.set_title("B  recovery vs. $k$ (band: 95% CI)", fontsize=8, loc="left",
+axB.set_title("(b)  recovery vs. $k$ (band: 95% CI)", fontsize=8, loc="left",
               color=INK, fontweight="bold")
 
 # D: forest plot of dictionary gain across models
@@ -211,7 +214,7 @@ axD.set_xlabel("dictionary gain over $z$-only (acc. pts, 95% CI)",
 axD.set_xlim(-1.2, 11.5)
 axD.invert_yaxis()
 axD.grid(axis="x", zorder=0)
-axD.set_title("C  dictionary gain across models", fontsize=8, loc="left",
+axD.set_title("(c)  dictionary gain across models", fontsize=8, loc="left",
               color=INK, fontweight="bold")
 save("e1_main")
 
@@ -293,7 +296,7 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  icl=("acc_icl", "first"))
 
 fig = plt.figure(figsize=(8.8, 2.85))
-gs = fig.add_gridspec(2, 3, width_ratios=[1.75, 0.42, 0.95],
+gs = fig.add_gridspec(2, 3, width_ratios=[1.68, 0.40, 1.10],
                       height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
 axI = fig.add_subplot(gs[1, 1], sharey=axH)
@@ -333,7 +336,7 @@ axT.set_yticks([])
 axT.tick_params(labelbottom=False, length=0)
 for sp in ["top", "right", "left"]:
     axT.spines[sp].set_visible(False)
-axT.set_title("A  skill identification (top: total coefficient mass "
+axT.set_title("(a)  skill identification (top: total coefficient mass "
               "per skill)", fontsize=8, loc="left", color=INK,
               fontweight="bold")
 handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.4)]
@@ -358,35 +361,36 @@ axI.set_xticks([0, 0.5, 1])
 axI.tick_params(labelleft=False, labelsize=6.5)
 axI.grid(axis="x", zorder=0)
 axI.set_xlabel("coeff.\ mass on\ntrue constituents", fontsize=7.2)
-axI.set_title("B", fontsize=8, loc="left", color=INK, fontweight="bold")
+axI.set_title("(b)", fontsize=8, loc="left", color=INK, fontweight="bold")
 
 # C: execution with per-seed distribution
 for i, c in enumerate(compounds):
     seeds = e2[e2["compound"] == c]["acc_cass"].values
     axE.scatter(seeds, np.full(len(seeds), i) +
-                np.linspace(-0.14, 0.14, len(seeds)), s=9, color=BLUE,
+                np.linspace(-0.14, 0.14, len(seeds)), s=13, color=BLUE,
                 alpha=0.5, edgecolor="none", zorder=2)
-axE.scatter(agg.loc[compounds, "icl"], y, marker="|", s=90, color=INK,
+axE.scatter(agg.loc[compounds, "icl"], y, marker="|", s=110, color=INK,
             lw=1.4, label="10-shot ICL", zorder=3)
-axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=20, color=MUTED,
+axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=26, color=MUTED,
             label="naive", zorder=3)
-axE.scatter(agg.loc[compounds, "retr"], y, s=28, color=PINK,
+axE.scatter(agg.loc[compounds, "retr"], y, s=34, color=PINK,
             edgecolor="white", linewidth=0.8, label="retrieval", zorder=4)
 hc = pd.read_csv(out / "hendel_compound.csv").groupby("compound")["acc"] \
     .mean()
-axE.scatter([hc.get(c, np.nan) for c in compounds], y, marker="s", s=24,
+axE.scatter([hc.get(c, np.nan) for c in compounds], y, marker="s", s=30,
             color="#b8a1d9", edgecolor="white", linewidth=0.8,
             label="replace", zorder=4)
-axE.scatter(agg.loc[compounds, "cass"], y, s=44, color=DBLUE,
+axE.scatter(agg.loc[compounds, "cass"], y, s=52, color=DBLUE,
             edgecolor="white", linewidth=0.9, label="CASS (mean)", zorder=5)
 axE.tick_params(labelleft=False)
 axE.set_xlim(-0.04, 1.05)
 axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.6)
 axE.grid(axis="x", zorder=0)
-axE.legend(fontsize=6.2, loc="lower right", bbox_to_anchor=(1.0, 0.995),
-           ncol=2, frameon=False, handletextpad=0.2, columnspacing=0.6,
-           borderaxespad=0.0)
-axE.set_title("C  execution", fontsize=8, loc="left",
+hE, lE = axE.get_legend_handles_labels()
+fig.legend(hE, lE, ncol=5, frameon=False, fontsize=6.4,
+           loc="lower right", bbox_to_anchor=(0.995, 0.90),
+           handletextpad=0.25, columnspacing=0.9)
+axE.set_title("(c)  execution", fontsize=8, loc="left",
               color=INK, fontweight="bold")
 save("e2_heatmap")
 
