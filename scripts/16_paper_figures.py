@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.6, 3.55))
+fig = plt.figure(figsize=(9.2, 3.55))
 gs = fig.add_gridspec(2, 2, width_ratios=[2.1, 1], hspace=0.40, wspace=0.2)
 axA1 = fig.add_subplot(gs[0, 0])
 axA2 = fig.add_subplot(gs[1, 0])
@@ -134,11 +134,12 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
                 lw=1.0, zorder=3)
     ax.set_xticks(x)
     ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=40,
-                       fontsize=6.2, ha="right", rotation_mode="anchor")
+                       fontsize=6.9, ha="right", rotation_mode="anchor")
     ax.set_ylim(-0.04, 1.12)
     ax.set_xlim(-0.7, half - 0.3)
     ax.set_yticks([0, 0.5, 1.0])
-    ax.set_ylabel("accuracy", fontsize=7.5)
+    ax.set_ylabel("accuracy", fontsize=8.5)
+    ax.tick_params(axis="y", labelsize=7.5)
 handles = [
     Line2D([0], [0], marker="o", color=DBLUE, lw=0, markersize=6,
            markeredgecolor="white"),
@@ -149,8 +150,9 @@ handles = [
     Line2D([0], [0], color=INK, lw=1.0),
 ]
 axA1.legend(handles, ["CASS (k=4)", "$z$ only", "oracle", "10-shot ICL"],
-            ncol=4, loc="lower left", bbox_to_anchor=(0.33, 1.06),
-            fontsize=7, handlelength=1.2, columnspacing=0.9)
+            ncol=4, loc="lower right", bbox_to_anchor=(1.0, 1.02),
+            fontsize=6.8, handlelength=1.1, columnspacing=0.8,
+            frameon=False)
 axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
                color=INK, fontweight="bold", pad=11)
 
@@ -284,7 +286,7 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(9.6, 3.05))
+fig = plt.figure(figsize=(8.8, 2.85))
 gs = fig.add_gridspec(2, 3, width_ratios=[1.75, 0.42, 0.95],
                       height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
@@ -300,16 +302,16 @@ for i, c in enumerate(compounds):
             axH.add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False,
                                     edgecolor=DPINK, lw=1.4, zorder=4))
     for j in range(len(tasks)):
-        if Mx[i, j] >= 0.45:
+        if Mx[i, j] >= 0.30:
             axH.text(j, i, f"{Mx[i, j]:.1f}".lstrip("0"), ha="center",
-                     va="center", fontsize=5.2,
+                     va="center", fontsize=5.8,
                      color="white" if Mx[i, j] > 0.65 else INK)
 axH.set_xticks(range(len(tasks)))
-axH.set_xticklabels([short(t) for t in tasks], rotation=40, fontsize=6.4,
+axH.set_xticklabels([short(t) for t in tasks], rotation=40, fontsize=7.0,
                     ha="right", rotation_mode="anchor")
 axH.set_yticks(range(len(compounds)))
 axH.set_yticklabels([" $\\circ$ ".join(short(p) for p in c.split("+"))
-                     for c in compounds], fontsize=7)
+                     for c in compounds], fontsize=7.6)
 prev = None
 for j, t in enumerate(tasks):
     f = TASK_REGISTRY[t][1]
@@ -349,7 +351,7 @@ axI.set_xlim(0, 1.05)
 axI.set_xticks([0, 0.5, 1])
 axI.tick_params(labelleft=False, labelsize=6.5)
 axI.grid(axis="x", zorder=0)
-axI.set_xlabel("coeff.\ mass on\ntrue constituents", fontsize=6.6)
+axI.set_xlabel("coeff.\ mass on\ntrue constituents", fontsize=7.2)
 axI.set_title("B", fontsize=8, loc="left", color=INK, fontweight="bold")
 
 # C: execution with per-seed distribution
@@ -373,9 +375,9 @@ axE.scatter(agg.loc[compounds, "cass"], y, s=44, color=DBLUE,
             edgecolor="white", linewidth=0.9, label="CASS (mean)", zorder=5)
 axE.tick_params(labelleft=False)
 axE.set_xlim(-0.04, 1.05)
-axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7)
+axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.6)
 axE.grid(axis="x", zorder=0)
-axE.legend(fontsize=6, loc="lower right", handletextpad=0.15,
+axE.legend(fontsize=6.6, loc="lower right", handletextpad=0.15,
            borderaxespad=0.1)
 axE.set_title("C  execution (small dots: seeds)", fontsize=8, loc="left",
               color=INK, fontweight="bold")
