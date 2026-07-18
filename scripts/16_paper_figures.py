@@ -295,7 +295,7 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(8.8, 2.82))
+fig = plt.figure(figsize=(8.8, 2.76))
 gs = fig.add_gridspec(2, 3, width_ratios=[1.68, 0.40, 1.10],
                       height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
