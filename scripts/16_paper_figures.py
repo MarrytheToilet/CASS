@@ -116,10 +116,16 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
                 if f is not None:
                     ax.axvline(i - 0.5, color="#e3e3e3", lw=0.8, zorder=0)
             prev, start = f, i
+    zv = e1[(e1["mode"] == "zvec") & (e1["k"] == 4) &
+            (e1["seed"] < 3)].groupby("task")["acc"].mean()
     for i, row in chunk.iterrows():
         lo, hi = sorted([row["acc_syn"], row["acc_oracle"]])
         ax.plot([i, i], [lo, hi], color="#c4d8ea", lw=2.2, zorder=2,
                 solid_capstyle="round")
+        z0 = zv.get(row["task"], np.nan)
+        if np.isfinite(z0):
+            ax.plot(i, z0, "o", markersize=4.2, markerfacecolor="white",
+                    markeredgecolor=MUTED, markeredgewidth=1.1, zorder=3)
         ax.plot(i, row["acc_oracle"], "o", color=PINK, markersize=6,
                 markeredgecolor="white", markeredgewidth=1.1, zorder=3)
         ax.plot(i, row["acc_syn"], "o", color=DBLUE, markersize=6,
@@ -136,13 +142,15 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
 handles = [
     Line2D([0], [0], marker="o", color=DBLUE, lw=0, markersize=6,
            markeredgecolor="white"),
+    Line2D([0], [0], marker="o", lw=0, markersize=4.2,
+           markerfacecolor="white", markeredgecolor=MUTED),
     Line2D([0], [0], marker="o", color=PINK, lw=0, markersize=6,
            markeredgecolor="white"),
     Line2D([0], [0], color=INK, lw=1.0),
 ]
-axA1.legend(handles, ["CASS (k=4)", "oracle", "10-shot ICL"],
-            ncol=3, loc="lower left", bbox_to_anchor=(0.47, 1.06),
-            fontsize=7, handlelength=1.2, columnspacing=1.0)
+axA1.legend(handles, ["CASS (k=4)", "$z$ only", "oracle", "10-shot ICL"],
+            ncol=4, loc="lower left", bbox_to_anchor=(0.33, 1.06),
+            fontsize=7, handlelength=1.2, columnspacing=0.9)
 axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
                color=INK, fontweight="bold", pad=11)
 
@@ -164,8 +172,8 @@ for mode, col, lab in [("cass", DBLUE, "CASS"), ("zvec", MUTED, "$z$ only"),
         boots = [np.median(rngb.choice(r, len(r), True)) for _ in range(2000)]
         ks.append(k); med.append(np.median(r))
         lo.append(np.percentile(boots, 2.5)); hi.append(np.percentile(boots, 97.5))
-    if mode == "cass":
-        axB.fill_between(ks, lo, hi, color=BLUE, alpha=0.15, lw=0)
+    axB.fill_between(ks, lo, hi, color=col, alpha=0.14 if mode == "cass"
+                     else 0.09, lw=0)
     axB.plot(ks, med, color=col, lw=2, marker="o", markersize=5,
              markeredgecolor="white", markeredgewidth=1.1, label=lab,
              solid_capstyle="round")
@@ -276,11 +284,13 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(9.6, 2.75))
-gs = fig.add_gridspec(1, 3, width_ratios=[1.75, 0.42, 0.95], wspace=0.06)
-axH = fig.add_subplot(gs[0])
-axI = fig.add_subplot(gs[1], sharey=axH)
-axE = fig.add_subplot(gs[2], sharey=axH)
+fig = plt.figure(figsize=(9.6, 3.05))
+gs = fig.add_gridspec(2, 3, width_ratios=[1.75, 0.42, 0.95],
+                      height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
+axH = fig.add_subplot(gs[1, 0])
+axI = fig.add_subplot(gs[1, 1], sharey=axH)
+axE = fig.add_subplot(gs[1, 2], sharey=axH)
+axT = fig.add_subplot(gs[0, 0], sharex=axH)
 
 axH.imshow(Mx, cmap=SEQ, aspect="auto", vmin=0, vmax=1)
 for i, c in enumerate(compounds):
@@ -306,11 +316,21 @@ for j, t in enumerate(tasks):
     if f != prev and prev is not None:
         axH.axvline(j - 0.5, color="white", lw=2)
     prev = f
-axH.set_title("A  skill identification", fontsize=8,
-              loc="left", color=INK, fontweight="bold")
+col_mass = Mx.sum(axis=0)
+axT.bar(range(len(tasks)), col_mass,
+        color=[DPINK if t in truth else BLUE for t in tasks],
+        width=0.7, zorder=2)
+axT.set_ylabel("reuse", fontsize=6.2)
+axT.set_yticks([])
+axT.tick_params(labelbottom=False, length=0)
+for sp in ["top", "right", "left"]:
+    axT.spines[sp].set_visible(False)
+axT.set_title("A  skill identification (top: total coefficient mass "
+              "per skill)", fontsize=8, loc="left", color=INK,
+              fontweight="bold")
 handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.4)]
-axH.legend(handles, ["ground-truth constituent"], loc="lower right",
-           bbox_to_anchor=(1.0, 1.0), fontsize=6.5)
+axT.legend(handles, ["ground-truth constituent"], loc="upper right",
+           fontsize=6.5, frameon=False, borderaxespad=0.0)
 
 # B: identification quality = coefficient mass on true constituents
 y = np.arange(len(compounds))
@@ -344,6 +364,11 @@ axE.scatter(agg.loc[compounds, "naive"], y, marker="x", s=20, color=MUTED,
             label="naive", zorder=3)
 axE.scatter(agg.loc[compounds, "retr"], y, s=28, color=PINK,
             edgecolor="white", linewidth=0.8, label="retrieval", zorder=4)
+hc = pd.read_csv(out / "hendel_compound.csv").groupby("compound")["acc"] \
+    .mean()
+axE.scatter([hc.get(c, np.nan) for c in compounds], y, marker="s", s=24,
+            color="#b8a1d9", edgecolor="white", linewidth=0.8,
+            label="replace", zorder=4)
 axE.scatter(agg.loc[compounds, "cass"], y, s=44, color=DBLUE,
             edgecolor="white", linewidth=0.9, label="CASS (mean)", zorder=5)
 axE.tick_params(labelleft=False)
