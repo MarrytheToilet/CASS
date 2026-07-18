@@ -228,7 +228,8 @@ held = d5["task"].unique()
 zref = e1[(e1["mode"] == "zvec") & (e1["k"] == 4) &
           (e1["task"].isin(held))]["acc"].mean()
 
-fig, ax = plt.subplots(figsize=(3.4, 2.05))
+figP, (ax, axR) = plt.subplots(1, 2, figsize=(3.6, 1.72))
+figP.subplots_adjust(wspace=0.46)
 ax.grid(axis="y", zorder=0)
 ax.fill_between(m.index, m["mean"] - 1.96 * m["sem"],
                 m["mean"] + 1.96 * m["sem"], color=BLUE, alpha=0.16, lw=0)
@@ -237,26 +238,24 @@ ax.plot(m.index, m["mean"], color=DBLUE, lw=2.2, zorder=3,
 ax.plot(m.index, m["mean"], "o", color=DBLUE, markersize=5.5,
         markeredgecolor="white", markeredgewidth=1.3, zorder=4)
 ax.axhline(zref, color=DPINK, lw=1.4, ls=(0, (4, 3)), zorder=2)
-ax.text(m.index[-1], zref - 0.03, "no dictionary ($z$ only)", ha="right",
-        va="top", fontsize=7.5, color=DPINK)
-ax.text(m.index[-1], m["mean"].iloc[-1] + 0.035, "CASS", ha="right",
-        fontsize=8.5, color=DBLUE, fontweight="bold")
-ax.set_xlabel("dictionary size $T'$ (skills)")
-ax.set_ylabel("held-out accuracy")
-ax.set_xticks(list(m.index))
+ax.text(m.index[-1], zref - 0.022, "no dict.\ ($z$ only)", ha="right",
+        va="top", fontsize=6.6, color=DPINK)
+ax.text(m.index[-1], m["mean"].iloc[-1] + 0.028, "CASS", ha="right",
+        fontsize=7.5, color=DBLUE, fontweight="bold")
+ax.set_xlabel("dictionary size $T'$ (skills)", fontsize=7)
+ax.set_ylabel("held-out accuracy", fontsize=7)
+ax.set_xticks([int(m.index[0]), 20, int(m.index[-1])])
+ax.tick_params(labelsize=6.3)
 ax.set_ylim(0.3, 0.6)
-save("e5_scale")
 
 # ---------------- Fig eps -> rho: binned strip ----------------
 Rv = R.dropna(subset=["rho"]).copy()
 Rv["rho_c"] = Rv["rho"].clip(-0.1, 1.5)
 bins = Rv["eps"].quantile([0, 1 / 3, 2 / 3, 1.0]).values
-labels = [f"low\n$\\varepsilon\\leq${bins[1]:.2f}",
-          f"mid\n{bins[1]:.2f}–{bins[2]:.2f}",
-          f"high\n$\\varepsilon>${bins[2]:.2f}"]
+labels = ["low", "mid", "high"]
 Rv["bin"] = pd.cut(Rv["eps"], bins, labels=[0, 1, 2], include_lowest=True)
 rng = np.random.default_rng(0)
-fig, ax = plt.subplots(figsize=(3.4, 2.05))
+ax = axR
 ax.grid(axis="y", zorder=0)
 for b in [0, 1, 2]:
     s = Rv[Rv["bin"] == b]["rho_c"]
@@ -264,17 +263,19 @@ for b in [0, 1, 2]:
     ax.scatter(jx, s, s=20, color=BLUE, alpha=0.65, edgecolor="white",
                linewidth=0.7, zorder=2)
     mu, se = s.mean(), s.sem()
-    ax.errorbar(b + 0.32, mu, yerr=1.96 * se, fmt="D", color=DPINK,
-                markersize=6, capsize=3, elinewidth=1.6, capthick=1.6,
+    ax.errorbar(b + 0.30, mu, yerr=1.96 * se, fmt="D", color=DPINK,
+                markersize=5, capsize=2.5, elinewidth=1.4, capthick=1.4,
                 markeredgecolor="white", markeredgewidth=1, zorder=4)
-    ax.text(b + 0.44, mu, f"{mu:.2f}", fontsize=7.5, color=DPINK,
+    ax.text(b + 0.42, mu, f"{mu:.2f}", fontsize=6.4, color=DPINK,
             va="center")
 ax.set_xticks([0, 1, 2])
-ax.set_xticklabels(labels, fontsize=7.5)
-ax.set_ylabel(r"oracle recovery $\rho$")
-ax.set_xlabel(r"coding residual $\varepsilon$ (terciles)")
-ax.set_xlim(-0.5, 2.75)
-save("e1_eps_vs_rho")
+ax.set_xticklabels(labels, fontsize=6.6)
+ax.set_ylabel(r"oracle recovery $\rho$", fontsize=7)
+ax.set_xlabel(r"coding residual $\varepsilon$ (terciles)", fontsize=7)
+ax.tick_params(axis="y", labelsize=6.3)
+ax.set_xlim(-0.5, 2.9)
+plt.figure(figP.number)
+save("e5_pair")
 
 # -------- Fig E2: heatmap + identification quality + execution ----------
 cm = json.load(open(out / "e2_coeff_matrix.json"))
@@ -406,7 +407,7 @@ panels = [("r0", [0, 1, 2, 4, 8, 16], "shared rank $r_0$"),
           ("k", [1, 2, 4, 8], "examples $k$"),
           ("smax", [3, 5, 8, 31], "support cap $s_{\\max}$"),
           ("n", [25, 50, 100], "samples per skill $n$")]
-fig, axs = plt.subplots(2, 2, figsize=(2.05, 1.85), sharey=True)
+fig, axs = plt.subplots(2, 2, figsize=(2.05, 2.02), sharey=True)
 for ax, (axis, vals, title) in zip(axs.ravel(), panels):
     ys = ax_vals(axis, vals)
     xs = range(len(vals))

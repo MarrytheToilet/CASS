@@ -145,10 +145,8 @@ Llama-3.1-8B-Instruct, strict exact-match, 3 seeds. Full tables in the paper.
 </p>
 
 <p align="center">
-  <img src="figures/e5_scale_llama31-8b.png" width="48%"
-       alt="Accuracy vs dictionary size">
-  <img src="figures/e1_eps_vs_rho_llama31-8b.png" width="44%"
-       alt="Oracle recovery vs coding residual">
+  <img src="figures/e5_pair_llama31-8b.png" width="72%"
+       alt="Accuracy vs dictionary size; oracle recovery vs coding residual">
 </p>
 
 *Left: held-out accuracy grows with dictionary size — each mined skill
