@@ -295,7 +295,7 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(8.8, 2.85))
+fig = plt.figure(figsize=(8.8, 2.82))
 gs = fig.add_gridspec(2, 3, width_ratios=[1.68, 0.40, 1.10],
                       height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
@@ -386,13 +386,51 @@ axE.tick_params(labelleft=False)
 axE.set_xlim(-0.04, 1.05)
 axE.set_xlabel("compound accuracy (case-sensitive)", fontsize=7.6)
 axE.grid(axis="x", zorder=0)
-hE, lE = axE.get_legend_handles_labels()
-fig.legend(hE, lE, ncol=5, frameon=False, fontsize=6.4,
-           loc="lower right", bbox_to_anchor=(0.995, 0.90),
-           handletextpad=0.25, columnspacing=0.9)
+axE.legend(ncol=3, frameon=False, fontsize=6.2, loc="lower left",
+           mode="expand", bbox_to_anchor=(0.0, 1.005, 1.0, 0.12),
+           handletextpad=0.25, columnspacing=0.6, borderaxespad=0.0)
 axE.set_title("(c)  execution", fontsize=8, loc="left",
-              color=INK, fontweight="bold")
+              color=INK, fontweight="bold", pad=25)
 save("e2_heatmap")
+
+# ---------------- Fig ablation sweeps (Table-2 companion) ----------------
+d4 = pd.read_csv(out / "e4_ablations.csv")
+rr = pd.read_csv(out / "review_response.csv")
+rnd = rr[rr.exp == "control"]["acc"].mean()
+
+def ax_vals(axis, vals):
+    return [d4[(d4.axis == axis) & (d4.value == str(v))]["acc"].mean()
+            for v in vals]
+
+panels = [("r0", [0, 1, 2, 4, 8, 16], "shared rank $r_0$"),
+          ("k", [1, 2, 4, 8], "examples $k$"),
+          ("smax", [3, 5, 8, 31], "support cap $s_{\\max}$"),
+          ("n", [25, 50, 100], "samples per skill $n$")]
+fig, axs = plt.subplots(2, 2, figsize=(2.05, 1.85), sharey=True)
+for ax, (axis, vals, title) in zip(axs.ravel(), panels):
+    ys = ax_vals(axis, vals)
+    xs = range(len(vals))
+    ax.grid(axis="y", zorder=0, lw=0.5)
+    ax.plot(xs, ys, color=DBLUE, lw=1.7, zorder=3, solid_capstyle="round")
+    ax.plot(xs, ys, "o", color=DBLUE, markersize=3.4,
+            markeredgecolor="white", markeredgewidth=0.8, zorder=4)
+    if axis == "r0":
+        ax.plot(1, ys[1], "o", markersize=7, markerfacecolor="none",
+                markeredgecolor=DPINK, markeredgewidth=1.2, zorder=5)
+        ax.axhline(rnd, color=MUTED, lw=0.9, ls=(0, (4, 3)), zorder=2)
+        ax.text(len(vals) - 1, rnd - 0.035, "random dir.", ha="right",
+                va="top", fontsize=5.4, color=MUTED)
+    ax.set_xticks(list(xs))
+    ax.set_xticklabels([str(v) for v in vals], fontsize=5.8)
+    ax.tick_params(axis="y", labelsize=5.8, length=2)
+    ax.tick_params(axis="x", length=2, pad=1.5)
+    ax.set_title(title, fontsize=6.4, pad=2, color=INK)
+    ax.set_ylim(0, 0.64)
+    ax.set_yticks([0, 0.3, 0.6])
+for ax in axs[:, 0]:
+    ax.set_ylabel("acc.", fontsize=6)
+fig.subplots_adjust(hspace=0.62, wspace=0.12)
+save("e4_sweeps")
 
 # ---------------- Fig cosine matrices (H1) ----------------
 from cass.dictionary import build_dictionary, pairwise_cosine
