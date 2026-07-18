@@ -95,8 +95,8 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.6, 4.1))
-gs = fig.add_gridspec(2, 2, width_ratios=[2.1, 1], hspace=0.62, wspace=0.2)
+fig = plt.figure(figsize=(9.6, 3.55))
+gs = fig.add_gridspec(2, 2, width_ratios=[2.1, 1], hspace=0.40, wspace=0.2)
 axA1 = fig.add_subplot(gs[0, 0])
 axA2 = fig.add_subplot(gs[1, 0])
 axB = fig.add_subplot(gs[0, 1])
@@ -111,7 +111,7 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     for i, f in enumerate(list(chunk["family"]) + [None]):
         if f != prev:
             if prev is not None:
-                ax.text((start + i - 1) / 2, 1.19, prev, ha="center",
+                ax.text((start + i - 1) / 2, 1.09, prev, ha="center",
                         va="top", fontsize=6.8, color=MUTED, style="italic")
                 if f is not None:
                     ax.axvline(i - 0.5, color="#e3e3e3", lw=0.8, zorder=0)
@@ -129,7 +129,7 @@ for ax, chunk in zip([axA1, axA2], [R4.iloc[:half], R4.iloc[half:]]):
     ax.set_xticks(x)
     ax.set_xticklabels([short(t) for t in chunk["task"]], rotation=40,
                        fontsize=6.2, ha="right", rotation_mode="anchor")
-    ax.set_ylim(-0.04, 1.2)
+    ax.set_ylim(-0.04, 1.12)
     ax.set_xlim(-0.7, half - 0.3)
     ax.set_yticks([0, 0.5, 1.0])
     ax.set_ylabel("accuracy", fontsize=7.5)
@@ -141,10 +141,10 @@ handles = [
     Line2D([0], [0], color=INK, lw=1.0),
 ]
 axA1.legend(handles, ["CASS (k=4)", "oracle", "10-shot ICL"],
-            ncol=3, loc="lower left", bbox_to_anchor=(0.47, 1.13),
+            ncol=3, loc="lower left", bbox_to_anchor=(0.47, 1.06),
             fontsize=7, handlelength=1.2, columnspacing=1.0)
 axA1.set_title("A  per-task accuracy", fontsize=8, loc="left",
-               color=INK, fontweight="bold", pad=15)
+               color=INK, fontweight="bold", pad=11)
 
 # B: median rho vs k with bootstrap CI band for CASS
 def rho_tasks(mode, k, seeds=3):
@@ -209,7 +209,7 @@ held = d5["task"].unique()
 zref = e1[(e1["mode"] == "zvec") & (e1["k"] == 4) &
           (e1["task"].isin(held))]["acc"].mean()
 
-fig, ax = plt.subplots(figsize=(3.4, 2.5))
+fig, ax = plt.subplots(figsize=(3.4, 2.05))
 ax.grid(axis="y", zorder=0)
 ax.fill_between(m.index, m["mean"] - 1.96 * m["sem"],
                 m["mean"] + 1.96 * m["sem"], color=BLUE, alpha=0.16, lw=0)
@@ -225,7 +225,7 @@ ax.text(m.index[-1], m["mean"].iloc[-1] + 0.035, "CASS", ha="right",
 ax.set_xlabel("dictionary size $T'$ (skills)")
 ax.set_ylabel("held-out accuracy")
 ax.set_xticks(list(m.index))
-ax.set_ylim(0.3, None)
+ax.set_ylim(0.3, 0.6)
 save("e5_scale")
 
 # ---------------- Fig eps -> rho: binned strip ----------------
@@ -237,7 +237,7 @@ labels = [f"low\n$\\varepsilon\\leq${bins[1]:.2f}",
           f"high\n$\\varepsilon>${bins[2]:.2f}"]
 Rv["bin"] = pd.cut(Rv["eps"], bins, labels=[0, 1, 2], include_lowest=True)
 rng = np.random.default_rng(0)
-fig, ax = plt.subplots(figsize=(3.4, 2.5))
+fig, ax = plt.subplots(figsize=(3.4, 2.05))
 ax.grid(axis="y", zorder=0)
 for b in [0, 1, 2]:
     s = Rv[Rv["bin"] == b]["rho_c"]
@@ -276,7 +276,7 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(9.6, 3.0))
+fig = plt.figure(figsize=(9.6, 2.75))
 gs = fig.add_gridspec(1, 3, width_ratios=[1.75, 0.42, 0.95], wspace=0.06)
 axH = fig.add_subplot(gs[0])
 axI = fig.add_subplot(gs[1], sharey=axH)
