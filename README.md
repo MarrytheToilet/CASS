@@ -155,13 +155,13 @@ predicts steering quality.*
 
 <p align="center">
   <img src="figures/e6_geometry_llama31-8b.png" width="60%"
-       alt="MDS embedding of the 32 skill subspaces, colored by task family">
+       alt="Coherence chord diagram of the 32 skill subspaces, grouped by task family">
 </p>
 
-*The dictionary's internal geometry is meaningful: embedding pairwise
-subspace coherence in 2-D recovers the five task families without
-supervision, and cross-family neighbors are semantic (the case-edit
-skills cluster together).*
+*The dictionary's internal geometry is meaningful: strong subspace
+coherence stays almost entirely within task families, and the
+cross-family links are semantic (the case-edit skills tie to
+next-capital-letter, list selection ties to choose-from-list).*
 
 ## Reproducing
 

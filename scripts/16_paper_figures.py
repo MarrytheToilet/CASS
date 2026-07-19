@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 3.02))
+fig = plt.figure(figsize=(9.2, 2.86))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -473,7 +473,6 @@ cb.outline.set_visible(False)
 save("cosine_matrix")
 # -------- Fig geometry: MDS of skill subspaces (body) + coherence heatmap (appendix) --------
 from cass.dictionary import build_multilayer_dictionary, subcoherence_matrix
-from sklearn.manifold import MDS
 
 Gg = {l: {t: load_G(MODEL, t, l).numpy() for t in tasks_all} for l in [12, 16]}
 Dg = build_multilayer_dictionary(Gg, r0=1)
@@ -483,45 +482,62 @@ fams_g = [TASK_REGISTRY[t][1] for t in names_g]
 FAM_COLOR = {"algorithmic": DBLUE, "knowledge": BLUE, "linguistic": DPINK,
              "selection": PINK, "translation": "#9a9a9a"}
 
-emb = MDS(n_components=2, dissimilarity="precomputed", random_state=0,
-          normalized_stress="auto").fit_transform(1.0 - Mcoh)
-fig, ax = plt.subplots(figsize=(2.9, 2.15))
+pairs = [(Mcoh[i, j], i, j) for i in range(len(names_g))
+         for j in range(i + 1, len(names_g)) if Mcoh[i, j] >= 0.85]
+
+gapA = 0.10                       # angular gap between family groups
+step = (2 * np.pi - 5 * gapA) / len(names_g)
+ang, cur, prev = [], np.pi / 2 - 0.38, None
+for t in names_g:
+    fm = TASK_REGISTRY[t][1]
+    if prev is not None and fm != prev:
+        cur -= gapA
+    ang.append(cur)
+    cur -= step
+    prev = fm
+ang = np.array(ang)
+P = np.c_[np.cos(ang), np.sin(ang)]
+
+from matplotlib.path import Path as MPath
+from matplotlib.patches import PathPatch
+
+fig, ax = plt.subplots(figsize=(2.7, 2.55))
+ax.set_aspect("equal")
 ax.set_xticks([])
 ax.set_yticks([])
-for i in range(len(names_g)):
-    for j in range(i + 1, len(names_g)):
-        if Mcoh[i, j] >= 0.9:
-            ax.plot(emb[[i, j], 0], emb[[i, j], 1], color="#d0d0d0",
-                    lw=0.9, zorder=1)
-for f, c in FAM_COLOR.items():
-    idx = [i for i, x in enumerate(fams_g) if x == f]
-    ax.scatter(emb[idx, 0], emb[idx, 1], s=24, color=c, label=f,
-               edgecolor="white", linewidth=0.7, zorder=3)
-span = emb.max(0) - emb.min(0)
+for c, i, j in sorted(pairs):     # strongest chords drawn on top
+    p1, p2 = P[i], P[j]
+    d = np.linalg.norm(p1 - p2) / 2
+    ctrl = (p1 + p2) / 2 * (1 - 0.85 * d)
+    frac = (c - 0.85) / 0.15
+    same = fams_g[i] == fams_g[j]
+    path = MPath([tuple(p1), tuple(ctrl), tuple(p2)],
+                 [MPath.MOVETO, MPath.CURVE3, MPath.CURVE3])
+    ax.add_patch(PathPatch(path, fill=False, lw=0.5 + 2.2 * frac,
+                           alpha=0.28 + 0.55 * frac, capstyle="round",
+                           color=FAM_COLOR[fams_g[i]] if same else "#6d6d6d",
+                           zorder=3 if same else 2))
 for i, t in enumerate(names_g):
-    d = (emb - emb[i]) / span            # place label away from nearest point
-    d = np.linalg.norm(d, axis=1)
-    d[i] = np.inf
-    v = (emb[i] - emb[np.argmin(d)]) / span
-    v = v / (np.linalg.norm(v) + 1e-12)
-    dx, dy = 3.5 * v[0] + 1.5, 3.5 * v[1]
-    OVR = {"alpha-first": (-4, 2), "alpha-last": (-4, -6),
-           "choose-first": (5, 4), "choose-middle": (5, -4),
-           "choose-last": (2, 10), "animal": (4, -7),
-           "occupation": (-4, 4), "landmark": (4, -5),
-           "pres\u2192past": (-4, -2), "sing\u2192plural": (4, 6),
-           "en\u2192es": (4, -1), "en\u2192de": (-4, -1),
-           "en\u2192fr": (4, -5), "cap-1st-letter": (4, -6),
-           "fruit": (1, -9), "next-item": (-3, -8),
-           "prev-item": (4, 4), "verb": (-4, 3)}
-    if short(t) in OVR:
-        dx, dy = OVR[short(t)]
-    ax.annotate(short(t), emb[i], textcoords="offset points",
-                xytext=(dx, dy), fontsize=5.6, color=INK, zorder=4,
-                ha="left" if dx >= 0 else "right", va="center")
-ax.legend(fontsize=6.2, loc="lower center", ncol=5, handletextpad=0.15,
-          columnspacing=0.7, borderaxespad=0.0,
-          bbox_to_anchor=(0.5, 1.0))
+    ax.plot(*P[i], "o", color=FAM_COLOR[fams_g[i]], markersize=4.0,
+            markeredgecolor="white", markeredgewidth=0.6, zorder=4)
+    a_deg = np.degrees(ang[i]) % 360
+    x, y = P[i] * 1.07
+    if 90 < a_deg < 270:
+        rot, ha = a_deg - 180, "right"
+    else:
+        rot, ha = a_deg, "left"
+    ax.text(x, y, short(t), rotation=rot, rotation_mode="anchor", ha=ha,
+            va="center", fontsize=6.0, color=FAM_COLOR[fams_g[i]],
+            fontweight="bold")
+lim = 1.58
+ax.set_xlim(-lim, lim)
+ax.set_ylim(-lim, lim)
+handles = [Line2D([0], [0], marker="o", ls="", color=c, markersize=4)
+           for c in FAM_COLOR.values()]
+handles.append(Line2D([0], [0], ls="-", color="#6d6d6d", lw=1.4))
+ax.legend(handles, list(FAM_COLOR) + ["cross-family"], fontsize=6.3,
+          loc="lower center", ncol=3, handletextpad=0.15,
+          columnspacing=0.7, borderaxespad=0.0, bbox_to_anchor=(0.5, 0.99))
 save("e6_geometry")
 
 figA, axA = plt.subplots(figsize=(3.7, 3.15))
