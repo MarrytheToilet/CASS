@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 2.86))
+fig = plt.figure(figsize=(9.2, 2.62))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -393,7 +393,7 @@ axE.set_title("(c)  execution", fontsize=8, loc="left",
 save("e2_heatmap")
 
 # ---------------- Fig 5: standalone scale + eps pair ----------------
-figP, (axSc, axEp) = plt.subplots(1, 2, figsize=(3.6, 1.34))
+figP, (axSc, axEp) = plt.subplots(1, 2, figsize=(3.3, 1.23))
 figP.subplots_adjust(wspace=0.46)
 plot_scale(axSc)
 plot_eps(axEp)
@@ -501,7 +501,7 @@ P = np.c_[np.cos(ang), np.sin(ang)]
 from matplotlib.path import Path as MPath
 from matplotlib.patches import PathPatch
 
-fig, ax = plt.subplots(figsize=(2.7, 2.55))
+fig, ax = plt.subplots(figsize=(2.5, 2.36))
 ax.set_aspect("equal")
 ax.set_xticks([])
 ax.set_yticks([])
