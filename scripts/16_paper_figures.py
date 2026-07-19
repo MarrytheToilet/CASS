@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 2.62))
+fig = plt.figure(figsize=(9.2, 3.02))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -501,7 +501,10 @@ P = np.c_[np.cos(ang), np.sin(ang)]
 from matplotlib.path import Path as MPath
 from matplotlib.patches import PathPatch
 
-fig, ax = plt.subplots(figsize=(2.5, 2.36))
+fig = plt.figure(figsize=(3.55, 2.05))
+gsC = fig.add_gridspec(1, 2, width_ratios=[1.42, 0.72], wspace=0.55)
+ax = fig.add_subplot(gsC[0, 0])
+axD = fig.add_subplot(gsC[0, 1])
 ax.set_aspect("equal")
 ax.set_xticks([])
 ax.set_yticks([])
@@ -535,9 +538,32 @@ ax.set_ylim(-lim, lim)
 handles = [Line2D([0], [0], marker="o", ls="", color=c, markersize=4)
            for c in FAM_COLOR.values()]
 handles.append(Line2D([0], [0], ls="-", color="#6d6d6d", lw=1.4))
-ax.legend(handles, list(FAM_COLOR) + ["cross-family"], fontsize=6.3,
+ax.legend(handles, list(FAM_COLOR) + ["cross-family"], fontsize=6.0,
           loc="lower center", ncol=3, handletextpad=0.15,
-          columnspacing=0.7, borderaxespad=0.0, bbox_to_anchor=(0.5, 0.99))
+          columnspacing=0.7, borderaxespad=0.0, bbox_to_anchor=(0.5, 1.03))
+
+within = [Mcoh[i, j] for i in range(len(names_g))
+          for j in range(i + 1, len(names_g)) if fams_g[i] == fams_g[j]]
+cross = [Mcoh[i, j] for i in range(len(names_g))
+         for j in range(i + 1, len(names_g)) if fams_g[i] != fams_g[j]]
+rngD = np.random.default_rng(3)
+axD.grid(axis="x", zorder=0)
+for row, vals, col in [(1, within, BLUE), (0, cross, "#9a9a9a")]:
+    jy = row + rngD.uniform(-0.17, 0.17, len(vals))
+    axD.scatter(vals, jy, s=7, color=col, alpha=0.45, edgecolor="none",
+                zorder=2)
+    mu = np.median(vals)
+    axD.plot(mu, row, "D", color=DPINK, markersize=5,
+             markeredgecolor="white", markeredgewidth=0.9, zorder=4)
+    axD.text(mu, row + 0.30, f"{mu:.2f}", fontsize=6.2, color=DPINK,
+             ha="center")
+axD.set_yticks([0, 1])
+axD.yaxis.tick_right()
+axD.set_yticklabels(["cross-\nfamily", "within-\nfamily"], fontsize=6.2)
+axD.set_ylim(-0.55, 1.62)
+axD.set_xticks([0.3, 0.6, 0.9])
+axD.tick_params(axis="x", labelsize=6.2)
+axD.set_xlabel("subspace coherence", fontsize=6.4)
 save("e6_geometry")
 
 figA, axA = plt.subplots(figsize=(3.7, 3.15))
