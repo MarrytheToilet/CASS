@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 3.25))
+fig = plt.figure(figsize=(9.2, 3.02))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -471,4 +471,78 @@ cb.set_label("pairwise cosine of task means", fontsize=7.5)
 cb.ax.tick_params(labelsize=6.5)
 cb.outline.set_visible(False)
 save("cosine_matrix")
+# -------- Fig geometry: MDS of skill subspaces (body) + coherence heatmap (appendix) --------
+from cass.dictionary import build_multilayer_dictionary, subcoherence_matrix
+from sklearn.manifold import MDS
+
+Gg = {l: {t: load_G(MODEL, t, l).numpy() for t in tasks_all} for l in [12, 16]}
+Dg = build_multilayer_dictionary(Gg, r0=1)
+names_g = Dg.per_layer[16].task_names
+Mcoh = sum(subcoherence_matrix(Dg.per_layer[l]) for l in [12, 16]) / 2
+fams_g = [TASK_REGISTRY[t][1] for t in names_g]
+FAM_COLOR = {"algorithmic": DBLUE, "knowledge": BLUE, "linguistic": DPINK,
+             "selection": PINK, "translation": "#9a9a9a"}
+
+emb = MDS(n_components=2, dissimilarity="precomputed", random_state=0,
+          normalized_stress="auto").fit_transform(1.0 - Mcoh)
+fig, ax = plt.subplots(figsize=(2.9, 2.15))
+ax.set_xticks([])
+ax.set_yticks([])
+for i in range(len(names_g)):
+    for j in range(i + 1, len(names_g)):
+        if Mcoh[i, j] >= 0.9:
+            ax.plot(emb[[i, j], 0], emb[[i, j], 1], color="#d0d0d0",
+                    lw=0.9, zorder=1)
+for f, c in FAM_COLOR.items():
+    idx = [i for i, x in enumerate(fams_g) if x == f]
+    ax.scatter(emb[idx, 0], emb[idx, 1], s=24, color=c, label=f,
+               edgecolor="white", linewidth=0.7, zorder=3)
+span = emb.max(0) - emb.min(0)
+for i, t in enumerate(names_g):
+    d = (emb - emb[i]) / span            # place label away from nearest point
+    d = np.linalg.norm(d, axis=1)
+    d[i] = np.inf
+    v = (emb[i] - emb[np.argmin(d)]) / span
+    v = v / (np.linalg.norm(v) + 1e-12)
+    dx, dy = 3.5 * v[0] + 1.5, 3.5 * v[1]
+    OVR = {"alpha-first": (-4, 2), "alpha-last": (-4, -6),
+           "choose-first": (5, 4), "choose-middle": (5, -4),
+           "choose-last": (2, 10), "animal": (4, -7),
+           "occupation": (-4, 4), "landmark": (4, -5),
+           "pres\u2192past": (-4, -2), "sing\u2192plural": (4, 6),
+           "en\u2192es": (4, -1), "en\u2192de": (-4, -1),
+           "en\u2192fr": (4, -5), "cap-1st-letter": (4, -6),
+           "fruit": (1, -9), "next-item": (-3, -8),
+           "prev-item": (4, 4), "verb": (-4, 3)}
+    if short(t) in OVR:
+        dx, dy = OVR[short(t)]
+    ax.annotate(short(t), emb[i], textcoords="offset points",
+                xytext=(dx, dy), fontsize=5.6, color=INK, zorder=4,
+                ha="left" if dx >= 0 else "right", va="center")
+ax.legend(fontsize=6.2, loc="lower center", ncol=5, handletextpad=0.15,
+          columnspacing=0.7, borderaxespad=0.0,
+          bbox_to_anchor=(0.5, 1.0))
+save("e6_geometry")
+
+figA, axA = plt.subplots(figsize=(3.7, 3.15))
+imA = axA.imshow(Mcoh + np.eye(len(names_g)), cmap=SEQ, vmin=0.3, vmax=1)
+axA.set_xticks(range(len(names_g)))
+axA.set_yticks(range(len(names_g)))
+axA.set_xticklabels([short(t) for t in names_g], rotation=90, fontsize=4.4)
+axA.set_yticklabels([short(t) for t in names_g], fontsize=4.4)
+axA.tick_params(length=0, pad=1.2)
+prev = None
+for j, t in enumerate(names_g):
+    fm = TASK_REGISTRY[t][1]
+    if fm != prev and prev is not None:
+        axA.axvline(j - 0.5, color="white", lw=1.4)
+        axA.axhline(j - 0.5, color="white", lw=1.4)
+    prev = fm
+cbA = figA.colorbar(imA, ax=axA, fraction=0.04, pad=0.02)
+cbA.set_label("subspace coherence (largest principal-angle cos.)",
+              fontsize=6.0)
+cbA.ax.tick_params(labelsize=5.5)
+cbA.outline.set_visible(False)
+save("app_coherence")
+
 print("figures v3 (png only) written to", FIGURES_DIR)

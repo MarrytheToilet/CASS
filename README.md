@@ -153,6 +153,16 @@ Llama-3.1-8B-Instruct, strict exact-match, 3 seeds. Full tables in the paper.
 makes every future unseen task easier. Right: the coding residual ε
 predicts steering quality.*
 
+<p align="center">
+  <img src="figures/e6_geometry_llama31-8b.png" width="60%"
+       alt="MDS embedding of the 32 skill subspaces, colored by task family">
+</p>
+
+*The dictionary's internal geometry is meaningful: embedding pairwise
+subspace coherence in 2-D recovers the five task families without
+supervision, and cross-family neighbors are semantic (the case-edit
+skills cluster together).*
+
 ## Reproducing
 
 **Setup.** Python 3.10, PyTorch 2.8, transformers 4.57; one RTX 3090
