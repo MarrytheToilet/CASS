@@ -340,12 +340,12 @@ axT.set_yticks([])
 axT.tick_params(labelbottom=False, length=0)
 for sp in ["top", "right", "left"]:
     axT.spines[sp].set_visible(False)
-axT.set_title("(a)  skill identification (top: total coefficient mass "
-              "per skill)", fontsize=8, loc="left", color=INK,
-              fontweight="bold")
+axT.set_title("(a)  skill identification", fontsize=8, loc="left",
+              color=INK, fontweight="bold")
 handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=DPINK, lw=1.4)]
-axT.legend(handles, ["ground-truth constituent"], loc="upper right",
-           fontsize=6.5, frameon=False, borderaxespad=0.0)
+axT.legend(handles, ["ground-truth constituent"], loc="lower right",
+           bbox_to_anchor=(1.0, 0.98), fontsize=6.5, frameon=False,
+           borderaxespad=0.0)
 
 # B: identification quality = coefficient mass on true constituents
 y = np.arange(len(compounds))
@@ -364,7 +364,7 @@ axI.set_xlim(0, 1.05)
 axI.set_xticks([0, 0.5, 1])
 axI.tick_params(labelleft=False, labelsize=6.5)
 axI.grid(axis="x", zorder=0)
-axI.set_xlabel("coeff.\ mass on\ntrue constituents", fontsize=7.2)
+axI.set_xlabel("coeff. mass on\ntrue constituents", fontsize=7.2)
 axI.set_title("(b)", fontsize=8, loc="left", color=INK, fontweight="bold")
 
 # C: CASS as bars (panel-B language); other methods as reference marks
