@@ -95,7 +95,7 @@ R4 = R[R["k"] == 4].sort_values(["family", "task"]).reset_index(drop=True)
 e1 = pd.read_csv(out / "e1_loto.csv")
 bl = json.load(open(out / "baselines.json"))
 
-fig = plt.figure(figsize=(9.2, 3.9))
+fig = plt.figure(figsize=(9.2, 3.5))
 gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1.12], hspace=0.52,
                       wspace=0.34)
 axA1 = fig.add_subplot(gs[:, 0])
@@ -254,8 +254,8 @@ def plot_scale(ax):
 
 def plot_eps(ax):
     R5 = pd.read_csv(out / "e1_summary.csv")
-    Rv = R5[R5["k"] == 4].dropna(subset=["rho"]).copy()
-    Rv["rho_c"] = Rv["rho"].clip(-0.1, 1.5)
+    Rv = R5.dropna(subset=["rho"]).copy()  # pooled over k, as in the text
+    Rv["rho_c"] = Rv["rho"].clip(0, 1.5)
     bins = Rv["eps"].quantile([0, 1 / 3, 2 / 3, 1.0]).values
     Rv["bin"] = pd.cut(Rv["eps"], bins, labels=[0, 1, 2],
                        include_lowest=True)
@@ -299,14 +299,12 @@ agg = e2.groupby("compound").agg(cass=("acc_cass", "mean"),
                                  naive=("acc_naive", "mean"),
                                  icl=("acc_icl", "first"))
 
-fig = plt.figure(figsize=(10.6, 2.6))
-gs = fig.add_gridspec(2, 5, width_ratios=[1.62, 0.38, 1.02, 0.62, 0.62],
-                      height_ratios=[0.20, 1.0], wspace=0.42, hspace=0.10)
+fig = plt.figure(figsize=(8.8, 2.34))
+gs = fig.add_gridspec(2, 3, width_ratios=[1.68, 0.40, 1.10],
+                      height_ratios=[0.20, 1.0], wspace=0.06, hspace=0.10)
 axH = fig.add_subplot(gs[1, 0])
 axI = fig.add_subplot(gs[1, 1], sharey=axH)
 axE = fig.add_subplot(gs[1, 2], sharey=axH)
-axS = fig.add_subplot(gs[1, 3])
-axP = fig.add_subplot(gs[1, 4])
 axT = fig.add_subplot(gs[0, 0], sharex=axH)
 
 axH.imshow(Mx, cmap=SEQ, aspect="auto", vmin=0, vmax=1)
@@ -392,13 +390,14 @@ axE.legend(ncol=3, frameon=False, fontsize=6.2, loc="lower left",
            handletextpad=0.25, columnspacing=0.6, borderaxespad=0.0)
 axE.set_title("(c)  execution", fontsize=8, loc="left",
               color=INK, fontweight="bold", pad=25)
-plot_scale(axS)
-axS.set_title("(d)  dictionary scaling", fontsize=8, loc="left",
-              color=INK, fontweight="bold", pad=25)
-plot_eps(axP)
-axP.set_title("(e)  $\\varepsilon$ vs.\\ recovery", fontsize=8,
-              loc="left", color=INK, fontweight="bold", pad=25)
 save("e2_heatmap")
+
+# ---------------- Fig 5: standalone scale + eps pair ----------------
+figP, (axSc, axEp) = plt.subplots(1, 2, figsize=(3.6, 1.34))
+figP.subplots_adjust(wspace=0.46)
+plot_scale(axSc)
+plot_eps(axEp)
+save("e5_pair")
 
 # ---------------- Fig ablation sweeps (Table-2 companion) ----------------
 d4 = pd.read_csv(out / "e4_ablations.csv")
