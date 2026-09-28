@@ -1,9 +1,62 @@
+# Local environments and credentials. Keep the documented template versioned.
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.ssh/
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Python and compiler caches.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+inductor_cache/
+
+# Model weights, activation tensors and serialized dictionaries.
+/models/
+/checkpoints/
+/model-transfer-chunks*/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.pkl
+pytorch_model*.bin
+*.part
 results/*/activations/
 results/*/zcache/
 third_party/
-__pycache__/
-*.pyc
-.env
+
+# Runtime logs and the separately managed manuscript working directory.
 nohup.out
 *.log
 paper/
+
+# Raw experiment ledgers stay in the local/remote artifact archive. Summaries,
+# configuration JSON, protocols, validation receipts and figures are versioned.
+/optimization/**/*.jsonl
+/rebuttal/**/*.jsonl
+/optimization/**/*.tar.gz
+/rebuttal/**/*.tar.gz
+/rebuttal/**/*.zip
+/optimization/**/SESSION_STATE.md
+/optimization/**/worker_gpu*.json
+/optimization/**/*_done.json
+/optimization/**/gpu_release.json
+/optimization/**/author_package_receipt.json
+/rebuttal/**/*_done.json
+
+# Rebuildable LaTeX auxiliary files; retain the proof source and final PDF.
+/rebuttal/**/*.aux
+/rebuttal/**/*.out
+/rebuttal/**/*.toc
+/rebuttal/**/*.fls
+/rebuttal/**/*.fdb_latexmk
+/rebuttal/**/*.synctex.gz
