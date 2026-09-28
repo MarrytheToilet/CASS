@@ -1,0 +1,8 @@
+{
+  "n_instances": 1200,
+  "all_pass": true,
+  "max_bound_ratio": 0.9955844203984414,
+  "unclipped_instances": 620,
+  "mixed_clipping_instances": 121,
+  "note": "Numerical checks complement the analytic proof; they are not a proof or an empirical performance guarantee."
+}

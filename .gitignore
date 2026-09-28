@@ -60,3 +60,4 @@ paper/
 /rebuttal/**/*.fls
 /rebuttal/**/*.fdb_latexmk
 /rebuttal/**/*.synctex.gz
+/rebuttal/**/*_build.txt

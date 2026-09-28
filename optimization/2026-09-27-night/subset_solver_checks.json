@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "size": 4,
+      "task": "antonym",
+      "cache_seconds": 0.008156605996191502,
+      "rebuild_seconds": 0.00476014195010066,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 4,
+      "task": "english-french",
+      "cache_seconds": 0.008156605996191502,
+      "rebuild_seconds": 0.00476014195010066,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 4,
+      "task": "word-length",
+      "cache_seconds": 0.008156605996191502,
+      "rebuild_seconds": 0.00476014195010066,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 4,
+      "task": "antonym+capitalize",
+      "cache_seconds": 0.008156605996191502,
+      "rebuild_seconds": 0.00476014195010066,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 16,
+      "task": "antonym",
+      "cache_seconds": 0.0628609950072132,
+      "rebuild_seconds": 0.05172068998217583,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 16,
+      "task": "english-french",
+      "cache_seconds": 0.0628609950072132,
+      "rebuild_seconds": 0.05172068998217583,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 16,
+      "task": "word-length",
+      "cache_seconds": 0.0628609950072132,
+      "rebuild_seconds": 0.05172068998217583,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 16,
+      "task": "antonym+capitalize",
+      "cache_seconds": 0.0628609950072132,
+      "rebuild_seconds": 0.05172068998217583,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 24,
+      "task": "antonym",
+      "cache_seconds": 0.11106431303778663,
+      "rebuild_seconds": 0.09036057500634342,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 24,
+      "task": "english-french",
+      "cache_seconds": 0.11106431303778663,
+      "rebuild_seconds": 0.09036057500634342,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 24,
+      "task": "word-length",
+      "cache_seconds": 0.11106431303778663,
+      "rebuild_seconds": 0.09036057500634342,
+      "maximum_delta_error": 0.0
+    },
+    {
+      "size": 24,
+      "task": "antonym+capitalize",
+      "cache_seconds": 0.11106431303778663,
+      "rebuild_seconds": 0.09036057500634342,
+      "maximum_delta_error": 0.0
+    }
+  ],
+  "n_checks": 12
+}

@@ -1,0 +1,354 @@
+{
+  "scope": "Diagnostic only: target-word occurrence anywhere in the first line can count negation or incidental mention; it is not semantic correctness and does not replace the original metric.",
+  "first_observed_failures": {
+    "present-past": {
+      "task": "present-past",
+      "method": "pair_last1",
+      "input": "address",
+      "target": "addressed",
+      "pred": " address\n\nThe answer is: address\n\n"
+    },
+    "person-sport": {
+      "task": "person-sport",
+      "method": "pair_last1",
+      "input": "Dick Butkus",
+      "target": "football",
+      "pred": " Dick Butkus (1943"
+    },
+    "english-french": {
+      "task": "english-french",
+      "method": "pair_last1",
+      "input": "wednesday",
+      "target": "mercredi",
+      "pred": " Wednesday is the third day of the week"
+    }
+  },
+  "per_task": {
+    "antonym": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.04,
+        "target_occurrence": 0.04
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.56,
+        "target_occurrence": 0.56
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.46,
+        "target_occurrence": 0.48
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.32,
+        "target_occurrence": 0.36
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.02
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.04,
+        "target_occurrence": 0.06
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.46,
+        "target_occurrence": 0.5
+      }
+    },
+    "present-past": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.04
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.94,
+        "target_occurrence": 0.94
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.02
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.0
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.02
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.02
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.02
+      }
+    },
+    "country-capital": {
+      "zero_shot": {
+        "n": 49,
+        "original_prefix_score": 0.04081632653061224,
+        "target_occurrence": 0.08163265306122448
+      },
+      "icl4": {
+        "n": 49,
+        "original_prefix_score": 0.9183673469387755,
+        "target_occurrence": 0.9183673469387755
+      },
+      "pair_last1": {
+        "n": 49,
+        "original_prefix_score": 0.061224489795918366,
+        "target_occurrence": 0.16326530612244897
+      },
+      "pair_last4": {
+        "n": 49,
+        "original_prefix_score": 0.16326530612244897,
+        "target_occurrence": 0.30612244897959184
+      },
+      "pair_all_valid": {
+        "n": 49,
+        "original_prefix_score": 0.02040816326530612,
+        "target_occurrence": 0.02040816326530612
+      },
+      "single_14_last1": {
+        "n": 49,
+        "original_prefix_score": 0.02040816326530612,
+        "target_occurrence": 0.12244897959183673
+      },
+      "single_20_last1": {
+        "n": 49,
+        "original_prefix_score": 0.061224489795918366,
+        "target_occurrence": 0.061224489795918366
+      }
+    },
+    "person-sport": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.3
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.84,
+        "target_occurrence": 0.86
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.28
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.42
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.04
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.18
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.38
+      }
+    },
+    "english-french": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.0
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.7,
+        "target_occurrence": 0.7
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.0
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.08,
+        "target_occurrence": 0.08
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.04,
+        "target_occurrence": 0.04
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.0
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.0
+      }
+    },
+    "next-item": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.02
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.9,
+        "target_occurrence": 0.9
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.06,
+        "target_occurrence": 0.08
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.22,
+        "target_occurrence": 0.22
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.02
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.02,
+        "target_occurrence": 0.02
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.12,
+        "target_occurrence": 0.12
+      }
+    },
+    "choose-first-of-list": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.04,
+        "target_occurrence": 0.24
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.82,
+        "target_occurrence": 0.82
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.08,
+        "target_occurrence": 0.16
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.04,
+        "target_occurrence": 0.04
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.2,
+        "target_occurrence": 0.24
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.16
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.46,
+        "target_occurrence": 0.76
+      }
+    },
+    "animal-from-list": {
+      "zero_shot": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.3
+      },
+      "icl4": {
+        "n": 50,
+        "original_prefix_score": 0.8,
+        "target_occurrence": 0.8
+      },
+      "pair_last1": {
+        "n": 50,
+        "original_prefix_score": 0.12,
+        "target_occurrence": 0.58
+      },
+      "pair_last4": {
+        "n": 50,
+        "original_prefix_score": 0.2,
+        "target_occurrence": 0.56
+      },
+      "pair_all_valid": {
+        "n": 50,
+        "original_prefix_score": 0.3,
+        "target_occurrence": 0.72
+      },
+      "single_14_last1": {
+        "n": 50,
+        "original_prefix_score": 0.0,
+        "target_occurrence": 0.08
+      },
+      "single_20_last1": {
+        "n": 50,
+        "original_prefix_score": 0.18,
+        "target_occurrence": 0.56
+      }
+    }
+  },
+  "means": {
+    "icl4": {
+      "original_prefix_score": 0.809795918367347,
+      "target_occurrence": 0.8122959183673469
+    },
+    "pair_all_valid": {
+      "original_prefix_score": 0.07255102040816327,
+      "target_occurrence": 0.14005102040816325
+    },
+    "pair_last1": {
+      "original_prefix_score": 0.1001530612244898,
+      "target_occurrence": 0.2204081632653061
+    },
+    "pair_last4": {
+      "original_prefix_score": 0.12790816326530613,
+      "target_occurrence": 0.248265306122449
+    },
+    "single_14_last1": {
+      "original_prefix_score": 0.012551020408163265,
+      "target_occurrence": 0.08030612244897958
+    },
+    "single_20_last1": {
+      "original_prefix_score": 0.1626530612244898,
+      "target_occurrence": 0.3001530612244898
+    },
+    "zero_shot": {
+      "original_prefix_score": 0.02010204081632653,
+      "target_occurrence": 0.12770408163265307
+    }
+  }
+}

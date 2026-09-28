@@ -1,0 +1,299 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\R}{\mathbb R}
+\title{CASS: Corrected Support Conditions and Operator Geometry}
+\author{Technical companion to the author responses}
+\date{27 September 2026}
+\begin{document}
+\maketitle
+
+This companion gives complete proofs for the weighted objective and the actual
+hybrid intervention. It distinguishes the submitted operator from the additional
+contextual variant. These are conditional mathematical statements; the empirical
+comparison of operators and the geometry checks are separate evidence.
+
+\section{The weighted support condition}
+
+Let $U_t\in\R^{d\times r_t}$ have orthonormal columns, let
+$A=[U_1\ \cdots\ U_T]$, and write the implemented objective as
+\begin{equation}\label{eq:objective}
+ \min_c\ \frac12\norm{z-Ac}_2^2+\lambda\sum_{t=1}^T q_t\norm{c_t}_2,
+ \qquad q_t=\sqrt{r_t}>0.
+\end{equation}
+Orthonormality holds within a block; distinct blocks need not be orthogonal.
+In the multi-layer construction, the joint blocks are block diagonal and $r_t$
+is their total number of columns.
+
+\paragraph{Why the weights matter.}
+An independently constructed counterexample makes the missing condition
+explicit. In $\R^5$, set
+\[
+ U_1=[e_1,e_2,e_3,e_4],\qquad U_2=0.6e_1+0.8e_5,
+ \qquad z=1.01e_1,\quad\lambda=0.01.
+\]
+The true support is $S=\{1\}$, with coefficient $(1,0,0,0)$ and noise
+$0.01e_1$. Maximum block coherence is $0.6$, so the unweighted condition
+$|S|<(1+1/0.6)/2$ holds. However, $q_1=2$ and $q_2=1$. The optimum restricted
+to $S$ is $(0.99,0,0,0)$ and has residual $0.02e_1$. Thus
+\[
+ \norm{U_2^\top(z-U_1\widetilde c_1)}_2=0.012>\lambda q_2=0.01.
+\]
+The inactive-block KKT condition fails. The full optimum has nonzero second
+block (numerically, $\widehat c_{1,1}=0.988125$ and $\widehat c_2=0.003125$).
+The same failure occurs for every positive $\lambda<(1+\epsilon)/2$ when
+$z=(1+\epsilon)e_1$: changing only a constant relating $\lambda$ to small
+noise does not repair the missing weights.
+
+\newpage
+\begin{proposition}[Weighted deterministic support bound]\label{prop:weighted}
+Suppose $z=A_Sc_S^0+e$, $\norm{e}_2\leq\epsilon$, and $A_S$ has full column
+rank. Define
+\begin{align*}
+ G&=A_S^\top A_S,& P&=A_SG^{-1}A_S^\top,\\
+ W_S&=\operatorname{blockdiag}(q_tI_{r_t}:t\in S),\\
+ \theta_S&=\max_{j\notin S}\frac1{q_j}
+   \sup_{\max_{t\in S}\norm{v_t}_2\leq1}
+     \norm{U_j^\top A_SG^{-1}W_Sv}_2,\\
+ \eta_S(e)&=\max_{j\notin S}\frac{\norm{U_j^\top(I-P)e}_2}{q_j}.
+\end{align*}
+If $\theta_S<1$ and $\lambda>\eta_S(e)/(1-\theta_S)$, the unique optimum of
+\eqref{eq:objective} has support contained in $S$, and
+\begin{equation}\label{eq:error}
+ \norm{\widehat c_S-c_S^0}_2
+ \leq \frac{\epsilon}{\sigma_{\min}(A_S)}
+ +\frac{\lambda\sqrt{\sum_{t\in S}q_t^2}}{\sigma_{\min}(A_S)^2}.
+\end{equation}
+Exact support follows if every true block norm exceeds the right side of
+\eqref{eq:error}. An $O(\epsilon)$ error conclusion additionally requires
+$\lambda=O(\epsilon)$ for a fixed dictionary.
+\end{proposition}
+
+\begin{proof}
+Let $\widetilde c$ minimize the objective restricted to $S$. Full column rank
+makes the restricted objective strictly convex, so its minimizer is unique.
+The active KKT equations give a block subgradient $v$, with
+$\norm{v_t}_2\leq1$, such that
+\[
+ G(\widetilde c-c_S^0)=A_S^\top e-\lambda W_Sv.
+\]
+Its residual therefore satisfies
+\[
+ r=z-A_S\widetilde c=(I-P)e+\lambda A_SG^{-1}W_Sv.
+\]
+For every $j\notin S$,
+\[
+ \frac{\norm{U_j^\top r}_2}{q_j}
+ \leq\eta_S(e)+\lambda\theta_S<\lambda.
+\]
+These strict inactive inequalities, together with the restricted KKT equations,
+show that extending $\widetilde c$ by zeros gives a global optimum.
+
+All optima have the same fitted value: otherwise strict convexity of squared
+loss in the fitted value, together with convexity of the penalty, would make
+their midpoint strictly better. Hence all optima have the same residual.
+A nonzero inactive block would require equality
+$\norm{U_j^\top r}_2=\lambda q_j$, contradicting the strict inequalities.
+All optima are thus zero outside $S$, and full column rank gives uniqueness.
+Finally,
+\[
+ \norm{G^{-1}A_S^\top}_2=\sigma_{\min}(A_S)^{-1},\qquad
+ \norm{G^{-1}}_2=\sigma_{\min}(A_S)^{-2},\qquad
+ \norm{W_Sv}_2\leq\sqrt{\sum_{t\in S}q_t^2}
+\]
+prove \eqref{eq:error}. Each block error is bounded by the total coefficient
+error, giving the stated sufficient minimum-amplitude condition.
+\end{proof}
+
+This is a finite KKT argument for an established weighted group-selection
+condition, not a claim of new general sparse-recovery theory; see
+\href{https://www.jmlr.org/papers/v9/bach08b.html}{Bach (2008), Section 2.8}.
+The support-capped finite-iteration solver is not automatically certified to use
+a noise-calibrated $\lambda$ satisfying Proposition~\ref{prop:weighted}.
+
+\begin{corollary}[A conservative maximum-coherence condition]
+Let $s=|S|$, $\mu=\max_{j\ne t}\norm{U_j^\top U_t}_2$, and
+$R_S=\max_{t\in S}q_t/\min_{j\notin S}q_j$. If $(s-1)\mu<1$, then
+\[
+ \theta_S\leq\frac{s\mu R_S}{1-(s-1)\mu}.
+\]
+Consequently $\mu<1/(sR_S+s-1)$ implies $\theta_S<1$.
+\end{corollary}
+
+\begin{proof}
+In the block maximum norm, $\norm{G-I}\leq(s-1)\mu$. The Neumann series bounds
+$\norm{G^{-1}}\leq[1-(s-1)\mu]^{-1}$. Moreover,
+$\norm{W_Sv}_{\mathrm{block},\infty}\leq\max_{t\in S}q_t$, while the
+off-support block row $U_j^\top A_S$ has induced norm at most $s\mu$.
+Combining these bounds and dividing by $q_j$ proves the result.
+\end{proof}
+
+Replacing $R_S$ by the global maximum-to-minimum weight ratio gives a
+support-independent condition. Equal ranks recover $\mu<1/(2s-1)$.
+Also $\eta_S(e)\leq\epsilon/\min_{j\notin S}q_j$. A median coherence cannot
+replace the maximum. For joint block-diagonal dictionaries, each pair's joint
+coherence is the maximum of its layerwise coherences.
+
+\section{Non-vacuity on the submitted dictionaries}
+
+We recomputed the five full dictionaries and all 160 LOTO dictionaries.
+The table gives full-dictionary values. ``None'' means the conservative global
+weighted corollary certifies no nonempty support, not that recovery is impossible.
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Dictionary & Maximum $\mu$ & Global weighted $s$ & Eligible two-block sets\\
+\midrule
+Llama-3.1-8B &0.994555 &None &10\\
+Llama-3.2-3B &0.992069 &1 &1\\
+Gemma-2-2B &0.988240 &None &1\\
+Qwen3-4B &0.993710 &1 &2\\
+Qwen2.5-3B &0.993471 &1 &0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The final column checks all $\binom{32}{2}=496$ supports in each dictionary
+using a sharper bound for $\theta_S$. For $S=\{s_1,s_2\}$ and $j\notin S$,
+write
+\[
+ [M_1\ M_2]=q_j^{-1}U_j^\top A_SG^{-1}W_S.
+\]
+Duality and weighted Cauchy--Schwarz give, for any $t\in(0,1)$,
+\begin{align*}
+ \sup_{\norm{v_1},\norm{v_2}\leq1}\norm{M_1v_1+M_2v_2}_2
+ &=\max_{\norm{u}_2=1}\big(\norm{M_1^\top u}_2+\norm{M_2^\top u}_2\big)\\
+ &\leq\sqrt{\lambda_{\max}\!\left(
+          \frac{M_1M_1^\top}{t}+\frac{M_2M_2^\top}{1-t}\right)}.
+\end{align*}
+Taking the minimum of evaluated upper bounds remains an upper bound; numerical
+scalar optimization need not find the exact supremum for this reasoning.
+The maximum bound over inactive blocks, plus a $10^{-6}$ numerical margin,
+determines eligibility. Llama-3.1's park-country/word-length pair has bound
+$0.9417937318$ before this margin and minimum Gram eigenvalue $0.6363702$.
+None of the Llama-3.1 Compound constituent pairs is eligible. Gemma's
+country-capital/word-length pair has bound $0.9978110662$.
+
+These geometric conditions do not establish the representation, noise,
+regularization or minimum-amplitude assumptions for observed task signatures.
+As implementation checks, three planted coefficient/noise instances for each of
+the 14 eligible pairs (42 total) recover their support and obey the coefficient
+bound under an explicitly admissible $\lambda$. They use the weighted objective
+at that prescribed $\lambda$, not the deployment support-cap selection rule.
+
+\section{A direct bound for the submitted hybrid}
+
+Fix the same hidden state $h$ in two interventions, a gain $\gamma\geq0$, a
+coefficient $\beta\geq0$, and $\eta>0$. For an orthogonal projector $P$,
+anchor $\mu$, direction $d$ and gate $g\in[0,1]$, the submitted operator is
+\begin{align*}
+ \alpha&=\min\!\left(1,\frac{\beta\norm{(I-P)(h-\mu)}_2}{\norm h_2+\eta}\right),\\
+ F(h)&=h+\gamma(1-g+g\alpha)d+g\alpha P(\mu-h).
+\end{align*}
+Let starred quantities define a reference operator at the same $h$, and write
+$\delta_d=\norm{d-d^*}_2$, $\delta_\mu=\norm{\mu-\mu^*}_2$,
+$\delta_P=\norm{P-P^*}_2$, $\delta_g=|g-g^*|$,
+$R=\norm{\mu^*-h}_2$, $B=\delta_\mu+R\delta_P$, and
+$L_\alpha=\beta/(\norm h_2+\eta)$.
+\begin{proposition}[Fixed-state hybrid perturbation]
+\begin{equation}\label{eq:hybrid}
+ \norm{F(h)-F^*(h)}_2\leq
+ \gamma\delta_d+B+(\gamma\norm{d^*}_2+R)
+                    (\delta_g+L_\alpha B).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Set $v=P(\mu-h)$ and $v^*=P^*(\mu^*-h)$. Projector norms are at most one, so
+$\norm{v-v^*}_2\leq B$ and $\norm{v^*}_2\leq R$. The same decomposition
+bounds the difference of $(I-P)(h-\mu)$ and its reference by $B$.
+Norm and scalar clipping are 1-Lipschitz; therefore
+$|\alpha-\alpha^*|\leq L_\alpha B$. Both $g\alpha$ and $1-g+g\alpha$
+lie in $[0,1]$, and each changes by at most
+$\delta_g+|\alpha-\alpha^*|$. Bounding the direction and correction terms
+separately yields \eqref{eq:hybrid}.
+\end{proof}
+
+The implementation uses a shared gate in stacked layer space, whose stacked
+anchor $\bar\mu$ differs from the individual layer's anchor. For
+\[
+ g=\max\!\left(0,\frac{z^\top\bar\mu}
+                  {\norm z_2\norm{\bar\mu}_2+\epsilon_g}\right),
+ \qquad\epsilon_g\geq0,
+\]
+if both compared $z$ norms are at least $a>0$ and both anchor norms at least
+$b>0$, then
+\[
+ \delta_g\leq\min\!\left(1,
+      2\norm{z-z^*}_2/a+2\norm{\bar\mu-\bar\mu^*}_2/b\right).
+\]
+Change $z$ with $\bar\mu$ fixed, then $\bar\mu$ with $z$ fixed. In each
+step the normalized map is $v/(\norm v_2+c)$ for a fixed $c\geq0$, and its
+two-endpoint difference is at most $2\norm{v-v^*}_2/\min(\norm v_2,\norm{v^*}_2)$.
+The positive-part map is 1-Lipschitz. This proves the stated gate bound,
+including numerical denominator regularization.
+
+For a fixed-context score whose gradient norm is at most $K$ along the segment
+joining $F(h)$ and $F^*(h)$, the score difference is at most $K$ times
+\eqref{eq:hybrid}. Norm-threshold routing at $\tau$ is unchanged whenever
+$\norm{z-z^*}_2<|\norm{z^*}_2-\tau|$. These are explicit smooth-score and
+routing-margin conditions, not an unconditional generation bound.
+
+\section{Geometry of the additional contextual operator}
+
+The development-selected contextual variant has the different update
+\[
+ F(h)=h+\gamma d+aP(\mu-h-\gamma d),\qquad a=cg\in[0,1].
+\]
+Here $P$ is the selected-span projector, $\mu$ the weighted positive-context
+anchor, and $d$ the direction from the demonstrations. The uncertainty coefficient
+$c$ and cosine gate $g$ are fixed after task adaptation. Set $b=h+\gamma d$. Then
+\[
+ (I-P)F(h)=(I-P)b,\qquad PF(h)=(1-a)Pb+aP\mu.
+\]
+Thus the component orthogonal to the selected span is preserved exactly, and
+the selected component interpolates toward a composed contextual anchor.
+For a fixed task operator,
+\begin{align*}
+ \norm{F(h)-F(h')}_2^2
+ &=\norm{(I-P)(h-h')}_2^2+(1-a)^2\norm{P(h-h')}_2^2\\
+ &\leq\norm{h-h'}_2^2.
+\end{align*}
+This follows from $P^2=P$ and orthogonality of projected and complementary
+components. For two fixed operators, put
+$R=\norm{\mu^*-h-\gamma d^*}_2$. Changing direction first, then anchor,
+then the coefficient/projector gives
+\[
+ \norm{F(h)-F^*(h)}_2\leq
+ \gamma\delta_d+\delta_\mu+R(\delta_P+\delta_a).
+\]
+The first change uses $\norm{I-aP}_2\leq1$, the second uses
+$\norm{aP}_2\leq1$, and the third uses
+$\norm{aP-a^*P^*}_2\leq\delta_P+\delta_a$.
+
+The further weighted-skill correction uses
+$M=\sum_t w_tP_t$, $b_\mu=\sum_t w_tP_t\mu_t$, with $w_t\geq0$ and
+$\sum_tw_t=1$, and applies
+\[
+ F(h)=h+\gamma d+a\{b_\mu-M(h+\gamma d)\}.
+\]
+Since $0\preceq M\preceq I$ and $a\in[0,1]$,
+$\norm{I-aM}_2\leq1$: this fixed-state map is also nonexpansive.
+Rank-truncated weighted bases instead produce an orthogonal projector and
+obey the preceding projector argument. These facts explain what is composed;
+they do not assert sequential execution of named skills, nonexpansiveness of
+the subsequent transformer, or an increase in greedy exact-match accuracy.
+
+\paragraph{Reproduction.}
+The machine-readable evidence includes the original coherence audit, all
+support-specific bounds, 42 planted recovery checks, 1,200 submitted-hybrid
+perturbation checks, 1,000 contextual-geometry checks, and 480 weighted/rank
+nonexpansion checks. The last group also includes 120 explicit weighted-sum
+identity checks. These are numerical implementation checks rather than substitutes
+for the proofs above. All scripts, settings and raw results remain in the
+separate rebuttal and optimization directories.
+\end{document}

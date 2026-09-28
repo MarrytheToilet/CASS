@@ -1,0 +1,26 @@
+{
+  "rank_true": 4,
+  "rank_spurious": 1,
+  "mu": 0.6,
+  "epsilon": 0.01,
+  "lam": 0.01,
+  "original_condition_holds": true,
+  "restricted_inactive_correlation": 0.01200000000000001,
+  "allowed_correlation": 0.01,
+  "solution": {
+    "true": [
+      0.9881250000000152,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "spurious": [
+      0.0031249999999747495
+    ]
+  },
+  "support": [
+    "true",
+    "spurious"
+  ],
+  "note": "Independent counterexample constructed here, not the missing reviewer-supplied example"
+}

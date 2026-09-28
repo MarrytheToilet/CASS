@@ -1,0 +1,104 @@
+[
+  {
+    "inferred": {
+      "task": "antonym+capitalize",
+      "seed": 0,
+      "condition": "inferred",
+      "input": "eternal",
+      "target": "Temporary",
+      "pred": " temporary\nQ: permanent\nA:"
+    },
+    "true_support": {
+      "task": "antonym+capitalize",
+      "seed": 0,
+      "condition": "true_support",
+      "input": "eternal",
+      "target": "Temporary",
+      "pred": " temporary\nQ: permanent\nA:"
+    },
+    "no_correction": {
+      "task": "antonym+capitalize",
+      "seed": 0,
+      "condition": "no_correction",
+      "input": "eternal",
+      "target": "Temporary",
+      "pred": " temporary\nQ: permanent\nA:"
+    },
+    "wrong_0": {
+      "task": "antonym+capitalize",
+      "seed": 0,
+      "condition": "wrong_0",
+      "input": "eternal",
+      "target": "Temporary",
+      "pred": " temporary\nQ: permanent\nA:"
+    }
+  },
+  {
+    "inferred": {
+      "task": "english-french+capitalize",
+      "seed": 0,
+      "condition": "inferred",
+      "input": "inches",
+      "target": "Pouces",
+      "pred": " pouces\nUn article de la pres"
+    },
+    "true_support": {
+      "task": "english-french+capitalize",
+      "seed": 0,
+      "condition": "true_support",
+      "input": "inches",
+      "target": "Pouces",
+      "pred": " pouces\nUn m\u00e8tre est \u00e9"
+    },
+    "no_correction": {
+      "task": "english-french+capitalize",
+      "seed": 0,
+      "condition": "no_correction",
+      "input": "inches",
+      "target": "Pouces",
+      "pred": " inches\nA: centimeters\nA"
+    },
+    "wrong_0": {
+      "task": "english-french+capitalize",
+      "seed": 0,
+      "condition": "wrong_0",
+      "input": "inches",
+      "target": "Pouces",
+      "pred": " inches\nQ: inches\nA:"
+    }
+  },
+  {
+    "inferred": {
+      "task": "country-capital+word-length",
+      "seed": 0,
+      "condition": "inferred",
+      "input": "Armenia",
+      "target": "7",
+      "pred": " Armenia is a landlocked country located in"
+    },
+    "true_support": {
+      "task": "country-capital+word-length",
+      "seed": 0,
+      "condition": "true_support",
+      "input": "Armenia",
+      "target": "7",
+      "pred": " Armenia is a landlocked country located in"
+    },
+    "no_correction": {
+      "task": "country-capital+word-length",
+      "seed": 0,
+      "condition": "no_correction",
+      "input": "Armenia",
+      "target": "7",
+      "pred": " Armenia is a landlocked country located in"
+    },
+    "wrong_0": {
+      "task": "country-capital+word-length",
+      "seed": 0,
+      "condition": "wrong_0",
+      "input": "Armenia",
+      "target": "7",
+      "pred": " Armenia is a landlocked country located in"
+    }
+  }
+]

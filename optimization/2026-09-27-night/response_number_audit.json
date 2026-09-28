@@ -1,0 +1,830 @@
+{
+  "n_checks": 134,
+  "checks": [
+    {
+      "reviewer": "BiuA",
+      "claim": "loto original identical-route table",
+      "verified_text": "| LOTO32 | 0.4575 | 0.4210 | +3.65 [0.65, 7.27] |",
+      "source": "matched_results.json / loto/fixed_original_route"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "novel original identical-route table",
+      "verified_text": "| Novel15 | 0.4952 | 0.4348 | +6.04 [-0.53, 13.47] |",
+      "source": "matched_results.json / novel/fixed_original_route"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "heldout_known four-example steering table",
+      "verified_text": "| Non-development LOTO20 | 0.3135 | 0.5022 | 0.4872 | 0.6456 |",
+      "source": "live_summary.json / llama_confirm and extension_confirm/heldout_known"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "heldout_known four-example steering table",
+      "verified_text": "| Non-development LOTO20 | 0.3135 | 0.5022 | 0.4872 | 0.6456 |",
+      "source": "live_summary.json / llama_confirm and extension_confirm/heldout_known"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "heldout_known contextual correction gain",
+      "verified_text": "+1.50 [0.03, 3.03]",
+      "source": "live_summary.json / extension_confirm/heldout_known/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "heldout_known contextual correction gain",
+      "verified_text": "+1.50 [0.03, 3.03]",
+      "source": "live_summary.json / extension_confirm/heldout_known/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "heldout_known contextual correction gain",
+      "verified_text": "+1.50 [0.03, 3.03]",
+      "source": "live_summary.json / extension_confirm/heldout_known/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "heldout_known contextual correction gain",
+      "verified_text": "+1.50 [0.03, 3.03]",
+      "source": "live_summary.json / extension_confirm/heldout_known/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "RESULTS_zh",
+      "claim": "heldout_known author overview table",
+      "verified_text": "| \u975e\u5f00\u53d1 LOTO20 | 0.3135 | 0.5022 | 0.3213 | 0.5050 |",
+      "source": "live_summary.json / llama_confirm, extension_confirm, extension_fresh/heldout_known"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "novel four-example steering table",
+      "verified_text": "| Novel15 | 0.3770 | 0.6555 | 0.6290 | 0.8480 |",
+      "source": "live_summary.json / llama_confirm and extension_confirm/novel"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "novel four-example steering table",
+      "verified_text": "| Novel15 | 0.3770 | 0.6555 | 0.6290 | 0.8480 |",
+      "source": "live_summary.json / llama_confirm and extension_confirm/novel"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "novel contextual correction gain",
+      "verified_text": "+2.65 [0.57, 5.29]",
+      "source": "live_summary.json / extension_confirm/novel/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "novel contextual correction gain",
+      "verified_text": "+2.65 [0.57, 5.29]",
+      "source": "live_summary.json / extension_confirm/novel/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "novel contextual correction gain",
+      "verified_text": "+2.65 [0.57, 5.29]",
+      "source": "live_summary.json / extension_confirm/novel/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "novel contextual correction gain",
+      "verified_text": "+2.65 [0.57, 5.29]",
+      "source": "live_summary.json / extension_confirm/novel/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "RESULTS_zh",
+      "claim": "novel author overview table",
+      "verified_text": "| Novel15 | 0.3770 | 0.6555 | 0.3769 | 0.6458 |",
+      "source": "live_summary.json / llama_confirm, extension_confirm, extension_fresh/novel"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "compound four-example steering table",
+      "verified_text": "| Compound10 | 0.1438 | 0.4694 | 0.4544 | 0.5570 |",
+      "source": "live_summary.json / llama_confirm and extension_confirm/compound"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "compound four-example steering table",
+      "verified_text": "| Compound10 | 0.1438 | 0.4694 | 0.4544 | 0.5570 |",
+      "source": "live_summary.json / llama_confirm and extension_confirm/compound"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "compound contextual correction gain",
+      "verified_text": "+1.50 [0.40, 2.67]",
+      "source": "live_summary.json / extension_confirm/compound/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "compound contextual correction gain",
+      "verified_text": "+1.50 [0.40, 2.67]",
+      "source": "live_summary.json / extension_confirm/compound/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "compound contextual correction gain",
+      "verified_text": "+1.50 [0.40, 2.67]",
+      "source": "live_summary.json / extension_confirm/compound/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "compound contextual correction gain",
+      "verified_text": "+1.50 [0.40, 2.67]",
+      "source": "live_summary.json / extension_confirm/compound/combined__combined_no_correction"
+    },
+    {
+      "reviewer": "RESULTS_zh",
+      "claim": "compound author overview table",
+      "verified_text": "| Compound10 | 0.1438 | 0.4694 | 0.1400 | 0.4640 |",
+      "source": "live_summary.json / llama_confirm, extension_confirm, extension_fresh/compound"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "contextual full and off triples",
+      "verified_text": "0.5022/0.6555/0.4694",
+      "source": "live_summary.json / extension_confirm"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "contextual off triple",
+      "verified_text": "0.4872/0.6290/0.4544",
+      "source": "live_summary.json / extension_confirm"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "additional-query means",
+      "verified_text": "0.5050/0.6458/0.4640",
+      "source": "live_summary.json / extension_fresh"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "heldout_known fresh prefix gain",
+      "verified_text": "+1.83 [0.57, 3.40]",
+      "source": "live_summary.json / extension_fresh/heldout_known"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "heldout_known fresh literal gain",
+      "verified_text": "+1.73 [0.60, 3.17]",
+      "source": "metric_robustness.json / extension_fresh/heldout_known/task_case_literal_line"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "novel fresh prefix gain",
+      "verified_text": "+2.49 [0.71, 4.67]",
+      "source": "live_summary.json / extension_fresh/novel"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "novel fresh literal gain",
+      "verified_text": "+2.58 [0.71, 4.89]",
+      "source": "metric_robustness.json / extension_fresh/novel/task_case_literal_line"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "compound fresh prefix gain",
+      "verified_text": "+0.53 [-0.27, 1.27]",
+      "source": "live_summary.json / extension_fresh/compound"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "compound fresh literal gain",
+      "verified_text": "+1.40 [0.40, 2.40]",
+      "source": "metric_robustness.json / extension_fresh/compound/task_case_literal_line"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "unrouted compound support table",
+      "verified_text": "| Steering on every task | 0.1477 | 0.1607 | 0.1311 |",
+      "source": "fresh_compound_summary.json / unrouted"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "fixed_route compound support table",
+      "verified_text": "| Submitted route, identical replacements | 0.2856 | 0.2976 | 0.2696 |",
+      "source": "fresh_compound_summary.json / fixed_route"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "unrouted wrong-support interval",
+      "verified_text": "[0.58, 9.72]",
+      "source": "fresh_compound_summary.json / paired_differences/unrouted/inferred minus wrong_matched"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "unrouted wrong-support interval",
+      "verified_text": "[0.58, 9.72]",
+      "source": "fresh_compound_summary.json / paired_differences/unrouted/inferred minus wrong_matched"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "fixed_route wrong-support interval",
+      "verified_text": "[0.00, 9.39]",
+      "source": "fresh_compound_summary.json / paired_differences/fixed_route/inferred minus wrong_matched"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "fixed_route wrong-support interval",
+      "verified_text": "[0.00, 9.39]",
+      "source": "fresh_compound_summary.json / paired_differences/fixed_route/inferred minus wrong_matched"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "new compound inferred",
+      "verified_text": "0.4694",
+      "source": "support_controls_summary.json / means/inferred"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "new compound inferred",
+      "verified_text": "0.4694",
+      "source": "support_controls_summary.json / means/inferred"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "new compound no_correction",
+      "verified_text": "0.4544",
+      "source": "support_controls_summary.json / means/no_correction"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "new compound no_correction",
+      "verified_text": "0.4544",
+      "source": "support_controls_summary.json / means/no_correction"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "new compound true_support",
+      "verified_text": "0.4614",
+      "source": "support_controls_summary.json / means/true_support"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "new compound true_support",
+      "verified_text": "0.4614",
+      "source": "support_controls_summary.json / means/true_support"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "llama31-8b maximum coherence",
+      "verified_text": "0.9946",
+      "source": "coherence_results.json / llama31-8b/full/max_joint"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "llama32-3b maximum coherence",
+      "verified_text": "0.9921",
+      "source": "coherence_results.json / llama32-3b/full/max_joint"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "gemma2-2b maximum coherence",
+      "verified_text": "0.9882",
+      "source": "coherence_results.json / gemma2-2b/full/max_joint"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "qwen3-4b maximum coherence",
+      "verified_text": "0.9937",
+      "source": "coherence_results.json / qwen3-4b/full/max_joint"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "qwen25-3b maximum coherence",
+      "verified_text": "0.9935",
+      "source": "coherence_results.json / qwen25-3b/full/max_joint"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known/best_correction",
+      "verified_text": "0.3864",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/best_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 heldout_known/best_correction",
+      "verified_text": "0.3864",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/best_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known/matched_no_correction",
+      "verified_text": "0.3841",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/matched_no_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 heldout_known/matched_no_correction",
+      "verified_text": "0.3841",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/matched_no_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known/plain_original",
+      "verified_text": "0.0740",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/plain_original"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 heldout_known/plain_original",
+      "verified_text": "0.0740",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known/icl4",
+      "verified_text": "0.5451",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/icl4"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 heldout_known/icl4",
+      "verified_text": "0.5451",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known gain over original",
+      "verified_text": "+31.24 [21.19, 42.23]",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/heldout_known/best_correction__plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known/task_case_full_line",
+      "verified_text": "0.2610",
+      "source": "metric_robustness.json / qwen3-4b_contrast_confirm/heldout_known/task_case_full_line"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 heldout_known/task_case_literal_line",
+      "verified_text": "0.2137",
+      "source": "metric_robustness.json / qwen3-4b_contrast_confirm/heldout_known/task_case_literal_line"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel/best_correction",
+      "verified_text": "0.4461",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/best_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 novel/best_correction",
+      "verified_text": "0.4461",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/best_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel/matched_no_correction",
+      "verified_text": "0.4360",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/matched_no_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 novel/matched_no_correction",
+      "verified_text": "0.4360",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/matched_no_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel/plain_original",
+      "verified_text": "0.0495",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/plain_original"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 novel/plain_original",
+      "verified_text": "0.0495",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel/icl4",
+      "verified_text": "0.7039",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/icl4"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 novel/icl4",
+      "verified_text": "0.7039",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel gain over original",
+      "verified_text": "+39.66 [28.01, 52.04]",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/novel/best_correction__plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel/task_case_full_line",
+      "verified_text": "0.4181",
+      "source": "metric_robustness.json / qwen3-4b_contrast_confirm/novel/task_case_full_line"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 novel/task_case_literal_line",
+      "verified_text": "0.4114",
+      "source": "metric_robustness.json / qwen3-4b_contrast_confirm/novel/task_case_literal_line"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound/best_correction",
+      "verified_text": "0.4357",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/best_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 compound/best_correction",
+      "verified_text": "0.4357",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/best_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound/matched_no_correction",
+      "verified_text": "0.3994",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/matched_no_correction"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 compound/matched_no_correction",
+      "verified_text": "0.3994",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/matched_no_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound/plain_original",
+      "verified_text": "0.0050",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/plain_original"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 compound/plain_original",
+      "verified_text": "0.0050",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound/icl4",
+      "verified_text": "0.5047",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/icl4"
+    },
+    {
+      "reviewer": "cajh_compact",
+      "claim": "Qwen3 compound/icl4",
+      "verified_text": "0.5047",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound gain over original",
+      "verified_text": "+43.07 [23.00, 63.87]",
+      "source": "live_summary.json / qwen3-4b_contrast_confirm/compound/best_correction__plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound/task_case_full_line",
+      "verified_text": "0.3791",
+      "source": "metric_robustness.json / qwen3-4b_contrast_confirm/compound/task_case_full_line"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen3 compound/task_case_literal_line",
+      "verified_text": "0.1656",
+      "source": "metric_robustness.json / qwen3-4b_contrast_confirm/compound/task_case_literal_line"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 heldout_known/best_correction",
+      "verified_text": "0.3464",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/heldout_known/means/best_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 heldout_known/best_overall",
+      "verified_text": "0.3630",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/heldout_known/means/best_overall"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 heldout_known/plain_original",
+      "verified_text": "0.0223",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/heldout_known/means/plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 heldout_known gain over original",
+      "verified_text": "+32.40 [23.14, 41.97]",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/heldout_known/best_correction__plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "qwen3-4b heldout_known additional-query accuracy",
+      "verified_text": "0.3830",
+      "source": "live_summary.json / qwen3-4b_contrast_fresh/heldout_known"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "qwen25-3b heldout_known additional-query accuracy",
+      "verified_text": "0.3323",
+      "source": "live_summary.json / qwen25-3b_contrast_fresh/heldout_known"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 novel/best_correction",
+      "verified_text": "0.3519",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/novel/means/best_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 novel/best_overall",
+      "verified_text": "0.3814",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/novel/means/best_overall"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 novel/plain_original",
+      "verified_text": "0.0161",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/novel/means/plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 novel gain over original",
+      "verified_text": "+33.58 [21.01, 47.63]",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/novel/best_correction__plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "qwen3-4b novel additional-query accuracy",
+      "verified_text": "0.4258",
+      "source": "live_summary.json / qwen3-4b_contrast_fresh/novel"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "qwen25-3b novel additional-query accuracy",
+      "verified_text": "0.3644",
+      "source": "live_summary.json / qwen25-3b_contrast_fresh/novel"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 compound/best_correction",
+      "verified_text": "0.2296",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/compound/means/best_correction"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 compound/best_overall",
+      "verified_text": "0.2900",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/compound/means/best_overall"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 compound/plain_original",
+      "verified_text": "0.0027",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/compound/means/plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "Qwen2.5 compound gain over original",
+      "verified_text": "+22.70 [6.30, 41.40]",
+      "source": "live_summary.json / qwen25-3b_contrast_confirm/compound/best_correction__plain_original"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "qwen3-4b compound additional-query accuracy",
+      "verified_text": "0.4240",
+      "source": "live_summary.json / qwen3-4b_contrast_fresh/compound"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "qwen25-3b compound additional-query accuracy",
+      "verified_text": "0.2313",
+      "source": "live_summary.json / qwen25-3b_contrast_fresh/compound"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "classification_accuracy/combined",
+      "verified_text": "0.7211",
+      "source": "broader_analysis.json / families/classification_accuracy/means/combined"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "classification_accuracy/original_cass",
+      "verified_text": "0.2578",
+      "source": "broader_analysis.json / families/classification_accuracy/means/original_cass"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "classification_accuracy/icl4",
+      "verified_text": "0.7956",
+      "source": "broader_analysis.json / families/classification_accuracy/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "entity_token_f1/combined",
+      "verified_text": "0.5735",
+      "source": "broader_analysis.json / families/entity_token_f1/means/combined"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "entity_token_f1/original_cass",
+      "verified_text": "0.1956",
+      "source": "broader_analysis.json / families/entity_token_f1/means/original_cass"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "entity_token_f1/icl4",
+      "verified_text": "0.8613",
+      "source": "broader_analysis.json / families/entity_token_f1/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "reading_token_f1/combined",
+      "verified_text": "0.8870",
+      "source": "broader_analysis.json / families/reading_token_f1/means/combined"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "reading_token_f1/original_cass",
+      "verified_text": "0.8102",
+      "source": "broader_analysis.json / families/reading_token_f1/means/original_cass"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "reading_token_f1/icl4",
+      "verified_text": "0.9295",
+      "source": "broader_analysis.json / families/reading_token_f1/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "long_structured_whole_answer/combined",
+      "verified_text": "0.3037",
+      "source": "broader_analysis.json / families/long_structured_whole_answer/means/combined"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "long_structured_whole_answer/original_cass",
+      "verified_text": "0.1278",
+      "source": "broader_analysis.json / families/long_structured_whole_answer/means/original_cass"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "long_structured_whole_answer/icl4",
+      "verified_text": "0.6704",
+      "source": "broader_analysis.json / families/long_structured_whole_answer/means/icl4"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "code_expression_execution/oneshot",
+      "verified_text": "0.9319",
+      "source": "broader_analysis.json / families/code_expression_execution/means/oneshot"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "code_expression_execution/icl1",
+      "verified_text": "0.9500",
+      "source": "broader_analysis.json / families/code_expression_execution/means/icl1"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "code_multistep_execution/oneshot",
+      "verified_text": "0.5241",
+      "source": "broader_analysis.json / families/code_multistep_execution/means/oneshot"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "code_multistep_execution/icl1",
+      "verified_text": "0.8759",
+      "source": "broader_analysis.json / families/code_multistep_execution/means/icl1"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "all-seven-task cached throughput range",
+      "verified_text": "0.281 to 1.217",
+      "source": "broader_cached_latency_analysis.json / rows/batch_size8"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "all-seven-task warm adaptation range",
+      "verified_text": "0.240\u20131.531",
+      "source": "broader_cached_latency_analysis.json / adaptation_checks"
+    },
+    {
+      "reviewer": "DuwT",
+      "claim": "fixed-setting shared-rank curve",
+      "verified_text": "0.5328/0.6555/0.6408/0.5303",
+      "source": "live_summary.json / shared_rank_confirm/novel"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "known-task risk Brier residual",
+      "verified_text": "0.2235",
+      "source": "known_task_calibration.json / scale_eval_fixed_shared/256/full/residual"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "known-task risk Brier norm",
+      "verified_text": "0.1510",
+      "source": "known_task_calibration.json / scale_eval_fixed_shared/256/full/norm"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "known-task risk Brier constant_prior",
+      "verified_text": "0.2188",
+      "source": "known_task_calibration.json / scale_eval_fixed_shared/256/full/constant_prior"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "position-tuned dictionary-free confirm",
+      "verified_text": "0.4379/0.6487/0.3055",
+      "source": "live_summary.json / position_confirm/dictionary_free"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "position-tuned dictionary-free confirm",
+      "verified_text": "0.4379/0.6487/0.3055",
+      "source": "live_summary.json / position_confirm/dictionary_free"
+    },
+    {
+      "reviewer": "BiuA",
+      "claim": "position-tuned dictionary-free fresh",
+      "verified_text": "0.4757/0.6444/0.3180",
+      "source": "live_summary.json / position_fresh/dictionary_free"
+    },
+    {
+      "reviewer": "Bm1S",
+      "claim": "position-tuned dictionary-free fresh",
+      "verified_text": "0.4757/0.6444/0.3180",
+      "source": "live_summary.json / position_fresh/dictionary_free"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "fixed shared direction scale curve",
+      "verified_text": "0.5810/0.5877/0.5926/0.5920",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/full"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "shortlist accuracy",
+      "verified_text": "0.5918",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/256"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "full coding seconds",
+      "verified_text": "0.653",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/256"
+    },
+    {
+      "reviewer": "cajh",
+      "claim": "shortlist coding seconds",
+      "verified_text": "0.213",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/256"
+    },
+    {
+      "reviewer": "DuwT",
+      "claim": "fixed shared direction scale curve",
+      "verified_text": "0.5810/0.5877/0.5926/0.5920",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/full"
+    },
+    {
+      "reviewer": "DuwT",
+      "claim": "shortlist accuracy",
+      "verified_text": "0.5918",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/256"
+    },
+    {
+      "reviewer": "DuwT",
+      "claim": "full coding seconds",
+      "verified_text": "0.653",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/256"
+    },
+    {
+      "reviewer": "DuwT",
+      "claim": "shortlist coding seconds",
+      "verified_text": "0.213",
+      "source": "scale_context_fixed_shared_analysis.json / scaling/256"
+    }
+  ],
+  "source_sha256": {
+    "optimization/2026-09-27-night/live_summary.json": "3f845e90628d156893327d61c497fdb819e92a578bdb96abd279e2120aaa1fe1",
+    "optimization/2026-09-27-night/metric_robustness.json": "b2963621466e83b4be0dbb64d501c931660607409aa3ea5f72058a128521f8a8",
+    "rebuttal/2026-09-27/matched_results.json": "917d8b4b71932a9e754b2b0b0fb0530bbcfbd615cbe1a9a422338e460df9cc81",
+    "rebuttal/2026-09-27/fresh_compound_summary.json": "78ef5ffc5fb3cd37d22047fa513fbbef7885646d08c2db23c10a9a0bcbf8b710",
+    "optimization/2026-09-27-night/support_controls_summary.json": "b2621fbdfe70be3dbbe388922402b07b101b2472165f0abb9fa27c82fdec7a79",
+    "rebuttal/2026-09-27/coherence_results.json": "a9dd308802cec4bb7875f504cc12b8d5c9cc10f5b1a8e6980a81f18f8ef455c6",
+    "optimization/2026-09-27-night/broader_analysis.json": "b04d0d2486d07354bda27ae6fa8815c6239ba3d8e07c3734e0ab974ead1c8fdc",
+    "optimization/2026-09-27-night/scale_context_fixed_shared_analysis.json": "d351ac79ca00b9702cc702118ba4205b9cd9121e7eba33f25b21ff6395b96afe",
+    "optimization/2026-09-27-night/broader_cached_latency_analysis.json": "8819fcb6eed64e1bc8cc4038e5440d775cb5f6166afb948106a5da9833b88ee5",
+    "optimization/2026-09-27-night/known_task_calibration.json": "50767db8ef57cad46d27a04c0107e37270f21db01543e087ce04329f9e37c27d"
+  },
+  "response_sha256": {
+    "BiuA": "b39049c39010c4788f230c6cfbfaf80c3dac24fd64ce6607a18ec8381bf448ee",
+    "Bm1S": "c455ee7d9c9b6d533f5fa191bb3db4ad21f6a761a4024e4f4cdcb0f6d8ab5df5",
+    "cajh": "67bc95fc33a908cd5b5dbc95f41f4f56d285ad68f6571420d5d0ac7bfb7db198",
+    "DuwT": "d8dc417945105f9ae12c99a250b94cf1747be07947f41bdd65b3a8a972f4db8d",
+    "cajh_compact": "7abb42ae47dcb8f3b14d79d4c75047b6c7fcbb4d04068d9483da14e160da4b4e",
+    "RESULTS_zh": "01c17626fa84c55fec183ca605851a85cfbcce937e21e839c9d98d3d5d676006"
+  },
+  "scope": "Selected principal numerical claims only. Does not automate scientific interpretation, certify every numeral, or replace source-generation validation."
+}

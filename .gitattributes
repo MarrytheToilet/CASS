@@ -1,0 +1,13 @@
+# These dated artifacts have recorded SHA256 hashes. Preserve their bytes
+# across platforms instead of applying automatic line-ending conversion.
+/optimization/** -text
+/rebuttal/** -text
+
+# Python's CSV writer emits valid CRLF records; Matplotlib SVG paths contain
+# trailing spaces. Keep these generated formats without rewriting the evidence.
+/optimization/**/*.csv whitespace=cr-at-eol
+/rebuttal/**/*.csv whitespace=cr-at-eol
+/optimization/**/figures/*.svg -whitespace
+
+# Trailing spaces can encode intentional Markdown hard line breaks.
+*.md whitespace=-blank-at-eol

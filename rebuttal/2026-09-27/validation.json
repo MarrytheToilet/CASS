@@ -1,0 +1,50 @@
+{
+  "validated_utc": "2026-09-27T19:15:03.203486+00:00",
+  "completed": true,
+  "remote_physical_gpus": [
+    2,
+    3
+  ],
+  "gpus_released": true,
+  "compound_cells_checked_against_generations_and_original_queries": 270,
+  "qwen_cells_checked_against_generations": 56,
+  "positive_timing_and_board_energy_observations": 165,
+  "sha256": {
+    "matched_results.json": "917d8b4b71932a9e754b2b0b0fb0530bbcfbd615cbe1a9a422338e460df9cc81",
+    "coherence_results.json": "a9dd308802cec4bb7875f504cc12b8d5c9cc10f5b1a8e6980a81f18f8ef455c6",
+    "weighted_counterexample.json": "6f3f345b7180d8adf4f6e9336ab68e116c7e9414365134f8c72c20a6ce3af768",
+    "theory_numerical_checks.json": "eecd6574f97afadaf994953cca301034a8983cc8230a36b3ee9a0717b8e6ecf1",
+    "latency_results.json": "b4eef67d503fbbdbe99ca1954b9ab0e13de0c68b573a8fcf621409b44ee31ff0",
+    "latency_summary.json": "12b11cc538d3fba8aa13e288ced99b0f7d98d4596893949aa81086858dd85298",
+    "compound_controls.csv": "f1250bc4793a477cf4b425fbe2e9208b8ec75cf907e2a1ebfbf72792a527fc0d",
+    "compound_control_generations.jsonl": "2dd5c7dab7040c599c880b33bd9139fe17711a37ec357673980241df9de5b80d",
+    "compound_control_matching.json": "4112f4b7ec7598e2671ab9e797b4cfb6ab5ac4acc7d1ddc75bcff7b2d52fb638",
+    "fresh_compound_summary.json": "78ef5ffc5fb3cd37d22047fa513fbbef7885646d08c2db23c10a9a0bcbf8b710",
+    "fresh_compound_per_task.csv": "73cbeced9bc6e6d5a83c98283202bf40306d6683efeffec1daadddcad596e0d7",
+    "qwen_probe.csv": "9f0fb8ef5ccffeccd28b79adaf1d8562540a43be115d2a0870a665ac7efd7446",
+    "qwen_probe_generations.jsonl": "cc353ea301d7b323bbd0b2966ab3fac991e4e3d9fb529793fee151501fda7e7c",
+    "qwen_probe_summary.json": "1801ecf805a6505b9049a3586280489b359250969c63144c78ade2b6810ad729",
+    "original_model_hashes.json": "8f76563bb2a0f4d7b1a5e29a4199138aae245a9d97ede047f487d0687ca7cf9a",
+    "Llama-3.1-8B-Instruct_hash_verified.json": "40b6f1866dc2ec9ac951ee2ac65bdb56c7f17e7f6d707a589bff956f810ba52b",
+    "Qwen3-4B_hash_verified.json": "8215304a74403a817d6f904110d42105f302b38a05f4bdc217a1c198cc13a9a0"
+  },
+  "responses": {
+    "response_BiuA.md": {
+      "characters": 3969,
+      "whitespace_word_count": 530
+    },
+    "response_Bm1S.md": {
+      "characters": 4207,
+      "whitespace_word_count": 594
+    },
+    "response_DuwT.md": {
+      "characters": 4318,
+      "whitespace_word_count": 572
+    },
+    "response_cajh.md": {
+      "characters": 4426,
+      "whitespace_word_count": 679
+    }
+  },
+  "remaining_scope": "No long-form/code/tool-use or hundred-skill experiment claimed; manuscript revisions proposed, responses not posted."
+}

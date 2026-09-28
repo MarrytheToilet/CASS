@@ -1,0 +1,16 @@
+{
+  "source": "Authorized signed URLs obtained from official HF API; ranged CDN download",
+  "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "files": [
+    {
+      "name": "model-00003-of-00004.safetensors",
+      "size": 4915916176,
+      "sha256": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa"
+    },
+    {
+      "name": "model-00004-of-00004.safetensors",
+      "size": 1168138808,
+      "sha256": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b"
+    }
+  ]
+}

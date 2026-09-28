@@ -1,0 +1,161 @@
+[
+  {
+    "id": "qwen_confirm",
+    "script": "qwen_confirm.py",
+    "skip_if_exists": "qwen_confirm_done.json"
+  },
+  {
+    "id": "confirm_llama",
+    "script": "confirm_llama.py"
+  },
+  {
+    "id": "llama_variants",
+    "script": "llama_variants.py"
+  },
+  {
+    "id": "combined_dev",
+    "script": "combined_dev.py"
+  },
+  {
+    "id": "dictionary_free_dev",
+    "script": "dictionary_free_dev.py"
+  },
+  {
+    "id": "check_answer_stop",
+    "script": "check_answer_stop.py"
+  },
+  {
+    "id": "extension_confirm",
+    "script": "extension_confirm.py"
+  },
+  {
+    "id": "check_answer_stop_retry",
+    "script": "check_answer_stop.py"
+  },
+  {
+    "id": "support_controls",
+    "script": "support_controls.py"
+  },
+  {
+    "id": "dictionary_free_refine",
+    "script": "dictionary_free_refine.py"
+  },
+  {
+    "id": "dictionary_free_refined_confirm",
+    "script": "dictionary_free_confirm.py"
+  },
+  {
+    "id": "adaptive_calibration",
+    "script": "adaptive_calibration.py"
+  },
+  {
+    "id": "benchmark_optimized",
+    "script": "benchmark_optimized.py"
+  },
+  {
+    "id": "benchmark_variant",
+    "script": "benchmark_variant.py"
+  },
+  {
+    "id": "benchmark_cached_icl",
+    "script": "benchmark_cached_icl.py"
+  },
+  {
+    "id": "benchmark_serving_engine",
+    "script": "benchmark_serving_engine.py"
+  },
+  {
+    "id": "check_optimized_generation",
+    "script": "check_optimized_generation.py"
+  },
+  {
+    "id": "benchmark_answer_engine",
+    "script": "benchmark_serving_engine.py",
+    "args": [
+      "--answer-stop"
+    ]
+  },
+  {
+    "id": "adaptive_combined",
+    "script": "adaptive_combined.py"
+  },
+  {
+    "id": "qwen_factorial",
+    "script": "qwen_factorial.py"
+  },
+  {
+    "id": "extension_fresh",
+    "script": "extension_confirm.py",
+    "args": [
+      "--fresh"
+    ]
+  },
+  {
+    "id": "qwen_prompt_factorial",
+    "script": "qwen_prompt_factorial.py"
+  },
+  {
+    "id": "llama_native_dev",
+    "script": "llama_native.py",
+    "args": [
+      "dev"
+    ]
+  },
+  {
+    "id": "llama_native_confirm",
+    "script": "llama_native.py",
+    "args": [
+      "confirm"
+    ]
+  },
+  {
+    "id": "llama_native_fresh",
+    "script": "llama_native.py",
+    "args": [
+      "fresh"
+    ]
+  },
+  {
+    "id": "broader_native",
+    "script": "broader_native.py"
+  },
+  {
+    "id": "teacher_routing",
+    "script": "teacher_routing.py"
+  },
+  {
+    "id": "qwen25_contrast_dev",
+    "script": "qwen_contrast.py",
+    "args": [
+      "qwen25-3b",
+      "dev"
+    ]
+  },
+  {
+    "id": "qwen25_contrast_confirm",
+    "script": "qwen_contrast.py",
+    "args": [
+      "qwen25-3b",
+      "confirm"
+    ]
+  },
+  {
+    "id": "qwen25_contrast_fresh",
+    "script": "qwen_contrast.py",
+    "args": [
+      "qwen25-3b",
+      "fresh"
+    ]
+  },
+  {
+    "id": "benchmark_broader_cached",
+    "script": "benchmark_broader_cached.py"
+  },
+  {
+    "id": "broader_projector",
+    "script": "broader_position.py",
+    "args": [
+      "--projector"
+    ]
+  }
+]

@@ -1,0 +1,487 @@
+{
+  "offline_cache_seconds": 0.158023102034349,
+  "n_checks": 36,
+  "checks": [
+    {
+      "task": "antonym",
+      "seed": 0,
+      "original_seconds": 0.6003389520337805,
+      "fast_seconds": 0.05339754797751084,
+      "max_delta_error": 7.494005416219807e-16,
+      "support": [
+        "antonym",
+        "capitalize",
+        "english-spanish",
+        "next-item",
+        "prev-item"
+      ]
+    },
+    {
+      "task": "antonym",
+      "seed": 1,
+      "original_seconds": 0.5438258869689889,
+      "fast_seconds": 0.051744922006037086,
+      "max_delta_error": 2.636779683484747e-16,
+      "support": [
+        "antonym",
+        "capitalize",
+        "next-item",
+        "alphabetically-first",
+        "alphabetically-last"
+      ]
+    },
+    {
+      "task": "antonym",
+      "seed": 2,
+      "original_seconds": 0.4703644060064107,
+      "fast_seconds": 0.04737605800619349,
+      "max_delta_error": 3.3306690738754696e-16,
+      "support": [
+        "park-country",
+        "antonym",
+        "synonym",
+        "capitalize",
+        "next-item"
+      ]
+    },
+    {
+      "task": "country-capital",
+      "seed": 0,
+      "original_seconds": 0.6755575090064667,
+      "fast_seconds": 0.058613194967620075,
+      "max_delta_error": 6.661338147750939e-16,
+      "support": [
+        "country-capital",
+        "country-currency",
+        "landmark-country",
+        "park-country",
+        "product-company"
+      ]
+    },
+    {
+      "task": "country-capital",
+      "seed": 1,
+      "original_seconds": 0.615626406040974,
+      "fast_seconds": 0.05722163000609726,
+      "max_delta_error": 4.440892098500626e-16,
+      "support": [
+        "country-capital",
+        "country-currency",
+        "park-country",
+        "person-instrument",
+        "product-company"
+      ]
+    },
+    {
+      "task": "country-capital",
+      "seed": 2,
+      "original_seconds": 0.49715681001544,
+      "fast_seconds": 0.05330082698492333,
+      "max_delta_error": 1.1102230246251565e-15,
+      "support": [
+        "country-capital",
+        "country-currency",
+        "landmark-country",
+        "park-country",
+        "product-company"
+      ]
+    },
+    {
+      "task": "english-french",
+      "seed": 0,
+      "original_seconds": 1.5002356620389037,
+      "fast_seconds": 0.0882407629978843,
+      "max_delta_error": 5.551115123125783e-16,
+      "support": [
+        "synonym",
+        "english-french",
+        "english-german",
+        "english-spanish",
+        "choose-middle-of-list"
+      ]
+    },
+    {
+      "task": "english-french",
+      "seed": 1,
+      "original_seconds": 2.060247213987168,
+      "fast_seconds": 0.10633064300054684,
+      "max_delta_error": 5.741934705483231e-16,
+      "support": [
+        "english-french",
+        "english-german",
+        "english-spanish",
+        "alphabetically-first"
+      ]
+    },
+    {
+      "task": "english-french",
+      "seed": 2,
+      "original_seconds": 0.6507440769928508,
+      "fast_seconds": 0.05027155502466485,
+      "max_delta_error": 1.1657341758564144e-15,
+      "support": [
+        "present-past",
+        "english-french",
+        "english-spanish",
+        "choose-middle-of-list"
+      ]
+    },
+    {
+      "task": "present-past",
+      "seed": 0,
+      "original_seconds": 0.5675893120351247,
+      "fast_seconds": 0.05516494601033628,
+      "max_delta_error": 5.828670879282072e-16,
+      "support": [
+        "present-past",
+        "singular-plural",
+        "capitalize",
+        "english-german",
+        "verb-from-list"
+      ]
+    },
+    {
+      "task": "present-past",
+      "seed": 1,
+      "original_seconds": 0.7730042100301944,
+      "fast_seconds": 0.062208159011788666,
+      "max_delta_error": 3.885780586188048e-16,
+      "support": [
+        "present-past",
+        "singular-plural",
+        "capitalize",
+        "alphabetically-first"
+      ]
+    },
+    {
+      "task": "present-past",
+      "seed": 2,
+      "original_seconds": 0.7081939519848675,
+      "fast_seconds": 0.0676419580122456,
+      "max_delta_error": 3.885780586188048e-16,
+      "support": [
+        "present-past",
+        "singular-plural",
+        "capitalize",
+        "english-french",
+        "english-spanish"
+      ]
+    },
+    {
+      "task": "singular-plural",
+      "seed": 0,
+      "original_seconds": 0.9936075729783624,
+      "fast_seconds": 0.0748318699770607,
+      "max_delta_error": 1.7763568394002505e-15,
+      "support": [
+        "present-past",
+        "singular-plural",
+        "capitalize",
+        "english-spanish",
+        "alphabetically-last"
+      ]
+    },
+    {
+      "task": "singular-plural",
+      "seed": 1,
+      "original_seconds": 0.71742116502719,
+      "fast_seconds": 0.06026784499408677,
+      "max_delta_error": 7.771561172376096e-16,
+      "support": [
+        "present-past",
+        "singular-plural",
+        "capitalize",
+        "english-french"
+      ]
+    },
+    {
+      "task": "singular-plural",
+      "seed": 2,
+      "original_seconds": 1.1334837769973092,
+      "fast_seconds": 0.07718990498688072,
+      "max_delta_error": 6.661338147750939e-16,
+      "support": [
+        "present-past",
+        "singular-plural",
+        "capitalize",
+        "english-spanish"
+      ]
+    },
+    {
+      "task": "next-item",
+      "seed": 0,
+      "original_seconds": 3.024753466947004,
+      "fast_seconds": 0.14967502502258867,
+      "max_delta_error": 6.661338147750939e-16,
+      "support": [
+        "antonym",
+        "capitalize-last-letter",
+        "lowercase-first-letter",
+        "next-item",
+        "prev-item"
+      ]
+    },
+    {
+      "task": "next-item",
+      "seed": 1,
+      "original_seconds": 2.6939222119981423,
+      "fast_seconds": 0.1250211980077438,
+      "max_delta_error": 2.498001805406602e-16,
+      "support": [
+        "park-country",
+        "next-item",
+        "prev-item",
+        "choose-last-of-list"
+      ]
+    },
+    {
+      "task": "next-item",
+      "seed": 2,
+      "original_seconds": 2.32319888996426,
+      "fast_seconds": 0.13570377801079303,
+      "max_delta_error": 8.326672684688674e-16,
+      "support": [
+        "next-item",
+        "prev-item"
+      ]
+    },
+    {
+      "task": "word-length",
+      "seed": 0,
+      "original_seconds": 0.5639248859952204,
+      "fast_seconds": 0.038606584013905376,
+      "max_delta_error": 1.1709383462843448e-17,
+      "support": [
+        "present-past",
+        "capitalize",
+        "capitalize-last-letter",
+        "word-length"
+      ]
+    },
+    {
+      "task": "word-length",
+      "seed": 1,
+      "original_seconds": 0.5040143429650925,
+      "fast_seconds": 0.04709574795560911,
+      "max_delta_error": 6.938893903907228e-17,
+      "support": [
+        "lowercase-first-letter",
+        "next-capital-letter",
+        "word-length"
+      ]
+    },
+    {
+      "task": "word-length",
+      "seed": 2,
+      "original_seconds": 1.4585075370268896,
+      "fast_seconds": 0.07995108800241724,
+      "max_delta_error": 5.898059818321144e-17,
+      "support": [
+        "capitalize-first-letter",
+        "capitalize-last-letter",
+        "lowercase-first-letter",
+        "next-capital-letter",
+        "word-length"
+      ]
+    },
+    {
+      "task": "person-sport",
+      "seed": 0,
+      "original_seconds": 1.581795075966511,
+      "fast_seconds": 0.09293803997570649,
+      "max_delta_error": 6.106226635438361e-16,
+      "support": [
+        "landmark-country",
+        "park-country",
+        "person-sport",
+        "person-instrument",
+        "product-company"
+      ]
+    },
+    {
+      "task": "person-sport",
+      "seed": 1,
+      "original_seconds": 1.2347946829977445,
+      "fast_seconds": 0.0727207840536721,
+      "max_delta_error": 1.609823385706477e-15,
+      "support": [
+        "landmark-country",
+        "park-country",
+        "person-occupation",
+        "person-sport",
+        "person-instrument"
+      ]
+    },
+    {
+      "task": "person-sport",
+      "seed": 2,
+      "original_seconds": 1.0576539160101674,
+      "fast_seconds": 0.07489749102387577,
+      "max_delta_error": 1.960237527853792e-16,
+      "support": [
+        "park-country",
+        "person-occupation",
+        "person-sport",
+        "person-instrument",
+        "product-company"
+      ]
+    },
+    {
+      "task": "english-italian",
+      "seed": 0,
+      "original_seconds": 3.338519593991805,
+      "fast_seconds": 0.1551708590122871,
+      "max_delta_error": 5.689893001203927e-16,
+      "support": [
+        "synonym",
+        "english-french",
+        "english-german",
+        "english-spanish",
+        "alphabetically-first"
+      ]
+    },
+    {
+      "task": "english-italian",
+      "seed": 1,
+      "original_seconds": 2.5755678819841705,
+      "fast_seconds": 0.11262869101483375,
+      "max_delta_error": 3.191891195797325e-16,
+      "support": [
+        "english-french",
+        "english-german",
+        "english-spanish",
+        "alphabetically-first"
+      ]
+    },
+    {
+      "task": "english-italian",
+      "seed": 2,
+      "original_seconds": 2.2547307899803855,
+      "fast_seconds": 0.11884298303630203,
+      "max_delta_error": 1.2212453270876722e-15,
+      "support": [
+        "synonym",
+        "english-french",
+        "english-german",
+        "english-spanish",
+        "alphabetically-first"
+      ]
+    },
+    {
+      "task": "number-plus-one",
+      "seed": 0,
+      "original_seconds": 0.36354314297204837,
+      "fast_seconds": 0.03358596801990643,
+      "max_delta_error": 7.216449660063518e-16,
+      "support": [
+        "next-item",
+        "word-length"
+      ]
+    },
+    {
+      "task": "number-plus-one",
+      "seed": 1,
+      "original_seconds": 0.5797062880010344,
+      "fast_seconds": 0.04711596900597215,
+      "max_delta_error": 2.220446049250313e-16,
+      "support": [
+        "present-past",
+        "capitalize",
+        "next-item",
+        "prev-item",
+        "word-length"
+      ]
+    },
+    {
+      "task": "number-plus-one",
+      "seed": 2,
+      "original_seconds": 0.5277225319878198,
+      "fast_seconds": 0.03955607395619154,
+      "max_delta_error": 2.255140518769849e-16,
+      "support": [
+        "present-past",
+        "next-item",
+        "prev-item",
+        "word-length"
+      ]
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 0,
+      "original_seconds": 0.5942159530241042,
+      "fast_seconds": 0.05498970299959183,
+      "max_delta_error": 7.771561172376096e-16,
+      "support": [
+        "antonym",
+        "capitalize",
+        "prev-item"
+      ]
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 1,
+      "original_seconds": 0.5471353610046208,
+      "fast_seconds": 0.047182910959236324,
+      "max_delta_error": 8.326672684688674e-16,
+      "support": [
+        "antonym",
+        "capitalize",
+        "next-item"
+      ]
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 2,
+      "original_seconds": 0.6462491580168717,
+      "fast_seconds": 0.05093864997616038,
+      "max_delta_error": 5.551115123125783e-16,
+      "support": [
+        "antonym",
+        "capitalize",
+        "next-item",
+        "prev-item"
+      ]
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 0,
+      "original_seconds": 3.701124152983539,
+      "fast_seconds": 0.17264895397238433,
+      "max_delta_error": 6.175615574477433e-16,
+      "support": [
+        "capitalize-first-letter",
+        "capitalize-last-letter",
+        "lowercase-first-letter",
+        "next-capital-letter",
+        "word-length"
+      ]
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 1,
+      "original_seconds": 3.8659474090090953,
+      "fast_seconds": 0.1866081430343911,
+      "max_delta_error": 5.273559366969494e-16,
+      "support": [
+        "capitalize-first-letter",
+        "capitalize-last-letter",
+        "lowercase-first-letter",
+        "prev-item",
+        "next-capital-letter"
+      ]
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 2,
+      "original_seconds": 4.277444707986433,
+      "fast_seconds": 0.18910876900190488,
+      "max_delta_error": 1.1310397063368782e-15,
+      "support": [
+        "capitalize-first-letter",
+        "capitalize-last-letter",
+        "lowercase-first-letter"
+      ]
+    }
+  ],
+  "median_speedup": 13.30949576745982
+}

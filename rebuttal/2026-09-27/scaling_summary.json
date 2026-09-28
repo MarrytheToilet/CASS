@@ -1,0 +1,78 @@
+{
+  "e5_scale.csv": {
+    "5": {
+      "accuracy": 0.1386666666666667,
+      "residual": 0.873295,
+      "support_size": 5.0,
+      "n_tasks": 6
+    },
+    "10": {
+      "accuracy": 0.4386666666666666,
+      "residual": 0.86369,
+      "support_size": 4.283333333333332,
+      "n_tasks": 6
+    },
+    "15": {
+      "accuracy": 0.5106666666666667,
+      "residual": 0.834225,
+      "support_size": 3.9166666666666665,
+      "n_tasks": 6
+    },
+    "20": {
+      "accuracy": 0.49066666666666664,
+      "residual": 0.7982883333333334,
+      "support_size": 4.066666666666666,
+      "n_tasks": 6
+    },
+    "25": {
+      "accuracy": 0.5053333333333333,
+      "residual": 0.7936233333333335,
+      "support_size": 3.933333333333333,
+      "n_tasks": 6
+    },
+    "31": {
+      "accuracy": 0.5219999999999999,
+      "residual": 0.7615083333333333,
+      "support_size": 4.083333333333333,
+      "n_tasks": 6
+    }
+  },
+  "e5_scale_ext.csv": {
+    "5": {
+      "accuracy": 0.4366666666666667,
+      "residual": 0.8126483333333332,
+      "support_size": 5.0,
+      "n_tasks": 6
+    },
+    "10": {
+      "accuracy": 0.49133333333333334,
+      "residual": 0.833405,
+      "support_size": 4.1,
+      "n_tasks": 6
+    },
+    "20": {
+      "accuracy": 0.5399999999999999,
+      "residual": 0.7822383333333334,
+      "support_size": 4.233333333333333,
+      "n_tasks": 6
+    },
+    "30": {
+      "accuracy": 0.5453333333333333,
+      "residual": 0.7746566666666667,
+      "support_size": 4.383333333333334,
+      "n_tasks": 6
+    },
+    "40": {
+      "accuracy": 0.526,
+      "residual": 0.744265,
+      "support_size": 4.416666666666667,
+      "n_tasks": 6
+    },
+    "46": {
+      "accuracy": 0.5193333333333333,
+      "residual": 0.7495666666666666,
+      "support_size": 4.416666666666667,
+      "n_tasks": 6
+    }
+  }
+}

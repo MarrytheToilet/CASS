@@ -1,0 +1,1106 @@
+{
+  "antonym+capitalize|20": {
+    "reference": [
+      0.8992815036445819,
+      0.9314221037698243
+    ],
+    "candidates": 1686,
+    "selected": [
+      {
+        "support": [
+          "english-spanish",
+          "english-german",
+          "present-past"
+        ],
+        "coherence": [
+          0.9015112990218728,
+          0.9429236262014818
+        ],
+        "mean_gap": 0.002229795377290844,
+        "max_gap": 0.011501522431657585,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-first-letter",
+          "capitalize-last-letter",
+          "english-spanish"
+        ],
+        "coherence": [
+          0.8963049728296721,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.0029765308149097836,
+        "max_gap": 0.017289829340292884,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-first-letter",
+          "english-french",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.8968433816544943,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.0024381219900876383,
+        "max_gap": 0.01878317988199696,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "antonym+capitalize|21": {
+    "reference": [
+      0.8820146396892418,
+      0.8820146396892418
+    ],
+    "candidates": 276,
+    "selected": [
+      {
+        "support": [
+          "capitalize-first-letter",
+          "english-spanish"
+        ],
+        "coherence": [
+          0.8809448384125453,
+          0.8809448384125453
+        ],
+        "mean_gap": 0.0010698012766964249,
+        "max_gap": 0.0010698012766964249,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "english-german",
+          "synonym"
+        ],
+        "coherence": [
+          0.8831440210550326,
+          0.8831440210550326
+        ],
+        "mean_gap": 0.0011293813657908824,
+        "max_gap": 0.0011293813657908824,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "synonym",
+          "capitalize-last-letter"
+        ],
+        "coherence": [
+          0.8796075337113253,
+          0.8796075337113253
+        ],
+        "mean_gap": 0.0024071059779164905,
+        "max_gap": 0.0024071059779164905,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "antonym+capitalize|22": {
+    "reference": [
+      0.8767000342786678,
+      0.9314221037698243
+    ],
+    "candidates": 3340,
+    "selected": [
+      {
+        "support": [
+          "next-capital-letter",
+          "capitalize-first-letter",
+          "word-length",
+          "singular-plural",
+          "english-spanish"
+        ],
+        "coherence": [
+          0.8680038994103049,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.008696134868362959,
+        "max_gap": 0.01878317988199696,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-first-letter",
+          "singular-plural",
+          "word-length",
+          "present-past",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.8671580187350465,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.00954201554362133,
+        "max_gap": 0.01878317988199696,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "singular-plural",
+          "english-french",
+          "next-capital-letter",
+          "english-spanish",
+          "capitalize-first-letter"
+        ],
+        "coherence": [
+          0.876088487691481,
+          0.9632030013570211
+        ],
+        "mean_gap": 0.000611546587186873,
+        "max_gap": 0.03178089758719682,
+        "tolerance_pass": false,
+        "rank_match": true
+      }
+    ]
+  },
+  "synonym+capitalize|20": {
+    "reference": [
+      0.8828095177419882,
+      0.9314221037698243
+    ],
+    "candidates": 3377,
+    "selected": [
+      {
+        "support": [
+          "capitalize-first-letter",
+          "present-past",
+          "english-french",
+          "capitalize-last-letter"
+        ],
+        "coherence": [
+          0.8839998407522969,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.001190323010308636,
+        "max_gap": 0.017289829340292884,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "next-capital-letter",
+          "capitalize-first-letter",
+          "english-french",
+          "present-past"
+        ],
+        "coherence": [
+          0.8875969331104766,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.004787415368488368,
+        "max_gap": 0.01878317988199696,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "word-length",
+          "english-french",
+          "next-capital-letter",
+          "capitalize-first-letter"
+        ],
+        "coherence": [
+          0.8898889133239688,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.007079395581980563,
+        "max_gap": 0.01878317988199696,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "synonym+capitalize|21": {
+    "reference": [
+      0.8933850223387163,
+      0.9493498539271474
+    ],
+    "candidates": 3279,
+    "selected": [
+      {
+        "support": [
+          "word-length",
+          "lowercase-first-letter",
+          "capitalize-last-letter",
+          "capitalize-first-letter",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.8894110951357728,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.003973927202943539,
+        "max_gap": 0.03700933565008091,
+        "tolerance_pass": false,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "english-spanish",
+          "next-capital-letter",
+          "singular-plural",
+          "word-length",
+          "capitalize-first-letter"
+        ],
+        "coherence": [
+          0.8680038994103049,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.025381122928411437,
+        "max_gap": 0.0008554297246737841,
+        "tolerance_pass": false,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-first-letter",
+          "english-spanish",
+          "present-past",
+          "capitalize-last-letter",
+          "singular-plural"
+        ],
+        "coherence": [
+          0.8637617419229109,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.02962328041580542,
+        "max_gap": 0.0006379208170302908,
+        "tolerance_pass": false,
+        "rank_match": true
+      }
+    ]
+  },
+  "synonym+capitalize|22": {
+    "reference": [
+      0.8848277849249007,
+      0.9314221037698243
+    ],
+    "candidates": 3295,
+    "selected": [
+      {
+        "support": [
+          "english-spanish",
+          "capitalize-last-letter",
+          "english-french",
+          "capitalize-first-letter",
+          "present-past"
+        ],
+        "coherence": [
+          0.8908719405092482,
+          0.9632030013570211
+        ],
+        "mean_gap": 0.006044155584347566,
+        "max_gap": 0.03178089758719682,
+        "tolerance_pass": false,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-last-letter",
+          "singular-plural",
+          "capitalize-first-letter",
+          "present-past",
+          "word-length"
+        ],
+        "coherence": [
+          0.8623785803617541,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.022449204563146585,
+        "max_gap": 0.017289829340292884,
+        "tolerance_pass": false,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "word-length",
+          "singular-plural",
+          "capitalize-first-letter",
+          "english-french",
+          "capitalize-last-letter"
+        ],
+        "coherence": [
+          0.8570883866030412,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.027739398321859454,
+        "max_gap": 0.017289829340292884,
+        "tolerance_pass": false,
+        "rank_match": true
+      }
+    ]
+  },
+  "present-past+capitalize|20": {
+    "reference": [
+      0.8827703214447197,
+      0.8827703214447197
+    ],
+    "candidates": 276,
+    "selected": [
+      {
+        "support": [
+          "antonym",
+          "capitalize-first-letter"
+        ],
+        "coherence": [
+          0.8825486456051607,
+          0.8825486456051607
+        ],
+        "mean_gap": 0.00022167583955901016,
+        "max_gap": 0.00022167583955901016,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "english-german",
+          "synonym"
+        ],
+        "coherence": [
+          0.8831440210550326,
+          0.8831440210550326
+        ],
+        "mean_gap": 0.00037369961031297194,
+        "max_gap": 0.00037369961031297194,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-first-letter",
+          "english-spanish"
+        ],
+        "coherence": [
+          0.8809448384125453,
+          0.8809448384125453
+        ],
+        "mean_gap": 0.0018254830321743354,
+        "max_gap": 0.0018254830321743354,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "present-past+capitalize|21": {
+    "reference": [
+      0.7174617325916873,
+      0.8827703214447197
+    ],
+    "candidates": 3330,
+    "selected": [
+      {
+        "support": [
+          "verb-from-list",
+          "singular-plural",
+          "english-french",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.7191741600144784,
+          0.8790485092040137
+        ],
+        "mean_gap": 0.0017124274227910963,
+        "max_gap": 0.0037218122407060017,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "product-company",
+          "english-spanish",
+          "next-capital-letter",
+          "singular-plural"
+        ],
+        "coherence": [
+          0.7157424033952964,
+          0.8771872405712788
+        ],
+        "mean_gap": 0.0017193291963909507,
+        "max_gap": 0.005583080873440838,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "english-french",
+          "choose-last-of-list",
+          "singular-plural",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.7139722263210454,
+          0.8790485092040137
+        ],
+        "mean_gap": 0.003489506270641929,
+        "max_gap": 0.0037218122407060017,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "present-past+capitalize|22": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "singular-plural+capitalize|20": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "singular-plural+capitalize|21": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "singular-plural+capitalize|22": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "english-french+capitalize|20": {
+    "reference": [
+      0.9127842142741757,
+      0.9632030013570211
+    ],
+    "candidates": 3323,
+    "selected": [
+      {
+        "support": [
+          "capitalize-last-letter",
+          "antonym",
+          "capitalize-first-letter",
+          "synonym"
+        ],
+        "coherence": [
+          0.9006644945341722,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.012119719740003476,
+        "max_gap": 0.014491068246903938,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "next-capital-letter",
+          "synonym",
+          "word-length",
+          "capitalize-first-letter"
+        ],
+        "coherence": [
+          0.8998302640021133,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.012953950272062364,
+        "max_gap": 0.012997717705199863,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "word-length",
+          "synonym",
+          "capitalize-last-letter",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.9034581318379568,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.009326082436218908,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "english-french+capitalize|21": {
+    "reference": [
+      0.9127842142741757,
+      0.9632030013570211
+    ],
+    "candidates": 3373,
+    "selected": [
+      {
+        "support": [
+          "capitalize-first-letter",
+          "antonym",
+          "synonym",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.9066980376766306,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.006086176597545068,
+        "max_gap": 0.012997717705199863,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "antonym",
+          "synonym",
+          "capitalize-first-letter",
+          "capitalize-last-letter"
+        ],
+        "coherence": [
+          0.9006644945341722,
+          0.9487119331101171
+        ],
+        "mean_gap": 0.012119719740003476,
+        "max_gap": 0.014491068246903938,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize-first-letter",
+          "next-capital-letter",
+          "antonym",
+          "capitalize-last-letter"
+        ],
+        "coherence": [
+          0.9205689913220572,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.007784777047881497,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "english-french+capitalize|22": {
+    "reference": [
+      0.9127842142741757,
+      0.9632030013570211
+    ],
+    "candidates": 3343,
+    "selected": [
+      {
+        "support": [
+          "next-capital-letter",
+          "capitalize-last-letter",
+          "antonym",
+          "synonym"
+        ],
+        "coherence": [
+          0.9076340210897295,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.005150193184446206,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "next-capital-letter",
+          "capitalize-last-letter",
+          "word-length",
+          "synonym"
+        ],
+        "coherence": [
+          0.9034581318379566,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.009326082436219019,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "word-length",
+          "antonym",
+          "capitalize-first-letter",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.8953696438823329,
+          0.9502052836518212
+        ],
+        "mean_gap": 0.0174145703918428,
+        "max_gap": 0.012997717705199863,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "next-item+capitalize|20": {
+    "reference": [
+      0.8014782832034031,
+      0.9839507730068453
+    ],
+    "candidates": 3132,
+    "selected": [
+      {
+        "support": [
+          "choose-middle-of-list",
+          "capitalize-last-letter",
+          "choose-last-of-list",
+          "choose-first-of-list",
+          "alphabetically-first"
+        ],
+        "coherence": [
+          0.8005134480725271,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.0009648351308759739,
+        "max_gap": 0.008159554363633914,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "alphabetically-first",
+          "english-french",
+          "choose-first-of-list",
+          "choose-last-of-list",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.8024774930070453,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.0009992098036422092,
+        "max_gap": 0.008159554363633914,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "choose-middle-of-list",
+          "english-german",
+          "choose-last-of-list",
+          "choose-first-of-list",
+          "alphabetically-first"
+        ],
+        "coherence": [
+          0.8028671926773804,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.0013889094739772956,
+        "max_gap": 0.008159554363633914,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "next-item+capitalize|21": {
+    "reference": [
+      0.6441660243897704,
+      0.9839507730068453
+    ],
+    "candidates": 3234,
+    "selected": [
+      {
+        "support": [
+          "next-capital-letter",
+          "landmark-country",
+          "capitalize-last-letter",
+          "english-french",
+          "person-occupation"
+        ],
+        "coherence": [
+          0.6443385126488488,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.00017248825907834053,
+        "max_gap": 0.002408416570383043,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "alphabetically-last",
+          "english-german",
+          "landmark-country",
+          "capitalize-last-letter",
+          "next-capital-letter"
+        ],
+        "coherence": [
+          0.6450414753496544,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.0008754509598839499,
+        "max_gap": 0.002408416570383043,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "person-sport",
+          "choose-last-of-list",
+          "capitalize-last-letter",
+          "next-capital-letter",
+          "present-past"
+        ],
+        "coherence": [
+          0.6431309890739042,
+          0.9863591895772283
+        ],
+        "mean_gap": 0.0010350353158662395,
+        "max_gap": 0.002408416570383043,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "next-item+capitalize|22": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "antonym+capitalize-first-letter|20": {
+    "reference": [
+      0.9617588021130556,
+      0.9863591895772283
+    ],
+    "candidates": 1489,
+    "selected": [
+      {
+        "support": [
+          "choose-first-of-list",
+          "alphabetically-first",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9673335256230562,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.0055747235100005454,
+        "max_gap": 0.005751137793250871,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "choose-first-of-list",
+          "alphabetically-last",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9668227660729127,
+          0.993184662359413
+        ],
+        "mean_gap": 0.005063963959857087,
+        "max_gap": 0.006825472782184705,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "alphabetically-last",
+          "alphabetically-first",
+          "verb-from-list"
+        ],
+        "coherence": [
+          0.9559462009902396,
+          0.9954994229270064
+        ],
+        "mean_gap": 0.005812601122816008,
+        "max_gap": 0.009140233349778093,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "antonym+capitalize-first-letter|21": {
+    "reference": [
+      0.9617588021130556,
+      0.9863591895772283
+    ],
+    "candidates": 1493,
+    "selected": [
+      {
+        "support": [
+          "choose-middle-of-list",
+          "alphabetically-first",
+          "choose-first-of-list"
+        ],
+        "coherence": [
+          0.9673335256230561,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.005574723510000434,
+        "max_gap": 0.005751137793250871,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "choose-first-of-list",
+          "alphabetically-last",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9668227660729127,
+          0.993184662359413
+        ],
+        "mean_gap": 0.005063963959857087,
+        "max_gap": 0.006825472782184705,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "verb-from-list",
+          "alphabetically-first",
+          "alphabetically-last"
+        ],
+        "coherence": [
+          0.9559462009902396,
+          0.9954994229270064
+        ],
+        "mean_gap": 0.005812601122816008,
+        "max_gap": 0.009140233349778093,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "antonym+capitalize-first-letter|22": {
+    "reference": [
+      0.9335604560829189,
+      0.9863591895772283
+    ],
+    "candidates": 3104,
+    "selected": [
+      {
+        "support": [
+          "choose-first-of-list",
+          "alphabetically-first",
+          "choose-middle-of-list",
+          "verb-from-list"
+        ],
+        "coherence": [
+          0.948349207138445,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.014788751055526017,
+        "max_gap": 0.005751137793250871,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "alphabetically-last",
+          "choose-first-of-list",
+          "verb-from-list",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9492767406386767,
+          0.993184662359413
+        ],
+        "mean_gap": 0.015716284555757798,
+        "max_gap": 0.006825472782184705,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "english-spanish",
+          "synonym",
+          "english-german",
+          "english-french"
+        ],
+        "coherence": [
+          0.9247229759938381,
+          0.9632030013570211
+        ],
+        "mean_gap": 0.008837480089080807,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "present-past+capitalize-first-letter|20": {
+    "reference": [
+      0.9617588021130556,
+      0.9863591895772283
+    ],
+    "candidates": 1492,
+    "selected": [
+      {
+        "support": [
+          "alphabetically-first",
+          "choose-first-of-list",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9673335256230561,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.005574723510000434,
+        "max_gap": 0.005751137793250871,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "choose-middle-of-list",
+          "choose-first-of-list",
+          "alphabetically-last"
+        ],
+        "coherence": [
+          0.9668227660729127,
+          0.993184662359413
+        ],
+        "mean_gap": 0.005063963959857087,
+        "max_gap": 0.006825472782184705,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "verb-from-list",
+          "alphabetically-first",
+          "alphabetically-last"
+        ],
+        "coherence": [
+          0.9559462009902396,
+          0.9954994229270064
+        ],
+        "mean_gap": 0.005812601122816008,
+        "max_gap": 0.009140233349778093,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "present-past+capitalize-first-letter|21": {
+    "reference": [
+      0.8420424900841285,
+      0.9863591895772283
+    ],
+    "candidates": 3134,
+    "selected": [
+      {
+        "support": [
+          "english-german",
+          "english-french",
+          "prev-item",
+          "english-spanish"
+        ],
+        "coherence": [
+          0.8417838899614357,
+          0.9632030013570211
+        ],
+        "mean_gap": 0.0002586001226927426,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "english-german",
+          "lowercase-first-letter",
+          "english-spanish",
+          "english-french"
+        ],
+        "coherence": [
+          0.8466092291822443,
+          0.9632030013570211
+        ],
+        "mean_gap": 0.004566739098115891,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "capitalize",
+          "lowercase-first-letter",
+          "english-french",
+          "english-spanish"
+        ],
+        "coherence": [
+          0.8367446461750502,
+          0.9632030013570211
+        ],
+        "mean_gap": 0.005297843909078281,
+        "max_gap": 0.023156188220207263,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "present-past+capitalize-first-letter|22": {
+    "reference": [
+      0.9617588021130556,
+      0.9863591895772283
+    ],
+    "candidates": 1496,
+    "selected": [
+      {
+        "support": [
+          "choose-first-of-list",
+          "alphabetically-first",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9673335256230562,
+          0.9921103273704792
+        ],
+        "mean_gap": 0.0055747235100005454,
+        "max_gap": 0.005751137793250871,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "alphabetically-last",
+          "choose-first-of-list",
+          "choose-middle-of-list"
+        ],
+        "coherence": [
+          0.9668227660729127,
+          0.993184662359413
+        ],
+        "mean_gap": 0.005063963959857087,
+        "max_gap": 0.006825472782184705,
+        "tolerance_pass": true,
+        "rank_match": true
+      },
+      {
+        "support": [
+          "verb-from-list",
+          "alphabetically-first",
+          "alphabetically-last"
+        ],
+        "coherence": [
+          0.9559462009902396,
+          0.9954994229270064
+        ],
+        "mean_gap": 0.005812601122816008,
+        "max_gap": 0.009140233349778093,
+        "tolerance_pass": true,
+        "rank_match": true
+      }
+    ]
+  },
+  "country-capital+word-length|20": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "country-capital+word-length|21": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "country-capital+word-length|22": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "country-capital+lowercase-first-letter|20": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "country-capital+lowercase-first-letter|21": {
+    "reason": "No alternative with identical per-layer block ranks"
+  },
+  "country-capital+lowercase-first-letter|22": {
+    "reason": "No alternative with identical per-layer block ranks"
+  }
+}

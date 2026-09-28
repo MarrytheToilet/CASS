@@ -1,0 +1,2850 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "task": "antonym",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 1,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "eternal",
+          "temporary"
+        ],
+        [
+          "inconsistency",
+          "consistency"
+        ],
+        [
+          "admit",
+          "deny"
+        ],
+        [
+          "curse",
+          "blessing"
+        ],
+        [
+          "petty",
+          "significant"
+        ],
+        [
+          "latent",
+          "manifest"
+        ],
+        [
+          "refuse",
+          "accept"
+        ],
+        [
+          "solution",
+          "problem"
+        ],
+        [
+          "connected",
+          "disconnected"
+        ],
+        [
+          "nighttime",
+          "daytime"
+        ],
+        [
+          "heavenly",
+          "hellish"
+        ],
+        [
+          "cloudy",
+          "clear"
+        ],
+        [
+          "insertion",
+          "removal"
+        ],
+        [
+          "blank",
+          "filled"
+        ],
+        [
+          "invalid",
+          "valid"
+        ],
+        [
+          "selective",
+          "indiscriminate"
+        ],
+        [
+          "achievable",
+          "unachievable"
+        ],
+        [
+          "negate",
+          "affirm"
+        ],
+        [
+          "upgrade",
+          "downgrade"
+        ],
+        [
+          "galactic",
+          "terrestrial"
+        ],
+        [
+          "expensive",
+          "cheap"
+        ],
+        [
+          "slowing",
+          "speeding"
+        ],
+        [
+          "establish",
+          "dismantle"
+        ],
+        [
+          "compact",
+          "spacious"
+        ],
+        [
+          "emotional",
+          "unemotional"
+        ],
+        [
+          "sanction",
+          "penalty"
+        ],
+        [
+          "whites",
+          "blacks"
+        ],
+        [
+          "interim",
+          "permanent"
+        ],
+        [
+          "authorize",
+          "prohibit"
+        ],
+        [
+          "someone",
+          "no one"
+        ],
+        [
+          "childbirth",
+          "death"
+        ],
+        [
+          "foreground",
+          "background"
+        ],
+        [
+          "protective",
+          "neglectful"
+        ],
+        [
+          "wet",
+          "dry"
+        ],
+        [
+          "quick",
+          "slow"
+        ],
+        [
+          "corresponding",
+          "noncorresponding"
+        ],
+        [
+          "numerous",
+          "few"
+        ],
+        [
+          "soil",
+          "sky"
+        ],
+        [
+          "end",
+          "beginning"
+        ],
+        [
+          "beautiful",
+          "ugly"
+        ],
+        [
+          "classify",
+          "disorganize"
+        ],
+        [
+          "excessive",
+          "insufficient"
+        ],
+        [
+          "efficient",
+          "inefficient"
+        ],
+        [
+          "fictitious",
+          "real"
+        ],
+        [
+          "subconscious",
+          "conscious"
+        ],
+        [
+          "bump",
+          "smooth"
+        ],
+        [
+          "note",
+          "silence"
+        ],
+        [
+          "dismiss",
+          "appoint"
+        ],
+        [
+          "monumental",
+          "insignificant"
+        ],
+        [
+          "vulnerable",
+          "invulnerable"
+        ]
+      ],
+      "before": [
+        " temporary\nB: permanent\nC:",
+        " inconsistency\nQ: inaccuracy\nA",
+        " deny\nB: ignore\nC:",
+        " blessing\nQ: curse\nA:",
+        " grand\nB: small\nC:",
+        " manifest\nB: hidden\nC:",
+        " accept\nB: reject\nC:",
+        " problem\nB: challenge\nC:",
+        " disconnected\nB: isolated\nC:",
+        " daytime\nB: nighttime\nC:",
+        " earthly\nB: spiritual\nC:",
+        " clear\nB: murky\nC:",
+        " removal\nB: destruction\nC:",
+        " empty\nB: full\nC:",
+        " valid\nB: invalid\nC:",
+        " non-selective\nB: non-d",
+        " unattainable\nQ: impossible",
+        " affirm\nB: deny\nC:",
+        " downgrade\nB: upgrade\nC:",
+        " terrestrial\nB: celestial\nC:",
+        " cheap\nB: expensive\nC:",
+        " speeding\nB: slowing\nC:",
+        " destroy\nB: ignore\nC:",
+        " non-compact\nB: compact\n",
+        " physical\nB: mental\nC:",
+        " penalty\nB: reward\nC:",
+        " blacks\nB: grays\nC",
+        " permanent\nB: temporary\nC:",
+        " deny\nB: ignore\nC:",
+        " someone else\nB: no one\n",
+        " pregnancy\nB: labor\nC:",
+        " background\nB: foreground\nC:",
+        " harmful\nB: beneficial\nC:",
+        " dry\nB: wet\nC:",
+        " slow\nB: fast\nC:",
+        " non-corresponding\nB: unrelated",
+        " few\nB: many\nC:",
+        " air\nB: water\nC:",
+        " beginning\nB: middle\nC:",
+        " ugly\nB: attractive\nC:",
+        " classify\nB: categorize\nC",
+        " insufficient\nB: adequate\nC:",
+        " inefficient\nB: effective\nC:",
+        " real\nB: imaginary\nC:",
+        " conscious\nB: unconscious\nC:",
+        " bruise\nB: cut\nC",
+        " note\nB: ignore\nC:",
+        " retain\nB: ignore\nC:",
+        " insignificant\nQ: unimportant\nQ",
+        " invulnerable\nB: impervious"
+      ],
+      "after": [
+        " temporary\nB: permanent\nC:",
+        " inconsistency\nQ: inaccuracy\nA",
+        " deny\nB: ignore\nC:",
+        " blessing\nQ: curse\nA:",
+        " grand\nB: small\nC:",
+        " manifest\nB: hidden\nC:",
+        " accept\nB: reject\nC:",
+        " problem\nB: challenge\nC:",
+        " disconnected\nB: isolated\nC:",
+        " daytime\nB: nighttime\nC:",
+        " earthly\nB: spiritual\nC:",
+        " clear\nB: murky\nC:",
+        " removal\nB: destruction\nC:",
+        " empty\nB: full\nC:",
+        " valid\nB: invalid\nC:",
+        " non-selective\nB: non-d",
+        " unattainable\nQ: impossible",
+        " affirm\nB: deny\nC:",
+        " downgrade\nB: upgrade\nC:",
+        " terrestrial\nB: celestial\nC:",
+        " cheap\nB: expensive\nC:",
+        " speeding\nB: slowing\nC:",
+        " destroy\nB: ignore\nC:",
+        " non-compact\nB: compact\n",
+        " physical\nB: mental\nC:",
+        " penalty\nB: reward\nC:",
+        " blacks\nB: grays\nC",
+        " permanent\nB: temporary\nC:",
+        " deny\nB: ignore\nC:",
+        " someone else\nB: no one\n",
+        " pregnancy\nB: labor\nC:",
+        " background\nB: foreground\nC:",
+        " harmful\nB: beneficial\nC:",
+        " dry\nB: wet\nC:",
+        " slow\nB: fast\nC:",
+        " non-corresponding\nB: unrelated",
+        " few\nB: many\nC:",
+        " air\nB: water\nC:",
+        " beginning\nB: middle\nC:",
+        " ugly\nB: attractive\nC:",
+        " classify\nB: categorize\nC",
+        " insufficient\nB: adequate\nC:",
+        " inefficient\nB: effective\nC:",
+        " real\nB: imaginary\nC:",
+        " conscious\nB: unconscious\nC:",
+        " bruise\nB: cut\nC",
+        " note\nB: ignore\nC:",
+        " retain\nB: ignore\nC:",
+        " insignificant\nQ: unimportant\nQ",
+        " invulnerable\nB: impervious"
+      ],
+      "original_accuracy": 0.62,
+      "optimized_accuracy": 0.62,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 1.942890293094024e-16
+    },
+    {
+      "task": "antonym",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 8,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "eternal",
+          "temporary"
+        ],
+        [
+          "inconsistency",
+          "consistency"
+        ],
+        [
+          "admit",
+          "deny"
+        ],
+        [
+          "curse",
+          "blessing"
+        ],
+        [
+          "petty",
+          "significant"
+        ],
+        [
+          "latent",
+          "manifest"
+        ],
+        [
+          "refuse",
+          "accept"
+        ],
+        [
+          "solution",
+          "problem"
+        ],
+        [
+          "connected",
+          "disconnected"
+        ],
+        [
+          "nighttime",
+          "daytime"
+        ],
+        [
+          "heavenly",
+          "hellish"
+        ],
+        [
+          "cloudy",
+          "clear"
+        ],
+        [
+          "insertion",
+          "removal"
+        ],
+        [
+          "blank",
+          "filled"
+        ],
+        [
+          "invalid",
+          "valid"
+        ],
+        [
+          "selective",
+          "indiscriminate"
+        ],
+        [
+          "achievable",
+          "unachievable"
+        ],
+        [
+          "negate",
+          "affirm"
+        ],
+        [
+          "upgrade",
+          "downgrade"
+        ],
+        [
+          "galactic",
+          "terrestrial"
+        ],
+        [
+          "expensive",
+          "cheap"
+        ],
+        [
+          "slowing",
+          "speeding"
+        ],
+        [
+          "establish",
+          "dismantle"
+        ],
+        [
+          "compact",
+          "spacious"
+        ],
+        [
+          "emotional",
+          "unemotional"
+        ],
+        [
+          "sanction",
+          "penalty"
+        ],
+        [
+          "whites",
+          "blacks"
+        ],
+        [
+          "interim",
+          "permanent"
+        ],
+        [
+          "authorize",
+          "prohibit"
+        ],
+        [
+          "someone",
+          "no one"
+        ],
+        [
+          "childbirth",
+          "death"
+        ],
+        [
+          "foreground",
+          "background"
+        ],
+        [
+          "protective",
+          "neglectful"
+        ],
+        [
+          "wet",
+          "dry"
+        ],
+        [
+          "quick",
+          "slow"
+        ],
+        [
+          "corresponding",
+          "noncorresponding"
+        ],
+        [
+          "numerous",
+          "few"
+        ],
+        [
+          "soil",
+          "sky"
+        ],
+        [
+          "end",
+          "beginning"
+        ],
+        [
+          "beautiful",
+          "ugly"
+        ],
+        [
+          "classify",
+          "disorganize"
+        ],
+        [
+          "excessive",
+          "insufficient"
+        ],
+        [
+          "efficient",
+          "inefficient"
+        ],
+        [
+          "fictitious",
+          "real"
+        ],
+        [
+          "subconscious",
+          "conscious"
+        ],
+        [
+          "bump",
+          "smooth"
+        ],
+        [
+          "note",
+          "silence"
+        ],
+        [
+          "dismiss",
+          "appoint"
+        ],
+        [
+          "monumental",
+          "insignificant"
+        ],
+        [
+          "vulnerable",
+          "invulnerable"
+        ]
+      ],
+      "before": [
+        " temporary\nB: permanent\nC:",
+        " inconsistency\nB: consistency\nC:",
+        " deny\nB: ignore\nC:",
+        " blessing\nQ: curse\nA:",
+        " grand\nB: small\nC:",
+        " manifest\nB: hidden\nC:",
+        " accept\nB: reject\nC:",
+        " problem\nB: challenge\nC:",
+        " disconnected\nB: isolated\nC:",
+        " daytime\nB: nighttime\nC:",
+        " earthly\nB: spiritual\nC:",
+        " clear\nB: murky\nC:",
+        " removal\nB: destruction\nC:",
+        " empty\nB: full\nC:",
+        " valid\nB: invalid\nC:",
+        " non-selective\nB: non-d",
+        " unattainable\nQ: impossible",
+        " affirm\nB: deny\nC:",
+        " downgrade\nB: upgrade\nC:",
+        " terrestrial\nB: celestial\nC:",
+        " cheap\nB: expensive\nC:",
+        " speeding\nB: slowing\nC:",
+        " destroy\nB: ignore\nC:",
+        " non-compact\nB: compact\n",
+        " physical\nB: mental\nC:",
+        " penalty\nB: reward\nC:",
+        " blacks\nB: grays\nC",
+        " permanent\nB: temporary\nC:",
+        " deny\nB: ignore\nC:",
+        " someone else\nB: nobody\nC",
+        " pregnancy\nB: labor\nC:",
+        " background\nB: foreground\nC:",
+        " harmful\nB: beneficial\nC:",
+        " dry\nB: hot\nC:",
+        " slow\nB: fast\nC:",
+        " non-corresponding\nB: unrelated",
+        " few\nB: many\nC:",
+        " air\nB: water\nC:",
+        " beginning\nB: middle\nC:",
+        " ugly\nB: attractive\nC:",
+        " classify\nB: categorize\nC",
+        " insufficient\nB: adequate\nC:",
+        " inefficient\nB: effective\nC:",
+        " real\nB: imaginary\nC:",
+        " conscious\nB: unconscious\nC:",
+        " bruise\nB: cut\nC",
+        " note\nB: ignore\nC:",
+        " retain\nB: ignore\nC:",
+        " insignificant\nQ: unimportant\nQ",
+        " invulnerable\nB: impervious"
+      ],
+      "after": [
+        " temporary\nB: permanent\nC:",
+        " inconsistency\nB: consistency\nC:",
+        " deny\nB: ignore\nC:",
+        " blessing\nQ: curse\nA:",
+        " grand\nB: small\nC:",
+        " manifest\nB: hidden\nC:",
+        " accept\nB: reject\nC:",
+        " problem\nB: challenge\nC:",
+        " disconnected\nB: isolated\nC:",
+        " daytime\nB: nighttime\nC:",
+        " earthly\nB: spiritual\nC:",
+        " clear\nB: murky\nC:",
+        " removal\nB: destruction\nC:",
+        " empty\nB: full\nC:",
+        " valid\nB: invalid\nC:",
+        " non-selective\nB: non-d",
+        " unattainable\nQ: impossible",
+        " affirm\nB: deny\nC:",
+        " downgrade\nB: upgrade\nC:",
+        " terrestrial\nB: celestial\nC:",
+        " cheap\nB: expensive\nC:",
+        " speeding\nB: slowing\nC:",
+        " destroy\nB: ignore\nC:",
+        " non-compact\nB: compact\n",
+        " physical\nB: mental\nC:",
+        " penalty\nB: reward\nC:",
+        " blacks\nB: grays\nC",
+        " permanent\nB: temporary\nC:",
+        " deny\nB: ignore\nC:",
+        " someone else\nB: nobody\nC",
+        " pregnancy\nB: labor\nC:",
+        " background\nB: foreground\nC:",
+        " harmful\nB: beneficial\nC:",
+        " dry\nB: hot\nC:",
+        " slow\nB: fast\nC:",
+        " non-corresponding\nB: unrelated",
+        " few\nB: many\nC:",
+        " air\nB: water\nC:",
+        " beginning\nB: middle\nC:",
+        " ugly\nB: attractive\nC:",
+        " classify\nB: categorize\nC",
+        " insufficient\nB: adequate\nC:",
+        " inefficient\nB: effective\nC:",
+        " real\nB: imaginary\nC:",
+        " conscious\nB: unconscious\nC:",
+        " bruise\nB: cut\nC",
+        " note\nB: ignore\nC:",
+        " retain\nB: ignore\nC:",
+        " insignificant\nQ: unimportant\nQ",
+        " invulnerable\nB: impervious"
+      ],
+      "original_accuracy": 0.62,
+      "optimized_accuracy": 0.62,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 1.942890293094024e-16
+    },
+    {
+      "task": "antonym",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 25,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "eternal",
+          "temporary"
+        ],
+        [
+          "inconsistency",
+          "consistency"
+        ],
+        [
+          "admit",
+          "deny"
+        ],
+        [
+          "curse",
+          "blessing"
+        ],
+        [
+          "petty",
+          "significant"
+        ],
+        [
+          "latent",
+          "manifest"
+        ],
+        [
+          "refuse",
+          "accept"
+        ],
+        [
+          "solution",
+          "problem"
+        ],
+        [
+          "connected",
+          "disconnected"
+        ],
+        [
+          "nighttime",
+          "daytime"
+        ],
+        [
+          "heavenly",
+          "hellish"
+        ],
+        [
+          "cloudy",
+          "clear"
+        ],
+        [
+          "insertion",
+          "removal"
+        ],
+        [
+          "blank",
+          "filled"
+        ],
+        [
+          "invalid",
+          "valid"
+        ],
+        [
+          "selective",
+          "indiscriminate"
+        ],
+        [
+          "achievable",
+          "unachievable"
+        ],
+        [
+          "negate",
+          "affirm"
+        ],
+        [
+          "upgrade",
+          "downgrade"
+        ],
+        [
+          "galactic",
+          "terrestrial"
+        ],
+        [
+          "expensive",
+          "cheap"
+        ],
+        [
+          "slowing",
+          "speeding"
+        ],
+        [
+          "establish",
+          "dismantle"
+        ],
+        [
+          "compact",
+          "spacious"
+        ],
+        [
+          "emotional",
+          "unemotional"
+        ],
+        [
+          "sanction",
+          "penalty"
+        ],
+        [
+          "whites",
+          "blacks"
+        ],
+        [
+          "interim",
+          "permanent"
+        ],
+        [
+          "authorize",
+          "prohibit"
+        ],
+        [
+          "someone",
+          "no one"
+        ],
+        [
+          "childbirth",
+          "death"
+        ],
+        [
+          "foreground",
+          "background"
+        ],
+        [
+          "protective",
+          "neglectful"
+        ],
+        [
+          "wet",
+          "dry"
+        ],
+        [
+          "quick",
+          "slow"
+        ],
+        [
+          "corresponding",
+          "noncorresponding"
+        ],
+        [
+          "numerous",
+          "few"
+        ],
+        [
+          "soil",
+          "sky"
+        ],
+        [
+          "end",
+          "beginning"
+        ],
+        [
+          "beautiful",
+          "ugly"
+        ],
+        [
+          "classify",
+          "disorganize"
+        ],
+        [
+          "excessive",
+          "insufficient"
+        ],
+        [
+          "efficient",
+          "inefficient"
+        ],
+        [
+          "fictitious",
+          "real"
+        ],
+        [
+          "subconscious",
+          "conscious"
+        ],
+        [
+          "bump",
+          "smooth"
+        ],
+        [
+          "note",
+          "silence"
+        ],
+        [
+          "dismiss",
+          "appoint"
+        ],
+        [
+          "monumental",
+          "insignificant"
+        ],
+        [
+          "vulnerable",
+          "invulnerable"
+        ]
+      ],
+      "before": [
+        " temporary\nB: permanent\nC:",
+        " inconsistency\nQ: inaccuracy\nA",
+        " deny\nB: ignore\nC:",
+        " blessing\nQ: curse\nA:",
+        " grand\nB: small\nC:",
+        " manifest\nB: hidden\nC:",
+        " accept\nB: reject\nC:",
+        " problem\nB: challenge\nC:",
+        " disconnected\nB: isolated\nC:",
+        " daytime\nB: nighttime\nC:",
+        " earthly\nB: spiritual\nC:",
+        " clear\nB: murky\nC:",
+        " removal\nB: destruction\nC:",
+        " empty\nB: full\nC:",
+        " valid\nB: unreliable\nC:",
+        " non-selective\nB: non-d",
+        " unattainable\nQ: impossible",
+        " affirm\nB: deny\nC:",
+        " downgrade\nB: upgrade\nC:",
+        " terrestrial\nB: celestial\nC:",
+        " cheap\nB: expensive\nC:",
+        " speeding\nB: slowing\nC:",
+        " destroy\nB: ignore\nC:",
+        " non-compact\nB: compact\n",
+        " physical\nB: mental\nC:",
+        " penalty\nB: reward\nC:",
+        " blacks\nB: grays\nC",
+        " permanent\nB: temporary\nC:",
+        " deny\nB: ignore\nC:",
+        " someone else\nB: nobody\nC",
+        " pregnancy\nB: labor\nC:",
+        " background\nB: foreground\nC:",
+        " harmful\nB: beneficial\nC:",
+        " dry\nB: hot\nC:",
+        " slow\nB: fast\nC:",
+        " non-corresponding\nB: unrelated",
+        " few\nB: many\nC:",
+        " air\nB: water\nC:",
+        " beginning\nB: middle\nC:",
+        " ugly\nB: attractive\nC:",
+        " classify\nB: categorize\nC",
+        " insufficient\nB: adequate\nC:",
+        " inefficient\nB: effective\nC:",
+        " real\nB: imaginary\nC:",
+        " conscious\nB: unconscious\nC:",
+        " bruise\nB: cut\nC",
+        " note\nB: ignore\nC:",
+        " retain\nB: ignore\nC:",
+        " insignificant\nQ: unimportant\nQ",
+        " invulnerable\nB: impervious"
+      ],
+      "after": [
+        " temporary\nB: permanent\nC:",
+        " inconsistency\nQ: inaccuracy\nA",
+        " deny\nB: ignore\nC:",
+        " blessing\nQ: curse\nA:",
+        " grand\nB: small\nC:",
+        " manifest\nB: hidden\nC:",
+        " accept\nB: reject\nC:",
+        " problem\nB: challenge\nC:",
+        " disconnected\nB: isolated\nC:",
+        " daytime\nB: nighttime\nC:",
+        " earthly\nB: spiritual\nC:",
+        " clear\nB: murky\nC:",
+        " removal\nB: destruction\nC:",
+        " empty\nB: full\nC:",
+        " valid\nB: unreliable\nC:",
+        " non-selective\nB: non-d",
+        " unattainable\nQ: impossible",
+        " affirm\nB: deny\nC:",
+        " downgrade\nB: upgrade\nC:",
+        " terrestrial\nB: celestial\nC:",
+        " cheap\nB: expensive\nC:",
+        " speeding\nB: slowing\nC:",
+        " destroy\nB: ignore\nC:",
+        " non-compact\nB: compact\n",
+        " physical\nB: mental\nC:",
+        " penalty\nB: reward\nC:",
+        " blacks\nB: grays\nC",
+        " permanent\nB: temporary\nC:",
+        " deny\nB: ignore\nC:",
+        " someone else\nB: nobody\nC",
+        " pregnancy\nB: labor\nC:",
+        " background\nB: foreground\nC:",
+        " harmful\nB: beneficial\nC:",
+        " dry\nB: hot\nC:",
+        " slow\nB: fast\nC:",
+        " non-corresponding\nB: unrelated",
+        " few\nB: many\nC:",
+        " air\nB: water\nC:",
+        " beginning\nB: middle\nC:",
+        " ugly\nB: attractive\nC:",
+        " classify\nB: categorize\nC",
+        " insufficient\nB: adequate\nC:",
+        " inefficient\nB: effective\nC:",
+        " real\nB: imaginary\nC:",
+        " conscious\nB: unconscious\nC:",
+        " bruise\nB: cut\nC",
+        " note\nB: ignore\nC:",
+        " retain\nB: ignore\nC:",
+        " insignificant\nQ: unimportant\nQ",
+        " invulnerable\nB: impervious"
+      ],
+      "original_accuracy": 0.62,
+      "optimized_accuracy": 0.62,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 1.942890293094024e-16
+    },
+    {
+      "task": "country-capital",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 1,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "Armenia",
+          "Yerevan"
+        ],
+        [
+          "Netherlands",
+          "Amsterdam"
+        ],
+        [
+          "Marshall Islands",
+          "Majuro"
+        ],
+        [
+          "Romania",
+          "Bucharest"
+        ],
+        [
+          "North Korea",
+          "Pyongyang"
+        ],
+        [
+          "Solomon Islands",
+          "Honiara"
+        ],
+        [
+          "Georgia",
+          "Tbilisi"
+        ],
+        [
+          "Brunei",
+          "Bandar Seri Begawan"
+        ],
+        [
+          "Grenada",
+          "St. George's"
+        ],
+        [
+          "Papua New Guinea",
+          "Port Moresby"
+        ],
+        [
+          "Russia",
+          "Moscow"
+        ],
+        [
+          "South Korea",
+          "Seoul"
+        ],
+        [
+          "Iraq",
+          "Baghdad"
+        ],
+        [
+          "Bahamas",
+          "Nassau"
+        ],
+        [
+          "Senegal",
+          "Dakar"
+        ],
+        [
+          "Italy",
+          "Rome"
+        ],
+        [
+          "Algeria",
+          "Algiers"
+        ],
+        [
+          "Indonesia",
+          "Jakarta"
+        ],
+        [
+          "France",
+          "Paris"
+        ],
+        [
+          "Bhutan",
+          "Thimphu"
+        ],
+        [
+          "Central African Republic",
+          "Bangui"
+        ],
+        [
+          "Kazakhstan",
+          "Astana"
+        ],
+        [
+          "Bolivia",
+          "La Paz"
+        ],
+        [
+          "South Sudan",
+          "Juba"
+        ],
+        [
+          "Botswana",
+          "Gaborone"
+        ],
+        [
+          "Guinea",
+          "Conakry"
+        ],
+        [
+          "Mongolia",
+          "Ulaanbaatar"
+        ],
+        [
+          "Monaco",
+          "Monaco-Ville"
+        ],
+        [
+          "Australia",
+          "Canberra"
+        ],
+        [
+          "Guatemala",
+          "Guatemala City"
+        ],
+        [
+          "Malawi",
+          "Lilongwe"
+        ],
+        [
+          "Panama",
+          "Panama City"
+        ],
+        [
+          "Suriname",
+          "Paramaribo"
+        ],
+        [
+          "Lebanon",
+          "Beirut"
+        ],
+        [
+          "Venezuela",
+          "Caracas"
+        ],
+        [
+          "United Arab Emirates",
+          "Abu Dhabi"
+        ],
+        [
+          "Vatican City",
+          "Vatican City"
+        ],
+        [
+          "Belarus",
+          "Minsk"
+        ],
+        [
+          "Ukraine",
+          "Kiev"
+        ],
+        [
+          "Kosovo",
+          "Pristina"
+        ],
+        [
+          "Albania",
+          "Tirana"
+        ],
+        [
+          "Costa Rica",
+          "San Jos\u00e9"
+        ],
+        [
+          "Somalia",
+          "Mogadishu"
+        ],
+        [
+          "Nigeria",
+          "Abuja"
+        ],
+        [
+          "Barbados",
+          "Bridgetown"
+        ],
+        [
+          "Mauritania",
+          "Nouakchott"
+        ],
+        [
+          "Canada",
+          "Ottawa"
+        ],
+        [
+          "Singapore",
+          "Singapore"
+        ],
+        [
+          "Eritrea",
+          "Asmara"
+        ]
+      ],
+      "before": [
+        " Yerevan\nQ: Capital\n",
+        " Amsterdam\nQ: Capital\nA:",
+        " Majuro\nQ: Capital\nA",
+        " Bucharest\nQ: Capital\nA",
+        " Pyongyang\nQ: Capital\nA:",
+        " Honiara\nQ: Port M",
+        " Atlanta\nQ: Montgomery\nA:",
+        " Bandar Seri Begawan\nQ",
+        " St. George's\nQ: Port",
+        " Port Moresby\nQ: Port",
+        " Moscow\nQ: Capital\nA:",
+        " Seoul\nQ: Capital\nA:",
+        " Baghdad\nQ: Capital\nA:",
+        " Nassau\nQ: Capital\nA",
+        " Dakar\nQ: Capital\nA",
+        " Rome\nQ: Capital\nA:",
+        " Algiers\nQ: Capital\nA",
+        " Jakarta\nQ: Bandung\nQ",
+        " Paris\nQ: Capital\nA:",
+        " Thimphu\nQ: Th",
+        " Bangui\nQ: Yaound\u00e9",
+        " Astana\nQ: Almaty",
+        " La Paz\nQ: Sucre\n",
+        " Juba\nQ: Capital\nA",
+        " Gaborone\nQ: Maser",
+        " Conakry\nQ: Capital\n",
+        " Ulaanbaatar\nQ:",
+        " Monaco\nMonaco (French: Monaco",
+        " Sydney\nQ: Capital\nA:",
+        " Guatemala City\nQ: Guatemala City\n",
+        " Lilongwe\nQ: Malabo",
+        " Panama City\nQ: Panama\nA",
+        " Paramaribo\nQ: Capital\n",
+        " Beirut\nQ: Capital\nA:",
+        " Caracas\nQ: Capital\nA",
+        " Abu Dhabi\nQ: What is the",
+        " Rome\nQ: Capital\nA:",
+        " Minsk\nQ: Minsk\n",
+        " Kiev\nQ: Capital\nA:",
+        " Pristina\nQ: Tirana",
+        " Tirana\nQ: Andorra la",
+        " San Jos\u00e9\nQ: San Jos\u00e9\n",
+        " Mogadishu\nQ: Capital",
+        " Abuja\nQ: Lagos\nA",
+        " Bridgetown\nQ: Saint George",
+        " Nouakchott\nQ: Capital",
+        " Ottawa\nQ: Capital\nA:",
+        " Singapore\nSingapore is the capital of Singapore",
+        " Asmara\nQ: Asm"
+      ],
+      "after": [
+        " Yerevan\nQ: Capital\n",
+        " Amsterdam\nQ: Capital\nA:",
+        " Majuro\nQ: Capital\nA",
+        " Bucharest\nQ: Capital\nA",
+        " Pyongyang\nQ: Capital\nA:",
+        " Honiara\nQ: Port M",
+        " Atlanta\nQ: Montgomery\nA:",
+        " Bandar Seri Begawan\nQ",
+        " St. George's\nQ: Port",
+        " Port Moresby\nQ: Port",
+        " Moscow\nQ: Capital\nA:",
+        " Seoul\nQ: Capital\nA:",
+        " Baghdad\nQ: Capital\nA:",
+        " Nassau\nQ: Capital\nA",
+        " Dakar\nQ: Capital\nA",
+        " Rome\nQ: Capital\nA:",
+        " Algiers\nQ: Capital\nA",
+        " Jakarta\nQ: Bandung\nQ",
+        " Paris\nQ: Capital\nA:",
+        " Thimphu\nQ: Th",
+        " Bangui\nQ: Yaound\u00e9",
+        " Astana\nQ: Almaty",
+        " La Paz\nQ: Sucre\n",
+        " Juba\nQ: Capital\nA",
+        " Gaborone\nQ: Maser",
+        " Conakry\nQ: Capital\n",
+        " Ulaanbaatar\nQ:",
+        " Monaco\nMonaco (French: Monaco",
+        " Sydney\nQ: Capital\nA:",
+        " Guatemala City\nQ: Guatemala City\n",
+        " Lilongwe\nQ: Malabo",
+        " Panama City\nQ: Panama\nA",
+        " Paramaribo\nQ: Capital\n",
+        " Beirut\nQ: Capital\nA:",
+        " Caracas\nQ: Capital\nA",
+        " Abu Dhabi\nQ: What is the",
+        " Rome\nQ: Capital\nA:",
+        " Minsk\nQ: Minsk\n",
+        " Kiev\nQ: Capital\nA:",
+        " Pristina\nQ: Tirana",
+        " Tirana\nQ: Andorra la",
+        " San Jos\u00e9\nQ: San Jos\u00e9\n",
+        " Mogadishu\nQ: Capital",
+        " Abuja\nQ: Lagos\nA",
+        " Bridgetown\nQ: Saint George",
+        " Nouakchott\nQ: Capital",
+        " Ottawa\nQ: Capital\nA:",
+        " Singapore\nSingapore is the capital of Singapore",
+        " Asmara\nQ: Asm"
+      ],
+      "original_accuracy": 0.9183673469387755,
+      "optimized_accuracy": 0.9183673469387755,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 2.7755575615628914e-16
+    },
+    {
+      "task": "country-capital",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 8,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "Armenia",
+          "Yerevan"
+        ],
+        [
+          "Netherlands",
+          "Amsterdam"
+        ],
+        [
+          "Marshall Islands",
+          "Majuro"
+        ],
+        [
+          "Romania",
+          "Bucharest"
+        ],
+        [
+          "North Korea",
+          "Pyongyang"
+        ],
+        [
+          "Solomon Islands",
+          "Honiara"
+        ],
+        [
+          "Georgia",
+          "Tbilisi"
+        ],
+        [
+          "Brunei",
+          "Bandar Seri Begawan"
+        ],
+        [
+          "Grenada",
+          "St. George's"
+        ],
+        [
+          "Papua New Guinea",
+          "Port Moresby"
+        ],
+        [
+          "Russia",
+          "Moscow"
+        ],
+        [
+          "South Korea",
+          "Seoul"
+        ],
+        [
+          "Iraq",
+          "Baghdad"
+        ],
+        [
+          "Bahamas",
+          "Nassau"
+        ],
+        [
+          "Senegal",
+          "Dakar"
+        ],
+        [
+          "Italy",
+          "Rome"
+        ],
+        [
+          "Algeria",
+          "Algiers"
+        ],
+        [
+          "Indonesia",
+          "Jakarta"
+        ],
+        [
+          "France",
+          "Paris"
+        ],
+        [
+          "Bhutan",
+          "Thimphu"
+        ],
+        [
+          "Central African Republic",
+          "Bangui"
+        ],
+        [
+          "Kazakhstan",
+          "Astana"
+        ],
+        [
+          "Bolivia",
+          "La Paz"
+        ],
+        [
+          "South Sudan",
+          "Juba"
+        ],
+        [
+          "Botswana",
+          "Gaborone"
+        ],
+        [
+          "Guinea",
+          "Conakry"
+        ],
+        [
+          "Mongolia",
+          "Ulaanbaatar"
+        ],
+        [
+          "Monaco",
+          "Monaco-Ville"
+        ],
+        [
+          "Australia",
+          "Canberra"
+        ],
+        [
+          "Guatemala",
+          "Guatemala City"
+        ],
+        [
+          "Malawi",
+          "Lilongwe"
+        ],
+        [
+          "Panama",
+          "Panama City"
+        ],
+        [
+          "Suriname",
+          "Paramaribo"
+        ],
+        [
+          "Lebanon",
+          "Beirut"
+        ],
+        [
+          "Venezuela",
+          "Caracas"
+        ],
+        [
+          "United Arab Emirates",
+          "Abu Dhabi"
+        ],
+        [
+          "Vatican City",
+          "Vatican City"
+        ],
+        [
+          "Belarus",
+          "Minsk"
+        ],
+        [
+          "Ukraine",
+          "Kiev"
+        ],
+        [
+          "Kosovo",
+          "Pristina"
+        ],
+        [
+          "Albania",
+          "Tirana"
+        ],
+        [
+          "Costa Rica",
+          "San Jos\u00e9"
+        ],
+        [
+          "Somalia",
+          "Mogadishu"
+        ],
+        [
+          "Nigeria",
+          "Abuja"
+        ],
+        [
+          "Barbados",
+          "Bridgetown"
+        ],
+        [
+          "Mauritania",
+          "Nouakchott"
+        ],
+        [
+          "Canada",
+          "Ottawa"
+        ],
+        [
+          "Singapore",
+          "Singapore"
+        ],
+        [
+          "Eritrea",
+          "Asmara"
+        ]
+      ],
+      "before": [
+        " Yerevan\nQ: Capital\n",
+        " Amsterdam\nQ: Capital\nA:",
+        " Majuro\nQ: Capital\nA",
+        " Bucharest\nQ: Capital\nA",
+        " Pyongyang\nQ: Capital\nA:",
+        " Honiara\nQ: Port M",
+        " Atlanta\nQ: Montgomery\nA:",
+        " Bandar Seri Begawan\nQ",
+        " St. George's\nQ: Port",
+        " Port Moresby\nQ: Port",
+        " Moscow\nQ: Capital\nA:",
+        " Seoul\nQ: Capital\nA:",
+        " Baghdad\nQ: Capital\nA:",
+        " Nassau\nQ: Capital\nA",
+        " Dakar\nQ: Capital\nA",
+        " Rome\nQ: Capital\nA:",
+        " Algiers\nQ: Capital\nA",
+        " Jakarta\nQ: Bandar Seri",
+        " Paris\nQ: Capital\nA:",
+        " Thimphu\nQ: Th",
+        " Bangui\nQ: Yaound\u00e9",
+        " Astana\nQ: Almaty",
+        " La Paz\nQ: Sucre\n",
+        " Juba\nQ: Capital\nA",
+        " Gaborone\nQ: Maser",
+        " Conakry\nQ: Capital\n",
+        " Ulaanbaatar\nQ:",
+        " Monaco\nMonaco (French: Monaco",
+        " Sydney\nQ: Capital\nA:",
+        " Guatemala City\nQ: Guatemala City\n",
+        " Lilongwe\nQ: Malabo",
+        " Panama City\nQ: Panama\nA",
+        " Paramaribo\nQ: Capital\n",
+        " Beirut\nQ: Capital\nA:",
+        " Caracas\nQ: Capital\nA",
+        " Abu Dhabi\nQ: What is the",
+        " Rome\nQ: Capital\nA:",
+        " Minsk\nQ: Minsk\n",
+        " Kiev\nQ: Capital\nA:",
+        " Pristina\nQ: Tirana",
+        " Tirana\nQ: Andorra la",
+        " San Jos\u00e9\nQ: San Jos\u00e9\n",
+        " Mogadishu\nQ: Capital",
+        " Abuja\nQ: Lagos\nA",
+        " Bridgetown\nQ: Saint George",
+        " Nouakchott\nQ: Capital",
+        " Ottawa\nQ: Capital\nA:",
+        " Singapore\nSingapore is the capital of Singapore",
+        " Asmara\nQ: Asm"
+      ],
+      "after": [
+        " Yerevan\nQ: Capital\n",
+        " Amsterdam\nQ: Capital\nA:",
+        " Majuro\nQ: Capital\nA",
+        " Bucharest\nQ: Capital\nA",
+        " Pyongyang\nQ: Capital\nA:",
+        " Honiara\nQ: Port M",
+        " Atlanta\nQ: Montgomery\nA:",
+        " Bandar Seri Begawan\nQ",
+        " St. George's\nQ: Port",
+        " Port Moresby\nQ: Port",
+        " Moscow\nQ: Capital\nA:",
+        " Seoul\nQ: Capital\nA:",
+        " Baghdad\nQ: Capital\nA:",
+        " Nassau\nQ: Capital\nA",
+        " Dakar\nQ: Capital\nA",
+        " Rome\nQ: Capital\nA:",
+        " Algiers\nQ: Capital\nA",
+        " Jakarta\nQ: Bandar Seri",
+        " Paris\nQ: Capital\nA:",
+        " Thimphu\nQ: Th",
+        " Bangui\nQ: Yaound\u00e9",
+        " Astana\nQ: Almaty",
+        " La Paz\nQ: Sucre\n",
+        " Juba\nQ: Capital\nA",
+        " Gaborone\nQ: Maser",
+        " Conakry\nQ: Capital\n",
+        " Ulaanbaatar\nQ:",
+        " Monaco\nMonaco (French: Monaco",
+        " Sydney\nQ: Capital\nA:",
+        " Guatemala City\nQ: Guatemala City\n",
+        " Lilongwe\nQ: Malabo",
+        " Panama City\nQ: Panama\nA",
+        " Paramaribo\nQ: Capital\n",
+        " Beirut\nQ: Capital\nA:",
+        " Caracas\nQ: Capital\nA",
+        " Abu Dhabi\nQ: What is the",
+        " Rome\nQ: Capital\nA:",
+        " Minsk\nQ: Minsk\n",
+        " Kiev\nQ: Capital\nA:",
+        " Pristina\nQ: Tirana",
+        " Tirana\nQ: Andorra la",
+        " San Jos\u00e9\nQ: San Jos\u00e9\n",
+        " Mogadishu\nQ: Capital",
+        " Abuja\nQ: Lagos\nA",
+        " Bridgetown\nQ: Saint George",
+        " Nouakchott\nQ: Capital",
+        " Ottawa\nQ: Capital\nA:",
+        " Singapore\nSingapore is the capital of Singapore",
+        " Asmara\nQ: Asm"
+      ],
+      "original_accuracy": 0.9183673469387755,
+      "optimized_accuracy": 0.9183673469387755,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 2.7755575615628914e-16
+    },
+    {
+      "task": "country-capital",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 25,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "Armenia",
+          "Yerevan"
+        ],
+        [
+          "Netherlands",
+          "Amsterdam"
+        ],
+        [
+          "Marshall Islands",
+          "Majuro"
+        ],
+        [
+          "Romania",
+          "Bucharest"
+        ],
+        [
+          "North Korea",
+          "Pyongyang"
+        ],
+        [
+          "Solomon Islands",
+          "Honiara"
+        ],
+        [
+          "Georgia",
+          "Tbilisi"
+        ],
+        [
+          "Brunei",
+          "Bandar Seri Begawan"
+        ],
+        [
+          "Grenada",
+          "St. George's"
+        ],
+        [
+          "Papua New Guinea",
+          "Port Moresby"
+        ],
+        [
+          "Russia",
+          "Moscow"
+        ],
+        [
+          "South Korea",
+          "Seoul"
+        ],
+        [
+          "Iraq",
+          "Baghdad"
+        ],
+        [
+          "Bahamas",
+          "Nassau"
+        ],
+        [
+          "Senegal",
+          "Dakar"
+        ],
+        [
+          "Italy",
+          "Rome"
+        ],
+        [
+          "Algeria",
+          "Algiers"
+        ],
+        [
+          "Indonesia",
+          "Jakarta"
+        ],
+        [
+          "France",
+          "Paris"
+        ],
+        [
+          "Bhutan",
+          "Thimphu"
+        ],
+        [
+          "Central African Republic",
+          "Bangui"
+        ],
+        [
+          "Kazakhstan",
+          "Astana"
+        ],
+        [
+          "Bolivia",
+          "La Paz"
+        ],
+        [
+          "South Sudan",
+          "Juba"
+        ],
+        [
+          "Botswana",
+          "Gaborone"
+        ],
+        [
+          "Guinea",
+          "Conakry"
+        ],
+        [
+          "Mongolia",
+          "Ulaanbaatar"
+        ],
+        [
+          "Monaco",
+          "Monaco-Ville"
+        ],
+        [
+          "Australia",
+          "Canberra"
+        ],
+        [
+          "Guatemala",
+          "Guatemala City"
+        ],
+        [
+          "Malawi",
+          "Lilongwe"
+        ],
+        [
+          "Panama",
+          "Panama City"
+        ],
+        [
+          "Suriname",
+          "Paramaribo"
+        ],
+        [
+          "Lebanon",
+          "Beirut"
+        ],
+        [
+          "Venezuela",
+          "Caracas"
+        ],
+        [
+          "United Arab Emirates",
+          "Abu Dhabi"
+        ],
+        [
+          "Vatican City",
+          "Vatican City"
+        ],
+        [
+          "Belarus",
+          "Minsk"
+        ],
+        [
+          "Ukraine",
+          "Kiev"
+        ],
+        [
+          "Kosovo",
+          "Pristina"
+        ],
+        [
+          "Albania",
+          "Tirana"
+        ],
+        [
+          "Costa Rica",
+          "San Jos\u00e9"
+        ],
+        [
+          "Somalia",
+          "Mogadishu"
+        ],
+        [
+          "Nigeria",
+          "Abuja"
+        ],
+        [
+          "Barbados",
+          "Bridgetown"
+        ],
+        [
+          "Mauritania",
+          "Nouakchott"
+        ],
+        [
+          "Canada",
+          "Ottawa"
+        ],
+        [
+          "Singapore",
+          "Singapore"
+        ],
+        [
+          "Eritrea",
+          "Asmara"
+        ]
+      ],
+      "before": [
+        " Yerevan\nQ: Capital\n",
+        " Amsterdam\nQ: Capital\nA:",
+        " Majuro\nQ: Capital\nA",
+        " Bucharest\nQ: Capital\nA",
+        " Pyongyang\nQ: Capital\nA:",
+        " Honiara\nQ: Port M",
+        " Atlanta\nQ: Montgomery\nA:",
+        " Bandar Seri Begawan\nQ",
+        " St. George's\nQ: Port",
+        " Port Moresby\nQ: Port",
+        " Moscow\nQ: Capital\nA:",
+        " Seoul\nQ: Capital\nA:",
+        " Baghdad\nQ: Capital\nA:",
+        " Nassau\nQ: Capital\nA",
+        " Dakar\nQ: Capital\nA",
+        " Rome\nQ: Capital\nA:",
+        " Algiers\nQ: Capital\nA",
+        " Jakarta\nQ: Bandung\nQ",
+        " Paris\nQ: Capital\nA:",
+        " Thimphu\nQ: Th",
+        " Bangui\nQ: Yaound\u00e9",
+        " Astana\nQ: Almaty",
+        " La Paz\nQ: Sucre\n",
+        " Juba\nQ: Capital\nA",
+        " Gaborone\nQ: Maser",
+        " Conakry\nQ: Capital\n",
+        " Ulaanbaatar\nQ:",
+        " Monaco\nMonaco (French: Monaco",
+        " Sydney\nQ: Capital\nA:",
+        " Guatemala City\nQ: Guatemala City\n",
+        " Lilongwe\nQ: Malabo",
+        " Panama City\nQ: Panama\nA",
+        " Paramaribo\nQ: Capital\n",
+        " Beirut\nQ: Capital\nA:",
+        " Caracas\nQ: Capital\nA",
+        " Abu Dhabi\nQ: What is the",
+        " Rome\nQ: Capital\nA:",
+        " Minsk\nQ: Minsk\n",
+        " Kiev\nQ: Capital\nA:",
+        " Pristina\nQ: Tirana",
+        " Tirana\nQ: Andorra la",
+        " San Jos\u00e9\nQ: San Jos\u00e9\n",
+        " Mogadishu\nQ: Capital",
+        " Abuja\nQ: Lagos\nA",
+        " Bridgetown\nQ: Saint George",
+        " Nouakchott\nQ: Capital",
+        " Ottawa\nQ: Capital\nA:",
+        " Singapore\nSingapore is the capital of Singapore",
+        " Asmara\nQ: Asm"
+      ],
+      "after": [
+        " Yerevan\nQ: Capital\n",
+        " Amsterdam\nQ: Capital\nA:",
+        " Majuro\nQ: Capital\nA",
+        " Bucharest\nQ: Capital\nA",
+        " Pyongyang\nQ: Capital\nA:",
+        " Honiara\nQ: Port M",
+        " Atlanta\nQ: Montgomery\nA:",
+        " Bandar Seri Begawan\nQ",
+        " St. George's\nQ: Port",
+        " Port Moresby\nQ: Port",
+        " Moscow\nQ: Capital\nA:",
+        " Seoul\nQ: Capital\nA:",
+        " Baghdad\nQ: Capital\nA:",
+        " Nassau\nQ: Capital\nA",
+        " Dakar\nQ: Capital\nA",
+        " Rome\nQ: Capital\nA:",
+        " Algiers\nQ: Capital\nA",
+        " Jakarta\nQ: Bandung\nQ",
+        " Paris\nQ: Capital\nA:",
+        " Thimphu\nQ: Th",
+        " Bangui\nQ: Yaound\u00e9",
+        " Astana\nQ: Almaty",
+        " La Paz\nQ: Sucre\n",
+        " Juba\nQ: Capital\nA",
+        " Gaborone\nQ: Maser",
+        " Conakry\nQ: Capital\n",
+        " Ulaanbaatar\nQ:",
+        " Monaco\nMonaco (French: Monaco",
+        " Sydney\nQ: Capital\nA:",
+        " Guatemala City\nQ: Guatemala City\n",
+        " Lilongwe\nQ: Malabo",
+        " Panama City\nQ: Panama\nA",
+        " Paramaribo\nQ: Capital\n",
+        " Beirut\nQ: Capital\nA:",
+        " Caracas\nQ: Capital\nA",
+        " Abu Dhabi\nQ: What is the",
+        " Rome\nQ: Capital\nA:",
+        " Minsk\nQ: Minsk\n",
+        " Kiev\nQ: Capital\nA:",
+        " Pristina\nQ: Tirana",
+        " Tirana\nQ: Andorra la",
+        " San Jos\u00e9\nQ: San Jos\u00e9\n",
+        " Mogadishu\nQ: Capital",
+        " Abuja\nQ: Lagos\nA",
+        " Bridgetown\nQ: Saint George",
+        " Nouakchott\nQ: Capital",
+        " Ottawa\nQ: Capital\nA:",
+        " Singapore\nSingapore is the capital of Singapore",
+        " Asmara\nQ: Asm"
+      ],
+      "original_accuracy": 0.9183673469387755,
+      "optimized_accuracy": 0.9183673469387755,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 2.7755575615628914e-16
+    },
+    {
+      "task": "english-french",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 1,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "wednesday",
+          "mercredi"
+        ],
+        [
+          "hood",
+          "capuche"
+        ],
+        [
+          "argentina",
+          "argentine"
+        ],
+        [
+          "winners",
+          "gagnants"
+        ],
+        [
+          "expatriates",
+          "expatri\u00e9s"
+        ],
+        [
+          "overview",
+          "aper\u00e7u"
+        ],
+        [
+          "slovakia",
+          "Slovaquie"
+        ],
+        [
+          "touring",
+          "visite"
+        ],
+        [
+          "your",
+          "votre"
+        ],
+        [
+          "administered",
+          "administr\u00e9"
+        ],
+        [
+          "television",
+          "t\u00e9l\u00e9vision"
+        ],
+        [
+          "describe",
+          "d\u00e9crire"
+        ],
+        [
+          "executed",
+          "ex\u00e9cut\u00e9"
+        ],
+        [
+          "classics",
+          "classiques"
+        ],
+        [
+          "proceedings",
+          "proc\u00e9dures"
+        ],
+        [
+          "travels",
+          "voyages"
+        ],
+        [
+          "returning",
+          "retournant"
+        ],
+        [
+          "years",
+          "ann\u00e9es"
+        ],
+        [
+          "com",
+          "dot com - point com"
+        ],
+        [
+          "having",
+          "avoir"
+        ],
+        [
+          "provided",
+          "fourni"
+        ],
+        [
+          "peer",
+          "pair"
+        ],
+        [
+          "presidency",
+          "pr\u00e9sidence"
+        ],
+        [
+          "lake",
+          "lac"
+        ],
+        [
+          "against",
+          "contre"
+        ],
+        [
+          "mill",
+          "moulin"
+        ],
+        [
+          "voices",
+          "voix"
+        ],
+        [
+          "independently",
+          "ind\u00e9pendamment"
+        ],
+        [
+          "upset",
+          "boulevers\u00e9"
+        ],
+        [
+          "binding",
+          "reliure"
+        ],
+        [
+          "stamp",
+          "timbre"
+        ],
+        [
+          "rebuilt",
+          "reconstruit"
+        ],
+        [
+          "targeted",
+          "cibl\u00e9"
+        ],
+        [
+          "latvia",
+          "Lettonie"
+        ],
+        [
+          "disk",
+          "disque"
+        ],
+        [
+          "knowledge",
+          "connaissance"
+        ],
+        [
+          "remaining",
+          "restant"
+        ],
+        [
+          "huge",
+          "\u00e9norme"
+        ],
+        [
+          "forwards",
+          "en avant"
+        ],
+        [
+          "systems",
+          "syst\u00e8mes"
+        ],
+        [
+          "channel",
+          "cha\u00eene"
+        ],
+        [
+          "oriented",
+          "orient\u00e9"
+        ],
+        [
+          "antarctica",
+          "antarctique"
+        ],
+        [
+          "glass",
+          "verre"
+        ],
+        [
+          "island",
+          "\u00eele"
+        ],
+        [
+          "trusted",
+          "de confiance"
+        ],
+        [
+          "vehicles",
+          "v\u00e9hicules"
+        ],
+        [
+          "funny",
+          "dr\u00f4le"
+        ],
+        [
+          "king",
+          "roi"
+        ],
+        [
+          "decline",
+          "refuser"
+        ]
+      ],
+      "before": [
+        " mercredi\nUn article de pres",
+        " couvercle\nUn article de la",
+        " Argentina\n1. L'Argentine",
+        " champions, champions, champions, champions,",
+        " expatri\u00e9s\nLes expatri\u00e9s",
+        " A brief overview of the situation.\nEx",
+        " Slovaquie\nLa R\u00e9pub",
+        " voyager\nB: voyageur\n",
+        " votre\nLe mot \u00ab votre \u00bb est",
+        " administr\u00e9\nB: administr\u00e9\n",
+        " t\u00e9l\u00e9vision\nUn article de presse",
+        " describe\n1. d\u00e9crire\n2",
+        " executed\nB: ex\u00e9cut\u00e9",
+        " 1. Les classiques, ",
+        " proc\u00e9der\nB: proc\u00e9",
+        " voyages\nB: voyages\n",
+        " retournant\n1. Le retour",
+        " ann\u00e9es\n1. Les ann\u00e9es pr\u00e9c\u00e9d",
+        " 1. 1. 2",
+        " avoir\nB: avoir\nC:",
+        " (a) four (b) c",
+        " camarade\nUn article de presse",
+        " pr\u00e9sidence\n1. la pr\u00e9sidence",
+        " lac ( lac, lac, lac,",
+        " contre\nB: contre\nC:",
+        " moulin (1) (2)",
+        " 1) les voix, les",
+        " de mani\u00e8re autonome\nB:",
+        " 1) en col\u00e8re, en",
+        " liaison\nB: lien\nC:",
+        " timbre\nB: timbre\n",
+        " r\u00e9par\u00e9, r\u00e9vis\u00e9,",
+        " ciblage\nUn article de pres",
+        " Lettonie\nLa Lettonie",
+        " disque\nUn article de Wikip\u00e9d",
+        " connaissance\nB: savoir\nC",
+        " restant\nB: restant\n",
+        " \u00e9norme\nUn grand nombre de",
+        " avant\nB: avant-garde\n",
+        " 1. Syst\u00e8me (s",
+        " canal\nB: aqueduc\nC",
+        " orient\u00e9\n1. Le nom du",
+        " 1. Le continent le plus f",
+        " 1. verre 2.",
+        " \u00eele\nUn endroit isol\u00e9",
+        " confiance\nB: confiance\n",
+        " 1. les v\u00e9hicules\n",
+        " dr\u00f4le\nUn exemple : \u00ab Il",
+        " roi\nUn article est n\u00e9cessaire pour trad",
+        " d\u00e9clin\n1. le d\u00e9clin"
+      ],
+      "after": [
+        " mercredi\nUn article de pres",
+        " couvercle\nUn article de la",
+        " Argentina\n1. L'Argentine",
+        " champions, champions, champions, champions,",
+        " expatri\u00e9s\nLes expatri\u00e9s",
+        " A brief overview of the situation.\nEx",
+        " Slovaquie\nLa R\u00e9pub",
+        " voyager\nB: voyageur\n",
+        " votre\nLe mot \u00ab votre \u00bb est",
+        " administr\u00e9\nB: administr\u00e9\n",
+        " t\u00e9l\u00e9vision\nUn article de presse",
+        " describe\n1. d\u00e9crire\n2",
+        " executed\nB: ex\u00e9cut\u00e9",
+        " 1. Les classiques, ",
+        " proc\u00e9der\nB: proc\u00e9",
+        " voyages\nB: voyages\n",
+        " retournant\n1. Le retour",
+        " ann\u00e9es\n1. Les ann\u00e9es pr\u00e9c\u00e9d",
+        " 1. 1. 2",
+        " avoir\nB: avoir\nC:",
+        " (a) four (b) c",
+        " camarade\nUn article de presse",
+        " pr\u00e9sidence\n1. la pr\u00e9sidence",
+        " lac ( lac, lac, lac,",
+        " contre\nB: contre\nC:",
+        " moulin (1) (2)",
+        " 1) les voix, les",
+        " de mani\u00e8re autonome\nB:",
+        " 1) en col\u00e8re, en",
+        " liaison\nB: lien\nC:",
+        " timbre\nB: timbre\n",
+        " r\u00e9par\u00e9, r\u00e9vis\u00e9,",
+        " ciblage\nUn article de pres",
+        " Lettonie\nLa Lettonie",
+        " disque\nUn article de Wikip\u00e9d",
+        " connaissance\nB: savoir\nC",
+        " restant\nB: restant\n",
+        " \u00e9norme\nUn grand nombre de",
+        " avant\nB: avant-garde\n",
+        " 1. Syst\u00e8me (s",
+        " canal\nB: aqueduc\nC",
+        " orient\u00e9\n1. Le nom du",
+        " 1. Le continent le plus f",
+        " 1. verre 2.",
+        " \u00eele\nUn endroit isol\u00e9",
+        " confiance\nB: confiance\n",
+        " 1. les v\u00e9hicules\n",
+        " dr\u00f4le\nUn exemple : \u00ab Il",
+        " roi\nUn article est n\u00e9cessaire pour trad",
+        " d\u00e9clin\n1. le d\u00e9clin"
+      ],
+      "original_accuracy": 0.48,
+      "optimized_accuracy": 0.48,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 3.8510861166685117e-16
+    },
+    {
+      "task": "english-french",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 8,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "wednesday",
+          "mercredi"
+        ],
+        [
+          "hood",
+          "capuche"
+        ],
+        [
+          "argentina",
+          "argentine"
+        ],
+        [
+          "winners",
+          "gagnants"
+        ],
+        [
+          "expatriates",
+          "expatri\u00e9s"
+        ],
+        [
+          "overview",
+          "aper\u00e7u"
+        ],
+        [
+          "slovakia",
+          "Slovaquie"
+        ],
+        [
+          "touring",
+          "visite"
+        ],
+        [
+          "your",
+          "votre"
+        ],
+        [
+          "administered",
+          "administr\u00e9"
+        ],
+        [
+          "television",
+          "t\u00e9l\u00e9vision"
+        ],
+        [
+          "describe",
+          "d\u00e9crire"
+        ],
+        [
+          "executed",
+          "ex\u00e9cut\u00e9"
+        ],
+        [
+          "classics",
+          "classiques"
+        ],
+        [
+          "proceedings",
+          "proc\u00e9dures"
+        ],
+        [
+          "travels",
+          "voyages"
+        ],
+        [
+          "returning",
+          "retournant"
+        ],
+        [
+          "years",
+          "ann\u00e9es"
+        ],
+        [
+          "com",
+          "dot com - point com"
+        ],
+        [
+          "having",
+          "avoir"
+        ],
+        [
+          "provided",
+          "fourni"
+        ],
+        [
+          "peer",
+          "pair"
+        ],
+        [
+          "presidency",
+          "pr\u00e9sidence"
+        ],
+        [
+          "lake",
+          "lac"
+        ],
+        [
+          "against",
+          "contre"
+        ],
+        [
+          "mill",
+          "moulin"
+        ],
+        [
+          "voices",
+          "voix"
+        ],
+        [
+          "independently",
+          "ind\u00e9pendamment"
+        ],
+        [
+          "upset",
+          "boulevers\u00e9"
+        ],
+        [
+          "binding",
+          "reliure"
+        ],
+        [
+          "stamp",
+          "timbre"
+        ],
+        [
+          "rebuilt",
+          "reconstruit"
+        ],
+        [
+          "targeted",
+          "cibl\u00e9"
+        ],
+        [
+          "latvia",
+          "Lettonie"
+        ],
+        [
+          "disk",
+          "disque"
+        ],
+        [
+          "knowledge",
+          "connaissance"
+        ],
+        [
+          "remaining",
+          "restant"
+        ],
+        [
+          "huge",
+          "\u00e9norme"
+        ],
+        [
+          "forwards",
+          "en avant"
+        ],
+        [
+          "systems",
+          "syst\u00e8mes"
+        ],
+        [
+          "channel",
+          "cha\u00eene"
+        ],
+        [
+          "oriented",
+          "orient\u00e9"
+        ],
+        [
+          "antarctica",
+          "antarctique"
+        ],
+        [
+          "glass",
+          "verre"
+        ],
+        [
+          "island",
+          "\u00eele"
+        ],
+        [
+          "trusted",
+          "de confiance"
+        ],
+        [
+          "vehicles",
+          "v\u00e9hicules"
+        ],
+        [
+          "funny",
+          "dr\u00f4le"
+        ],
+        [
+          "king",
+          "roi"
+        ],
+        [
+          "decline",
+          "refuser"
+        ]
+      ],
+      "before": [
+        " mercredi\nUn article de pres",
+        " couvercle\nUn article de la",
+        " Argentina\n1. L'Argentine",
+        " champions, champions, champions, champions,",
+        " expatri\u00e9s\nLes expatri\u00e9s",
+        " A brief overview of the situation.\nUn",
+        " Slovaquie\nLa R\u00e9pub",
+        " voyager\nB: voyageur\n",
+        " votre\nLe mot \u00ab votre \u00bb est",
+        " administr\u00e9\nB: administr\u00e9\n",
+        " t\u00e9l\u00e9vision\nUn article de presse",
+        " describe\n1. d\u00e9crire\n2",
+        " executed\nB: ex\u00e9cut\u00e9",
+        " 1. Les classiques, ",
+        " proc\u00e9der\nB: proc\u00e9",
+        " voyages\nB: voyages\n",
+        " retournant\n1. Le retour",
+        " ann\u00e9es\n1. Les ann\u00e9es pr\u00e9c\u00e9d",
+        " 1. 1. 2",
+        " avoir\nB: avoir\nC:",
+        " (a) four (b) c",
+        " camarade\nUn article de presse",
+        " pr\u00e9sidence\n1. la pr\u00e9sidence",
+        " lac ( lac, lac, lac,",
+        " contre\nB: contre\nC:",
+        " moulin (1) (2)",
+        " 1) les voix, les",
+        " de mani\u00e8re autonome\nB:",
+        " 1) en col\u00e8re, en",
+        " liaison\nB: lien\nC:",
+        " timbre\nB: timbre\n",
+        " r\u00e9par\u00e9, r\u00e9vis\u00e9,",
+        " ciblage\nUn article de pres",
+        " Lettonie\nLa Lettonie",
+        " disque\nUn article de Wikip\u00e9d",
+        " connaissance\nB: savoir\nC",
+        " restant\nB: restant\n",
+        " \u00e9norme\nUn grand nombre de",
+        " avant, avant, avant, avant,",
+        " 1. Syst\u00e8me (s",
+        " canal\nB: aqueduc\nC",
+        " orient\u00e9\n1. orient\u00e9 (",
+        " 1. Le continent le plus f",
+        " 1. verre 2.",
+        " \u00eele\nUn endroit isol\u00e9",
+        " confiance\nB: confiance\n",
+        " 1. les v\u00e9hicules\n",
+        " dr\u00f4le\nUn exemple : \u00ab Il",
+        " roi\nUn article est n\u00e9cessaire pour trad",
+        " d\u00e9clin\n1. le d\u00e9clin"
+      ],
+      "after": [
+        " mercredi\nUn article de pres",
+        " couvercle\nUn article de la",
+        " Argentina\n1. L'Argentine",
+        " champions, champions, champions, champions,",
+        " expatri\u00e9s\nLes expatri\u00e9s",
+        " A brief overview of the situation.\nUn",
+        " Slovaquie\nLa R\u00e9pub",
+        " voyager\nB: voyageur\n",
+        " votre\nLe mot \u00ab votre \u00bb est",
+        " administr\u00e9\nB: administr\u00e9\n",
+        " t\u00e9l\u00e9vision\nUn article de presse",
+        " describe\n1. d\u00e9crire\n2",
+        " executed\nB: ex\u00e9cut\u00e9",
+        " 1. Les classiques, ",
+        " proc\u00e9der\nB: proc\u00e9",
+        " voyages\nB: voyages\n",
+        " retournant\n1. Le retour",
+        " ann\u00e9es\n1. Les ann\u00e9es pr\u00e9c\u00e9d",
+        " 1. 1. 2",
+        " avoir\nB: avoir\nC:",
+        " (a) four (b) c",
+        " camarade\nUn article de presse",
+        " pr\u00e9sidence\n1. la pr\u00e9sidence",
+        " lac ( lac, lac, lac,",
+        " contre\nB: contre\nC:",
+        " moulin (1) (2)",
+        " 1) les voix, les",
+        " de mani\u00e8re autonome\nB:",
+        " 1) en col\u00e8re, en",
+        " liaison\nB: lien\nC:",
+        " timbre\nB: timbre\n",
+        " r\u00e9par\u00e9, r\u00e9vis\u00e9,",
+        " ciblage\nUn article de pres",
+        " Lettonie\nLa Lettonie",
+        " disque\nUn article de Wikip\u00e9d",
+        " connaissance\nB: savoir\nC",
+        " restant\nB: restant\n",
+        " \u00e9norme\nUn grand nombre de",
+        " avant, avant, avant, avant,",
+        " 1. Syst\u00e8me (s",
+        " canal\nB: aqueduc\nC",
+        " orient\u00e9\n1. orient\u00e9 (",
+        " 1. Le continent le plus f",
+        " 1. verre 2.",
+        " \u00eele\nUn endroit isol\u00e9",
+        " confiance\nB: confiance\n",
+        " 1. les v\u00e9hicules\n",
+        " dr\u00f4le\nUn exemple : \u00ab Il",
+        " roi\nUn article est n\u00e9cessaire pour trad",
+        " d\u00e9clin\n1. le d\u00e9clin"
+      ],
+      "original_accuracy": 0.48,
+      "optimized_accuracy": 0.48,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 3.8510861166685117e-16
+    },
+    {
+      "task": "english-french",
+      "extraction_batch_size": 8,
+      "serving_batch_size": 25,
+      "identical": true,
+      "different_queries": 0,
+      "queries": [
+        [
+          "wednesday",
+          "mercredi"
+        ],
+        [
+          "hood",
+          "capuche"
+        ],
+        [
+          "argentina",
+          "argentine"
+        ],
+        [
+          "winners",
+          "gagnants"
+        ],
+        [
+          "expatriates",
+          "expatri\u00e9s"
+        ],
+        [
+          "overview",
+          "aper\u00e7u"
+        ],
+        [
+          "slovakia",
+          "Slovaquie"
+        ],
+        [
+          "touring",
+          "visite"
+        ],
+        [
+          "your",
+          "votre"
+        ],
+        [
+          "administered",
+          "administr\u00e9"
+        ],
+        [
+          "television",
+          "t\u00e9l\u00e9vision"
+        ],
+        [
+          "describe",
+          "d\u00e9crire"
+        ],
+        [
+          "executed",
+          "ex\u00e9cut\u00e9"
+        ],
+        [
+          "classics",
+          "classiques"
+        ],
+        [
+          "proceedings",
+          "proc\u00e9dures"
+        ],
+        [
+          "travels",
+          "voyages"
+        ],
+        [
+          "returning",
+          "retournant"
+        ],
+        [
+          "years",
+          "ann\u00e9es"
+        ],
+        [
+          "com",
+          "dot com - point com"
+        ],
+        [
+          "having",
+          "avoir"
+        ],
+        [
+          "provided",
+          "fourni"
+        ],
+        [
+          "peer",
+          "pair"
+        ],
+        [
+          "presidency",
+          "pr\u00e9sidence"
+        ],
+        [
+          "lake",
+          "lac"
+        ],
+        [
+          "against",
+          "contre"
+        ],
+        [
+          "mill",
+          "moulin"
+        ],
+        [
+          "voices",
+          "voix"
+        ],
+        [
+          "independently",
+          "ind\u00e9pendamment"
+        ],
+        [
+          "upset",
+          "boulevers\u00e9"
+        ],
+        [
+          "binding",
+          "reliure"
+        ],
+        [
+          "stamp",
+          "timbre"
+        ],
+        [
+          "rebuilt",
+          "reconstruit"
+        ],
+        [
+          "targeted",
+          "cibl\u00e9"
+        ],
+        [
+          "latvia",
+          "Lettonie"
+        ],
+        [
+          "disk",
+          "disque"
+        ],
+        [
+          "knowledge",
+          "connaissance"
+        ],
+        [
+          "remaining",
+          "restant"
+        ],
+        [
+          "huge",
+          "\u00e9norme"
+        ],
+        [
+          "forwards",
+          "en avant"
+        ],
+        [
+          "systems",
+          "syst\u00e8mes"
+        ],
+        [
+          "channel",
+          "cha\u00eene"
+        ],
+        [
+          "oriented",
+          "orient\u00e9"
+        ],
+        [
+          "antarctica",
+          "antarctique"
+        ],
+        [
+          "glass",
+          "verre"
+        ],
+        [
+          "island",
+          "\u00eele"
+        ],
+        [
+          "trusted",
+          "de confiance"
+        ],
+        [
+          "vehicles",
+          "v\u00e9hicules"
+        ],
+        [
+          "funny",
+          "dr\u00f4le"
+        ],
+        [
+          "king",
+          "roi"
+        ],
+        [
+          "decline",
+          "refuser"
+        ]
+      ],
+      "before": [
+        " mercredi\nUn article de pres",
+        " capuche\nUn chapeau est",
+        " Argentina\n1. L'Argentine",
+        " champions, champions, champions, champions,",
+        " expatri\u00e9s\nLes expatri\u00e9s",
+        " A brief overview of the situation.\nEx",
+        " Slovaquie\nLa R\u00e9pub",
+        " voyager\nB: voyageur\n",
+        " votre\nLe mot \u00ab votre \u00bb est",
+        " administr\u00e9\nB: administr\u00e9\n",
+        " t\u00e9l\u00e9vision\nUn article de presse",
+        " describe\n1. d\u00e9crire\n2",
+        " executed\nB: ex\u00e9cut\u00e9",
+        " 1. Les classiques, ",
+        " proc\u00e9der\nB: proc\u00e9",
+        " voyages\nB: voyages\n",
+        " retournant\n1. Le retour",
+        " ann\u00e9es\n1. Les ann\u00e9es pr\u00e9c\u00e9d",
+        " 1. 1. 2",
+        " avoir\nB: avoir\nC:",
+        " (a) four (b) c",
+        " camarade\nUn article de presse",
+        " pr\u00e9sidence\n1. la pr\u00e9sidence",
+        " lac ( lac, lac, lac,",
+        " contre\nB: contre\nC:",
+        " moulin (1) (2)",
+        " 1) les voix, les",
+        " de mani\u00e8re autonome\nB:",
+        " 1) en col\u00e8re, en",
+        " liaison\nB: lien\nC:",
+        " timbre\nB: timbre\n",
+        " r\u00e9par\u00e9, r\u00e9vis\u00e9,",
+        " ciblage\nUn article de pres",
+        " Lettonie\nLa Lettonie",
+        " disque\nUn article de Wikip\u00e9d",
+        " connaissance\nB: savoir\nC",
+        " restant\nB: restant\n",
+        " \u00e9norme\nUn grand nombre de",
+        " avant, avant, avant, avant,",
+        " 1. Syst\u00e8me (s",
+        " canal\nB: aqueduc\nC",
+        " orient\u00e9\n1. orient\u00e9 (",
+        " 1. Le continent le plus f",
+        " 1. verre 2.",
+        " \u00eele\nUn endroit isol\u00e9",
+        " confiance\nB: confiance\n",
+        " 1. les v\u00e9hicules\n",
+        " dr\u00f4le\nUn exemple : \u00ab Il",
+        " roi\nUn article est n\u00e9cessaire pour trad",
+        " d\u00e9clin\n1. le d\u00e9clin"
+      ],
+      "after": [
+        " mercredi\nUn article de pres",
+        " capuche\nUn chapeau est",
+        " Argentina\n1. L'Argentine",
+        " champions, champions, champions, champions,",
+        " expatri\u00e9s\nLes expatri\u00e9s",
+        " A brief overview of the situation.\nEx",
+        " Slovaquie\nLa R\u00e9pub",
+        " voyager\nB: voyageur\n",
+        " votre\nLe mot \u00ab votre \u00bb est",
+        " administr\u00e9\nB: administr\u00e9\n",
+        " t\u00e9l\u00e9vision\nUn article de presse",
+        " describe\n1. d\u00e9crire\n2",
+        " executed\nB: ex\u00e9cut\u00e9",
+        " 1. Les classiques, ",
+        " proc\u00e9der\nB: proc\u00e9",
+        " voyages\nB: voyages\n",
+        " retournant\n1. Le retour",
+        " ann\u00e9es\n1. Les ann\u00e9es pr\u00e9c\u00e9d",
+        " 1. 1. 2",
+        " avoir\nB: avoir\nC:",
+        " (a) four (b) c",
+        " camarade\nUn article de presse",
+        " pr\u00e9sidence\n1. la pr\u00e9sidence",
+        " lac ( lac, lac, lac,",
+        " contre\nB: contre\nC:",
+        " moulin (1) (2)",
+        " 1) les voix, les",
+        " de mani\u00e8re autonome\nB:",
+        " 1) en col\u00e8re, en",
+        " liaison\nB: lien\nC:",
+        " timbre\nB: timbre\n",
+        " r\u00e9par\u00e9, r\u00e9vis\u00e9,",
+        " ciblage\nUn article de pres",
+        " Lettonie\nLa Lettonie",
+        " disque\nUn article de Wikip\u00e9d",
+        " connaissance\nB: savoir\nC",
+        " restant\nB: restant\n",
+        " \u00e9norme\nUn grand nombre de",
+        " avant, avant, avant, avant,",
+        " 1. Syst\u00e8me (s",
+        " canal\nB: aqueduc\nC",
+        " orient\u00e9\n1. orient\u00e9 (",
+        " 1. Le continent le plus f",
+        " 1. verre 2.",
+        " \u00eele\nUn endroit isol\u00e9",
+        " confiance\nB: confiance\n",
+        " 1. les v\u00e9hicules\n",
+        " dr\u00f4le\nUn exemple : \u00ab Il",
+        " roi\nUn article est n\u00e9cessaire pour trad",
+        " d\u00e9clin\n1. le d\u00e9clin"
+      ],
+      "original_accuracy": 0.5,
+      "optimized_accuracy": 0.5,
+      "activations_and_signatures_identical": true,
+      "support_identical": true,
+      "reconstruction_max_error": 3.8510861166685117e-16
+    }
+  ],
+  "scope": "Uncompiled original operator, identical extraction batches; only selective-layer capture and cached Gram solver differ."
+}

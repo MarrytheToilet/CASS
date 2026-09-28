@@ -1,0 +1,2090 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.13.0+cu130",
+  "checks": [
+    {
+      "task": "antonym",
+      "batch_size": 1,
+      "identical": false,
+      "different_queries": 2,
+      "before": [
+        " temporary\n\nQ: fragile\nA:",
+        " consistency\n\nQ: disintegrate\n",
+        " deny\n\nQ: rigid\nA:",
+        " bless\n\nQ: fragile\nA:",
+        " grand\n\nQ: rigid\nA:",
+        " apparent\n\nQ: rigid\nA:",
+        " accept\n\nQ: rigid\nA:",
+        " problem\n\nQ: harmony\nA:",
+        " disconnected\n\nQ: precise\nA:",
+        " daytime\n\nQ: fragile\nA:",
+        " earthly\n\nQ: fragile\nA:",
+        " clear\n\nQ: fragile\nA:",
+        " removal\n\nQ: harmony\nA:",
+        " filled\n\nQ: fragile\nA:",
+        " valid\n\nQ: fragile\nA:",
+        " non-selective\n\nQ: rigid\n",
+        " unachievable\n\nQ: precise\n",
+        " affirm\n\nQ: rigid\nA:",
+        " downgrade\n\nQ: precise\nA:",
+        " terrestrial\n\nQ: fragile\nA:",
+        " cheap\n\nQ: fragile\nA:",
+        " speeding\n\nQ: fragile\nA:",
+        " abolish\n\nQ: conceal\nA:",
+        " expansive\n\nQ: rigid\nA:",
+        " unemotional\n\nQ: fragile\n",
+        " condemn\n\nQ: rigid\nA:",
+        " blacks\n\nQ: silent\nA:",
+        " permanent\n\nQ: fragile\nA:",
+        " prohibit\n\nQ: accelerate\nA:",
+        " no one\n\nQ: silent\nA",
+        " death\n\nQ: harmony\nA:",
+        " background\n\nQ: fragile\nA:",
+        " harmful\n\nQ: precise\nA:",
+        " dry\n\nQ: fragile\nA:",
+        " slow\n\nQ: rigid\nA:",
+        " non-corresponding\n\nQ: precise",
+        " few\n\nQ: fragile\nA:",
+        " clean\n\nQ: fragile\nA:",
+        " begin\n\nQ: fragile\nA:",
+        " ugly\n\nQ: fragile\nA:",
+        " unclassify\n\nQ: disband\n",
+        " moderate\n\nQ: rigid\nA:",
+        " inefficient\n\nQ: precise\nA:",
+        " real\n\nQ: rigid\nA:",
+        " conscious\n\nQ: fragile\nA:",
+        " smooth\n\nQ: fragile\nA:",
+        " ignore\n\nQ: precise\nA:",
+        " appoint\n\nQ: fragile\nA:",
+        " insignificant\n\nQ: fragile\nA:",
+        " invulnerable\n\nQ: fragile\nA"
+      ],
+      "after": [
+        " temporary\n\nQ: fragile\nA:",
+        " consistency\n\nQ: disintegrate\n",
+        " deny\n\nQ: rigid\nA:",
+        " bless\n\nQ: fragile\nA:",
+        " grand\n\nQ: rigid\nA:",
+        " apparent\n\nQ: rigid\nA:",
+        " accept\n\nQ: rigid\nA:",
+        " problem\n\nQ: harmony\nA:",
+        " disconnected\n\nQ: precise\nA:",
+        " daytime\n\nQ: fragile\nA:",
+        " earthly\n\nQ: fragile\nA:",
+        " clear\n\nQ: fragile\nA:",
+        " removal\n\nQ: harmony\nA:",
+        " filled\n\nQ: fragile\nA:",
+        " valid\n\nQ: fragile\nA:",
+        " non-selective\n\nQ: rigid\n",
+        " unachievable\n\nQ: precise\n",
+        " affirm\n\nQ: rigid\nA:",
+        " downgrade\n\nQ: accelerate\nA:",
+        " terrestrial\n\nQ: fragile\nA:",
+        " cheap\n\nQ: fragile\nA:",
+        " speeding\n\nQ: fragile\nA:",
+        " abolish\n\nQ: conceal\nA:",
+        " expansive\n\nQ: rigid\nA:",
+        " unemotional\n\nQ: fragile\n",
+        " condemn\n\nQ: rigid\nA:",
+        " blacks\n\nQ: silent\nA:",
+        " permanent\n\nQ: fragile\nA:",
+        " prohibit\n\nQ: accelerate\nA:",
+        " no one\n\nQ: silent\nA",
+        " death\n\nQ: harmony\nA:",
+        " background\n\nQ: fragile\nA:",
+        " harmful\n\nQ: precise\nA:",
+        " dry\n\nQ: fragile\nA:",
+        " slow\n\nQ: precise\nA:",
+        " non-corresponding\n\nQ: precise",
+        " few\n\nQ: fragile\nA:",
+        " clean\n\nQ: fragile\nA:",
+        " begin\n\nQ: fragile\nA:",
+        " ugly\n\nQ: fragile\nA:",
+        " unclassify\n\nQ: disband\n",
+        " moderate\n\nQ: rigid\nA:",
+        " inefficient\n\nQ: precise\nA:",
+        " real\n\nQ: rigid\nA:",
+        " conscious\n\nQ: fragile\nA:",
+        " smooth\n\nQ: fragile\nA:",
+        " ignore\n\nQ: precise\nA:",
+        " appoint\n\nQ: fragile\nA:",
+        " insignificant\n\nQ: fragile\nA:",
+        " invulnerable\n\nQ: fragile\nA"
+      ],
+      "original_accuracy": 0.7,
+      "cached_accuracy": 0.7
+    },
+    {
+      "task": "antonym",
+      "batch_size": 8,
+      "identical": false,
+      "different_queries": 2,
+      "before": [
+        " temporary\n\nQ: fragile\nA:",
+        " consistency\n\nQ: disintegrate\n",
+        " deny\n\nQ: rigid\nA:",
+        " bless\n\nQ: fragile\nA:",
+        " grand\n\nQ: rigid\nA:",
+        " apparent\n\nQ: rigid\nA:",
+        " accept\n\nQ: rigid\nA:",
+        " problem\n\nQ: harmony\nA:",
+        " disconnected\n\nQ: precise\nA:",
+        " daytime\n\nQ: fragile\nA:",
+        " earthly\n\nQ: fragile\nA:",
+        " clear\n\nQ: fragile\nA:",
+        " removal\n\nQ: harmony\nA:",
+        " filled\n\nQ: fragile\nA:",
+        " valid\n\nQ: rigid\nA:",
+        " non-selective\n\nQ: rigid\n",
+        " unachievable\n\nQ: precise\n",
+        " affirm\n\nQ: rigid\nA:",
+        " downgrade\n\nQ: accelerate\nA:",
+        " terrestrial\n\nQ: fragile\nA:",
+        " cheap\n\nQ: fragile\nA:",
+        " speeding\n\nQ: fragile\nA:",
+        " abolish\n\nQ: conceal\nA:",
+        " expansive\n\nQ: rigid\nA:",
+        " unemotional\n\nQ: fragile\n",
+        " condemn\n\nQ: rigid\nA:",
+        " blacks\n\nQ: silent\nA:",
+        " permanent\n\nQ: fragile\nA:",
+        " prohibit\n\nQ: accelerate\nA:",
+        " no one\n\nQ: silent\nA",
+        " death\n\nQ: harmony\nA:",
+        " background\n\nQ: fragile\nA:",
+        " harmful\n\nQ: precise\nA:",
+        " dry\n\nQ: fragile\nA:",
+        " slow\n\nQ: rigid\nA:",
+        " non-corresponding\n\nQ: precise",
+        " few\n\nQ: fragile\nA:",
+        " clean\n\nQ: fragile\nA:",
+        " begin\n\nQ: fragile\nA:",
+        " ugly\n\nQ: fragile\nA:",
+        " unclassify\n\nQ: disband\n",
+        " moderate\n\nQ: rigid\nA:",
+        " inefficient\n\nQ: precise\nA:",
+        " real\n\nQ: rigid\nA:",
+        " conscious\n\nQ: fragile\nA:",
+        " smooth\n\nQ: fragile\nA:",
+        " ignore\n\nQ: precise\nA:",
+        " appoint\n\nQ: fragile\nA:",
+        " insignificant\n\nQ: fragile\nA:",
+        " invulnerable\n\nQ: fragile\nA"
+      ],
+      "after": [
+        " temporary\n\nQ: fragile\nA:",
+        " consistency\n\nQ: disintegrate\n",
+        " deny\n\nQ: rigid\nA:",
+        " bless\n\nQ: fragile\nA:",
+        " grand\n\nQ: rigid\nA:",
+        " apparent\n\nQ: rigid\nA:",
+        " accept\n\nQ: rigid\nA:",
+        " problem\n\nQ: harmony\nA:",
+        " disconnected\n\nQ: precise\nA:",
+        " daytime\n\nQ: fragile\nA:",
+        " earthly\n\nQ: fragile\nA:",
+        " clear\n\nQ: fragile\nA:",
+        " removal\n\nQ: harmony\nA:",
+        " filled\n\nQ: fragile\nA:",
+        " valid\n\nQ: rigid\nA:",
+        " non-selective\n\nQ: rigid\n",
+        " unachievable\n\nQ: precise\n",
+        " affirm\n\nQ: rigid\nA:",
+        " downgrade\n\nQ: precise\nA:",
+        " terrestrial\n\nQ: fragile\nA:",
+        " cheap\n\nQ: fragile\nA:",
+        " speeding\n\nQ: fragile\nA:",
+        " abolish\n\nQ: conceal\nA:",
+        " expansive\n\nQ: rigid\nA:",
+        " unemotional\n\nQ: fragile\n",
+        " condemn\n\nQ: rigid\nA:",
+        " blacks\n\nQ: silent\nA:",
+        " permanent\n\nQ: fragile\nA:",
+        " prohibit\n\nQ: accelerate\nA:",
+        " no one\n\nQ: silent\nA",
+        " death\n\nQ: harmony\nA:",
+        " background\n\nQ: fragile\nA:",
+        " harmful\n\nQ: precise\nA:",
+        " dry\n\nQ: fragile\nA:",
+        " slow\n\nQ: precise\nA:",
+        " non-corresponding\n\nQ: precise",
+        " few\n\nQ: fragile\nA:",
+        " clean\n\nQ: fragile\nA:",
+        " begin\n\nQ: fragile\nA:",
+        " ugly\n\nQ: fragile\nA:",
+        " unclassify\n\nQ: disband\n",
+        " moderate\n\nQ: rigid\nA:",
+        " inefficient\n\nQ: precise\nA:",
+        " real\n\nQ: rigid\nA:",
+        " conscious\n\nQ: fragile\nA:",
+        " smooth\n\nQ: fragile\nA:",
+        " ignore\n\nQ: precise\nA:",
+        " appoint\n\nQ: fragile\nA:",
+        " insignificant\n\nQ: fragile\nA:",
+        " invulnerable\n\nQ: fragile\nA"
+      ],
+      "original_accuracy": 0.7,
+      "cached_accuracy": 0.7
+    },
+    {
+      "task": "antonym",
+      "batch_size": 25,
+      "identical": false,
+      "different_queries": 2,
+      "before": [
+        " temporary\n\nQ: fragile\nA:",
+        " consistency\n\nQ: disintegrate\n",
+        " deny\n\nQ: rigid\nA:",
+        " bless\n\nQ: fragile\nA:",
+        " grand\n\nQ: rigid\nA:",
+        " apparent\n\nQ: rigid\nA:",
+        " accept\n\nQ: rigid\nA:",
+        " problem\n\nQ: harmony\nA:",
+        " disconnected\n\nQ: precise\nA:",
+        " daytime\n\nQ: fragile\nA:",
+        " earthly\n\nQ: fragile\nA:",
+        " clear\n\nQ: fragile\nA:",
+        " removal\n\nQ: harmony\nA:",
+        " filled\n\nQ: fragile\nA:",
+        " valid\n\nQ: fragile\nA:",
+        " non-selective\n\nQ: rigid\n",
+        " unachievable\n\nQ: precise\n",
+        " affirm\n\nQ: rigid\nA:",
+        " downgrade\n\nQ: accelerate\nA:",
+        " terrestrial\n\nQ: fragile\nA:",
+        " cheap\n\nQ: fragile\nA:",
+        " speeding\n\nQ: fragile\nA:",
+        " abolish\n\nQ: conceal\nA:",
+        " expansive\n\nQ: rigid\nA:",
+        " unemotional\n\nQ: fragile\n",
+        " condemn\n\nQ: rigid\nA:",
+        " blacks\n\nQ: silent\nA:",
+        " permanent\n\nQ: fragile\nA:",
+        " prohibit\n\nQ: accelerate\nA:",
+        " no one\n\nQ: silent\nA",
+        " death\n\nQ: harmony\nA:",
+        " background\n\nQ: fragile\nA:",
+        " harmful\n\nQ: precise\nA:",
+        " dry\n\nQ: fragile\nA:",
+        " slow\n\nQ: rigid\nA:",
+        " non-corresponding\n\nQ: precise",
+        " few\n\nQ: fragile\nA:",
+        " clean\n\nQ: fragile\nA:",
+        " begin\n\nQ: fragile\nA:",
+        " ugly\n\nQ: fragile\nA:",
+        " unclassify\n\nQ: disband\n",
+        " moderate\n\nQ: rigid\nA:",
+        " inefficient\n\nQ: precise\nA:",
+        " real\n\nQ: rigid\nA:",
+        " conscious\n\nQ: fragile\nA:",
+        " smooth\n\nQ: fragile\nA:",
+        " ignore\n\nQ: precise\nA:",
+        " appoint\n\nQ: fragile\nA:",
+        " insignificant\n\nQ: fragile\nA:",
+        " invulnerable\n\nQ: fragile\nA"
+      ],
+      "after": [
+        " temporary\n\nQ: fragile\nA:",
+        " consistency\n\nQ: disintegrate\n",
+        " deny\n\nQ: rigid\nA:",
+        " bless\n\nQ: fragile\nA:",
+        " grand\n\nQ: rigid\nA:",
+        " apparent\n\nQ: rigid\nA:",
+        " accept\n\nQ: rigid\nA:",
+        " problem\n\nQ: harmony\nA:",
+        " disconnected\n\nQ: precise\nA:",
+        " daytime\n\nQ: fragile\nA:",
+        " earthly\n\nQ: fragile\nA:",
+        " clear\n\nQ: fragile\nA:",
+        " removal\n\nQ: harmony\nA:",
+        " filled\n\nQ: fragile\nA:",
+        " valid\n\nQ: fragile\nA:",
+        " non-selective\n\nQ: rigid\n",
+        " unachievable\n\nQ: precise\n",
+        " affirm\n\nQ: rigid\nA:",
+        " downgrade\n\nQ: precise\nA:",
+        " terrestrial\n\nQ: fragile\nA:",
+        " cheap\n\nQ: fragile\nA:",
+        " speeding\n\nQ: fragile\nA:",
+        " abolish\n\nQ: conceal\nA:",
+        " expansive\n\nQ: rigid\nA:",
+        " unemotional\n\nQ: fragile\n",
+        " condemn\n\nQ: rigid\nA:",
+        " blacks\n\nQ: silent\nA:",
+        " permanent\n\nQ: fragile\nA:",
+        " prohibit\n\nQ: accelerate\nA:",
+        " no one\n\nQ: silent\nA",
+        " death\n\nQ: harmony\nA:",
+        " background\n\nQ: fragile\nA:",
+        " harmful\n\nQ: precise\nA:",
+        " dry\n\nQ: fragile\nA:",
+        " slow\n\nQ: precise\nA:",
+        " non-corresponding\n\nQ: precise",
+        " few\n\nQ: fragile\nA:",
+        " clean\n\nQ: fragile\nA:",
+        " begin\n\nQ: fragile\nA:",
+        " ugly\n\nQ: fragile\nA:",
+        " unclassify\n\nQ: disband\n",
+        " moderate\n\nQ: rigid\nA:",
+        " inefficient\n\nQ: precise\nA:",
+        " real\n\nQ: rigid\nA:",
+        " conscious\n\nQ: fragile\nA:",
+        " smooth\n\nQ: fragile\nA:",
+        " ignore\n\nQ: precise\nA:",
+        " appoint\n\nQ: fragile\nA:",
+        " insignificant\n\nQ: fragile\nA:",
+        " invulnerable\n\nQ: fragile\nA"
+      ],
+      "original_accuracy": 0.7,
+      "cached_accuracy": 0.7
+    },
+    {
+      "task": "country-capital",
+      "batch_size": 1,
+      "identical": false,
+      "different_queries": 2,
+      "before": [
+        " Yerevan\n\nQ: Sri Lanka",
+        " Amsterdam\n\nQ: Peru\nA:",
+        " Majuro\n\nQ: Luxembourg\nA",
+        " Bucharest\n\nQ: Peru\nA",
+        " Pyongyang\n\nQ: South Africa\nA",
+        " Honiara\n\nQ: Sri Lanka",
+        " Tbilisi\n\nQ: Sri Lanka",
+        " Bandar Seri Begawan\n\nQ",
+        " St. George's\n\nQ: Sri",
+        " Port Moresby\n\nQ: Sri",
+        " Moscow\n\nQ: South Africa\nA",
+        " Seoul\n\nQ: Sri Lanka\nA",
+        " Baghdad\n\nQ: Sri Lanka\nA",
+        " Nassau\n\nQ: Sri Lanka\n",
+        " Dakar\n\nQ: Sri Lanka\n",
+        " Rome\n\nQ: Sri Lanka\nA",
+        " Algiers\n\nQ: Sri Lanka\n",
+        " Jakarta\n\nQ: South Africa\nA",
+        " Paris\n\nQ: South Africa\nA",
+        " Thimphu\n\nQ: Sri",
+        " Bangui\n\nQ: Sri Lanka\n",
+        " Astana\n\nQ: Peru\nA",
+        " Sucre\n\nQ: Sri Lanka\n",
+        " Juba\n\nQ: Sri Lanka\n",
+        " Gaborone\n\nQ: Sri Lanka",
+        " Conakry\n\nQ: Sri Lanka",
+        " Ulaanbaatar\n\nQ:",
+        " Monaco City\n\nQ: Sri Lanka\n",
+        " Canberra\n\nQ: South Africa\nA",
+        " Guatemala City\n\nQ: Sri Lanka\n",
+        " Lilongwe\n\nQ: Sri Lanka",
+        " Panama City\n\nQ: Sri Lanka\n",
+        " Paramaribo\n\nQ: Sri Lanka",
+        " Beirut\n\nQ: Sri Lanka\nA",
+        " Caracas\n\nQ: Sri Lanka\n",
+        " Abu Dhabi\n\nQ: Sri Lanka\n",
+        " Vatican City\n\nQ: Sri Lanka\n",
+        " Minsk\n\nQ: Sri Lanka\n",
+        " Kyiv\n\nQ: Sri Lanka\n",
+        " Pristina\n\nQ: Sri Lanka",
+        " Tirana\n\nQ: Sri Lanka\n",
+        " San Jos\u00e9\n\nQ: Sri Lanka\n",
+        " Mogadishu\n\nQ: Sri",
+        " Abuja\n\nQ: Sri Lanka\n",
+        " Bridgetown\n\nQ: Sri Lanka",
+        " Nouakchott\n\nQ: Sri",
+        " Ottawa\n\nQ: Peru\nA:",
+        " Singapore\n\nQ: Sri Lanka\nA",
+        " Asmara\n\nQ: Sri Lanka"
+      ],
+      "after": [
+        " Yerevan\n\nQ: Sri Lanka",
+        " Amsterdam\n\nQ: Peru\nA:",
+        " Majuro\n\nQ: Luxembourg\nA",
+        " Bucharest\n\nQ: Peru\nA",
+        " Pyongyang\n\nQ: South Africa\nA",
+        " Honiara\n\nQ: Sri Lanka",
+        " Tbilisi\n\nQ: Sri Lanka",
+        " Bandar Seri Begawan\n\nQ",
+        " St. George's\n\nQ: Sri",
+        " Port Moresby\n\nQ: Sri",
+        " Moscow\n\nQ: South Africa\nA",
+        " Seoul\n\nQ: Sri Lanka\nA",
+        " Baghdad\n\nQ: Sri Lanka\nA",
+        " Nassau\n\nQ: Sri Lanka\n",
+        " Dakar\n\nQ: Sri Lanka\n",
+        " Rome\n\nQ: South Africa\nA",
+        " Algiers\n\nQ: Sri Lanka\n",
+        " Jakarta\n\nQ: South Africa\nA",
+        " Paris\n\nQ: South Africa\nA",
+        " Thimphu\n\nQ: Sri",
+        " Bangui\n\nQ: Sri Lanka\n",
+        " Astana\n\nQ: Peru\nA",
+        " Sucre\n\nQ: Sri Lanka\n",
+        " Juba\n\nQ: Sri Lanka\n",
+        " Gaborone\n\nQ: Sri Lanka",
+        " Conakry\n\nQ: Sri Lanka",
+        " Ulaanbaatar\n\nQ:",
+        " Monaco City\n\nQ: Peru\nA",
+        " Canberra\n\nQ: South Africa\nA",
+        " Guatemala City\n\nQ: Sri Lanka\n",
+        " Lilongwe\n\nQ: Sri Lanka",
+        " Panama City\n\nQ: Sri Lanka\n",
+        " Paramaribo\n\nQ: Sri Lanka",
+        " Beirut\n\nQ: Sri Lanka\nA",
+        " Caracas\n\nQ: Sri Lanka\n",
+        " Abu Dhabi\n\nQ: Sri Lanka\n",
+        " Vatican City\n\nQ: Sri Lanka\n",
+        " Minsk\n\nQ: Sri Lanka\n",
+        " Kyiv\n\nQ: Sri Lanka\n",
+        " Pristina\n\nQ: Sri Lanka",
+        " Tirana\n\nQ: Sri Lanka\n",
+        " San Jos\u00e9\n\nQ: Sri Lanka\n",
+        " Mogadishu\n\nQ: Sri",
+        " Abuja\n\nQ: Sri Lanka\n",
+        " Bridgetown\n\nQ: Sri Lanka",
+        " Nouakchott\n\nQ: Sri",
+        " Ottawa\n\nQ: Peru\nA:",
+        " Singapore\n\nQ: Sri Lanka\nA",
+        " Asmara\n\nQ: Sri Lanka"
+      ],
+      "original_accuracy": 0.9387755102040817,
+      "cached_accuracy": 0.9387755102040817
+    },
+    {
+      "task": "country-capital",
+      "batch_size": 8,
+      "identical": false,
+      "different_queries": 4,
+      "before": [
+        " Yerevan\n\nQ: Sri Lanka",
+        " Amsterdam\n\nQ: Peru\nA:",
+        " Majuro\n\nQ: Luxembourg\nA",
+        " Bucharest\n\nQ: Peru\nA",
+        " Pyongyang\n\nQ: South Africa\nA",
+        " Honiara\n\nQ: Sri Lanka",
+        " Tbilisi\n\nQ: Peru\n",
+        " Bandar Seri Begawan\n\nQ",
+        " St. George's\n\nQ: Sri",
+        " Port Moresby\n\nQ: Sri",
+        " Moscow\n\nQ: South Africa\nA",
+        " Seoul\n\nQ: Sri Lanka\nA",
+        " Baghdad\n\nQ: Sri Lanka\nA",
+        " Nassau\n\nQ: Sri Lanka\n",
+        " Dakar\n\nQ: Sri Lanka\n",
+        " Rome\n\nQ: South Africa\nA",
+        " Algiers\n\nQ: Peru\nA",
+        " Jakarta\n\nQ: South Africa\nA",
+        " Paris\n\nQ: South Africa\nA",
+        " Thimphu\n\nQ: Sri",
+        " Bangui\n\nQ: Sri Lanka\n",
+        " Astana\n\nQ: Peru\nA",
+        " Sucre\n\nQ: Sri Lanka\n",
+        " Juba\n\nQ: Sri Lanka\n",
+        " Gaborone\n\nQ: Sri Lanka",
+        " Conakry\n\nQ: Sri Lanka",
+        " Ulaanbaatar\n\nQ:",
+        " Monaco City\n\nQ: Peru\nA",
+        " Canberra\n\nQ: South Africa\nA",
+        " Guatemala City\n\nQ: Sri Lanka\n",
+        " Lilongwe\n\nQ: Sri Lanka",
+        " Panama City\n\nQ: Sri Lanka\n",
+        " Paramaribo\n\nQ: Sri Lanka",
+        " Beirut\n\nQ: Sri Lanka\nA",
+        " Caracas\n\nQ: Sri Lanka\n",
+        " Abu Dhabi\n\nQ: Sri Lanka\n",
+        " Vatican City\n\nQ: Sri Lanka\n",
+        " Minsk\n\nQ: Sri Lanka\n",
+        " Kyiv\n\nQ: Sri Lanka\n",
+        " Pristina\n\nQ: Sri Lanka",
+        " Tirana\n\nQ: Sri Lanka\n",
+        " San Jos\u00e9\n\nQ: Sri Lanka\n",
+        " Mogadishu\n\nQ: Sri",
+        " Abuja\n\nQ: Sri Lanka\n",
+        " Bridgetown\n\nQ: Sri Lanka",
+        " Nouakchott\n\nQ: Sri",
+        " Ottawa\n\nQ: Peru\nA:",
+        " Singapore\n\nQ: Sri Lanka\nA",
+        " Asmara\n\nQ: Sri Lanka"
+      ],
+      "after": [
+        " Yerevan\n\nQ: Sri Lanka",
+        " Amsterdam\n\nQ: Peru\nA:",
+        " Majuro\n\nQ: Luxembourg\nA",
+        " Bucharest\n\nQ: Peru\nA",
+        " Pyongyang\n\nQ: South Africa\nA",
+        " Honiara\n\nQ: Sri Lanka",
+        " Tbilisi\n\nQ: Sri Lanka",
+        " Bandar Seri Begawan\n\nQ",
+        " St. George's\n\nQ: Sri",
+        " Port Moresby\n\nQ: Sri",
+        " Moscow\n\nQ: South Africa\nA",
+        " Seoul\n\nQ: Sri Lanka\nA",
+        " Baghdad\n\nQ: Sri Lanka\nA",
+        " Nassau\n\nQ: Sri Lanka\n",
+        " Dakar\n\nQ: Sri Lanka\n",
+        " Rome\n\nQ: South Africa\nA",
+        " Algiers\n\nQ: Sri Lanka\n",
+        " Jakarta\n\nQ: South Africa\nA",
+        " Paris\n\nQ: South Africa\nA",
+        " Thimphu\n\nQ: Sri",
+        " Bangui\n\nQ: Sri Lanka\n",
+        " Astana\n\nQ: Sri Lanka\n",
+        " Sucre\n\nQ: Sri Lanka\n",
+        " Juba\n\nQ: Sri Lanka\n",
+        " Gaborone\n\nQ: Sri Lanka",
+        " Conakry\n\nQ: Sri Lanka",
+        " Ulaanbaatar\n\nQ:",
+        " Monaco City\n\nQ: Sri Lanka\n",
+        " Canberra\n\nQ: South Africa\nA",
+        " Guatemala City\n\nQ: Sri Lanka\n",
+        " Lilongwe\n\nQ: Sri Lanka",
+        " Panama City\n\nQ: Sri Lanka\n",
+        " Paramaribo\n\nQ: Sri Lanka",
+        " Beirut\n\nQ: Sri Lanka\nA",
+        " Caracas\n\nQ: Sri Lanka\n",
+        " Abu Dhabi\n\nQ: Sri Lanka\n",
+        " Vatican City\n\nQ: Sri Lanka\n",
+        " Minsk\n\nQ: Sri Lanka\n",
+        " Kyiv\n\nQ: Sri Lanka\n",
+        " Pristina\n\nQ: Sri Lanka",
+        " Tirana\n\nQ: Sri Lanka\n",
+        " San Jos\u00e9\n\nQ: Sri Lanka\n",
+        " Mogadishu\n\nQ: Sri",
+        " Abuja\n\nQ: Sri Lanka\n",
+        " Bridgetown\n\nQ: Sri Lanka",
+        " Nouakchott\n\nQ: Sri",
+        " Ottawa\n\nQ: Peru\nA:",
+        " Singapore\n\nQ: Sri Lanka\nA",
+        " Asmara\n\nQ: Sri Lanka"
+      ],
+      "original_accuracy": 0.9387755102040817,
+      "cached_accuracy": 0.9387755102040817
+    },
+    {
+      "task": "country-capital",
+      "batch_size": 25,
+      "identical": false,
+      "different_queries": 1,
+      "before": [
+        " Yerevan\n\nQ: Sri Lanka",
+        " Amsterdam\n\nQ: Peru\nA:",
+        " Majuro\n\nQ: Luxembourg\nA",
+        " Bucharest\n\nQ: Peru\nA",
+        " Pyongyang\n\nQ: South Africa\nA",
+        " Honiara\n\nQ: Sri Lanka",
+        " Tbilisi\n\nQ: Sri Lanka",
+        " Bandar Seri Begawan\n\nQ",
+        " St. George's\n\nQ: Sri",
+        " Port Moresby\n\nQ: Sri",
+        " Moscow\n\nQ: South Africa\nA",
+        " Seoul\n\nQ: Sri Lanka\nA",
+        " Baghdad\n\nQ: Sri Lanka\nA",
+        " Nassau\n\nQ: Sri Lanka\n",
+        " Dakar\n\nQ: Sri Lanka\n",
+        " Rome\n\nQ: South Africa\nA",
+        " Algiers\n\nQ: Sri Lanka\n",
+        " Jakarta\n\nQ: South Africa\nA",
+        " Paris\n\nQ: South Africa\nA",
+        " Thimphu\n\nQ: Sri",
+        " Bangui\n\nQ: Sri Lanka\n",
+        " Astana\n\nQ: Sri Lanka\n",
+        " Sucre\n\nQ: Sri Lanka\n",
+        " Juba\n\nQ: Sri Lanka\n",
+        " Gaborone\n\nQ: Sri Lanka",
+        " Conakry\n\nQ: Sri Lanka",
+        " Ulaanbaatar\n\nQ:",
+        " Monaco City\n\nQ: Peru\nA",
+        " Canberra\n\nQ: South Africa\nA",
+        " Guatemala City\n\nQ: Sri Lanka\n",
+        " Lilongwe\n\nQ: Sri Lanka",
+        " Panama City\n\nQ: Sri Lanka\n",
+        " Paramaribo\n\nQ: Sri Lanka",
+        " Beirut\n\nQ: Sri Lanka\nA",
+        " Caracas\n\nQ: Sri Lanka\n",
+        " Abu Dhabi\n\nQ: Sri Lanka\n",
+        " Vatican City\n\nQ: Sri Lanka\n",
+        " Minsk\n\nQ: Sri Lanka\n",
+        " Kyiv\n\nQ: Sri Lanka\n",
+        " Pristina\n\nQ: Sri Lanka",
+        " Tirana\n\nQ: Sri Lanka\n",
+        " San Jos\u00e9\n\nQ: Sri Lanka\n",
+        " Mogadishu\n\nQ: Sri",
+        " Abuja\n\nQ: Sri Lanka\n",
+        " Bridgetown\n\nQ: Sri Lanka",
+        " Nouakchott\n\nQ: Sri",
+        " Ottawa\n\nQ: Peru\nA:",
+        " Singapore\n\nQ: Sri Lanka\nA",
+        " Asmara\n\nQ: Sri Lanka"
+      ],
+      "after": [
+        " Yerevan\n\nQ: Sri Lanka",
+        " Amsterdam\n\nQ: Peru\nA:",
+        " Majuro\n\nQ: Luxembourg\nA",
+        " Bucharest\n\nQ: Peru\nA",
+        " Pyongyang\n\nQ: South Africa\nA",
+        " Honiara\n\nQ: Sri Lanka",
+        " Tbilisi\n\nQ: Sri Lanka",
+        " Bandar Seri Begawan\n\nQ",
+        " St. George's\n\nQ: Sri",
+        " Port Moresby\n\nQ: Sri",
+        " Moscow\n\nQ: South Africa\nA",
+        " Seoul\n\nQ: Sri Lanka\nA",
+        " Baghdad\n\nQ: Sri Lanka\nA",
+        " Nassau\n\nQ: Sri Lanka\n",
+        " Dakar\n\nQ: Sri Lanka\n",
+        " Rome\n\nQ: South Africa\nA",
+        " Algiers\n\nQ: Sri Lanka\n",
+        " Jakarta\n\nQ: South Africa\nA",
+        " Paris\n\nQ: South Africa\nA",
+        " Thimphu\n\nQ: Sri",
+        " Bangui\n\nQ: Sri Lanka\n",
+        " Astana\n\nQ: Peru\nA",
+        " Sucre\n\nQ: Sri Lanka\n",
+        " Juba\n\nQ: Sri Lanka\n",
+        " Gaborone\n\nQ: Sri Lanka",
+        " Conakry\n\nQ: Sri Lanka",
+        " Ulaanbaatar\n\nQ:",
+        " Monaco City\n\nQ: Peru\nA",
+        " Canberra\n\nQ: South Africa\nA",
+        " Guatemala City\n\nQ: Sri Lanka\n",
+        " Lilongwe\n\nQ: Sri Lanka",
+        " Panama City\n\nQ: Sri Lanka\n",
+        " Paramaribo\n\nQ: Sri Lanka",
+        " Beirut\n\nQ: Sri Lanka\nA",
+        " Caracas\n\nQ: Sri Lanka\n",
+        " Abu Dhabi\n\nQ: Sri Lanka\n",
+        " Vatican City\n\nQ: Sri Lanka\n",
+        " Minsk\n\nQ: Sri Lanka\n",
+        " Kyiv\n\nQ: Sri Lanka\n",
+        " Pristina\n\nQ: Sri Lanka",
+        " Tirana\n\nQ: Sri Lanka\n",
+        " San Jos\u00e9\n\nQ: Sri Lanka\n",
+        " Mogadishu\n\nQ: Sri",
+        " Abuja\n\nQ: Sri Lanka\n",
+        " Bridgetown\n\nQ: Sri Lanka",
+        " Nouakchott\n\nQ: Sri",
+        " Ottawa\n\nQ: Peru\nA:",
+        " Singapore\n\nQ: Sri Lanka\nA",
+        " Asmara\n\nQ: Sri Lanka"
+      ],
+      "original_accuracy": 0.9387755102040817,
+      "cached_accuracy": 0.9387755102040817
+    },
+    {
+      "task": "english-french",
+      "batch_size": 1,
+      "identical": false,
+      "different_queries": 3,
+      "before": [
+        " mercredi\n\nQ: difficult\n",
+        " capuchon\n\nQ: failure\n",
+        " l'Argentine\n\nQ: ",
+        " vainqueurs\n\nQ: difficult\n",
+        " expatri\u00e9s\n\nQ: unifying",
+        " vue d'ensemble\n\nQ: succeed",
+        " Slovaquie\n\nQ: ",
+        " tourn\u00e9e\n\nQ: succeed\nA",
+        " votre\n\nQ: fail\nA:",
+        " administr\u00e9\n\nQ: difficult\nA",
+        " t\u00e9l\u00e9vision\n\nQ: difficult\nA",
+        " d\u00e9crire\n\nQ: difficult\nA",
+        " ex\u00e9cut\u00e9\n\nQ: difficult",
+        " classiques\n\nQ: succeed\nA",
+        " proc\u00e9dures\n\nQ: guarantee",
+        " voyages\n\nQ: succeed\nA",
+        " retour\n\nQ: succeed\nA:",
+        " ann\u00e9es\n\nQ: difficult\nA:",
+        " avec\n\nQ: fail\nA:",
+        " avoir\n\nQ: difficult\nA:",
+        " fourni\n\nQ: succeed\nA",
+        " pair\n\nQ: succeed\nA:",
+        " pr\u00e9sidence\n\nQ: succeed\nA",
+        " lac\n\nQ: difficult\nA:",
+        " contre\n\nQ: difficult\nA:",
+        " moulin\n\nQ: succeed\nA",
+        " voix\n\nQ: difficult\nA",
+        " ind\u00e9pendamment\n\nQ: difficult",
+        " boulevers\u00e9\n\nQ: difficult",
+        " contraignant\n\nQ: failure\nA",
+        " timbre\n\nQ: succeed\nA",
+        " reconstruit\n\nQ: succeed\n",
+        " cibl\u00e9\n\nQ: successful\n",
+        " Lettonie\n\nQ: 199",
+        " disque\n\nQ: failure\nA",
+        " connaissance\n\nQ: difficult\nA",
+        " restant\n\nQ: succeed\nA",
+        " \u00e9norme\n\nQ: difficult\n",
+        " en avant\n\nQ: succeed\nA",
+        " syst\u00e8mes\n\nQ: difficult\nA",
+        " canal\n\nQ: succeed\nA:",
+        " orient\u00e9\n\nQ: succeed\nA",
+        " l'Antarctique\n\nQ",
+        " verre\n\nQ: difficult\nA",
+        " \u00eele\n\nQ: difficult\nA",
+        " confi\u00e9\n\nQ: succeed\n",
+        " v\u00e9hicules\n\nQ: difficult\n",
+        " dr\u00f4le\n\nQ: difficult\nA",
+        " roi\n\nQ: failure\nA:",
+        " d\u00e9cliner\n\nQ: succeed\n"
+      ],
+      "after": [
+        " mercredi\n\nQ: difficult\n",
+        " capuchon\n\nQ: failure\n",
+        " l'Argentine\n\nQ: ",
+        " vainqueurs\n\nQ: failure\n",
+        " expatri\u00e9s\n\nQ: unifying",
+        " vue d'ensemble\n\nQ: succeed",
+        " Slovaquie\n\nQ: ",
+        " tourn\u00e9es\n\nQ: succeed\n",
+        " votre\n\nQ: fail\nA:",
+        " administr\u00e9\n\nQ: difficult\nA",
+        " t\u00e9l\u00e9vision\n\nQ: difficult\nA",
+        " d\u00e9crire\n\nQ: difficult\nA",
+        " ex\u00e9cut\u00e9\n\nQ: succeed",
+        " classiques\n\nQ: succeed\nA",
+        " proc\u00e9dures\n\nQ: guarantee",
+        " voyages\n\nQ: succeed\nA",
+        " retour\n\nQ: succeed\nA:",
+        " ann\u00e9es\n\nQ: difficult\nA:",
+        " avec\n\nQ: fail\nA:",
+        " avoir\n\nQ: difficult\nA:",
+        " fourni\n\nQ: succeed\nA",
+        " pair\n\nQ: succeed\nA:",
+        " pr\u00e9sidence\n\nQ: succeed\nA",
+        " lac\n\nQ: difficult\nA:",
+        " contre\n\nQ: difficult\nA:",
+        " moulin\n\nQ: succeed\nA",
+        " voix\n\nQ: difficult\nA",
+        " ind\u00e9pendamment\n\nQ: difficult",
+        " boulevers\u00e9\n\nQ: difficult",
+        " contraignant\n\nQ: failure\nA",
+        " timbre\n\nQ: succeed\nA",
+        " reconstruit\n\nQ: succeed\n",
+        " cibl\u00e9\n\nQ: successful\n",
+        " Lettonie\n\nQ: 199",
+        " disque\n\nQ: failure\nA",
+        " connaissance\n\nQ: difficult\nA",
+        " restant\n\nQ: succeed\nA",
+        " \u00e9norme\n\nQ: difficult\n",
+        " en avant\n\nQ: succeed\nA",
+        " syst\u00e8mes\n\nQ: difficult\nA",
+        " canal\n\nQ: succeed\nA:",
+        " orient\u00e9\n\nQ: succeed\nA",
+        " l'Antarctique\n\nQ",
+        " verre\n\nQ: difficult\nA",
+        " \u00eele\n\nQ: difficult\nA",
+        " confi\u00e9\n\nQ: succeed\n",
+        " v\u00e9hicules\n\nQ: difficult\n",
+        " dr\u00f4le\n\nQ: difficult\nA",
+        " roi\n\nQ: failure\nA:",
+        " d\u00e9cliner\n\nQ: succeed\n"
+      ],
+      "original_accuracy": 0.76,
+      "cached_accuracy": 0.76
+    },
+    {
+      "task": "english-french",
+      "batch_size": 8,
+      "identical": false,
+      "different_queries": 4,
+      "before": [
+        " mercredi\n\nQ: 3",
+        " capuchon\n\nQ: failure\n",
+        " l'Argentine\n\nQ: ",
+        " vainqueurs\n\nQ: difficult\n",
+        " expatri\u00e9s\n\nQ: unifying",
+        " vue d'ensemble\n\nQ: succeed",
+        " Slovaquie\n\nQ: ",
+        " tourn\u00e9es\n\nQ: succeed\n",
+        " votre\n\nQ: fail\nA:",
+        " administr\u00e9\n\nQ: difficult\nA",
+        " t\u00e9l\u00e9vision\n\nQ: difficult\nA",
+        " d\u00e9crire\n\nQ: difficult\nA",
+        " ex\u00e9cut\u00e9\n\nQ: succeed",
+        " classiques\n\nQ: succeed\nA",
+        " proc\u00e9dures\n\nQ: guarantee",
+        " voyages\n\nQ: succeed\nA",
+        " retour\n\nQ: succeed\nA:",
+        " ann\u00e9es\n\nQ: difficult\nA:",
+        " avec\n\nQ: fail\nA:",
+        " avoir\n\nQ: difficult\nA:",
+        " fourni\n\nQ: succeed\nA",
+        " pair\n\nQ: succeed\nA:",
+        " pr\u00e9sidence\n\nQ: succeed\nA",
+        " lac\n\nQ: difficult\nA:",
+        " contre\n\nQ: difficult\nA:",
+        " moulin\n\nQ: succeed\nA",
+        " voix\n\nQ: difficult\nA",
+        " ind\u00e9pendamment\n\nQ: difficult",
+        " boulevers\u00e9\n\nQ: difficult",
+        " contraignant\n\nQ: failure\nA",
+        " timbre\n\nQ: succeed\nA",
+        " reconstruit\n\nQ: succeed\n",
+        " cibl\u00e9\n\nQ: successful\n",
+        " Lettonie\n\nQ: 199",
+        " disque\n\nQ: failure\nA",
+        " connaissance\n\nQ: difficult\nA",
+        " restant\n\nQ: succeed\nA",
+        " \u00e9norme\n\nQ: difficult\n",
+        " en avant\n\nQ: succeed\nA",
+        " syst\u00e8mes\n\nQ: difficult\nA",
+        " canal\n\nQ: succeed\nA:",
+        " orient\u00e9\n\nQ: succeed\nA",
+        " l'Antarctique\n\nQ",
+        " verre\n\nQ: difficult\nA",
+        " \u00eele\n\nQ: difficult\nA",
+        " confi\u00e9\n\nQ: succeed\n",
+        " v\u00e9hicules\n\nQ: difficult\n",
+        " dr\u00f4le\n\nQ: difficult\nA",
+        " roi\n\nQ: failure\nA:",
+        " d\u00e9cliner\n\nQ: succeed\n"
+      ],
+      "after": [
+        " mercredi\n\nQ: difficult\n",
+        " capuchon\n\nQ: failure\n",
+        " l'Argentine\n\nQ: ",
+        " vainqueurs\n\nQ: failure\n",
+        " expatri\u00e9s\n\nQ: unifying",
+        " vue d'ensemble\n\nQ: succeed",
+        " Slovaquie\n\nQ: ",
+        " tourn\u00e9e\n\nQ: succeed\nA",
+        " votre\n\nQ: fail\nA:",
+        " administr\u00e9\n\nQ: difficult\nA",
+        " t\u00e9l\u00e9vision\n\nQ: difficult\nA",
+        " d\u00e9crire\n\nQ: difficult\nA",
+        " ex\u00e9cut\u00e9\n\nQ: difficult",
+        " classiques\n\nQ: succeed\nA",
+        " proc\u00e9dures\n\nQ: guarantee",
+        " voyages\n\nQ: succeed\nA",
+        " retour\n\nQ: succeed\nA:",
+        " ann\u00e9es\n\nQ: difficult\nA:",
+        " avec\n\nQ: fail\nA:",
+        " avoir\n\nQ: difficult\nA:",
+        " fourni\n\nQ: succeed\nA",
+        " pair\n\nQ: succeed\nA:",
+        " pr\u00e9sidence\n\nQ: succeed\nA",
+        " lac\n\nQ: difficult\nA:",
+        " contre\n\nQ: difficult\nA:",
+        " moulin\n\nQ: succeed\nA",
+        " voix\n\nQ: difficult\nA",
+        " ind\u00e9pendamment\n\nQ: difficult",
+        " boulevers\u00e9\n\nQ: difficult",
+        " contraignant\n\nQ: failure\nA",
+        " timbre\n\nQ: succeed\nA",
+        " reconstruit\n\nQ: succeed\n",
+        " cibl\u00e9\n\nQ: successful\n",
+        " Lettonie\n\nQ: 199",
+        " disque\n\nQ: failure\nA",
+        " connaissance\n\nQ: difficult\nA",
+        " restant\n\nQ: succeed\nA",
+        " \u00e9norme\n\nQ: difficult\n",
+        " en avant\n\nQ: succeed\nA",
+        " syst\u00e8mes\n\nQ: difficult\nA",
+        " canal\n\nQ: succeed\nA:",
+        " orient\u00e9\n\nQ: succeed\nA",
+        " l'Antarctique\n\nQ",
+        " verre\n\nQ: difficult\nA",
+        " \u00eele\n\nQ: difficult\nA",
+        " confi\u00e9\n\nQ: succeed\n",
+        " v\u00e9hicules\n\nQ: difficult\n",
+        " dr\u00f4le\n\nQ: difficult\nA",
+        " roi\n\nQ: failure\nA:",
+        " d\u00e9cliner\n\nQ: succeed\n"
+      ],
+      "original_accuracy": 0.76,
+      "cached_accuracy": 0.76
+    },
+    {
+      "task": "english-french",
+      "batch_size": 25,
+      "identical": false,
+      "different_queries": 3,
+      "before": [
+        " mercredi\n\nQ: 3",
+        " capuchon\n\nQ: failure\n",
+        " l'Argentine\n\nQ: ",
+        " vainqueurs\n\nQ: failure\n",
+        " expatri\u00e9s\n\nQ: unifying",
+        " vue d'ensemble\n\nQ: succeed",
+        " Slovaquie\n\nQ: ",
+        " tourn\u00e9e\n\nQ: succeed\nA",
+        " votre\n\nQ: fail\nA:",
+        " administr\u00e9\n\nQ: difficult\nA",
+        " t\u00e9l\u00e9vision\n\nQ: difficult\nA",
+        " d\u00e9crire\n\nQ: difficult\nA",
+        " ex\u00e9cut\u00e9\n\nQ: succeed",
+        " classiques\n\nQ: succeed\nA",
+        " proc\u00e9dures\n\nQ: guarantee",
+        " voyages\n\nQ: succeed\nA",
+        " retour\n\nQ: succeed\nA:",
+        " ann\u00e9es\n\nQ: difficult\nA:",
+        " avec\n\nQ: fail\nA:",
+        " avoir\n\nQ: difficult\nA:",
+        " fourni\n\nQ: succeed\nA",
+        " pair\n\nQ: succeed\nA:",
+        " pr\u00e9sidence\n\nQ: succeed\nA",
+        " lac\n\nQ: difficult\nA:",
+        " contre\n\nQ: difficult\nA:",
+        " moulin\n\nQ: succeed\nA",
+        " voix\n\nQ: difficult\nA",
+        " ind\u00e9pendamment\n\nQ: difficult",
+        " boulevers\u00e9\n\nQ: difficult",
+        " contraignant\n\nQ: failure\nA",
+        " timbre\n\nQ: succeed\nA",
+        " reconstruit\n\nQ: succeed\n",
+        " cibl\u00e9\n\nQ: unifying",
+        " Lettonie\n\nQ: 199",
+        " disque\n\nQ: failure\nA",
+        " connaissance\n\nQ: difficult\nA",
+        " restant\n\nQ: succeed\nA",
+        " \u00e9norme\n\nQ: difficult\n",
+        " en avant\n\nQ: succeed\nA",
+        " syst\u00e8mes\n\nQ: difficult\nA",
+        " canal\n\nQ: succeed\nA:",
+        " orient\u00e9\n\nQ: succeed\nA",
+        " l'Antarctique\n\nQ",
+        " verre\n\nQ: difficult\nA",
+        " \u00eele\n\nQ: difficult\nA",
+        " confi\u00e9\n\nQ: succeed\n",
+        " v\u00e9hicules\n\nQ: difficult\n",
+        " dr\u00f4le\n\nQ: difficult\nA",
+        " roi\n\nQ: failure\nA:",
+        " d\u00e9cliner\n\nQ: succeed\n"
+      ],
+      "after": [
+        " mercredi\n\nQ: difficult\n",
+        " capuchon\n\nQ: failure\n",
+        " l'Argentine\n\nQ: ",
+        " vainqueurs\n\nQ: failure\n",
+        " expatri\u00e9s\n\nQ: unifying",
+        " vue d'ensemble\n\nQ: succeed",
+        " Slovaquie\n\nQ: ",
+        " tourn\u00e9e\n\nQ: succeed\nA",
+        " votre\n\nQ: fail\nA:",
+        " administr\u00e9\n\nQ: difficult\nA",
+        " t\u00e9l\u00e9vision\n\nQ: difficult\nA",
+        " d\u00e9crire\n\nQ: difficult\nA",
+        " ex\u00e9cut\u00e9\n\nQ: difficult",
+        " classiques\n\nQ: succeed\nA",
+        " proc\u00e9dures\n\nQ: guarantee",
+        " voyages\n\nQ: succeed\nA",
+        " retour\n\nQ: succeed\nA:",
+        " ann\u00e9es\n\nQ: difficult\nA:",
+        " avec\n\nQ: fail\nA:",
+        " avoir\n\nQ: difficult\nA:",
+        " fourni\n\nQ: succeed\nA",
+        " pair\n\nQ: succeed\nA:",
+        " pr\u00e9sidence\n\nQ: succeed\nA",
+        " lac\n\nQ: difficult\nA:",
+        " contre\n\nQ: difficult\nA:",
+        " moulin\n\nQ: succeed\nA",
+        " voix\n\nQ: difficult\nA",
+        " ind\u00e9pendamment\n\nQ: difficult",
+        " boulevers\u00e9\n\nQ: difficult",
+        " contraignant\n\nQ: failure\nA",
+        " timbre\n\nQ: succeed\nA",
+        " reconstruit\n\nQ: succeed\n",
+        " cibl\u00e9\n\nQ: successful\n",
+        " Lettonie\n\nQ: 199",
+        " disque\n\nQ: failure\nA",
+        " connaissance\n\nQ: difficult\nA",
+        " restant\n\nQ: succeed\nA",
+        " \u00e9norme\n\nQ: difficult\n",
+        " en avant\n\nQ: succeed\nA",
+        " syst\u00e8mes\n\nQ: difficult\nA",
+        " canal\n\nQ: succeed\nA:",
+        " orient\u00e9\n\nQ: succeed\nA",
+        " l'Antarctique\n\nQ",
+        " verre\n\nQ: difficult\nA",
+        " \u00eele\n\nQ: difficult\nA",
+        " confi\u00e9\n\nQ: succeed\n",
+        " v\u00e9hicules\n\nQ: difficult\n",
+        " dr\u00f4le\n\nQ: difficult\nA",
+        " roi\n\nQ: failure\nA:",
+        " d\u00e9cliner\n\nQ: succeed\n"
+      ],
+      "original_accuracy": 0.76,
+      "cached_accuracy": 0.76
+    }
+  ],
+  "measurements": [
+    {
+      "task": "antonym",
+      "measurement": "build_prefix_cache",
+      "calls_per_repeat": 20,
+      "warmup_seconds": 0.7892482541501522,
+      "repeats": [
+        {
+          "seconds": 0.01866876184940338,
+          "gpu_board_joules": 1.6593182356264442
+        },
+        {
+          "seconds": 0.018592899106442927,
+          "gpu_board_joules": 3.2471619262574243
+        },
+        {
+          "seconds": 0.018643708899617195,
+          "gpu_board_joules": 4.3643734376272185
+        },
+        {
+          "seconds": 0.018597233481705187,
+          "gpu_board_joules": 4.583411741090938
+        },
+        {
+          "seconds": 0.018583742342889308,
+          "gpu_board_joules": 4.551272053033114
+        },
+        {
+          "seconds": 0.018940694257616998,
+          "gpu_board_joules": 4.705352152047679
+        },
+        {
+          "seconds": 0.018780461512506008,
+          "gpu_board_joules": 4.597416798396967
+        }
+      ],
+      "median_seconds": 0.018643708899617195,
+      "median_gpu_board_joules": 4.551272053033114
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 7,
+      "warmup_seconds": 0.12601673230528831,
+      "repeats": [
+        {
+          "seconds": 0.1254639077399458,
+          "gpu_board_joules": 42.74320243010563
+        },
+        {
+          "seconds": 0.1255417141531195,
+          "gpu_board_joules": 40.39786461730887
+        },
+        {
+          "seconds": 0.1260503658226558,
+          "gpu_board_joules": 39.391428434143634
+        },
+        {
+          "seconds": 0.12538110837340355,
+          "gpu_board_joules": 39.01678832642468
+        },
+        {
+          "seconds": 0.1259647724883897,
+          "gpu_board_joules": 39.33257562963026
+        },
+        {
+          "seconds": 0.1249714626797608,
+          "gpu_board_joules": 38.99366516114079
+        },
+        {
+          "seconds": 0.12568521818944386,
+          "gpu_board_joules": 39.45605303937037
+        }
+      ],
+      "median_seconds": 0.1255417141531195,
+      "median_gpu_board_joules": 39.391428434143634,
+      "batch_size": 1,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 7,
+      "warmup_seconds": 0.13209308683872223,
+      "repeats": [
+        {
+          "seconds": 0.13045704950179374,
+          "gpu_board_joules": 40.45699161585952
+        },
+        {
+          "seconds": 0.130607436810221,
+          "gpu_board_joules": 40.55116079573121
+        },
+        {
+          "seconds": 0.13097789670739854,
+          "gpu_board_joules": 39.24832550154467
+        },
+        {
+          "seconds": 0.1303160281053611,
+          "gpu_board_joules": 39.19014665543501
+        },
+        {
+          "seconds": 0.13050321276698792,
+          "gpu_board_joules": 39.02561496376758
+        },
+        {
+          "seconds": 0.12971458637288638,
+          "gpu_board_joules": 39.97803425399943
+        },
+        {
+          "seconds": 0.12951952112572535,
+          "gpu_board_joules": 38.80856256664744
+        }
+      ],
+      "median_seconds": 0.13045704950179374,
+      "median_gpu_board_joules": 39.24832550154467,
+      "batch_size": 1,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 6,
+      "warmup_seconds": 0.1488799937069416,
+      "repeats": [
+        {
+          "seconds": 0.14995003181199232,
+          "gpu_board_joules": 51.255796834935126
+        },
+        {
+          "seconds": 0.1548051064213117,
+          "gpu_board_joules": 53.099227543004474
+        },
+        {
+          "seconds": 0.1541924551129341,
+          "gpu_board_joules": 51.06180651818712
+        },
+        {
+          "seconds": 0.1560300967345635,
+          "gpu_board_joules": 51.334213671296204
+        },
+        {
+          "seconds": 0.15080922655761242,
+          "gpu_board_joules": 50.16700886419729
+        },
+        {
+          "seconds": 0.15498652992149195,
+          "gpu_board_joules": 52.861473609969316
+        },
+        {
+          "seconds": 0.1504018735140562,
+          "gpu_board_joules": 50.02831496168142
+        }
+      ],
+      "median_seconds": 0.1541924551129341,
+      "median_gpu_board_joules": 51.255796834935126,
+      "batch_size": 8,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 6,
+      "warmup_seconds": 0.13758773356676102,
+      "repeats": [
+        {
+          "seconds": 0.13662562519311905,
+          "gpu_board_joules": 41.97449199831214
+        },
+        {
+          "seconds": 0.136477151264747,
+          "gpu_board_joules": 39.768333698740854
+        },
+        {
+          "seconds": 0.13713324256241322,
+          "gpu_board_joules": 39.40558397085716
+        },
+        {
+          "seconds": 0.1366118099540472,
+          "gpu_board_joules": 39.674643019676836
+        },
+        {
+          "seconds": 0.136522368217508,
+          "gpu_board_joules": 39.507335979122054
+        },
+        {
+          "seconds": 0.136722636098663,
+          "gpu_board_joules": 39.74461619986842
+        },
+        {
+          "seconds": 0.13686934051414332,
+          "gpu_board_joules": 40.01465209272069
+        }
+      ],
+      "median_seconds": 0.13662562519311905,
+      "median_gpu_board_joules": 39.74461619986842,
+      "batch_size": 8,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 4,
+      "warmup_seconds": 0.2425486147403717,
+      "repeats": [
+        {
+          "seconds": 0.27366967778652906,
+          "gpu_board_joules": 102.73858202045784
+        },
+        {
+          "seconds": 0.25098462402820587,
+          "gpu_board_joules": 90.86816721231676
+        },
+        {
+          "seconds": 0.24922433588653803,
+          "gpu_board_joules": 88.32860694974127
+        },
+        {
+          "seconds": 0.24587450735270977,
+          "gpu_board_joules": 91.5335020438768
+        },
+        {
+          "seconds": 0.24826423078775406,
+          "gpu_board_joules": 91.86523577077315
+        },
+        {
+          "seconds": 0.2488884823396802,
+          "gpu_board_joules": 89.44142358568031
+        },
+        {
+          "seconds": 0.2790686348453164,
+          "gpu_board_joules": 101.01058403351344
+        }
+      ],
+      "median_seconds": 0.24922433588653803,
+      "median_gpu_board_joules": 91.5335020438768,
+      "batch_size": 25,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 5,
+      "warmup_seconds": 0.18096096441149712,
+      "repeats": [
+        {
+          "seconds": 0.17892009466886521,
+          "gpu_board_joules": 57.23094622348994
+        },
+        {
+          "seconds": 0.1789125956594944,
+          "gpu_board_joules": 55.98030512160435
+        },
+        {
+          "seconds": 0.1840235635638237,
+          "gpu_board_joules": 55.5242510323748
+        },
+        {
+          "seconds": 0.18235935345292092,
+          "gpu_board_joules": 54.469159480936824
+        },
+        {
+          "seconds": 0.17853009402751924,
+          "gpu_board_joules": 53.95566286696121
+        },
+        {
+          "seconds": 0.18377434760332106,
+          "gpu_board_joules": 54.54347955821454
+        },
+        {
+          "seconds": 0.18520631045103073,
+          "gpu_board_joules": 56.55391308644907
+        }
+      ],
+      "median_seconds": 0.18235935345292092,
+      "median_gpu_board_joules": 55.5242510323748,
+      "batch_size": 25,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "build_prefix_cache",
+      "calls_per_repeat": 20,
+      "warmup_seconds": 0.019588835537433624,
+      "repeats": [
+        {
+          "seconds": 0.018869960308074953,
+          "gpu_board_joules": 5.52840403959503
+        },
+        {
+          "seconds": 0.01903200279921293,
+          "gpu_board_joules": 5.403560321579976
+        },
+        {
+          "seconds": 0.020118973962962628,
+          "gpu_board_joules": 5.063774071293883
+        },
+        {
+          "seconds": 0.018706329353153705,
+          "gpu_board_joules": 4.67038907783851
+        },
+        {
+          "seconds": 0.018630874156951905,
+          "gpu_board_joules": 4.565428173175081
+        },
+        {
+          "seconds": 0.02001386322081089,
+          "gpu_board_joules": 5.048895348153077
+        },
+        {
+          "seconds": 0.020435155741870402,
+          "gpu_board_joules": 5.07098757840693
+        }
+      ],
+      "median_seconds": 0.01903200279921293,
+      "median_gpu_board_joules": 5.063774071293883
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 7,
+      "warmup_seconds": 0.12751712650060654,
+      "repeats": [
+        {
+          "seconds": 0.13000958359667233,
+          "gpu_board_joules": 43.87614847872355
+        },
+        {
+          "seconds": 0.12946393127952302,
+          "gpu_board_joules": 42.332902797924085
+        },
+        {
+          "seconds": 0.1273445188999176,
+          "gpu_board_joules": 39.313867041223816
+        },
+        {
+          "seconds": 0.12547721500907624,
+          "gpu_board_joules": 39.39102048286635
+        },
+        {
+          "seconds": 0.12892107559101923,
+          "gpu_board_joules": 40.56340510078307
+        },
+        {
+          "seconds": 0.1254332470042365,
+          "gpu_board_joules": 39.28074003173837
+        },
+        {
+          "seconds": 0.12553139829209872,
+          "gpu_board_joules": 39.60464226662048
+        }
+      ],
+      "median_seconds": 0.1273445188999176,
+      "median_gpu_board_joules": 39.60464226662048,
+      "batch_size": 1,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 7,
+      "warmup_seconds": 0.13227783516049385,
+      "repeats": [
+        {
+          "seconds": 0.135420594896589,
+          "gpu_board_joules": 41.5485076818083
+        },
+        {
+          "seconds": 0.13588926302535193,
+          "gpu_board_joules": 42.12053068808679
+        },
+        {
+          "seconds": 0.13233902252146176,
+          "gpu_board_joules": 39.519017910970646
+        },
+        {
+          "seconds": 0.13582304013626917,
+          "gpu_board_joules": 40.82720015230721
+        },
+        {
+          "seconds": 0.13558917226535933,
+          "gpu_board_joules": 40.419631428562006
+        },
+        {
+          "seconds": 0.1316570591713701,
+          "gpu_board_joules": 40.50097634895344
+        },
+        {
+          "seconds": 0.13116577853049552,
+          "gpu_board_joules": 39.63907237476803
+        }
+      ],
+      "median_seconds": 0.135420594896589,
+      "median_gpu_board_joules": 40.50097634895344,
+      "batch_size": 1,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 4,
+      "warmup_seconds": 0.18835677206516266,
+      "repeats": [
+        {
+          "seconds": 0.18960953038185835,
+          "gpu_board_joules": 59.0551937570842
+        },
+        {
+          "seconds": 0.20322522055357695,
+          "gpu_board_joules": 60.53130130297515
+        },
+        {
+          "seconds": 0.19518198538571596,
+          "gpu_board_joules": 52.49674908269196
+        },
+        {
+          "seconds": 0.19515931513160467,
+          "gpu_board_joules": 54.36478553025983
+        },
+        {
+          "seconds": 0.1925908150151372,
+          "gpu_board_joules": 55.12321519870777
+        },
+        {
+          "seconds": 0.19554447662085295,
+          "gpu_board_joules": 57.097765692444995
+        },
+        {
+          "seconds": 0.1951866177842021,
+          "gpu_board_joules": 57.42192027196288
+        }
+      ],
+      "median_seconds": 0.19518198538571596,
+      "median_gpu_board_joules": 57.097765692444995,
+      "batch_size": 8,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 5,
+      "warmup_seconds": 0.1723713055253029,
+      "repeats": [
+        {
+          "seconds": 0.1707533396780491,
+          "gpu_board_joules": 46.46924033772945
+        },
+        {
+          "seconds": 0.17206226885318757,
+          "gpu_board_joules": 45.385887354802335
+        },
+        {
+          "seconds": 0.17151875495910646,
+          "gpu_board_joules": 43.4688852754794
+        },
+        {
+          "seconds": 0.17104901745915413,
+          "gpu_board_joules": 44.84825977611298
+        },
+        {
+          "seconds": 0.17089153602719306,
+          "gpu_board_joules": 43.407847933403666
+        },
+        {
+          "seconds": 0.17050365060567857,
+          "gpu_board_joules": 44.73030307135643
+        },
+        {
+          "seconds": 0.1703120581805706,
+          "gpu_board_joules": 43.11796886597898
+        }
+      ],
+      "median_seconds": 0.17089153602719306,
+      "median_gpu_board_joules": 44.73030307135643,
+      "batch_size": 8,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 4,
+      "warmup_seconds": 0.2461497001349926,
+      "repeats": [
+        {
+          "seconds": 0.255434132181108,
+          "gpu_board_joules": 104.29980929199606
+        },
+        {
+          "seconds": 0.25123841036111116,
+          "gpu_board_joules": 94.87900356343499
+        },
+        {
+          "seconds": 0.24782959837466478,
+          "gpu_board_joules": 92.16929783040658
+        },
+        {
+          "seconds": 0.2495192652568221,
+          "gpu_board_joules": 94.79590751763432
+        },
+        {
+          "seconds": 0.24782542791217566,
+          "gpu_board_joules": 92.60412943954114
+        },
+        {
+          "seconds": 0.24805956054478884,
+          "gpu_board_joules": 99.46516662099397
+        },
+        {
+          "seconds": 0.24956990219652653,
+          "gpu_board_joules": 95.74206139420623
+        }
+      ],
+      "median_seconds": 0.2495192652568221,
+      "median_gpu_board_joules": 94.87900356343499,
+      "batch_size": 25,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 5,
+      "warmup_seconds": 0.18697313591837883,
+      "repeats": [
+        {
+          "seconds": 0.18669817671179773,
+          "gpu_board_joules": 63.17968493803219
+        },
+        {
+          "seconds": 0.18904467076063156,
+          "gpu_board_joules": 59.36364372456819
+        },
+        {
+          "seconds": 0.1889096513390541,
+          "gpu_board_joules": 57.51664879576116
+        },
+        {
+          "seconds": 0.18711154162883759,
+          "gpu_board_joules": 57.7129551903408
+        },
+        {
+          "seconds": 0.1900497242808342,
+          "gpu_board_joules": 58.60562532909959
+        },
+        {
+          "seconds": 0.187758819013834,
+          "gpu_board_joules": 57.31342782423644
+        },
+        {
+          "seconds": 0.1926463045179844,
+          "gpu_board_joules": 58.90582662214339
+        }
+      ],
+      "median_seconds": 0.1889096513390541,
+      "median_gpu_board_joules": 58.60562532909959,
+      "batch_size": 25,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "build_prefix_cache",
+      "calls_per_repeat": 20,
+      "warmup_seconds": 0.02091352641582489,
+      "repeats": [
+        {
+          "seconds": 0.019214379228651525,
+          "gpu_board_joules": 5.822341193865984
+        },
+        {
+          "seconds": 0.01937592327594757,
+          "gpu_board_joules": 5.384913602399044
+        },
+        {
+          "seconds": 0.019112790934741497,
+          "gpu_board_joules": 5.1301541634068615
+        },
+        {
+          "seconds": 0.0190714031457901,
+          "gpu_board_joules": 4.822813346048306
+        },
+        {
+          "seconds": 0.01936798933893442,
+          "gpu_board_joules": 4.881740959456191
+        },
+        {
+          "seconds": 0.019152489304542542,
+          "gpu_board_joules": 4.719122129846364
+        },
+        {
+          "seconds": 0.01902816854417324,
+          "gpu_board_joules": 4.688296753898262
+        }
+      ],
+      "median_seconds": 0.019152489304542542,
+      "median_gpu_board_joules": 4.881740959456191
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 7,
+      "warmup_seconds": 0.1276150494813919,
+      "repeats": [
+        {
+          "seconds": 0.12769826022642,
+          "gpu_board_joules": 43.66047219060554
+        },
+        {
+          "seconds": 0.12788651032107218,
+          "gpu_board_joules": 41.82162920914324
+        },
+        {
+          "seconds": 0.1271055606859071,
+          "gpu_board_joules": 39.712133685664405
+        },
+        {
+          "seconds": 0.12943941727280617,
+          "gpu_board_joules": 40.77529697387879
+        },
+        {
+          "seconds": 0.13176934474280902,
+          "gpu_board_joules": 40.5484665481214
+        },
+        {
+          "seconds": 0.12671976536512375,
+          "gpu_board_joules": 39.56146919203123
+        },
+        {
+          "seconds": 0.12747693540794508,
+          "gpu_board_joules": 40.146048919962986
+        }
+      ],
+      "median_seconds": 0.12769826022642,
+      "median_gpu_board_joules": 40.5484665481214,
+      "batch_size": 1,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 7,
+      "warmup_seconds": 0.13333800807595253,
+      "repeats": [
+        {
+          "seconds": 0.13088250958493777,
+          "gpu_board_joules": 41.03383984925225
+        },
+        {
+          "seconds": 0.13171247499329702,
+          "gpu_board_joules": 40.839822396691886
+        },
+        {
+          "seconds": 0.1318007404250758,
+          "gpu_board_joules": 39.87400335134938
+        },
+        {
+          "seconds": 0.13193248265555926,
+          "gpu_board_joules": 39.92054359327843
+        },
+        {
+          "seconds": 0.13197684128369605,
+          "gpu_board_joules": 40.94451921374116
+        },
+        {
+          "seconds": 0.13196026906371117,
+          "gpu_board_joules": 40.78993468728404
+        },
+        {
+          "seconds": 0.1315562783607415,
+          "gpu_board_joules": 40.109288026419065
+        }
+      ],
+      "median_seconds": 0.1318007404250758,
+      "median_gpu_board_joules": 40.78993468728404,
+      "batch_size": 1,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 5,
+      "warmup_seconds": 0.1873095966875553,
+      "repeats": [
+        {
+          "seconds": 0.18579036071896554,
+          "gpu_board_joules": 61.03664176127438
+        },
+        {
+          "seconds": 0.19022040218114852,
+          "gpu_board_joules": 59.497046031910926
+        },
+        {
+          "seconds": 0.19257735460996628,
+          "gpu_board_joules": 57.183472899343826
+        },
+        {
+          "seconds": 0.19028550758957863,
+          "gpu_board_joules": 56.03693833973259
+        },
+        {
+          "seconds": 0.1941201776266098,
+          "gpu_board_joules": 57.09852464638611
+        },
+        {
+          "seconds": 0.1909418947994709,
+          "gpu_board_joules": 57.789712027145114
+        },
+        {
+          "seconds": 0.19517953991889953,
+          "gpu_board_joules": 58.35206397795677
+        }
+      ],
+      "median_seconds": 0.1909418947994709,
+      "median_gpu_board_joules": 57.789712027145114,
+      "batch_size": 8,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 5,
+      "warmup_seconds": 0.1738174594938755,
+      "repeats": [
+        {
+          "seconds": 0.17103251218795776,
+          "gpu_board_joules": 47.18718290734496
+        },
+        {
+          "seconds": 0.17673252373933793,
+          "gpu_board_joules": 47.98504700032994
+        },
+        {
+          "seconds": 0.17201548665761948,
+          "gpu_board_joules": 44.47754903889447
+        },
+        {
+          "seconds": 0.1727619804441929,
+          "gpu_board_joules": 45.024014745339755
+        },
+        {
+          "seconds": 0.17487917244434356,
+          "gpu_board_joules": 45.321362172674384
+        },
+        {
+          "seconds": 0.17216992154717445,
+          "gpu_board_joules": 44.719315573714674
+        },
+        {
+          "seconds": 0.17007250115275382,
+          "gpu_board_joules": 44.548684848453846
+        }
+      ],
+      "median_seconds": 0.17216992154717445,
+      "median_gpu_board_joules": 45.024014745339755,
+      "batch_size": 8,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4_uncached",
+      "calls_per_repeat": 4,
+      "warmup_seconds": 0.252460353076458,
+      "repeats": [
+        {
+          "seconds": 0.2543682912364602,
+          "gpu_board_joules": 99.16728043730836
+        },
+        {
+          "seconds": 0.27974298130720854,
+          "gpu_board_joules": 108.26051092666069
+        },
+        {
+          "seconds": 0.272922620177269,
+          "gpu_board_joules": 96.07086306675338
+        },
+        {
+          "seconds": 0.2541888393461704,
+          "gpu_board_joules": 95.07780510867946
+        },
+        {
+          "seconds": 0.2533536273986101,
+          "gpu_board_joules": 98.44711853859945
+        },
+        {
+          "seconds": 0.2705387994647026,
+          "gpu_board_joules": 98.3128736927919
+        },
+        {
+          "seconds": 0.25871125515550375,
+          "gpu_board_joules": 92.69745883041337
+        }
+      ],
+      "median_seconds": 0.25871125515550375,
+      "median_gpu_board_joules": 98.3128736927919,
+      "batch_size": 25,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4_prefix_cached",
+      "calls_per_repeat": 5,
+      "warmup_seconds": 0.187290258705616,
+      "repeats": [
+        {
+          "seconds": 0.1860101781785488,
+          "gpu_board_joules": 60.78327340984815
+        },
+        {
+          "seconds": 0.1871548555791378,
+          "gpu_board_joules": 60.52380392008077
+        },
+        {
+          "seconds": 0.18646602854132652,
+          "gpu_board_joules": 57.79863542165607
+        },
+        {
+          "seconds": 0.1858566626906395,
+          "gpu_board_joules": 57.86719220329449
+        },
+        {
+          "seconds": 0.1861853040754795,
+          "gpu_board_joules": 57.68293064035847
+        },
+        {
+          "seconds": 0.1867097333073616,
+          "gpu_board_joules": 57.94934368618577
+        },
+        {
+          "seconds": 0.1861255019903183,
+          "gpu_board_joules": 58.71090087187273
+        }
+      ],
+      "median_seconds": 0.1861853040754795,
+      "median_gpu_board_joules": 57.94934368618577,
+      "batch_size": 25,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "prefixes": [
+    {
+      "task": "antonym",
+      "cache_bytes": 4587520,
+      "prefix_tokens": 35
+    },
+    {
+      "task": "country-capital",
+      "cache_bytes": 4980736,
+      "prefix_tokens": 38
+    },
+    {
+      "task": "english-french",
+      "cache_bytes": 5242880,
+      "prefix_tokens": 40
+    }
+  ],
+  "cuda_visible_devices": "3",
+  "demonstration_seed": 20,
+  "scope": "Reusable unquantized demonstration-prefix KV cache; copying and batch expansion included in serving; greedy eight-token budget",
+  "energy_scope": "Sampled GPU board energy only; 100ms polling; no CPU/system energy",
+  "implementation": "Native greedy decode loop; original HF generate remains the uncached comparator. Numerical prediction differences are recorded explicitly.",
+  "power_error": null,
+  "complete": true
+}

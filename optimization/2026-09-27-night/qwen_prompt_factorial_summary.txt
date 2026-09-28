@@ -1,0 +1,222 @@
+{
+  "n_tasks": 20,
+  "n_configurations": 8,
+  "scope": "Oracle intervention with matched remining; conditional paired task effects, not a unique architectural cause.",
+  "source_sha256": "d3874d562ce26858ff69e0364ecf4ea0711c00966810bca4b0a58398ff7581c7",
+  "means": {
+    "native0_instruction0_layers(14, 20)": 0.10300000000000001,
+    "native0_instruction0_layers(24,)": 0.209,
+    "native0_instruction1_layers(14, 20)": 0.151,
+    "native0_instruction1_layers(24,)": 0.24700000000000003,
+    "native1_instruction0_layers(14, 20)": 0.01,
+    "native1_instruction0_layers(24,)": 0.054000000000000006,
+    "native1_instruction1_layers(14, 20)": 0.042,
+    "native1_instruction1_layers(24,)": 0.263
+  },
+  "effects": [
+    {
+      "axis": "native",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "instruction": false,
+        "layer_setting": "layer24"
+      },
+      "n_tasks": 20,
+      "diff": -0.15500000000000003,
+      "ci95": [
+        -0.24000000000000005,
+        -0.083
+      ]
+    },
+    {
+      "axis": "native",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "instruction": false,
+        "layer_setting": "pair14_20"
+      },
+      "n_tasks": 20,
+      "diff": -0.093,
+      "ci95": [
+        -0.164,
+        -0.031
+      ]
+    },
+    {
+      "axis": "native",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "instruction": true,
+        "layer_setting": "layer24"
+      },
+      "n_tasks": 20,
+      "diff": 0.015999999999999993,
+      "ci95": [
+        -0.026000000000000013,
+        0.059
+      ]
+    },
+    {
+      "axis": "native",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "instruction": true,
+        "layer_setting": "pair14_20"
+      },
+      "n_tasks": 20,
+      "diff": -0.10900000000000001,
+      "ci95": [
+        -0.191,
+        -0.038
+      ]
+    },
+    {
+      "axis": "instruction",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "native": false,
+        "layer_setting": "layer24"
+      },
+      "n_tasks": 20,
+      "diff": 0.038,
+      "ci95": [
+        -0.063,
+        0.13899999999999998
+      ]
+    },
+    {
+      "axis": "instruction",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "native": false,
+        "layer_setting": "pair14_20"
+      },
+      "n_tasks": 20,
+      "diff": 0.048,
+      "ci95": [
+        -1.3877787807814458e-18,
+        0.101
+      ]
+    },
+    {
+      "axis": "instruction",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "native": true,
+        "layer_setting": "layer24"
+      },
+      "n_tasks": 20,
+      "diff": 0.20900000000000002,
+      "ci95": [
+        0.124,
+        0.307
+      ]
+    },
+    {
+      "axis": "instruction",
+      "contrast": [
+        true,
+        false
+      ],
+      "fixed": {
+        "native": true,
+        "layer_setting": "pair14_20"
+      },
+      "n_tasks": 20,
+      "diff": 0.031999999999999994,
+      "ci95": [
+        0.013000000000000001,
+        0.053000000000000005
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "native": false,
+        "instruction": false
+      },
+      "n_tasks": 20,
+      "diff": 0.10600000000000001,
+      "ci95": [
+        0.004000000000000002,
+        0.21599999999999997
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "native": false,
+        "instruction": true
+      },
+      "n_tasks": 20,
+      "diff": 0.096,
+      "ci95": [
+        0.024999999999999998,
+        0.176
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "native": true,
+        "instruction": false
+      },
+      "n_tasks": 20,
+      "diff": 0.044,
+      "ci95": [
+        0.003999999999999999,
+        0.099
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "native": true,
+        "instruction": true
+      },
+      "n_tasks": 20,
+      "diff": 0.221,
+      "ci95": [
+        0.122,
+        0.331
+      ]
+    }
+  ]
+}

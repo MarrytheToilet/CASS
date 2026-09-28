@@ -1,0 +1,74 @@
+[
+  {
+    "size": 32,
+    "shared_direction": "recomputed",
+    "operator": "submitted",
+    "dictionary_seconds": 1.9737553596496582,
+    "gram_seconds": 0.1956772580742836,
+    "total_columns": 1006,
+    "joint_basis_bytes": 65929216,
+    "gram_bytes": 8096288,
+    "concatenated_basis_bytes": 65929216,
+    "scope": "32 original natural-language tasks plus explicitly synthetic correlated tasks",
+    "maximum_coherence": 0.9946173053166415,
+    "maximum_pair": [
+      "alphabetically-last",
+      "alphabetically-first"
+    ],
+    "median_coherence": 0.5728327871305048
+  },
+  {
+    "size": 64,
+    "shared_direction": "recomputed",
+    "operator": "submitted",
+    "dictionary_seconds": 4.104586359113455,
+    "gram_seconds": 0.62406200543046,
+    "total_columns": 2024,
+    "joint_basis_bytes": 132644864,
+    "gram_bytes": 32772608,
+    "concatenated_basis_bytes": 132644864,
+    "scope": "32 original natural-language tasks plus explicitly synthetic correlated tasks",
+    "maximum_coherence": 0.9991829452635979,
+    "maximum_pair": [
+      "affine_a6_b3",
+      "affine_a6_b-3"
+    ],
+    "median_coherence": 0.5666329468889428
+  },
+  {
+    "size": 128,
+    "shared_direction": "recomputed",
+    "operator": "submitted",
+    "dictionary_seconds": 7.713728748261929,
+    "gram_seconds": 2.2793306335806847,
+    "total_columns": 4062,
+    "joint_basis_bytes": 266207232,
+    "gram_bytes": 131998752,
+    "concatenated_basis_bytes": 266207232,
+    "scope": "32 original natural-language tasks plus explicitly synthetic correlated tasks",
+    "maximum_coherence": 0.9993284282623558,
+    "maximum_pair": [
+      "affine_a7_b-4",
+      "affine_a7_b-8"
+    ],
+    "median_coherence": 0.5997438042415126
+  },
+  {
+    "size": 256,
+    "shared_direction": "recomputed",
+    "operator": "submitted",
+    "dictionary_seconds": 15.474634613841772,
+    "gram_seconds": 8.17584279179573,
+    "total_columns": 7885,
+    "joint_basis_bytes": 516751360,
+    "gram_bytes": 497385800,
+    "concatenated_basis_bytes": 516751360,
+    "scope": "32 original natural-language tasks plus explicitly synthetic correlated tasks",
+    "maximum_coherence": 0.9976295981652678,
+    "maximum_pair": [
+      "affine_a9_b-1",
+      "affine_a9_b1"
+    ],
+    "median_coherence": 0.7217425266294815
+  }
+]

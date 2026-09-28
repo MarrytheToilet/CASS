@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-27T21:02:59.253924+00:00",
+  "pid": 12347,
+  "worker_pid": 10982,
+  "complete_records": 153,
+  "incomplete_trailing_bytes": 0,
+  "before_sha256": "783897f7141000821c0eee5fe4c9803ccc2e61c12812868057ca868acc9f9498",
+  "after_sha256": "783897f7141000821c0eee5fe4c9803ccc2e61c12812868057ca868acc9f9498",
+  "verification": "answer_stop_verified.json",
+  "reason": "Resume with verified first-answer stopping; preserve every complete record"
+}

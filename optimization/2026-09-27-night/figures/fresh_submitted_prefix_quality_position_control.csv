@@ -1,0 +1,16 @@
+suite,method,accuracy
+nondevelopment_loto,original,0.32133333333333336
+novel,original,0.37688888888888883
+compound,original,0.13999999999999999
+nondevelopment_loto,dictionary_free_position,0.4756666666666667
+novel,dictionary_free_position,0.6444444444444444
+compound,dictionary_free_position,0.318
+nondevelopment_loto,combined_no_correction,0.4866666666666667
+novel,combined_no_correction,0.6208888888888888
+compound,combined_no_correction,0.4586666666666666
+nondevelopment_loto,combined,0.505
+novel,combined,0.6457777777777777
+compound,combined,0.46399999999999997
+nondevelopment_loto,icl4,0.6356666666666666
+novel,icl4,0.8391111111111111
+compound,icl4,0.5653333333333332

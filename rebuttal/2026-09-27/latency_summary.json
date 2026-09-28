@@ -1,0 +1,109 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.13.0+cu130",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "scope": "Warm model/dictionary; zero-shot query path and hybrid steering; natural greedy outputs, max_new_tokens=8; no shared-prefix cache",
+  "energy_scope": "Sampled GPU board power, 100ms polling, trapezoidal integration; includes idle/background board draw, excludes CPU/system energy",
+  "model_load_seconds": 4.363259118050337,
+  "dictionary_rebuild_seconds": 2.2025276832282543,
+  "dictionary_policy": "Each benchmark target is held out of its 31-skill dictionary; rebuilding those dictionaries is reported separately from adaptation",
+  "held_out_dictionary_rebuild_seconds": {
+    "antonym": 1.8289833143353462,
+    "country-capital": 1.8481126949191093,
+    "english-french": 1.798031099140644
+  },
+  "source_sha256": "b4eef67d503fbbdbe99ca1954b9ab0e13de0c68b573a8fcf621409b44ee31ff0",
+  "by_task": {
+    "antonym": {
+      "adaptation_seconds": 1.5067091472446918,
+      "adaptation_gpu_board_joules": 231.32488805051892,
+      "serving": {
+        "1": {
+          "cass_batch_seconds": 0.1329926885664463,
+          "icl4_batch_seconds": 0.12897693365812302,
+          "cass_gpu_board_joules": 25.840017617270348,
+          "icl4_gpu_board_joules": 28.761856205761433,
+          "latency_break_even_queries": null,
+          "energy_break_even_queries": 79.1710017663848
+        },
+        "8": {
+          "cass_batch_seconds": 0.1767965406179428,
+          "icl4_batch_seconds": 0.17772012948989868,
+          "cass_gpu_board_joules": 36.888426275253295,
+          "icl4_gpu_board_joules": 43.817727075319155,
+          "latency_break_even_queries": 13050.907762056115,
+          "energy_break_even_queries": 267.0686636069489
+        },
+        "25": {
+          "cass_batch_seconds": 0.2172110415995121,
+          "icl4_batch_seconds": 0.24583764374256134,
+          "cass_gpu_board_joules": 50.62018942642671,
+          "icl4_gpu_board_joules": 75.17871771872043,
+          "latency_break_even_queries": 1315.829538304577,
+          "energy_break_even_queries": 235.48325585445087
+        }
+      }
+    },
+    "country-capital": {
+      "adaptation_seconds": 0.9945170357823372,
+      "adaptation_gpu_board_joules": 182.90436383491382,
+      "serving": {
+        "1": {
+          "cass_batch_seconds": 0.13460354879498482,
+          "icl4_batch_seconds": 0.12931271642446518,
+          "cass_gpu_board_joules": 23.782349979877473,
+          "icl4_gpu_board_joules": 29.588617007133294,
+          "latency_break_even_queries": null,
+          "energy_break_even_queries": 31.50119740899322
+        },
+        "8": {
+          "cass_batch_seconds": 0.2175937220454216,
+          "icl4_batch_seconds": 0.21948253735899925,
+          "cass_gpu_board_joules": 39.74390065586194,
+          "icl4_gpu_board_joules": 50.584975574787336,
+          "latency_break_even_queries": 4212.236225038213,
+          "energy_break_even_queries": 134.97138628983404
+        },
+        "25": {
+          "cass_batch_seconds": 0.22069641947746277,
+          "icl4_batch_seconds": 0.2556854151189327,
+          "cass_gpu_board_joules": 53.74399207115174,
+          "icl4_gpu_board_joules": 78.75137331869453,
+          "latency_break_even_queries": 710.5927289061759,
+          "energy_break_even_queries": 182.85037727899422
+        }
+      }
+    },
+    "english-french": {
+      "adaptation_seconds": 3.2558668479323387,
+      "adaptation_gpu_board_joules": 365.721146214623,
+      "serving": {
+        "1": {
+          "cass_batch_seconds": 0.13624540716409683,
+          "icl4_batch_seconds": 0.12903405725955963,
+          "cass_gpu_board_joules": 24.518318094720602,
+          "icl4_gpu_board_joules": 30.421738673932854,
+          "latency_break_even_queries": null,
+          "energy_break_even_queries": 61.950718453372424
+        },
+        "8": {
+          "cass_batch_seconds": 0.20746583864092827,
+          "icl4_batch_seconds": 0.21789497137069702,
+          "cass_gpu_board_joules": 42.47682940736413,
+          "icl4_gpu_board_joules": 48.73193973733526,
+          "latency_break_even_queries": 2497.516855750694,
+          "energy_break_even_queries": 467.74061773111634
+        },
+        "25": {
+          "cass_batch_seconds": 0.21918245777487755,
+          "icl4_batch_seconds": 0.25683750212192535,
+          "cass_gpu_board_joules": 49.124166022986174,
+          "icl4_gpu_board_joules": 79.7149015242234,
+          "latency_break_even_queries": 2161.640561304771,
+          "energy_break_even_queries": 298.8822761386627
+        }
+      }
+    }
+  }
+}

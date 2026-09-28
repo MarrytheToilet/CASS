@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "model": "llama31-8b",
+      "n_checks": 48,
+      "default_encode_native_different": 48,
+      "corrected_render_all_equal": true
+    },
+    {
+      "model": "qwen3-4b",
+      "n_checks": 48,
+      "default_encode_native_different": 0,
+      "corrected_render_all_equal": true
+    },
+    {
+      "model": "qwen25-3b",
+      "n_checks": 48,
+      "default_encode_native_different": 0,
+      "corrected_render_all_equal": true
+    }
+  ],
+  "scope": "Before any native-template Llama activations or output generations; Qwen token sequences unchanged.",
+  "reference": "https://huggingface.co/docs/transformers/v4.57.1/chat_templating"
+}

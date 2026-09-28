@@ -1,0 +1,601 @@
+{
+  "scope": "Planted union-of-subspaces signals with known coefficients and bounded noise; not evidence of semantic composition or recovery of observed task signatures.",
+  "sources": {
+    "llama31-8b": "5e78e10daac91eb7fe090acfe47d3b72a9712f4c92a6367365fa83ac63f0c989",
+    "llama32-3b": "025e0ad98993f99b2f62808817c6540ef20f4c6fa8abf1855cd7cbc32b53e942",
+    "gemma2-2b": "dde676fbf0fa572a9fd065c3f8520829132e28d04bb43611b7115e759d6fd000",
+    "qwen3-4b": "4265e6f7160dec6b01ffcc16519806738c09b3fc90fb1844de26407d6572a6e5",
+    "qwen25-3b": "2ae48235d6e7b488d78b581f68b15e46b3ca902f1ea920ea479e4e53afb95d50"
+  },
+  "checks": [
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "antonym"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9852785661974659,
+      "lambda_value": 0.00026145563307392993,
+      "epsilon": 1e-05,
+      "error_bound": 0.0035926717774165443,
+      "actual_error": 0.0019605050603858213,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "antonym"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9852785661974659,
+      "lambda_value": 0.00026145563307392993,
+      "epsilon": 1e-05,
+      "error_bound": 0.0035926717774165443,
+      "actual_error": 0.002115438686957137,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "antonym"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9852785661974659,
+      "lambda_value": 0.00026145563307392993,
+      "epsilon": 1e-05,
+      "error_bound": 0.0035926717774165443,
+      "actual_error": 0.0021611133992639345,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "singular-plural"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9780667066280962,
+      "lambda_value": 0.00017548672373698444,
+      "epsilon": 1e-05,
+      "error_bound": 0.003143494647990633,
+      "actual_error": 0.0016084669171820766,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "singular-plural"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9780667066280962,
+      "lambda_value": 0.00017548672373698444,
+      "epsilon": 1e-05,
+      "error_bound": 0.003143494647990633,
+      "actual_error": 0.0017507753673037074,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "singular-plural"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9780667066280962,
+      "lambda_value": 0.00017548672373698444,
+      "epsilon": 1e-05,
+      "error_bound": 0.003143494647990633,
+      "actual_error": 0.0016472163516466033,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "capitalize"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9514413068146315,
+      "lambda_value": 7.926493779196815e-05,
+      "epsilon": 1e-05,
+      "error_bound": 0.0013357720283003168,
+      "actual_error": 0.0006826447987564729,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "capitalize"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9514413068146315,
+      "lambda_value": 7.926493779196815e-05,
+      "epsilon": 1e-05,
+      "error_bound": 0.0013357720283003168,
+      "actual_error": 0.0007186033978500466,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "capitalize"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9514413068146315,
+      "lambda_value": 7.926493779196815e-05,
+      "epsilon": 1e-05,
+      "error_bound": 0.0013357720283003168,
+      "actual_error": 0.0006521923570227614,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "lowercase-first-letter"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9983950258858346,
+      "lambda_value": 0.0023981706375364596,
+      "epsilon": 1e-05,
+      "error_bound": 0.03187210842587968,
+      "actual_error": 0.018492811823117985,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "lowercase-first-letter"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9983950258858346,
+      "lambda_value": 0.0023981706375364596,
+      "epsilon": 1e-05,
+      "error_bound": 0.03187210842587968,
+      "actual_error": 0.018059956869467625,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "lowercase-first-letter"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9983950258858346,
+      "lambda_value": 0.0023981706375364596,
+      "epsilon": 1e-05,
+      "error_bound": 0.03187210842587968,
+      "actual_error": 0.01770199974947372,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "next-item"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9976551677535285,
+      "lambda_value": 0.001641482797069782,
+      "epsilon": 1e-05,
+      "error_bound": 0.023272609847449638,
+      "actual_error": 0.012408318411452278,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "next-item"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9976551677535285,
+      "lambda_value": 0.001641482797069782,
+      "epsilon": 1e-05,
+      "error_bound": 0.023272609847449638,
+      "actual_error": 0.012824269619493138,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "next-item"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9976551677535285,
+      "lambda_value": 0.001641482797069782,
+      "epsilon": 1e-05,
+      "error_bound": 0.023272609847449638,
+      "actual_error": 0.014516362048599752,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9417947317830457,
+      "lambda_value": 6.612806559452212e-05,
+      "epsilon": 1e-05,
+      "error_bound": 0.0007546332263057506,
+      "actual_error": 0.0004750928822291573,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9417947317830457,
+      "lambda_value": 6.612806559452212e-05,
+      "epsilon": 1e-05,
+      "error_bound": 0.0007546332263057506,
+      "actual_error": 0.0004856988033018168,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "park-country",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9417947317830457,
+      "lambda_value": 6.612806559452212e-05,
+      "epsilon": 1e-05,
+      "error_bound": 0.0007546332263057506,
+      "actual_error": 0.000507028058489763,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "antonym",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.964185069153313,
+      "lambda_value": 0.00012811178379912115,
+      "epsilon": 1e-05,
+      "error_bound": 0.0016013030634978787,
+      "actual_error": 0.0010667434579562478,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "antonym",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.964185069153313,
+      "lambda_value": 0.00012811178379912115,
+      "epsilon": 1e-05,
+      "error_bound": 0.0016013030634978787,
+      "actual_error": 0.0011289883174570212,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "antonym",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.964185069153313,
+      "lambda_value": 0.00012811178379912115,
+      "epsilon": 1e-05,
+      "error_bound": 0.0016013030634978787,
+      "actual_error": 0.001039249049689201,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "synonym",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.967043459980231,
+      "lambda_value": 0.0001392231913501518,
+      "epsilon": 1e-05,
+      "error_bound": 0.0017911574124949638,
+      "actual_error": 0.0011771767709996283,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "synonym",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.967043459980231,
+      "lambda_value": 0.0001392231913501518,
+      "epsilon": 1e-05,
+      "error_bound": 0.0017911574124949638,
+      "actual_error": 0.0011682836923321762,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "synonym",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.967043459980231,
+      "lambda_value": 0.0001392231913501518,
+      "epsilon": 1e-05,
+      "error_bound": 0.0017911574124949638,
+      "actual_error": 0.0011918250844584453,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "singular-plural",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9814204291649363,
+      "lambda_value": 0.0002469548257138476,
+      "epsilon": 1e-05,
+      "error_bound": 0.004302835955219428,
+      "actual_error": 0.0021864723317815793,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "singular-plural",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9814204291649363,
+      "lambda_value": 0.0002469548257138476,
+      "epsilon": 1e-05,
+      "error_bound": 0.004302835955219428,
+      "actual_error": 0.0020866217534030824,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "singular-plural",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9814204291649363,
+      "lambda_value": 0.0002469548257138476,
+      "epsilon": 1e-05,
+      "error_bound": 0.004302835955219428,
+      "actual_error": 0.002056852257761822,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "capitalize",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9740441715290165,
+      "lambda_value": 0.00017677396360284123,
+      "epsilon": 1e-05,
+      "error_bound": 0.003357693525395021,
+      "actual_error": 0.0015058758493008586,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "capitalize",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9740441715290165,
+      "lambda_value": 0.00017677396360284123,
+      "epsilon": 1e-05,
+      "error_bound": 0.003357693525395021,
+      "actual_error": 0.001527738084214616,
+      "exact_support": true
+    },
+    {
+      "model": "llama31-8b",
+      "support": [
+        "capitalize",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9740441715290165,
+      "lambda_value": 0.00017677396360284123,
+      "epsilon": 1e-05,
+      "error_bound": 0.003357693525395021,
+      "actual_error": 0.001594284399005801,
+      "exact_support": true
+    },
+    {
+      "model": "llama32-3b",
+      "support": [
+        "product-company",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9805913462322047,
+      "lambda_value": 0.00018216275833614126,
+      "epsilon": 1e-05,
+      "error_bound": 0.0034606842112248825,
+      "actual_error": 0.0017603092923128031,
+      "exact_support": true
+    },
+    {
+      "model": "llama32-3b",
+      "support": [
+        "product-company",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9805913462322047,
+      "lambda_value": 0.00018216275833614126,
+      "epsilon": 1e-05,
+      "error_bound": 0.0034606842112248825,
+      "actual_error": 0.0016402267056378353,
+      "exact_support": true
+    },
+    {
+      "model": "llama32-3b",
+      "support": [
+        "product-company",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9805913462322047,
+      "lambda_value": 0.00018216275833614126,
+      "epsilon": 1e-05,
+      "error_bound": 0.0034606842112248825,
+      "actual_error": 0.0016331740712737881,
+      "exact_support": true
+    },
+    {
+      "model": "gemma2-2b",
+      "support": [
+        "country-capital",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9978120662300254,
+      "lambda_value": 0.0016689187610754203,
+      "epsilon": 1e-05,
+      "error_bound": 0.04263027745414004,
+      "actual_error": 0.018837088516252112,
+      "exact_support": true
+    },
+    {
+      "model": "gemma2-2b",
+      "support": [
+        "country-capital",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9978120662300254,
+      "lambda_value": 0.0016689187610754203,
+      "epsilon": 1e-05,
+      "error_bound": 0.04263027745414004,
+      "actual_error": 0.015271285688343737,
+      "exact_support": true
+    },
+    {
+      "model": "gemma2-2b",
+      "support": [
+        "country-capital",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9978120662300254,
+      "lambda_value": 0.0016689187610754203,
+      "epsilon": 1e-05,
+      "error_bound": 0.04263027745414004,
+      "actual_error": 0.013925307443028457,
+      "exact_support": true
+    },
+    {
+      "model": "qwen3-4b",
+      "support": [
+        "country-currency",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9854610858251805,
+      "lambda_value": 0.00024317730082319875,
+      "epsilon": 1e-05,
+      "error_bound": 0.0037547209117981153,
+      "actual_error": 0.002112759381433965,
+      "exact_support": true
+    },
+    {
+      "model": "qwen3-4b",
+      "support": [
+        "country-currency",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9854610858251805,
+      "lambda_value": 0.00024317730082319875,
+      "epsilon": 1e-05,
+      "error_bound": 0.0037547209117981153,
+      "actual_error": 0.0021679633311566743,
+      "exact_support": true
+    },
+    {
+      "model": "qwen3-4b",
+      "support": [
+        "country-currency",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9854610858251805,
+      "lambda_value": 0.00024317730082319875,
+      "epsilon": 1e-05,
+      "error_bound": 0.0037547209117981153,
+      "actual_error": 0.002062213006682531,
+      "exact_support": true
+    },
+    {
+      "model": "qwen3-4b",
+      "support": [
+        "singular-plural",
+        "word-length"
+      ],
+      "seed": 0,
+      "theta_upper": 0.9951747180934468,
+      "lambda_value": 0.0007327103316245948,
+      "epsilon": 1e-05,
+      "error_bound": 0.01917117927028162,
+      "actual_error": 0.00671650030927486,
+      "exact_support": true
+    },
+    {
+      "model": "qwen3-4b",
+      "support": [
+        "singular-plural",
+        "word-length"
+      ],
+      "seed": 1,
+      "theta_upper": 0.9951747180934468,
+      "lambda_value": 0.0007327103316245948,
+      "epsilon": 1e-05,
+      "error_bound": 0.01917117927028162,
+      "actual_error": 0.007892302707225704,
+      "exact_support": true
+    },
+    {
+      "model": "qwen3-4b",
+      "support": [
+        "singular-plural",
+        "word-length"
+      ],
+      "seed": 2,
+      "theta_upper": 0.9951747180934468,
+      "lambda_value": 0.0007327103316245948,
+      "epsilon": 1e-05,
+      "error_bound": 0.01917117927028162,
+      "actual_error": 0.008018918066220748,
+      "exact_support": true
+    }
+  ],
+  "n_checks": 42
+}

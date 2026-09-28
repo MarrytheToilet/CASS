@@ -1,0 +1,81 @@
+{
+  "model": "llama31-8b",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.8.0+cu128",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "repeats": 5,
+  "tasks": [
+    "antonym",
+    "country-capital",
+    "english-french"
+  ],
+  "model_load_seconds": 17.52038016100414,
+  "dictionary_rebuild_seconds": 1.6713159080245532,
+  "energy_scope": "Sampled GPU board power, 100ms polling, trapezoidal integration; includes idle/background board draw, excludes CPU/system energy",
+  "scope": "Warm model/dictionary; zero-shot query path and hybrid steering; natural greedy outputs, max_new_tokens=8; no shared-prefix cache",
+  "measurements": [
+    {
+      "task": "antonym",
+      "measurement": "extraction",
+      "sequences": 48,
+      "batch_size": 8,
+      "model_calls": 6,
+      "repeats": [
+        {
+          "seconds": 0.46701559802750126,
+          "gpu_board_joules": 118.55376585198121
+        },
+        {
+          "seconds": 0.4680547339958139,
+          "gpu_board_joules": 146.38284114370188
+        },
+        {
+          "seconds": 0.4748651609988883,
+          "gpu_board_joules": 139.6981045468808
+        },
+        {
+          "seconds": 0.6856761659728363,
+          "gpu_board_joules": 196.68588223614051
+        },
+        {
+          "seconds": 0.48218790703685954,
+          "gpu_board_joules": 115.86711743772715
+        }
+      ],
+      "median_seconds": 0.4748651609988883,
+      "median_gpu_board_joules": 139.6981045468808
+    },
+    {
+      "task": "antonym",
+      "measurement": "extraction",
+      "sequences": 48,
+      "batch_size": 24,
+      "model_calls": 2,
+      "repeats": [
+        {
+          "seconds": 0.6698794629774056,
+          "gpu_board_joules": 182.09416834091735
+        },
+        {
+          "seconds": 0.4305950080160983,
+          "gpu_board_joules": 107.67704488325985
+        },
+        {
+          "seconds": 0.43079073197441176,
+          "gpu_board_joules": 123.40170437178043
+        },
+        {
+          "seconds": 0.442690477008,
+          "gpu_board_joules": 130.53132422396257
+        },
+        {
+          "seconds": 0.4300718610174954,
+          "gpu_board_joules": 125.95549912396034
+        }
+      ],
+      "median_seconds": 0.43079073197441176,
+      "median_gpu_board_joules": 125.95549912396034
+    }
+  ]
+}

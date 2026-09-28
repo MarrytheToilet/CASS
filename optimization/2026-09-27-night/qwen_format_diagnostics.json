@@ -1,0 +1,1337 @@
+{
+  "scope": "Post-hoc output diagnosis only; no parsing rule, setting, or accuracy value is changed.",
+  "experiments": {
+    "qwen3-4b_contrast_confirm": {
+      "source_sha256": "272b98f955ca5cae8ed7c43379fb94dd68aa85f39e0d5a0a519d1b1a9e7dfaa0",
+      "groups": [
+        {
+          "suite": "heldout_known",
+          "method": "best_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.3864013605442177,
+          "normalized_full_line": 0.2610476190476191,
+          "literal_full_line": 0.21370748299319728,
+          "prefix_but_not_full_line": 0.12535374149659864,
+          "full_line_punctuation_difference": 0.04734013605442177,
+          "suffix_punctuation_only": 0.04567346938775511
+        },
+        {
+          "suite": "heldout_known",
+          "method": "matched_no_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.38405442176870747,
+          "normalized_full_line": 0.2320408163265306,
+          "literal_full_line": 0.17670068027210883,
+          "prefix_but_not_full_line": 0.15201360544217687,
+          "full_line_punctuation_difference": 0.05534013605442177,
+          "suffix_punctuation_only": 0.05500680272108844
+        },
+        {
+          "suite": "heldout_known",
+          "method": "plain_original",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.038000000000000006,
+          "normalized_full_line": 0.009666666666666667,
+          "literal_full_line": 0.009666666666666667,
+          "prefix_but_not_full_line": 0.028333333333333335,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "heldout_known",
+          "method": "icl4",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.5451428571428572,
+          "normalized_full_line": 0.5360204081632653,
+          "literal_full_line": 0.5322925170068028,
+          "prefix_but_not_full_line": 0.009122448979591836,
+          "full_line_punctuation_difference": 0.0037278911564625847,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "best_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.44610846560846557,
+          "normalized_full_line": 0.418079365079365,
+          "literal_full_line": 0.41137566137566134,
+          "prefix_but_not_full_line": 0.028029100529100532,
+          "full_line_punctuation_difference": 0.006703703703703703,
+          "suffix_punctuation_only": 0.006703703703703703
+        },
+        {
+          "suite": "novel",
+          "method": "matched_no_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.4360211640211641,
+          "normalized_full_line": 0.3988941798941799,
+          "literal_full_line": 0.38863492063492067,
+          "prefix_but_not_full_line": 0.037126984126984126,
+          "full_line_punctuation_difference": 0.01025925925925926,
+          "suffix_punctuation_only": 0.01025925925925926
+        },
+        {
+          "suite": "novel",
+          "method": "plain_original",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.04953703703703703,
+          "normalized_full_line": 0.035148148148148144,
+          "literal_full_line": 0.0347037037037037,
+          "prefix_but_not_full_line": 0.01438888888888889,
+          "full_line_punctuation_difference": 0.00044444444444444447,
+          "suffix_punctuation_only": 0.00044444444444444447
+        },
+        {
+          "suite": "novel",
+          "method": "icl4",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.7039100529100528,
+          "normalized_full_line": 0.701542328042328,
+          "literal_full_line": 0.6997089947089947,
+          "prefix_but_not_full_line": 0.0023677248677248675,
+          "full_line_punctuation_difference": 0.0018333333333333335,
+          "suffix_punctuation_only": 0.0018333333333333335
+        },
+        {
+          "suite": "compound",
+          "method": "best_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.43568627450980385,
+          "normalized_full_line": 0.37905882352941167,
+          "literal_full_line": 0.16560784313725485,
+          "prefix_but_not_full_line": 0.05662745098039216,
+          "full_line_punctuation_difference": 0.21345098039215687,
+          "suffix_punctuation_only": 0.21011764705882355
+        },
+        {
+          "suite": "compound",
+          "method": "matched_no_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.39937254901960784,
+          "normalized_full_line": 0.3167058823529411,
+          "literal_full_line": 0.13223529411764706,
+          "prefix_but_not_full_line": 0.08266666666666667,
+          "full_line_punctuation_difference": 0.1844705882352941,
+          "suffix_punctuation_only": 0.18380392156862746
+        },
+        {
+          "suite": "compound",
+          "method": "plain_original",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.004980392156862745,
+          "normalized_full_line": 0.0036470588235294117,
+          "literal_full_line": 0.0036470588235294117,
+          "prefix_but_not_full_line": 0.0013333333333333333,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "icl4",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.5047450980392157,
+          "normalized_full_line": 0.4987450980392157,
+          "literal_full_line": 0.4924313725490196,
+          "prefix_but_not_full_line": 0.006,
+          "full_line_punctuation_difference": 0.006313725490196078,
+          "suffix_punctuation_only": 0.005333333333333333
+        }
+      ],
+      "examples": [
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "landmark-country",
+          "query": "Alouette Lake",
+          "target": "Canada",
+          "prediction": "Canada."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "landmark-country",
+          "query": "Bird's Head Peninsula",
+          "target": "Indonesia",
+          "prediction": "Indonesia."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Gmina Morawica",
+          "target": "Poland",
+          "prediction": "Poland, Europe"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Tarn-et-Garonne",
+          "target": "France",
+          "prediction": "France, France, France, France,"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Perpignan",
+          "target": "France",
+          "prediction": "France, France, Europe, World"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Northern Territory",
+          "target": "Australia",
+          "prediction": "Australia, Australia"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "K.S.V. Roeselare",
+          "target": "Belgium",
+          "prediction": "Belgium, Europe"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Piazza al Serchio",
+          "target": "Italy",
+          "prediction": "Italy, Italy"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "landmark-country",
+          "query": "Bouygues Telecom",
+          "target": "France",
+          "prediction": "France."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "park-country",
+          "query": "Djerdap National Park",
+          "target": "Serbia",
+          "prediction": "Serbia."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "park-country",
+          "query": "Mount Kenya National Park",
+          "target": "Kenya",
+          "prediction": "Kenya."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "park-country",
+          "query": "Mahale Mountains National Park",
+          "target": "Tanzania",
+          "prediction": "Tanzania."
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "country-continent",
+          "query": "Mali",
+          "target": "Africa",
+          "prediction": "Africa continent."
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "element-symbol",
+          "query": "francium",
+          "target": "Fr",
+          "prediction": "Fr."
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "element-symbol",
+          "query": "krypton",
+          "target": "Kr",
+          "prediction": "Kr."
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "element-symbol",
+          "query": "phosphorus",
+          "target": "P",
+          "prediction": "P; P"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "dragon fruit",
+          "target": "pink",
+          "prediction": "pink yellow red orange white brown blue green"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "shelf stable dill pickle",
+          "target": "green",
+          "prediction": "green white"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "dill pickle",
+          "target": "green",
+          "prediction": "green yellow orange red"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "strawberry",
+          "target": "red",
+          "prediction": "red pink fleshless white"
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "english-italian",
+          "query": "bread",
+          "target": "pane",
+          "prediction": "pane."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "lasting",
+          "target": "Enduring",
+          "prediction": "Enduring."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "fruitful",
+          "target": "Productive",
+          "prediction": "Productive."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "elegant",
+          "target": "Refined",
+          "prediction": "Refined."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "reach",
+          "target": "Attain",
+          "prediction": "Attain."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "experienced",
+          "target": "Skilled",
+          "prediction": "Skilled."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "entertain",
+          "target": "Amuse",
+          "prediction": "Amuse."
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "dishwasher",
+          "target": "Dishwashers",
+          "prediction": "Dishwashers are appliances used to"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "lawnmower",
+          "target": "Lawnmowers",
+          "prediction": "Lawnmowers are used for M"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "dustpan",
+          "target": "Dustpans",
+          "prediction": "Dustpans are used for Dust"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "antonym+capitalize-first-letter",
+          "query": "petty",
+          "target": "S",
+          "prediction": "S: T (assuming T is the"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "antonym+capitalize-first-letter",
+          "query": "childbirth",
+          "target": "D",
+          "prediction": "D: E (assuming E is the"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "antonym+capitalize-first-letter",
+          "query": "foreground",
+          "target": "B",
+          "prediction": "B: D: G: J:"
+        }
+      ]
+    },
+    "qwen3-4b_contrast_fresh": {
+      "source_sha256": "45077f7acc4913a2c093440cb41163a22df7601c4818f1f8f766cf1d5a81b51c",
+      "groups": [
+        {
+          "suite": "heldout_known",
+          "method": "best_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.383,
+          "normalized_full_line": 0.25533333333333336,
+          "literal_full_line": 0.22333333333333333,
+          "prefix_but_not_full_line": 0.12766666666666668,
+          "full_line_punctuation_difference": 0.032,
+          "suffix_punctuation_only": 0.03133333333333333
+        },
+        {
+          "suite": "heldout_known",
+          "method": "matched_no_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.36533333333333334,
+          "normalized_full_line": 0.21866666666666665,
+          "literal_full_line": 0.18066666666666667,
+          "prefix_but_not_full_line": 0.14666666666666664,
+          "full_line_punctuation_difference": 0.038000000000000006,
+          "suffix_punctuation_only": 0.037000000000000005
+        },
+        {
+          "suite": "heldout_known",
+          "method": "plain_original",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.032,
+          "normalized_full_line": 0.013000000000000003,
+          "literal_full_line": 0.013000000000000003,
+          "prefix_but_not_full_line": 0.019000000000000003,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "heldout_known",
+          "method": "icl4",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.5333333333333333,
+          "normalized_full_line": 0.5183333333333334,
+          "literal_full_line": 0.5156666666666667,
+          "prefix_but_not_full_line": 0.015000000000000001,
+          "full_line_punctuation_difference": 0.002666666666666666,
+          "suffix_punctuation_only": 0.0003333333333333333
+        },
+        {
+          "suite": "novel",
+          "method": "best_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.42577777777777776,
+          "normalized_full_line": 0.4080000000000001,
+          "literal_full_line": 0.4,
+          "prefix_but_not_full_line": 0.017777777777777778,
+          "full_line_punctuation_difference": 0.008,
+          "suffix_punctuation_only": 0.008
+        },
+        {
+          "suite": "novel",
+          "method": "matched_no_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.4080000000000001,
+          "normalized_full_line": 0.3875555555555556,
+          "literal_full_line": 0.3777777777777779,
+          "prefix_but_not_full_line": 0.020444444444444446,
+          "full_line_punctuation_difference": 0.009777777777777778,
+          "suffix_punctuation_only": 0.009777777777777778
+        },
+        {
+          "suite": "novel",
+          "method": "plain_original",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.04488888888888889,
+          "normalized_full_line": 0.03866666666666667,
+          "literal_full_line": 0.03866666666666667,
+          "prefix_but_not_full_line": 0.006222222222222223,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "icl4",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.692888888888889,
+          "normalized_full_line": 0.6915555555555557,
+          "literal_full_line": 0.6902222222222223,
+          "prefix_but_not_full_line": 0.0013333333333333333,
+          "full_line_punctuation_difference": 0.0013333333333333333,
+          "suffix_punctuation_only": 0.0013333333333333333
+        },
+        {
+          "suite": "compound",
+          "method": "best_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.424,
+          "normalized_full_line": 0.36200000000000004,
+          "literal_full_line": 0.17933333333333326,
+          "prefix_but_not_full_line": 0.06199999999999999,
+          "full_line_punctuation_difference": 0.18266666666666667,
+          "suffix_punctuation_only": 0.182
+        },
+        {
+          "suite": "compound",
+          "method": "matched_no_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.40599999999999997,
+          "normalized_full_line": 0.32133333333333336,
+          "literal_full_line": 0.1633333333333333,
+          "prefix_but_not_full_line": 0.08466666666666667,
+          "full_line_punctuation_difference": 0.158,
+          "suffix_punctuation_only": 0.158
+        },
+        {
+          "suite": "compound",
+          "method": "plain_original",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.012,
+          "normalized_full_line": 0.002,
+          "literal_full_line": 0.002,
+          "prefix_but_not_full_line": 0.010000000000000002,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "icl4",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.5093333333333334,
+          "normalized_full_line": 0.5033333333333333,
+          "literal_full_line": 0.5026666666666666,
+          "prefix_but_not_full_line": 0.006,
+          "full_line_punctuation_difference": 0.0006666666666666666,
+          "suffix_punctuation_only": 0.0006666666666666666
+        }
+      ],
+      "examples": [
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "country-currency",
+          "query": "Denmark",
+          "target": "Danish Krone",
+          "prediction": "Danish Krone."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "country-currency",
+          "query": "Thailand",
+          "target": "Thai Baht",
+          "prediction": "Thai Baht Thai Baht Thai Ba"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "country-currency",
+          "query": "Mauritius",
+          "target": "Mauritian Rupee",
+          "prediction": "Mauritian Rupee Mauritian Ru"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Pontigny Abbey",
+          "target": "France",
+          "prediction": "France, France"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Cayeux-sur-Mer",
+          "target": "France",
+          "prediction": "France, France, France, France,"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "landmark-country",
+          "query": "West Darfur",
+          "target": "Sudan",
+          "prediction": "Sudan."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Trento",
+          "target": "Italy",
+          "prediction": "Italy, Italy, Europe, Italy,"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "landmark-country",
+          "query": "Monarcas Morelia",
+          "target": "Mexico",
+          "prediction": "Mexico, Mexico, Mexico, Mexico,"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "landmark-country",
+          "query": "La Mauricie National Park",
+          "target": "Canada",
+          "prediction": "Canada."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "park-country",
+          "query": "Wakhan National Park",
+          "target": "Afghanistan",
+          "prediction": "Afghanistan."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "park-country",
+          "query": "Etosha National Park",
+          "target": "Namibia",
+          "prediction": "Namibia."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "suffix_punctuation_only",
+          "task": "capitalize",
+          "query": "boat",
+          "target": "Boat",
+          "prediction": "Boat."
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "element-symbol",
+          "query": "hydrogen",
+          "target": "H",
+          "prediction": "H He"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "element-symbol",
+          "query": "carbon",
+          "target": "C",
+          "prediction": "C: Co, Cr, Cd,"
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "element-symbol",
+          "query": "praseodymium",
+          "target": "Pr",
+          "prediction": "Pr."
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "element-symbol",
+          "query": "samarium",
+          "target": "Sm",
+          "prediction": "Sm."
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "element-symbol",
+          "query": "selenium",
+          "target": "Se",
+          "prediction": "Se: Se"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "kosher dill pickle",
+          "target": "green",
+          "prediction": "green white"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "pomegranate",
+          "target": "red",
+          "prediction": "red. pink. bright. showy"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "vacuum sealed pickle",
+          "target": "green",
+          "prediction": "green gold yellow orange red white pink blue"
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "verb-gerund",
+          "query": "answer",
+          "target": "answering",
+          "prediction": "answering."
+        },
+        {
+          "suite": "novel",
+          "category": "suffix_punctuation_only",
+          "task": "verb-gerund",
+          "query": "elaborate",
+          "target": "elaborating",
+          "prediction": "elaborating."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "antonym+capitalize",
+          "query": "incomplete",
+          "target": "Complete",
+          "prediction": "Complete."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "announce",
+          "target": "Declare",
+          "prediction": "Declare."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "accessible",
+          "target": "Available",
+          "prediction": "Available."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "adjoining",
+          "target": "Adjacent",
+          "prediction": "Adjacent."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "depict",
+          "target": "Illustrate",
+          "prediction": "Illustrate."
+        },
+        {
+          "suite": "compound",
+          "category": "suffix_punctuation_only",
+          "task": "synonym+capitalize",
+          "query": "nonviolent",
+          "target": "Peaceful",
+          "prediction": "Peaceful."
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "helmet",
+          "target": "Helmets",
+          "prediction": "Helmets are used for Protection."
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "flashlight",
+          "target": "Flashlights",
+          "prediction": "Flashlights are used to illuminate areas in"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "refrigerator",
+          "target": "Refrigerators",
+          "prediction": "Refrigerators are used to Keep"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "beach",
+          "target": "Beaches",
+          "prediction": "Beaches are Natural Places Where People Can"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "wrench",
+          "target": "Wrenches",
+          "prediction": "Wrenches are Tools Used For W"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "next-item+capitalize",
+          "query": "h",
+          "target": "I",
+          "prediction": "I am an AI assistant and I can"
+        }
+      ]
+    },
+    "qwen25-3b_contrast_confirm": {
+      "source_sha256": "a56c51ede57cccd9f4bb191e7a0eb64eeac9abe28461ed83ea6a7f1fd852b346",
+      "groups": [
+        {
+          "suite": "heldout_known",
+          "method": "best_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.3223809523809524,
+          "normalized_full_line": 0.29738095238095236,
+          "literal_full_line": 0.29704761904761906,
+          "prefix_but_not_full_line": 0.025,
+          "full_line_punctuation_difference": 0.0003333333333333333,
+          "suffix_punctuation_only": 0.0003333333333333333
+        },
+        {
+          "suite": "heldout_known",
+          "method": "matched_no_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.32170068027210885,
+          "normalized_full_line": 0.2903673469387755,
+          "literal_full_line": 0.2900340136054422,
+          "prefix_but_not_full_line": 0.03133333333333334,
+          "full_line_punctuation_difference": 0.0003333333333333333,
+          "suffix_punctuation_only": 0.0003333333333333333
+        },
+        {
+          "suite": "heldout_known",
+          "method": "plain_original",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.019000000000000003,
+          "normalized_full_line": 0.008666666666666666,
+          "literal_full_line": 0.006666666666666667,
+          "prefix_but_not_full_line": 0.010333333333333333,
+          "full_line_punctuation_difference": 0.002,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "heldout_known",
+          "method": "icl4",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.532061224489796,
+          "normalized_full_line": 0.5279795918367347,
+          "literal_full_line": 0.5269591836734694,
+          "prefix_but_not_full_line": 0.004081632653061224,
+          "full_line_punctuation_difference": 0.001020408163265306,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "best_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.350531746031746,
+          "normalized_full_line": 0.33759523809523806,
+          "literal_full_line": 0.33759523809523806,
+          "prefix_but_not_full_line": 0.012936507936507937,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "matched_no_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.3518015873015873,
+          "normalized_full_line": 0.3387116402116402,
+          "literal_full_line": 0.3387116402116402,
+          "prefix_but_not_full_line": 0.013089947089947089,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "plain_original",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.01605555555555556,
+          "normalized_full_line": 0.0066851851851851855,
+          "literal_full_line": 0.0066851851851851855,
+          "prefix_but_not_full_line": 0.009370370370370371,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "icl4",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.7112566137566139,
+          "normalized_full_line": 0.7112566137566139,
+          "literal_full_line": 0.7112566137566139,
+          "prefix_but_not_full_line": 0.0,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "best_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.22964705882352937,
+          "normalized_full_line": 0.2229803921568627,
+          "literal_full_line": 0.2229803921568627,
+          "prefix_but_not_full_line": 0.006666666666666667,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "matched_no_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.22564705882352937,
+          "normalized_full_line": 0.22098039215686266,
+          "literal_full_line": 0.22098039215686266,
+          "prefix_but_not_full_line": 0.004666666666666666,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "plain_original",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.0026666666666666666,
+          "normalized_full_line": 0.0,
+          "literal_full_line": 0.0,
+          "prefix_but_not_full_line": 0.0026666666666666666,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "icl4",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.45113725490196077,
+          "normalized_full_line": 0.4498039215686274,
+          "literal_full_line": 0.4498039215686274,
+          "prefix_but_not_full_line": 0.0013333333333333333,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        }
+      ],
+      "examples": [
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "iTunes Radio",
+          "target": "Apple",
+          "prediction": "Apple Music"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "Windows Media Encoder",
+          "target": "Microsoft",
+          "prediction": "Microsoft Corporation"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "Scion xD",
+          "target": "Toyota",
+          "prediction": "Toyota Lexus"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "iOS 8",
+          "target": "Apple",
+          "prediction": "Apple Inc."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "Disk Utility",
+          "target": "Apple",
+          "prediction": "Apple Inc."
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "MacsBug",
+          "target": "Apple",
+          "prediction": "Apple Inc."
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "element-symbol",
+          "query": "krypton",
+          "target": "Kr",
+          "prediction": "Kr 39 Xe"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "animal-baby",
+          "query": "macaque",
+          "target": "infant",
+          "prediction": "infant monkey"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "fruit-color",
+          "query": "orange oil",
+          "target": "orange",
+          "prediction": "orange yellow"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "profession-workplace",
+          "query": "consultant",
+          "target": "office",
+          "prediction": "office space"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "profession-workplace",
+          "query": "teller",
+          "target": "bank",
+          "prediction": "bank lobby"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "capital-country",
+          "query": "Djibouti",
+          "target": "Djibouti",
+          "prediction": "Djibouti Republic"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "present-past+capitalize-first-letter",
+          "query": "produce",
+          "target": "P",
+          "prediction": "P\tR\tO\tD\tU\tC\tT"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "present-past+capitalize-first-letter",
+          "query": "watch",
+          "target": "W",
+          "prediction": "W \u27f0 W"
+        }
+      ]
+    },
+    "qwen25-3b_contrast_fresh": {
+      "source_sha256": "7f44588c2fe2ecc2ef3a0b5f25fdda01620e6322532616c58d2fb55f068d7a38",
+      "groups": [
+        {
+          "suite": "heldout_known",
+          "method": "best_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.3143333333333334,
+          "normalized_full_line": 0.303,
+          "literal_full_line": 0.303,
+          "prefix_but_not_full_line": 0.011333333333333332,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "heldout_known",
+          "method": "matched_no_correction",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.31700000000000006,
+          "normalized_full_line": 0.302,
+          "literal_full_line": 0.302,
+          "prefix_but_not_full_line": 0.015000000000000001,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "heldout_known",
+          "method": "plain_original",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.01966666666666667,
+          "normalized_full_line": 0.009666666666666667,
+          "literal_full_line": 0.007666666666666668,
+          "prefix_but_not_full_line": 0.01,
+          "full_line_punctuation_difference": 0.002,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "heldout_known",
+          "method": "icl4",
+          "n_tasks": 20,
+          "case_aware_prefix": 0.5340000000000001,
+          "normalized_full_line": 0.5276666666666668,
+          "literal_full_line": 0.5270000000000001,
+          "prefix_but_not_full_line": 0.006333333333333332,
+          "full_line_punctuation_difference": 0.0006666666666666666,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "best_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.3635555555555555,
+          "normalized_full_line": 0.35688888888888887,
+          "literal_full_line": 0.35688888888888887,
+          "prefix_but_not_full_line": 0.006666666666666668,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "matched_no_correction",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.3537777777777778,
+          "normalized_full_line": 0.34711111111111115,
+          "literal_full_line": 0.34711111111111115,
+          "prefix_but_not_full_line": 0.006666666666666668,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "plain_original",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.013777777777777778,
+          "normalized_full_line": 0.007111111111111112,
+          "literal_full_line": 0.007111111111111112,
+          "prefix_but_not_full_line": 0.006666666666666668,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "novel",
+          "method": "icl4",
+          "n_tasks": 15,
+          "case_aware_prefix": 0.7155555555555555,
+          "normalized_full_line": 0.7155555555555555,
+          "literal_full_line": 0.7155555555555555,
+          "prefix_but_not_full_line": 0.0,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "best_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.23133333333333328,
+          "normalized_full_line": 0.21866666666666662,
+          "literal_full_line": 0.21799999999999994,
+          "prefix_but_not_full_line": 0.012666666666666666,
+          "full_line_punctuation_difference": 0.0006666666666666666,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "matched_no_correction",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.24599999999999997,
+          "normalized_full_line": 0.23599999999999993,
+          "literal_full_line": 0.23533333333333328,
+          "prefix_but_not_full_line": 0.01,
+          "full_line_punctuation_difference": 0.0006666666666666666,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "plain_original",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.004,
+          "normalized_full_line": 0.0,
+          "literal_full_line": 0.0,
+          "prefix_but_not_full_line": 0.004,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        },
+        {
+          "suite": "compound",
+          "method": "icl4",
+          "n_tasks": 10,
+          "case_aware_prefix": 0.46133333333333326,
+          "normalized_full_line": 0.46133333333333326,
+          "literal_full_line": 0.46133333333333326,
+          "prefix_but_not_full_line": 0.0,
+          "full_line_punctuation_difference": 0.0,
+          "suffix_punctuation_only": 0.0
+        }
+      ],
+      "examples": [
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "person-instrument",
+          "query": "Friedrich Kalkbrenner",
+          "target": "piano",
+          "prediction": "piano keyboard"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "GW-BASIC",
+          "target": "Microsoft",
+          "prediction": "Microsoft Garage"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "Windows NT 4.0",
+          "target": "Microsoft",
+          "prediction": "Microsoft Windows"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "Windows XP Media Center Edition",
+          "target": "Microsoft",
+          "prediction": "Microsoft Xbox"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "Final Fantasy X",
+          "target": "Square",
+          "prediction": "Square Enix"
+        },
+        {
+          "suite": "heldout_known",
+          "category": "extra_words",
+          "task": "product-company",
+          "query": "iPod shuffle",
+          "target": "Apple",
+          "prediction": "Apple Inc."
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "profession-workplace",
+          "query": "doctor",
+          "target": "hospital",
+          "prediction": "hospital lobby"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "profession-workplace",
+          "query": "risk manager",
+          "target": "office",
+          "prediction": "office space"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "capital-country",
+          "query": "Andorra la Vella",
+          "target": "Andorra",
+          "prediction": "Andorra Espa\u00f1a"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "adjective-adverb",
+          "query": "early",
+          "target": "early",
+          "prediction": "early morning"
+        },
+        {
+          "suite": "novel",
+          "category": "extra_words",
+          "task": "french-english",
+          "query": "caf\u00e9",
+          "target": "coffee",
+          "prediction": "coffee caf\u00e9"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "singular-plural+capitalize",
+          "query": "headphones",
+          "target": "Headphones",
+          "prediction": "Headphones (Devices)"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "present-past+capitalize-first-letter",
+          "query": "qualify",
+          "target": "Q",
+          "prediction": "Q: R"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "present-past+capitalize-first-letter",
+          "query": "accelerate",
+          "target": "A",
+          "prediction": "A: E"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "present-past+capitalize-first-letter",
+          "query": "gather",
+          "target": "G",
+          "prediction": "G \u00d8"
+        },
+        {
+          "suite": "compound",
+          "category": "extra_words",
+          "task": "present-past+capitalize-first-letter",
+          "query": "give",
+          "target": "G",
+          "prediction": "G \u00d8"
+        }
+      ]
+    }
+  }
+}

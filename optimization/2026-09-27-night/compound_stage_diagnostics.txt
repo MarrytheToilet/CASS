@@ -1,0 +1,72 @@
+[
+  {
+    "source": "contextual_controls",
+    "method": "inferred",
+    "n_tasks": 10,
+    "final": 0.4227058823529412,
+    "first_stage_only": 0.00784313725490196,
+    "second_stage_on_input": 0.029333333333333333,
+    "input_echo": 0.000980392156862745,
+    "other": 0.5391372549019608
+  },
+  {
+    "source": "contextual_controls",
+    "method": "no_correction",
+    "n_tasks": 10,
+    "final": 0.39905882352941174,
+    "first_stage_only": 0.004901960784313725,
+    "second_stage_on_input": 0.024666666666666667,
+    "input_echo": 0.0,
+    "other": 0.5713725490196079
+  },
+  {
+    "source": "contextual_controls",
+    "method": "true_support",
+    "n_tasks": 10,
+    "final": 0.4147058823529412,
+    "first_stage_only": 0.004901960784313725,
+    "second_stage_on_input": 0.028666666666666663,
+    "input_echo": 0.000980392156862745,
+    "other": 0.5507450980392157
+  },
+  {
+    "source": "submitted_controls",
+    "method": "inferred",
+    "n_tasks": 10,
+    "final": 0.1420392156862745,
+    "first_stage_only": 0.3008627450980392,
+    "second_stage_on_input": 0.0006666666666666668,
+    "input_echo": 0.12317647058823526,
+    "other": 0.43325490196078426
+  },
+  {
+    "source": "submitted_controls",
+    "method": "no_correction",
+    "n_tasks": 10,
+    "final": 0.09839215686274509,
+    "first_stage_only": 0.24592156862745096,
+    "second_stage_on_input": 0.020666666666666667,
+    "input_echo": 0.17141176470588235,
+    "other": 0.46360784313725495
+  },
+  {
+    "source": "submitted_controls",
+    "method": "true_support",
+    "n_tasks": 10,
+    "final": 0.15333333333333332,
+    "first_stage_only": 0.2799607843137255,
+    "second_stage_on_input": 0.009333333333333334,
+    "input_echo": 0.14372549019607844,
+    "other": 0.4136470588235294
+  },
+  {
+    "source": "submitted_new_seeds",
+    "method": "inferred",
+    "n_tasks": 10,
+    "final": 0.13917647058823532,
+    "first_stage_only": 0.27141176470588235,
+    "second_stage_on_input": 0.002666666666666667,
+    "input_echo": 0.094,
+    "other": 0.49274509803921573
+  }
+]

@@ -1,0 +1,7140 @@
+{
+  "source_sha256": "29a75c003282de104387129657e31c5d7db8f30c1588ed93d9ecb310775b9263",
+  "protocol": {
+    "calibration_tasks": [
+      "country-continent",
+      "animal-baby",
+      "verb-gerund",
+      "english-italian",
+      "word-last-letter",
+      "antonym+capitalize",
+      "present-past+capitalize",
+      "present-past+capitalize-first-letter"
+    ],
+    "heldout_tasks": 17,
+    "failure_definition": "task-mean accuracy across three seeds < 0.5",
+    "calibration": "L2 logistic regression, C=1, fitted to eight disjoint tasks",
+    "probability_metrics": "Brier primary; five-bin ECE diagnostic; raw residual is not a probability",
+    "scope": "Auxiliary task-level calibration fit, separate from the frozen-backbone steering operator. Its eight calibration-task labels are declared, and no held-out-task label is used for fitting."
+  },
+  "generation_metrics_verified": true,
+  "matched_queries_verified": true,
+  "scaling": [
+    {
+      "size": 32,
+      "mode": "full",
+      "accuracy": 0.5810458450046686,
+      "paired_accuracy_change_from32": 0.0,
+      "paired_accuracy_change_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_literal_change_from32": 0.0,
+      "paired_literal_change_ci95": [
+        0.0,
+        0.0
+      ],
+      "literal_first_line_accuracy": 0.5559791783380018,
+      "accuracy_by_suite": {
+        "compound": 0.4693725490196079,
+        "novel": 0.6554947089947091
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.4227058823529412,
+        "novel": 0.6448280423280423
+      },
+      "failure_label_changes_under_literal_metric": 0,
+      "compound_constituent_recall": 0.8833333333333334,
+      "support_jaccard_to32": 1.0,
+      "support_jaccard_across_seeds": 0.7122539682539683,
+      "residual_mean": 0.6840250571541031,
+      "coding_median_seconds": 0.08777938410639763
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "accuracy": 0.5841566760037348,
+      "paired_accuracy_change_from32": 0.003110830999066311,
+      "paired_accuracy_change_ci95": [
+        -0.021499999999999967,
+        0.025333669467787142
+      ],
+      "paired_literal_change_from32": 0.009510830999066338,
+      "paired_literal_change_ci95": [
+        -0.01715714285714281,
+        0.034234640522875864
+      ],
+      "literal_first_line_accuracy": 0.5654900093370682,
+      "accuracy_by_suite": {
+        "compound": 0.48509803921568634,
+        "novel": 0.6501957671957672
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.44776470588235295,
+        "novel": 0.643973544973545
+      },
+      "failure_label_changes_under_literal_metric": 0,
+      "compound_constituent_recall": 0.8833333333333334,
+      "support_jaccard_to32": 0.7636666666666667,
+      "support_jaccard_across_seeds": 0.7406031746031746,
+      "residual_mean": 0.6613228616920336,
+      "coding_median_seconds": 0.21389562264084816
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "accuracy": 0.5830789915966387,
+      "paired_accuracy_change_from32": 0.0020331465919701274,
+      "paired_accuracy_change_ci95": [
+        -0.025719087301587278,
+        0.02822026143790849
+      ],
+      "paired_literal_change_from32": 0.007633146591970139,
+      "paired_literal_change_ci95": [
+        -0.022138095238095214,
+        0.03668625116713357
+      ],
+      "literal_first_line_accuracy": 0.5636123249299719,
+      "accuracy_by_suite": {
+        "compound": 0.48674509803921573,
+        "novel": 0.6473015873015873
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.444078431372549,
+        "novel": 0.6433015873015874
+      },
+      "failure_label_changes_under_literal_metric": 0,
+      "compound_constituent_recall": 0.9,
+      "support_jaccard_to32": 0.713047619047619,
+      "support_jaccard_across_seeds": 0.7223492063492064,
+      "residual_mean": 0.6417541574513801,
+      "coding_median_seconds": 0.549190104007721
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "accuracy": 0.569426050420168,
+      "paired_accuracy_change_from32": -0.011619794584500447,
+      "paired_accuracy_change_ci95": [
+        -0.03541620915032677,
+        0.012418300653594793
+      ],
+      "paired_literal_change_from32": -0.014553127917833777,
+      "paired_literal_change_ci95": [
+        -0.044153426704014925,
+        0.016113538748832888
+      ],
+      "literal_first_line_accuracy": 0.541426050420168,
+      "accuracy_by_suite": {
+        "compound": 0.4795294117647059,
+        "novel": 0.6293571428571428
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.4135294117647058,
+        "novel": 0.626690476190476
+      },
+      "failure_label_changes_under_literal_metric": 1,
+      "compound_constituent_recall": 0.8833333333333332,
+      "support_jaccard_to32": 0.6244021164021164,
+      "support_jaccard_across_seeds": 0.6955238095238094,
+      "residual_mean": 0.6260704170926827,
+      "coding_median_seconds": 1.299851018935442
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "accuracy": 0.5810458450046686,
+      "paired_accuracy_change_from32": 0.0,
+      "paired_accuracy_change_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_literal_change_from32": 0.0,
+      "paired_literal_change_ci95": [
+        0.0,
+        0.0
+      ],
+      "literal_first_line_accuracy": 0.5559791783380018,
+      "accuracy_by_suite": {
+        "compound": 0.4693725490196079,
+        "novel": 0.6554947089947091
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.4227058823529412,
+        "novel": 0.6448280423280423
+      },
+      "failure_label_changes_under_literal_metric": 0,
+      "compound_constituent_recall": 0.8833333333333334,
+      "support_jaccard_to32": 1.0,
+      "support_jaccard_across_seeds": 0.7122539682539683,
+      "residual_mean": 0.6840250571541031,
+      "coding_median_seconds": 0.08901025727391243
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "accuracy": 0.5848154995331466,
+      "paired_accuracy_change_from32": 0.003769654528478072,
+      "paired_accuracy_change_ci95": [
+        -0.021101587301587284,
+        0.02643137254901962
+      ],
+      "paired_literal_change_from32": 0.010169654528478098,
+      "paired_literal_change_ci95": [
+        -0.016722408963585386,
+        0.035215686274509855
+      ],
+      "literal_first_line_accuracy": 0.56614883286648,
+      "accuracy_by_suite": {
+        "compound": 0.4860784313725491,
+        "novel": 0.6506402116402117
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.4487450980392157,
+        "novel": 0.6444179894179894
+      },
+      "failure_label_changes_under_literal_metric": 0,
+      "compound_constituent_recall": 0.8833333333333334,
+      "support_jaccard_to32": 0.7599206349206349,
+      "support_jaccard_across_seeds": 0.7361587301587301,
+      "residual_mean": 0.6610501701739949,
+      "coding_median_seconds": 0.22624624893069267
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "accuracy": 0.5829535014005603,
+      "paired_accuracy_change_from32": 0.0019076563958916948,
+      "paired_accuracy_change_ci95": [
+        -0.026020947712418297,
+        0.028126183473389355
+      ],
+      "paired_literal_change_from32": 0.007507656395891706,
+      "paired_literal_change_ci95": [
+        -0.022514565826330508,
+        0.03698915266106447
+      ],
+      "literal_first_line_accuracy": 0.5634868347338935,
+      "accuracy_by_suite": {
+        "compound": 0.485764705882353,
+        "novel": 0.6477460317460315
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.44309803921568625,
+        "novel": 0.6437460317460317
+      },
+      "failure_label_changes_under_literal_metric": 0,
+      "compound_constituent_recall": 0.9,
+      "support_jaccard_to32": 0.7086031746031747,
+      "support_jaccard_across_seeds": 0.7267936507936509,
+      "residual_mean": 0.6414078317898511,
+      "coding_median_seconds": 0.23755595088005066
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "accuracy": 0.5700848739495799,
+      "paired_accuracy_change_from32": -0.010960971055088682,
+      "paired_accuracy_change_ci95": [
+        -0.03514920634920632,
+        0.013610457516339882
+      ],
+      "paired_literal_change_from32": -0.01362763772175534,
+      "paired_literal_change_ci95": [
+        -0.04335462184873947,
+        0.017254901960784334
+      ],
+      "literal_first_line_accuracy": 0.5423515406162465,
+      "accuracy_by_suite": {
+        "compound": 0.48184313725490197,
+        "novel": 0.6289126984126984
+      },
+      "literal_accuracy_by_suite": {
+        "compound": 0.4165098039215686,
+        "novel": 0.6262460317460318
+      },
+      "failure_label_changes_under_literal_metric": 1,
+      "compound_constituent_recall": 0.8833333333333332,
+      "support_jaccard_to32": 0.6232592592592592,
+      "support_jaccard_across_seeds": 0.6911746031746031,
+      "residual_mean": 0.625526660408082,
+      "coding_median_seconds": 0.24859631806612015
+    }
+  ],
+  "calibration": [
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.10259844404941267,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.04904603508518514,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.16318810593446623,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.09950947050416778,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.05068985270397086,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.050437687117835125,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.027977353978959885,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.17481629064684842,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.1789323281599621,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0472530735940575,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.024438323629552776,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.09442330468937431,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.05472090665191209,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.07157792258009725,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.04013915299600309,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.14275462133783975,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.1311240233738627,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.08844864100197103,
+      "brier_ci95": [
+        0.20827256742996395,
+        0.608790285108018
+      ],
+      "brier": 0.4064380671691442,
+      "ece5": 0.3821395942921466,
+      "auc": 0.4305555555555556
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.09388167239546331,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.1861288043846481,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.06148222250680742,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.10743035478967006,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.05786514665492849,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.07838503521452178,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.3239819461297666,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.1654038563851519,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.14447135371145156,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.30909994926151213,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.24274827187236392,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.5883991127348104,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.4216597675445105,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.1521002220856316,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.036478357252871955,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.11770709168543882,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.4251668494690833,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.2066111772987431,
+      "brier_ci95": [
+        0.157294578960264,
+        0.49194652895919594
+      ],
+      "brier": 0.318111922742656,
+      "ece5": 0.367015901202862,
+      "auc": 0.45833333333333337
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.07833164503484151,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.08332838972155318,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.07989581105314118,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.08658459973154439,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.027294016983896236,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.036278095670304406,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0995333539079794,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.20401471370591986,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.18472733045802747,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.13995234495230335,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.06383258308306354,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.46566877118942657,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.22433074164348324,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.09211027373007757,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.014505775583595384,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.12754491321737643,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.39281335371710135,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.1412203949049197,
+      "brier_ci95": [
+        0.16912804565904094,
+        0.5403508728607568
+      ],
+      "brier": 0.34920833124343975,
+      "ece5": 0.3293678403891979,
+      "auc": 0.4305555555555556
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.125,
+      "brier_ci95": [
+        0.19209558823529413,
+        0.5450367647058824
+      ],
+      "brier": 0.36856617647058826,
+      "ece5": 0.34558823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "residual",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.10279597068231835,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.04888576289500165,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.1650416394267654,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.09975266475024402,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0514090598157806,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.051157763062628925,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.02866969050917194,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.1736439894163641,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.177669462500047,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.047982213638353734,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.025101982434591084,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.09829296294335543,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.05542336061492423,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.07215943202504325,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.04087466902501215,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.14218552026176648,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.130840759342891,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.08893452372613292,
+      "brier_ci95": [
+        0.20785069850744464,
+        0.6075072844250008
+      ],
+      "brier": 0.4055278971047413,
+      "ece5": 0.3816537115679847,
+      "auc": 0.4305555555555556
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "norm",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.09388167239546331,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.1861288043846481,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.06148222250680742,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.10743035478967006,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.05786514665492849,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.07838503521452178,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.3239819461297666,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.1654038563851519,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.14447135371145156,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.30909994926151213,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.24274827187236392,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.5883991127348104,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.4216597675445105,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.1521002220856316,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.036478357252871955,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.11770709168543882,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.4251668494690833,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.2066111772987431,
+      "brier_ci95": [
+        0.157294578960264,
+        0.49194652895919594
+      ],
+      "brier": 0.318111922742656,
+      "ece5": 0.367015901202862,
+      "auc": 0.45833333333333337
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "joint",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.07845646953443833,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.08321408999482417,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.08065947067937122,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.08678224334625906,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.02758531444014886,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.03668795130012734,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.10165948683351766,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.20316334475233197,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.18383095748637565,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.14189149553542313,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.06531493069296061,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.47615884272991676,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.22694155398396917,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.09279642406608503,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.014695859778292478,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.1271828450758575,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.39330194131687085,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.14237195420863352,
+      "brier_ci95": [
+        0.16820327419668832,
+        0.5392009869380673
+      ],
+      "brier": 0.34814446005572885,
+      "ece5": 0.3282162810854841,
+      "auc": 0.4305555555555556
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "frozen32",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.0,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.0,
+      "brier_ci95": [
+        0.23529411764705882,
+        0.7058823529411765
+      ],
+      "brier": 0.47058823529411764,
+      "ece5": 0.47058823529411764,
+      "auc": 0.5
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "features": "constant_prior",
+      "policy": "refit",
+      "predictions": {
+        "adjective-adverb": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "adjective-comparative": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "antonym+capitalize-first-letter": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "capital-country": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "country-capital+lowercase-first-letter": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "country-capital+word-length": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "element-symbol": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "english-french+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "english-portuguese": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "french-english": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "fruit-color": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "next-item+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "number-plus-one": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "past-present": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "profession-workplace": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        },
+        "singular-plural+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 0
+        },
+        "synonym+capitalize": {
+          "predicted_failure": 0.125,
+          "observed_failure": 1
+        }
+      },
+      "n_tasks": 17,
+      "failure_rate": 0.47058823529411764,
+      "mean_risk": 0.125,
+      "brier_ci95": [
+        0.19209558823529413,
+        0.5450367647058824
+      ],
+      "brier": 0.36856617647058826,
+      "ece5": 0.34558823529411764,
+      "auc": 0.5
+    }
+  ],
+  "calibration_comparisons": [
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.06415016812497341,
+      "ci95": [
+        -0.11293622851327555,
+        -0.020853984588416672
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.03787189069855599,
+      "ci95": [
+        0.006319326477272956,
+        0.07152632961336737
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.15247631255146168,
+      "ci95": [
+        -0.2991978189316425,
+        -0.02759370157007185
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.05045425372793226,
+      "ci95": [
+        -0.16170466933609068,
+        0.04117167595342731
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.12137990405067788,
+      "ci95": [
+        -0.24021498271626737,
+        -0.024386547864936752
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "full",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.01935784522714846,
+      "ci95": [
+        -0.11066481347385805,
+        0.055907642649514
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 32,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 64,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 128,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "residual",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.06506033818937633,
+      "ci95": [
+        -0.11426039600913883,
+        -0.021279886848969743
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "residual",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.036961720634153074,
+      "ci95": [
+        0.005492617442339222,
+        0.0704816245348892
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "norm",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.15247631255146168,
+      "ci95": [
+        -0.2991978189316425,
+        -0.02759370157007185
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "norm",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.05045425372793226,
+      "ci95": [
+        -0.16170466933609068,
+        0.04117167595342731
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "joint",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.12244377523838879,
+      "ci95": [
+        -0.24242555648204017,
+        -0.02460680440943668
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "frozen32"
+      ],
+      "b": [
+        "constant_prior",
+        "frozen32"
+      ],
+      "n_tasks": 17,
+      "brier_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    },
+    {
+      "size": 256,
+      "mode": "shortlist32",
+      "a": [
+        "joint",
+        "refit"
+      ],
+      "b": [
+        "constant_prior",
+        "refit"
+      ],
+      "n_tasks": 17,
+      "brier_difference": -0.02042171641485939,
+      "ci95": [
+        -0.1127895294025454,
+        0.05547399000798734
+      ],
+      "interpretation": "Paired held-out-task Brier difference; negative favors the first method. Conditional on eight calibration tasks."
+    }
+  ]
+}

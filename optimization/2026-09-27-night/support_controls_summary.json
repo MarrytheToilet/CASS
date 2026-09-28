@@ -1,0 +1,943 @@
+{
+  "complete_tasks": 10,
+  "per_task": {
+    "antonym+capitalize": {
+      "inferred": 0.5333333333333333,
+      "no_correction": 0.5133333333333333,
+      "true_correction": 0.5533333333333333,
+      "true_correction_norm": 0.54,
+      "true_support": 0.56,
+      "wrong_matched": 0.5122222222222222,
+      "wrong_norm_matched": 0.5277777777777778
+    },
+    "synonym+capitalize": {
+      "inferred": 0.32,
+      "no_correction": 0.27999999999999997,
+      "true_correction": 0.2866666666666667,
+      "true_correction_norm": 0.2866666666666667,
+      "true_support": 0.2866666666666667
+    },
+    "present-past+capitalize": {
+      "inferred": 0.9466666666666667,
+      "no_correction": 0.9533333333333333,
+      "true_correction": 0.94,
+      "true_correction_norm": 0.9466666666666667,
+      "true_support": 0.94
+    },
+    "singular-plural+capitalize": {
+      "inferred": 0.9333333333333332,
+      "no_correction": 0.94,
+      "true_correction": 0.9333333333333332,
+      "true_correction_norm": 0.9333333333333332,
+      "true_support": 0.9333333333333332
+    },
+    "english-french+capitalize": {
+      "inferred": 0.6533333333333334,
+      "no_correction": 0.6133333333333334,
+      "true_correction": 0.64,
+      "true_correction_norm": 0.6466666666666667,
+      "true_support": 0.64,
+      "wrong_matched": 0.6044444444444445,
+      "wrong_norm_matched": 0.6133333333333333
+    },
+    "next-item+capitalize": {
+      "inferred": 0.14705882352941177,
+      "no_correction": 0.1372549019607843,
+      "true_correction": 0.14705882352941177,
+      "true_correction_norm": 0.14705882352941177,
+      "true_support": 0.14705882352941177
+    },
+    "antonym+capitalize-first-letter": {
+      "inferred": 0.05333333333333334,
+      "no_correction": 0.04666666666666667,
+      "true_correction": 0.04,
+      "true_correction_norm": 0.04,
+      "true_support": 0.04,
+      "wrong_matched": 0.04666666666666667,
+      "wrong_norm_matched": 0.044444444444444446
+    },
+    "present-past+capitalize-first-letter": {
+      "inferred": 0.98,
+      "no_correction": 0.94,
+      "true_correction": 0.9533333333333333,
+      "true_correction_norm": 0.96,
+      "true_support": 0.9466666666666667,
+      "wrong_matched": 0.9422222222222222,
+      "wrong_norm_matched": 0.9466666666666667
+    },
+    "country-capital+word-length": {
+      "inferred": 0.04,
+      "no_correction": 0.04666666666666667,
+      "true_correction": 0.03333333333333333,
+      "true_correction_norm": 0.03333333333333333,
+      "true_support": 0.03333333333333333
+    },
+    "country-capital+lowercase-first-letter": {
+      "inferred": 0.08666666666666667,
+      "no_correction": 0.07333333333333333,
+      "true_correction": 0.07333333333333333,
+      "true_correction_norm": 0.09333333333333334,
+      "true_support": 0.08666666666666667
+    }
+  },
+  "matching": [
+    {
+      "task": "antonym+capitalize",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 2
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 2
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 0
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 0
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 0
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 0
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 3,
+      "passed": 3
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 20,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 20,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 21,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 21,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 22,
+      "norm_matched": false,
+      "candidates": 0,
+      "passed": 0
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 22,
+      "norm_matched": true,
+      "candidates": 0,
+      "passed": 0
+    }
+  ],
+  "means": {
+    "inferred": {
+      "n_tasks": 10,
+      "accuracy": 0.4693725490196079
+    },
+    "no_correction": {
+      "n_tasks": 10,
+      "accuracy": 0.4543921568627451
+    },
+    "true_correction": {
+      "n_tasks": 10,
+      "accuracy": 0.4600392156862744
+    },
+    "true_correction_norm": {
+      "n_tasks": 10,
+      "accuracy": 0.4627058823529412
+    },
+    "true_support": {
+      "n_tasks": 10,
+      "accuracy": 0.4613725490196079
+    },
+    "wrong_matched": {
+      "n_tasks": 4,
+      "accuracy": 0.5263888888888889
+    },
+    "wrong_norm_matched": {
+      "n_tasks": 4,
+      "accuracy": 0.5330555555555555
+    }
+  },
+  "paired": {
+    "inferred__no_correction": {
+      "n_tasks": 10,
+      "diff": 0.014980392156862763,
+      "ci95": [
+        0.003960784313725506,
+        0.026666666666666682
+      ]
+    },
+    "inferred__wrong_matched": {
+      "n_tasks": 4,
+      "diff": 0.028611111111111132,
+      "ci95": [
+        0.013888888888888874,
+        0.04333333333333339
+      ]
+    },
+    "inferred__wrong_norm_matched": {
+      "n_tasks": 4,
+      "diff": 0.021944444444444475,
+      "ci95": [
+        0.007222222222222213,
+        0.036666666666666736
+      ]
+    },
+    "true_correction__inferred": {
+      "n_tasks": 10,
+      "diff": -0.00933333333333335,
+      "ci95": [
+        -0.01800000000000001,
+        -0.0006666666666666655
+      ]
+    },
+    "true_correction_norm__inferred": {
+      "n_tasks": 10,
+      "diff": -0.006666666666666668,
+      "ci95": [
+        -0.014666666666666666,
+        8.326672684688674e-18
+      ]
+    },
+    "true_support__inferred": {
+      "n_tasks": 10,
+      "diff": -0.008000000000000005,
+      "ci95": [
+        -0.01800000000000001,
+        0.002666666666666663
+      ]
+    }
+  },
+  "scope": "Equal task weights after averaging seeds; matched alternatives averaged within seed first; 50000 paired task-bootstrap draws.",
+  "representative_examples": [
+    {
+      "task": "antonym+capitalize",
+      "input": "curse",
+      "target": "Blessing",
+      "predictions": {
+        "inferred": " Bless\nThe correct answer is A:",
+        "no_correction": " Bless\nThe correct answer is A:",
+        "true_correction": " Bless\nThe correct answer is A:",
+        "true_correction_norm": " Bless\nThe correct answer is A:",
+        "true_support": " Bless\nThe correct answer is A:"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "synonym+capitalize",
+      "input": "lasting",
+      "target": "Enduring",
+      "predictions": {
+        "inferred": " Continuing or remaining in existence or effect over",
+        "no_correction": " Continuing or remaining in existence or effect over",
+        "true_correction": " Continuing or remaining in existence or effect over",
+        "true_correction_norm": " Continuing or remaining in existence or effect over",
+        "true_support": " Continuing or remaining in existence or effect over"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "present-past+capitalize",
+      "input": "know",
+      "target": "Knew",
+      "predictions": {
+        "inferred": " Known\nQ: know\nA:",
+        "no_correction": " Knew\nB: Knows\n",
+        "true_correction": " Known\nQ: know\nA:",
+        "true_correction_norm": " Known\nQ: know\nA:",
+        "true_support": " Known\nQ: know\nA:"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": true,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "input": "socks",
+      "target": "Sockss",
+      "predictions": {
+        "inferred": " Socks are a type of clothing that",
+        "no_correction": " Socks are a type of clothing that",
+        "true_correction": " Socks are a type of clothing that",
+        "true_correction_norm": " Socks are a type of clothing that",
+        "true_support": " Socks are a type of clothing that"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "english-french+capitalize",
+      "input": "inches",
+      "target": "Pouces",
+      "predictions": {
+        "inferred": " 1 pouce = 2,",
+        "no_correction": " 1 pouce = 2,",
+        "true_correction": " 1 pouce = 2,",
+        "true_correction_norm": " 1 pouce = 2,",
+        "true_support": " 1 pouce = 2,"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "next-item+capitalize",
+      "input": "viii",
+      "target": "Ix",
+      "predictions": {
+        "inferred": " 8\nExplanation: The Roman numeral",
+        "no_correction": " 8\nExplanation: The Roman numeral",
+        "true_correction": " 8\nExplanation: The Roman numeral",
+        "true_correction_norm": " 8\nExplanation: The Roman numeral",
+        "true_support": " 8\nExplanation: The Roman numeral"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "input": "eternal",
+      "target": "T",
+      "predictions": {
+        "inferred": " E\nThe word \"eternal\"",
+        "no_correction": " 1. lasting or existing forever;",
+        "true_correction": " 1) lasting or existing forever;",
+        "true_correction_norm": " E\nThe word \"eternal\"",
+        "true_support": " E\nThe word \"eternal\""
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "input": "trust",
+      "target": "T",
+      "predictions": {
+        "inferred": " T-R-U-S-T\nQ:",
+        "no_correction": " T-R-U-S-T\nQ:",
+        "true_correction": " T-R-U-S-T\nQ:",
+        "true_correction_norm": " T-R-U-S-T\nQ:",
+        "true_support": " T-R-U-S-T\nQ:"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "country-capital+word-length",
+      "input": "Armenia",
+      "target": "7",
+      "predictions": {
+        "inferred": " 1. The Armenian Genocide\n",
+        "no_correction": " 1. The Armenian Genocide\n",
+        "true_correction": " 1. The Armenian Genocide\n",
+        "true_correction_norm": " 1. The Armenian Genocide\n",
+        "true_support": " 1. The Armenian Genocide\n"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "input": "Armenia",
+      "target": "y",
+      "predictions": {
+        "inferred": " d\nExplanation: The countries of the",
+        "no_correction": " 1. The Armenian Genocide\n",
+        "true_correction": " d\nExplanation: The countries of the",
+        "true_correction_norm": " d\nExplanation: The countries of the",
+        "true_support": " d\nExplanation: The countries of the"
+      },
+      "correct": {
+        "inferred": false,
+        "no_correction": false,
+        "true_correction": false,
+        "true_correction_norm": false,
+        "true_support": false
+      }
+    }
+  ],
+  "common_submitted_routing": {
+    "policy_source": "rebuttal/2026-09-27/compound_fixed_route_per_task.csv",
+    "replacement_source": "signature_confirm.jsonl",
+    "policy": "Original task-level routing frozen across every intervention arm; all new-seed replacement predictions identical across arms.",
+    "per_task": {
+      "antonym+capitalize": {
+        "inferred": 0.5333333333333333,
+        "no_correction": 0.5133333333333333,
+        "true_correction": 0.5533333333333333,
+        "true_correction_norm": 0.54,
+        "true_support": 0.56,
+        "wrong_matched": 0.5122222222222222,
+        "wrong_norm_matched": 0.5277777777777778
+      },
+      "synonym+capitalize": {
+        "inferred": 0.19333333333333336,
+        "no_correction": 0.19333333333333336,
+        "true_correction": 0.19333333333333336,
+        "true_correction_norm": 0.19333333333333336,
+        "true_support": 0.19333333333333336
+      },
+      "present-past+capitalize": {
+        "inferred": 0.9466666666666667,
+        "no_correction": 0.9533333333333333,
+        "true_correction": 0.94,
+        "true_correction_norm": 0.9466666666666667,
+        "true_support": 0.94
+      },
+      "singular-plural+capitalize": {
+        "inferred": 0.9333333333333332,
+        "no_correction": 0.94,
+        "true_correction": 0.9333333333333332,
+        "true_correction_norm": 0.9333333333333332,
+        "true_support": 0.9333333333333332
+      },
+      "english-french+capitalize": {
+        "inferred": 0.6533333333333334,
+        "no_correction": 0.6133333333333334,
+        "true_correction": 0.64,
+        "true_correction_norm": 0.6466666666666667,
+        "true_support": 0.64,
+        "wrong_matched": 0.6044444444444445,
+        "wrong_norm_matched": 0.6133333333333333
+      },
+      "next-item+capitalize": {
+        "inferred": 0.10784313725490197,
+        "no_correction": 0.10784313725490197,
+        "true_correction": 0.10784313725490197,
+        "true_correction_norm": 0.10784313725490197,
+        "true_support": 0.10784313725490197
+      },
+      "antonym+capitalize-first-letter": {
+        "inferred": 0.03333333333333333,
+        "no_correction": 0.03333333333333333,
+        "true_correction": 0.03333333333333333,
+        "true_correction_norm": 0.03333333333333333,
+        "true_support": 0.03333333333333333,
+        "wrong_matched": 0.03333333333333333,
+        "wrong_norm_matched": 0.03333333333333333
+      },
+      "present-past+capitalize-first-letter": {
+        "inferred": 0.96,
+        "no_correction": 0.96,
+        "true_correction": 0.96,
+        "true_correction_norm": 0.96,
+        "true_support": 0.96,
+        "wrong_matched": 0.96,
+        "wrong_norm_matched": 0.96
+      },
+      "country-capital+word-length": {
+        "inferred": 0.0,
+        "no_correction": 0.0,
+        "true_correction": 0.0,
+        "true_correction_norm": 0.0,
+        "true_support": 0.0
+      },
+      "country-capital+lowercase-first-letter": {
+        "inferred": 0.12666666666666668,
+        "no_correction": 0.12666666666666668,
+        "true_correction": 0.12666666666666668,
+        "true_correction_norm": 0.12666666666666668,
+        "true_support": 0.12666666666666668
+      }
+    },
+    "means": {
+      "inferred": {
+        "n_tasks": 10,
+        "accuracy": 0.4487843137254902
+      },
+      "no_correction": {
+        "n_tasks": 10,
+        "accuracy": 0.44411764705882356
+      },
+      "true_correction": {
+        "n_tasks": 10,
+        "accuracy": 0.4487843137254902
+      },
+      "true_correction_norm": {
+        "n_tasks": 10,
+        "accuracy": 0.4487843137254902
+      },
+      "true_support": {
+        "n_tasks": 10,
+        "accuracy": 0.4494509803921568
+      },
+      "wrong_matched": {
+        "n_tasks": 4,
+        "accuracy": 0.5275000000000001
+      },
+      "wrong_norm_matched": {
+        "n_tasks": 4,
+        "accuracy": 0.533611111111111
+      }
+    },
+    "paired": {
+      "inferred__no_correction": {
+        "n_tasks": 10,
+        "diff": 0.004666666666666675,
+        "ci95": [
+          -0.002000000000000013,
+          0.014000000000000012
+        ]
+      },
+      "inferred__wrong_matched": {
+        "n_tasks": 4,
+        "diff": 0.017500000000000016,
+        "ci95": [
+          0.0,
+          0.036666666666666736
+        ]
+      },
+      "inferred__wrong_norm_matched": {
+        "n_tasks": 4,
+        "diff": 0.01138888888888892,
+        "ci95": [
+          0.0,
+          0.03000000000000011
+        ]
+      },
+      "true_correction__inferred": {
+        "n_tasks": 10,
+        "diff": -1.1102230246251566e-17,
+        "ci95": [
+          -0.0046666666666666965,
+          0.005333333333333334
+        ]
+      },
+      "true_correction_norm__inferred": {
+        "n_tasks": 10,
+        "diff": 0.0,
+        "ci95": [
+          -0.002000000000000013,
+          0.002000000000000013
+        ]
+      },
+      "true_support__inferred": {
+        "n_tasks": 10,
+        "diff": 0.0006666666666666598,
+        "ci95": [
+          -0.0046666666666666965,
+          0.007333333333333347
+        ]
+      }
+    }
+  }
+}

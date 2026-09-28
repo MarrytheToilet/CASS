@@ -1,0 +1,471 @@
+Complete timing sources: ['optimized_latency', 'variant_latency', 'cached_icl_latency', 'matched_engine_latency', 'answer_engine_latency']
+[
+  {
+    "task": "antonym",
+    "compiled": false,
+    "batch_size": 1,
+    "cass_startup_seconds": 0.21232825703918934,
+    "icl4_startup_seconds": 0.018699377588927747,
+    "cass_seconds": 0.13728413730859756,
+    "icl4_seconds": 0.1376341748982668,
+    "serving_speedup": 1.0025497307739377,
+    "cass_gpu_board_joules": 39.855629464900126,
+    "icl4_gpu_board_joules": 40.16759805767797,
+    "break_even_queries": 554,
+    "board_energy_break_even_queries": 160,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.004952631269892066,
+      0.0011196273068586893
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      0.04812542786511642,
+      1.23185341536378
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  },
+  {
+    "task": "antonym",
+    "compiled": false,
+    "batch_size": 8,
+    "cass_startup_seconds": 0.21232825703918934,
+    "icl4_startup_seconds": 0.018699377588927747,
+    "cass_seconds": 0.14141023841996989,
+    "icl4_seconds": 0.14301443037887415,
+    "serving_speedup": 1.011344241950431,
+    "cass_gpu_board_joules": 39.97151732709569,
+    "icl4_gpu_board_joules": 40.63931612758277,
+    "break_even_queries": 966,
+    "board_energy_break_even_queries": 595,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.0005321502685546875,
+      0.005213044583797455
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      -0.6778718939547659,
+      2.1729241837654314
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "antonym",
+    "compiled": false,
+    "batch_size": 25,
+    "cass_startup_seconds": 0.21232825703918934,
+    "icl4_startup_seconds": 0.018699377588927747,
+    "cass_seconds": 0.183442884683609,
+    "icl4_seconds": 0.18387724086642265,
+    "serving_speedup": 1.002367800656661,
+    "cass_gpu_board_joules": 50.96744158759713,
+    "icl4_gpu_board_joules": 54.614518689494574,
+    "break_even_queries": 11145,
+    "board_energy_break_even_queries": 341,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.000317151844501512,
+      0.001579845696687704
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      1.7399381249402737,
+      5.160831655851894
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  },
+  {
+    "task": "antonym",
+    "compiled": true,
+    "batch_size": 1,
+    "cass_startup_seconds": 0.21338723860681055,
+    "icl4_startup_seconds": 0.018699377588927747,
+    "cass_seconds": 0.13775277510285378,
+    "icl4_seconds": 0.1376341748982668,
+    "serving_speedup": 0.9991390358234277,
+    "cass_gpu_board_joules": 39.811521185506365,
+    "icl4_gpu_board_joules": 40.16759805767797,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": 140,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.0019795012970765524,
+      0.0005720239132642746
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -1.3359302814648117,
+      1.1617262927318563
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "antonym",
+    "compiled": true,
+    "batch_size": 8,
+    "cass_startup_seconds": 0.21338723860681055,
+    "icl4_startup_seconds": 0.018699377588927747,
+    "cass_seconds": 0.14434385175506273,
+    "icl4_seconds": 0.14301443037887415,
+    "serving_speedup": 0.9907898995348657,
+    "cass_gpu_board_joules": 40.762884916923944,
+    "icl4_gpu_board_joules": 40.63931612758277,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": null,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.0019835401326417923,
+      0.002430874854326248
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -1.2545658656841212,
+      1.8401129716386393
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "antonym",
+    "compiled": true,
+    "batch_size": 25,
+    "cass_startup_seconds": 0.21338723860681055,
+    "icl4_startup_seconds": 0.018699377588927747,
+    "cass_seconds": 0.18386508524417877,
+    "icl4_seconds": 0.18387724086642265,
+    "serving_speedup": 1.000066111639563,
+    "cass_gpu_board_joules": 50.804361561413856,
+    "icl4_gpu_board_joules": 54.614518689494574,
+    "break_even_queries": 400408,
+    "board_energy_break_even_queries": 327,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.0002029508352279774,
+      0.0006762385368347112
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      2.671865609924069,
+      6.135726865349987
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  },
+  {
+    "task": "country-capital",
+    "compiled": false,
+    "batch_size": 1,
+    "cass_startup_seconds": 0.18255012885977825,
+    "icl4_startup_seconds": 0.0196729376912117,
+    "cass_seconds": 0.13823400624096394,
+    "icl4_seconds": 0.13614020186165968,
+    "serving_speedup": 0.9848531889059597,
+    "cass_gpu_board_joules": 40.13527945086713,
+    "icl4_gpu_board_joules": 40.13534174662704,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": 799733,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.005043039098381996,
+      -0.0016381572932004929
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -2.243264663943087,
+      1.3268060773282286
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "country-capital",
+    "compiled": false,
+    "batch_size": 8,
+    "cass_startup_seconds": 0.18255012885977825,
+    "icl4_startup_seconds": 0.0196729376912117,
+    "cass_seconds": 0.18125406578183173,
+    "icl4_seconds": 0.17651321962475777,
+    "serving_speedup": 0.9738441941336625,
+    "cass_gpu_board_joules": 44.92794652919099,
+    "icl4_gpu_board_joules": 45.28549209351165,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": 1115,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.0054605595767497905,
+      -0.002027177065610869
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -0.3301439355760891,
+      1.5811308937643815
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "country-capital",
+    "compiled": false,
+    "batch_size": 25,
+    "cass_startup_seconds": 0.18255012885977825,
+    "icl4_startup_seconds": 0.0196729376912117,
+    "cass_seconds": 0.18541118800640105,
+    "icl4_seconds": 0.19018007218837737,
+    "serving_speedup": 1.0257205847891535,
+    "cass_gpu_board_joules": 52.70187128009276,
+    "icl4_gpu_board_joules": 58.095832772288475,
+    "break_even_queries": 854,
+    "board_energy_break_even_queries": 231,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.004106166213750845,
+      0.007213766872882832
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      3.1737674811370695,
+      7.588079157402397
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  },
+  {
+    "task": "country-capital",
+    "compiled": true,
+    "batch_size": 1,
+    "cass_startup_seconds": 0.18349695671349764,
+    "icl4_startup_seconds": 0.0196729376912117,
+    "cass_seconds": 0.13784089249869189,
+    "icl4_seconds": 0.13614020186165968,
+    "serving_speedup": 0.9876619295899557,
+    "cass_gpu_board_joules": 40.14549321394524,
+    "icl4_gpu_board_joules": 40.13534174662704,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": null,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.005051101868351282,
+      -0.0011424217373132706
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -2.634444017009983,
+      1.499425104805944
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "country-capital",
+    "compiled": true,
+    "batch_size": 8,
+    "cass_startup_seconds": 0.18349695671349764,
+    "icl4_startup_seconds": 0.0196729376912117,
+    "cass_seconds": 0.17818182930350304,
+    "icl4_seconds": 0.17651321962475777,
+    "serving_speedup": 0.9906353544282954,
+    "cass_gpu_board_joules": 45.19818985525518,
+    "icl4_gpu_board_joules": 45.28549209351165,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": 4557,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.005745056271553056,
+      -0.00044114142656326294
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -0.9983656314730638,
+      1.8894635725915379
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "country-capital",
+    "compiled": true,
+    "batch_size": 25,
+    "cass_startup_seconds": 0.18349695671349764,
+    "icl4_startup_seconds": 0.0196729376912117,
+    "cass_seconds": 0.18628398552536965,
+    "icl4_seconds": 0.19018007218837737,
+    "serving_speedup": 1.0209147697372898,
+    "cass_gpu_board_joules": 52.47809720465168,
+    "icl4_gpu_board_joules": 58.095832772288475,
+    "break_even_queries": 1052,
+    "board_energy_break_even_queries": 222,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.0026988774538040106,
+      0.006327418982982641
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      1.7156879783924666,
+      7.744626117416303
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  },
+  {
+    "task": "english-french",
+    "compiled": false,
+    "batch_size": 1,
+    "cass_startup_seconds": 0.4284335307776928,
+    "icl4_startup_seconds": 0.019753658771514894,
+    "cass_seconds": 0.13922131434082985,
+    "icl4_seconds": 0.13980373367667198,
+    "serving_speedup": 1.0041834063885957,
+    "cass_gpu_board_joules": 40.55739577868953,
+    "icl4_gpu_board_joules": 40.80357075503413,
+    "break_even_queries": 702,
+    "board_energy_break_even_queries": 308,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.00030697137117385864,
+      0.002089735741416604
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -0.36663324067174585,
+      2.0322197317375483
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "english-french",
+    "compiled": false,
+    "batch_size": 8,
+    "cass_startup_seconds": 0.4284335307776928,
+    "icl4_startup_seconds": 0.019753658771514894,
+    "cass_seconds": 0.1762010410428047,
+    "icl4_seconds": 0.1769797720015049,
+    "serving_speedup": 1.0044195593515874,
+    "cass_gpu_board_joules": 44.54007158857211,
+    "icl4_gpu_board_joules": 45.41610121268779,
+    "break_even_queries": 4199,
+    "board_energy_break_even_queries": 691,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.00019608810544013977,
+      0.003565080463886261
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      -0.7888204605057823,
+      2.390324364914939
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "english-french",
+    "compiled": false,
+    "batch_size": 25,
+    "cass_startup_seconds": 0.4284335307776928,
+    "icl4_startup_seconds": 0.019753658771514894,
+    "cass_seconds": 0.18589745536446572,
+    "icl4_seconds": 0.1906873933970928,
+    "serving_speedup": 1.0257665605117405,
+    "cass_gpu_board_joules": 52.57648616230489,
+    "icl4_gpu_board_joules": 57.7777143362984,
+    "break_even_queries": 2134,
+    "board_energy_break_even_queries": 364,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.0038083374500274547,
+      0.0058743119239807184
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      1.2255332678593618,
+      7.7634961288943884
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  },
+  {
+    "task": "english-french",
+    "compiled": true,
+    "batch_size": 1,
+    "cass_startup_seconds": 0.43653862066566945,
+    "icl4_startup_seconds": 0.019753658771514894,
+    "cass_seconds": 0.13702615474661192,
+    "icl4_seconds": 0.13980373367667198,
+    "serving_speedup": 1.0202704289206417,
+    "cass_gpu_board_joules": 39.459314393984776,
+    "icl4_gpu_board_joules": 40.80357075503413,
+    "break_even_queries": 151,
+    "board_energy_break_even_queries": 55,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.0013075402627388544,
+      0.004378701249758393
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      -1.5588902096741535,
+      3.044493902429366
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "english-french",
+    "compiled": true,
+    "batch_size": 8,
+    "cass_startup_seconds": 0.43653862066566945,
+    "icl4_startup_seconds": 0.019753658771514894,
+    "cass_seconds": 0.17977238968014717,
+    "icl4_seconds": 0.1769797720015049,
+    "serving_speedup": 0.9844658143354998,
+    "cass_gpu_board_joules": 44.90050471860915,
+    "icl4_gpu_board_joules": 45.41610121268779,
+    "break_even_queries": null,
+    "board_energy_break_even_queries": 1133,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      -0.0037317670881748255,
+      5.2638351917266846e-06
+    ],
+    "latency_saving_positive_over_repeat_interval": false,
+    "gpu_board_energy_saving_ci95": [
+      -0.7523770344220111,
+      2.101828017424239
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": false
+  },
+  {
+    "task": "english-french",
+    "compiled": true,
+    "batch_size": 25,
+    "cass_startup_seconds": 0.43653862066566945,
+    "icl4_startup_seconds": 0.019753658771514894,
+    "cass_seconds": 0.18544771671295165,
+    "icl4_seconds": 0.1906873933970928,
+    "serving_speedup": 1.028254198957065,
+    "cass_gpu_board_joules": 53.084776378798054,
+    "icl4_gpu_board_joules": 57.7777143362984,
+    "break_even_queries": 1989,
+    "board_energy_break_even_queries": 389,
+    "break_even_scope": "Nominal point estimate from medians. A near-zero difference does not establish a reliable break-even; consult repeat interval. Startup uncertainty is not propagated.",
+    "uncertainty_scope": "Independent bootstrap of seven grouped repeat measurements; conditional on this run, not between-run or device variability.",
+    "latency_saving_ci95": [
+      0.0018479511141777094,
+      0.005868434160947816
+    ],
+    "latency_saving_positive_over_repeat_interval": true,
+    "gpu_board_energy_saving_ci95": [
+      1.1816857280016748,
+      7.195417605757704
+    ],
+    "gpu_board_energy_saving_positive_over_repeat_interval": true
+  }
+]

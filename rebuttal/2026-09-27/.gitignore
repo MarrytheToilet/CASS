@@ -1,0 +1,4 @@
+remote_inputs.tar.gz
+remote_code.tar.gz
+*.log
+__pycache__/

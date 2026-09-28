@@ -1,0 +1,739 @@
+[
+  {
+    "metric_family": "classification_accuracy",
+    "means": {
+      "combined": {
+        "n_tasks": 3,
+        "score": 0.7211111111111111
+      },
+      "combined_no_correction": {
+        "n_tasks": 3,
+        "score": 0.721111111111111
+      },
+      "dictionary_free": {
+        "n_tasks": 3,
+        "score": 0.42444444444444446
+      },
+      "icl1": {
+        "n_tasks": 3,
+        "score": 0.7111111111111111
+      },
+      "icl4": {
+        "n_tasks": 3,
+        "score": 0.7955555555555556
+      },
+      "mixed_cass": {
+        "n_tasks": 3,
+        "score": 0.36111111111111116
+      },
+      "mixed_z_only": {
+        "n_tasks": 3,
+        "score": 0.3511111111111111
+      },
+      "null_no_correction": {
+        "n_tasks": 3,
+        "score": 0.721111111111111
+      },
+      "oneshot": {
+        "n_tasks": 3,
+        "score": 0.7533333333333334
+      },
+      "oneshot_no_correction": {
+        "n_tasks": 3,
+        "score": 0.7433333333333332
+      },
+      "original_cass": {
+        "n_tasks": 3,
+        "score": 0.2577777777777778
+      },
+      "original_z_only": {
+        "n_tasks": 3,
+        "score": 0.24666666666666667
+      },
+      "replace": {
+        "n_tasks": 3,
+        "score": 0.21777777777777776
+      },
+      "zero": {
+        "n_tasks": 3,
+        "score": 0.24333333333333332
+      }
+    },
+    "paired": {
+      "mixed_cass__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.10333333333333337,
+        "ci95": [
+          0.0033333333333334103,
+          0.2733333333333334
+        ]
+      },
+      "mixed_cass__mixed_z_only": {
+        "n_tasks": 3,
+        "diff": 0.010000000000000066,
+        "ci95": [
+          -0.0066666666666664876,
+          0.020000000000000018
+        ]
+      },
+      "mixed_cass__zero": {
+        "n_tasks": 3,
+        "diff": 0.11777777777777781,
+        "ci95": [
+          -0.009999999999999898,
+          0.33
+        ]
+      },
+      "combined__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.4633333333333334,
+        "ci95": [
+          -0.0033333333333334103,
+          0.9133333333333334
+        ]
+      },
+      "combined__combined_no_correction": {
+        "n_tasks": 3,
+        "diff": 3.700743415417188e-17,
+        "ci95": [
+          -0.009999999999999898,
+          0.010000000000000009
+        ]
+      },
+      "combined__dictionary_free": {
+        "n_tasks": 3,
+        "diff": 0.2966666666666667,
+        "ci95": [
+          -0.010000000000000009,
+          0.7400000000000001
+        ]
+      },
+      "combined__zero": {
+        "n_tasks": 3,
+        "diff": 0.47777777777777786,
+        "ci95": [
+          -0.01666666666666672,
+          0.9133333333333334
+        ]
+      },
+      "oneshot__icl1": {
+        "n_tasks": 3,
+        "diff": 0.04222222222222227,
+        "ci95": [
+          -0.020000000000000018,
+          0.14333333333333342
+        ]
+      },
+      "oneshot__oneshot_no_correction": {
+        "n_tasks": 3,
+        "diff": 0.01000000000000012,
+        "ci95": [
+          2.220446049250313e-16,
+          0.01666666666666683
+        ]
+      }
+    }
+  },
+  {
+    "metric_family": "code_expression_execution",
+    "means": {
+      "combined": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "combined_no_correction": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "dictionary_free": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "icl1": {
+        "n_tasks": 4,
+        "score": 0.95
+      },
+      "icl4": {
+        "n_tasks": 4,
+        "score": 1.0
+      },
+      "mixed_cass": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "mixed_z_only": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "null_no_correction": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "oneshot": {
+        "n_tasks": 4,
+        "score": 0.9319444444444445
+      },
+      "oneshot_no_correction": {
+        "n_tasks": 4,
+        "score": 0.9138888888888889
+      },
+      "original_cass": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "original_z_only": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "replace": {
+        "n_tasks": 4,
+        "score": 0.0
+      },
+      "zero": {
+        "n_tasks": 4,
+        "score": 0.0
+      }
+    },
+    "paired": {
+      "mixed_cass__original_cass": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mixed_cass__mixed_z_only": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mixed_cass__zero": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__original_cass": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__combined_no_correction": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__dictionary_free": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__zero": {
+        "n_tasks": 4,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "oneshot__icl1": {
+        "n_tasks": 4,
+        "diff": -0.01805555555555552,
+        "ci95": [
+          -0.11944444444444441,
+          0.10277777777777783
+        ]
+      },
+      "oneshot__oneshot_no_correction": {
+        "n_tasks": 4,
+        "diff": 0.018055555555555575,
+        "ci95": [
+          -0.00833333333333336,
+          0.06111111111111123
+        ]
+      }
+    }
+  },
+  {
+    "metric_family": "code_multistep_execution",
+    "means": {
+      "combined": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "combined_no_correction": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "dictionary_free": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "icl1": {
+        "n_tasks": 3,
+        "score": 0.8759259259259259
+      },
+      "icl4": {
+        "n_tasks": 3,
+        "score": 1.0
+      },
+      "mixed_cass": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "mixed_z_only": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "null_no_correction": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "oneshot": {
+        "n_tasks": 3,
+        "score": 0.524074074074074
+      },
+      "oneshot_no_correction": {
+        "n_tasks": 3,
+        "score": 0.49814814814814806
+      },
+      "original_cass": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "original_z_only": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "replace": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "zero": {
+        "n_tasks": 3,
+        "score": 0.0
+      }
+    },
+    "paired": {
+      "mixed_cass__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mixed_cass__mixed_z_only": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mixed_cass__zero": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__combined_no_correction": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__dictionary_free": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined__zero": {
+        "n_tasks": 3,
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "oneshot__icl1": {
+        "n_tasks": 3,
+        "diff": -0.35185185185185186,
+        "ci95": [
+          -0.7222222222222222,
+          -0.033333333333333326
+        ]
+      },
+      "oneshot__oneshot_no_correction": {
+        "n_tasks": 3,
+        "diff": 0.025925925925925925,
+        "ci95": [
+          0.0,
+          0.055555555555555414
+        ]
+      }
+    }
+  },
+  {
+    "metric_family": "entity_token_f1",
+    "means": {
+      "combined": {
+        "n_tasks": 3,
+        "score": 0.5735469465152964
+      },
+      "combined_no_correction": {
+        "n_tasks": 3,
+        "score": 0.5829299832316664
+      },
+      "dictionary_free": {
+        "n_tasks": 3,
+        "score": 0.46033289845044917
+      },
+      "icl1": {
+        "n_tasks": 3,
+        "score": 0.47217219167432295
+      },
+      "icl4": {
+        "n_tasks": 3,
+        "score": 0.8613068783068782
+      },
+      "mixed_cass": {
+        "n_tasks": 3,
+        "score": 0.28585319000077813
+      },
+      "mixed_z_only": {
+        "n_tasks": 3,
+        "score": 0.26747729696388084
+      },
+      "null_no_correction": {
+        "n_tasks": 3,
+        "score": 0.5829299832316664
+      },
+      "oneshot": {
+        "n_tasks": 3,
+        "score": 0.6021207421844678
+      },
+      "oneshot_no_correction": {
+        "n_tasks": 3,
+        "score": 0.5960233686067019
+      },
+      "original_cass": {
+        "n_tasks": 3,
+        "score": 0.19564267445302552
+      },
+      "original_z_only": {
+        "n_tasks": 3,
+        "score": 0.18507606339501856
+      },
+      "replace": {
+        "n_tasks": 3,
+        "score": 0.029164200365324435
+      },
+      "zero": {
+        "n_tasks": 3,
+        "score": 0.16477788353892608
+      }
+    },
+    "paired": {
+      "mixed_cass__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.09021051554775261,
+        "ci95": [
+          0.025282096265061643,
+          0.1577798445160476
+        ]
+      },
+      "mixed_cass__mixed_z_only": {
+        "n_tasks": 3,
+        "diff": 0.018375893036897305,
+        "ci95": [
+          0.0077751411409083815,
+          0.030243160290483878
+        ]
+      },
+      "mixed_cass__zero": {
+        "n_tasks": 3,
+        "diff": 0.12107530646185209,
+        "ci95": [
+          0.03185001291257053,
+          0.23188729026550423
+        ]
+      },
+      "combined__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.3779042720622709,
+        "ci95": [
+          0.16555325824304395,
+          0.5761304358327244
+        ]
+      },
+      "combined__combined_no_correction": {
+        "n_tasks": 3,
+        "diff": -0.00938303671637003,
+        "ci95": [
+          -0.022248677248677295,
+          0.012160173160173204
+        ]
+      },
+      "combined__dictionary_free": {
+        "n_tasks": 3,
+        "diff": 0.11321404806484726,
+        "ci95": [
+          0.05120562365657205,
+          0.19086248949654738
+        ]
+      },
+      "combined__zero": {
+        "n_tasks": 3,
+        "diff": 0.40876906297637033,
+        "ci95": [
+          0.1721211748905528,
+          0.650237881582181
+        ]
+      },
+      "oneshot__icl1": {
+        "n_tasks": 3,
+        "diff": 0.12994855051014473,
+        "ci95": [
+          0.08404593554593554,
+          0.1667534410034411
+        ]
+      },
+      "oneshot__oneshot_no_correction": {
+        "n_tasks": 3,
+        "diff": 0.006097373577765759,
+        "ci95": [
+          -0.002645021645021617,
+          0.011129426129426134
+        ]
+      }
+    }
+  },
+  {
+    "metric_family": "long_structured_whole_answer",
+    "means": {
+      "combined": {
+        "n_tasks": 3,
+        "score": 0.3037037037037037
+      },
+      "combined_no_correction": {
+        "n_tasks": 3,
+        "score": 0.3092592592592593
+      },
+      "dictionary_free": {
+        "n_tasks": 3,
+        "score": 0.1796296296296296
+      },
+      "icl1": {
+        "n_tasks": 3,
+        "score": 0.662962962962963
+      },
+      "icl4": {
+        "n_tasks": 3,
+        "score": 0.6703703703703704
+      },
+      "mixed_cass": {
+        "n_tasks": 3,
+        "score": 0.24629629629629632
+      },
+      "mixed_z_only": {
+        "n_tasks": 3,
+        "score": 0.19814814814814816
+      },
+      "null_no_correction": {
+        "n_tasks": 3,
+        "score": 0.3111111111111111
+      },
+      "oneshot": {
+        "n_tasks": 3,
+        "score": 0.5388888888888889
+      },
+      "oneshot_no_correction": {
+        "n_tasks": 3,
+        "score": 0.43703703703703706
+      },
+      "original_cass": {
+        "n_tasks": 3,
+        "score": 0.12777777777777777
+      },
+      "original_z_only": {
+        "n_tasks": 3,
+        "score": 0.1259259259259259
+      },
+      "replace": {
+        "n_tasks": 3,
+        "score": 0.0
+      },
+      "zero": {
+        "n_tasks": 3,
+        "score": 0.0
+      }
+    },
+    "paired": {
+      "mixed_cass__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.11851851851851854,
+        "ci95": [
+          0.0,
+          0.3555555555555556
+        ]
+      },
+      "mixed_cass__mixed_z_only": {
+        "n_tasks": 3,
+        "diff": 0.04814814814814816,
+        "ci95": [
+          0.0,
+          0.1444444444444445
+        ]
+      },
+      "mixed_cass__zero": {
+        "n_tasks": 3,
+        "diff": 0.24629629629629632,
+        "ci95": [
+          0.0,
+          0.7388888888888889
+        ]
+      },
+      "combined__original_cass": {
+        "n_tasks": 3,
+        "diff": 0.17592592592592593,
+        "ci95": [
+          -0.011111111111111072,
+          0.5388888888888889
+        ]
+      },
+      "combined__combined_no_correction": {
+        "n_tasks": 3,
+        "diff": -0.005555555555555573,
+        "ci95": [
+          -0.01666666666666672,
+          0.0
+        ]
+      },
+      "combined__dictionary_free": {
+        "n_tasks": 3,
+        "diff": 0.12407407407407407,
+        "ci95": [
+          -0.16666666666666663,
+          0.5388888888888889
+        ]
+      },
+      "combined__zero": {
+        "n_tasks": 3,
+        "diff": 0.3037037037037037,
+        "ci95": [
+          0.0,
+          0.5388888888888889
+        ]
+      },
+      "oneshot__icl1": {
+        "n_tasks": 3,
+        "diff": -0.12407407407407411,
+        "ci95": [
+          -0.2777777777777778,
+          0.0
+        ]
+      },
+      "oneshot__oneshot_no_correction": {
+        "n_tasks": 3,
+        "diff": 0.10185185185185185,
+        "ci95": [
+          0.0,
+          0.24444444444444455
+        ]
+      }
+    }
+  },
+  {
+    "metric_family": "reading_token_f1",
+    "means": {
+      "combined": {
+        "n_tasks": 1,
+        "score": 0.8869669782413969
+      },
+      "combined_no_correction": {
+        "n_tasks": 1,
+        "score": 0.8882801095545282
+      },
+      "dictionary_free": {
+        "n_tasks": 1,
+        "score": 0.8886089466089467
+      },
+      "icl1": {
+        "n_tasks": 1,
+        "score": 0.8816971377250424
+      },
+      "icl4": {
+        "n_tasks": 1,
+        "score": 0.9295454545454546
+      },
+      "mixed_cass": {
+        "n_tasks": 1,
+        "score": 0.8496956477551887
+      },
+      "mixed_z_only": {
+        "n_tasks": 1,
+        "score": 0.8367397187169067
+      },
+      "null_no_correction": {
+        "n_tasks": 1,
+        "score": 0.8884215236959424
+      },
+      "oneshot": {
+        "n_tasks": 1,
+        "score": 0.8168435521786824
+      },
+      "oneshot_no_correction": {
+        "n_tasks": 1,
+        "score": 0.7876457825087723
+      },
+      "original_cass": {
+        "n_tasks": 1,
+        "score": 0.8101614513853846
+      },
+      "original_z_only": {
+        "n_tasks": 1,
+        "score": 0.8045378678539065
+      },
+      "replace": {
+        "n_tasks": 1,
+        "score": 0.032577567974303764
+      },
+      "zero": {
+        "n_tasks": 1,
+        "score": 0.8170777611277613
+      }
+    },
+    "paired": {}
+  }
+]

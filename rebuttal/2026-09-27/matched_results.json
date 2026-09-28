@@ -1,0 +1,278 @@
+{
+  "protocol": {
+    "common_seeds": [
+      0,
+      1,
+      2
+    ],
+    "bootstrap_replicates": 50000,
+    "bootstrap_seed": 20260927,
+    "bootstrap_unit": "task; common seeds averaged within task",
+    "primary_routing": "Freeze original CASS assignments from existing 5-seed results; compare arms on seeds 0,1,2",
+    "ci_scope": "Conditional on fixed routing assignments and existing checkpoints; does not include threshold-learning uncertainty",
+    "replacement": "The exact same replacement task/seed score is used in each arm",
+    "frozen_threshold": 5.125,
+    "original_separately_tuned_z_threshold": 5.5,
+    "zvec_scope": "Shares U0 removal and support-dependent norm scaling with CASS; isolates gated correction, not all uses of dictionary"
+  },
+  "loto": {
+    "unrouted": {
+      "n_tasks": 32,
+      "a": 0.39147534013605445,
+      "b": 0.34291666666666665,
+      "diff": 0.04855867346938776,
+      "ci95": [
+        0.014629889455782316,
+        0.08647980442176872
+      ],
+      "wins": 20,
+      "ties": 5,
+      "losses": 7
+    },
+    "fixed_original_route": {
+      "n_tasks": 32,
+      "n_replace": 13,
+      "n_compose": 19,
+      "accuracies": {
+        "cass": 0.4575170068027211,
+        "zvec": 0.42104166666666665
+      },
+      "cass_minus_zvec": {
+        "n_tasks": 32,
+        "a": 0.4575170068027211,
+        "b": 0.42104166666666665,
+        "diff": 0.03647534013605443,
+        "ci95": [
+          0.006487988945578231,
+          0.07272534013605442
+        ],
+        "wins": 14,
+        "ties": 13,
+        "losses": 5
+      },
+      "compose_only_cass_minus_zvec": {
+        "n_tasks": 19,
+        "a": 0.5245900465449339,
+        "b": 0.46315789473684216,
+        "diff": 0.06143215180809167,
+        "ci95": [
+          0.01270318653777302,
+          0.1179733261725747
+        ],
+        "wins": 14,
+        "ties": 0,
+        "losses": 5
+      }
+    },
+    "separately_tuned_policy_common_seeds": {
+      "n_tasks": 32,
+      "a": 0.4575170068027211,
+      "b": 0.4220833333333333,
+      "diff": 0.03543367346938777,
+      "ci95": [
+        -0.008932823129251694,
+        0.07979166666666668
+      ],
+      "wins": 16,
+      "ties": 13,
+      "losses": 3
+    },
+    "common_seed_nested_route": {
+      "n_tasks": 32,
+      "n_replace": 15,
+      "n_compose": 17,
+      "accuracies": {
+        "cass": 0.5008503401360545,
+        "zvec": 0.48833333333333334
+      },
+      "cass_minus_zvec": {
+        "n_tasks": 32,
+        "a": 0.5008503401360545,
+        "b": 0.48833333333333334,
+        "diff": 0.012517006802721093,
+        "ci95": [
+          -0.008541666666666663,
+          0.036670918367346955
+        ],
+        "wins": 11,
+        "ties": 15,
+        "losses": 6
+      },
+      "compose_only_cass_minus_zvec": {
+        "n_tasks": 17,
+        "a": 0.5278751500600241,
+        "b": 0.5043137254901963,
+        "diff": 0.023561424569827943,
+        "ci95": [
+          -0.016438775510204083,
+          0.06709883953581434
+        ],
+        "wins": 11,
+        "ties": 0,
+        "losses": 6
+      }
+    }
+  },
+  "novel": {
+    "unrouted": {
+      "n_tasks": 15,
+      "a": 0.35992857142857143,
+      "b": 0.30233333333333334,
+      "diff": 0.05759523809523808,
+      "ci95": [
+        -0.008563492063492061,
+        0.13244444444444445
+      ],
+      "wins": 5,
+      "ties": 4,
+      "losses": 6
+    },
+    "fixed_original_route": {
+      "n_tasks": 15,
+      "n_replace": 5,
+      "n_compose": 10,
+      "accuracies": {
+        "cass": 0.4951666666666667,
+        "zvec": 0.43477777777777776
+      },
+      "cass_minus_zvec": {
+        "n_tasks": 15,
+        "a": 0.4951666666666667,
+        "b": 0.43477777777777776,
+        "diff": 0.0603888888888889,
+        "ci95": [
+          -0.005333333333333312,
+          0.13466666666666666
+        ],
+        "wins": 5,
+        "ties": 6,
+        "losses": 4
+      },
+      "compose_only_cass_minus_zvec": {
+        "n_tasks": 10,
+        "a": 0.5060833333333333,
+        "b": 0.41550000000000004,
+        "diff": 0.09058333333333332,
+        "ci95": [
+          -0.007333333333333292,
+          0.19466666666666663
+        ],
+        "wins": 5,
+        "ties": 1,
+        "losses": 4
+      }
+    },
+    "separately_tuned_policy_common_seeds": {
+      "n_tasks": 15,
+      "a": 0.4951666666666667,
+      "b": 0.48544444444444446,
+      "diff": 0.009722222222222228,
+      "ci95": [
+        -0.062277777777777765,
+        0.07905555555555556
+      ],
+      "wins": 4,
+      "ties": 6,
+      "losses": 5
+    }
+  },
+  "compound": {
+    "unrouted_cass_minus_zvec": {
+      "n_tasks": 10,
+      "a": 0.14505882352941177,
+      "b": 0.13505882352941173,
+      "diff": 0.010000000000000018,
+      "ci95": [
+        -0.007333333333333332,
+        0.03466666666666671
+      ],
+      "wins": 3,
+      "ties": 5,
+      "losses": 2
+    },
+    "unrouted_true_minus_inferred": {
+      "n_tasks": 10,
+      "a": 0.16066666666666668,
+      "b": 0.14505882352941177,
+      "diff": 0.015607843137254902,
+      "ci95": [
+        -0.005058823529411764,
+        0.04894117647058823
+      ],
+      "wins": 2,
+      "ties": 6,
+      "losses": 2
+    },
+    "fixed_original_route": {
+      "n_tasks": 10,
+      "n_replace": 6,
+      "n_compose": 4,
+      "accuracies": {
+        "cass": 0.2845882352941177,
+        "true_support": 0.29858823529411765,
+        "zvec": 0.27525490196078434
+      },
+      "cass_minus_zvec": {
+        "n_tasks": 10,
+        "a": 0.2845882352941177,
+        "b": 0.27525490196078434,
+        "diff": 0.009333333333333348,
+        "ci95": [
+          -0.007999999999999998,
+          0.034000000000000044
+        ],
+        "wins": 2,
+        "ties": 6,
+        "losses": 2
+      },
+      "compose_only_cass_minus_zvec": {
+        "n_tasks": 4,
+        "a": 0.32,
+        "b": 0.29666666666666663,
+        "diff": 0.02333333333333337,
+        "ci95": [
+          -0.019999999999999997,
+          0.07833333333333344
+        ],
+        "wins": 2,
+        "ties": 0,
+        "losses": 2
+      },
+      "true_minus_inferred": {
+        "n_tasks": 10,
+        "a": 0.29858823529411765,
+        "b": 0.2845882352941177,
+        "diff": 0.014000000000000002,
+        "ci95": [
+          -0.003999999999999992,
+          0.046
+        ],
+        "wins": 1,
+        "ties": 8,
+        "losses": 1
+      },
+      "true_minus_zvec": {
+        "n_tasks": 10,
+        "a": 0.29858823529411765,
+        "b": 0.27525490196078434,
+        "diff": 0.023333333333333352,
+        "ci95": [
+          0.0,
+          0.05333333333333332
+        ],
+        "wins": 3,
+        "ties": 6,
+        "losses": 1
+      }
+    },
+    "true_support_provenance": "Existing fill_gaps.csv; see scripts/12_attribution.py oracle-support implementation"
+  },
+  "source_sha256": {
+    "e1_loto.csv": "5e89dbbedef7c1d766095e527323abc909ceb15c5380b0f1e0abfbbc1edd4a06",
+    "e7_novel.csv": "f77c8346fcdf229b61175bd053f8efb680dcdabde7cbef5bcd9dd56fe3aef0dc",
+    "e2_compound.csv": "b50613f8931931d73137ec3528b093601b1eabfb76d548e97db397ebfc6ea479",
+    "fill_gaps.csv": "912de7fb53915a3871877f8788ed186f3323856d1010c575022d26db92f7e76a",
+    "baselines_lit.csv": "67f4a0dfa82676faff83c199fe78edf27500ae31858cfb82236ca46b01189f0a",
+    "hendel_compound.csv": "d20466a8c17c92781b21522c5892a3bf2699388766a2a09f843a2d002aa3e692"
+  }
+}

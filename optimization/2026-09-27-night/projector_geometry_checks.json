@@ -1,0 +1,7 @@
+{
+  "n_fixed_map_checks": 480,
+  "n_explicit_weighted_sum_checks": 120,
+  "maximum_absolute_float32_error": 7.183064463234246e-07,
+  "maximum_contraction_ratio": 0.9999735951423645,
+  "scope": "CPU functional-equivalence and fixed-state geometry checks; no generation-quality claim."
+}

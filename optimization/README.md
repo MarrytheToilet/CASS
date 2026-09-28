@@ -22,6 +22,10 @@ ignored. The author ZIP and LaTeX auxiliary files are also rebuildable and ignor
 Ignored files are retained on disk; adding ignore rules does not delete them or
 remove any previously tracked result from Git.
 
+The dated artifacts have recorded content hashes. `.gitattributes` preserves
+their bytes across checkouts and recognizes generated CSV/SVG whitespace, so
+repository housekeeping does not rewrite the evidence or invalidate its hashes.
+
 ## Reproducing or restoring a run
 
 The numerical summaries and reports are reviewable from a Git checkout. Re-running

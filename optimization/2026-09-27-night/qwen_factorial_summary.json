@@ -1,0 +1,601 @@
+{
+  "n_tasks": 20,
+  "scope": "Known-task oracle intervention on tasks excluded from the development target set; 20 paired tasks, one deterministic oracle per configuration, no few-shot support inference.",
+  "source_sha256": "e430e3f13ac0812f588b4a982d281748ba1936821b878465c5e7de4b31f94040",
+  "configuration_means": {
+    "chat_layers(14, 20)_gain1.0_positions1": 0.043000000000000003,
+    "chat_layers(14, 20)_gain1.0_positions4": 0.042,
+    "chat_layers(14, 20)_gain2.0_positions1": 0.042,
+    "chat_layers(14, 20)_gain2.0_positions4": 0.043000000000000003,
+    "chat_layers(24,)_gain1.0_positions1": 0.23800000000000004,
+    "chat_layers(24,)_gain1.0_positions4": 0.23699999999999996,
+    "chat_layers(24,)_gain2.0_positions1": 0.263,
+    "chat_layers(24,)_gain2.0_positions4": 0.266,
+    "plain_layers(14, 20)_gain1.0_positions1": 0.081,
+    "plain_layers(14, 20)_gain1.0_positions4": 0.129,
+    "plain_layers(14, 20)_gain2.0_positions1": 0.10300000000000001,
+    "plain_layers(14, 20)_gain2.0_positions4": 0.176,
+    "plain_layers(24,)_gain1.0_positions1": 0.154,
+    "plain_layers(24,)_gain1.0_positions4": 0.17600000000000002,
+    "plain_layers(24,)_gain2.0_positions1": 0.209,
+    "plain_layers(24,)_gain2.0_positions4": 0.21602040816326534
+  },
+  "effects": [
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "layer24",
+        "gain": 1.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.084,
+      "ci95": [
+        -0.03699999999999999,
+        0.196
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "layer24",
+        "gain": 1.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.061,
+      "ci95": [
+        -0.05499999999999999,
+        0.16299999999999998
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "layer24",
+        "gain": 2.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.054000000000000006,
+      "ci95": [
+        -0.046,
+        0.15800000000000003
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "layer24",
+        "gain": 2.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.04997959183673469,
+      "ci95": [
+        -0.06999999999999999,
+        0.15595918367346936
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "pair14_20",
+        "gain": 1.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": -0.038,
+      "ci95": [
+        -0.1,
+        0.012
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "pair14_20",
+        "gain": 1.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": -0.087,
+      "ci95": [
+        -0.178,
+        -0.009999999999999998
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "pair14_20",
+        "gain": 2.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": -0.060999999999999985,
+      "ci95": [
+        -0.13199999999999998,
+        0.0010000000000000002
+      ]
+    },
+    {
+      "axis": "prompt",
+      "contrast": [
+        "chat",
+        "plain"
+      ],
+      "fixed": {
+        "layer_setting": "pair14_20",
+        "gain": 2.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": -0.13299999999999998,
+      "ci95": [
+        -0.24300000000000005,
+        -0.032999999999999995
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "gain": 1.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.195,
+      "ci95": [
+        0.11000000000000001,
+        0.291
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "gain": 1.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.195,
+      "ci95": [
+        0.10700000000000001,
+        0.292
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "gain": 2.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.221,
+      "ci95": [
+        0.122,
+        0.331
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "gain": 2.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.22299999999999995,
+      "ci95": [
+        0.119,
+        0.33399999999999996
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "gain": 1.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.073,
+      "ci95": [
+        -0.010000000000000007,
+        0.166
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "gain": 1.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.047,
+      "ci95": [
+        -0.03499999999999999,
+        0.143
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "gain": 2.0,
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.10600000000000001,
+      "ci95": [
+        0.004000000000000002,
+        0.21599999999999997
+      ]
+    },
+    {
+      "axis": "layer_setting",
+      "contrast": [
+        "layer24",
+        "pair14_20"
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "gain": 2.0,
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.0400204081632653,
+      "ci95": [
+        -0.055999999999999994,
+        0.14802040816326528
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "layer24",
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.024999999999999998,
+      "ci95": [
+        -0.004000000000000004,
+        0.05800000000000001
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "layer24",
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.02899999999999999,
+      "ci95": [
+        -0.004000000000000006,
+        0.06200000000000001
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "pair14_20",
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": -0.000999999999999998,
+      "ci95": [
+        -0.011999999999999999,
+        0.013000000000000001
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "pair14_20",
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.0009999999999999992,
+      "ci95": [
+        -0.012,
+        0.017999999999999995
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "layer24",
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.05500000000000001,
+      "ci95": [
+        -0.00299999999999999,
+        0.123
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "layer24",
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.0400204081632653,
+      "ci95": [
+        -0.0059591836734693955,
+        0.09402040816326532
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "pair14_20",
+        "positions": 1
+      },
+      "n_tasks": 20,
+      "diff": 0.022000000000000002,
+      "ci95": [
+        -0.011999999999999997,
+        0.063
+      ]
+    },
+    {
+      "axis": "gain",
+      "contrast": [
+        2.0,
+        1.0
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "pair14_20",
+        "positions": 4
+      },
+      "n_tasks": 20,
+      "diff": 0.04700000000000001,
+      "ci95": [
+        0.010000000000000014,
+        0.0950250000000015
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "layer24",
+        "gain": 1.0
+      },
+      "n_tasks": 20,
+      "diff": -0.0010000000000000037,
+      "ci95": [
+        -0.010000000000000009,
+        0.008000000000000004
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "layer24",
+        "gain": 2.0
+      },
+      "n_tasks": 20,
+      "diff": 0.0029999999999999944,
+      "ci95": [
+        -0.015000000000000005,
+        0.01999999999999999
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "pair14_20",
+        "gain": 1.0
+      },
+      "n_tasks": 20,
+      "diff": -0.0009999999999999996,
+      "ci95": [
+        -0.011000000000000001,
+        0.010000000000000005
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "chat",
+        "layer_setting": "pair14_20",
+        "gain": 2.0
+      },
+      "n_tasks": 20,
+      "diff": 0.0009999999999999987,
+      "ci95": [
+        -0.009999999999999998,
+        0.012
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "layer24",
+        "gain": 1.0
+      },
+      "n_tasks": 20,
+      "diff": 0.022,
+      "ci95": [
+        0.0020000000000000026,
+        0.046
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "layer24",
+        "gain": 2.0
+      },
+      "n_tasks": 20,
+      "diff": 0.007020408163265305,
+      "ci95": [
+        -0.023980102040816333,
+        0.04006122448979591
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "pair14_20",
+        "gain": 1.0
+      },
+      "n_tasks": 20,
+      "diff": 0.04799999999999999,
+      "ci95": [
+        0.0019999999999999983,
+        0.11199999999999999
+      ]
+    },
+    {
+      "axis": "positions",
+      "contrast": [
+        4,
+        1
+      ],
+      "fixed": {
+        "prompt": "plain",
+        "layer_setting": "pair14_20",
+        "gain": 2.0
+      },
+      "n_tasks": 20,
+      "diff": 0.07300000000000001,
+      "ci95": [
+        0.013000000000000006,
+        0.152
+      ]
+    }
+  ]
+}

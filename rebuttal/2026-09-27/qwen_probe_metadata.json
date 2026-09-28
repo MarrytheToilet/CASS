@@ -1,0 +1,29 @@
+{
+  "model": "qwen3-4b",
+  "tasks": [
+    "antonym",
+    "present-past",
+    "country-capital",
+    "person-sport",
+    "english-french",
+    "next-item",
+    "choose-first-of-list",
+    "animal-from-list"
+  ],
+  "layers": [
+    14,
+    20
+  ],
+  "scalars": [
+    1,
+    2,
+    1
+  ],
+  "torch": "2.13.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "cuda_visible_devices": "3",
+  "n_queries": "all original held-out queries, up to 50",
+  "demonstration_seed": 0,
+  "calibration": "none; diagnostic grid fixed before running",
+  "scope": "known-task oracle; cannot establish a unique architecture-level failure cause"
+}

@@ -1,0 +1,18 @@
+{
+  "scale_eval": {
+    "analysis_sha256": "24a398a94da6c530df43e79fcc1f46136004b38f6dbe7ad5c32588f1b30a1cc7",
+    "prediction_sha256": "c954cc94e3f0b4ce4186ece321f8976598890c2a357b67bba0c7e80ffa46d680"
+  },
+  "scale_eval_fixed_shared": {
+    "analysis_sha256": "4d2e940ea325bd32851dcfae82f50aa8dfcb594bc15cedc64908ff450929e49f",
+    "prediction_sha256": "2ca0a981074cb4d41433844531dbf90a242fa22e512cbf8f04c8c5e3bee23014"
+  },
+  "scale_context": {
+    "analysis_sha256": "31358f890440932a2b4ef8328cce83898a3589129051fd931d20801548648fa2",
+    "prediction_sha256": "29a75c003282de104387129657e31c5d7db8f30c1588ed93d9ecb310775b9263"
+  },
+  "scale_context_fixed_shared": {
+    "analysis_sha256": "d351ac79ca00b9702cc702118ba4205b9cd9121e7eba33f25b21ff6395b96afe",
+    "prediction_sha256": "c76f875160372b04c64a66359706330a261c00f09cdcaa81a3b1f8b742a946f6"
+  }
+}

@@ -1,0 +1,2112 @@
+{
+  "kv_bytes_per_token": 131072,
+  "sources": {
+    "extension_confirm": "a6727819ed314a5cb2613af6ae9cbb932771fce15cc2e956c43b74badce2a48f",
+    "broader_extensions": "1813421f306de2737b5c08a0784b66c044b32f9bb65d8b80f3a29e682c681fcf"
+  },
+  "rows": [
+    {
+      "task": "country-continent",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        66,
+        67
+      ],
+      "operator_float32_bytes": 2244608,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 40,
+      "cass_cached_task_state_bytes": 2637824,
+      "icl4_cached_task_state_bytes": 5242880,
+      "icl4_to_cass_ratio": 1.9875776397515528
+    },
+    {
+      "task": "country-continent",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        66,
+        67
+      ],
+      "operator_float32_bytes": 2244608,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 39,
+      "cass_cached_task_state_bytes": 2637824,
+      "icl4_cached_task_state_bytes": 5111808,
+      "icl4_to_cass_ratio": 1.937888198757764
+    },
+    {
+      "task": "country-continent",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        66,
+        67
+      ],
+      "operator_float32_bytes": 2244608,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2637824,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.8385093167701863
+    },
+    {
+      "task": "element-symbol",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 45,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 5898240,
+      "icl4_to_cass_ratio": 1.9148936170212767
+    },
+    {
+      "task": "element-symbol",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 49,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 6422528,
+      "icl4_to_cass_ratio": 2.0851063829787235
+    },
+    {
+      "task": "element-symbol",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 46,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 6029312,
+      "icl4_to_cass_ratio": 1.9574468085106382
+    },
+    {
+      "task": "animal-baby",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 39,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 5111808,
+      "icl4_to_cass_ratio": 2.5161290322580645
+    },
+    {
+      "task": "animal-baby",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 40,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 5242880,
+      "icl4_to_cass_ratio": 2.5806451612903225
+    },
+    {
+      "task": "animal-baby",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        42,
+        42
+      ],
+      "operator_float32_bytes": 1441792,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 1835008,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 2.642857142857143
+    },
+    {
+      "task": "fruit-color",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        61,
+        64
+      ],
+      "operator_float32_bytes": 2113536,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 39,
+      "cass_cached_task_state_bytes": 2506752,
+      "icl4_cached_task_state_bytes": 5111808,
+      "icl4_to_cass_ratio": 2.0392156862745097
+    },
+    {
+      "task": "fruit-color",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        45,
+        48
+      ],
+      "operator_float32_bytes": 1589248,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 40,
+      "cass_cached_task_state_bytes": 1982464,
+      "icl4_cached_task_state_bytes": 5242880,
+      "icl4_to_cass_ratio": 2.644628099173554
+    },
+    {
+      "task": "fruit-color",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        77,
+        80
+      ],
+      "operator_float32_bytes": 2637824,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 42,
+      "cass_cached_task_state_bytes": 3031040,
+      "icl4_cached_task_state_bytes": 5505024,
+      "icl4_to_cass_ratio": 1.8162162162162163
+    },
+    {
+      "task": "profession-workplace",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        79,
+        80
+      ],
+      "operator_float32_bytes": 2670592,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 3063808,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.5828877005347595
+    },
+    {
+      "task": "profession-workplace",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        63,
+        64
+      ],
+      "operator_float32_bytes": 2146304,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 2539520,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.7548387096774194
+    },
+    {
+      "task": "profession-workplace",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        61,
+        64
+      ],
+      "operator_float32_bytes": 2113536,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 2506752,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 1.8300653594771241
+    },
+    {
+      "task": "capital-country",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        50,
+        51
+      ],
+      "operator_float32_bytes": 1720320,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 39,
+      "cass_cached_task_state_bytes": 2113536,
+      "icl4_cached_task_state_bytes": 5111808,
+      "icl4_to_cass_ratio": 2.4186046511627906
+    },
+    {
+      "task": "capital-country",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        66,
+        67
+      ],
+      "operator_float32_bytes": 2244608,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 44,
+      "cass_cached_task_state_bytes": 2637824,
+      "icl4_cached_task_state_bytes": 5767168,
+      "icl4_to_cass_ratio": 2.186335403726708
+    },
+    {
+      "task": "capital-country",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        66,
+        67
+      ],
+      "operator_float32_bytes": 2244608,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 43,
+      "cass_cached_task_state_bytes": 2637824,
+      "icl4_cached_task_state_bytes": 5636096,
+      "icl4_to_cass_ratio": 2.1366459627329193
+    },
+    {
+      "task": "verb-gerund",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.446808510638298
+    },
+    {
+      "task": "verb-gerund",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        59,
+        64
+      ],
+      "operator_float32_bytes": 2080768,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 2473984,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.8013245033112584
+    },
+    {
+      "task": "verb-gerund",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 2.193548387096774
+    },
+    {
+      "task": "adjective-comparative",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 45,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 5898240,
+      "icl4_to_cass_ratio": 1.9148936170212767
+    },
+    {
+      "task": "adjective-comparative",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 45,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 5898240,
+      "icl4_to_cass_ratio": 2.3076923076923075
+    },
+    {
+      "task": "adjective-comparative",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 43,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 5636096,
+      "icl4_to_cass_ratio": 1.8297872340425532
+    },
+    {
+      "task": "adjective-adverb",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.7435897435897436
+    },
+    {
+      "task": "adjective-adverb",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.8974358974358974
+    },
+    {
+      "task": "adjective-adverb",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 2.2580645161290325
+    },
+    {
+      "task": "past-present",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 1.6923076923076923
+    },
+    {
+      "task": "past-present",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 1.6923076923076923
+    },
+    {
+      "task": "past-present",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.574468085106383
+    },
+    {
+      "task": "english-italian",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 2.2580645161290325
+    },
+    {
+      "task": "english-italian",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 1.4893617021276595
+    },
+    {
+      "task": "english-italian",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 2.193548387096774
+    },
+    {
+      "task": "english-portuguese",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 2.3870967741935485
+    },
+    {
+      "task": "english-portuguese",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 1.8461538461538463
+    },
+    {
+      "task": "english-portuguese",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.446808510638298
+    },
+    {
+      "task": "french-english",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.574468085106383
+    },
+    {
+      "task": "french-english",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.574468085106383
+    },
+    {
+      "task": "french-english",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 1.794871794871795
+    },
+    {
+      "task": "word-last-letter",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 1.5319148936170213
+    },
+    {
+      "task": "word-last-letter",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 1.5319148936170213
+    },
+    {
+      "task": "word-last-letter",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.446808510638298
+    },
+    {
+      "task": "number-plus-one",
+      "seed": 20,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 41,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 5373952,
+      "icl4_to_cass_ratio": 2.6451612903225805
+    },
+    {
+      "task": "number-plus-one",
+      "seed": 21,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 41,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 5373952,
+      "icl4_to_cass_ratio": 2.1025641025641026
+    },
+    {
+      "task": "number-plus-one",
+      "seed": 22,
+      "suite": "novel",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 41,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 5373952,
+      "icl4_to_cass_ratio": 2.1025641025641026
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 2.3870967741935485
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        32,
+        32
+      ],
+      "operator_float32_bytes": 1114112,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 1507328,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 3.0434782608695654
+    },
+    {
+      "task": "antonym+capitalize",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.574468085106383
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.8974358974358974
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 39,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 5111808,
+      "icl4_to_cass_ratio": 1.6595744680851063
+    },
+    {
+      "task": "synonym+capitalize",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 1.4042553191489362
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        32,
+        32
+      ],
+      "operator_float32_bytes": 1114112,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 38,
+      "cass_cached_task_state_bytes": 1507328,
+      "icl4_cached_task_state_bytes": 4980736,
+      "icl4_to_cass_ratio": 3.3043478260869565
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 1.8461538461538463
+    },
+    {
+      "task": "present-past+capitalize",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        47,
+        48
+      ],
+      "operator_float32_bytes": 1622016,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 2015232,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 2.341463414634146
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        58,
+        64
+      ],
+      "operator_float32_bytes": 2064384,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2457600,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.9733333333333334
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        63,
+        64
+      ],
+      "operator_float32_bytes": 2146304,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 38,
+      "cass_cached_task_state_bytes": 2539520,
+      "icl4_cached_task_state_bytes": 4980736,
+      "icl4_to_cass_ratio": 1.961290322580645
+    },
+    {
+      "task": "singular-plural+capitalize",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        79,
+        80
+      ],
+      "operator_float32_bytes": 2670592,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 3063808,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.5828877005347595
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 42,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 5505024,
+      "icl4_to_cass_ratio": 2.1538461538461537
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 40,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 5242880,
+      "icl4_to_cass_ratio": 2.051282051282051
+    },
+    {
+      "task": "english-french+capitalize",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 38,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4980736,
+      "icl4_to_cass_ratio": 1.9487179487179487
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 35,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4587520,
+      "icl4_to_cass_ratio": 1.4893617021276595
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 1.5319148936170213
+    },
+    {
+      "task": "next-item+capitalize",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        79,
+        80
+      ],
+      "operator_float32_bytes": 2670592,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 3063808,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 1.5401069518716577
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 2.129032258064516
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 2.129032258064516
+    },
+    {
+      "task": "antonym+capitalize-first-letter",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 1.6923076923076923
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 2.129032258064516
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 1.6923076923076923
+    },
+    {
+      "task": "present-past+capitalize-first-letter",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 33,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 4325376,
+      "icl4_to_cass_ratio": 2.129032258064516
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        53,
+        51
+      ],
+      "operator_float32_bytes": 1769472,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 41,
+      "cass_cached_task_state_bytes": 2162688,
+      "icl4_cached_task_state_bytes": 5373952,
+      "icl4_to_cass_ratio": 2.484848484848485
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        69,
+        67
+      ],
+      "operator_float32_bytes": 2293760,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 38,
+      "cass_cached_task_state_bytes": 2686976,
+      "icl4_cached_task_state_bytes": 4980736,
+      "icl4_to_cass_ratio": 1.853658536585366
+    },
+    {
+      "task": "country-capital+word-length",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        69,
+        67
+      ],
+      "operator_float32_bytes": 2293760,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 40,
+      "cass_cached_task_state_bytes": 2686976,
+      "icl4_cached_task_state_bytes": 5242880,
+      "icl4_to_cass_ratio": 1.951219512195122
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 20,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        69,
+        67
+      ],
+      "operator_float32_bytes": 2293760,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 37,
+      "cass_cached_task_state_bytes": 2686976,
+      "icl4_cached_task_state_bytes": 4849664,
+      "icl4_to_cass_ratio": 1.8048780487804879
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 21,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        69,
+        67
+      ],
+      "operator_float32_bytes": 2293760,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 34,
+      "cass_cached_task_state_bytes": 2686976,
+      "icl4_cached_task_state_bytes": 4456448,
+      "icl4_to_cass_ratio": 1.6585365853658536
+    },
+    {
+      "task": "country-capital+lowercase-first-letter",
+      "seed": 22,
+      "suite": "compound",
+      "source": "extension_confirm",
+      "ranks": [
+        53,
+        51
+      ],
+      "operator_float32_bytes": 1769472,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 36,
+      "cass_cached_task_state_bytes": 2162688,
+      "icl4_cached_task_state_bytes": 4718592,
+      "icl4_to_cass_ratio": 2.1818181818181817
+    },
+    {
+      "task": "news-topic",
+      "seed": 20,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 234,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 30670848,
+      "icl4_to_cass_ratio": 15.096774193548388
+    },
+    {
+      "task": "news-topic",
+      "seed": 21,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        32,
+        32
+      ],
+      "operator_float32_bytes": 1114112,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 239,
+      "cass_cached_task_state_bytes": 1507328,
+      "icl4_cached_task_state_bytes": 31326208,
+      "icl4_to_cass_ratio": 20.782608695652176
+    },
+    {
+      "task": "news-topic",
+      "seed": 22,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        77,
+        80
+      ],
+      "operator_float32_bytes": 2637824,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 219,
+      "cass_cached_task_state_bytes": 3031040,
+      "icl4_cached_task_state_bytes": 28704768,
+      "icl4_to_cass_ratio": 9.47027027027027
+    },
+    {
+      "task": "sentiment",
+      "seed": 20,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        77,
+        80
+      ],
+      "operator_float32_bytes": 2637824,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 64,
+      "cass_cached_task_state_bytes": 3031040,
+      "icl4_cached_task_state_bytes": 8388608,
+      "icl4_to_cass_ratio": 2.7675675675675677
+    },
+    {
+      "task": "sentiment",
+      "seed": 21,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        32,
+        32
+      ],
+      "operator_float32_bytes": 1114112,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 63,
+      "cass_cached_task_state_bytes": 1507328,
+      "icl4_cached_task_state_bytes": 8257536,
+      "icl4_to_cass_ratio": 5.478260869565218
+    },
+    {
+      "task": "sentiment",
+      "seed": 22,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 67,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 8781824,
+      "icl4_to_cass_ratio": 4.32258064516129
+    },
+    {
+      "task": "commonsense-choice",
+      "seed": 20,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        43,
+        48
+      ],
+      "operator_float32_bytes": 1556480,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 186,
+      "cass_cached_task_state_bytes": 1949696,
+      "icl4_cached_task_state_bytes": 24379392,
+      "icl4_to_cass_ratio": 12.504201680672269
+    },
+    {
+      "task": "commonsense-choice",
+      "seed": 21,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        75,
+        80
+      ],
+      "operator_float32_bytes": 2605056,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 197,
+      "cass_cached_task_state_bytes": 2998272,
+      "icl4_cached_task_state_bytes": 25821184,
+      "icl4_to_cass_ratio": 8.612021857923498
+    },
+    {
+      "task": "commonsense-choice",
+      "seed": 22,
+      "suite": "classification_accuracy",
+      "source": "broader_extensions",
+      "ranks": [
+        75,
+        80
+      ],
+      "operator_float32_bytes": 2605056,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 167,
+      "cass_cached_task_state_bytes": 2998272,
+      "icl4_cached_task_state_bytes": 21889024,
+      "icl4_to_cass_ratio": 7.300546448087432
+    },
+    {
+      "task": "reading-comprehension",
+      "seed": 20,
+      "suite": "reading_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        16,
+        16
+      ],
+      "operator_float32_bytes": 589824,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 762,
+      "cass_cached_task_state_bytes": 983040,
+      "icl4_cached_task_state_bytes": 99876864,
+      "icl4_to_cass_ratio": 101.6
+    },
+    {
+      "task": "reading-comprehension",
+      "seed": 21,
+      "suite": "reading_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        29,
+        32
+      ],
+      "operator_float32_bytes": 1064960,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 964,
+      "cass_cached_task_state_bytes": 1458176,
+      "icl4_cached_task_state_bytes": 126353408,
+      "icl4_to_cass_ratio": 86.65168539325843
+    },
+    {
+      "task": "reading-comprehension",
+      "seed": 22,
+      "suite": "reading_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        45,
+        48
+      ],
+      "operator_float32_bytes": 1589248,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 706,
+      "cass_cached_task_state_bytes": 1982464,
+      "icl4_cached_task_state_bytes": 92536832,
+      "icl4_to_cass_ratio": 46.67768595041322
+    },
+    {
+      "task": "entity-person",
+      "seed": 20,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        32,
+        32
+      ],
+      "operator_float32_bytes": 1114112,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 70,
+      "cass_cached_task_state_bytes": 1507328,
+      "icl4_cached_task_state_bytes": 9175040,
+      "icl4_to_cass_ratio": 6.086956521739131
+    },
+    {
+      "task": "entity-person",
+      "seed": 21,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 131,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 17170432,
+      "icl4_to_cass_ratio": 6.717948717948718
+    },
+    {
+      "task": "entity-person",
+      "seed": 22,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 115,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 15073280,
+      "icl4_to_cass_ratio": 4.8936170212765955
+    },
+    {
+      "task": "entity-organization",
+      "seed": 20,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 87,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 11403264,
+      "icl4_to_cass_ratio": 3.702127659574468
+    },
+    {
+      "task": "entity-organization",
+      "seed": 21,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 114,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 14942208,
+      "icl4_to_cass_ratio": 7.354838709677419
+    },
+    {
+      "task": "entity-organization",
+      "seed": 22,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 145,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 19005440,
+      "icl4_to_cass_ratio": 9.35483870967742
+    },
+    {
+      "task": "entity-location",
+      "seed": 20,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 101,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 13238272,
+      "icl4_to_cass_ratio": 6.516129032258065
+    },
+    {
+      "task": "entity-location",
+      "seed": 21,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 111,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 14548992,
+      "icl4_to_cass_ratio": 4.723404255319149
+    },
+    {
+      "task": "entity-location",
+      "seed": 22,
+      "suite": "entity_token_f1",
+      "source": "broader_extensions",
+      "ranks": [
+        32,
+        32
+      ],
+      "operator_float32_bytes": 1114112,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 87,
+      "cass_cached_task_state_bytes": 1507328,
+      "icl4_cached_task_state_bytes": 11403264,
+      "icl4_to_cass_ratio": 7.565217391304348
+    },
+    {
+      "task": "long-title",
+      "seed": 20,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        71,
+        80
+      ],
+      "operator_float32_bytes": 2539520,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 211,
+      "cass_cached_task_state_bytes": 2932736,
+      "icl4_cached_task_state_bytes": 27656192,
+      "icl4_to_cass_ratio": 9.430167597765363
+    },
+    {
+      "task": "long-title",
+      "seed": 21,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        71,
+        80
+      ],
+      "operator_float32_bytes": 2539520,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 223,
+      "cass_cached_task_state_bytes": 2932736,
+      "icl4_cached_task_state_bytes": 29229056,
+      "icl4_to_cass_ratio": 9.966480446927374
+    },
+    {
+      "task": "long-title",
+      "seed": 22,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        71,
+        80
+      ],
+      "operator_float32_bytes": 2539520,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 205,
+      "cass_cached_task_state_bytes": 2932736,
+      "icl4_cached_task_state_bytes": 26869760,
+      "icl4_to_cass_ratio": 9.162011173184357
+    },
+    {
+      "task": "long-upper",
+      "seed": 20,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        71,
+        80
+      ],
+      "operator_float32_bytes": 2539520,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 337,
+      "cass_cached_task_state_bytes": 2932736,
+      "icl4_cached_task_state_bytes": 44171264,
+      "icl4_to_cass_ratio": 15.061452513966481
+    },
+    {
+      "task": "long-upper",
+      "seed": 21,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        71,
+        80
+      ],
+      "operator_float32_bytes": 2539520,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 324,
+      "cass_cached_task_state_bytes": 2932736,
+      "icl4_cached_task_state_bytes": 42467328,
+      "icl4_to_cass_ratio": 14.480446927374302
+    },
+    {
+      "task": "long-upper",
+      "seed": 22,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        58,
+        64
+      ],
+      "operator_float32_bytes": 2064384,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 322,
+      "cass_cached_task_state_bytes": 2457600,
+      "icl4_cached_task_state_bytes": 42205184,
+      "icl4_to_cass_ratio": 17.173333333333332
+    },
+    {
+      "task": "long-reverse-words",
+      "seed": 20,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        71,
+        80
+      ],
+      "operator_float32_bytes": 2539520,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 243,
+      "cass_cached_task_state_bytes": 2932736,
+      "icl4_cached_task_state_bytes": 31850496,
+      "icl4_to_cass_ratio": 10.860335195530727
+    },
+    {
+      "task": "long-reverse-words",
+      "seed": 21,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        56,
+        64
+      ],
+      "operator_float32_bytes": 2031616,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 245,
+      "cass_cached_task_state_bytes": 2424832,
+      "icl4_cached_task_state_bytes": 32112640,
+      "icl4_to_cass_ratio": 13.243243243243244
+    },
+    {
+      "task": "long-reverse-words",
+      "seed": 22,
+      "suite": "long_structured_whole_answer",
+      "source": "broader_extensions",
+      "ranks": [
+        74,
+        80
+      ],
+      "operator_float32_bytes": 2588672,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 215,
+      "cass_cached_task_state_bytes": 2981888,
+      "icl4_cached_task_state_bytes": 28180480,
+      "icl4_to_cass_ratio": 9.45054945054945
+    },
+    {
+      "task": "code-sum",
+      "seed": 20,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 135,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 17694720,
+      "icl4_to_cass_ratio": 5.74468085106383
+    },
+    {
+      "task": "code-sum",
+      "seed": 21,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 153,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 20054016,
+      "icl4_to_cass_ratio": 6.51063829787234
+    },
+    {
+      "task": "code-sum",
+      "seed": 22,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        80,
+        80
+      ],
+      "operator_float32_bytes": 2686976,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 159,
+      "cass_cached_task_state_bytes": 3080192,
+      "icl4_cached_task_state_bytes": 20840448,
+      "icl4_to_cass_ratio": 6.76595744680851
+    },
+    {
+      "task": "code-max",
+      "seed": 20,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        77,
+        80
+      ],
+      "operator_float32_bytes": 2637824,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 177,
+      "cass_cached_task_state_bytes": 3031040,
+      "icl4_cached_task_state_bytes": 23199744,
+      "icl4_to_cass_ratio": 7.654054054054054
+    },
+    {
+      "task": "code-max",
+      "seed": 21,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        77,
+        80
+      ],
+      "operator_float32_bytes": 2637824,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 153,
+      "cass_cached_task_state_bytes": 3031040,
+      "icl4_cached_task_state_bytes": 20054016,
+      "icl4_to_cass_ratio": 6.616216216216216
+    },
+    {
+      "task": "code-max",
+      "seed": 22,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        61,
+        64
+      ],
+      "operator_float32_bytes": 2113536,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 189,
+      "cass_cached_task_state_bytes": 2506752,
+      "icl4_cached_task_state_bytes": 24772608,
+      "icl4_to_cass_ratio": 9.882352941176471
+    },
+    {
+      "task": "code-min",
+      "seed": 20,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        75,
+        80
+      ],
+      "operator_float32_bytes": 2605056,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 189,
+      "cass_cached_task_state_bytes": 2998272,
+      "icl4_cached_task_state_bytes": 24772608,
+      "icl4_to_cass_ratio": 8.262295081967213
+    },
+    {
+      "task": "code-min",
+      "seed": 21,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 165,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 21626880,
+      "icl4_to_cass_ratio": 10.64516129032258
+    },
+    {
+      "task": "code-min",
+      "seed": 22,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        48,
+        48
+      ],
+      "operator_float32_bytes": 1638400,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 159,
+      "cass_cached_task_state_bytes": 2031616,
+      "icl4_cached_task_state_bytes": 20840448,
+      "icl4_to_cass_ratio": 10.258064516129032
+    },
+    {
+      "task": "code-sorted",
+      "seed": 20,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        75,
+        80
+      ],
+      "operator_float32_bytes": 2605056,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 171,
+      "cass_cached_task_state_bytes": 2998272,
+      "icl4_cached_task_state_bytes": 22413312,
+      "icl4_to_cass_ratio": 7.475409836065574
+    },
+    {
+      "task": "code-sorted",
+      "seed": 21,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        75,
+        80
+      ],
+      "operator_float32_bytes": 2605056,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 189,
+      "cass_cached_task_state_bytes": 2998272,
+      "icl4_cached_task_state_bytes": 24772608,
+      "icl4_to_cass_ratio": 8.262295081967213
+    },
+    {
+      "task": "code-sorted",
+      "seed": 22,
+      "suite": "code_expression_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 159,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 20840448,
+      "icl4_to_cass_ratio": 8.153846153846153
+    },
+    {
+      "task": "code-sort3-sum",
+      "seed": 20,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 187,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 24510464,
+      "icl4_to_cass_ratio": 9.58974358974359
+    },
+    {
+      "task": "code-sort3-sum",
+      "seed": 21,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 157,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 20578304,
+      "icl4_to_cass_ratio": 8.051282051282051
+    },
+    {
+      "task": "code-sort3-sum",
+      "seed": 22,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 175,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 22937600,
+      "icl4_to_cass_ratio": 8.974358974358974
+    },
+    {
+      "task": "code-sort3-max",
+      "seed": 20,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 193,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 25296896,
+      "icl4_to_cass_ratio": 9.897435897435898
+    },
+    {
+      "task": "code-sort3-max",
+      "seed": 21,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 169,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 22151168,
+      "icl4_to_cass_ratio": 8.666666666666666
+    },
+    {
+      "task": "code-sort3-max",
+      "seed": 22,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 193,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 25296896,
+      "icl4_to_cass_ratio": 9.897435897435898
+    },
+    {
+      "task": "code-sort3-min",
+      "seed": 20,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 181,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 23724032,
+      "icl4_to_cass_ratio": 9.282051282051283
+    },
+    {
+      "task": "code-sort3-min",
+      "seed": 21,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 193,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 25296896,
+      "icl4_to_cass_ratio": 9.897435897435898
+    },
+    {
+      "task": "code-sort3-min",
+      "seed": 22,
+      "suite": "code_multistep_execution",
+      "source": "broader_extensions",
+      "ranks": [
+        64,
+        64
+      ],
+      "operator_float32_bytes": 2162688,
+      "cass_prefix_tokens": 3,
+      "icl4_prefix_tokens": 193,
+      "cass_cached_task_state_bytes": 2555904,
+      "icl4_cached_task_state_bytes": 25296896,
+      "icl4_to_cass_ratio": 9.897435897435898
+    }
+  ],
+  "groups": [
+    {
+      "suite": "classification_accuracy",
+      "n_tasks": 3,
+      "n_task_seeds": 9,
+      "median_cass_mib": 1.9375,
+      "median_icl4_mib": 23.25,
+      "median_per_task_seed_ratio": 8.612021857923498
+    },
+    {
+      "suite": "code_expression_execution",
+      "n_tasks": 4,
+      "n_task_seeds": 12,
+      "median_cass_mib": 2.859375,
+      "median_icl4_mib": 20.25,
+      "median_per_task_seed_ratio": 7.903950103950104
+    },
+    {
+      "suite": "code_multistep_execution",
+      "n_tasks": 3,
+      "n_task_seeds": 9,
+      "median_cass_mib": 2.4375,
+      "median_icl4_mib": 23.375,
+      "median_per_task_seed_ratio": 9.58974358974359
+    },
+    {
+      "suite": "compound",
+      "n_tasks": 10,
+      "n_task_seeds": 30,
+      "median_cass_mib": 2.4375,
+      "median_icl4_mib": 4.5625,
+      "median_per_task_seed_ratio": 1.9499687304565354
+    },
+    {
+      "suite": "entity_token_f1",
+      "n_tasks": 3,
+      "n_task_seeds": 9,
+      "median_cass_mib": 1.9375,
+      "median_icl4_mib": 13.875,
+      "median_per_task_seed_ratio": 6.516129032258065
+    },
+    {
+      "suite": "long_structured_whole_answer",
+      "n_tasks": 3,
+      "n_task_seeds": 9,
+      "median_cass_mib": 2.796875,
+      "median_icl4_mib": 30.375,
+      "median_per_task_seed_ratio": 10.860335195530727
+    },
+    {
+      "suite": "novel",
+      "n_tasks": 15,
+      "n_task_seeds": 45,
+      "median_cass_mib": 2.4375,
+      "median_icl4_mib": 4.625,
+      "median_per_task_seed_ratio": 1.9148936170212767
+    },
+    {
+      "suite": "reading_token_f1",
+      "n_tasks": 1,
+      "n_task_seeds": 3,
+      "median_cass_mib": 1.390625,
+      "median_icl4_mib": 95.25,
+      "median_per_task_seed_ratio": 86.65168539325843
+    }
+  ],
+  "measured_tensor_checks": [
+    {
+      "task": "antonym",
+      "compiled_operator_bytes_match": true,
+      "prefix_kv_bytes_match": true,
+      "uncompiled_operator_bytes": 2686976
+    },
+    {
+      "task": "country-capital",
+      "compiled_operator_bytes_match": true,
+      "prefix_kv_bytes_match": true,
+      "uncompiled_operator_bytes": 1441792
+    },
+    {
+      "task": "english-french",
+      "compiled_operator_bytes_match": true,
+      "prefix_kv_bytes_match": true,
+      "uncompiled_operator_bytes": 2686976
+    }
+  ],
+  "scope": "Float32 operator tensor-shape accounting (Q, direction, anchor) plus unquantized BF16 reusable prefix KV. Excludes shared model weights, the global offline dictionary, Python metadata, allocator overhead and transient query KV. No claim of measured multi-task throughput or total-system memory reduction; task states are assumed individually retained."
+}

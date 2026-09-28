@@ -1,0 +1,415 @@
+{
+  "source_sha256": "f1250bc4793a477cf4b425fbe2e9208b8ec75cf907e2a1ebfbf72792a527fc0d",
+  "n_tasks": 10,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "uncertainty": "50,000 paired task bootstrap draws; seeds averaged within task; conditional on frozen original CASS policy",
+  "route_source_sha256": "84e64cea45f7d2abf915eaadb41c91eb40ff94b890c9c63a422870bfa56e29bf",
+  "comparison_scope": "Fresh generations only; no original-runtime scores are pooled",
+  "fixed_route_counts": {
+    "compose": 4,
+    "replace": 6
+  },
+  "coherence_matching": {
+    "n_candidates_evaluated": 90,
+    "n_pass": 84,
+    "tolerances": {
+      "mean": 0.02,
+      "maximum": 0.03
+    }
+  },
+  "unrouted": {
+    "inferred": {
+      "mean": 0.14768627450980393,
+      "ci95": [
+        0.02168627450980392,
+        0.32400000000000007
+      ],
+      "n_tasks": 10
+    },
+    "z_only": {
+      "mean": 0.13105882352941178,
+      "ci95": [
+        0.018666666666666665,
+        0.28866666666666674
+      ],
+      "n_tasks": 10
+    },
+    "wrong_matched": {
+      "mean": 0.10155555555555555,
+      "ci95": [
+        0.015333333333333332,
+        0.22688888888888886
+      ],
+      "n_tasks": 10
+    },
+    "replace": {
+      "mean": 0.24627450980392157,
+      "ci95": [
+        0.11627450980392158,
+        0.43121568627450985
+      ],
+      "n_tasks": 10
+    },
+    "no_correction": {
+      "mean": 0.13105882352941178,
+      "ci95": [
+        0.018666666666666665,
+        0.28866666666666674
+      ],
+      "n_tasks": 10
+    },
+    "true_support": {
+      "mean": 0.16066666666666665,
+      "ci95": [
+        0.019333333333333334,
+        0.3473333333333333
+      ],
+      "n_tasks": 10
+    },
+    "true_correction": {
+      "mean": 0.16533333333333333,
+      "ci95": [
+        0.018666666666666665,
+        0.3573333333333334
+      ],
+      "n_tasks": 10
+    }
+  },
+  "fixed_route": {
+    "inferred": {
+      "mean": 0.28560784313725496,
+      "ci95": [
+        0.10333333333333335,
+        0.5058823529411766
+      ],
+      "n_tasks": 10
+    },
+    "z_only": {
+      "mean": 0.26960784313725494,
+      "ci95": [
+        0.09666372549019608,
+        0.48
+      ],
+      "n_tasks": 10
+    },
+    "wrong_matched": {
+      "mean": 0.2444967320261438,
+      "ci95": [
+        0.08827450980392157,
+        0.4473346405228759
+      ],
+      "n_tasks": 10
+    },
+    "replace": {
+      "mean": 0.24627450980392157,
+      "ci95": [
+        0.11627450980392158,
+        0.43121568627450985
+      ],
+      "n_tasks": 10
+    },
+    "no_correction": {
+      "mean": 0.26960784313725494,
+      "ci95": [
+        0.09666372549019608,
+        0.48
+      ],
+      "n_tasks": 10
+    },
+    "true_support": {
+      "mean": 0.2976078431372549,
+      "ci95": [
+        0.10666372549019609,
+        0.5196078431372549
+      ],
+      "n_tasks": 10
+    },
+    "true_correction": {
+      "mean": 0.30227450980392156,
+      "ci95": [
+        0.10694117647058823,
+        0.5272156862745099
+      ],
+      "n_tasks": 10
+    }
+  },
+  "paired_differences": {
+    "unrouted": {
+      "inferred minus z_only": {
+        "result": {
+          "mean": 0.016627450980392165,
+          "ci95": [
+            -0.0013333333333333292,
+            0.04066666666666668
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "inferred minus no_correction": {
+        "result": {
+          "mean": 0.016627450980392165,
+          "ci95": [
+            -0.0013333333333333292,
+            0.04066666666666668
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "true_support minus inferred": {
+        "result": {
+          "mean": 0.012980392156862728,
+          "ci95": [
+            -0.005333333333333362,
+            0.042313725490196054
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "true_correction minus inferred": {
+        "result": {
+          "mean": 0.017647058823529405,
+          "ci95": [
+            -0.008039215686274522,
+            0.05894117647058824
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "inferred minus wrong_matched": {
+        "result": {
+          "mean": 0.046130718954248376,
+          "ci95": [
+            0.005775490196078445,
+            0.09715212418300666
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "true_correction minus no_correction": {
+        "result": {
+          "mean": 0.03427450980392157,
+          "ci95": [
+            3.4694469519536144e-19,
+            0.07933333333333337
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      }
+    },
+    "fixed_route": {
+      "inferred minus z_only": {
+        "result": {
+          "mean": 0.016000000000000007,
+          "ci95": [
+            -0.0006666666666666668,
+            0.03866666666666669
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "inferred minus no_correction": {
+        "result": {
+          "mean": 0.016000000000000007,
+          "ci95": [
+            -0.0006666666666666668,
+            0.03866666666666669
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "true_support minus inferred": {
+        "result": {
+          "mean": 0.011999999999999983,
+          "ci95": [
+            -0.006666666666666682,
+            0.04133333333333331
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "true_correction minus inferred": {
+        "result": {
+          "mean": 0.01666666666666666,
+          "ci95": [
+            -0.010000000000000012,
+            0.05800000000000001
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "inferred minus wrong_matched": {
+        "result": {
+          "mean": 0.04111111111111112,
+          "ci95": [
+            0.0,
+            0.09388888888888891
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      },
+      "true_correction minus no_correction": {
+        "result": {
+          "mean": 0.03266666666666666,
+          "ci95": [
+            -0.0006666666666666665,
+            0.07733333333333337
+          ],
+          "n_tasks": 10
+        },
+        "tasks": [
+          "antonym+capitalize",
+          "antonym+capitalize-first-letter",
+          "country-capital+lowercase-first-letter",
+          "country-capital+word-length",
+          "english-french+capitalize",
+          "next-item+capitalize",
+          "present-past+capitalize",
+          "present-past+capitalize-first-letter",
+          "singular-plural+capitalize",
+          "synonym+capitalize"
+        ]
+      }
+    }
+  },
+  "gates": {
+    "minimum": 0.0,
+    "maximum": 0.7706795487040209,
+    "zero_count": 5
+  }
+}

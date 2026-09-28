@@ -1,0 +1,14 @@
+{
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "matched_local_original": {
+    "config.json": true,
+    "generation_config.json": true,
+    "merges.txt": true,
+    "model-00001-of-00002.safetensors": true,
+    "model-00002-of-00002.safetensors": true,
+    "model.safetensors.index.json": true,
+    "tokenizer.json": true,
+    "tokenizer_config.json": true,
+    "vocab.json": true
+  }
+}

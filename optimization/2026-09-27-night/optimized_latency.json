@@ -1,0 +1,2486 @@
+{
+  "torch": "2.13.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "measurements": [
+    {
+      "task": "antonym",
+      "measurement": "extract_original_b8",
+      "warmup_seconds": 0.1976085975766182,
+      "repeats": [
+        {
+          "seconds": 0.17955861762166023,
+          "gpu_board_joules": 64.26834527596085,
+          "grouped_elapsed_seconds": 0.8977930881083012
+        },
+        {
+          "seconds": 0.182483246922493,
+          "gpu_board_joules": 78.77127843117083,
+          "grouped_elapsed_seconds": 0.9124162346124649
+        },
+        {
+          "seconds": 0.18219495117664336,
+          "gpu_board_joules": 79.52854990525374,
+          "grouped_elapsed_seconds": 0.9109747558832169
+        },
+        {
+          "seconds": 0.18614343404769898,
+          "gpu_board_joules": 78.95308638736131,
+          "grouped_elapsed_seconds": 0.9307171702384949
+        },
+        {
+          "seconds": 0.1851474866271019,
+          "gpu_board_joules": 77.9204613835998,
+          "grouped_elapsed_seconds": 0.9257374331355095
+        },
+        {
+          "seconds": 0.18432919979095458,
+          "gpu_board_joules": 77.99827068537473,
+          "grouped_elapsed_seconds": 0.921645998954773
+        },
+        {
+          "seconds": 0.18297737762331961,
+          "gpu_board_joules": 78.51793492035196,
+          "grouped_elapsed_seconds": 0.9148868881165981
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.18297737762331961,
+      "median_gpu_board_joules": 78.51793492035196
+    },
+    {
+      "task": "antonym",
+      "measurement": "extract_selected_b8",
+      "warmup_seconds": 0.18596145138144493,
+      "repeats": [
+        {
+          "seconds": 0.16109415888786316,
+          "gpu_board_joules": 69.37211295620352,
+          "grouped_elapsed_seconds": 0.8054707944393158
+        },
+        {
+          "seconds": 0.16617981866002082,
+          "gpu_board_joules": 76.81802558722498,
+          "grouped_elapsed_seconds": 0.8308990933001041
+        },
+        {
+          "seconds": 0.16681167334318162,
+          "gpu_board_joules": 73.3552108401009,
+          "grouped_elapsed_seconds": 0.834058366715908
+        },
+        {
+          "seconds": 0.1631023645401001,
+          "gpu_board_joules": 72.5877228048133,
+          "grouped_elapsed_seconds": 0.8155118227005005
+        },
+        {
+          "seconds": 0.16980093941092492,
+          "gpu_board_joules": 75.7994402064366,
+          "grouped_elapsed_seconds": 0.8490046970546246
+        },
+        {
+          "seconds": 0.16393659263849258,
+          "gpu_board_joules": 71.10089088259419,
+          "grouped_elapsed_seconds": 0.8196829631924629
+        },
+        {
+          "seconds": 0.16182347089052201,
+          "gpu_board_joules": 73.05486144903303,
+          "grouped_elapsed_seconds": 0.80911735445261
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.16393659263849258,
+      "median_gpu_board_joules": 73.05486144903303
+    },
+    {
+      "task": "antonym",
+      "measurement": "extract_selected_b48",
+      "warmup_seconds": 0.12134671211242676,
+      "repeats": [
+        {
+          "seconds": 0.11834106008921351,
+          "gpu_board_joules": 55.92626482741375,
+          "grouped_elapsed_seconds": 0.8283874206244946
+        },
+        {
+          "seconds": 0.11892477848700114,
+          "gpu_board_joules": 60.88869588527296,
+          "grouped_elapsed_seconds": 0.832473449409008
+        },
+        {
+          "seconds": 0.11893631677542414,
+          "gpu_board_joules": 61.0514913269159,
+          "grouped_elapsed_seconds": 0.832554217427969
+        },
+        {
+          "seconds": 0.11924090502517563,
+          "gpu_board_joules": 61.25048883582332,
+          "grouped_elapsed_seconds": 0.8346863351762295
+        },
+        {
+          "seconds": 0.1192097578729902,
+          "gpu_board_joules": 61.4331251505789,
+          "grouped_elapsed_seconds": 0.8344683051109314
+        },
+        {
+          "seconds": 0.11842827924660274,
+          "gpu_board_joules": 60.57474006254551,
+          "grouped_elapsed_seconds": 0.8289979547262192
+        },
+        {
+          "seconds": 0.1189451212329524,
+          "gpu_board_joules": 61.166241649818026,
+          "grouped_elapsed_seconds": 0.8326158486306667
+        }
+      ],
+      "calls_per_repeat": 7,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.11893631677542414,
+      "median_gpu_board_joules": 61.0514913269159
+    },
+    {
+      "task": "antonym",
+      "measurement": "adapt_original",
+      "warmup_seconds": 1.4893393591046333,
+      "repeats": [
+        {
+          "seconds": 1.4722057804465294,
+          "gpu_board_joules": 201.95896281292664,
+          "grouped_elapsed_seconds": 1.4722057804465294
+        },
+        {
+          "seconds": 1.5122426562011242,
+          "gpu_board_joules": 224.17415250608695,
+          "grouped_elapsed_seconds": 1.5122426562011242
+        },
+        {
+          "seconds": 1.480296280235052,
+          "gpu_board_joules": 216.0222356076166,
+          "grouped_elapsed_seconds": 1.480296280235052
+        },
+        {
+          "seconds": 1.5074249356985092,
+          "gpu_board_joules": 215.82359816692428,
+          "grouped_elapsed_seconds": 1.5074249356985092
+        },
+        {
+          "seconds": 1.5352883860468864,
+          "gpu_board_joules": 205.01527012284845,
+          "grouped_elapsed_seconds": 1.5352883860468864
+        }
+      ],
+      "calls_per_repeat": 1,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 1.5074249356985092,
+      "median_gpu_board_joules": 215.82359816692428
+    },
+    {
+      "task": "antonym",
+      "measurement": "adapt_optimized_b8",
+      "warmup_seconds": 0.28957392275333405,
+      "repeats": [
+        {
+          "seconds": 0.2698417777816455,
+          "gpu_board_joules": 69.10460925837002,
+          "grouped_elapsed_seconds": 0.8095253333449364
+        },
+        {
+          "seconds": 0.27251850813627243,
+          "gpu_board_joules": 84.63017614025001,
+          "grouped_elapsed_seconds": 0.8175555244088173
+        },
+        {
+          "seconds": 0.2766305220623811,
+          "gpu_board_joules": 83.62677448319891,
+          "grouped_elapsed_seconds": 0.8298915661871433
+        },
+        {
+          "seconds": 0.2761142700910568,
+          "gpu_board_joules": 83.88025242564579,
+          "grouped_elapsed_seconds": 0.8283428102731705
+        },
+        {
+          "seconds": 0.2752290740609169,
+          "gpu_board_joules": 85.31549541857093,
+          "grouped_elapsed_seconds": 0.8256872221827507
+        },
+        {
+          "seconds": 0.2868779090543588,
+          "gpu_board_joules": 85.68878607985874,
+          "grouped_elapsed_seconds": 0.8606337271630764
+        },
+        {
+          "seconds": 0.27581480021278065,
+          "gpu_board_joules": 83.91531064273168,
+          "grouped_elapsed_seconds": 0.8274444006383419
+        }
+      ],
+      "calls_per_repeat": 3,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.27581480021278065,
+      "median_gpu_board_joules": 83.91531064273168
+    },
+    {
+      "task": "antonym",
+      "measurement": "adapt_optimized_b48",
+      "warmup_seconds": 0.2357064075767994,
+      "repeats": [
+        {
+          "seconds": 0.22848076187074184,
+          "gpu_board_joules": 73.90876155621372,
+          "grouped_elapsed_seconds": 0.9139230474829674
+        },
+        {
+          "seconds": 0.23022973537445068,
+          "gpu_board_joules": 74.69904527650215,
+          "grouped_elapsed_seconds": 0.9209189414978027
+        },
+        {
+          "seconds": 0.2310428600758314,
+          "gpu_board_joules": 73.01568220056127,
+          "grouped_elapsed_seconds": 0.9241714403033257
+        },
+        {
+          "seconds": 0.24332592263817787,
+          "gpu_board_joules": 75.86455018172376,
+          "grouped_elapsed_seconds": 0.9733036905527115
+        },
+        {
+          "seconds": 0.2291233129799366,
+          "gpu_board_joules": 75.01822260974863,
+          "grouped_elapsed_seconds": 0.9164932519197464
+        },
+        {
+          "seconds": 0.22776760254055262,
+          "gpu_board_joules": 72.45778952278197,
+          "grouped_elapsed_seconds": 0.9110704101622105
+        },
+        {
+          "seconds": 0.22807391732931137,
+          "gpu_board_joules": 71.47230254861526,
+          "grouped_elapsed_seconds": 0.9122956693172455
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.2291233129799366,
+      "median_gpu_board_joules": 73.90876155621372
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.2969530262053013,
+      "repeats": [
+        {
+          "seconds": 0.1402870894720157,
+          "gpu_board_joules": 38.16450611876972,
+          "grouped_elapsed_seconds": 0.8417225368320942
+        },
+        {
+          "seconds": 0.13610569201409817,
+          "gpu_board_joules": 41.02357893994078,
+          "grouped_elapsed_seconds": 0.816634152084589
+        },
+        {
+          "seconds": 0.13712473462025324,
+          "gpu_board_joules": 40.359607731861374,
+          "grouped_elapsed_seconds": 0.8227484077215195
+        },
+        {
+          "seconds": 0.14024162913362184,
+          "gpu_board_joules": 40.7862856132413,
+          "grouped_elapsed_seconds": 0.8414497748017311
+        },
+        {
+          "seconds": 0.13486432656645775,
+          "gpu_board_joules": 38.608579181277676,
+          "grouped_elapsed_seconds": 0.8091859593987465
+        },
+        {
+          "seconds": 0.13972926388184229,
+          "gpu_board_joules": 40.11766471998774,
+          "grouped_elapsed_seconds": 0.8383755832910538
+        },
+        {
+          "seconds": 0.14036270106832185,
+          "gpu_board_joules": 39.83832944752144,
+          "grouped_elapsed_seconds": 0.8421762064099312
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13972926388184229,
+      "median_gpu_board_joules": 40.11766471998774,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 1.2427875064313412,
+      "repeats": [
+        {
+          "seconds": 0.13774067411820093,
+          "gpu_board_joules": 26.50976489506041,
+          "grouped_elapsed_seconds": 0.8264440447092056
+        },
+        {
+          "seconds": 0.13704317435622215,
+          "gpu_board_joules": 39.59565591968596,
+          "grouped_elapsed_seconds": 0.8222590461373329
+        },
+        {
+          "seconds": 0.13627084406713644,
+          "gpu_board_joules": 39.569867148973664,
+          "grouped_elapsed_seconds": 0.8176250644028187
+        },
+        {
+          "seconds": 0.13654312739769617,
+          "gpu_board_joules": 39.861102523598824,
+          "grouped_elapsed_seconds": 0.8192587643861771
+        },
+        {
+          "seconds": 0.13663012720644474,
+          "gpu_board_joules": 40.218542121751234,
+          "grouped_elapsed_seconds": 0.8197807632386684
+        },
+        {
+          "seconds": 0.13673505062858263,
+          "gpu_board_joules": 39.957696242617374,
+          "grouped_elapsed_seconds": 0.8204103037714958
+        },
+        {
+          "seconds": 0.13736360520124435,
+          "gpu_board_joules": 40.20298756340214,
+          "grouped_elapsed_seconds": 0.8241816312074661
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13673505062858263,
+      "median_gpu_board_joules": 39.861102523598824,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.23573706671595573,
+      "repeats": [
+        {
+          "seconds": 0.13055988028645515,
+          "gpu_board_joules": 36.06023619102298,
+          "grouped_elapsed_seconds": 0.9139191620051861
+        },
+        {
+          "seconds": 0.13057810174567358,
+          "gpu_board_joules": 42.00862177122456,
+          "grouped_elapsed_seconds": 0.9140467122197151
+        },
+        {
+          "seconds": 0.13071480925594056,
+          "gpu_board_joules": 39.91595054266708,
+          "grouped_elapsed_seconds": 0.915003664791584
+        },
+        {
+          "seconds": 0.13015712105802127,
+          "gpu_board_joules": 39.98874692100499,
+          "grouped_elapsed_seconds": 0.9110998474061489
+        },
+        {
+          "seconds": 0.13036609334605082,
+          "gpu_board_joules": 39.68114874509296,
+          "grouped_elapsed_seconds": 0.9125626534223557
+        },
+        {
+          "seconds": 0.13017138146928378,
+          "gpu_board_joules": 39.80118309608793,
+          "grouped_elapsed_seconds": 0.9111996702849865
+        },
+        {
+          "seconds": 0.13059485331177711,
+          "gpu_board_joules": 40.02399296875245,
+          "grouped_elapsed_seconds": 0.9141639731824398
+        }
+      ],
+      "calls_per_repeat": 7,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13055988028645515,
+      "median_gpu_board_joules": 39.91595054266708,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.1460433192551136,
+      "repeats": [
+        {
+          "seconds": 0.14023702529569468,
+          "gpu_board_joules": 41.525016744062306,
+          "grouped_elapsed_seconds": 0.841422151774168
+        },
+        {
+          "seconds": 0.14936230207482973,
+          "gpu_board_joules": 42.38801733649647,
+          "grouped_elapsed_seconds": 0.8961738124489784
+        },
+        {
+          "seconds": 0.14908275877436003,
+          "gpu_board_joules": 41.057085225166134,
+          "grouped_elapsed_seconds": 0.8944965526461601
+        },
+        {
+          "seconds": 0.15011802005271116,
+          "gpu_board_joules": 41.26648889526725,
+          "grouped_elapsed_seconds": 0.900708120316267
+        },
+        {
+          "seconds": 0.15283958738048872,
+          "gpu_board_joules": 41.989704033238816,
+          "grouped_elapsed_seconds": 0.9170375242829323
+        },
+        {
+          "seconds": 0.1473062907656034,
+          "gpu_board_joules": 39.9616795099258,
+          "grouped_elapsed_seconds": 0.8838377445936203
+        },
+        {
+          "seconds": 0.1683429659654697,
+          "gpu_board_joules": 46.463368978498316,
+          "grouped_elapsed_seconds": 1.010057795792818
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.14936230207482973,
+      "median_gpu_board_joules": 41.525016744062306,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.1663661152124405,
+      "repeats": [
+        {
+          "seconds": 0.14770457583169141,
+          "gpu_board_joules": 39.05662295304773,
+          "grouped_elapsed_seconds": 0.8862274549901485
+        },
+        {
+          "seconds": 0.1474582323183616,
+          "gpu_board_joules": 42.50044137295823,
+          "grouped_elapsed_seconds": 0.8847493939101696
+        },
+        {
+          "seconds": 0.1488914079964161,
+          "gpu_board_joules": 41.65062703710834,
+          "grouped_elapsed_seconds": 0.8933484479784966
+        },
+        {
+          "seconds": 0.1455736644566059,
+          "gpu_board_joules": 40.587041123657826,
+          "grouped_elapsed_seconds": 0.8734419867396355
+        },
+        {
+          "seconds": 0.14537116264303526,
+          "gpu_board_joules": 40.67719907096448,
+          "grouped_elapsed_seconds": 0.8722269758582115
+        },
+        {
+          "seconds": 0.14479876992603144,
+          "gpu_board_joules": 40.41634114698127,
+          "grouped_elapsed_seconds": 0.8687926195561886
+        },
+        {
+          "seconds": 0.1540727106233438,
+          "gpu_board_joules": 42.59506020939599,
+          "grouped_elapsed_seconds": 0.9244362637400627
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.1474582323183616,
+      "median_gpu_board_joules": 40.67719907096448,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.2514078989624977,
+      "repeats": [
+        {
+          "seconds": 0.14589056620995203,
+          "gpu_board_joules": 41.54039305357745,
+          "grouped_elapsed_seconds": 0.8753433972597122
+        },
+        {
+          "seconds": 0.1490277231981357,
+          "gpu_board_joules": 51.757385969585805,
+          "grouped_elapsed_seconds": 0.8941663391888142
+        },
+        {
+          "seconds": 0.1499487186471621,
+          "gpu_board_joules": 49.175266872942444,
+          "grouped_elapsed_seconds": 0.8996923118829727
+        },
+        {
+          "seconds": 0.15115616346398988,
+          "gpu_board_joules": 49.41804390524825,
+          "grouped_elapsed_seconds": 0.9069369807839394
+        },
+        {
+          "seconds": 0.14831235694388548,
+          "gpu_board_joules": 48.51734382300327,
+          "grouped_elapsed_seconds": 0.8898741416633129
+        },
+        {
+          "seconds": 0.15127325306336084,
+          "gpu_board_joules": 49.74436793623803,
+          "grouped_elapsed_seconds": 0.9076395183801651
+        },
+        {
+          "seconds": 0.15145873402555785,
+          "gpu_board_joules": 48.89223087334695,
+          "grouped_elapsed_seconds": 0.908752404153347
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.1499487186471621,
+      "median_gpu_board_joules": 49.175266872942444,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.2335575819015503,
+      "repeats": [
+        {
+          "seconds": 0.19958816654980183,
+          "gpu_board_joules": 60.1282378930971,
+          "grouped_elapsed_seconds": 0.7983526661992073
+        },
+        {
+          "seconds": 0.21150869596749544,
+          "gpu_board_joules": 58.64431741210632,
+          "grouped_elapsed_seconds": 0.8460347838699818
+        },
+        {
+          "seconds": 0.20444023050367832,
+          "gpu_board_joules": 54.64800597195979,
+          "grouped_elapsed_seconds": 0.8177609220147133
+        },
+        {
+          "seconds": 0.19713813066482544,
+          "gpu_board_joules": 54.456149248518045,
+          "grouped_elapsed_seconds": 0.7885525226593018
+        },
+        {
+          "seconds": 0.20415711030364037,
+          "gpu_board_joules": 56.55345965123736,
+          "grouped_elapsed_seconds": 0.8166284412145615
+        },
+        {
+          "seconds": 0.2027640352025628,
+          "gpu_board_joules": 56.43001271996337,
+          "grouped_elapsed_seconds": 0.8110561408102512
+        },
+        {
+          "seconds": 0.20766740385442972,
+          "gpu_board_joules": 57.19228637804022,
+          "grouped_elapsed_seconds": 0.8306696154177189
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.20415711030364037,
+      "median_gpu_board_joules": 56.55345965123736,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.21764465421438217,
+      "repeats": [
+        {
+          "seconds": 0.20047709811478853,
+          "gpu_board_joules": 55.07131460369565,
+          "grouped_elapsed_seconds": 0.8019083924591541
+        },
+        {
+          "seconds": 0.2103233588859439,
+          "gpu_board_joules": 61.60766597582786,
+          "grouped_elapsed_seconds": 0.8412934355437756
+        },
+        {
+          "seconds": 0.20960839185863733,
+          "gpu_board_joules": 56.858419463011046,
+          "grouped_elapsed_seconds": 0.8384335674345493
+        },
+        {
+          "seconds": 0.20309122558683157,
+          "gpu_board_joules": 55.03283740493173,
+          "grouped_elapsed_seconds": 0.8123649023473263
+        },
+        {
+          "seconds": 0.20787651184946299,
+          "gpu_board_joules": 56.13380826335304,
+          "grouped_elapsed_seconds": 0.8315060473978519
+        },
+        {
+          "seconds": 0.20278775598853827,
+          "gpu_board_joules": 53.915177753483874,
+          "grouped_elapsed_seconds": 0.8111510239541531
+        },
+        {
+          "seconds": 0.20927405636757612,
+          "gpu_board_joules": 55.45778373905457,
+          "grouped_elapsed_seconds": 0.8370962254703045
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.20787651184946299,
+      "median_gpu_board_joules": 55.45778373905457,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "antonym",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.25396324694156647,
+      "repeats": [
+        {
+          "seconds": 0.2597147797544797,
+          "gpu_board_joules": 85.66656708432299,
+          "grouped_elapsed_seconds": 0.7791443392634392
+        },
+        {
+          "seconds": 0.2578938106695811,
+          "gpu_board_joules": 87.77436350986983,
+          "grouped_elapsed_seconds": 0.7736814320087433
+        },
+        {
+          "seconds": 0.2587304363648097,
+          "gpu_board_joules": 89.77429412867873,
+          "grouped_elapsed_seconds": 0.776191309094429
+        },
+        {
+          "seconds": 0.256975927700599,
+          "gpu_board_joules": 89.77624558294325,
+          "grouped_elapsed_seconds": 0.7709277831017971
+        },
+        {
+          "seconds": 0.2483261674642563,
+          "gpu_board_joules": 86.9364376874317,
+          "grouped_elapsed_seconds": 0.7449785023927689
+        },
+        {
+          "seconds": 0.2522538515428702,
+          "gpu_board_joules": 89.68524661165351,
+          "grouped_elapsed_seconds": 0.7567615546286106
+        },
+        {
+          "seconds": 0.2555310328801473,
+          "gpu_board_joules": 88.78870717838407,
+          "grouped_elapsed_seconds": 0.7665930986404419
+        }
+      ],
+      "calls_per_repeat": 3,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.256975927700599,
+      "median_gpu_board_joules": 88.78870717838407,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "extract_original_b8",
+      "warmup_seconds": 0.22502205520868301,
+      "repeats": [
+        {
+          "seconds": 0.2113227266818285,
+          "gpu_board_joules": 83.18223691985011,
+          "grouped_elapsed_seconds": 0.845290906727314
+        },
+        {
+          "seconds": 0.21557461842894554,
+          "gpu_board_joules": 99.20591164327227,
+          "grouped_elapsed_seconds": 0.8622984737157822
+        },
+        {
+          "seconds": 0.21410751808434725,
+          "gpu_board_joules": 92.87493293941486,
+          "grouped_elapsed_seconds": 0.856430072337389
+        },
+        {
+          "seconds": 0.21912826877087355,
+          "gpu_board_joules": 94.96502454801927,
+          "grouped_elapsed_seconds": 0.8765130750834942
+        },
+        {
+          "seconds": 0.21943463012576103,
+          "gpu_board_joules": 94.93648819863796,
+          "grouped_elapsed_seconds": 0.8777385205030441
+        },
+        {
+          "seconds": 0.21829808969050646,
+          "gpu_board_joules": 94.59128740474583,
+          "grouped_elapsed_seconds": 0.8731923587620258
+        },
+        {
+          "seconds": 0.2163433050736785,
+          "gpu_board_joules": 94.46703911563846,
+          "grouped_elapsed_seconds": 0.865373220294714
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.2163433050736785,
+      "median_gpu_board_joules": 94.59128740474583
+    },
+    {
+      "task": "country-capital",
+      "measurement": "extract_selected_b8",
+      "warmup_seconds": 0.2033778391778469,
+      "repeats": [
+        {
+          "seconds": 0.19125895127654075,
+          "gpu_board_joules": 87.4803077842705,
+          "grouped_elapsed_seconds": 0.9562947563827038
+        },
+        {
+          "seconds": 0.19964130967855453,
+          "gpu_board_joules": 91.0554499374181,
+          "grouped_elapsed_seconds": 0.9982065483927727
+        },
+        {
+          "seconds": 0.1957524411380291,
+          "gpu_board_joules": 88.38116235932208,
+          "grouped_elapsed_seconds": 0.9787622056901455
+        },
+        {
+          "seconds": 0.19690483212471008,
+          "gpu_board_joules": 92.50328351603447,
+          "grouped_elapsed_seconds": 0.9845241606235504
+        },
+        {
+          "seconds": 0.20567087307572365,
+          "gpu_board_joules": 90.30918413423373,
+          "grouped_elapsed_seconds": 1.0283543653786182
+        },
+        {
+          "seconds": 0.2075321175158024,
+          "gpu_board_joules": 89.3973379179358,
+          "grouped_elapsed_seconds": 1.037660587579012
+        },
+        {
+          "seconds": 0.19313168227672578,
+          "gpu_board_joules": 88.58885511993245,
+          "grouped_elapsed_seconds": 0.9656584113836288
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.19690483212471008,
+      "median_gpu_board_joules": 89.3973379179358
+    },
+    {
+      "task": "country-capital",
+      "measurement": "extract_selected_b48",
+      "warmup_seconds": 0.13928254693746567,
+      "repeats": [
+        {
+          "seconds": 0.13490246795117855,
+          "gpu_board_joules": 65.54838619760521,
+          "grouped_elapsed_seconds": 0.8094148077070713
+        },
+        {
+          "seconds": 0.1359742364535729,
+          "gpu_board_joules": 69.10786829239146,
+          "grouped_elapsed_seconds": 0.8158454187214375
+        },
+        {
+          "seconds": 0.1370522609601418,
+          "gpu_board_joules": 69.19002949956804,
+          "grouped_elapsed_seconds": 0.8223135657608509
+        },
+        {
+          "seconds": 0.1349995993077755,
+          "gpu_board_joules": 66.9355209880105,
+          "grouped_elapsed_seconds": 0.809997595846653
+        },
+        {
+          "seconds": 0.1361219392468532,
+          "gpu_board_joules": 70.15461034853011,
+          "grouped_elapsed_seconds": 0.8167316354811192
+        },
+        {
+          "seconds": 0.13501893853147826,
+          "gpu_board_joules": 69.92143226531645,
+          "grouped_elapsed_seconds": 0.8101136311888695
+        },
+        {
+          "seconds": 0.13626841828227043,
+          "gpu_board_joules": 69.35914222590625,
+          "grouped_elapsed_seconds": 0.8176105096936226
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.1359742364535729,
+      "median_gpu_board_joules": 69.19002949956804
+    },
+    {
+      "task": "country-capital",
+      "measurement": "adapt_original",
+      "warmup_seconds": 0.966780100017786,
+      "repeats": [
+        {
+          "seconds": 0.9434252344071865,
+          "gpu_board_joules": 180.2507580879703,
+          "grouped_elapsed_seconds": 0.9434252344071865
+        },
+        {
+          "seconds": 0.978828240185976,
+          "gpu_board_joules": 179.08574459629136,
+          "grouped_elapsed_seconds": 0.978828240185976
+        },
+        {
+          "seconds": 1.0072791203856468,
+          "gpu_board_joules": 182.42643074365333,
+          "grouped_elapsed_seconds": 1.0072791203856468
+        },
+        {
+          "seconds": 0.9775740243494511,
+          "gpu_board_joules": 179.93052690371033,
+          "grouped_elapsed_seconds": 0.9775740243494511
+        },
+        {
+          "seconds": 0.9653572663664818,
+          "gpu_board_joules": 177.41575280766932,
+          "grouped_elapsed_seconds": 0.9653572663664818
+        }
+      ],
+      "calls_per_repeat": 1,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.9775740243494511,
+      "median_gpu_board_joules": 179.93052690371033
+    },
+    {
+      "task": "country-capital",
+      "measurement": "adapt_optimized_b8",
+      "warmup_seconds": 0.2908569313585758,
+      "repeats": [
+        {
+          "seconds": 0.2771807461977005,
+          "gpu_board_joules": 81.93102392802015,
+          "grouped_elapsed_seconds": 0.8315422385931015
+        },
+        {
+          "seconds": 0.2826163445909818,
+          "gpu_board_joules": 100.9810476121058,
+          "grouped_elapsed_seconds": 0.8478490337729454
+        },
+        {
+          "seconds": 0.3926929421722889,
+          "gpu_board_joules": 133.1545819871785,
+          "grouped_elapsed_seconds": 1.1780788265168667
+        },
+        {
+          "seconds": 0.28060374905665714,
+          "gpu_board_joules": 78.18496650187744,
+          "grouped_elapsed_seconds": 0.8418112471699715
+        },
+        {
+          "seconds": 0.28456804777185124,
+          "gpu_board_joules": 94.83831189094444,
+          "grouped_elapsed_seconds": 0.8537041433155537
+        },
+        {
+          "seconds": 0.2898247030874093,
+          "gpu_board_joules": 99.77137073875541,
+          "grouped_elapsed_seconds": 0.869474109262228
+        },
+        {
+          "seconds": 0.29044445728262264,
+          "gpu_board_joules": 98.85318225841654,
+          "grouped_elapsed_seconds": 0.871333371847868
+        }
+      ],
+      "calls_per_repeat": 3,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.28456804777185124,
+      "median_gpu_board_joules": 98.85318225841654
+    },
+    {
+      "task": "country-capital",
+      "measurement": "adapt_optimized_b48",
+      "warmup_seconds": 0.2250930815935135,
+      "repeats": [
+        {
+          "seconds": 0.2200309382751584,
+          "gpu_board_joules": 78.20077214592946,
+          "grouped_elapsed_seconds": 0.8801237531006336
+        },
+        {
+          "seconds": 0.2215803461149335,
+          "gpu_board_joules": 84.29501855954528,
+          "grouped_elapsed_seconds": 0.886321384459734
+        },
+        {
+          "seconds": 0.21930443588644266,
+          "gpu_board_joules": 78.77107997137121,
+          "grouped_elapsed_seconds": 0.8772177435457706
+        },
+        {
+          "seconds": 0.22301489487290382,
+          "gpu_board_joules": 82.36270593199879,
+          "grouped_elapsed_seconds": 0.8920595794916153
+        },
+        {
+          "seconds": 0.2237645173445344,
+          "gpu_board_joules": 80.04991702044848,
+          "grouped_elapsed_seconds": 0.8950580693781376
+        },
+        {
+          "seconds": 0.22198277339339256,
+          "gpu_board_joules": 79.15429797346704,
+          "grouped_elapsed_seconds": 0.8879310935735703
+        },
+        {
+          "seconds": 0.22130660619586706,
+          "gpu_board_joules": 79.17894371320493,
+          "grouped_elapsed_seconds": 0.8852264247834682
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.2215803461149335,
+      "median_gpu_board_joules": 79.17894371320493
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.13813627883791924,
+      "repeats": [
+        {
+          "seconds": 0.13655106474955878,
+          "gpu_board_joules": 43.81897882545366,
+          "grouped_elapsed_seconds": 0.8193063884973526
+        },
+        {
+          "seconds": 0.1367779690772295,
+          "gpu_board_joules": 42.8979766209759,
+          "grouped_elapsed_seconds": 0.820667814463377
+        },
+        {
+          "seconds": 0.1368771530687809,
+          "gpu_board_joules": 40.03105264113615,
+          "grouped_elapsed_seconds": 0.8212629184126854
+        },
+        {
+          "seconds": 0.13684448848168054,
+          "gpu_board_joules": 40.178471969207514,
+          "grouped_elapsed_seconds": 0.8210669308900833
+        },
+        {
+          "seconds": 0.13843991359074911,
+          "gpu_board_joules": 40.58694053635292,
+          "grouped_elapsed_seconds": 0.8306394815444946
+        },
+        {
+          "seconds": 0.1378674159447352,
+          "gpu_board_joules": 40.27997046644489,
+          "grouped_elapsed_seconds": 0.8272044956684113
+        },
+        {
+          "seconds": 0.13922274361054102,
+          "gpu_board_joules": 39.547227119033536,
+          "grouped_elapsed_seconds": 0.8353364616632462
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.1368771530687809,
+      "median_gpu_board_joules": 40.27997046644489,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.14386222139000893,
+      "repeats": [
+        {
+          "seconds": 0.1491397184630235,
+          "gpu_board_joules": 43.44369692252948,
+          "grouped_elapsed_seconds": 0.894838310778141
+        },
+        {
+          "seconds": 0.14060459596415362,
+          "gpu_board_joules": 40.5008879788965,
+          "grouped_elapsed_seconds": 0.8436275757849216
+        },
+        {
+          "seconds": 0.13987602355579534,
+          "gpu_board_joules": 40.91417828985801,
+          "grouped_elapsed_seconds": 0.8392561413347721
+        },
+        {
+          "seconds": 0.13966519882281622,
+          "gpu_board_joules": 41.036236016203965,
+          "grouped_elapsed_seconds": 0.8379911929368973
+        },
+        {
+          "seconds": 0.13976937967042127,
+          "gpu_board_joules": 40.96375690502735,
+          "grouped_elapsed_seconds": 0.8386162780225277
+        },
+        {
+          "seconds": 0.13978822839756808,
+          "gpu_board_joules": 41.15281046818232,
+          "grouped_elapsed_seconds": 0.8387293703854084
+        },
+        {
+          "seconds": 0.1394502098361651,
+          "gpu_board_joules": 40.73487603810954,
+          "grouped_elapsed_seconds": 0.8367012590169907
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13978822839756808,
+      "median_gpu_board_joules": 40.96375690502735,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.13411005213856697,
+      "repeats": [
+        {
+          "seconds": 0.13282059878110886,
+          "gpu_board_joules": 39.55553859001957,
+          "grouped_elapsed_seconds": 0.7969235926866531
+        },
+        {
+          "seconds": 0.132258553057909,
+          "gpu_board_joules": 40.327212453962616,
+          "grouped_elapsed_seconds": 0.7935513183474541
+        },
+        {
+          "seconds": 0.13178440245489279,
+          "gpu_board_joules": 40.357771475963915,
+          "grouped_elapsed_seconds": 0.7907064147293568
+        },
+        {
+          "seconds": 0.13185729334751764,
+          "gpu_board_joules": 40.25605166179439,
+          "grouped_elapsed_seconds": 0.7911437600851059
+        },
+        {
+          "seconds": 0.13182098294297853,
+          "gpu_board_joules": 40.48485526330981,
+          "grouped_elapsed_seconds": 0.7909258976578712
+        },
+        {
+          "seconds": 0.1314085212846597,
+          "gpu_board_joules": 40.48092807704807,
+          "grouped_elapsed_seconds": 0.7884511277079582
+        },
+        {
+          "seconds": 0.1310479628543059,
+          "gpu_board_joules": 40.43362737510664,
+          "grouped_elapsed_seconds": 0.7862877771258354
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13182098294297853,
+      "median_gpu_board_joules": 40.357771475963915,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.1868697814643383,
+      "repeats": [
+        {
+          "seconds": 0.1843223176896572,
+          "gpu_board_joules": 50.6070060033612,
+          "grouped_elapsed_seconds": 0.9216115884482861
+        },
+        {
+          "seconds": 0.18973439633846284,
+          "gpu_board_joules": 48.09092533295586,
+          "grouped_elapsed_seconds": 0.9486719816923141
+        },
+        {
+          "seconds": 0.18954714611172677,
+          "gpu_board_joules": 46.568849901439286,
+          "grouped_elapsed_seconds": 0.9477357305586338
+        },
+        {
+          "seconds": 0.19081594347953795,
+          "gpu_board_joules": 46.575710828304295,
+          "grouped_elapsed_seconds": 0.9540797173976898
+        },
+        {
+          "seconds": 0.1944201998412609,
+          "gpu_board_joules": 47.053291005354374,
+          "grouped_elapsed_seconds": 0.9721009992063046
+        },
+        {
+          "seconds": 0.19430554658174515,
+          "gpu_board_joules": 47.22465230701864,
+          "grouped_elapsed_seconds": 0.9715277329087257
+        },
+        {
+          "seconds": 0.1913630671799183,
+          "gpu_board_joules": 47.734307463490275,
+          "grouped_elapsed_seconds": 0.9568153358995914
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.19081594347953795,
+      "median_gpu_board_joules": 47.22465230701864,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.18775874376296997,
+      "repeats": [
+        {
+          "seconds": 0.18513367027044297,
+          "gpu_board_joules": 45.39037068498575,
+          "grouped_elapsed_seconds": 0.9256683513522148
+        },
+        {
+          "seconds": 0.19431473240256308,
+          "gpu_board_joules": 48.976426261339334,
+          "grouped_elapsed_seconds": 0.9715736620128155
+        },
+        {
+          "seconds": 0.18997691199183464,
+          "gpu_board_joules": 46.06188251981884,
+          "grouped_elapsed_seconds": 0.9498845599591732
+        },
+        {
+          "seconds": 0.19136373996734618,
+          "gpu_board_joules": 46.15016290216893,
+          "grouped_elapsed_seconds": 0.956818699836731
+        },
+        {
+          "seconds": 0.19141503870487214,
+          "gpu_board_joules": 46.40528439073265,
+          "grouped_elapsed_seconds": 0.9570751935243607
+        },
+        {
+          "seconds": 0.19534819796681405,
+          "gpu_board_joules": 46.892057776858266,
+          "grouped_elapsed_seconds": 0.9767409898340702
+        },
+        {
+          "seconds": 0.19081873819231987,
+          "gpu_board_joules": 45.71833295944334,
+          "grouped_elapsed_seconds": 0.9540936909615993
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.19136373996734618,
+      "median_gpu_board_joules": 46.15016290216893,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.19421320781111717,
+      "repeats": [
+        {
+          "seconds": 0.19339874610304833,
+          "gpu_board_joules": 53.55771546505764,
+          "grouped_elapsed_seconds": 0.9669937305152416
+        },
+        {
+          "seconds": 0.20037640780210494,
+          "gpu_board_joules": 58.602987256824974,
+          "grouped_elapsed_seconds": 1.0018820390105247
+        },
+        {
+          "seconds": 0.19711446911096572,
+          "gpu_board_joules": 56.640791237205256,
+          "grouped_elapsed_seconds": 0.9855723455548286
+        },
+        {
+          "seconds": 0.19880959540605544,
+          "gpu_board_joules": 60.10755735153257,
+          "grouped_elapsed_seconds": 0.9940479770302773
+        },
+        {
+          "seconds": 0.1993437349796295,
+          "gpu_board_joules": 56.762923895951374,
+          "grouped_elapsed_seconds": 0.9967186748981476
+        },
+        {
+          "seconds": 0.19753250554203988,
+          "gpu_board_joules": 57.496057749122386,
+          "grouped_elapsed_seconds": 0.9876625277101994
+        },
+        {
+          "seconds": 0.2008046105504036,
+          "gpu_board_joules": 58.05601890775938,
+          "grouped_elapsed_seconds": 1.004023052752018
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.19880959540605544,
+      "median_gpu_board_joules": 57.496057749122386,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.2411455549299717,
+      "repeats": [
+        {
+          "seconds": 0.21277283728122712,
+          "gpu_board_joules": 60.44918884175644,
+          "grouped_elapsed_seconds": 1.0638641864061356
+        },
+        {
+          "seconds": 0.1990552254021168,
+          "gpu_board_joules": 55.05468496032431,
+          "grouped_elapsed_seconds": 0.9952761270105839
+        },
+        {
+          "seconds": 0.20885367915034295,
+          "gpu_board_joules": 59.264454704328514,
+          "grouped_elapsed_seconds": 1.0442683957517147
+        },
+        {
+          "seconds": 0.20789377018809319,
+          "gpu_board_joules": 57.002033092308785,
+          "grouped_elapsed_seconds": 1.039468850940466
+        },
+        {
+          "seconds": 0.20320118740200996,
+          "gpu_board_joules": 56.92112089513614,
+          "grouped_elapsed_seconds": 1.0160059370100498
+        },
+        {
+          "seconds": 0.20136664807796478,
+          "gpu_board_joules": 57.685216005410936,
+          "grouped_elapsed_seconds": 1.006833240389824
+        },
+        {
+          "seconds": 0.20427701771259307,
+          "gpu_board_joules": 57.66290706381575,
+          "grouped_elapsed_seconds": 1.0213850885629654
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.20427701771259307,
+      "median_gpu_board_joules": 57.66290706381575,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.23522011190652847,
+      "repeats": [
+        {
+          "seconds": 0.19988748338073492,
+          "gpu_board_joules": 55.41061423061415,
+          "grouped_elapsed_seconds": 0.7995499335229397
+        },
+        {
+          "seconds": 0.20792023371905088,
+          "gpu_board_joules": 59.11157141288481,
+          "grouped_elapsed_seconds": 0.8316809348762035
+        },
+        {
+          "seconds": 0.20963273383677006,
+          "gpu_board_joules": 57.65335313401356,
+          "grouped_elapsed_seconds": 0.8385309353470802
+        },
+        {
+          "seconds": 0.20765887387096882,
+          "gpu_board_joules": 57.176586364696135,
+          "grouped_elapsed_seconds": 0.8306354954838753
+        },
+        {
+          "seconds": 0.21000857185572386,
+          "gpu_board_joules": 57.27105937443919,
+          "grouped_elapsed_seconds": 0.8400342874228954
+        },
+        {
+          "seconds": 0.23946062289178371,
+          "gpu_board_joules": 64.01649335595779,
+          "grouped_elapsed_seconds": 0.9578424915671349
+        },
+        {
+          "seconds": 0.2242797026410699,
+          "gpu_board_joules": 57.69043832661585,
+          "grouped_elapsed_seconds": 0.8971188105642796
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.20963273383677006,
+      "median_gpu_board_joules": 57.65335313401356,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "country-capital",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.27251628786325455,
+      "repeats": [
+        {
+          "seconds": 0.2711729829510053,
+          "gpu_board_joules": 87.91781344235564,
+          "grouped_elapsed_seconds": 0.8135189488530159
+        },
+        {
+          "seconds": 0.2734975752731164,
+          "gpu_board_joules": 98.07189715922499,
+          "grouped_elapsed_seconds": 0.8204927258193493
+        },
+        {
+          "seconds": 0.27773361653089523,
+          "gpu_board_joules": 96.18573499768974,
+          "grouped_elapsed_seconds": 0.8332008495926857
+        },
+        {
+          "seconds": 0.2765519047776858,
+          "gpu_board_joules": 96.53555006125941,
+          "grouped_elapsed_seconds": 0.8296557143330574
+        },
+        {
+          "seconds": 0.2704222997029622,
+          "gpu_board_joules": 93.38578782703729,
+          "grouped_elapsed_seconds": 0.8112668991088867
+        },
+        {
+          "seconds": 0.2700383961200714,
+          "gpu_board_joules": 97.78726450256677,
+          "grouped_elapsed_seconds": 0.8101151883602142
+        },
+        {
+          "seconds": 0.2690760903060436,
+          "gpu_board_joules": 94.99251626391703,
+          "grouped_elapsed_seconds": 0.8072282709181309
+        }
+      ],
+      "calls_per_repeat": 3,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.2711729829510053,
+      "median_gpu_board_joules": 96.18573499768974,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "extract_original_b8",
+      "warmup_seconds": 0.21416765451431274,
+      "repeats": [
+        {
+          "seconds": 0.2080835485830903,
+          "gpu_board_joules": 77.95652256209402,
+          "grouped_elapsed_seconds": 0.8323341943323612
+        },
+        {
+          "seconds": 0.21301224641501904,
+          "gpu_board_joules": 100.89013324720104,
+          "grouped_elapsed_seconds": 0.8520489856600761
+        },
+        {
+          "seconds": 0.2124362038448453,
+          "gpu_board_joules": 93.05083617960103,
+          "grouped_elapsed_seconds": 0.8497448153793812
+        },
+        {
+          "seconds": 0.21235254034399986,
+          "gpu_board_joules": 93.08806891325861,
+          "grouped_elapsed_seconds": 0.8494101613759995
+        },
+        {
+          "seconds": 0.21171007864177227,
+          "gpu_board_joules": 93.56930593903935,
+          "grouped_elapsed_seconds": 0.8468403145670891
+        },
+        {
+          "seconds": 0.21021445374935865,
+          "gpu_board_joules": 93.29789514231896,
+          "grouped_elapsed_seconds": 0.8408578149974346
+        },
+        {
+          "seconds": 0.2151795607060194,
+          "gpu_board_joules": 95.07791949522776,
+          "grouped_elapsed_seconds": 0.8607182428240776
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.21235254034399986,
+      "median_gpu_board_joules": 93.29789514231896
+    },
+    {
+      "task": "english-french",
+      "measurement": "extract_selected_b8",
+      "warmup_seconds": 0.190970990806818,
+      "repeats": [
+        {
+          "seconds": 0.18523364812135695,
+          "gpu_board_joules": 84.65037160548765,
+          "grouped_elapsed_seconds": 0.9261682406067848
+        },
+        {
+          "seconds": 0.1895725518465042,
+          "gpu_board_joules": 92.28449311094359,
+          "grouped_elapsed_seconds": 0.9478627592325211
+        },
+        {
+          "seconds": 0.1853899009525776,
+          "gpu_board_joules": 86.98929734725132,
+          "grouped_elapsed_seconds": 0.926949504762888
+        },
+        {
+          "seconds": 0.18614568784832955,
+          "gpu_board_joules": 87.3370559637621,
+          "grouped_elapsed_seconds": 0.9307284392416477
+        },
+        {
+          "seconds": 0.18829151019454002,
+          "gpu_board_joules": 88.36260242901743,
+          "grouped_elapsed_seconds": 0.9414575509727001
+        },
+        {
+          "seconds": 0.1880134366452694,
+          "gpu_board_joules": 87.53761698703006,
+          "grouped_elapsed_seconds": 0.940067183226347
+        },
+        {
+          "seconds": 0.1896524928510189,
+          "gpu_board_joules": 87.49952235897555,
+          "grouped_elapsed_seconds": 0.9482624642550945
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.1880134366452694,
+      "median_gpu_board_joules": 87.49952235897555
+    },
+    {
+      "task": "english-french",
+      "measurement": "extract_selected_b48",
+      "warmup_seconds": 0.14034700021147728,
+      "repeats": [
+        {
+          "seconds": 0.13781012470523515,
+          "gpu_board_joules": 67.71913435053702,
+          "grouped_elapsed_seconds": 0.826860748231411
+        },
+        {
+          "seconds": 0.13783607507745424,
+          "gpu_board_joules": 70.77847305417062,
+          "grouped_elapsed_seconds": 0.8270164504647255
+        },
+        {
+          "seconds": 0.1400659972180923,
+          "gpu_board_joules": 70.62282949217285,
+          "grouped_elapsed_seconds": 0.8403959833085537
+        },
+        {
+          "seconds": 0.1386132991562287,
+          "gpu_board_joules": 70.95760106073071,
+          "grouped_elapsed_seconds": 0.8316797949373722
+        },
+        {
+          "seconds": 0.13918690259257951,
+          "gpu_board_joules": 71.04306333538456,
+          "grouped_elapsed_seconds": 0.8351214155554771
+        },
+        {
+          "seconds": 0.13892814330756664,
+          "gpu_board_joules": 70.9841853796877,
+          "grouped_elapsed_seconds": 0.8335688598453999
+        },
+        {
+          "seconds": 0.13826310820877552,
+          "gpu_board_joules": 71.61495137497162,
+          "grouped_elapsed_seconds": 0.8295786492526531
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.1386132991562287,
+      "median_gpu_board_joules": 70.95760106073071
+    },
+    {
+      "task": "english-french",
+      "measurement": "adapt_original",
+      "warmup_seconds": 3.0281103923916817,
+      "repeats": [
+        {
+          "seconds": 3.1273101903498173,
+          "gpu_board_joules": 383.8525128882378,
+          "grouped_elapsed_seconds": 3.1273101903498173
+        },
+        {
+          "seconds": 3.1232937462627888,
+          "gpu_board_joules": 392.92324786208576,
+          "grouped_elapsed_seconds": 3.1232937462627888
+        },
+        {
+          "seconds": 3.104869358241558,
+          "gpu_board_joules": 374.652441150851,
+          "grouped_elapsed_seconds": 3.104869358241558
+        },
+        {
+          "seconds": 3.066163145005703,
+          "gpu_board_joules": 364.16940681457515,
+          "grouped_elapsed_seconds": 3.066163145005703
+        },
+        {
+          "seconds": 3.089610893279314,
+          "gpu_board_joules": 364.3628987606403,
+          "grouped_elapsed_seconds": 3.089610893279314
+        }
+      ],
+      "calls_per_repeat": 1,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 3.104869358241558,
+      "median_gpu_board_joules": 374.652441150851
+    },
+    {
+      "task": "english-french",
+      "measurement": "adapt_optimized_b8",
+      "warmup_seconds": 0.4175086170434952,
+      "repeats": [
+        {
+          "seconds": 0.36491794511675835,
+          "gpu_board_joules": 100.30356763096854,
+          "grouped_elapsed_seconds": 1.094753835350275
+        },
+        {
+          "seconds": 0.36920710528890294,
+          "gpu_board_joules": 109.89702813963714,
+          "grouped_elapsed_seconds": 1.1076213158667088
+        },
+        {
+          "seconds": 0.36890922486782074,
+          "gpu_board_joules": 100.1035732578453,
+          "grouped_elapsed_seconds": 1.1067276746034622
+        },
+        {
+          "seconds": 0.3685547448694706,
+          "gpu_board_joules": 106.00783140235272,
+          "grouped_elapsed_seconds": 1.1056642346084118
+        },
+        {
+          "seconds": 0.3889573613802592,
+          "gpu_board_joules": 106.17937658680883,
+          "grouped_elapsed_seconds": 1.1668720841407776
+        },
+        {
+          "seconds": 0.3688623333970706,
+          "gpu_board_joules": 104.58232368797064,
+          "grouped_elapsed_seconds": 1.1065870001912117
+        },
+        {
+          "seconds": 0.37104955067237216,
+          "gpu_board_joules": 105.67582553390416,
+          "grouped_elapsed_seconds": 1.1131486520171165
+        }
+      ],
+      "calls_per_repeat": 3,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.36890922486782074,
+      "median_gpu_board_joules": 105.67582553390416
+    },
+    {
+      "task": "english-french",
+      "measurement": "adapt_optimized_b48",
+      "warmup_seconds": 0.2986544370651245,
+      "repeats": [
+        {
+          "seconds": 0.29557770614822704,
+          "gpu_board_joules": 89.1269759242485,
+          "grouped_elapsed_seconds": 0.8867331184446812
+        },
+        {
+          "seconds": 0.3025992289185524,
+          "gpu_board_joules": 90.75308071570363,
+          "grouped_elapsed_seconds": 0.9077976867556572
+        },
+        {
+          "seconds": 0.2969416342675686,
+          "gpu_board_joules": 85.48705468614328,
+          "grouped_elapsed_seconds": 0.8908249028027058
+        },
+        {
+          "seconds": 0.3022359386086464,
+          "gpu_board_joules": 88.9305702149934,
+          "grouped_elapsed_seconds": 0.9067078158259392
+        },
+        {
+          "seconds": 0.29996603603164357,
+          "gpu_board_joules": 87.70234335206614,
+          "grouped_elapsed_seconds": 0.8998981080949306
+        },
+        {
+          "seconds": 0.30849434311191243,
+          "gpu_board_joules": 87.96275501724953,
+          "grouped_elapsed_seconds": 0.9254830293357372
+        },
+        {
+          "seconds": 0.2939574408034484,
+          "gpu_board_joules": 88.89578994965181,
+          "grouped_elapsed_seconds": 0.8818723224103451
+        }
+      ],
+      "calls_per_repeat": 3,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "median_seconds": 0.29996603603164357,
+      "median_gpu_board_joules": 88.89578994965181
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.13681495562195778,
+      "repeats": [
+        {
+          "seconds": 0.13738005980849266,
+          "gpu_board_joules": 38.55552974564955,
+          "grouped_elapsed_seconds": 0.824280358850956
+        },
+        {
+          "seconds": 0.13725621501604715,
+          "gpu_board_joules": 40.21511175805082,
+          "grouped_elapsed_seconds": 0.823537290096283
+        },
+        {
+          "seconds": 0.13870370263854662,
+          "gpu_board_joules": 38.698982170509794,
+          "grouped_elapsed_seconds": 0.8322222158312798
+        },
+        {
+          "seconds": 0.13650846853852272,
+          "gpu_board_joules": 39.36196349563698,
+          "grouped_elapsed_seconds": 0.8190508112311363
+        },
+        {
+          "seconds": 0.13691237506767115,
+          "gpu_board_joules": 38.998222752083095,
+          "grouped_elapsed_seconds": 0.8214742504060268
+        },
+        {
+          "seconds": 0.13688751682639122,
+          "gpu_board_joules": 39.876993294941876,
+          "grouped_elapsed_seconds": 0.8213251009583473
+        },
+        {
+          "seconds": 0.1364542916417122,
+          "gpu_board_joules": 39.71767538152635,
+          "grouped_elapsed_seconds": 0.8187257498502731
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13691237506767115,
+      "median_gpu_board_joules": 39.36196349563698,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.14013709872961044,
+      "repeats": [
+        {
+          "seconds": 0.13810816407203674,
+          "gpu_board_joules": 39.94337161130775,
+          "grouped_elapsed_seconds": 0.8286489844322205
+        },
+        {
+          "seconds": 0.13812821544706821,
+          "gpu_board_joules": 41.90400852374719,
+          "grouped_elapsed_seconds": 0.8287692926824093
+        },
+        {
+          "seconds": 0.1382148638367653,
+          "gpu_board_joules": 39.43202409448305,
+          "grouped_elapsed_seconds": 0.8292891830205917
+        },
+        {
+          "seconds": 0.13750058909257254,
+          "gpu_board_joules": 39.39477684234487,
+          "grouped_elapsed_seconds": 0.8250035345554352
+        },
+        {
+          "seconds": 0.14034265031417212,
+          "gpu_board_joules": 38.93251063764136,
+          "grouped_elapsed_seconds": 0.8420559018850327
+        },
+        {
+          "seconds": 0.13835852469007173,
+          "gpu_board_joules": 39.47873992717792,
+          "grouped_elapsed_seconds": 0.8301511481404305
+        },
+        {
+          "seconds": 0.13903394589821497,
+          "gpu_board_joules": 39.646488365661355,
+          "grouped_elapsed_seconds": 0.8342036753892899
+        }
+      ],
+      "calls_per_repeat": 6,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.1382148638367653,
+      "median_gpu_board_joules": 39.47873992717792,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.13306022807955742,
+      "repeats": [
+        {
+          "seconds": 0.13176515432340757,
+          "gpu_board_joules": 38.408589218604774,
+          "grouped_elapsed_seconds": 0.9223560802638531
+        },
+        {
+          "seconds": 0.13222256249615125,
+          "gpu_board_joules": 40.90051960496764,
+          "grouped_elapsed_seconds": 0.9255579374730587
+        },
+        {
+          "seconds": 0.1325347918484892,
+          "gpu_board_joules": 40.144859462492164,
+          "grouped_elapsed_seconds": 0.9277435429394245
+        },
+        {
+          "seconds": 0.13177488850695745,
+          "gpu_board_joules": 39.56585229146693,
+          "grouped_elapsed_seconds": 0.9224242195487022
+        },
+        {
+          "seconds": 0.13119233452848025,
+          "gpu_board_joules": 40.7324686885285,
+          "grouped_elapsed_seconds": 0.9183463416993618
+        },
+        {
+          "seconds": 0.13097980245947838,
+          "gpu_board_joules": 40.06729048943909,
+          "grouped_elapsed_seconds": 0.9168586172163486
+        },
+        {
+          "seconds": 0.13107623851725034,
+          "gpu_board_joules": 39.64362564604853,
+          "grouped_elapsed_seconds": 0.9175336696207523
+        }
+      ],
+      "calls_per_repeat": 7,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 1,
+      "median_seconds": 0.13176515432340757,
+      "median_gpu_board_joules": 40.06729048943909,
+      "reencoded_output_tokens_excluding_specials": [
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.1889002025127411,
+      "repeats": [
+        {
+          "seconds": 0.1839500866830349,
+          "gpu_board_joules": 50.78925293087504,
+          "grouped_elapsed_seconds": 0.9197504334151745
+        },
+        {
+          "seconds": 0.18711936995387077,
+          "gpu_board_joules": 48.40811839412153,
+          "grouped_elapsed_seconds": 0.9355968497693539
+        },
+        {
+          "seconds": 0.18862434476613998,
+          "gpu_board_joules": 46.94442803380639,
+          "grouped_elapsed_seconds": 0.9431217238306999
+        },
+        {
+          "seconds": 0.18843615502119065,
+          "gpu_board_joules": 46.50426544189826,
+          "grouped_elapsed_seconds": 0.9421807751059532
+        },
+        {
+          "seconds": 0.18713316023349763,
+          "gpu_board_joules": 46.43165594061837,
+          "grouped_elapsed_seconds": 0.9356658011674881
+        },
+        {
+          "seconds": 0.187753926217556,
+          "gpu_board_joules": 47.791043463352096,
+          "grouped_elapsed_seconds": 0.93876963108778
+        },
+        {
+          "seconds": 0.18720956444740294,
+          "gpu_board_joules": 46.615953158779014,
+          "grouped_elapsed_seconds": 0.9360478222370148
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.18720956444740294,
+      "median_gpu_board_joules": 46.94442803380639,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.1843593865633011,
+      "repeats": [
+        {
+          "seconds": 0.18577216565608978,
+          "gpu_board_joules": 46.64575657834796,
+          "grouped_elapsed_seconds": 0.9288608282804489
+        },
+        {
+          "seconds": 0.19336884766817092,
+          "gpu_board_joules": 49.59143010024726,
+          "grouped_elapsed_seconds": 0.9668442383408546
+        },
+        {
+          "seconds": 0.19965893253684044,
+          "gpu_board_joules": 48.23400430417433,
+          "grouped_elapsed_seconds": 0.9982946626842022
+        },
+        {
+          "seconds": 0.19593028947710991,
+          "gpu_board_joules": 47.4646108723618,
+          "grouped_elapsed_seconds": 0.9796514473855495
+        },
+        {
+          "seconds": 0.19205739572644234,
+          "gpu_board_joules": 46.83859791395482,
+          "grouped_elapsed_seconds": 0.9602869786322117
+        },
+        {
+          "seconds": 0.19838888198137283,
+          "gpu_board_joules": 48.182843902736906,
+          "grouped_elapsed_seconds": 0.9919444099068642
+        },
+        {
+          "seconds": 0.19385358989238738,
+          "gpu_board_joules": 46.89507335045189,
+          "grouped_elapsed_seconds": 0.969267949461937
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.19385358989238738,
+      "median_gpu_board_joules": 47.4646108723618,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.2794897295534611,
+      "repeats": [
+        {
+          "seconds": 0.19408054426312446,
+          "gpu_board_joules": 51.11213694251329,
+          "grouped_elapsed_seconds": 0.9704027213156223
+        },
+        {
+          "seconds": 0.25115213841199874,
+          "gpu_board_joules": 66.77030662445337,
+          "grouped_elapsed_seconds": 1.2557606920599937
+        },
+        {
+          "seconds": 0.19809280335903168,
+          "gpu_board_joules": 54.216806109074504,
+          "grouped_elapsed_seconds": 0.9904640167951584
+        },
+        {
+          "seconds": 0.19769299924373626,
+          "gpu_board_joules": 58.86023473457025,
+          "grouped_elapsed_seconds": 0.9884649962186813
+        },
+        {
+          "seconds": 0.20131629556417466,
+          "gpu_board_joules": 56.713047679163516,
+          "grouped_elapsed_seconds": 1.0065814778208733
+        },
+        {
+          "seconds": 0.1982623502612114,
+          "gpu_board_joules": 56.86228316916153,
+          "grouped_elapsed_seconds": 0.991311751306057
+        },
+        {
+          "seconds": 0.19799815341830254,
+          "gpu_board_joules": 57.13150908628286,
+          "grouped_elapsed_seconds": 0.9899907670915127
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 8,
+      "median_seconds": 0.19809280335903168,
+      "median_gpu_board_joules": 56.86228316916153,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_original",
+      "warmup_seconds": 0.2312682382762432,
+      "repeats": [
+        {
+          "seconds": 0.20090898722410203,
+          "gpu_board_joules": 55.7658861568831,
+          "grouped_elapsed_seconds": 1.00454493612051
+        },
+        {
+          "seconds": 0.20391850546002388,
+          "gpu_board_joules": 58.05518957996369,
+          "grouped_elapsed_seconds": 1.0195925273001194
+        },
+        {
+          "seconds": 0.23599948063492776,
+          "gpu_board_joules": 61.70825343943759,
+          "grouped_elapsed_seconds": 1.1799974031746387
+        },
+        {
+          "seconds": 0.20900582075119017,
+          "gpu_board_joules": 55.958902656599875,
+          "grouped_elapsed_seconds": 1.045029103755951
+        },
+        {
+          "seconds": 0.21573884040117264,
+          "gpu_board_joules": 59.648956591333786,
+          "grouped_elapsed_seconds": 1.0786942020058632
+        },
+        {
+          "seconds": 0.203265667706728,
+          "gpu_board_joules": 54.52566581139713,
+          "grouped_elapsed_seconds": 1.01632833853364
+        },
+        {
+          "seconds": 0.20361043214797975,
+          "gpu_board_joules": 56.15536026090011,
+          "grouped_elapsed_seconds": 1.0180521607398987
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.20391850546002388,
+      "median_gpu_board_joules": 56.15536026090011,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_compiled",
+      "warmup_seconds": 0.19821447506546974,
+      "repeats": [
+        {
+          "seconds": 0.19735603556036949,
+          "gpu_board_joules": 55.512116804644464,
+          "grouped_elapsed_seconds": 0.9867801778018475
+        },
+        {
+          "seconds": 0.20095517933368684,
+          "gpu_board_joules": 59.018126384787536,
+          "grouped_elapsed_seconds": 1.0047758966684341
+        },
+        {
+          "seconds": 0.2079217851161957,
+          "gpu_board_joules": 56.96439868114144,
+          "grouped_elapsed_seconds": 1.0396089255809784
+        },
+        {
+          "seconds": 0.20682536885142327,
+          "gpu_board_joules": 57.624570948347454,
+          "grouped_elapsed_seconds": 1.0341268442571163
+        },
+        {
+          "seconds": 0.21048896089196206,
+          "gpu_board_joules": 58.48491536409212,
+          "grouped_elapsed_seconds": 1.0524448044598103
+        },
+        {
+          "seconds": 0.20304187759757042,
+          "gpu_board_joules": 55.03361982839554,
+          "grouped_elapsed_seconds": 1.015209387987852
+        },
+        {
+          "seconds": 0.2052997648715973,
+          "gpu_board_joules": 57.71419648438318,
+          "grouped_elapsed_seconds": 1.0264988243579865
+        }
+      ],
+      "calls_per_repeat": 5,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.2052997648715973,
+      "median_gpu_board_joules": 57.624570948347454,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "task": "english-french",
+      "measurement": "serve_icl4",
+      "warmup_seconds": 0.25786056369543076,
+      "repeats": [
+        {
+          "seconds": 0.25619839783757925,
+          "gpu_board_joules": 88.04644968153909,
+          "grouped_elapsed_seconds": 1.024793591350317
+        },
+        {
+          "seconds": 0.26061496138572693,
+          "gpu_board_joules": 100.08474452877418,
+          "grouped_elapsed_seconds": 1.0424598455429077
+        },
+        {
+          "seconds": 0.2663688100874424,
+          "gpu_board_joules": 100.61012103703678,
+          "grouped_elapsed_seconds": 1.0654752403497696
+        },
+        {
+          "seconds": 0.2634396590292454,
+          "gpu_board_joules": 95.6874297687551,
+          "grouped_elapsed_seconds": 1.0537586361169815
+        },
+        {
+          "seconds": 0.2656394997611642,
+          "gpu_board_joules": 95.9849903002151,
+          "grouped_elapsed_seconds": 1.0625579990446568
+        },
+        {
+          "seconds": 0.28346673399209976,
+          "gpu_board_joules": 100.02853848817757,
+          "grouped_elapsed_seconds": 1.133866935968399
+        },
+        {
+          "seconds": 0.2571217427030206,
+          "gpu_board_joules": 93.33556965653784,
+          "grouped_elapsed_seconds": 1.0284869708120823
+        }
+      ],
+      "calls_per_repeat": 4,
+      "energy_scope": "GPU board only; 100ms polling; grouped calls, no CPU/system energy",
+      "batch_size": 25,
+      "median_seconds": 0.2634396590292454,
+      "median_gpu_board_joules": 95.9849903002151,
+      "reencoded_output_tokens_excluding_specials": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "task": "antonym",
+      "selected8_max_error": 0.0,
+      "selected48_max_error": 0.04427075386047363,
+      "compiled_generation_identical": true,
+      "compiled_different_queries": 0,
+      "batch48_generation_identical": false,
+      "batch48_different_queries": 4
+    },
+    {
+      "task": "country-capital",
+      "selected8_max_error": 0.0,
+      "selected48_max_error": 0.022135376930236816,
+      "compiled_generation_identical": true,
+      "compiled_different_queries": 0,
+      "batch48_generation_identical": false,
+      "batch48_different_queries": 2
+    },
+    {
+      "task": "english-french",
+      "selected8_max_error": 0.0,
+      "selected48_max_error": 0.029947757720947266,
+      "compiled_generation_identical": true,
+      "compiled_different_queries": 0,
+      "batch48_generation_identical": false,
+      "batch48_different_queries": 18
+    }
+  ],
+  "offline": [
+    {
+      "task": "antonym",
+      "gram_seconds": 0.17996549978852272,
+      "compiled_probe_setup_seconds": 2.175281945616007,
+      "first_compiled_generation_including_possible_specialization_seconds": 1.1517886370420456
+    },
+    {
+      "task": "country-capital",
+      "gram_seconds": 0.18453456461429596,
+      "compiled_probe_setup_seconds": 0.029953554272651672,
+      "first_compiled_generation_including_possible_specialization_seconds": 0.3983217366039753
+    },
+    {
+      "task": "english-french",
+      "gram_seconds": 0.1856953129172325,
+      "compiled_probe_setup_seconds": 0.031879160553216934,
+      "first_compiled_generation_including_possible_specialization_seconds": 0.45414450392127037
+    }
+  ],
+  "cuda_visible_devices": "3",
+  "demonstration_seed": 0,
+  "scope": "Warm model and reusable dictionary; natural greedy generation up to eight tokens; no shared-prefix cache",
+  "power_error": null
+}

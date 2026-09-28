@@ -1,0 +1,153 @@
+[
+  {
+    "id": "signature_dev",
+    "script": "signature_dev.py"
+  },
+  {
+    "id": "signature_confirm",
+    "script": "signature_confirm.py"
+  },
+  {
+    "id": "broader_resume",
+    "script": "broader_run.py"
+  },
+  {
+    "id": "broader_resume_answerstop",
+    "script": "broader_run.py",
+    "skip_if_exists": "broader_llama31-8b_done.json"
+  },
+  {
+    "id": "broader_signature",
+    "script": "broader_run.py",
+    "args": [
+      "--signature"
+    ]
+  },
+  {
+    "id": "broader_extensions",
+    "script": "broader_extensions.py"
+  },
+  {
+    "id": "extract_scale_bank",
+    "script": "extract_scale_bank.py"
+  },
+  {
+    "id": "scale_eval",
+    "script": "scale_eval.py"
+  },
+  {
+    "id": "scale_eval_fixed_shared",
+    "script": "scale_eval.py",
+    "args": [
+      "--fixed-shared"
+    ]
+  },
+  {
+    "id": "scale_context",
+    "script": "scale_eval.py",
+    "args": [
+      "--context"
+    ]
+  },
+  {
+    "id": "scale_context_fixed_shared",
+    "script": "scale_eval.py",
+    "args": [
+      "--context",
+      "--fixed-shared"
+    ]
+  },
+  {
+    "id": "qwen3_contrast_dev",
+    "script": "qwen_contrast.py",
+    "args": [
+      "qwen3-4b",
+      "dev"
+    ]
+  },
+  {
+    "id": "qwen3_contrast_confirm",
+    "script": "qwen_contrast.py",
+    "args": [
+      "qwen3-4b",
+      "confirm"
+    ]
+  },
+  {
+    "id": "position_dev",
+    "script": "position_refine.py",
+    "args": [
+      "dev"
+    ]
+  },
+  {
+    "id": "position_confirm",
+    "script": "position_refine.py",
+    "args": [
+      "confirm"
+    ]
+  },
+  {
+    "id": "position_fresh",
+    "script": "position_refine.py",
+    "args": [
+      "fresh"
+    ]
+  },
+  {
+    "id": "qwen3_contrast_fresh",
+    "script": "qwen_contrast.py",
+    "args": [
+      "qwen3-4b",
+      "fresh"
+    ]
+  },
+  {
+    "id": "exhaustive_orders_confirm",
+    "script": "exhaustive_orders.py",
+    "args": []
+  },
+  {
+    "id": "exhaustive_orders_fresh",
+    "script": "exhaustive_orders.py",
+    "args": [
+      "--fresh"
+    ]
+  },
+  {
+    "id": "projector_dev",
+    "script": "projector_refine.py",
+    "args": [
+      "dev"
+    ]
+  },
+  {
+    "id": "projector_confirm",
+    "script": "projector_refine.py",
+    "args": [
+      "confirm"
+    ]
+  },
+  {
+    "id": "projector_fresh",
+    "script": "projector_refine.py",
+    "args": [
+      "fresh"
+    ]
+  },
+  {
+    "id": "broader_position",
+    "script": "broader_position.py"
+  },
+  {
+    "id": "shared_rank_confirm",
+    "script": "shared_rank_ablation.py"
+  },
+  {
+    "id": "shared_rank_fresh",
+    "script": "shared_rank_ablation.py",
+    "args": [
+      "--fresh"
+    ]
+  }
+]
